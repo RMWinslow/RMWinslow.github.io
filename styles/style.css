@@ -1,6 +1,4 @@
-p {
-  color: red;
-}
+
 
 body {
 	margin:40px auto;
@@ -8,7 +6,33 @@ body {
 	line-height:1.6;
 	font-size:18px;
 	color:#444;
-	padding:0 10px\
+	background-color:#DDDDDD;
+	font-family: Algerian;
+	padding:0 
+		10px\
 }
 
 h1,h2,h3{line-height:1.2}
+
+img {
+	max-width: 650px;
+}
+
+
+figure {
+	text-align: center;
+  width: 90%;
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+  border: thin silver solid;
+  border-radius: 4px;
+  margin: 0.5em auto;
+  padding: 0.5em;
+  background-color: #EEE;
+
+}
+img.scaled {
+  width: 100%;
+}
