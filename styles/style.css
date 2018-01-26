@@ -6,7 +6,7 @@ body {
 	line-height:1.6;
 	font-size:18px;
 	color:#444;
-	background-color:#DDDDDD;
+	background-color:#EEEEEE;
 	padding:0  10px;
 }
 
@@ -17,20 +17,62 @@ img {
 }
 
 
+
+
+
+
+/*Figure format for captioned images*/
+
+
 figure {
-	text-align: center;
-  width: 90%;
-  text-align: center;
-  font-style: italic;
-  font-size: smaller;
-  text-indent: 0;
-  border: thin silver solid;
-  border-radius: 4px;
-  margin: 0.5em auto;
-  padding: 0.5em;
-  background-color: #EEE;
+	text-align: center;	
+	width: 90%;
+	font-style: italic;
+	font-size: smaller;
+	text-indent: 0;
+	border: thin silver solid;
+	border-radius: 4px;
+	margin: 0.5em auto;
+	padding: 0.5em;
+	background-color: #FFF;
+	box-shadow:0px 0px 1em grey;
 
 }
 img.scaled {
-  width: 100%;
+  max-width: 100%;
+}
+
+
+figure.pagelink{
+	width:30%;
+	display: inline-block;
+}
+
+figure.pagelink:hover {
+    box-shadow: 0 0 10px 1px rgba(0, 140, 186, 0.5);
+}
+
+
+
+
+
+
+
+
+/*Thumbnail formatting*/
+
+
+img.thumbnail {	
+	border: 1px solid #ddd;
+ 	border-radius: 4px;
+  	padding: 5px; 
+	width: 150px; 
+	background-color: #FFF;
+	display: block;
+	margin: 0 auto;
+}
+
+/* Add a hover effect (blue shadow) */
+img.thumbnail:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
