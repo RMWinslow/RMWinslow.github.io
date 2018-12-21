@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="card" width="600" height="600" style="border:1px solid #d3d3d3;" onclick="genCard()">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+var canvas = document.getElementById("card");
+var ctx = canvas.getContext("2d");
+
+function randomInt(max) {return Math.floor(Math.random() * max);}
+
+function drawLine(x1,y1,x2,y2,context) {
+  context.moveTo(x1,y1);
+  context.lineTo(x2,y2);  
+  context.strokeStyle = '#000';
+  context.stroke(); 
+}
+
+//take in array of coords. fill polygon
+function drawPoly(vertices,fillColor,lineColor,ctx){
+  ctx.fillStyle = fillColor;
+  ctx.beginPath();
+  for (var i = 0; i < vertices.length; i++) {
+    ctx.lineTo(vertices[i][0],vertices[i][1]);
+  }
+  ctx.closePath();
+  ctx.fill();
+  ctx.strokeStyle = lineColor;
+  ctx.stroke(); 
+}
+
+
+function translatePoint(x,y,theta,r) {
+  newy = y+r*Math.sin(theta);
+  newx = x+r*Math.cos(theta);
+  return [newx,newy];
+}
+
+
+//draw hex with point upwards and side flat
+function drawHex(x, y, r, color, border, text, context) {
+  //base angle and incremental angle
+  ba = Math.PI/6;
+  ia = Math.PI/3;
+  //find vertices
+  var vertices = [];
+  for (var i = 0; i < 6; i++) { 
+    vertices[i] = translatePoint(x,y,ba+i*ia,r);
+  }
+  vertices[6]=vertices[0];
+  //draw the shape and then add text
+  drawPoly(vertices,color,border,context);
+  context.fillStyle = '#000';
+  context.font = r.toString()+"px Arial";
+  context.textAlign = "center";
+  context.textBaseline = 'middle'; 
+  context.fillText(text,x,y);
+}
+
+
+
+function tileTest(r){
+ for (var i = 0; i < 6; i++) { 
+    distance = 2*0.87*r*i;
+    center = translatePoint(200,200,Math.PI/3,distance);
+    drawHex(center[0],center[1],r,'#f00','#000', ' ',ctx);
+ }
+}
+//tileTest(15);
+
+function drawMap(x,y,r,ctx){
+  //set up map data
+  var offsets = [3,2,1,0,1,2,3];
+  var wh = '#ddd';
+  var bk = '#444';
+  var bu = '#33e';
+  var gr = '#3e3';
+  var rd = '#e33';
+  var yl = '#ee3';
+  var pk = '#fbb';
+  var rowColors = [[wh,wh,bk,bk],
+                   [wh,wh,pk,bk,bk],
+                   [bu,pk,wh,bk,pk,gr],
+                   [bu,bu,bu,pk,gr,gr,gr],
+                   [bu,pk,rd,yl,pk,gr],
+                   [rd,rd,pk,yl,yl],
+                   [rd,rd,yl,yl]];
+  //SET UP RESOURCES  
+  var resources = [[' ',' ',' ',' ',],
+                   [' ',' ',' ',' ',' ',],
+                   [' ',' ',' ',' ',' ',' ',],
+                   [' ',' ',' ',' ',' ',' ',' ',],
+                   [' ',' ',' ',' ',' ',' ',],
+                   [' ',' ',' ',' ',' ',],
+                   [' ',' ',' ',' ',]];
+  var quest = '📜'; 
+  var resource1 = '💎';
+  var resource2 = '🍎';
+  if (Math.random()<0.5){resource1='🍎';resource2='💎';}
+  //generate a quest in one of six specific spots
+  var questSpots = [[1,1],[1,3],[3,5],[5,3],[5,1],[3,1]];
+  var spot = randomInt(6);
+  resources[questSpots[spot][0]][questSpots[spot][1]]=quest;
+  //add a resource directly opposite
+  spot = (spot+3)%6;
+  resources[questSpots[spot][0]][questSpots[spot][1]]=resource1;
+  //add two of the other resources randomly into opposite zones.
+  var zonesCoords = [[[1,0],[0,0],[0,1],[1,1],[2,2]], //white
+                     [[0,2],[0,3],[1,4],[1,3],[2,3]], //black
+                     [[2,5],[3,6],[4,5],[3,5],[3,4]], //green
+                     [[5,4],[6,3],[6,2],[5,3],[4,3]], //yellow
+                     [[6,1],[6,0],[5,0],[5,1],[4,2]], //red
+                     [[4,0],[3,0],[2,0],[3,1],[3,2]]] //blue
+  do {var zone = randomInt(6);}  while ((zone-spot)%3 == 0);
+  var subzone = randomInt(5);
+  resources[zonesCoords[zone][subzone][0]][zonesCoords[zone][subzone][1]]=resource2;
+  zone = (zone+3)%6;
+  var subzone = randomInt(5);
+  resources[zonesCoords[zone][subzone][0]][zonesCoords[zone][subzone][1]]=resource2;
+  
+  //draw map
+  for (var i = 0; i < 7; i++) { 
+    for (var j = 0; j < rowColors[i].length; j++) { 
+      //- 6 radii is leftmost hex. 
+      //Then move over 2 radii per hex
+      //0.87 is scale factor from outer to inner radius.
+      adjustedX = x+r*0.87*(2*j+offsets[i]-6);
+      //each row is 1.5 radii below the last. -3 hexes is the top row position.
+      adjustedY = (y+1.5*r*(i-3));
+      drawHex(adjustedX,adjustedY,r,rowColors[i][j],'#fff', resources[i][j], ctx);
+    }
+  }
+}
+
+
+
+function genCard(){
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawMap(300,300,30,ctx);
+}
+
+genCard();
+
+
+
+</script>
+
+</body>
+</html>
