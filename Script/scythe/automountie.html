@@ -164,12 +164,17 @@ function drawFight(x,y){
   var fightValues = [0,0,0,1,1,1,2,2,2,3,3,3,5,6,7,7,7,7,7,7,7,7,7];
   fightValue=fightValues[randomInt(21)];
   fightstring+=fightValue+' ';
-  ctx.font = "30px Impact";
+  //draw background
+  ctx.rect(0, canvas.height-2*(canvas.height-y), canvas.width, canvas.height);
+  ctx.fillStyle = '#f005';
+  ctx.fill();
+  //write the actual dang letters
+  var fsize = ((canvas.height-y));
+  ctx.font = fsize.toString() + "px Impact";
   ctx.textAlign = "center";
   ctx.textBaseline = 'middle'; 
   ctx.fillStyle = '#000';
-  ctx.fillText(fightstring,300,300);
-
+  ctx.fillText(fightstring,x,y);
 }
 
 function genCard(){
@@ -186,7 +191,7 @@ function genCard(){
   var type = types[randomInt(7)];
   //draw the movement, pies, and seekings,  based on card type
   drawMove(canvas.width/2, canvas.height/2, canvas.height/30, type);
-  drawFight(300,300);
+  drawFight(canvas.width/2,canvas.height*0.9);
   
 }
 
