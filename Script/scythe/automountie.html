@@ -172,7 +172,7 @@ function drawMove(x, y, r, shape){
     }
   }
   //draw center hex
-  drawHex(x,y,r,'#000','#fff', '🤖',ctx);
+  drawHex(x,y,r,'#000','#fff', '🐗',ctx);
   //ctx.fill();
 }
 
@@ -180,7 +180,7 @@ function drawMove(x, y, r, shape){
 
 function drawFight(x,y){
   //determine how many pies and magic cards there are
-  var fightstring = '🔩✖';
+  var fightstring = '🎂✖';
   var fightValues = [0,0,0,1,1,1,2,2,2,3,3,3,5,6,7,7,7,7,7,7,7,7,7];
   fightValue=fightValues[randomInt(21)];
   fightstring+=fightValue+'  ';
@@ -205,7 +205,10 @@ function drawFight(x,y){
 
 function drawPies(x,y,n){
   //determine how many pies and magic cards there are
-  var pieString = '➕'+'🔩'*n;
+  var pieString = '➕';
+  for (var i=0; i<n; i++){
+    pieString += '🎂';
+  }
   //draw background
   drawRectangle(0, 0, canvas.width, y*2,'#0f05','#0000');
   //write the actual dang letters
@@ -236,11 +239,17 @@ function genCard(){
       if (Math.random()<2/3){
         drawMap(canvas.width/2,canvas.height/5,canvas.height/30,ctx);
       } else {
-        drawPies(canvas.width/2,canvas.height*0.1,2);
+        drawPies(canvas.width/2,canvas.height*0.1,randomInt(3)%2+1);
       }
       break;
+      case shapeC:
+       if (Math.random()<2/3){drawPies(canvas.width/2,canvas.height*0.1,1);}
+      break;
+      case shapeY:
+       if (Math.random()<1/3){drawPies(canvas.width/2,canvas.height*0.1,2);}
+      break;
   }
-  drawMove(canvas.width/2, canvas.height/2, canvas.height/30, type);
+  drawMove(canvas.width/2, canvas.height/2, canvas.height/25, type);
   drawFight(canvas.width/2,canvas.height*0.9);
 }
 
