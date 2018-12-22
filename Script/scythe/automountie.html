@@ -65,12 +65,16 @@ function drawHex(x, y, r, color, border, text, context) {
     vertices[i] = translatePoint(x,y,ba+i*ia,r);
   }
   vertices[6]=vertices[0];
-  //draw the shape and then add text
+  //draw the shape background
   drawPoly(vertices,color,border);
-  ctx.fillStyle = '#fff';
+  //add text. first stroke and then fill the inside
   ctx.font = r.toString()+"px Impact";
   ctx.textAlign = "center";
   ctx.textBaseline = 'middle'; 
+  ctx.strokeStyle = '#000';
+  ctx.lineWidth = 2;
+  ctx.strokeText(text, x, y);
+  ctx.fillStyle = '#fff';
   ctx.fillText(text,x,y);
 }
 
@@ -168,7 +172,7 @@ function drawMove(x, y, r, shape){
     }
   }
   //draw center hex
-  drawHex(x,y,r,'#000','#fff', '🐗',ctx);
+  drawHex(x,y,r,'#000','#fff', '🤖',ctx);
   //ctx.fill();
 }
 
@@ -176,7 +180,7 @@ function drawMove(x, y, r, shape){
 
 function drawFight(x,y){
   //determine how many pies and magic cards there are
-  var fightstring = '🥧✖';
+  var fightstring = '🔩✖';
   var fightValues = [0,0,0,1,1,1,2,2,2,3,3,3,5,6,7,7,7,7,7,7,7,7,7];
   fightValue=fightValues[randomInt(21)];
   fightstring+=fightValue+'  ';
@@ -199,6 +203,20 @@ function drawFight(x,y){
   ctx.fillText(fightstring,x,y);
 }
 
+function drawPies(x,y,n){
+  //determine how many pies and magic cards there are
+  var pieString = '➕'+'🔩'*n;
+  //draw background
+  drawRectangle(0, 0, canvas.width, y*2,'#0f05','#0000');
+  //write the actual dang letters
+  var fsize = y;
+  ctx.font = fsize.toString() + "px Impact";
+  ctx.textAlign = "center";
+  ctx.textBaseline = 'middle'; 
+  ctx.fillStyle = '#000';
+  ctx.fillText(pieString,x,y);
+}
+
 function genCard(){
   //refresh canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -213,7 +231,15 @@ function genCard(){
   var types = [shapeO,shapeO,shapeO,shapeC,shapeC,shapeY,shapeY];
   var type = types[randomInt(7)];
   //draw the movement, pies, and seekings,  based on card type
-  drawMap(canvas.width/2,canvas.height/5,canvas.height/30,ctx);
+  switch(type){
+    case shapeO:
+      if (Math.random()<2/3){
+        drawMap(canvas.width/2,canvas.height/5,canvas.height/30,ctx);
+      } else {
+        drawPies(canvas.width/2,canvas.height*0.1,2);
+      }
+      break;
+  }
   drawMove(canvas.width/2, canvas.height/2, canvas.height/30, type);
   drawFight(canvas.width/2,canvas.height*0.9);
 }
