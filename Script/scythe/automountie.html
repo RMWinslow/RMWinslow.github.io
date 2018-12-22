@@ -26,7 +26,7 @@ function drawLine(x1,y1,x2,y2,context) {
 }
 
 //take in array of coords. fill polygon
-function drawPoly(vertices,fillColor,lineColor,ctx){
+function drawPoly(vertices,fillColor,lineColor){
   ctx.fillStyle = fillColor;
   ctx.beginPath();
   for (var i = 0; i < vertices.length; i++) {
@@ -38,6 +38,14 @@ function drawPoly(vertices,fillColor,lineColor,ctx){
   ctx.stroke(); 
 }
 
+function drawRectangle(x1, y1,x2,y2,fillColor,lineColor){
+  ctx.beginPath();
+  ctx.rect(x1, y1,x2,y2);
+  ctx.fillStyle = fillColor;
+  ctx.fill();
+  ctx.strokeStyle = lineColor;
+  ctx.stroke(); 
+}
 
 function translatePoint(x,y,theta,r) {
   newy = y+r*Math.sin(theta);
@@ -58,13 +66,17 @@ function drawHex(x, y, r, color, border, text, context) {
   }
   vertices[6]=vertices[0];
   //draw the shape and then add text
-  drawPoly(vertices,color,border,context);
-  context.fillStyle = '#fff';
-  context.font = r.toString()+"px Impact";
-  context.textAlign = "center";
-  context.textBaseline = 'middle'; 
-  context.fillText(text,x,y);
+  drawPoly(vertices,color,border);
+  ctx.fillStyle = '#fff';
+  ctx.font = r.toString()+"px Impact";
+  ctx.textAlign = "center";
+  ctx.textBaseline = 'middle'; 
+  ctx.fillText(text,x,y);
 }
+
+
+
+
 
 
 
@@ -156,18 +168,27 @@ function drawMove(x, y, r, shape){
     }
   }
   //draw center hex
-  drawHex(x,y,r,'#000','#0000', '🐗',ctx);
+  drawHex(x,y,r,'#000','#fff', '🐗',ctx);
+  //ctx.fill();
 }
 
+
+
 function drawFight(x,y){
+  //determine how many pies and magic
   var fightstring = '🥧✖';
   var fightValues = [0,0,0,1,1,1,2,2,2,3,3,3,5,6,7,7,7,7,7,7,7,7,7];
   fightValue=fightValues[randomInt(21)];
-  fightstring+=fightValue+' ';
+  fightstring+=fightValue+'  ';
+  if (fightValue<7){
+    if (Math.random() < 0.5){
+      fightstring+='🎴🌠';
+    }
+  } else {
+
+  }
   //draw background
-  ctx.rect(0, canvas.height-2*(canvas.height-y), canvas.width, canvas.height);
-  ctx.fillStyle = '#f005';
-  ctx.fill();
+  drawRectangle(0, canvas.height-2*(canvas.height-y), canvas.width, canvas.height,'#f005','#0000');
   //write the actual dang letters
   var fsize = ((canvas.height-y));
   ctx.font = fsize.toString() + "px Impact";
@@ -180,6 +201,7 @@ function drawFight(x,y){
 function genCard(){
   //refresh canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.canvas.width  = window.innerWidth;
   ctx.canvas.height = window.innerHeight;
   //shape format: each pair is a different move. first param is direction, second is size.
@@ -190,35 +212,10 @@ function genCard(){
   var types = [shapeO,shapeO,shapeO,shapeC,shapeC,shapeY,shapeY];
   var type = types[randomInt(7)];
   //draw the movement, pies, and seekings,  based on card type
+  drawMap(canvas.width/2,canvas.height/5,canvas.height/30,ctx);
   drawMove(canvas.width/2, canvas.height/2, canvas.height/30, type);
   drawFight(canvas.width/2,canvas.height*0.9);
-  
 }
-
-
-
-
-
-function genCardY(){
-  drawMap(canvas.width/2,canvas.height/5,canvas.height/30,ctx);
-}
-
-function genCardC(){
-  drawMap(canvas.width/2,canvas.height/5,canvas.height/30,ctx);
-}
-
-function genCardO(){
-  drawMap(canvas.width/2,canvas.height/5,canvas.height/30,ctx);
-  var pie = '🥧';
-  
-
-}
-
-function genCardOP(){
-  drawMap(canvas.width/2,canvas.height/5,canvas.height/30,ctx);
-}
-
-
 
 
 genCard();
