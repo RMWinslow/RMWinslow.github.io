@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html>
+<style>
+    html, body {
+      width:  100%;
+      height: 100%;
+      margin: 0px;
+    }
+</style>
 <body>
 
-<canvas id="card" width="600" height="600" style="border:1px solid #d3d3d3;" onclick="genCard()">
+<canvas id="card" width="600" height="900"  onclick="genCard()">
 Your browser does not support the HTML5 canvas tag.</canvas>
 
 <script>
@@ -138,7 +145,10 @@ function drawMap(x,y,r,ctx){
 
 function genCard(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawMap(300,300,30,ctx);
+    
+  ctx.canvas.width  = window.innerWidth;
+  ctx.canvas.height = window.innerHeight;
+    drawMap(canvas.width/2,300,30,ctx);
 }
 
 genCard();
