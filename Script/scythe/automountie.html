@@ -175,17 +175,18 @@ function drawMove(x, y, r, shape){
 
 
 function drawFight(x,y){
-  //determine how many pies and magic
+  //determine how many pies and magic cards there are
   var fightstring = '🥧✖';
   var fightValues = [0,0,0,1,1,1,2,2,2,3,3,3,5,6,7,7,7,7,7,7,7,7,7];
   fightValue=fightValues[randomInt(21)];
   fightstring+=fightValue+'  ';
   if (fightValue<7){
     if (Math.random() < 0.5){
-      fightstring+='🎴🌠';
+      fightstring+='🌠';
     }
   } else {
-
+    var addenda = ['','','🌠','🌠','🌠','🌠','🌠','🌠🌠','🌠🌠'];
+    fightstring += addenda[randomInt(9)];
   }
   //draw background
   drawRectangle(0, canvas.height-2*(canvas.height-y), canvas.width, canvas.height,'#f005','#0000');
@@ -201,9 +202,9 @@ function drawFight(x,y){
 function genCard(){
   //refresh canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.canvas.width  = window.innerWidth;
   ctx.canvas.height = window.innerHeight;
+  drawRectangle(0, 0, canvas.width, canvas.height,'#00f3','#0000');
   //shape format: each pair is a different move. first param is direction, second is size.
   var shapeO = [[0,1],[1,1],[2,1],[3,1],[4,1],[5,1],];
   var shapeC = [[0,2],[2,2],[3,1],[4,1],[5,1],];
