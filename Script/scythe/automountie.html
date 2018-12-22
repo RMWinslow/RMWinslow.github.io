@@ -59,8 +59,8 @@ function drawHex(x, y, r, color, border, text, context) {
   vertices[6]=vertices[0];
   //draw the shape and then add text
   drawPoly(vertices,color,border,context);
-  context.fillStyle = '#000';
-  context.font = r.toString()+"px Arial";
+  context.fillStyle = '#fff';
+  context.font = r.toString()+"px Impact";
   context.textAlign = "center";
   context.textBaseline = 'middle'; 
   context.fillText(text,x,y);
@@ -82,10 +82,10 @@ function drawMap(x,y,r,ctx){
   var offsets = [3,2,1,0,1,2,3];
   var wh = '#ddd';
   var bk = '#444';
-  var bu = '#33e';
-  var gr = '#3e3';
-  var rd = '#e33';
-  var yl = '#ee3';
+  var bu = '#33d';
+  var gr = '#3d3';
+  var rd = '#d33';
+  var yl = '#ee4';
   var pk = '#fbb';
   var rowColors = [[wh,wh,bk,bk],
                    [wh,wh,pk,bk,bk],
@@ -141,15 +141,80 @@ function drawMap(x,y,r,ctx){
   }
 }
 
+function drawMove(x, y, r, shape){
+  var moveColors = ['#809','#009','#390','#b90','#d40','#900',];
+  var moveLabels = ['A','B','C','D','E','F',];
+  //base angle and rotation angle
+  var ba = randomInt(6)*Math.PI/3;
+  var ia = Math.PI/3;
+  //for each direction, check the shape, draw that many hexes outwards
+  for (var i = 0; i < shape.length; i++) { 
+    for (var s= 0; s<shape[i][1]; s++){
+      distance = 2*0.87*r*(s+1);//0.97 converts from outer to inner radius
+      center = translatePoint(x,y,ba+ia*shape[i][0],distance);
+      drawHex(center[0],center[1],r,moveColors[i],'#0000', moveLabels[i],ctx);
+    }
+  }
+  //draw center hex
+  drawHex(x,y,r,'#000','#0000', '🐗',ctx);
+}
 
+function drawFight(x,y){
+  var fightstring = '🥧✖';
+  var fightValues = [0,0,0,1,1,1,2,2,2,3,3,3,5,6,7,7,7,7,7,7,7,7,7];
+  fightValue=fightValues[randomInt(21)];
+  fightstring+=fightValue+' ';
+  ctx.font = "30px Impact";
+  ctx.textAlign = "center";
+  ctx.textBaseline = 'middle'; 
+  ctx.fillStyle = '#000';
+  ctx.fillText(fightstring,300,300);
+
+}
 
 function genCard(){
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
+  //refresh canvas
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.canvas.width  = window.innerWidth;
   ctx.canvas.height = window.innerHeight;
-    drawMap(canvas.width/2,300,30,ctx);
+  //shape format: each pair is a different move. first param is direction, second is size.
+  var shapeO = [[0,1],[1,1],[2,1],[3,1],[4,1],[5,1],];
+  var shapeC = [[0,2],[2,2],[3,1],[4,1],[5,1],];
+  var shapeY = [[0,3],[2,1],[4,3]];
+  //determine card type
+  var types = [shapeO,shapeO,shapeO,shapeC,shapeC,shapeY,shapeY];
+  var type = types[randomInt(7)];
+  //draw the movement, pies, and seekings,  based on card type
+  drawMove(canvas.width/2, canvas.height/2, canvas.height/30, type);
+  drawFight(300,300);
+  
 }
+
+
+
+
+
+function genCardY(){
+  drawMap(canvas.width/2,canvas.height/5,canvas.height/30,ctx);
+}
+
+function genCardC(){
+  drawMap(canvas.width/2,canvas.height/5,canvas.height/30,ctx);
+}
+
+function genCardO(){
+  drawMap(canvas.width/2,canvas.height/5,canvas.height/30,ctx);
+  var pie = '🥧';
+  
+
+}
+
+function genCardOP(){
+  drawMap(canvas.width/2,canvas.height/5,canvas.height/30,ctx);
+}
+
+
+
 
 genCard();
 
