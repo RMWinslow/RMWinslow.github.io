@@ -8,9 +8,9 @@
 <body>
 
 <form action="">
-    Width:     <input type="number" name="width"  min="1" value="10"> &nbsp; 
-    Height:   <input type="number" name="height" min="1" value="10"> &nbsp; 
-    <input type="button" name="genButton" Value="Submit" onClick="generate_spiral(this.form.width.value,this.form.height.value)">
+    Width:     <input type="number" name="width"  min="1" step="1" value="10"> &nbsp; 
+    Height:   <input type="number" name="height" min="1" step="1" value="10"> &nbsp; 
+    <input type="button" name="genButton" Value="Submit" onClick="submit_form(this.form)">
 </form><br>
 
 <table id="spiralTable"></table>
@@ -40,6 +40,14 @@ function generate_spiral(w,h){
         output += "</tr>";
     }
     document.getElementById("spiralTable").innerHTML = output;
+}
+
+function submit_form(form){
+    if (form.checkValidity()){
+        generate_spiral(form.width.value,form.height.value);
+    } else {
+      form.reportValidity();
+    }
 }
 
 generate_spiral(10,10);
