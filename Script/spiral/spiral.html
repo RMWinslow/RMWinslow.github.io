@@ -1,16 +1,19 @@
 ﻿<!DOCTYPE html>
 <html>
+<style>
+    input[type=number]{width: 47px;} 
+    table{  border-spacing: 0px;}
+    td{padding: 3px;}
+</style>
 <body>
 
-<form action="test">
-    Width:
-    <input type="number" name="width"  size="1" min="1" value="10" size="1">
-    Height:
-    <input type="number" name="height" min="1" value="10">
-    <input type="submit">
-</form>
+<form action="">
+    Width:     <input type="number" name="width"  min="1" value="10"> &nbsp; 
+    Height:   <input type="number" name="height" min="1" value="10"> &nbsp; 
+    <input type="button" name="genButton" Value="Submit" onClick="generate_spiral(this.form.width.value,this.form.height.value)">
+</form><br>
 
-<table id="spiralTable"  cellspacing="0" cellpadding="4"></table>
+<table id="spiralTable"></table>
 
 <script>
 
@@ -39,7 +42,7 @@ function generate_spiral(w,h){
     document.getElementById("spiralTable").innerHTML = output;
 }
 
-generate_spiral(100,100);
+generate_spiral(10,10);
 
 </script>
 
