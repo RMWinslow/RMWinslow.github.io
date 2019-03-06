@@ -177,7 +177,11 @@ Arthropods and their segmented friends
         Critters with ten legs    
             Crayfish
             Shrimp
+            Balmain Bug
+            Moreton Bay Bug
             Lobster
+            Spiny Lobster
+            Furry Lobster
             Squat Lobster
             Porcelain Crab
             Hermit Crab
@@ -243,6 +247,8 @@ Arthropods and their segmented friends
             Cuckoo wasp
             Potter Wasp 
             Sand wasp
+            Fairywasp
+            Emerald cockroach wasp
         Ants
             Army Ant
             Leafcutter ant

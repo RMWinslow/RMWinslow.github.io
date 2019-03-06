@@ -17,7 +17,9 @@
 
 <script>
 
-function find_cell_value(x,y,w,h){return (x- Math.min(x,y,w-1-x,h-1-y))+(y- Math.min(x,y,w-1-x,h-1-y))+2*((w-1-2* Math.min(x,y,w-1-x,h-1-y))+(h-1-2* Math.min(x,y,w-1-x,h-1-y))-(x- Math.min(x,y,w-1-x,h-1-y))-(y- Math.min(x,y,w-1-x,h-1-y)))*Math.ceil( Math.min(y- Math.min(x,y,w-1-x,h-1-y),w-1-2* Math.min(x,y,w-1-x,h-1-y)-(x- Math.min(x,y,w-1-x,h-1-y)))/(w-2* Math.min(x,y,w-1-x,h-1-y)+h-2* Math.min(x,y,w-1-x,h-1-y)))-2*Math.min(x,y,w-1-x,h-1-y)*(2*Math.min(x,y,w-1-x,h-1-y)-h-w);}//self-explanatory
+function find_cell_value(x,y,w,h){
+    return (x- Math.min(x,y,w-1-x,h-1-y))+(y- Math.min(x,y,w-1-x,h-1-y))+2*((w-1-2* Math.min(x,y,w-1-x,h-1-y))+(h-1-2* Math.min(x,y,w-1-x,h-1-y))-(x- Math.min(x,y,w-1-x,h-1-y))-(y- Math.min(x,y,w-1-x,h-1-y)))*Math.ceil( Math.min(y- Math.min(x,y,w-1-x,h-1-y),w-1-2* Math.min(x,y,w-1-x,h-1-y)-(x- Math.min(x,y,w-1-x,h-1-y)))/(w-2* Math.min(x,y,w-1-x,h-1-y)+h-2* Math.min(x,y,w-1-x,h-1-y)))-2*Math.min(x,y,w-1-x,h-1-y)*(2*Math.min(x,y,w-1-x,h-1-y)-h-w);
+}//self-explanatory
 
 function generate_spiral(w,h){
     //This function fills up an html table with a spiral that starts in the top left, and spirals clockwise inwards. The cells are numbered, starting at 0 and increasing by one for each cell traversed by the spiral.
@@ -46,7 +48,7 @@ function submit_form(form){
     if (form.checkValidity()){
         generate_spiral(form.width.value,form.height.value);
     } else {
-      form.reportValidity();
+        form.reportValidity();
     }
 }
 
