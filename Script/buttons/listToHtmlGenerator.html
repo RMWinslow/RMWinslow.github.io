@@ -1,0 +1,434 @@
+<html>
+<head>
+    <link href="../../styles/sakura.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+This frontend of this generator is based on <a href="https://meanderingbanter.blogspot.com/2018/10/automatic-list-to-html-translator-v2.html">Angus Warman's</a>. This version supports nested sub-tables, reuse of sublists, auto-generation  and recursion. To use a similar generator with Abulifia formatting, click <a href="https://paperelemental.blogspot.com/p/list-to-html-generator_20.html">here.</a>
+
+<br>
+<h1>Step 1:</h1>
+Write your list in the following text area, and click "Generate Code".<br> 
+Click the "Test" button to get a randomly drawn sample from your list.<br><br>
+
+Button Label: <textarea rows="1" cols="60" id="name">
+Button label (leave unchanged for "Generate")</textarea><br>
+
+<textarea rows="20" cols="80" id="content">
+Salt
+Pepper
+Dried [herb]
+
+{herb}
+oregano
+basil
+parsely</textarea>
+<br>
+<button onclick="generateCode()">Generate Code</button> 
+<button onclick="testList('content','demo')">Test</button>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input id="prefillCheck" type="checkbox" >Check this box to activate button on page load.
+<p id="demo">
+</p>
+
+
+
+
+
+
+<br >
+<h1>Step 2:</h1>
+Paste the following code snippet in your page wherever you want the button to appear. In blogger, you can switch to the HTML tab while composing a post and just plop it in. <button class="js-textareacopybtn" style="vertical-align:top;">Copy Code</button><br><br>
+<code><textarea readonly placeholder='Your code will appear here when you press [Generate Code].' rows="10" cols="80"  style="width:100%" id="outputText">
+</textarea></code>
+
+
+
+
+<hr>
+
+<br><br><br><br>
+<h1>Examples</h1>
+
+<h2>Basic Formatting</h2>
+
+<textarea rows="10" cols="80" id="example1">
+If no sublists are present, then the generator creates a simple list.
+New lines are used to separate entries.
+Blank lines are ignored:
+
+Lines with just a space are not ignored:
+    
+If you need a newline within your output, use "<br>"
+E<br>X<br>A<br>M<br>P<br>L<br>E
+</textarea>
+<br>
+<button onclick="testList('example1','simpleDemo')">Test</button> 
+<p id="simpleDemo">
+</p>
+
+<br>
+
+<h2>Nested Lists</h2>
+
+<textarea rows="10" cols="80" id="example2">
+The lines at the start form the main list.
+Place a sublist's name in square brackets to indicate where the [subentry] should go.
+Start a sublist by placing it's name in curly brackets on a new line:
+{subentry}
+Each line is placed into the most recently named sublist.
+So these lines are part of the [subentry] sublist.
+As seen above, lists can refer to themselves.
+If you want to refer to the main list, use [main].
+</textarea>
+<br>
+<button onclick="testList('example2','nestedDemo')">Test</button> 
+<p id="nestedDemo">
+</p>
+
+
+
+<textarea rows="10" cols="80" id="example3">
+Recursion is limited to a depth of 20. 
+At that point, the name of the sublist will just appear in output.
+[selfreferencing]
+
+{selfreferencing}
+[selfreferencing]-
++[selfreferencing]
+</textarea>
+<br>
+<button onclick="testList('example3','recursionDemo')">Test</button> 
+<p id="recursionDemo">
+</p>
+
+
+
+<textarea rows="10" cols="80" id="example4">
+ADVANCED BONUS FEATURE: inline sublists:
+You come across {2|43|7} elves eating hams.
+
+Inline sublists can nest as well:
+Egads, look at those {{glistening|hairy|surly} dwarves|{stony|fat} trolls}!
+
+Remember, though: any text in curly braces on a line by itself is a label for a normal sublist.
+{This is the label for an empty sublist, and will never be randomly drawn.}
+</textarea>
+<br>
+<button onclick="testList('example4','inlineSublist')">Test</button> 
+<p id="inlineSublist">
+</p>
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+<h2>More Examples</h2>
+
+<textarea rows="20" cols="80" id="hamburgexample">
+You are given a [meatshape]. The meat is made from [meat], and it is topped with [toppings] and [toppings].
+After you place your order, the kitchen explodes. Looks like you'll need to find somewhere else to eat.
+You are given a large, hollowed-out [vegetable] stuffed with [toppings].
+
+{meatshape}
+burger
+hot dog
+bowl of chili
+
+{toppings}
+[meat]
+diced [vegetable]
+cheese
+cream
+[sauce]
+
+{meat}
+beef
+pork
+chicken
+processed [vegetable]
+
+{vegetable}
+corn
+tomato
+lettuce
+eggplant
+leek
+onion
+
+{sauce}
+ketchup
+mustard
+bbq sauce
+mayonnaise
+soy sauce
+old dishwater
+</textarea>
+<br>
+<button onclick="testList('hamburgexample','hamdemo')">Test</button> 
+<p id="hamdemo">
+</p>
+
+
+<textarea rows="20" cols="80" id="restaurantEx">
+CHEF STATS<br>Name: [name]<br>Race: [race]<br>Specialty: [specialty]
+
+{name}
+Edward
+Edith
+Edina
+Ed'gorg
+Eels McGee
+
+{race}
+Human
+Human
+Human
+Elf
+Ogre
+Aarakocra
+
+{specialty}
+Dessert
+Dinner
+Lunch
+Cheese Platters
+Sandwiches
+Breakfast
+Spicy Food
+Street Food
+Knife Juggling
+Insult Comedy
+
+</textarea>
+<br>
+<button onclick="testList('restaurantEx','resdemo')">Test</button> 
+<p id="resdemo">
+</p>
+
+
+
+
+
+
+
+
+        
+
+
+
+<script>
+//copied from https://stackoverflow.com/questions/400212/how-do-i-copy-to-the-clipboard-in-javascript
+//used to copy text from output into clipboard
+var outbox = document.getElementById('outputText');
+outbox.style.background = 'transparent';
+outbox.style.border = 'none';
+
+var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
+copyTextareaBtn.addEventListener('click', function(event) {
+    var copyTextarea = document.getElementById('outputText');
+    copyTextarea.focus();
+    copyTextarea.select();
+
+    try {
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Copying text command was ' + msg);
+    } catch (err) {
+        console.log('Oops, unable to copy');
+    }
+});
+
+
+//Takes in a string of the format described on this page.
+//outputs an object in which each subtable label corresponds to an array of that subtable's entries
+//Basically works by just switching which label it's working under whenever it encounters a new one
+function parse_list(inputText) {
+    var listMap = {'main':[]};
+    var activeList = 'main';
+    var lines = inputText.split('\n');
+    for(var i = 0; i < lines.length ; i++){
+        var line = lines[i];
+        if (line == '') {
+            continue;
+            }
+        else if (line.charAt(0)=='{' && line.charAt(line.length-1)=='}') {
+            line = line.replace('{','');
+            line = line.replace('}','');
+            listMap[line] = [];
+            activeList = line;
+            }
+        else {
+            listMap[activeList].push(line);
+            }
+        }
+    return listMap
+    }
+
+//simple function to select a random item from a list
+function r(items){
+    var item = items[Math.floor(Math.random()*items.length)];
+    return item;
+    }
+    
+
+//Returns a random entry from an object of the form that parse_list() creates.
+//Starts by drawing an entry from the main list
+//then repeatedly substitutes sublist tags for entries from that sublist
+function draw_item(itemMap){
+    var output = r(itemMap['main']);
+    keys = Object.keys(itemMap);
+    var reps = 0;
+    while (reps < 20){
+        for(var i = 0; i < keys.length ; i++){
+        output = output.replace('['+keys[i]+']', r(itemMap[keys[i]]));
+            }
+        reps ++;
+    }
+    return output;
+}
+
+
+//this is important so that multiple buttons on the same page don't conflict
+function randomTag(){
+    var aN = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    return String(aN.charAt(Math.floor(Math.random() * aN.length))+aN.charAt(Math.floor(Math.random() * aN.length))+aN.charAt(Math.floor(Math.random() * aN.length)));
+}
+
+
+//The simple parser in step 1 can't handle inline lists. This takes those and converts 
+//them to a standard sublist. But it only goes one level deep on curly braces
+//so that the subsublist can later be parsed in the same way
+function convert_sublist(phrase){
+    phrase = phrase.substr(1, phrase.length - 2); //strip outer brackets
+    //replace | with newline but only outside of brackets
+    var openBraces = 0;
+    for (var i = 0; i < phrase.length; i++){
+        c = phrase.charAt(i);
+        if (c == '{') {openBraces++;}
+        if (c == '}') {openBraces--;}
+        if (openBraces == 0 && c == '|') {phrase = phrase.substr(0,i)+"\n"+phrase.substr(i+1);}
+    }
+    return phrase;
+}
+
+//TODO: Improve the movement so that it doesn't fuckup two lists right next to each other.
+//This function does most of the work in transforming complicated lists into a form that the simple parser can handle.
+//It finds inline sublists, strips them out, gives them a randomly generated name, and then adds them to the end of the data to be trated like a normal sublist
+function move_sublists(inputText) {
+    var newText = "";
+    var lines = inputText.split('\n');
+    for(var i = 0; i < lines.length ; i++){
+        var line = lines[i];
+        //ignore curly braces which start a standard sublist
+        if  (line.charAt(0)!='{' || line.charAt(line.length-1)!='}'){
+            
+            //Can't just use the regex to find because there might be a line like Fish:{1|2|3|4}{a|b|c}
+            var startPos = 0;
+            var endPos = 0;
+            var depth = 0;
+            //iterate through characters to find highest level of matched {}
+            for (var k = 0; k < line.length; k++){
+                if (line[k]=='{'){
+                    if(depth==0){
+                        startPos = k;
+                    }
+                    depth = depth + 1;
+                }
+                if (line[k]=='}'){
+                    depth = depth -1;
+                    if(depth==0){
+                        endPos = k+1;
+                        //Do the replacement
+                        var phrase = line.substring(startPos,endPos);
+                        var phrasetag = "sublist" + randomTag();
+                        line = line.replace(phrase, "["+phrasetag+"]");
+                        phrase = convert_sublist(phrase);
+                        lines.push("{"+phrasetag+"}");
+                        //each sublist needs to be not just a seperate line but a seperate item in the split list.
+                        lines = [...lines, ...phrase.split('\n')];
+                    }
+                }
+            }
+                
+            }
+        //The conditional was added to avoid infinite loops from sublists with blank lines
+        if (line != ""){
+            newText = newText + line + "\n";
+            }
+        }
+    return newText 
+    }
+
+//This handles the draws from lists in text areas on this page.
+//The output should always be similar to the generated buttons
+//but it won't be quite the same because this is parsed directly
+//instead of going through the whole html button rigamarole 
+function testList(inputID,outputID) {
+    inputText = document.getElementById(inputID).value;
+    inputText = move_sublists(inputText);
+    var mapping = parse_list(inputText);
+    var output = draw_item(mapping);
+    document.getElementById(outputID).innerHTML = output;
+}
+
+
+//This creates html code for the random generator
+//It was a pain in the butt, because I had to write the code to generate the output
+//then write the code which generates the code 
+//and then change some things around because the output needs to be pastable from an html page
+//so the flow is:
+// input -> simplified input -> html version -> html version wrapped in htmlified html code
+function generateCode(){
+    var name = document.getElementById('name').value;
+    if (name == 'Button label (leave unchanged for "Generate")'){
+        name = "Generate";
+        }
+    var content = document.getElementById('content').value;
+    var tag = randomTag();
+
+    content = move_sublists(content);
+
+    //replace some characters that will cause problems in the parser
+    //content = content.replace(/\n/g,'\\n')
+    content = content.replace(/'/g,"’")
+    content = content.replace(/"/g,"’’")
+    content = content.replace(/</g,"&lt;")
+    content = content.replace(/>/g,"&gt;")
+    
+
+    //create code snippet for parser. This is a condensed and simplified version of the full  parser. Each button has its own copy; java will just care about the last one on the page.
+    var codeSnippet = ""
+    //create button
+    codeSnippet += "&lt;button style='font-family:inherit;' onclick='document.getElementById("+'"'+"output"+tag+'"'+").innerHTML = dI(";
+    codeSnippet += 'map' + tag ;
+    codeSnippet += ")'&gt;"+name+"&lt;/button&gt;\n";
+    //create target for button
+    codeSnippet += "&lt;p id='" + "output"+tag + "'&gt;&lt;/p&gt;\n";
+    //Create code to parse button
+    codeSnippet +="&lt;script&gt;function rD(i){return i[Math.floor(Math.random()*i.length)];}function dI(d){o=rD(d['main']);k=Object.keys(d);j=0;while(j&lt; 20){for(i=0;i&lt; k.length;i++){o=o.replace('['+k[i]+']',rD(d[k[i]]));}j++;}return o;}\n";
+    //Include list as variable in code.
+    codeSnippet += "var map" + tag + "=" + JSON.stringify(parse_list(content)) + ";"; 
+    //optionally call the draw function at the start. 
+    if(document.getElementById("prefillCheck").checked){
+        codeSnippet +=  "document.getElementById("+'"'+"output"+tag+'"'+").innerHTML =dI(map" + tag +");";
+    }
+    codeSnippet += "&lt;/script&gt;\n";
+        
+    document.getElementById('outputText').innerHTML = codeSnippet ;
+    }
+
+</script>
+
+
+
+
+</body>
+</html>
