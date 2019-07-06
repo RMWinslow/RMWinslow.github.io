@@ -18,9 +18,9 @@ html {
 }
 
 body {
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 1.618;
-  max-width: 40em;
+  max-width: 45em;
   margin: auto;
   color: #3a3a3a;
   background-color: #fdf6e3;
@@ -29,15 +29,20 @@ body {
 
 @media (max-width: 684px) {
   body {
-    font-size: 1.7rem;
+    font-size: 1.53rem;
   }
 }
 @media (max-width: 382px) {
   body {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
 }
+p {
+  margin-top: 0px;
+}
+
 h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5em;
   line-height: 1.1;
   font-family: Verdana, Geneva, sans-serif;
   font-weight: 700;
@@ -147,7 +152,7 @@ td, th {
 /* Buttons, forms and input */
 input, textarea {
   border: 1px solid #3a3a3a;
-  font-size: 1.4rem;
+  font-size: 1.26rem;
 }
 input:focus, textarea:focus {
   border: 1px solid #7a0019;
@@ -163,7 +168,7 @@ textarea {
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   background-color: #7a0019;
   color: #fdf6e3;
   border-radius: 1px;

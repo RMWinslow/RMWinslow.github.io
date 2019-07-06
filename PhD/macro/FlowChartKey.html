@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+<link href="../../styles/sakura.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+<h2>Graphical Notation for Search Problems</h2>
+
+<p> When this kind of search and matching problem is given in a prelim, the problem description often allows for several ambiguities in timing, which led to confusion when studying other people's solutions. I found that graphically representing the entire process was helpful for making my assumptions about timing clear and consisten, and for understanding what assumptions other people made.</p>
+
+<p> The notation I used differs from standardized Flow Chart notation in a few ways, as described below.</p>
+
+
+<table>
+	<tr>
+		<th>Object</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td><img src="FCtime.png" title="Bold triangle and crossbar represent end of one period and start of the next."></td>
+		<td>Period Boundary Node:<br> Time advances to next period. Discounting happens across these nodes.</td>
+	</tr>
+	<tr>
+		<td><img src="FCincome.png" title="Green circle with label 'x' represents earning x units of income."></td>
+		<td>Income Node:<br> Agent recieves income <i>x</i>, in terms of units of current period consumption. In simple search models, we can assume that the agent immediately consumes this income.</td>
+	</tr>
+	<tr>
+		<td><img src="FCchoice.png" title="Yellow Diamond represents the agent making a decision based on current state variables."></td>
+		<td>Choice Node:<br> The agent makes a decision based on the current state variables.<br>Most of the work in these problems comes from characterizing these nodes and essentially reducing them to chance nodes.</td>
+	</tr>
+	<tr>
+		<td><img src="FCchance.png" title="Small red diamond represents a random event."></td>
+		<td>Chance Node:<br> A random event occurs. Branchs are labelled with the probability of each outcome.</td>
+	</tr>
+	<tr>
+		<td><img src="FCprocess.png" title="Blue rectangle represents some update of the desicion variables."></td>
+		<td>Process Node:<br> The state variables are updated in some way not covered by the above. For example, a variable might be randomly redrawn, or reduced by 1.</td>
+	</tr>
+	<tr>
+		<td><img src="FClabel.png" title="Label for present value."></td>
+		<td>Present Value Label:<br> This is not a node. It is a label for the present value in the state marked by the dot. Present value labels can either be singular or a function of state variables.<br>
+		\(V^X_Y(Z)\) is the present value at state \(S^X_Y(Z)\)</td>
+	</tr>
+</table>
+
+<h4>A Mathematical digression</h4>
+The process described in McCall style search problems is like a state machine where the agent has utility over possible timelines of states. The state of the system changes when random events occur, when the agent makes choices, when time advances, etc. Such state changes are indicated by the nodes of the flowchart, and the present value can change only when the process flows through one of these nodes.<br>
+
+The nodes of a flowchart coorespond to the edges of the induced graph of states. And hence the actual states of the system coorespond to the <i>edges</i> of the flow chart. This coorespondence makes it easier to visualize to system, but is only sensible if we describe the states in such a way that transitions constantly happen. If you have a continuous-time model like Luttmer is fond of, then you would need to use an actual state diagram. 
+
+</body>
+</html>
+
+
+

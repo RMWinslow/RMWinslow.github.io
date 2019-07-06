@@ -15,7 +15,7 @@ body {
     // $font-size-base must be a rem value
     font-size: $font-size-base;
     line-height: 1.618;
-    max-width: 40em;
+    max-width: 45em;
     margin: auto;
     color: $color-text;
     background-color: $color-bg;
@@ -45,7 +45,12 @@ body {
     hyphens: auto;
 }
 
+p{
+  margin-top: 0px;
+}
+
 h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5em;
     line-height: 1.1;
     font-family: $font-family-sans-serif;
     font-weight: 700;
