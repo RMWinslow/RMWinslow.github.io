@@ -124,6 +124,13 @@ pre > code {
     white-space: pre;
 }
 
+.definition {
+    padding: 0.5em;
+    border-radius: 25px;
+    background-color: $color-bg-alt;
+    border: 1px solid $color-blossom;
+  }
+
 /* Tables */
 
 table {

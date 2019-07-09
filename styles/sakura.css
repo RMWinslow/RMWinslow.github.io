@@ -137,6 +137,13 @@ pre > code {
   white-space: pre;
 }
 
+.definition {
+  padding: 0.5em;
+  border-radius: 25px;
+  background-color: #ffcc33;
+  border: 1px solid #7a0019;
+}
+
 /* Tables */
 table {
   text-align: justify;

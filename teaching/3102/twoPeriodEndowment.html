@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script> 
+<link href="../../styles/sakura.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+<h1>Business Cycles</h1>
+
+<div class="definition">This is a test definition
+    \[e^5 sdfogijdfs \]
+</div>
+
+
+
+
+
+
+<canvas id="myChart" width="400" height="300"></canvas>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var scatterChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        datasets: [{
+            label: 'Scatter Dataset',
+            data: [{
+                x: -10,
+                y: 0
+            }, {
+                x: 0,
+                y: 10
+            }, {
+                x: 10,
+                y: 5
+            }]
+        }]
+    },
+    options: {
+        scales: {
+            xAxes: [{
+                type: 'linear',
+                position: 'bottom'
+            }]
+        }
+    }
+});
+</script>
+
+
+</body>
+</html>
+
+
+
