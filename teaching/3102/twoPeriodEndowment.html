@@ -25,7 +25,7 @@
         </tr>
 </table></b>
 
-<b>Exogenous Variables and Parameters:</b>    <button type="button" style="float: right;" >Click to update.</button>
+<b>Exogenous Variables and Parameters:</b>    <button type="button" style="float: right;" >Click here to update.</button>
 <b><table style="text-align: center; ">
         <tr>
             <td>\(y\):     <input type="number" id="income1"  min="0" step="1" style="width: 6em;">  &nbsp; </td>
@@ -37,8 +37,26 @@
         </tr>
 </table></b>
 
+<h3>Solving the problem algebraically:</h3>
+The consumer's problem is 
+\[\max_{c,c',s}\log c + \beta \log c'\]
+\[s.t. c\geq 0;c'\geq 0\]
+\[c+s\leq y-t\]
+\[c'\leq (1+r)s+y'-t'\]
 
-<
+Utility is strictly increasing, so the budget constraint will bind with equality.
+Solve for \(s\) in the second period, and then plug it into the first to get 
+\[s={c' -y' +t' \over 1+r}\]
+\[c+{c'\over 1+r}= y+{y' \over 1+r} - t - {t' \over 1+r}\equiv we\]
+
+If the consumer is behaving optimally, they will choose consumption such that their marginal rate of substitution is equal to the exchange rate between past and future consumption:
+\[(1+r)=MRS={{1/ c} \over {\beta / c'}}={c\over \beta c'}\]
+
+Therefore \(c'=(1+r)\beta c\) and 
+\[c+{(1+r)\beta c \over 1+r}=c(1+\beta)=we\]
+\[c={we\over 1+\beta}\]
+
+At this point, we have found the formulas for all the endogenous variables, and can plug in the exogenous parameters to find the result.
 
 
 
