@@ -1,0 +1,13 @@
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	
+<select class="addon addon-select" name="addon-8-choose-a-player-0">
+
+                <option value="">None</option>
+
+                <option data-raw-price="200" data-price="200" value="player-1-1">Player 1</option>
+                <option data-raw-price="200" data-price="200" value="player-2-2">Player 2</option>
+                <option data-raw-price="200" data-price="200" value="player-3-3">player 2</option>
+
+</select>
+
+<input type="text" class="input-text addon addon-custom" data-raw-price="100" data-price="100" name="addon-8-name-100-1[0]" value="">
