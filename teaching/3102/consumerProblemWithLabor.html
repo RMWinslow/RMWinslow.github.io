@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script> 
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+
+<link href="../../styles/sakura.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+<h1>Two-Period Consumer's Problem with Production</h1>
+
+
+<p>The consumer's problem is 
+    \[\max_{c,c',l,l',s_p} u(c,l) + \beta u(c',l') \]
+    \[ s.t. c\geq 0, c'\geq 0, 0 < l < h, 0 < l' < h' \]
+    \[ c + s_p \leq w(h-l) + \pi - t \]
+    \[ c' \leq (1+r)s_p + w'(h'-l') + \pi' -t' \]
+</p>
+
+<p> solving for s, and combining the BCs, we can get a single present value budget constraint:
+    \[ c+ {c'\over 1+r} \leq [w(h-l)+\pi-t] + {[w'(h'-l')+\pi'-t'] \over 1+r} \]
+</p>
+
+<p>Suppose that \(u(c,l) = \log c + \log l\)
+
+
+Taking \(\lambda\) to be the langragian multiplier for the present value budget constraint, the FOCs are:
+
+    \[U_c = {1\over c}=\lambda\]
+    \[U_{c'} = {\beta \over c'}={\lambda \over 1+r}\]
+    \[U_l = {1 \over l}=w\lambda\]
+    \[U_{l'} = {\beta \over l'}= {w'\lambda \over 1+r}\]
+
+Now dividing these by each other, we can find the marginal rates of substituion at the optimum:
+
+    \[MRS_{l,c} = {U_l \over U_c} = {c \over l} = w\]
+    \[MRS_{l',c'} = {U_{l'} \over U_{c'}} = {c' \over l'} = w'\]
+    \[MRS_{c,c'} = {U_c \over U_{c'}} = {c' \over \beta c} = 1+r\]
+
+Therefore
+    \[ l = {1 \over w} c\]
+    \[ c' = (1+r)\beta c \]
+    \[ l' = {c' \over w'} = {(1+r)\beta \over w'}c \]
+
+Plugging this into the budget constraint (which holds with equality because of our choice of utility):
+    \[ c+ \beta c = [wh-c+\pi-t] + {[w'h'-\beta(1+r)c+\pi'-t'] \over 1+r} \]
+    \[ c = {1 \over (2+2\beta)} \left([wh-c+\pi-t] + {[w'h'+\pi'-t'] \over 1+r}\right)  \]
+
+Now we have a formula for c in terms of lifetime wealth, and we can solve for our other choice variables by plugging in c. In particular, the formula for period-one leisure is now:
+    \[l = {1 \over (2+2\beta)} \left([wh-c+\pi-t] + {[w'h'+\pi'-t'] \over 1+r}\right)\]
+
+In particular, note three things about this expression:<br>
+    As wages increase, leisure decreases and so labor supplied increases.<br>
+    As interest rate increases, leisure decreases and so labor supplied increases.<br>
+    An increase in lifetime wealth increases leisure and so decreases labor supplied.<br>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
