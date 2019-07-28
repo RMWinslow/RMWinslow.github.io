@@ -1,0 +1,891 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script> 
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+
+<link href="../../../styles/sakura.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+<h1>Results for HW2, Problem 2</h1>
+
+<h6>Contents:</h6>
+<blockquote>
+    <a href="#CanadaLL">Canada</a>, 
+    <a href="#CanadaHP">Canada using HP filter</a><br>
+    <a href="#SwedenLL">Sweden</a>, 
+    <a href="#SwedenHP">Sweden using HP filter</a><br>
+    <a href="#AustraliaLL">Australia</a>, 
+    <a href="#AustraliaHP">Australia using HP filter</a><br>
+    <a href="#MexicoLL">Mexico</a>, 
+    <a href="#MexicoHP">Mexico using HP filter</a><br>
+    <a href="#JapanLL">Japan</a>, 
+    <a href="#JapanHP">Japan using HP filter</a><br>
+</blockquote>
+
+
+<hr>
+<h1 id="Canada">Canada</h1>
+
+<h2 id="CanadaLL">Simple Log-Linear Detrending</h2>
+<img src="CanadaY.svg"width='49%'>
+<img src="CanadaC.svg"width='49%'>
+<img src="CanadaG.svg"width='49%'>
+<img src="CanadaI.svg"width='49%'>
+<img src="CanadaX.svg"width='49%'>
+<img src="CanadaM.svg"width='49%'>
+
+<br><br><br><br><br>
+
+
+<h2 id="CanadaHP">Detrending with HP Filter</h2>
+<img src="CanadaY_HP.svg"width='49%'>
+<img src="CanadaC_HP.svg"width='49%'>
+<img src="CanadaG_HP.svg"width='49%'>
+<img src="CanadaI_HP.svg"width='49%'>
+<img src="CanadaX_HP.svg"width='49%'>
+<img src="CanadaM_HP.svg"width='49%'>
+
+STATS <br>
+
+HTML TABLE FOR HP FILTER DETREND
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Y</th>
+      <th>C</th>
+      <th>G</th>
+      <th>I</th>
+      <th>X</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Standard Deviation:</th>
+      <td>0.012524</td>
+      <td>0.009087</td>
+      <td>0.013709</td>
+      <td>0.048358</td>
+      <td>0.044567</td>
+      <td>0.042645</td>
+    </tr>
+    <tr>
+      <th>Coorelation with Y component:</th>
+      <td>1.000000</td>
+      <td>0.514414</td>
+      <td>-0.490509</td>
+      <td>0.868570</td>
+      <td>0.815121</td>
+      <td>0.772457</td>
+    </tr>
+  </tbody>
+</table>
+HTML TABLE FOR LOG LINEAR DETREND
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Y</th>
+      <th>C</th>
+      <th>G</th>
+      <th>I</th>
+      <th>X</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Standard Deviation:</th>
+      <td>0.037171</td>
+      <td>0.029647</td>
+      <td>0.056480</td>
+      <td>0.101223</td>
+      <td>0.167460</td>
+      <td>0.126039</td>
+    </tr>
+    <tr>
+      <th>Coorelation with Y component:</th>
+      <td>1.000000</td>
+      <td>0.835823</td>
+      <td>0.313145</td>
+      <td>0.422592</td>
+      <td>0.583767</td>
+      <td>0.592546</td>
+    </tr>
+  </tbody>
+</table>
+
+STATS WITH FLIPPED PRECENT DIFF FORMULA <br>
+
+HTML TABLE FOR HP FILTER DETREND
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Y</th>
+      <th>C</th>
+      <th>G</th>
+      <th>I</th>
+      <th>X</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Standard Deviation:</th>
+      <td>0.012603</td>
+      <td>0.009141</td>
+      <td>0.013690</td>
+      <td>0.048474</td>
+      <td>0.045492</td>
+      <td>0.044250</td>
+    </tr>
+    <tr>
+      <th>Coorelation with Y component:</th>
+      <td>1.000000</td>
+      <td>0.519649</td>
+      <td>-0.486601</td>
+      <td>0.878298</td>
+      <td>0.825972</td>
+      <td>0.780737</td>
+    </tr>
+  </tbody>
+</table>
+HTML TABLE FOR LOG LINEAR DETREND
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Y</th>
+      <th>C</th>
+      <th>G</th>
+      <th>I</th>
+      <th>X</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Standard Deviation:</th>
+      <td>0.037761</td>
+      <td>0.029951</td>
+      <td>0.057496</td>
+      <td>0.105761</td>
+      <td>0.159738</td>
+      <td>0.121774</td>
+    </tr>
+    <tr>
+      <th>Coorelation with Y component:</th>
+      <td>1.000000</td>
+      <td>0.838746</td>
+      <td>0.358438</td>
+      <td>0.417715</td>
+      <td>0.638464</td>
+      <td>0.653274</td>
+    </tr>
+  </tbody>
+</table>
+<br><br><br><br><br>
+
+
+
+
+
+
+
+<hr>
+<h1 id="Sweden">Sweden</h1>
+
+<h2 id="SwedenLL">Simple Log-Linear Detrending</h2>
+<img src="SwedenY.svg"width='49%'>
+<img src="SwedenC.svg"width='49%'>
+<img src="SwedenG.svg"width='49%'>
+<img src="SwedenI.svg"width='49%'>
+<img src="SwedenX.svg"width='49%'>
+<img src="SwedenM.svg"width='49%'>
+
+<br><br><br><br><br>
+
+
+<h2 id="SwedenHP">Detrending with HP Filter</h2>
+<img src="SwedenY_HP.svg"width='49%'>
+<img src="SwedenC_HP.svg"width='49%'>
+<img src="SwedenG_HP.svg"width='49%'>
+<img src="SwedenI_HP.svg"width='49%'>
+<img src="SwedenX_HP.svg"width='49%'>
+<img src="SwedenM_HP.svg"width='49%'>
+
+STATS <br>
+
+HTML TABLE FOR HP FILTER DETREND
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Y</th>
+      <th>C</th>
+      <th>G</th>
+      <th>I</th>
+      <th>X</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Standard Deviation:</th>
+      <td>0.013581</td>
+      <td>0.009922</td>
+      <td>0.009704</td>
+      <td>0.060752</td>
+      <td>0.047979</td>
+      <td>0.056721</td>
+    </tr>
+    <tr>
+      <th>Coorelation with Y component:</th>
+      <td>1.000000</td>
+      <td>0.493438</td>
+      <td>-0.065856</td>
+      <td>0.871366</td>
+      <td>0.631616</td>
+      <td>0.637176</td>
+    </tr>
+  </tbody>
+</table>
+HTML TABLE FOR LOG LINEAR DETREND
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Y</th>
+      <th>C</th>
+      <th>G</th>
+      <th>I</th>
+      <th>X</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Standard Deviation:</th>
+      <td>0.034208</td>
+      <td>0.025447</td>
+      <td>0.053222</td>
+      <td>0.126888</td>
+      <td>0.103076</td>
+      <td>0.102575</td>
+    </tr>
+    <tr>
+      <th>Coorelation with Y component:</th>
+      <td>1.000000</td>
+      <td>0.850002</td>
+      <td>-0.051382</td>
+      <td>0.835016</td>
+      <td>0.595563</td>
+      <td>0.673711</td>
+    </tr>
+  </tbody>
+</table>
+
+STATS WITH FLIPPED PRECENT DIFF FORMULA <br>
+
+HTML TABLE FOR HP FILTER DETREND
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Y</th>
+      <th>C</th>
+      <th>G</th>
+      <th>I</th>
+      <th>X</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Standard Deviation:</th>
+      <td>0.013728</td>
+      <td>0.009875</td>
+      <td>0.009694</td>
+      <td>0.061904</td>
+      <td>0.047464</td>
+      <td>0.055482</td>
+    </tr>
+    <tr>
+      <th>Coorelation with Y component:</th>
+      <td>1.000000</td>
+      <td>0.497128</td>
+      <td>-0.065713</td>
+      <td>0.878685</td>
+      <td>0.646345</td>
+      <td>0.654398</td>
+    </tr>
+  </tbody>
+</table>
+HTML TABLE FOR LOG LINEAR DETREND
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Y</th>
+      <th>C</th>
+      <th>G</th>
+      <th>I</th>
+      <th>X</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Standard Deviation:</th>
+      <td>0.034859</td>
+      <td>0.025855</td>
+      <td>0.053479</td>
+      <td>0.135075</td>
+      <td>0.109289</td>
+      <td>0.107343</td>
+    </tr>
+    <tr>
+      <th>Coorelation with Y component:</th>
+      <td>1.000000</td>
+      <td>0.851808</td>
+      <td>-0.043579</td>
+      <td>0.869271</td>
+      <td>0.580305</td>
+      <td>0.679023</td>
+    </tr>
+  </tbody>
+</table>
+<br><br><br><br><br>
+
+
+
+
+
+
+
+
+<hr>
+<h1 id="Australia">Australia</h1>
+
+<h2 id="AustraliaLL">Simple Log-Linear Detrending</h2>
+<img src="AustraliaY.svg"width='49%'>
+<img src="AustraliaC.svg"width='49%'>
+<img src="AustraliaG.svg"width='49%'>
+<img src="AustraliaI.svg"width='49%'>
+<img src="AustraliaX.svg"width='49%'>
+<img src="AustraliaM.svg"width='49%'>
+
+
+<br><br><br><br><br>
+
+
+<h2 id="AustraliaHP">Detrending with HP Filter</h2>
+<img src="AustraliaY_HP.svg"width='49%'>
+<img src="AustraliaC_HP.svg"width='49%'>
+<img src="AustraliaG_HP.svg"width='49%'>
+<img src="AustraliaI_HP.svg"width='49%'>
+<img src="AustraliaX_HP.svg"width='49%'>
+<img src="AustraliaM_HP.svg"width='49%'>
+
+STATS <br>
+
+HTML TABLE FOR HP FILTER DETREND
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Y</th>
+      <th>C</th>
+      <th>G</th>
+      <th>I</th>
+      <th>X</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Standard Deviation:</th>
+      <td>0.009158</td>
+      <td>0.008355</td>
+      <td>0.017767</td>
+      <td>0.046911</td>
+      <td>0.044801</td>
+      <td>0.043414</td>
+    </tr>
+    <tr>
+      <th>Coorelation with Y component:</th>
+      <td>1.000000</td>
+      <td>0.034728</td>
+      <td>-0.167555</td>
+      <td>0.900819</td>
+      <td>0.151914</td>
+      <td>0.550228</td>
+    </tr>
+  </tbody>
+</table>
+HTML TABLE FOR LOG LINEAR DETREND
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Y</th>
+      <th>C</th>
+      <th>G</th>
+      <th>I</th>
+      <th>X</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Standard Deviation:</th>
+      <td>0.022314</td>
+      <td>0.023905</td>
+      <td>0.046946</td>
+      <td>0.082519</td>
+      <td>0.074370</td>
+      <td>0.072865</td>
+    </tr>
+    <tr>
+      <th>Coorelation with Y component:</th>
+      <td>1.000000</td>
+      <td>0.478576</td>
+      <td>-0.466332</td>
+      <td>0.764074</td>
+      <td>0.419903</td>
+      <td>0.289413</td>
+    </tr>
+  </tbody>
+</table>
+
+STATS WITH FLIPPED PRECENT DIFF FORMULA <br>
+
+HTML TABLE FOR HP FILTER DETREND
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Y</th>
+      <th>C</th>
+      <th>G</th>
+      <th>I</th>
+      <th>X</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Standard Deviation:</th>
+      <td>0.00919</td>
+      <td>0.008375</td>
+      <td>0.017848</td>
+      <td>0.047152</td>
+      <td>0.043892</td>
+      <td>0.044681</td>
+    </tr>
+    <tr>
+      <th>Coorelation with Y component:</th>
+      <td>1.00000</td>
+      <td>0.029811</td>
+      <td>-0.167854</td>
+      <td>0.902226</td>
+      <td>0.170021</td>
+      <td>0.554389</td>
+    </tr>
+  </tbody>
+</table>
+HTML TABLE FOR LOG LINEAR DETREND
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Y</th>
+      <th>C</th>
+      <th>G</th>
+      <th>I</th>
+      <th>X</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Standard Deviation:</th>
+      <td>0.02262</td>
+      <td>0.023716</td>
+      <td>0.049902</td>
+      <td>0.086326</td>
+      <td>0.074025</td>
+      <td>0.075373</td>
+    </tr>
+    <tr>
+      <th>Coorelation with Y component:</th>
+      <td>1.00000</td>
+      <td>0.470488</td>
+      <td>-0.459126</td>
+      <td>0.771296</td>
+      <td>0.445182</td>
+      <td>0.280504</td>
+    </tr>
+  </tbody>
+</table>
+
+<br><br><br><br><br>
+
+
+
+
+
+
+<hr>
+<h1 id="Mexico">Mexico</h1>
+
+<h2 id="MexicoLL">Simple Log-Linear Detrending</h2>
+<img src="MexicoY.svg"width='49%'>
+<img src="MexicoC.svg"width='49%'>
+<img src="MexicoG.svg"width='49%'>
+<img src="MexicoI.svg"width='49%'>
+<img src="MexicoX.svg"width='49%'>
+<img src="MexicoM.svg"width='49%'>
+
+
+<h2 id="MexicoHP">Detrending with HP Filter</h2>
+<img src="MexicoY_HP.svg"width='49%'>
+<img src="MexicoC_HP.svg"width='49%'>
+<img src="MexicoG_HP.svg"width='49%'>
+<img src="MexicoI_HP.svg"width='49%'>
+<img src="MexicoX_HP.svg"width='49%'>
+<img src="MexicoM_HP.svg"width='49%'>
+
+STATS <br>
+
+HTML TABLE FOR HP FILTER DETREND
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Y</th>
+      <th>C</th>
+      <th>G</th>
+      <th>I</th>
+      <th>X</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Standard Deviation:</th>
+      <td>0.021057</td>
+      <td>0.024991</td>
+      <td>0.044031</td>
+      <td>0.060772</td>
+      <td>0.077635</td>
+      <td>0.068047</td>
+    </tr>
+    <tr>
+      <th>Coorelation with Y component:</th>
+      <td>1.000000</td>
+      <td>0.868778</td>
+      <td>0.665296</td>
+      <td>0.884121</td>
+      <td>-0.323421</td>
+      <td>0.450846</td>
+    </tr>
+  </tbody>
+</table>
+HTML TABLE FOR LOG LINEAR DETREND
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Y</th>
+      <th>C</th>
+      <th>G</th>
+      <th>I</th>
+      <th>X</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Standard Deviation:</th>
+      <td>0.079175</td>
+      <td>0.062236</td>
+      <td>0.137328</td>
+      <td>0.143828</td>
+      <td>0.254968</td>
+      <td>0.138324</td>
+    </tr>
+    <tr>
+      <th>Coorelation with Y component:</th>
+      <td>1.000000</td>
+      <td>0.799139</td>
+      <td>0.732612</td>
+      <td>0.838302</td>
+      <td>0.633026</td>
+      <td>0.573893</td>
+    </tr>
+  </tbody>
+</table>
+
+
+STATS WITH FLIPPED PRECENT DIFF FORMULA <br>
+
+
+
+HTML TABLE FOR HP FILTER DETREND
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Y</th>
+      <th>C</th>
+      <th>G</th>
+      <th>I</th>
+      <th>X</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Standard Deviation:</th>
+      <td>0.02115</td>
+      <td>0.025460</td>
+      <td>0.043368</td>
+      <td>0.059735</td>
+      <td>0.079566</td>
+      <td>0.067422</td>
+    </tr>
+    <tr>
+      <th>Coorelation with Y component:</th>
+      <td>1.00000</td>
+      <td>0.869033</td>
+      <td>0.655873</td>
+      <td>0.887274</td>
+      <td>-0.312217</td>
+      <td>0.425503</td>
+    </tr>
+  </tbody>
+</table>
+HTML TABLE FOR LOG LINEAR DETREND
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Y</th>
+      <th>C</th>
+      <th>G</th>
+      <th>I</th>
+      <th>X</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Standard Deviation:</th>
+      <td>0.081448</td>
+      <td>0.063385</td>
+      <td>0.138543</td>
+      <td>0.129665</td>
+      <td>0.232614</td>
+      <td>0.129373</td>
+    </tr>
+    <tr>
+      <th>Coorelation with Y component:</th>
+      <td>1.000000</td>
+      <td>0.826269</td>
+      <td>0.736712</td>
+      <td>0.855890</td>
+      <td>0.677436</td>
+      <td>0.545575</td>
+    </tr>
+  </tbody>
+</table>
+<br><br><br><br><br>
+
+
+
+
+
+
+
+<hr>
+<h1 id="Japan">Japan</h1>
+
+<h2 id="JapanLL">Simple Log-Linear Detrending</h2>
+
+<img src="JapanY.svg"width='49%'>
+<img src="JapanC.svg"width='49%'>
+<img src="JapanG.svg"width='49%'>
+<img src="JapanI.svg"width='49%'>
+<img src="JapanX.svg"width='49%'>
+<img src="JapanM.svg"width='49%'>
+
+
+<h2 id="JapanHP">Detrending with HP Filter</h2>
+<img src="JapanY_HP.svg"width='49%'>
+<img src="JapanC_HP.svg"width='49%'>
+<img src="JapanG_HP.svg"width='49%'>
+<img src="JapanI_HP.svg"width='49%'>
+<img src="JapanX_HP.svg"width='49%'>
+<img src="JapanM_HP.svg"width='49%'>
+
+
+
+data with correct percent diff
+
+HTML TABLE FOR HP DETREND
+<table border="1" class="dataframe">
+        <thead>
+          <tr style="text-align: right;">
+            <th></th>
+            <th>Y</th>
+            <th>C</th>
+            <th>G</th>
+            <th>I</th>
+            <th>X</th>
+            <th>M</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Standard Deviation:</th>
+            <td>0.013089</td>
+            <td>0.010098</td>
+            <td>0.010149</td>
+            <td>0.040269</td>
+            <td>0.069883</td>
+            <td>0.101430</td>
+          </tr>
+          <tr>
+            <th>Coorelation with Y component:</th>
+            <td>1.000000</td>
+            <td>0.767855</td>
+            <td>0.056590</td>
+            <td>0.856621</td>
+            <td>0.318506</td>
+            <td>0.426927</td>
+          </tr>
+        </tbody>
+      </table>
+      HTML TABLE FOR LOG LINEAR DETREND
+      <table border="1" class="dataframe">
+        <thead>
+          <tr style="text-align: right;">
+            <th></th>
+            <th>Y</th>
+            <th>C</th>
+            <th>G</th>
+            <th>I</th>
+            <th>X</th>
+            <th>M</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Standard Deviation:</th>
+            <td>0.112949</td>
+            <td>0.107755</td>
+            <td>0.087731</td>
+            <td>0.157744</td>
+            <td>0.142472</td>
+            <td>0.200073</td>
+          </tr>
+          <tr>
+            <th>Coorelation with Y component:</th>
+            <td>1.000000</td>
+            <td>0.980472</td>
+            <td>0.821684</td>
+            <td>0.925573</td>
+            <td>-0.047554</td>
+            <td>-0.350086</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+Data with flipped percent diff
+
+HTML TABLE FOR HP FILTER DETREND
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Y</th>
+      <th>C</th>
+      <th>G</th>
+      <th>I</th>
+      <th>X</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Standard Deviation:</th>
+      <td>0.013043</td>
+      <td>0.010087</td>
+      <td>0.009975</td>
+      <td>0.040173</td>
+      <td>0.072487</td>
+      <td>0.105957</td>
+    </tr>
+    <tr>
+      <th>Coorelation with Y component:</th>
+      <td>1.000000</td>
+      <td>0.763862</td>
+      <td>0.068189</td>
+      <td>0.858004</td>
+      <td>0.342471</td>
+      <td>0.443786</td>
+    </tr>
+  </tbody>
+</table>
+HTML TABLE FOR LOG LINEAR DETREND
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Y</th>
+      <th>C</th>
+      <th>G</th>
+      <th>I</th>
+      <th>X</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Standard Deviation:</th>
+      <td>0.113874</td>
+      <td>0.113536</td>
+      <td>0.100966</td>
+      <td>0.145746</td>
+      <td>0.133596</td>
+      <td>0.194193</td>
+    </tr>
+    <tr>
+      <th>Coorelation with Y component:</th>
+      <td>1.000000</td>
+      <td>0.979465</td>
+      <td>0.836350</td>
+      <td>0.909867</td>
+      <td>0.000124</td>
+      <td>-0.325120</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+</body>
+</html>
+
+
