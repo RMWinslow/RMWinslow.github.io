@@ -23,7 +23,7 @@ body {
   max-width: 45em;
   margin: auto;
   color: #3a3a3a;
-  background-color: #FFD7D7;
+  background-color: #ffccee;
   padding: 13px;
 }
 
@@ -118,7 +118,7 @@ img {
 
 /* Pre and Code */
 pre {
-  background-color: #FFBEBE;
+  background-color: #F49CBB;
   display: block;
   padding: 1em;
   overflow-x: auto;
@@ -127,7 +127,7 @@ pre {
 code {
   font-size: 0.9em;
   padding: 0;
-  background-color: #FFBEBE;
+  background-color: #F49CBB;
   white-space: pre-wrap;
 }
 
@@ -140,7 +140,7 @@ pre > code {
 .definition {
   padding: 0.5em;
   border-radius: 25px;
-  background-color: #FFBEBE;
+  background-color: #F49CBB;
   border: 1px solid #7a0019;
 }
 
@@ -153,7 +153,7 @@ table {
 
 td, th {
   padding: 0.5em;
-  border-bottom: 1px solid #FFBEBE;
+  border-bottom: 1px solid #F49CBB;
 }
 
 /* Buttons, forms and input */
@@ -199,8 +199,8 @@ textarea, select, input[type] {
   padding: 6px 10px;
   /* The 6px vertically centers text on FF, ignored by Webkit */
   margin-bottom: 10px;
-  background-color: #FFBEBE;
-  border: 2px solid #FFBEBE;
+  background-color: #F49CBB;
+  border: 2px solid #F49CBB;
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
