@@ -1,0 +1,517 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script> 
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+
+<link href="../../../styles/sakura.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+<h1>Results for HW2, Problem 2</h1>
+
+<div>
+    <h6>Contents:</h6>
+    <a href="#CanadaLL">Canada</a><br>
+    <a href="#CanadaHP">Canada using HP filter</a><br>
+    <a href="#SwedenLL">Sweden</a><br>
+    <a href="#SwedenHP">Sweden using HP filter</a><br>
+    <a href="#AustraliaLL">Australia</a><br>
+    <a href="#AustraliaHP">Australia using HP filter</a><br>
+    <a href="#MexicoLL">Mexico</a><br>
+    <a href="#MexicoHP">Mexico using HP filter</a><br>
+    <a href="#JapanLL">Japan</a><br>
+    <a href="#JapanHP">Japan using HP filter</a><br>
+</div>
+
+
+<hr>
+<h1 id="Canada">Canada</h1>
+
+<h2 id="CanadaLL">Simple Log-Linear Detrending</h2>
+<img src="CanadaY.svg"width='100%'>
+<img src="CanadaC.svg"width='100%'>
+<img src="CanadaG.svg"width='100%'>
+<img src="CanadaI.svg"width='100%'>
+<img src="CanadaX.svg"width='100%'>
+<img src="CanadaM.svg"width='100%'>
+
+<h4>Stats about %  Deviation from  Trends:</h4>
+<table class="dataframe">
+        <thead>
+                <tr style="text-align: right;">
+                  <th></th>
+                  <th>Y</th>
+                  <th>C</th>
+                  <th>G</th>
+                  <th>I</th>
+                  <th>X</th>
+                  <th>M</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Standard Deviation:</th>
+                  <td>0.037171</td>
+                  <td>0.029647</td>
+                  <td>0.056480</td>
+                  <td>0.101223</td>
+                  <td>0.167460</td>
+                  <td>0.126039</td>
+                </tr>
+                <tr>
+                  <th>Coorelation with Y component:</th>
+                  <td>1.000000</td>
+                  <td>0.835823</td>
+                  <td>0.313145</td>
+                  <td>0.422592</td>
+                  <td>0.583767</td>
+                  <td>0.592546</td>
+                </tr>
+              </tbody>
+            </table>
+<br><br><br><br><br>
+
+
+<h2 id="CanadaHP">Detrending with HP Filter</h2>
+<img src="CanadaY_HP.svg"width='100%'>
+<img src="CanadaC_HP.svg"width='100%'>
+<img src="CanadaG_HP.svg"width='100%'>
+<img src="CanadaI_HP.svg"width='100%'>
+<img src="CanadaX_HP.svg"width='100%'>
+<img src="CanadaM_HP.svg"width='100%'>
+
+<h4>Stats about %  Deviation from HP Trends:</h4>
+<table  class="dataframe">
+        <thead>
+                <tr style="text-align: right;">
+                  <th></th>
+                  <th>Y</th>
+                  <th>C</th>
+                  <th>G</th>
+                  <th>I</th>
+                  <th>X</th>
+                  <th>M</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Standard Deviation:</th>
+                  <td>0.012524</td>
+                  <td>0.009087</td>
+                  <td>0.013709</td>
+                  <td>0.048358</td>
+                  <td>0.044567</td>
+                  <td>0.042645</td>
+                </tr>
+                <tr>
+                  <th>Coorelation with Y component:</th>
+                  <td>1.000000</td>
+                  <td>0.514414</td>
+                  <td>-0.490509</td>
+                  <td>0.868570</td>
+                  <td>0.815121</td>
+                  <td>0.772457</td>
+                </tr>
+              </tbody>
+            </table>
+<br><br><br><br><br>
+
+
+
+
+
+
+
+<hr>
+<h1 id="Sweden">Sweden</h1>
+
+<h2 id="SwedenLL">Simple Log-Linear Detrending</h2>
+<img src="SwedenY.svg"width='100%'>
+<img src="SwedenC.svg"width='100%'>
+<img src="SwedenG.svg"width='100%'>
+<img src="SwedenI.svg"width='100%'>
+<img src="SwedenX.svg"width='100%'>
+<img src="SwedenM.svg"width='100%'>
+
+<h4>Stats about %  Deviation from  Trends:</h4>
+<table class="dataframe">
+        <thead>
+                <tr style="text-align: right;">
+                  <th></th>
+                  <th>Y</th>
+                  <th>C</th>
+                  <th>G</th>
+                  <th>I</th>
+                  <th>X</th>
+                  <th>M</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Standard Deviation:</th>
+                  <td>0.034208</td>
+                  <td>0.025447</td>
+                  <td>0.053222</td>
+                  <td>0.126888</td>
+                  <td>0.103076</td>
+                  <td>0.102575</td>
+                </tr>
+                <tr>
+                  <th>Coorelation with Y component:</th>
+                  <td>1.000000</td>
+                  <td>0.850002</td>
+                  <td>-0.051382</td>
+                  <td>0.835016</td>
+                  <td>0.595563</td>
+                  <td>0.673711</td>
+                </tr>
+              </tbody>
+            </table>
+<br><br><br><br><br>
+
+
+<h2 id="SwedenHP">Detrending with HP Filter</h2>
+<img src="SwedenY_HP.svg"width='100%'>
+<img src="SwedenC_HP.svg"width='100%'>
+<img src="SwedenG_HP.svg"width='100%'>
+<img src="SwedenI_HP.svg"width='100%'>
+<img src="SwedenX_HP.svg"width='100%'>
+<img src="SwedenM_HP.svg"width='100%'>
+
+<h4>Stats about %  Deviation from HP Trends:</h4>
+<table  class="dataframe">
+        <thead>
+                <tr style="text-align: right;">
+                  <th></th>
+                  <th>Y</th>
+                  <th>C</th>
+                  <th>G</th>
+                  <th>I</th>
+                  <th>X</th>
+                  <th>M</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Standard Deviation:</th>
+                  <td>0.013581</td>
+                  <td>0.009922</td>
+                  <td>0.009704</td>
+                  <td>0.060752</td>
+                  <td>0.047979</td>
+                  <td>0.056721</td>
+                </tr>
+                <tr>
+                  <th>Coorelation with Y component:</th>
+                  <td>1.000000</td>
+                  <td>0.493438</td>
+                  <td>-0.065856</td>
+                  <td>0.871366</td>
+                  <td>0.631616</td>
+                  <td>0.637176</td>
+                </tr>
+              </tbody>
+            </table>
+<br><br><br><br><br>
+
+
+
+
+
+
+
+
+<hr>
+<h1 id="Australia">Australia</h1>
+
+<h2 id="AustraliaLL">Simple Log-Linear Detrending</h2>
+<img src="AustraliaY.svg"width='100%'>
+<img src="AustraliaC.svg"width='100%'>
+<img src="AustraliaG.svg"width='100%'>
+<img src="AustraliaI.svg"width='100%'>
+<img src="AustraliaX.svg"width='100%'>
+<img src="AustraliaM.svg"width='100%'>
+
+<h4>Stats about %  Deviation from  Trends:</h4>
+<table class="dataframe">
+        <thead>
+          <tr style="text-align: right;">
+            <th></th>
+            <th>Y</th>
+            <th>C</th>
+            <th>G</th>
+            <th>I</th>
+            <th>X</th>
+            <th>M</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Standard Deviation:</th>
+            <td>0.022314</td>
+            <td>0.023905</td>
+            <td>0.046946</td>
+            <td>0.082519</td>
+            <td>0.074370</td>
+            <td>0.072865</td>
+          </tr>
+          <tr>
+            <th>Coorelation with Y component:</th>
+            <td>1.000000</td>
+            <td>0.478576</td>
+            <td>-0.466332</td>
+            <td>0.764074</td>
+            <td>0.419903</td>
+            <td>0.289413</td>
+          </tr>
+        </tbody>
+      </table>
+<br><br><br><br><br>
+
+
+<h2 id="AustraliaHP">Detrending with HP Filter</h2>
+<img src="AustraliaY_HP.svg"width='100%'>
+<img src="AustraliaC_HP.svg"width='100%'>
+<img src="AustraliaG_HP.svg"width='100%'>
+<img src="AustraliaI_HP.svg"width='100%'>
+<img src="AustraliaX_HP.svg"width='100%'>
+<img src="AustraliaM_HP.svg"width='100%'>
+
+<h4>Stats about %  Deviation from HP Trends:</h4>
+<table  class="dataframe">
+        <thead>
+          <tr style="text-align: right;">
+            <th></th>
+            <th>Y</th>
+            <th>C</th>
+            <th>G</th>
+            <th>I</th>
+            <th>X</th>
+            <th>M</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Standard Deviation:</th>
+            <td>0.009158</td>
+            <td>0.008355</td>
+            <td>0.017767</td>
+            <td>0.046911</td>
+            <td>0.044801</td>
+            <td>0.043414</td>
+          </tr>
+          <tr>
+            <th>Coorelation with Y component:</th>
+            <td>1.000000</td>
+            <td>0.034728</td>
+            <td>-0.167555</td>
+            <td>0.900819</td>
+            <td>0.151914</td>
+            <td>0.550228</td>
+          </tr>
+        </tbody>
+      </table>
+<br><br><br><br><br>
+
+
+
+
+
+
+<hr>
+<h1 id="Mexico">Mexico</h1>
+
+<h2 id="MexicoLL">Simple Log-Linear Detrending</h2>
+<img src="MexicoY.svg"width='100%'>
+<img src="MexicoC.svg"width='100%'>
+<img src="MexicoG.svg"width='100%'>
+<img src="MexicoI.svg"width='100%'>
+<img src="MexicoX.svg"width='100%'>
+<img src="MexicoM.svg"width='100%'>
+
+<h4>Stats about %  Deviation from  Trends:</h4>
+<table class="dataframe">
+        <thead>
+                <tr style="text-align: right;">
+                  <th></th>
+                  <th>Y</th>
+                  <th>C</th>
+                  <th>G</th>
+                  <th>I</th>
+                  <th>X</th>
+                  <th>M</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Standard Deviation:</th>
+                  <td>0.079175</td>
+                  <td>0.062236</td>
+                  <td>0.137328</td>
+                  <td>0.143828</td>
+                  <td>0.254968</td>
+                  <td>0.138324</td>
+                </tr>
+                <tr>
+                  <th>Coorelation with Y component:</th>
+                  <td>1.000000</td>
+                  <td>0.799139</td>
+                  <td>0.732612</td>
+                  <td>0.838302</td>
+                  <td>0.633026</td>
+                  <td>0.573893</td>
+                </tr>
+              </tbody>
+            </table>
+<br><br><br><br><br>
+
+
+<h2 id="MexicoHP">Detrending with HP Filter</h2>
+<img src="MexicoY_HP.svg"width='100%'>
+<img src="MexicoC_HP.svg"width='100%'>
+<img src="MexicoG_HP.svg"width='100%'>
+<img src="MexicoI_HP.svg"width='100%'>
+<img src="MexicoX_HP.svg"width='100%'>
+<img src="MexicoM_HP.svg"width='100%'>
+
+<h4>Stats about %  Deviation from HP Trends:</h4>
+<table  class="dataframe">
+        <thead>
+                <tr style="text-align: right;">
+                  <th></th>
+                  <th>Y</th>
+                  <th>C</th>
+                  <th>G</th>
+                  <th>I</th>
+                  <th>X</th>
+                  <th>M</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Standard Deviation:</th>
+                  <td>0.021057</td>
+                  <td>0.024991</td>
+                  <td>0.044031</td>
+                  <td>0.060772</td>
+                  <td>0.077635</td>
+                  <td>0.068047</td>
+                </tr>
+                <tr>
+                  <th>Coorelation with Y component:</th>
+                  <td>1.000000</td>
+                  <td>0.868778</td>
+                  <td>0.665296</td>
+                  <td>0.884121</td>
+                  <td>-0.323421</td>
+                  <td>0.450846</td>
+                </tr>
+              </tbody>
+            </table>
+<br><br><br><br><br>
+
+
+
+
+
+
+
+<hr>
+<h1 id="Japan">Japan</h1>
+
+<h2 id="JapanLL">Simple Log-Linear Detrending</h2>
+<img src="JapanY.svg"width='100%'>
+<img src="JapanC.svg"width='100%'>
+<img src="JapanG.svg"width='100%'>
+<img src="JapanI.svg"width='100%'>
+<img src="JapanX.svg"width='100%'>
+<img src="JapanM.svg"width='100%'>
+
+<h4>Stats about %  Deviation from  Trends:</h4>
+<table class="dataframe">
+        <thead>
+                <tr style="text-align: right;">
+                  <th></th>
+                  <th>Y</th>
+                  <th>C</th>
+                  <th>G</th>
+                  <th>I</th>
+                  <th>X</th>
+                  <th>M</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Standard Deviation:</th>
+                  <td>0.112949</td>
+                  <td>0.107755</td>
+                  <td>0.087731</td>
+                  <td>0.157744</td>
+                  <td>0.142472</td>
+                  <td>0.200073</td>
+                </tr>
+                <tr>
+                  <th>Coorelation with Y component:</th>
+                  <td>1.000000</td>
+                  <td>0.980472</td>
+                  <td>0.821684</td>
+                  <td>0.925573</td>
+                  <td>-0.047554</td>
+                  <td>-0.350086</td>
+                </tr>
+              </tbody>
+            </table>
+<br><br><br><br><br>
+
+
+<h2 id="JapanHP">Detrending with HP Filter</h2>
+<img src="JapanY_HP.svg"width='100%'>
+<img src="JapanC_HP.svg"width='100%'>
+<img src="JapanG_HP.svg"width='100%'>
+<img src="JapanI_HP.svg"width='100%'>
+<img src="JapanX_HP.svg"width='100%'>
+<img src="JapanM_HP.svg"width='100%'>
+
+<h4>Stats about %  Deviation from HP Trends:</h4>
+<table  class="dataframe">
+        <thead>
+                <tr style="text-align: right;">
+                  <th></th>
+                  <th>Y</th>
+                  <th>C</th>
+                  <th>G</th>
+                  <th>I</th>
+                  <th>X</th>
+                  <th>M</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Standard Deviation:</th>
+                  <td>0.013089</td>
+                  <td>0.010098</td>
+                  <td>0.010149</td>
+                  <td>0.040269</td>
+                  <td>0.069883</td>
+                  <td>0.101430</td>
+                </tr>
+                <tr>
+                  <th>Coorelation with Y component:</th>
+                  <td>1.000000</td>
+                  <td>0.767855</td>
+                  <td>0.056590</td>
+                  <td>0.856621</td>
+                  <td>0.318506</td>
+                  <td>0.426927</td>
+                </tr>
+              </tbody>
+            </table>
+<br><br><br><br><br>
+
+
+
+
