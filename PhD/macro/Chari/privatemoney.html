@@ -2,16 +2,100 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Cash Credit with Private Money</title>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
-	<link href="../../../styles/sakuraPink.css" rel="stylesheet" type="text/css">
+	<link href="../../../styles/sakuraGreen.css" rel="stylesheet" type="text/css">
 	<!--<style>body{background-color: #ffccee;}</style>-->
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+	</script>
+	<!--Latex Definitions:-->
+	\[
+		\definecolor{name}{RGB}{200,210,200}
+		\newcommand{\condition}[1]{\color{name} \text{(#1)}}
+	\]
 </head>
 <body>
 
 
-<h2>Tim's Favorite Search Problem</h2>
-<h5>Setup:</h5>
+<h1>Cash Credit with Private Money</h1>
 
+<h5>Setup:</h5>
+<p><b>
+	Consider a cash credit goods economy in which households have preferences of the form \(\sum_{t=0}^\infty \beta^t (\log c_{1t}+\phi \log c_{2t})\), where \(c_{1t}\) and \(c_{2t}\) denote consumption of cash and credit goods, respectively, \(\phi\)  is a parameter, and \(0 < \beta < 1 \) is the discount factor.
+	Households supply labor inelastically. 
+	The resource constraint is given by 
+		\[c_{1t} + c_{2t} + k_{t+1} = k_t^\alpha + (1-\delta) k_t\]
+	where \(k_t\) denotes the capital stock, and the capital share parameter \(\alpha\) and the depreciation rate \(\delta\) are both positive and less than 1.
+
+	It is convenient to let \(q_t\) denote the price of money (or the inverse of the price level). The representative household's budget constraint is given by 
+		\[q_t M_{t+1} + c_{1t} + c_{2t} + k_{t+1} \leq q_t M_t + R_{kt}k_t + w_t l_t + q_t T_t\]
+	where \(M_t\) denotes cash balances, \(R_{kt}\) denotes the return to capital, and \(T_t\) denotes lump sum transfers of cash by the government. The household can use a fraction \(\theta\) of its capital stock to purchase cash goods. The cash in advance constraint is 
+		\[c_{1t} \leq q_t M_t + \theta k_t\]
+</b></p>
+
+<hr>
+
+
+
+
+<h5>Define a competitive Equilibrium</h5>
+
+<p>A few quick notes: I will assume that labor is supplied inelastically at  \(\overline{l_t}=1\).  And I will assume that the production function is cobb-douglass; this matches the given resource constraint. I will  write \(r_t\) for the price of renting a unit of capital. Then the return on capital described above is:  \(R_t=1+r_t-\delta \).</p>
+
+<p>
+Given parameters \((\beta, \phi, \alpha, \delta)\) and initial quantities \((\bar{k_0},\bar{M_0} )\), a competitive equilibrium in this economy consists of the following sets:
+	<ul>
+		<li> An allocation for the representative household: \( HH\equiv \left\{ c_{1t},  c_{2t}, k_{t+1}, M_{t+1} \right\}_{t=0}^\infty \)</li>
+		<li>An allocation for the firm: \(\left\{ k^f_{t}, l^f_{t}  \right\}_{t=0}^\infty\)</li>
+		<li>Government policy: \(\left\{ M^g_{t}, T_{t}  \right\}_{t=0}^\infty\)</li>
+		<li>and Prices: \(\left\{ q_t, r_t, w_t \right\}_{t=0}^\infty\)</li>
+	</ul>
+Such that the following conditions are satisfied:
+<ul>
+		<li><b>HH Optimization</b>: Taking prices and policy as given, the household allocation solves:
+				\[\max_{HH} \sum_{t=0}^\infty \beta^t (\log c_{1t}+\phi \log c_{2t})\]
+			such that:
+				\[\bar{k_0}=k_0, \;   M_0 = \bar{M_0}\]
+			and for all \(t\geq 0:\)
+			\begin{split}
+				 c_{1t}\geq 0,\;     c_{2t}\geq 0,\;   &   k_{t+1}\geq 0,\;   M_{t+1}\geq 0    &\;\; \condition{Non-Negativity}\\
+				q_t M_{t+1} + c_{1t} + c_{2t} + k_{t+1} & \leq q_t M_t + (1+r_t-\delta)k_t + w_t l_t + q_t   &\;\; \condition{Budget}\\
+				c_{1t} & \leq q_t M_t + \theta k_t    &\;\; \condition{CIA}\\
+			\end{split}
+		</li>
+		<li><b>Firm Optimization</b>: Taking prices as given, in each period, the firm's allocation solves
+			\[\max_{l_t^f,k_t^f}\; {(k_t^f)}^\alpha {(l_t^f)}^{1-\alpha} - r_t k_t^f - w_t l_t^f\]
+		</li>
+		<li><b>Gov Budget Balance</b>: In all periods \(t\), the government's budget is balanced:
+			\[T_t = M_{t+1}^g - M_t^g\]
+		</li>
+		<li><b>Markets Clear</b>: In all periods \(t\), 
+			\begin{split}
+				l_t^f &= \overline{l_t} = 1 \\
+				k_t^f &= k_t   \\ 
+				M_t &= M_t^g\\
+				c_{1t} + c_{2t} + k_{t+1}  &= k_t^\alpha + (1-\delta) k_t  &\;\; \condition{RC}\\
+			\end{split}
+		</li>
+	</ul>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr><hr><hr>
 The agent has preferences given by \[ \sum_{t}\beta^t c_t \]
 
 <ul>
