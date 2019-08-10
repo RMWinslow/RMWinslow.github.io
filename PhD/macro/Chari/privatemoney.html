@@ -39,17 +39,17 @@
 
 
 
-<h5>Define a competitive Equilibrium</h5>
+<h4>Define a competitive Equilibrium</h4>
 
-<p>A few quick notes: I will assume that labor is supplied inelastically at  \(\overline{l_t}=1\).  And I will assume that the production function is cobb-douglass; this matches the given resource constraint. I will  write \(r_t\) for the price of renting a unit of capital. Then the return on capital described above is:  \(R_t=1+r_t-\delta \).</p>
+<p>A few quick notes: I will assume that labor is supplied inelastically at  \(\overline{l}=1\).  And I will assume that the production function is cobb-douglass; this matches the given resource constraint. I will  write \(r_t\) for the price of renting a unit of capital. Then the return on capital described above is:  \(R_t=1+r_t-\delta \).</p>
 
 <p>
-Given parameters \((\beta, \phi, \alpha, \delta)\) and initial quantities \((\bar{k_0},\bar{M_0} )\), a competitive equilibrium in this economy consists of the following sets:
+Given parameters \((\beta, \phi, \alpha, \delta, \theta)\), and initial quantities \((\bar{k_0},\bar{M_0} )\), a competitive equilibrium in this economy consists of the following sets:
 	<ul>
 		<li> An allocation for the representative household: \( HH\equiv \left\{ c_{1t},  c_{2t}, k_{t+1}, M_{t+1} \right\}_{t=0}^\infty \)</li>
 		<li>An allocation for the firm: \(\left\{ k^f_{t}, l^f_{t}  \right\}_{t=0}^\infty\)</li>
 		<li>Government policy: \(\left\{ M^g_{t}, T_{t}  \right\}_{t=0}^\infty\)</li>
-		<li>and Prices: \(\left\{ q_t, r_t, w_t \right\}_{t=0}^\infty\)</li>
+		<li>and Prices: \(\left\{ q_t, r_t, w_t \right\}_{t=0}^\infty  \)</li>
 	</ul>
 Such that the following conditions are satisfied:
 <ul>
@@ -58,11 +58,11 @@ Such that the following conditions are satisfied:
 			such that:
 				\[\bar{k_0}=k_0, \;   M_0 = \bar{M_0}\]
 			and for all \(t\geq 0:\)
-			\begin{split}
+			\begin{align}
 				 c_{1t}\geq 0,\;     c_{2t}\geq 0,\;   &   k_{t+1}\geq 0,\;   M_{t+1}\geq 0    &\;\; \condition{Non-Negativity}\\
-				q_t M_{t+1} + c_{1t} + c_{2t} + k_{t+1} & \leq q_t M_t + (1+r_t-\delta)k_t + w_t l_t + q_t   &\;\; \condition{Budget}\\
+				q_t M_{t+1} + c_{1t} + c_{2t} + k_{t+1} & \leq q_t M_t + (1+r_t-\delta)k_t + w_t + q_t T_t   &\;\; \condition{Budget}\\
 				c_{1t} & \leq q_t M_t + \theta k_t    &\;\; \condition{CIA}\\
-			\end{split}
+			\end{align}
 		</li>
 		<li><b>Firm Optimization</b>: Taking prices as given, in each period, the firm's allocation solves
 			\[\max_{l_t^f,k_t^f}\; {(k_t^f)}^\alpha {(l_t^f)}^{1-\alpha} - r_t k_t^f - w_t l_t^f\]
@@ -71,253 +71,297 @@ Such that the following conditions are satisfied:
 			\[T_t = M_{t+1}^g - M_t^g\]
 		</li>
 		<li><b>Markets Clear</b>: In all periods \(t\), 
-			\begin{split}
-				l_t^f &= \overline{l_t} = 1 \\
+			\begin{align}
+				l_t^f &= \overline{l} = 1 \\
 				k_t^f &= k_t   \\ 
 				M_t &= M_t^g\\
 				c_{1t} + c_{2t} + k_{t+1}  &= k_t^\alpha + (1-\delta) k_t  &\;\; \condition{RC}\\
-			\end{split}
+			\end{align}
 		</li>
 	</ul>
 </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<hr><hr><hr>
-The agent has preferences given by \[ \sum_{t}\beta^t c_t \]
-
-<ul>
-	<li>
-		If the agent is unemployed at the start of the period (state \( S^U \)), then a random wage offer \(w\) is drawn from the fixed distribution \(F(w)\), which has support \([0,B]\). The agent can choose to accept or reject the offer.
-		<ul>
-			<li>If they accept, they earn income \(w\), and then enter the next period employed at wage \(w\).</li>
-			<li>If they reject, they earn fixed income \(b\), and then enter the next period unemployed. Assume \(b \in[0,B)\).</li>
-		</ul>
-	</li>
-	<li>
-		If the agent is employed at the start of the period with wage \(w\) (state \(S^E(w)\)), they earn income \(w\), and then enter the next period employed with wage \(w\). Jobs can never be lost.
-	</li>	
-	<li>Income is in terms of units of consumption, and cannot be saved. There is also no borrowing nor lending, so the agent will consume their income each period.</li>
-</ul>
-
-<p>This system can be summarized by the following diagram. (<a href="../FlowChartKey.html">key</a>)</p>
-
-<img src="KehoeSearchLabels.png" alt="Flowchart for a simple job search with no firing.">
-
-The loop of being employed is on the right, and the loop of searching for a job is on the left. \(V(w)\) is the present value of having offer \(w\) in hand. \(V^U\) is the present value of starting a period unemployed.
-
-
-
-
-<h5>Characterizing the Decision Rule</h5>
-
-Note that per-period utility flow is bounded, and so with discounting, all present values are bounded as well. At  this point, we don't know what these present values are numerically, nor even if they are computable. But by the time-invariance of the process, we know that they exist, and can establish some relationships between them:
-
-\[V^R = b +\beta V^U\]
-\[V^U = E[V(w)] \]
-\[V(w) = \max \left\{V^A (w),V^R\right\} \]
-\[ V^A (w) = V^E (w) = w + \beta V^E (w) = {w \over 1-\beta} \]
-
-It is optimal to accept an offer iff \({w \over 1-\beta}\geq V^R\). The expression \({w \over 1-\beta}\) is strictly increasing in \(w\), and  \( V^R\) is constant, though we don't know it yet. By the intermediate value theorem, there must be a reservation wage \(\bar{w}\) such that \({\bar{w} \over 1-\beta}= V^R\) and it is optimal to accept an offer iff \(w\geq\bar{w}\). Therefore:
-
-\begin{split}
-	V^U = E\left[V(w)\right] & = \Pr(w<\bar{w})V^R & + \Pr(w\geq\bar{w})E\left[{w \over 1-\beta}\mid w\geq\bar{w}\right] \\
-	V^U = E\left[V(w)\right] & = F(\bar{w})V^R & + \int_{\bar{w}}^{B} {w \over 1-\beta} f(w) dw
-\end{split}
-
-\[ {\bar{w} \over 1-\beta} = V^R = b +\beta V^U = b + \beta F(\bar{w}){\bar{w} \over 1-\beta} +\beta \int_{\bar{w}}^{B} {w \over 1-\beta} f(w) dw  \]
-
-The above formula characterizes the reservation wage for given \(b\) and \(F\). Rearranging:
-\[ 0 = \bar{w}\left({1-\beta F(\bar{w}) \over 1-\beta}\right) -b - \beta \int_{\bar{w}}^{B} {w \over 1-\beta} f(w) dw \]
-
-You can verify that this has only exactly solution by evaluating the right-hand side as a continuous function of \(\bar{w}\). The RHS is negative at \(\bar{w}=0\), positive at \(\bar{w}=B\), and the derivative is strictly positive over \((0,B)\).
-
-
-
-
-
-
-
-<h5> Comparative Statics: Increasing Unemployment Benefits \(b\).</h5>
-
-<p><i>Consider two economies with different unemployment benefits \(b_1\) and \(b_2\), but that are otherwise identical. </i></p>
-
-Let \(b_2 > b_1\). Define:
-\[ \hat{b}(x) \equiv x\left({1-\beta F(x) \over 1-\beta}\right) - \beta \int_{x}^{B} {w \over 1-\beta} f(w) dw \]
-
-From above, we know that \(b_i = \hat{b}(\bar{w_i})\). Taking the derivative, 
-\[ \hat{b}'(x) = \left({1-\beta F(x) \over 1-\beta}\right) - x{\beta\over 1-\beta}f(x) - {\beta\over 1-\beta} (-xf(x)) = \left({1-\beta F(x) \over 1-\beta}\right) > 0\]
-
-So because \(\hat{b}(x)\) is <!--continuous and--> strictly increasing, \(b_2>b_1 \implies \hat{b}(\bar{w_2})>\hat{b}(\bar{w_1}) \implies \bar{w_2} > \bar{w_1} \)
-
 <hr>
 
-<p>More intuitively, but a bit less rigourously, let \(V^U_i\) be the present value of starting a period unemployed in economy \(i\). We know that \({\bar{w_i} \over 1-\beta} = V^E(\bar{w_i})=b_i+\beta V^U_i\) <!--and so \(b_i=V^E(\bar{w_i})-\beta V^U_i\)--> and so \(\bar{w_i}=(1-\beta)(b_i+\beta V^U_i)\)
+
+
+
+
+
+<h4>First Order Conditions:</h4>
+<p>
+	Assumming an interior solution with nonbinding NNCs,  letting \(\lambda_t\) be the Lagrange Multipliers for the Budget constraints, and letting \(\gamma_t\) be the Lagrange Multipliers for the Cash In Advance constraints, the FOCs are:
+	\begin{align}
+		{\color{name}c_{1t}:} && {\beta^t \over c_{1t}} &= \lambda_t  + \gamma_t\\ 
+		{\color{name}c_{2t}:} && {\phi\beta^t \over c_{2t}} &= \lambda_t \\ 
+		{\color{name}k_{t+1}:} && \lambda_t &= \lambda_{t+1}(1+r_{t+1}-\delta) + \theta\gamma_{t+1} \\ 
+		{\color{name}M_{t+1}:} && \lambda_t q_t &= \lambda_{t+1}q_{t+1} + \gamma_{t+1}q_{t+1} \\ 
+		{\color{name}k^f_{t}:} && r_t &= \alpha {(k_t^f)}^{\alpha-1}{(l_t^f)}^{1-\alpha}=\alpha {k_t}^{\alpha-1}\\ 
+		{\color{name}l^f_{t}:} && w_t &= (1-\alpha) {(k_t^f)}^{\alpha}{(l_t^f)}^{-\alpha}=(1-\alpha) {k_t}^{\alpha}\\ 
+	\end{align}
+	Combining the first order conditions for capital, we get:
+		\[ \lambda_t = \lambda_{t+1}(1+\alpha {k_{t+1}}^{\alpha-1}-\delta) + \theta\gamma_{t+1} \]
+	These equations, along with the market clearing, CIA, and budget constraints, characterize the equilibrium.
+</p>
+<hr>
+
+
+
+
+
+<h4>Assume that the aggregate stock of money grows at a constant rate, \(\pi\). Characterize the steady state.</h4>
+<p>There are two new assumptions in play now:</p>
+<p>
+	<div class="definition">
+			<b>"The aggregate stock of money grows at a constant rate, \(\pi\)":</b><br>
+			This means that:
+				\[M_t=(1+\pi)M_{t-1}=(1+\pi)^t M_0\]
+				\[T_t=M_{t+1}-M_t=(1+\pi-1)M_{t}=\pi(1+\pi)^t M_0\]
+			If we define \(\Pi\equiv 1+\pi\), then this is equivalently:
+				\[M_t=\Pi M_{t-1}=\Pi^t M_0\]
+				\[T_t=(\Pi-1)M_{t}=(\Pi-1)\Pi^t M_0\]
+	</div>
+	<div class="definition">
+			<b>Steady State: </b><br>
+			In a steady state, the real allocations are  constant across time. So for all \(t\),
+			\begin{align}
+				k_t=k   &&   c_{1t}=c_1   &&   c_{2t}=c_2
+			\end{align}
+			These quantities are such that if \(k_t=k ,\;   c_{1t-1}=c_1,\;   c_{2t-1}=c_2\), then the optimal choice for next-period allocations are \(k_{t+1}=k ,\;   c_{1t}=c_1,\;   c_{2t}=c_2\), and these allocations are also feasible.
+	</div>
+</p>
+<p>
+	Rewriting the FOCs, CIA, and Resource Constraint with the above two assumptions:
+	\begin{align}
+		{\color{name}c_{1}:} && {\beta^t \over c_{1}} &= \lambda_t  + \gamma_t\\ 
+		{\color{name}c_{2}:} && {\phi\beta^t \over c_{2}} &= \lambda_t \\ 
+		{\color{name}k:} && \lambda_t &= \lambda_{t+1}(1+\alpha {k}^{\alpha-1}-\delta) + \theta\gamma_{t+1}  \\ 
+		{\color{name}M_{t+1}:} && \lambda_t q_t &= \lambda_{t+1}q_{t+1} + \gamma_{t+1}q_{t+1} \\  \\
+		{\color{name}CIA:} && c_{1} & \leq q_t M_t + \theta k \\
+		{\color{name}RC:} &&c_{1} + c_{2}   &= k^\alpha - \delta k \\
+	\end{align}
+</p>
+<p>
+	Note that the CIA constraint can be rewritten as \(q_t M_0 \geq {c_1 - \theta k \over \Pi^t M_0}\). 
+</p>
+If \(c_1 < \theta k\), then the right-hand side of the above is negative, and so the CIA constraint is nonbinding. Suppose otherwise. \(M_t \geq 0\) by the non-negativity constraint, so it must therefore be that \(q_t < 0\).  But \(q_t\) cannot possibly be less than 0, because then the household would demand infinite amounts of money in period \(t+1\), using it to fund infinite amounts of consumption, and so a well-defined solution to the household's optimization problem couldn't exist. Thus, to avoid contradiction, it must be that \(c_1 < \theta k \implies \gamma_t = 0\)
 </p>
 
-Note that \(V_2^U \geq V_1^U\). If the agents in each economy follow the same strategy, and witness the same sequence of random events, then the agent in economy 2 will always have per-period income at least as high as the agent in economy 1. So it can't possibly be that \(V_2^U < V_1^U\). And so:
+<h5>Case 1: A monetary equilibrium. Assume the CIA binds with equality each period, \(\gamma_t>0\).</h5>
+<p>
+	In this case, \(c_{1} = q_t M_t + \theta k\), which implies
+		\[q_t = {1 \over M_t}(c_1 -\theta k) \]
+		\[\color{red}   {q_{t} \over q_{t+1}} = {M_{t+1} \over M_{t}} = \Pi \]
+	So the price of money is decreasing at the same rate as the stock of money is increasing, which means the value of the money stock is in a steady state. \(q_t M_t = q_0 M_0\).
+</p>
+<p>
+	The FOC for money can be rewritten as \(\lambda_t {q_{t} \over q_{t+1}} = {\lambda_{t+1}+\gamma_{t+1}} \). Combine with <font color="red">the above</font> to get:
+		\[\color{Rhodamine} \Pi \lambda_t = \lambda_{t+1}+\gamma_{t+1} \]
+	Or similarly, \(\color{Rhodamine}\Pi \lambda_t -\lambda_{t+1} = \gamma_{t+1}\).
+</p>
+<p>
+	Also note that from the FOC for the credit good, 
+		\[\color{NavyBlue}{\lambda_t \over \lambda_{t+1}} = {\phi \beta^t  \over c_2 } { c_2 \over \phi \beta^{t+1}} = {1 \over \beta} \]
+</p>
+<p>
+	From the FOC for capital, 
+	\begin{align}
+		(1+\alpha {k}^{\alpha-1}-\delta) &= {\lambda_{t} \over \lambda_{t+1}} - \theta{{\color{Rhodamine} \gamma_{t+1}} \over \lambda_{t+1}} \\
+		&= {\lambda_{t} \over \lambda_{t+1}} - \theta{{\color{Rhodamine}\Pi \lambda_t -\lambda_{t+1}  \over \lambda_{t+1}}} \\
+		&= (1-\theta \Pi){\color{NavyBlue} {\lambda_{t} \over \lambda_{t+1}}}  +\theta \\
+		&= (1-\theta \Pi){\color{NavyBlue} {1 \over \beta }} +\theta \\
+	\end{align}
+	\[\boxed{\implies k = \left({1 \over \alpha}\left[ { {1-\theta \Pi \over \beta }} +\theta -1 + \delta \right]\right)^{1 \over \alpha - 1}}\]
+</p>
+<p>
+	Use the above to relate the FOCs for consumption:
+		\[{\beta^{t+1} \over c_{1}} = {\color{Rhodamine} \lambda_{t+1}  + \gamma_{t+1} = \Pi \lambda_t} = \Pi {\phi\beta^t \over c_{2}}  \]
+		\[c_2 = {\Pi \phi \over \beta} c_1\]
+	And plug this into the Resource Constraint:
+		\[c_1 + c_2 = {\beta +\Pi \phi \over \beta }c_1 = k^\alpha - k \]
+		\[\boxed{
+			\begin{align}
+				c_1 &= (k^\alpha - k){\beta \over \beta +\Pi \phi} \\
+				c_2 &= (k^\alpha - k){\Pi \phi \over \beta +\Pi \phi} 
+			\end{align}
+		}\]
+</p>
+<p>
+	And at this point, we can express the equilibrium in terms of exogenous parameters using the above boxed equations, along with:
+	\[\boxed{
+		\begin{align}
+			k_t^f &= k & \\
+			l_t^f &= 1 \\
+			M_t^g &= M_t = \Pi^t M_0 \\
+			T_t &= (\Pi-1)\Pi^t M_0 \\
+			w_t &= w \equiv (1-\alpha) k^\alpha \\
+			r_t &= r \equiv \alpha k^{\alpha-1} \\
+			q_t &= {c_1 - \theta k \over M_t} = {c_1 - \theta k \over \Pi^t M_0}
+		\end{align}
+	}\]
+</p>
 
-\[\bar{w_2}=(1-\beta)(b_2+\beta V^U_2) > (1-\beta)(b_1+\beta V^U_1) = \bar{w_1}\]
-<!--\[0 < b_2-b_1=V^E(\bar{w_2})-V^E(\bar{w_1})-\beta(V^U_2-V^U_1) \leq V^E(\bar{w_2})-V^E(\bar{w_1})=({1 \over 1-\beta})(\bar{w_2}-\bar{w_1})\]	
-\[\bar{w_2}>\bar{w_1}\]-->
-
-This makes sense. Higher unemployment benefits make being unemployed a more attractive prospect, increasing the opportunity cost of accepting any given job offer, which means that fewer job offers will be accepted.
 
 
+<h5>Case 2:  Assume the CIA is nonbinding, \(\gamma_t=0\).</h5>
+
+<p>Then \({\beta^t \over c_1} = \lambda_t = {\beta^t \phi\over c_2} \), and so \({c_2 = \phi c_1}\). Also, as in case 1, \({\lambda_t \over \lambda_{t+1}}={1\over\beta}\).</p>
+<p>
+	The FOC for capital implies that  \(1+\alpha k^{\alpha-1}-\delta = {\lambda_t \over \lambda_{t+1}} = {1\over\beta}\). Then:
+	\[\boxed{\begin{align}
+			k &= \left({1\over\alpha}\left[ {1\over\beta}-1+\delta \right]\right)^{1\over \alpha - 1} \\
+			c_1 &= {1\over 1+\phi}(k^\alpha - k) \\
+			c_2 &= {\phi\over 1+\phi}(k^\alpha - k)
+	\end{align}}\]
+</p>
+<p>
+	As for the price of money, \(q_{t+1} = {\lambda_t \over \lambda_{t+1}}q_t = {1\over\beta}q_t\). Setting \(q_t = 0 \;\forall t\) satisfies this condition. And the other characterizing equations are the same as in Case 1.
+</p>
+<p>
+	So if there is a steady state equilibrium with a constantly growing money supply, and if the CIA doesn't bind, then there is such an equilibrium that is nonmonetary. 
+</p>
 
 
 
+<hr>
 
+<h5>Show that if \(\pi\) is above a critical threshold, the economy has a nonmonetary steady state in which the price of money is zero.</h5>
 
-<h5>Comparative Statics: Riskier Job Market.</h5>
+<p>Observe that in the monetary steady state equilibrium above:
+	\begin{align}
+		\theta k > c_1 &\iff  \theta k > (k^\alpha - k){\beta \over \beta +\Pi \phi} \\
+		& \iff \beta +\Pi \phi > \beta {k^\alpha - k \over \theta k} \\
+		& \iff \Pi > {\beta \over \phi \theta}(k^{\alpha-1}-1) - {\beta \over \phi} 
+	\end{align}
+	And \(k^{\alpha-1} = {1 \over \alpha}\left[ { {1-\theta \Pi \over \beta }} +\theta -1 + \delta \right]\), so 
+		\begin{align}
+			\theta k > c_1 &\iff \Pi  > {\beta \over \phi \theta}({1 \over \alpha}\left[ { {1-\theta \Pi \over \beta }} +\theta -1 + \delta \right]-1) - {\beta \over \phi}  \\
+			&\iff \Pi + {\Pi \over \alpha\theta} > {\beta \over \phi \theta}({1 \over \alpha}\left[ { {1 \over \beta }} +\theta -1 + \delta \right]-1) - {\beta \over \phi}  \\ 
+			&\iff \Pi  > {\alpha\theta \over \alpha\theta +1}\left[{\beta \over \phi \theta}({1 \over \alpha}\left[ { {1 \over \beta }} +\theta -1 + \delta \right]-1) - {\beta \over \phi}\right] \equiv \bar{\Pi} \\ 
+		\end{align}
+	Therefore if \(\pi > \bar{\Pi} - 1 \), then \(c_1 - \theta  k < 0\). 
+</p>
+<p>
+	Recall from above that if \(c_1 - \theta  k < 0\), then the CIA is nonbinding, and so it cannot be that \(c_1 - \theta  k < 0\)  in a Case 1 equilibrium. Thus if \(\pi>\bar{\Pi} - 1\), the optimum must be attained in a Case 2 equilibrium, in which case there is a nonmonetary steady state in which the price of money is zero.
+</p>
 
-<p><i>Consider two economies with different distributions for job offers \(F_1\) and \(F_2\), but that are otherwise identical. </i></p>
-
-<p>Let \(F_2\) be a mean-preserving spread of \(F_1\), and let both distributions have support within \([0,B]\). We will prove that the reservation wage is at least as high in economy 2:  \(\bar{w_2}\geq\bar{w_1}\)</p>
-
-<div class="definition">
-	<b>Definition: Mean Preserving Spread</b><br>
-	Let \(F_1\) and \(F_2\) be the distribution functions of random variables \(X_1\) and \(X_2\).<br>
-	 \(X_2\) is a mean preserving spread of (and is 'riskier than') \(X_1\) iff:
-	 <ul>
-		<li>
-				\(X_1\) and \(X_2\) have the same mean: 
-				\[ E[X_1] = \int_{-\infty}^{\infty}wf_1(w)dw = \int_{-\infty}^{\infty}wf_2(w)dw = E[X_2]   \]
-		</li>
-		<li>
-				And \(X_2\) gives more weight to the tails of the distribution:
-				\[\forall x, \int_{-\infty}^{x} F_2(w) dw \geq \int_{-\infty}^{x} F_1(w) dw\]
-		</li>
-	 </ul>
-</div><br>
-
-Now to apply this definition to the characterizing formula for reservation wage \(\bar{w_i}\), we need to rearrange the integral in a few ways. First, notice that in this environment, 
-	\[ E_i[w] = \int_{0}^{B} {w} f_i(w) dw = \int_{0}^{\bar{w_i}} {w} f_i(w) dw + \int_{\bar{w_i}}^{B} {w} f_i(w) dw \]
-	\[\therefore \int_{\bar{w_i}}^{B} {w} f_i(w) dw = E_i[w] - \int_{0}^{\bar{w_i}} {w} f_i(w) dw   \]
-
-Next, note that \(f(w)dw=dF(w)\), so applying integration by parts:
-	\[ \int_{0}^{\bar{w_i}} {w} f_i(w) dw  = \int_{0}^{\bar{w_i}} {w} dF_i(w) = \left[F_i(w)w\right]_0^{\bar{w_i}} - \int_{0}^{\bar{w_i}}  F_i(w) dw  = F_i(\bar{w_i})\bar{w_i} - \int_{0}^{\bar{w_i}}  F_i(w) dw \]
-
-Putting this together, we have that 
-	\[\int_{\bar{w_i}}^{B} {w} f_i(w) dw = E_i[w] - F_i(\bar{w_i})\bar{w_i} + \int_{0}^{\bar{w_i}}  F_i(w) dw\]
-
-And substituting this into the characterizing formula for reservation wage \(\bar{w_i}\):
-\begin{split}
-	{\bar{w_i} \over 1-\beta} & = V_i^R = b +\beta V_i^U = b + \beta F_i(\bar{w_i}){\bar{w_i} \over 1-\beta} +\beta \int_{\bar{w_i}}^{B} {w \over 1-\beta} f_i(w) dw \\
-	& = b + {\beta \over 1-\beta}F_i(\bar{w_i}){\bar{w_i}} + {\beta \over 1-\beta} \left[ E_i[w] - \bar{w_i}F_i(\bar{w_i}) + \int_{0}^{\bar{w_i}}  F_i(w) dw \right]\\
-	& = b + {\beta \over 1-\beta} \left[ E_i[w]  + \int_{0}^{\bar{w_i}}  F_i(w) dw \right]
-\end{split}
-
-<p>If you are comparing distributions of the form \(F(w,r)\) where \(r\) is a parameter such that riskiness increases as \(r\) increases, then you can take the derivative of both sides with respect to \(r\) and find that \(\bar{w_i}'(r) > 0\). Otherwise: </p>
-
-<!--Recall that the properties of a mean preserving spread imply that \(E_1[w]=E_2[w]\) and that  for any value of \(\bar{w}\), \(\int_{0}^{\bar{w}}  F_2(w) dw \geq \int_{0}^{\bar{w}}  F_1(w) dw\). Then:
-\begin{split}
-	\bar{w_2} - \bar{w_1} & = (1-\beta)b + \beta  E_2[w]  + \beta \int_{0}^{\bar{w_2}}  F_2(w) dw - (1-\beta)b - \beta  E_1[w]  - \beta \int_{0}^{\bar{w_1}}  F_1(w) dw \\
-	& = \beta \int_{0}^{\bar{w_2}}  F_2(w) dw  - \beta \int_{0}^{\bar{w_1}}  F_1(w) dw \\
-	& = \beta \int_{\bar{w_1}}^{\bar{w_2}}  F_2(w) dw + \beta \int_{0}^{\bar{w_1}} \left[ F_2(w)-F_1(w)\right] dw   \\
-	& \geq \beta \int_{\bar{w_1}}^{\bar{w_2}}  F_2(w) dw \geq \beta \int_{\bar{w_1}}^{\bar{w_2}}  F_2(\bar{w_1}) dw = (\bar{w_2}-\bar{w_1})   \beta F_2(\bar{w_1})  \\
-\end{split}
-
-\(	\implies (\bar{w_2} - \bar{w_1}) (1 - \beta F_2(\bar{w_1})) \geq 0  \implies \bar{w_2} \geq \bar{w_1} \). <br>
-
-Note that for the last inquality  
-
-<hr>-->
-
-Recall that the properties of a mean preserving spread imply that \(E_1[w]=E_2[w]\) and that  for any value of \(\bar{w}\), \(\int_{0}^{\bar{w}}  F_2(w) dw \geq \int_{0}^{\bar{w}}  F_1(w) dw\). Then:
-\begin{split}
-	\bar{w_2} - \bar{w_1} & = (1-\beta)b + \beta  E_2[w]  + \beta \int_{0}^{\bar{w_2}}  F_2(w) dw - (1-\beta)b - \beta  E_1[w]  - \beta \int_{0}^{\bar{w_1}}  F_1(w) dw \\
-	& = \beta \int_{0}^{\bar{w_2}}  F_2(w) dw  - \beta \int_{0}^{\bar{w_1}}  F_1(w) dw \\
-	& = \beta \int_{\bar{w_1}}^{\bar{w_2}}  F_2(w) dw + \beta \int_{0}^{\bar{w_1}} \left[ F_2(w)-F_1(w)\right] dw   \geq \beta \int_{\bar{w_1}}^{\bar{w_2}}  F_2(w) dw \\
-\end{split}
-
-Note that if \(\bar{w_2} \geq \bar{w_1}\), then \(\int_{\bar{w_1}}^{\bar{w_2}}  F_2(w) dw \geq  0 \) and \(F_2(\bar{w_1}) \leq F(w)\) for all \(w \in [\bar{w_1}, \bar{w_2}]\). <br>
-Likewise, if \(\bar{w_2} \leq \bar{w_1}\), then \(\int_{\bar{w_1}}^{\bar{w_2}}  F_2(w) dw \leq  0 \) and \(F_2(\bar{w_1}) \geq F(w)\) for all \(w \in [\bar{w_2}, \bar{w_1}]\).  In either case, 
-
-\[\bar{w_2} - \bar{w_1} = \beta \int_{\bar{w_1}}^{\bar{w_2}}  F_2(w) dw  \geq \beta \int_{\bar{w_1}}^{\bar{w_2}}  F_2(\bar{w_1}) dw =  (\bar{w_2} - \bar{w_1}) \beta F_2(\bar{w_1})\]
-\[	\implies (\bar{w_2} - \bar{w_1}) (1 - \beta F_2(\bar{w_1})) \geq 0  \implies \bar{w_2} \geq \bar{w_1} \]
+<!--
+<p>
+	Recall the cash in advance constraint: \(q_t M_t \geq c_1 - \theta k \). For this to bind with equality when \(\pi > \bar{\Pi} - 1 \), it must be that \(q_t M_t < 0\), and \(M_t \geq 0\) by the non-negativity constraint, so it must therefore be that \(q_t < 0\).  
+</p>
+<p>
+	But \(q_t\) cannot possibly be less than 0, because then the household would demand infinite amounts of money in period \(t+1\), using it to fund infinite amounts of consumption, and so a solution to the household's optimization problem couldn't exist. 
+</p>
+<p>
+	Thus, lest a contradiction be induced, it must be that when  \(\pi > \bar{\Pi} - 1 \), the CIA constraint is nonbinding.
+</p>-->
 
 <hr>
 
 
-It is also worth noting that a higher optimal reservation wage implies \(V^R_2 > V^R_1\), and so the agent's present value will be at least as high in economy 2 for any given wage offer.  Intuitively, when the distribution of wages is spread out, the expected value of accepting a job offer in the next period remains the same; it's just that the chances of very good offers and very bad offers increase. But the agent just <i>ignores</i> the very bad offers.
-
-<!--
-	
-	\begin{split}
-		0 & > \bar{w_2} - \bar{w_1} \\
-		& = (1-\beta)b + \beta  E_2[w]  + \beta \int_{0}^{\bar{w_2}}  F_2(w) dw - (1-\beta)b - \beta  E_1[w]  - \beta \int_{0}^{\bar{w_1}}  F_1(w) dw \\
-		& = \beta \int_{0}^{\bar{w_2}}  F_2(w) dw  - \beta \int_{0}^{\bar{w_1}}  F_1(w) dw \\
-		& \geq \beta \int_{0}^{\bar{w_2}}  F_1(w) dw  - \beta \int_{0}^{\bar{w_1}}  F_1(w) dw \\
-		& = \beta \int_{\bar{w_1}}^{\bar{w_2}}  F_1(w) dw  \geq 0 \\
-	\end{split}
-	
-	
-	
-	
-	Note that the properties of a mean preserving spread imply that \(E_1[w]=E_2[w]\) and that  for any value of \(\bar{w}\), \(\int_{0}^{\bar{w}}  F_2(w) dw \geq \int_{0}^{\bar{w}}  F_1(w) dw\). If we define \(\hat{V}_i^R(x)\equiv  b + {\beta \over 1-\beta} \left[ E_i[w]  + \int_{0}^{x}  F_i(w) dw \right]  \), then the following three statements hold:
-
-<ul>
-	<li>
-		For all \(x\in[0,B]\), \(\hat{V}_2^R(x)\geq\hat{V}_1^R(x)\).
-	</li>
-	<li>
-		For each \(i\), \(\hat{V}_i^R(\cdot) \) is an increasing function, and \(\hat{V}_i^R(0)>{0 \over 1-\beta}\)
-	</li>
-	<li>
-		\(\bar{w_i}\) is the unique solution to \(\hat{V}_i^R(x)={x \over 1-\beta}\).
-	</li>
-	<li>
-			\(\bar{w_i}\) is the unique solution to \(\hat{V}_i^R(0)>{0 \over 1-\beta}\).
-	</li>
-</ul>
-
-The last statement comes from the section above about characterizing the decision rule. Together, these three statements imply that \(\boldsymbol{\bar{w_2}\geq\bar{w_1}}\). (See here if this isn't intuitively clear). Intuitively, a mean preserving spread in job offers makes it so that both very good and very bad offers are more likely to appear. 
 
 
-<br><br><br><br><br><br><br><br>-->
 
-<!--This one is actually rigorous, but still a bit overcomplicated.
+<h5>Show that below the critical threshold, comparing steady states,  comparing steady states, the capital output ratio	rises as the growth rate of money rises.</h5>
 
-Note that the properties of a mean preserving spread imply that \(E_1[w]=E_2[w]\) and that  for any value of \(\bar{w}\), \(\int_{0}^{\bar{w}}  F_2(w) dw \geq \int_{0}^{\bar{w}}  F_1(w) dw\). If we define \(\hat{W_i}(x)\equiv  b(1-\beta) + {\beta } \left[ E_i[w]  + \int_{0}^{x}  F_i(w) dw \right]  \), then the following three statements hold:
-
-<ul>
-	<li>
-		For all \(x\in[0,B]\), \(\hat{W}_2(x)\geq\hat{W}_1(x)\).
-	</li>
-	<li>
-		For each \(i\), \(\hat{W}_i(\cdot) \) is an increasing function, and \(\hat{W}_i(0) = b(1-\beta) + \beta E_i[w] > 0\)
-	</li>
-	<li>
-		For each \(i\), \(\bar{w_i}\) is the unique solution to \(\hat{W}_i(x)=x\).
-	</li>
-</ul>
-
-The last statement comes from the section above about characterizing the decision rule. Together, these three statements imply that \(\boldsymbol{\bar{w_2}\geq\bar{w_1}}\). (See <a href="crossingProof.html">here</a> if this isn't intuitively clear). -->
-
-<!--<hr>
-
-Alternatively, Let \(V^U_i(x)\) be the present value of starting a period unemployed in economy \(i\) if, instead of playing optimally, the agent plays with reservation wage \(x\). <br>
-\begin{split}
-	V^U_i(x) & = F_i(x)(b+\beta V^U_i(x)) + \int_{x}^{B} {w \over 1-\beta} f_i(w) dw \\
-	& = F_i(x)(b+\beta V^U_i(x)) + {1 \over 1-\beta} \left[E_i[w] - F_i(x)x + \int_{0}^{x}  F_i(w) dw\right] \\
-	V^U_i(x) (1-\beta F_i(x)) & = F_i(x)b + {1 \over 1-\beta} \left[E_i[w] - F_i(x)x + \int_{0}^{x}  F_i(w) dw\right]
-\end{split}
+<p>In a monetary steady state, the level of capital is given by:
+	\[k = \left({1 \over \alpha}\left[ { {1-\theta \Pi \over \beta }} +\theta -1 + \delta \right]\right)^{1 \over \alpha - 1}\]
+	This is a decreasing function of \(\Pi\).  And capital output ratio is 
+	\[{k \over k^\alpha} = k^{1-\alpha}= \left({1 \over \alpha}\left[ { {1-\theta \Pi \over \beta }} +\theta -1 + \delta \right]\right)^{-1}\]
+	This is a decreasing function of \Pi, as that term will now be a negative in the denominator.
+</p>
+<hr>
 
 
-<hr>-->
+
+
+
+<h5>Do your results imply that the Friedman Rule is not optimal in this economy?</h5>
+
+The Friedman Rule is optimal.
+
+<div class="definition">
+<b>The Friedman Rule:</b><br>
+The  net nominal  interest rate should be set to zero, to alleviate the frictions induced by inflation. Equivalently, the gross nominal interest rate should be 1. <br>
+In this economy, it is hepful to note that the nominal interest rate is equal to the real interest rate times the change in price levels: \(R_t \Pi\)<br>
+
+<img src="FriedmanRule.png" style="display: block; margin-left: auto; margin-right: auto" >
+
+</div>
+
+<p>The social optimization problem for this economy is:<blockquote>
+		\[\max_{} \sum_{t=0}^\infty \beta^t (\log c_{1t}+\phi \log c_{2t})\]
+		such that:
+			\[\bar{k_0}=k_0\]
+		and for all \(t\geq 0:\)
+		\begin{align}
+			 c_{1t}\geq 0,\;     c_{2t}&\geq 0,\;      k_{t+1}\geq 0,\;     &\;\; \condition{Non-Negativity}\\
+			 c_{1t} + c_{2t} + k_{t+1}  &= k_t^\alpha + (1-\delta) k_t  &\;\; \condition{RC}\\
+		\end{align}</blockquote>
+</p>
+
+<p>
+	The First order conditions for the above problem imply that \( c_{2t}=\phi  c_{1t}\). Compare this to the Euler condition from the steady-state monetary competitive equilibrium above, where \(c_{2t}={\phi  \Pi\over \beta}c_{1t}\).  For the competitive equilibrium to attain a social optimum, it must be then that \(\Pi = \beta\).
+</p>
+<p>
+	And also from the competive equilibrium, 
+		\begin{align}
+			R_t &= 1-\delta + r_t\\
+			&= 1-\delta + \alpha k^{\alpha-1} \\
+			&= (1-\theta \Pi){ {1 \over \beta }} +\theta\\
+			& = (1-\theta \beta){ {1 \over \beta }} +\theta \\
+			& = {1 - \theta \beta + \theta\beta \over \beta} = {1\over \beta}
+		\end{align}
+	</p>
+
+<p>
+	So in this economy, the optimal policy will set \(R\Pi={\beta\over\beta}=1\), and the Friedman Rule holds.
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </body>
