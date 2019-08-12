@@ -14,7 +14,6 @@
 		\definecolor{name}{RGB}{200,210,200}
 		\newcommand{\condition}[1]{\color{name} \text{(#1)}}
 		\newcommand{\mytag}[1]{\tag*{\(\condition{#1}\)}}
-		\tag*{\(\condition{RC}\)}
 	\]
 </head>
 <body>
@@ -50,43 +49,44 @@
 		\end{cases} \]
 </p>
 
-
-<p>
-Given exogenous policy \(\left\{ g_t, z_t, B_{t+1}, \tau_t \right\}_{t=0}^\infty\),  parameters \((\beta, \bar{l})\), and initial stock of debt \(\bar{B_0}=0\), a competitive equilibrium in this economy consists of the following sets:
+<div class="definition">
+	<center><h6 style="margin-top: 5px;">Competitive Equilibrium</h6></center>
+	<p>
+	Given exogenous policy \(\left\{ g_t, z_t, B_{t+1}, \tau_t \right\}_{t=0}^\infty\),  parameters \((\beta, \bar{l})\), and initial stock of debt \(\bar{B_0}=0\), a competitive equilibrium in this economy consists of the following sets:
+		<ul>
+			<li> An allocation for the representative household: \( HH\equiv \left\{ c_{t}, s_{t+1}, l_t \right\}_{t=0}^\infty \)</li>
+			<li>An allocation for the firm: \(\left\{ l^f_{t}  \right\}_{t=0}^\infty\)</li>
+			<li>and Prices: \(\left\{R_t, w_t \right\}_{t=0}^\infty  \)</li>
+		</ul>
+	Such that the following conditions are satisfied:
 	<ul>
-		<li> An allocation for the representative household: \( HH\equiv \left\{ c_{t}, s_{t+1}, l_t \right\}_{t=0}^\infty \)</li>
-		<li>An allocation for the firm: \(\left\{ l^f_{t}  \right\}_{t=0}^\infty\)</li>
-		<li>and Prices: \(\left\{R_t, w_t \right\}_{t=0}^\infty  \)</li>
-	</ul>
-Such that the following conditions are satisfied:
-<ul>
-		<li><b>HH Optimization</b>: Taking prices and policy as given, the household allocation solves:
-				\[\max_{HH} \sum_{t=0}^\infty \beta^t U( c_{t},l_{t})\]
-			such that:
-				\[\bar{s_0}=\bar{B_0} \text{ given}\]
-			and scuh that for all \(t\geq 0:\)
-			\begin{align}
-				c_{t}\geq 0,   \; &\;   s_{t+1}\geq 0,       \;\;         l_t \in [0,\bar{l}]    \mytag{Non-Negativity}\\
-				c_t + s_{t+1} & \leq R_t z_t s_t + (1-\tau_t) w_t l_t    \mytag{Budget}\\
-				s_{t+1} & \geq -\bar{B}   \mytag{No Ponzi}\\
-			\end{align}
-		</li>
-		<li><b>Firm Optimization</b>: Taking prices as given, in each period, the firm's allocation solves
-			\[\max_{l_t^f}\; {l_t^f} - w_t l_t^f\]
-		</li>
-		<li><b>Gov Budget Balance</b>: In all periods \(t\), the government's budget is balanced:
-			\[g_t + R_t z_t B_t = B_t+1 + \tau_t w_t l_t\]
-		</li>
-		<li><b>Markets Clear</b>: In all periods \(t\), 
-			\begin{align}
-				l_t^f &= l_t \\ 
-				B_t &= s_t\\
-				c_{t} + g_{t} &= l_t   \mytag{Resource Constraint}\\
-			\end{align}
-		</li>
-	</ul>
-</p>
-
+			<li><b>HH Optimization</b>: Taking prices and policy as given, the household allocation solves:
+					\[\max_{HH} \sum_{t=0}^\infty \beta^t U( c_{t},l_{t})\]
+				such that:
+					\[\bar{s_0}=\bar{B_0} \text{ given}\]
+				and such that for all \(t\geq 0:\)
+				\begin{align}
+					c_{t}\geq 0,   \; &\;   s_{t+1}\geq 0,       \;\;         l_t \in [0,\bar{l}]    \mytag{Non-Negativity}\\
+					c_t + s_{t+1} & \leq R_t z_t s_t + (1-\tau_t) w_t l_t    \mytag{Budget}\\
+					s_{t+1} & \geq -\bar{B}   \mytag{No Ponzi}\\
+				\end{align}
+			</li>
+			<li><b>Firm Optimization</b>: Taking prices as given, in each period, the firm's allocation solves
+				\[\max_{l_t^f}\; {l_t^f} - w_t l_t^f\]
+			</li>
+			<li><b>Gov Budget Balance</b>: In all periods \(t\), the government's budget is balanced:
+				\[g_t + R_t z_t B_t = B_t+1 + \tau_t w_t l_t\]
+			</li>
+			<li><b>Markets Clear</b>: In all periods \(t\), 
+				\begin{align}
+					l_t^f &= l_t \\ 
+					B_t &= s_t\\
+					c_{t} + g_{t} &= l_t   \mytag{Resource Constraint}\\
+				\end{align}
+			</li>
+		</ul>
+	</p>
+</div>
 <hr>
 
 
@@ -133,7 +133,7 @@ Such that the following conditions are satisfied:
 		& \;\; \vdots \\
 		&=  \sum_{t=0}^\infty\beta^t\left[c_{t} U_{ct}  +  l_{t} U_{lt}\right] +  \lim_{t\to\infty} {\beta^t U_{ct}} s_{t+1} \\
 	\end{align}
-	The left-hand side is equal to zero because \(s_0 = B_0 = 0\) is given by the problem, and the last term on the right=hand side is zero by the transversality condition. Thus we get the following:
+	The left-hand side is equal to zero because \(s_0 = B_0 = 0\) is given by the problem, and the last term on the right-hand side is zero by the transversality condition. Thus we get the following:
 		\[\boxed{0 = \sum_{t=0}^\infty\beta^t\left[c_{t} U_{ct}  +  l_{t} U_{lt}\right] }   \mytag{Implementability Constraint}\]
 </p>
 <hr>
@@ -144,17 +144,20 @@ Such that the following conditions are satisfied:
 
 <h4>Suppose now that a benevolent government wishes to implement the best competitive equilibrium. Set up the Ramsey problem.</h4>
 
-<p>
-	Given exogenous spending requirements \(\left\{ g_t\right\}_{t=0}^\infty\),  and  parameters \((\beta, \bar{l})\), the Ramsey problem is to choose household allocations to solve:
-	\[\max_{\left\{ c_{t}, l_t \right\}_t} \sum_{t=0}^\infty \beta^t U( c_{t},l_{t})\]
-		such that 
-			\[0 = \sum_{t=0}^\infty\beta^t\left[c_{t} U_{ct}  +  l_{t} U_{lt}\right]  \mytag{Implementability}\]
-		and such that for all \(t\geq 0:\)
-		\begin{align}
-			c_{t}\geq 0,   \; &\;            l_t \in [0,\bar{l}]    \mytag{Non-Negativity}\\
-			c_t + g_t &\leq l_t    \mytag{Feasibility}\\
-		\end{align}
-</p>
+<div class="definition">
+	<center><h6 style="margin-top: 5px;">Ramsey Problem</h6></center>
+	<p>
+		Given exogenous spending requirements \(\left\{ g_t\right\}_{t=0}^\infty\),  and  parameters \((\beta, \bar{l})\), the Ramsey problem is to choose household allocations to solve:
+		\[\max_{\left\{ c_{t}, l_t \right\}_t} \sum_{t=0}^\infty \beta^t U( c_{t},l_{t})\]
+			such that 
+				\[0 = \sum_{t=0}^\infty\beta^t\left[c_{t} U_{ct}  +  l_{t} U_{lt}\right]  \mytag{Implementability}\]
+			and such that for all \(t\geq 0:\)
+			\begin{align}
+				c_{t}\geq 0,   \; &\;            l_t \in [0,\bar{l}]    \mytag{Non-Negativity}\\
+				c_t + g_t &\leq l_t    \mytag{Feasibility}\\
+			\end{align}
+	</p>
+</div>
 <hr>
 
 
@@ -180,36 +183,39 @@ Such that the following conditions are satisfied:
 	Additionally, the firm's problem in this environment will simply imply that \(w^t (h_t)=1\). So for simplicity, I will exclude the firm's problem and wages from the following definition. 
 </p>
 <br>
-<p>
-	Then given exogenous spending requirements \(\left\{ g_t \right\}_{t=0}^\infty\),  parameters \((\beta, \bar{l})\), and initial stock of debt \(\bar{B_0}=0\), a sustainable equilibrium in this economy consists of:
-	<ul>
-		<li> Allocation rules for the representative household: \( HH \equiv \left\{ HH^t \right\}_{t=0}^\infty \)</li>
-		<li> Policy rules for the government: \( G \equiv \left\{ G^t \right\}_{t=0}^\infty \)</li>
-		<li> and Pricing kernels: \(\left\{R^t:h_t\to \mathbb{R}_+) \right\}_{t=0}^\infty  \)</li>
-	</ul>
-Such that the following conditions are satisfied:
-	<ul>
-		<li><b>HH Optimization</b>: Taking prices and policy as given, for all time periods \(T\) and for all \(h_T\), the household allocation rules solve:
-				\[\max_{\left\{HH^t\right\}_{t=T}^\infty} \sum_{t=T}^\infty \beta^{t-T} U( c^t(h_s),l^t(h_s))\]
-			such that for all \(t\geq T:\), and for all \(h_t\):
-			\begin{align}
-				c^{t}(h_t)\geq 0,   \; &\;   s^{t+1}(h_t)\geq 0,       \;\;         l^t(h_t) \in [0,\bar{l}]    \mytag{Non-Negativity}\\
-				c^t(h_t) + s^{t+1}(h_t) & \leq R^t(h_t) z^t(h_{t-1}) s^t(h_{t-1}) + (1-\tau^t(h_{t-1})) l^t(h_t)    \mytag{Budget}\\
-				s^{t+1}(h_t) & \geq -\bar{B}   \mytag{No Ponzi}\\
-			\end{align}
-		<li><b>Gov Optimization</b>: Given HH allocation rules, for all time periods \(T\) and for all \(h_T\), the government's policy rules solve:
-				\[\max_{\left\{G^t\right\}_{t=T}^\infty} \sum_{t=T}^\infty \beta^{t-T} U( c^t(h_s),l^t(h_s))\]
-			such that for all \(t\geq T:\), and for all \(h_t\):
-				\[g_t + R^t(h_t) z^t(h_{t-1}) B^t(h_{t-2}) = B^{t+1}(h_{t-1}) + \tau^t(h_{t-1})  l^t(h_t) \mytag{Gov BB}\]
-		</li>
-		<li><b>Markets Clear</b>: In all periods \(t\), and for all histories \(h_t\) 
-			\begin{align}
-				B^t(h_{t-2}) &= s_t(h_{t-1})\\
-				c^{t}(h_t) + g_t &= l^t(h_t)   \mytag{Resource Constraint}\\
-			\end{align}
-		</li>
-	</ul>
-</p>
+<div class="definition">
+		<center><h6 style="margin-top: 5px;">Sustainable Equilibrium</h6></center>
+	<p>
+		Then given exogenous spending requirements \(\left\{ g_t \right\}_{t=0}^\infty\),  parameters \((\beta, \bar{l})\), and initial stock of debt \(\bar{B_0}=0\), a sustainable equilibrium in this economy consists of:
+		<ul>
+			<li> Allocation rules for the representative household: \( HH \equiv \left\{ HH^t \right\}_{t=0}^\infty \)</li>
+			<li> Policy rules for the government: \( G \equiv \left\{ G^t \right\}_{t=0}^\infty \)</li>
+			<li> and Pricing kernels: \(\left\{R^t:h_t\to \mathbb{R}_+) \right\}_{t=0}^\infty  \)</li>
+		</ul>
+	Such that the following conditions are satisfied:
+		<ul>
+			<li><b>HH Optimization</b>: Taking prices and policy as given, for all time periods \(T\) and for all \(h_T\), the household allocation rules solve:
+					\[\max_{\left\{HH^t\right\}_{t=T}^\infty} \sum_{t=T}^\infty \beta^{t-T} U( c^t(h_s),l^t(h_s))\]
+				such that for all \(t\geq T:\), and for all \(h_t\):
+				\begin{align}
+					c^{t}(h_t)\geq 0,   \;\;\; \;   s^{t+1}(h_t) & \geq 0,       \;\; \;\;        l^t(h_t) \in [0,\bar{l}]    \mytag{NNC}\\
+					c^t(h_t) + s^{t+1}(h_t) & \leq R^t(h_t) z^t(h_{t-1}) s^t(h_{t-1}) + (1-\tau^t(h_{t-1})) l^t(h_t)    \mytag{Budget}\\
+					s^{t+1}(h_t) & \geq -\bar{B}   \mytag{No Ponzi}\\
+				\end{align}
+			<li><b>Gov Optimization</b>: Given HH allocation rules, for all time periods \(T\) and for all \(h_T\), the government's policy rules solve:
+					\[\max_{\left\{G^t\right\}_{t=T}^\infty} \sum_{t=T}^\infty \beta^{t-T} U( c^t(h_s),l^t(h_s))\]
+				such that for all \(t\geq T:\), and for all \(h_t\):
+					\[g_t + R^t(h_t) z^t(h_{t-1}) B^t(h_{t-2}) = B^{t+1}(h_{t-1}) + \tau^t(h_{t-1})  l^t(h_t) \mytag{Gov BB}\]
+			</li>
+			<li><b>Markets Clear</b>: In all periods \(t\), and for all histories \(h_t\) 
+				\begin{align}
+					B^t(h_{t-2}) &= s_t(h_{t-1})\\
+					c^{t}(h_t) + g_t &= l^t(h_t)   \mytag{Resource Constraint}\\
+				\end{align}
+			</li>
+		</ul>
+	</p>
+</div>
 <hr>
 
 
@@ -267,25 +273,28 @@ Such that the following conditions are satisfied:
 </p>
 <p>
 	Then any outcome \(\left\{ c_t, s_{t+1}, l_t \right\}_t, h\) induced by a sustainable equilibrium satifies the constraint that at all points in time \(T\), the continuation of the planned outcome is better than the value of the best one shot deviation plus the value of autarky:
-		\[\sum_{t=T}^\infty \beta^{t-T} U(c_t,l_t)  \geq   U^D(h_{T-1}) + \sum_{t=T}^\infty \beta^{t-T} U^A_t\]
+		\[\sum_{t=T}^\infty \beta^{t-T} U(c_t,l_t)  \geq   U^D(h_{T-1}) + \sum_{t=T}^\infty \beta^{t-T} U^A_t  \mytag{Sustainability Constraint} \]
 	Also note that this condition is sufficient to prevent the government from deviating from a plan which induces this outcome.
 </p>
 
 <p>
 	In order to find the best sustainable equilbrium, we modify the Ramsey problem to include this sustainability constraint.
 </p>
-<p>
-	Given exogenous spending requirements \(\left\{ g_t\right\}_{t=0}^\infty\),  and  parameters \((\beta, \bar{l})\), the allocations in the best sustainable equilibrium are found by solving:
-	\[\max_{\left\{ c_{t}, l_t \right\}_t} \sum_{t=0}^\infty \beta^t U( c_{t},l_{t})\]
-		such that 
-			\[0 = \sum_{t=0}^\infty\beta^t\left[c_{t} U_{ct}  +  l_{t} U_{lt}\right]  \mytag{Implementability}\]
-		and such that for all \(t\geq 0:\)
-		\begin{align}
-			c_{t}\geq 0,   \; &\;            l_t \in [0,\bar{l}]    \mytag{Non-Negativity}\\
-			c_t + g_t &\leq l_t    \mytag{Feasibility}\\
-			\sum_{T=t}^\infty \beta^{T-t} U(c_T,l_T)  &\geq   U^D(h_{t-1}) + \sum_{T=t}^\infty \beta^{T-t} U^A_T    \mytag{Sustainability}\\
-		\end{align}
-</p>
+<div class="definition">
+	<center><h6 style="margin-top: 5px;">Best Sustainable Outcome</h6></center>
+	<p>
+		Given exogenous spending requirements \(\left\{ g_t\right\}_{t=0}^\infty\),  and  parameters \((\beta, \bar{l})\), the allocations in the best sustainable equilibrium are found by solving:
+		\[\max_{\left\{ c_{t}, l_t \right\}_t} \sum_{t=0}^\infty \beta^t U( c_{t},l_{t})\]
+			such that 
+				\[0 = \sum_{t=0}^\infty\beta^t\left[c_{t} U_{ct}  +  l_{t} U_{lt}\right]  \mytag{Implementability}\]
+			and such that for all \(t\geq 0:\)
+			\begin{align}
+				c_{t}\geq 0,   \; &\;            l_t \in [0,\bar{l}]    \mytag{Non-Negativity}\\
+				c_t + g_t &\leq l_t    \mytag{Feasibility}\\
+				\sum_{T=t}^\infty \beta^{T-t} U(c_T,l_T)  &\geq   U^D(h_{t-1}) + \sum_{T=t}^\infty \beta^{T-t} U^A_T    \mytag{Sustainability}\\
+			\end{align}
+	</p>
+</div>
 <hr>
 
 
@@ -296,7 +305,7 @@ Such that the following conditions are satisfied:
 	Suppose that \(g_H > \bar{l}\). Then government spending cannot possibly be financed by labor taxes alone, unless labor is taxed at a rate above 100%. And such a thing would make it impossible for the household's budget to be balanced.  As such, being locked out of the bonds market would render the government's optimization problem impossible.
 </p>
 <p>
-	Assume that \[\lim_{c\to 0+} = -\infty\]. Then as \(g_H\to\bar{l}\), \(c_t \to 0\) in even periods, and so \(U^A_t \to -\infty\) in even periods. Then because U^D is bounded, there is some sufficiently high \(g_H\) such that the Ramsey allocation satisfies the sustainability constraint.
+	Assume that \[\lim_{c\to 0+} U(c,l) = -\infty\] Then as \(g_H\to\bar{l}\), \(c_t \to 0\) in even periods, and so \(U^A_t \to -\infty\) in even periods. Then because \(U^D\) is bounded, there is some sufficiently high \(g_H\) such that the Ramsey allocation satisfies the sustainability constraint.
 </p>
 <p>
 	Finally, note that the constraints in the Ramsey problem are looser than the constraints which define the best sustainable equilibrium's outcome. In other words, all sustainable outcomes are implementable and feasible. And the Ramsey outcomes are the best outcomes which are implementable and feasible, so if the Ramsey allocations are sustainable, they must be the best sustainable outcomes.
