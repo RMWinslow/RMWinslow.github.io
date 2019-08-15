@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-		<title>Human Capital</title>
+		<title>Dynamic Programming in the One-Sector Growth Model</title>
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 		<link href="../../../styles/sakuraBlue.css" rel="stylesheet" type="text/css">
 		<!--<style>body{background-color: #ffccee;}</style>-->
@@ -19,26 +19,124 @@
 <body>
 
 
-<h2>Neoclassical Growth Model with Human Capital</h2>
+<h2>Dynamic Programming in the One-Sector Growth Model</h2>
 <h5>Setup:</h5>
 
 <b>
 	Consider the following Planner's Problem:
-		\[\max \sum \beta^t {c_t^{1-\sigma} \over 1-\sigma}\]
+		\[\max \sum \beta^t u(c_t,l_t)\]
 	<div style="padding-left:5em">subject to</div>
 	\begin{gather*} 
-		c_t + x_{kt} + x_{ht} \leq y_t = Ak_t^\alpha z_t^{1-\alpha} \\
-		k_{t+1} \leq (1-\delta_k ) k_t + x_{kt} \\ 
-		h_{t+1} \leq (1-\delta_h ) h_t + x_{ht} \\
-		z_t \leq n_t h_t \\ 
-		0 \leq l_t + n_t \leq 1 \\
-		h_0, k_0 \text{ given.} 
+		c_t + x_{t} \leq f(k_t,n_t) \\
+		k_{t+1} \leq (1-\delta ) k_t + x_{t} \\ 
+		l_t + n_t \leq 1 \\
+		k_0 \text{ given.} 
 	\end{gather*}
 </b>
 <hr>
 
+<h5>Write this problem as a dynamic programming problem in sequence form, that is, as maximizing an infinite discounted sum of a time-stationary return function, with a time-stationary constraint set.</h5>
+
+<p>
+	Define the following set of feasible continuation allocations:
+		\[\Gamma(k) \equiv \left\{ (c,n,l,k^\prime,x)  \in \mathbb{R}_+^4 \times \mathbb{R}  \middle| 
+			\begin{gather}
+				c + x \leq f(k,n) \\
+				k^\prime \leq (1-\delta) k + x \\ 
+				l + n \leq 1 \\
+			\end{gather} \right\}
+		\]
+</p>
+<p>
+	The sequential programming problem is 
+		\[ V(k_0) = \max_{\left\{c_t,n_t, l_t, k_{t+1}, x_t \right\}_t} \sum_{t=0}^\infty \beta^t u(c_t, l_t) \]
+	<div style="padding-left:5em">such that for all \(t\):</div>
+		\[ (c_t,n_t, l_t, k_{t+1}, x_t) \in \Gamma(k_t)\]
+</p>
+
+<h5>Write the functional equation (Bellman's equation) for the problem above.</h5>
+
+<p>
+	The Bellman's equation is:
+		\[V(k) = \max_{(c,n,l,k^\prime,x)\in \Gamma(k)} \left[u(c,l) + \beta V(k^\prime) \right]\]
+</p>
+<hr>
 
 
+
+<h5>Provide assumptions on \(u, f, \beta\), and \(delta\) that are sufficient to guarantee that there is a unique bounded and continuous function satisfying the functional equation. Explain briefly why each assumption is needed.</h5>
+<p>
+	Assume that \(\beta\in(0,1)\). Assume that \(\sigma\in (0,1]\).
+</p>
+<p>
+	Assume that \(u\) is strictly increasing, and continuous.
+</p>
+<p>
+	Assume that f is strictly increasing, continuous, \(f(0)=0\), and there is some maximimum sustainable capital, \(\hat{k}\)
+</p>
+<p>
+	The assumptions on \(f\) and \(\delta\) allow us to conclude that capital is bounded (in \([0,\max{\hat{k},k_0]\)). This, along with the budget constraint, allows us to conclude that consumption is bounded. Then the assumptions on \(u\) allow us to conclude that per-period utility is bounded as well. Finally, with \(\beta\in(0,1)\), we can then conclude that \(v(k_0)\) is bounded.
+</p>
+<p>
+	The boundedness of \(v(k_0)\) allows us to safely apply the sup norm and so use Blackwell's sufficient conditions (the problem clearly satisfies monotonicity and discounting) to conclude that there is a unique fixed point \(v\)
+</p>
+<p>
+	The Theorem of the maximum establishes the continuousness. 
+</p>
+<hr>
+
+
+<h5>Assume the labor supply is inelastic. Write the functional equation and characterize the optimal policy function through the first-order and envelope condition.</h5>
+<p>
+	With inelastic labor supply, \(n_t = \bar{n}\). For simplicity, let \(u(c)\equiv u(c,0\) and let \(f(k)\equiv f(k,\bar{n}\). Additionally, if we assume that the utility and production functions are strictly increasing in consumption and capital, respectively, then the resource and investment constraints will bind. Combining them yields:
+		\[c_t = f(k_t) +(1-\delta)k_t  - k_{t+1}\]
+</p>
+<!--<p>
+	Redefine the  set of feasible continuation allocations:
+		\[\dot{\Gamma}(k) \equiv \left\{ (c,k^\prime)  \in \mathbb{R}_+^4 \times \mathbb{R}  \middle| 
+			\begin{gather}
+				c + x \leq f(k,n) \\
+				k^\prime \leq (1-\delta) k + x \\ 
+			\end{gather} \right\}
+		\]
+</p>-->
+<p>
+	Redefine the  set of feasible continuation allocations:
+		\[\dot{\Gamma}(k) \equiv [0, f(k_t) +(1-\delta)k_t]\]
+</p>
+<p>
+	Now the functional equation is
+		\[ V(k) = \max_{k^\prime \in \dot{\Gamma}(k)} \left[ u(f(k) +(1-\delta)k  - k^\prime) + \beta V(k^\prime) \right]  \]
+</p>
+<p>
+	Taking the First Order condition of this, we get that at the optimum:
+		\[0  = {\partial \over \partial k^\prime} \left[ u(f(k) +(1-\delta)k  - k^\prime) + \beta V(k^\prime) \right] = -u^\prime(f(k) +(1-\delta)k  - k^\prime) + \beta V^\prime(k^\prime) \]
+</p>
+<p>
+	Let \(k^\prime(k)\) be the policy function for \(k^\prime\).Then the envelope condition is:
+		\[  V^\prime(k) = {\partial \over \partial k} \left[ u(f(k) +(1-\delta)k  - k^\prime(k)) + \beta V(k^\prime(k)) \right]
+		= u'(f(k) +(1-\delta)k  - k^\prime(k)) (f^\prime(k) + 1 - \delta )  +  {\partial \left[ u(f(k) +(1-\delta)k  - k^\prime(k)) + \beta V(k^\prime(k)) \right]\over \partial k^\prime}{\partial k^\prime \over \partial k}   \]
+	And in the optimum, the FOC tells us that the last term is equal to zero, so the Envelope condition is:
+	\[  V^\prime(k) =  u'(f(k) +(1-\delta)k  - k^\prime(k)) (f^\prime(k) + 1 - \delta )    \]
+	</p>
+
+TODO: characterize by combinnigining
+
+
+
+<p>
+	Define \(✉(k,k^\prime) \equiv \left[ u(f(k) +(1-\delta)k  - k^\prime) + \beta V(k^\prime) \right] \)
+	Now the functional equation is
+		\[ V(k) = \max_{k^\prime \in \dot{\Gamma}(k)} ✉(k,k^\prime)  \]
+	FOC:
+		\[0 =  {\partial \over \partial k^\prime}✉(k,k^\prime)\]
+	Envelope:
+		\[{\partial \over \partial k} V(k) = {\partial \over \partial k} ✉(k,k^\prime(k)) = {\partial \over \partial k} ✉(k,k^\prime) + {\partial \over \partial k^\prime} ✉(k,k^\prime) {\partial k^\prime \over \partial k} ✉(k,k^\prime)  =  {\partial \over \partial k} ✉(k,k^\prime) \]
+</p>
+
+
+
+<hr><hr><hr>
 <h5>(a) Show that the value function for this problem is homogeneous of degree \((1-\sigma)\) in the initial capital stocks, \((h_0, k_0)\).</h5>
 
 <h5>(b) Characterize the homogeneity properties of the optimal decision rules in initial	capital stocks, \((h_0, k_0)\). Specifically if the initial conditions on the capital stocks	are \((\eta h_0, \eta k_0)\) instead of  \((h_0, k_0)\) where  \(\eta > 0\), how are the optimal time paths for	consumption, labor supply, investment, etc., affected? Prove your claims.</h5>
