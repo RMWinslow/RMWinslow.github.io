@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+		<title>Human Capital</title>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+		<link href="../../../styles/sakura.css" rel="stylesheet" type="text/css">
+		<!--<style>body{background-color: #ffccee;}</style>-->
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+		</script>
+		<!--Latex Definitions:-->
+		\[
+			\definecolor{name}{RGB}{210,210,200}
+			\newcommand{\condition}[1]{\color{name} \text{(#1)}}
+			\newcommand{\mytag}[1]{\tag*{\(\condition{#1}\)}}
+		\]
+</head>
+<body>
+
+
+<h2>The Envelope Condition</h2>
+<h5>You've got this Bellman's Equation Right Here:</h5>
+
+<p> 
+	\[V(k) = \max_{k^\prime \in \Gamma(k)} \left[ \ln (Ak^\alpha-k^\prime) +\beta V(k^\prime)  \right] \]
+</p>
+<p>
+	You want to characterize   , so you take the first order condition and the envelope condition. The First Order condition is pretty straightforward; you know this stuff:
+		\[0 = {\partial \over \partial k^\prime} \left[ \ln(Ak^\alpha-k^\prime) +\beta V(k^\prime)  \right]  =   {-1 \over  Ak^\alpha-k^\prime} + \beta V^\prime (k^\prime )   \mytag{FOC}   \]
+	And the envelope condition is:
+		\[  V^\prime (k) =  { A \alpha k^{\alpha-1} \over Ak^\alpha-k^\prime}               \mytag{Envelope}\]
+	Combine these two conditions to get:
+		\[  {1 \over  Ak^\alpha-k^\prime} = \boxed{\beta V^\prime (k^\prime ) = {V^\prime (k) \over A\alpha k^{\alpha-1}} } \]
+	which can be used to characterizew the policy function for capital. But wait, back up, what's this about envelopes?
+</p>
+
+<hr>
+<h5> A quick math refresher </h5>
+
+<p>
+	Recall from way back when you learned calculus that the multivarible version of the chain rule goes something like this:
+	If \(f:\mathbb{R^2}\to\mathbb{R}\) and \((g_1,g_2)\equiv g: \mathbb{R}\to \mathbb{R}^2\) are differentiable functions at \(x\), and \(v(x)\equiv f(g_1(x),g_2(x)\) then taking the total derivative, we get:
+		\[{\partial \over \partial x} v(x) = {\partial \over \partial x}g_1(x) \cdot {\partial \over \partial g_1} f(g_1,g_2) + {\partial \over \partial x}g_2(x) \cdot {\partial \over \partial g_2} f(g_1,g_2) \]
+</p>
+<p>
+	In particular, let \(g_1(x) = x\). Then \({\partial x \over \partial x }=1\).  So 
+	\[{\partial \over \partial x} v(x) = {\partial \over \partial x} f(x,g_2) + {\partial \over \partial x}g_2(x) \cdot {\partial \over \partial g_2} f(x,g_2) \mytag{*}\]
+</p>
+
+
+<hr>
+<h5>Now back to optimization</h5>
+<p>
+	Suppose you have a problem of the form:
+		\[v(x) = \max_{y\in Y} \left[ F(x,y) + \beta V(y) \right] \]
+	Let's take the derivative with respect to x of both sides of this equation. But how do we deal with the right-hand-side  maximization doodad? 
+</p>
+<p>
+	Assume that for any \(x\), there exists at least \(y\in Y\) such that \(y\) solves the maximization problem given \(x\). Let \(\bar{y}(x)\) be a policy function mapping values of \(x\) to these optimal \(y\)s. 
+</p>
+<p>
+	Then we can reexpress the maximizing whatzit as 
+		\[v(x) = F(x,\bar{y}(x)) + \beta V(\bar{y}(x)) \]
+	And so applying (*),  (with \(g(x) \equiv (x,\bar{y}(x)) \) and \(f(g_1,g_2) \equiv F(g_1,g_2) + \beta V(g_2)\)):
+		\[ {\partial \over \partial x} v(x) =  {\partial \over \partial x} \left[ F(x,\bar{y}) + \beta V(\bar{y}) \right] 
+			+ \color {RedViolet} {\partial \over \partial x} \bar{y}(x)  \cdot{\partial \over \partial \bar{y}} \left[ F(x,\bar{y}) + \beta V(\bar{y}) \right]   \]
+</p>
+<p>
+	We've almost made it to something resembling the envelope condition! But there's a big \({\color{RedViolet} \text{mess}}\) hanging out there on the end, getting in the way.  Remember, for every \(x\), \(\bar{y}(x)\) solves \(\max_{y\in Y} \left[ F(x,y) + \beta V(y) \right]\). Assuming an interior solution, this means that if \(\bar{y}=\bar{y}(x)\), then
+		\[0 = {\partial \over \partial \bar{y}} \left[ F(x,\bar{y}) + \beta V(\bar{y}) \right]  \mytag{FOC}\]
+		And look at that. In the optimum, that mess goes away. 
+</p>
+<p>
+	So the Envelope Condition says that at the optimum, the marginal effect of changing \(x\) manifests only through the direct consequences of changing \(x\), and not indirectly from the resulting change in \(y\):
+		\[\boxed{  {\partial \over \partial x} v(x) =  {\partial \over \partial x} \left[ F(x,\bar{y}) + \beta V(\bar{y}) \right]     }  \mytag{Envelope}\]
+</p>
+<hr>
+
+<!--Or to breifely summarize and then reqrite with k and k'-->
+<!--
+<p> 
+	\[V(k) = \max_{k^\prime \in \Gamma(k)} \left[ \ln (f(k)-k^\prime) +\beta V(k^\prime)  \right] \]
+</p>
+<p>
+	You want to characterize   , so you take the first order condition and the envelope condition. The First Order condition is pretty straightforward; you know this stuff:
+		\[0 = {\partial \over \partial k^\prime} \left[ \ln(f(k)-k^\prime) +\beta V(k^\prime)  \right]  =   {-1 \over  f(k)-k^\prime} + \beta V^\prime (k^\prime )   \mytag{FOC}   \]
+	And the envelope condition is:
+		\[  V^\prime (k) =  {f^\prime (k) \over f(k)-k^\prime}               \mytag{Envelope}\]
+<hr>	</p>-->
+
+For 🏵🏵🏵
+
+</body>
+</html>
+
+
+
