@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="-315.27262"
-     inkscape:cy="75.936653"
+     inkscape:zoom="1.4"
+     inkscape:cx="195.1898"
+     inkscape:cy="137.4478"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -53,84 +53,74 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-60.359333,-128.74177)">
-    <g
-       transform="translate(24.962436,109.55527)"
-       id="g1145-3-9-7">
-      <g
-         id="g952-8-2-5">
-        <g
-           id="g834-81-7-1">
-          <path
-             inkscape:connector-curvature="0"
-             id="path815-7-1-5"
-             d="M 36.615925,22.514195 V 57.259233"
-             style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-          <path
-             inkscape:connector-curvature="0"
-             id="path815-6-89-8-3"
-             d="M 71.360963,57.259233 H 36.615925"
-             style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-        </g>
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-           x="34.544586"
-           y="21.712385"
-           id="text838-3-7-7"><tspan
-             sodipodi:role="line"
-             id="tspan836-3-5-6"
-             x="34.544586"
-             y="21.712385"
-             style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'CMU Classical Serif';-inkscape-font-specification:'CMU Classical Serif Medium Italic';stroke-width:0.26458332">w</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-           x="70.8386"
-           y="59.338593"
-           id="text838-5-4-11-0"><tspan
-             sodipodi:role="line"
-             id="tspan836-0-50-5-6"
-             x="70.8386"
-             y="59.338593"
-             style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'CMU Classical Serif';-inkscape-font-specification:'CMU Classical Serif Medium Italic';stroke-width:0.26458332">N</tspan></text>
-        <path
-           style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="M 41.359959,52.78247 68.955537,24.719168"
-           id="path876-0-3-8"
-           inkscape:connector-curvature="0" />
-        <path
-           style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="M 40.090428,25.153483 68.153731,52.74906"
-           id="path876-8-3-84-3"
-           inkscape:connector-curvature="0" />
-      </g>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         x="63.517456"
-         y="24.769003"
-         id="text838-4-6-2-4-8"><tspan
-           sodipodi:role="line"
-           id="tspan836-9-3-59-1-9"
-           x="63.517456"
-           y="24.769003"
-           style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'CMU Classical Serif';-inkscape-font-specification:'CMU Classical Serif Medium Italic';stroke-width:0.26458332">N<tspan
-   id="tspan1031-4-3-8"
-   style="font-size:64.99999762%;baseline-shift:super">s</tspan>(r)</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-         x="68.00132"
-         y="54.312832"
-         id="text838-4-6-0-2-4-2"><tspan
-           sodipodi:role="line"
-           id="tspan836-9-3-5-5-0-2"
-           x="68.00132"
-           y="54.312832"
-           style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'CMU Classical Serif';-inkscape-font-specification:'CMU Classical Serif Medium Italic';stroke-width:0.26458332">N<tspan
-   id="tspan1054-74-7-3"
-   style="font-size:64.99999762%;baseline-shift:super">D</tspan></tspan></text>
-    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 61.578361,132.06946 V 166.8145"
+       id="path815-7-1-5"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 96.323399,166.8145 H 61.578361"
+       id="path815-6-89-8-3"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="59.507023"
+       y="131.26765"
+       id="text838-3-7-7"><tspan
+         sodipodi:role="line"
+         id="tspan836-3-5-6"
+         x="59.507023"
+         y="131.26765"
+         style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'CMU Classical Serif';-inkscape-font-specification:'CMU Classical Serif Medium Italic';stroke-width:0.26458332">w</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="95.801033"
+       y="168.89386"
+       id="text838-5-4-11-0"><tspan
+         sodipodi:role="line"
+         id="tspan836-0-50-5-6"
+         x="95.801033"
+         y="168.89386"
+         style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'CMU Classical Serif';-inkscape-font-specification:'CMU Classical Serif Medium Italic';stroke-width:0.26458332">N</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 66.322395,162.33774 27.595578,-28.0633"
+       id="path876-0-3-8"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 65.052864,134.70875 28.063303,27.59558"
+       id="path876-8-3-84-3"
+       inkscape:connector-curvature="0" />
+    <text
+       id="text838-4-6-2-4-8"
+       y="134.32428"
+       x="88.479889"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'CMU Classical Serif';-inkscape-font-specification:'CMU Classical Serif Medium Italic';stroke-width:0.26458332"
+         y="134.32428"
+         x="88.479889"
+         id="tspan836-9-3-59-1-9"
+         sodipodi:role="line">N<tspan
+   style="font-size:64.99999762%;baseline-shift:super"
+   id="tspan1031-4-3-8">s</tspan>(r)</tspan></text>
+    <text
+       id="text838-4-6-0-2-4-2"
+       y="163.8681"
+       x="92.963753"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444447px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif Bold';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       xml:space="preserve"><tspan
+         style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'CMU Classical Serif';-inkscape-font-specification:'CMU Classical Serif Medium Italic';stroke-width:0.26458332"
+         y="163.8681"
+         x="92.963753"
+         id="tspan836-9-3-5-5-0-2"
+         sodipodi:role="line">N<tspan
+   style="font-size:64.99999762%;baseline-shift:super"
+   id="tspan1054-74-7-3">D</tspan></tspan></text>
     <g
        transform="translate(24.962436,109.55527)"
        id="g1181-7-3-3">
@@ -216,5 +206,10 @@
        id="path1535-3-7-5"
        d="m 122.29375,129.86774 28.0633,27.59559"
        style="fill:none;stroke:#ff0000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 73.689402,164.51496 27.595578,-28.0633"
+       id="path876-0-3-8-7"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
