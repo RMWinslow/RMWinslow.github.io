@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script> 
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+    <!--Latex Definitions:-->
+    <script type="text/x-mathjax-config">
+		MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+    </script>
+    <div hidden>
+        \[
+            \definecolor{conditionColor}{RGB}{150,150,50}
+            \newcommand{\condition}[1]{\color{conditionColor} \text{(#1)}}
+            \newcommand{\mytag}[1]{\tag*{\(\condition{#1}\)}}
+    
+            \definecolor{heartcolor}{rgb}{1, 0, 0}
+            \definecolor{spadecolor}{rgb}{0, 0, 0}
+            \definecolor{diamondcolor}{rgb}{0, 0, 1}
+            \definecolor{clubcolor}{rgb}{0, 0.5, 0}
+        
+            \newcommand{\heartpip}{{\color{heartcolor}♥}}
+            \newcommand{\spadepip}{{\color{spadecolor}\spadesuit}}
+            \newcommand{\diamondpip}{{\color{diamondcolor}♦}}
+            \newcommand{\clubpip}{{\color{clubcolor}\clubsuit}}
+    
+    
+            \newcommand{\c}[1]{{\color{clubcolor}\textbf{[#1♣]}}}
+            \newcommand{\d}[1]{{\color{diamondcolor}\textbf{[#1♦]}}}
+            \newcommand{\h}[1]{{\color{heartcolor}\textbf{[#1♥]}}}
+            \newcommand{\s}[1]{{\color{spadecolor}\textbf{[#1♠]}}}
+            
+        \]
+    </div>
+
+    
+
+
+<link href="../../styles/sakura.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+    <span hidden>
+        ♣♦♥♠	
+        <b><span style="color:black">[Q♠]</span></b>
+        <b><span style="color:red">[Q♥]</span></b>
+        <b><span style="color:blue">[Q♦]</span></b>
+        <b><span style="color:green">[Q♣]</span></b>
+    </span>
+
+<h1>Poker Games</h1>
+
+
+
+<h2>Hand Ranking:</h2>
+
+<table>
+    <tr><td>5 of a Kind</td><td><b><span style="color:green">[A♣]</span>
+                            <span style="color:red">[A♥]</span>
+                            <span style="color:blue">[A♦]</span>
+                            <span style="color:black">[A♠]</span>
+                            [☆☆]</b></td></tr>
+    <tr><td>Straight Flush</td><td><b><span style="color:black">[A♠]</span>
+                            <span style="color:black">[K♠]</span>
+                            <span style="color:black">[Q♠]</span>
+                            <span style="color:black">[J♠]</span>
+                            <span style="color:black">[10♠]</span></b></td></tr>
+
+    <tr><td>4 of a Kind</td><td><b><span style="color:red">[Q♥]</span>
+                            <span style="color:black">[Q♠]</span>
+                            <span style="color:blue">[Q♦]</span>
+                            <span style="color:green">[Q♣]</span> &nbsp;&nbsp;</b>
+                            <span style="color:blue">[3♦]</span></td></tr>
+
+    <tr><td>Full House</td><td><b><span style="color:black">[7♠]</span>
+                            <span style="color:green">[7♣]</span>
+                            <span style="color:blue">[7♦]</span> &nbsp;&nbsp;
+                            <span style="color:red">[3♥]</span>
+                            <span style="color:blue">[3♦]</span></b></td></tr>
+
+    <tr><td>Flush</td><td>(<b><span style="color:black">[A♠]</span>
+                            <span style="color:black">[K♠]</span>
+                            <span style="color:black">[Q♠]</span>
+                            <span style="color:black">[J♠]</span>
+                            <span style="color:black">[10♠]</span></b>)</td></tr>
+
+    <tr><td>Straight</td><td>(<b><span style="color:black">[A♠]</span>
+                            <span style="color:black">[K♠]</span>
+                            <span style="color:black">[Q♠]</span>
+                            <span style="color:black">[J♠]</span>
+                            <span style="color:black">[10♠]</span></b>)</td></tr>
+
+    <tr><td>3 of a Kind</td><td>(<b><span style="color:black">[A♠]</span>
+                            <span style="color:black">[K♠]</span>
+                            <span style="color:black">[Q♠]</span>
+                            <span style="color:black">[J♠]</span>
+                            <span style="color:black">[10♠]</span></b>)</td></tr>
+
+    <tr><td>Two Pair</td><td>(<b><span style="color:black">[A♠]</span>
+                            <span style="color:black">[K♠]</span>
+                            <span style="color:black">[Q♠]</span>
+                            <span style="color:black">[J♠]</span>
+                            <span style="color:black">[10♠]</span></b>)</td></tr>
+
+    <tr><td>One Pair</td><td>(<b><span style="color:black">[A♠]</span>
+                            <span style="color:black">[K♠]</span>
+                            <span style="color:black">[Q♠]</span>
+                            <span style="color:black">[J♠]</span>
+                            <span style="color:black">[10♠]</span></b>)</td></tr>
+
+    <tr><td>High Card</td><td>(<b><span style="color:black">[A♠]</span>
+                            <span style="color:black">[K♠]</span>
+                            <span style="color:black">[Q♠]</span>
+                            <span style="color:black">[J♠]</span>
+                            <span style="color:black">[10♠]</span></b>)</td></tr>
+</table>
+
+
+
+<ul>
+    <li>5 of a kind: (
+            <b><span style="color:green">[A♣]</span>
+                <span style="color:red">[A♥]</span>
+                <span style="color:blue">[A♦]</span>
+                <span style="color:black">[A♠]</span>
+                [☆☆]</b>)</li>
+    <li>Straight Flush: (
+        <b><span style="color:green">[A♣]</span>
+            <span style="color:green">[K♣]</span>
+            <span style="color:green">[Q♣]</span>
+            <span style="color:green">[J♣]</span>
+            <span style="color:green">[10♣]</span></b>)</li>
+    <li>5 of a kind: (
+        <b><span style="color:green">[A♣]</span>
+            <span style="color:red">[A♥]</span>
+            <span style="color:blue">[A♦]</span>
+            <span style="color:black">[A♠]</span>
+            [☆☆]</b>)</li>
+    <li>5 of a kind: (
+        <b><span style="color:green">[A♣]</span>
+            <span style="color:red">[A♥]</span>
+            <span style="color:blue">[A♦]</span>
+            <span style="color:black">[A♠]</span>
+            [☆☆]</b>)</li>
+    <li>5 of a kind: (
+        <b><span style="color:green">[A♣]</span>
+            <span style="color:red">[A♥]</span>
+            <span style="color:blue">[A♦]</span>
+            <span style="color:black">[A♠]</span>
+            [☆☆]</b>)</li>
+</ul>
+
+TODO: Switch the above to svg playing cards.
+
+<p>Individual Cards are ranked AKQJT98765432, highest-to-lowest.</p>
+<p>With two cards of the same rank, the <b><span style="color:black">♠</span></b> is ranked highest, followed by  <b><span style="color:red">♥</span></b>,  <b><span style="color:blue">♦</span></b> , and then  <b><span style="color:green">♣</span></b>. Reverse of alphabetical order: SHDC.</p>
+
+
+<p>Ace can be high or low, but not both.</p>
+
+
+
+<hr>
+
+
+
+
+
+
+
+<h2>Specific Games:</h2>
+<i>Arranged in order of my preference, from best to worst.  Playercount in parentheses.</i>
+
+TODO 
+This is just a placeholder:
+<script type="text/javascript" src="rulesBlurbs/ohHell.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+

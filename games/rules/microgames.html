@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script> 
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+    <!--Latex Definitions:-->
+    <script type="text/x-mathjax-config">
+		MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+    </script>
+    <div hidden>
+        \[
+            \definecolor{conditionColor}{RGB}{150,150,50}
+            \newcommand{\condition}[1]{\color{conditionColor} \text{(#1)}}
+            \newcommand{\mytag}[1]{\tag*{\(\condition{#1}\)}}
+    
+            \definecolor{heartcolor}{rgb}{1, 0, 0}
+            \definecolor{spadecolor}{rgb}{0, 0, 0}
+            \definecolor{diamondcolor}{rgb}{0, 0, 1}
+            \definecolor{clubcolor}{rgb}{0, 0.5, 0}
+        
+            \newcommand{\heartpip}{{\color{heartcolor}♥}}
+            \newcommand{\spadepip}{{\color{spadecolor}\spadesuit}}
+            \newcommand{\diamondpip}{{\color{diamondcolor}♦}}
+            \newcommand{\clubpip}{{\color{clubcolor}\clubsuit}}
+    
+    
+            \newcommand{\c}[1]{{\color{clubcolor}\textbf{[#1♣]}}}
+            \newcommand{\d}[1]{{\color{diamondcolor}\textbf{[#1♦]}}}
+            \newcommand{\h}[1]{{\color{heartcolor}\textbf{[#1♥]}}}
+            \newcommand{\s}[1]{{\color{spadecolor}\textbf{[#1♠]}}}
+            
+        \]
+    </div>
+
+    
+
+
+<link href="../../styles/sakura.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+<h1>Tiny Games</h1>
+
+
+<script type="text/javascript" src="rulesBlurbs/winLoseBanana.js"></script>
+
+<script type="text/javascript" src="rulesBlurbs/devilsPoker.js"></script>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
