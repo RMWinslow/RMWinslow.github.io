@@ -15,7 +15,7 @@ document.write(`
         <li>For each trick taken in excess of team bid: +1 point and +1 <b>bag</b>:</li>
             <ul>
             <li>Bags accumulate across hands.</li>
-            <li>Every 6th bag results in -100 points.</li>
+            <li>Every 7th bag results in -100 points.</li>
             </ul>
         <li>Special case: If a player bids 0</li>
             <ul>

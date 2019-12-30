@@ -137,6 +137,14 @@ pre > code {
   white-space: pre;
 }
 
+
+
+
+
+
+
+/* Custom Stuff */
+
 .definition {
   padding: 0.5em;
   border-radius: 25px;
@@ -147,8 +155,42 @@ pre > code {
 
 .definition h4 {
   margin-top: 5px;
+  margin-bottom: 5px;
   background-color: hsl(45, 100%, 60%);
 }
+
+
+
+.rulesBlock {
+  padding: 0em;
+  border-radius: 1em;
+  border: 1px solid #7a0019;
+  background-color:  hsl(45, 100%, 60%);
+}
+
+.rulesBlock h4{
+  margin: 0.5em;
+  color: black;
+}
+
+.rulesBlock p, .rulesBlock ul{
+  margin: 0em;
+}
+
+.rulesBody {
+  padding: 0.5em;
+  border-radius: 1em;
+  background-color: hsl(45, 100%, 85%);
+  margin-bottom: 1em
+}
+
+
+
+
+
+
+
+
 
 
 
