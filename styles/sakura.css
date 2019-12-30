@@ -24,7 +24,7 @@ body {
   margin: auto;
   color: #3a3a3a;
   background-color: #fdf6e3;
-  padding: 13px;
+  padding: 5px;
 }
 
 @media (max-width: 684px) {
@@ -176,26 +176,31 @@ pre > code {
   color: black;
 }
 
-.lch {
-  height: 2.5em; float:left; margin:1em;
-}
 
-.rch {
-  height: 2.5em; float:right; margin:1em;
-}
 
 .rulesBlock p, .rulesBlock ul{
   margin: 0em;
 }
 
 .rulesBody {
-  padding: 0.5em;
+  padding: 1.5em;
   border-radius: 1em;
   background-color: hsl(45, 100%, 85%);
   margin-bottom: 1em
 }
 
-
+/* Image Classes for embadding cards LeftCardHeader,RightCardHeader,InlineCard*/
+.lch {
+  height: 3em; float:left; margin:1em;
+}
+.rch {
+  height: 3em; float:right; margin:1em;
+}
+.ilc {
+  min-height: 2em; 
+  max-height: 3em; 
+  vertical-align: text-bottom;
+}
 
 
 

@@ -1,6 +1,8 @@
 document.write(`
 <div class="rulesBlock"   style="background-color: hsl(22, 100%, 64%);">
     <center>
+        <img src="imgs/fox2.svg" class="lch">
+        <img src="imgs/fox2.svg" class="rch">
         <h4 id="foxInTheForest"> Fox in the Forest</h4> 
         <p><i>By Joshua Buergel. YET TO PLAY </i></p>
         <p>(2) <a href="tricktaking.html">Trick-Taking</a>. 3 Suits, A-10 and Q.</p>
