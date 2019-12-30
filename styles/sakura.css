@@ -163,14 +163,25 @@ pre > code {
 
 .rulesBlock {
   padding: 0em;
+  margin-top: 1em;
+  margin-bottom: 1em;
   border-radius: 1em;
   border: 1px solid #7a0019;
   background-color:  hsl(45, 100%, 60%);
 }
 
 .rulesBlock h4{
-  margin: 0.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0em;
   color: black;
+}
+
+.lch {
+  height: 2.5em; float:left; margin:1em;
+}
+
+.rch {
+  height: 2.5em; float:right; margin:1em;
 }
 
 .rulesBlock p, .rulesBlock ul{

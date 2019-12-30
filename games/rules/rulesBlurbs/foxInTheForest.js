@@ -1,8 +1,8 @@
 document.write(`
-<div class="rulesBlock"   style="background-color: hsl(22, 100%, 65%);">
+<div class="rulesBlock"   style="background-color: hsl(22, 100%, 64%);">
     <center>
         <h4 id="foxInTheForest"> Fox in the Forest</h4> 
-        <p><i>YET TO PLAY Joshua Buergel</i></p>
+        <p><i>By Joshua Buergel. YET TO PLAY </i></p>
         <p>(2) <a href="tricktaking.html">Trick-Taking</a>. 3 Suits, A-10 and Q.</p>
     </center>
     <div class="rulesBody"  style="background-color: hsl(30, 100%, 90%)">
