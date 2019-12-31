@@ -210,13 +210,18 @@ pre > code {
   max-height: 2.5em; 
   vertical-align: text-bottom;
 }
+.bigCard {
+  min-height: 4em; 
+  max-height: 4em; 
+  vertical-align: text-bottom;
+}
 
 
 
 .cC {color:green; font-weight: bold; font-family: "mySymbols"; 
   background-color: white; 
   padding:0.2ex; 
-  border-radius: 1em;
+  border-radius: 0.2em;
   border: 2px solid green;}
 .cD {color:blue; font-weight: bold; font-family: "mySymbols";
   background-color: white; 
@@ -224,8 +229,22 @@ pre > code {
   border-radius: 0.2em;
   border: 2px solid blue;}
 .cH {color:red; font-weight: bold; font-family: "mySymbols";
-  background-color: white; }
-.cS {color:black; font-weight: bold; font-family: "mySymbols";}
+  background-color: white; 
+  padding:0.2ex; 
+  border-radius: 0.2em;
+  border: 2px solid red;}
+.cS {color:black; font-weight: bold; font-family: "mySymbols";
+  background-color: white; 
+  padding:0.2ex; 
+  border-radius: 0.2em;
+  border: 2px solid black;}
+.card {color:#3a3a3a; font-weight: bold; font-family: "mySymbols";
+  background-color: white; 
+  padding:0.2ex; 
+  border-radius: 0.2em;
+  border: 2px solid #3a3a3a;}
+
+
 
 
 
