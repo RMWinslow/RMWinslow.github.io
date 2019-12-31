@@ -207,15 +207,24 @@ pre > code {
 }
 .ilc {
   min-height: 2em; 
-  max-height: 3em; 
+  max-height: 2.5em; 
   vertical-align: text-bottom;
 }
 
 
 
-.cC {color:green; font-weight: bold; font-family: "mySymbols";}
-.cD {color:blue; font-weight: bold; font-family: "mySymbols";}
-.cH {color:red; font-weight: bold; font-family: "mySymbols";}
+.cC {color:green; font-weight: bold; font-family: "mySymbols"; 
+  background-color: white; 
+  padding:0.2ex; 
+  border-radius: 1em;
+  border: 2px solid green;}
+.cD {color:blue; font-weight: bold; font-family: "mySymbols";
+  background-color: white; 
+  padding:0.2ex; 
+  border-radius: 0.2em;
+  border: 2px solid blue;}
+.cH {color:red; font-weight: bold; font-family: "mySymbols";
+  background-color: white; }
 .cS {color:black; font-weight: bold; font-family: "mySymbols";}
 
 

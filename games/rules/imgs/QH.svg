@@ -8,7 +8,7 @@
    <path d="M0 -300C0 -400 100 -500 200 -500C300 -500 400 -400 400 -250C400 0 0 400 0 500C0 400 -400 0 -400 -250C-400 -400 -300 -500 -200 -500C-100 -500 0 -400 -0 -300Z" fill="red"/>
    </symbol>
 
-   <rect width="99" height="99" x="-49.5" y="-49.5" rx="12" ry="12" fill="white" stroke="black"/>
+   <rect width="99" height="99" x="-49.5" y="-49.5" rx="12" ry="12" fill="white" stroke="red"/>
    <use xlink:href="#C" height="60" width="60" x="-8" y="-15"/>
 
    <style>

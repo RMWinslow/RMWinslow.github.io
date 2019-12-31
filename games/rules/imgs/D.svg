@@ -9,10 +9,6 @@
    </symbol>
 
    <rect width="99" height="99" x="-49.5" y="-49.5" rx="12" ry="12" fill="white" stroke="blue"/>
-   <use xlink:href="#C" height="60" width="60" x="-8" y="-15"/>
+   <use xlink:href="#C" height="98" width="99" x="-49" y="-49"/>
 
-   <style>
-      .cardfont { font: bold 60px serif; fill: blue;}
-   </style>
-   <text class="cardfont" x="-45" y="0" >Q</text>
 </svg>
