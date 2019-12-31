@@ -202,10 +202,15 @@ pre > code {
   vertical-align: text-bottom;
 }
 
-.cC {color:green; font-weight: bold;}
-.cD {color:blue; font-weight: bold;}
-.cH {color:red; font-weight: bold;}
-.cS {color:black; font-weight: bold;}
+@font-face {
+  font-family: "symbola";
+  src: url(http://robertmwinslow.com/font/strippedCards.ttf) format("truetype");
+}
+
+.cC {color:green; font-weight: bold; font-family: "symbola";}
+.cD {color:blue; font-weight: bold; font-family: "symbola";}
+.cH {color:red; font-weight: bold; font-family: "symbola";}
+.cS {color:black; font-weight: bold; font-family: "symbola";}
 
 
 
