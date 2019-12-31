@@ -11,6 +11,15 @@
  * Minimal css theme.
  * Project: https://github.com/oxalorg/sakura
  */
+
+
+@font-face {
+  font-family: "mySymbols";
+  src: url(robertmwinslow.com/font/strippedCards2.ttf) format("truetype");
+}
+
+
+
 /* Body */
 html {
   font-size: 62.5%;
@@ -202,15 +211,12 @@ pre > code {
   vertical-align: text-bottom;
 }
 
-@font-face {
-  font-family: "symbola";
-  src: url(http://robertmwinslow.com/font/strippedCards2.ttf) format("truetype");
-}
 
-.cC {color:green; font-weight: bold; font-family: "symbola";}
-.cD {color:blue; font-weight: bold; font-family: "symbola";}
-.cH {color:red; font-weight: bold; font-family: "symbola";}
-.cS {color:black; font-weight: bold; font-family: "symbola";}
+
+.cC {color:green; font-weight: bold; font-family: "mySymbols";}
+.cD {color:blue; font-weight: bold; font-family: "mySymbols";}
+.cH {color:red; font-weight: bold; font-family: "mySymbols";}
+.cS {color:black; font-weight: bold; font-family: "mySymbols";}
 
 
 
