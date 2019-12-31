@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script> 
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+    <!--Latex Definitions:-->
+    <script type="text/x-mathjax-config">
+		MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+    </script>
+    <div hidden>
+        \[
+            \definecolor{conditionColor}{RGB}{150,150,50}
+            \newcommand{\condition}[1]{\color{conditionColor} \text{(#1)}}
+            \newcommand{\mytag}[1]{\tag*{\(\condition{#1}\)}}
+    
+            \definecolor{heartcolor}{rgb}{1, 0, 0}
+            \definecolor{spadecolor}{rgb}{0, 0, 0}
+            \definecolor{diamondcolor}{rgb}{0, 0, 1}
+            \definecolor{clubcolor}{rgb}{0, 0.5, 0}
+        
+            \newcommand{\heartpip}{{\color{heartcolor}♥}}
+            \newcommand{\spadepip}{{\color{spadecolor}\spadesuit}}
+            \newcommand{\diamondpip}{{\color{diamondcolor}♦}}
+            \newcommand{\clubpip}{{\color{clubcolor}\clubsuit}}
+    
+    
+            \newcommand{\c}[1]{{\color{clubcolor}\textbf{[#1♣]}}}
+            \newcommand{\d}[1]{{\color{diamondcolor}\textbf{[#1♦]}}}
+            \newcommand{\h}[1]{{\color{heartcolor}\textbf{[#1♥]}}}
+            \newcommand{\s}[1]{{\color{spadecolor}\textbf{[#1♠]}}}
+            
+        \]
+    </div>
+
+    
+
+
+<link href="../../styles/sakura.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+
+        <span class="cC">♣&#xFE0E;</span>
+        <span class="cC">[A♣&#xFE0E;]</span>
+        <span class="cC">[2♣&#xFE0E;]</span>
+        <span class="cC">[3♣&#xFE0E;]</span>
+        <span class="cC">[4♣&#xFE0E;]</span>
+        <span class="cC">[5♣&#xFE0E;]</span>
+        <span class="cC">[6♣&#xFE0E;]</span>
+        <span class="cC">[7♣&#xFE0E;]</span>
+        <span class="cC">[8♣&#xFE0E;]</span>
+        <span class="cC">[9♣&#xFE0E;]</span>
+        <span class="cC">[10♣&#xFE0E;]</span>
+        <span class="cC">[J♣&#xFE0E;]</span>
+        <span class="cC">[Q♣&#xFE0E;]</span>
+        <span class="cC">[K♣&#xFE0E;]</span>
+
+
+    <br>
+
+        <span class="cD">♦&#xFE0E;</span>
+        <span class="cD">[A♦&#xFE0E;]</span>
+        <span class="cD">[2♦&#xFE0E;]</span>
+        <span class="cD">[3♦&#xFE0E;]</span>
+        <span class="cD">[4♦&#xFE0E;]</span>
+        <span class="cD">[5♦&#xFE0E;]</span>
+        <span class="cD">[6♦&#xFE0E;]</span>
+        <span class="cD">[7♦&#xFE0E;]</span>
+        <span class="cD">[8♦&#xFE0E;]</span>
+        <span class="cD">[9♦&#xFE0E;]</span>
+        <span class="cD">[10♦&#xFE0E;]</span>
+        <span class="cD">[J♦&#xFE0E;]</span>
+        <span class="cD">[Q♦&#xFE0E;]</span>
+        <span class="cD">[K♦&#xFE0E;]</span>
+
+
+    <br>
+
+        <span class="cH">♥&#xFE0E;</span>
+        <span class="cH">[A♥&#xFE0E;]</span>
+        <span class="cH">[2♥&#xFE0E;]</span>
+        <span class="cH">[3♥&#xFE0E;]</span>
+        <span class="cH">[4♥&#xFE0E;]</span>
+        <span class="cH">[5♥&#xFE0E;]</span>
+        <span class="cH">[6♥&#xFE0E;]</span>
+        <span class="cH">[7♥&#xFE0E;]</span>
+        <span class="cH">[8♥&#xFE0E;]</span>
+        <span class="cH">[9♥&#xFE0E;]</span>
+        <span class="cH">[10♥&#xFE0E;]</span>
+        <span class="cH">[J♥&#xFE0E;]</span>
+        <span class="cH">[Q♥&#xFE0E;]</span>
+        <span class="cH">[K♥&#xFE0E;]</span>
+
+
+    <br>
+
+
+        <span class="cS">♠&#xFE0E;</span>
+        <span class="cS">[A♠&#xFE0E;]</span>
+        <span class="cS">[2♠&#xFE0E;]</span>
+        <span class="cS">[3♠&#xFE0E;]</span>
+        <span class="cS">[4♠&#xFE0E;]</span>
+        <span class="cS">[5♠&#xFE0E;]</span>
+        <span class="cS">[6♠&#xFE0E;]</span>
+        <span class="cS">[7♠&#xFE0E;]</span>
+        <span class="cS">[8♠&#xFE0E;]</span>
+        <span class="cS">[9♠&#xFE0E;]</span>
+        <span class="cS">[10♠&#xFE0E;]</span>
+        <span class="cS">[J♠&#xFE0E;]</span>
+        <span class="cS">[Q♠&#xFE0E;]</span>
+        <span class="cS">[K♠&#xFE0E;]</span>
+
+
+
+</body>
+</html>
+
+
+

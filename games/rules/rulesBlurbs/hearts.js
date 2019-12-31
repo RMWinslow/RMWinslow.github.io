@@ -21,9 +21,9 @@ document.write(`
         <li>Within a hand, hearts cannot be played as lead suit until at least one heart has already been played.</li>
         <li>End-of-hand:</li>
             <ul>
-            <li>Earn +1 point for each <b><span style="color:red">♥</span></b> card you have taken.
+            <li>Earn +1 point for each <b><span style="color:red">♥&#xFE0E;</span></b> card you have taken.
             <li>Earn +13 points for taking <img src="imgs/QS.svg" class="ilc">
-            <li><b>Shooting the moon:</b> If you took all 13 <b><span style="color:red">♥</span></b>s and the <b><span style="color:black">[Q♠]</span></b>, then instead:
+            <li><b>Shooting the moon:</b> If you took all 13 <b><span style="color:red">♥&#xFE0E;</span></b>s and the <b><span style="color:black">[Q♠]</span></b>, then instead:
                 <ul>
                 <li>Earn -26 points, OR</li>
                 <li>Give <i>each</i> other player +26 points.</li>
