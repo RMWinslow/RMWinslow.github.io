@@ -8,9 +8,9 @@ document.write(`
         <img src="imgs/H.svg" class="lch">
         <img src="imgs/H.svg" class="rch">
         <img src="imgs/H.svg" class="rch">
-        <h4 id="hearts">Hearts</h4> 
+        <h4 id="landlord">斗地主</h4> 
         <p><i>YET TO PLAY</i></p>
-        <p>(4) <a href="tricktaking.html">Trick-Taking</a>. Standard Deck, no Jokers.</p>
+        <p>(3) Climbing Game. Standard Deck with Jokers.</p>
     </center>
     <div class="rulesBody"  style="background-color: hsl(0, 100%, 95%)">
         <ul>

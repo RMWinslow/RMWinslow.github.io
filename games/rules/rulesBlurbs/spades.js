@@ -1,7 +1,6 @@
 
 document.write(`
 <div class="rulesBlock"   style="background-color: hsl(0, 0%, 50%);">
-    <div style="float:left;"></div>
     <center>
         <img src="imgs/S.svg" class="lch">
         <img src="imgs/S.svg" class="lch">
@@ -9,7 +8,7 @@ document.write(`
         <img src="imgs/S.svg" class="rch">
         <h4 id="spades">Spades</h4> 
         <p><i>Brother's favorite card game.</i></p>
-        <p>(2) <a href="tricktaking.html">Trick-Taking</a>. Standard Deck, no Jokers.</p>
+        <p>(4) <a href="tricktaking.html">Trick-Taking</a>. Standard Deck, no Jokers.</p>
     </center>
     <div class="rulesBody"  style="background-color: hsl(0, 0%, 80%)">
         <ul>

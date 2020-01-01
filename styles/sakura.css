@@ -188,7 +188,8 @@ pre > code {
 
 
 .rulesBlock p, .rulesBlock ul{
-  margin: 0em;
+  margin: 0em; 
+  line-height:2.2ex; margin-bottom:1ex;margin-top:1ex;
 }
 
 .rulesBody {
@@ -200,10 +201,10 @@ pre > code {
 
 /* Image Classes for embadding cards LeftCardHeader,RightCardHeader,InlineCard*/
 .lch {
-  height: 3em; float:left; margin:1em;
+  height: 3em; float:left; margin:1em; margin-right: 0em;
 }
 .rch {
-  height: 3em; float:right; margin:1em;
+  height: 3em; float:right; margin:1em; margin-left: 0em;
 }
 .ilc {
   min-height: 2em; 
@@ -239,6 +240,16 @@ pre > code {
   border-radius: 0.2em;
   border: 2px solid black;}
 .card {color:#3a3a3a; font-weight: bold; font-family: "mySymbols";
+  background-color: white; 
+  padding:0.2ex; 
+  border-radius: 0.2em;
+  border: 2px solid #3a3a3a;}
+.redJoker {color:red; font-weight: bold; font-family: "mySymbols";
+  background-color: white; 
+  padding:0.2ex; 
+  border-radius: 0.2em;
+  border: 2px solid #3a3a3a;}
+.blackJoker {color:black; font-weight: bold; font-family: "mySymbols";
   background-color: white; 
   padding:0.2ex; 
   border-radius: 0.2em;

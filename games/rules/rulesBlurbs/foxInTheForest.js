@@ -13,12 +13,12 @@ document.write(`
         <li>Each hand, deal 13 cards to each player. Flip a card to determine Trump.</li>
         <li>Some cards have special effects when played in a trick:</li>
             <ul>
-            <li>A: You lead the next Trick if you lose this one.</li>
-            <li>3: Immediately swap the trump card with a card from your hand.</li>
-            <li>5: Immediately draw one card and then place a card from your hand on the bottom of the deck.</li>
-            <li>7: +1 point to whoever takes this trick.</li>
-            <li>9: If only one 9 was played at the end of a trick, treat it like a trump suit.</li>
-            <li>Q: If your opponent can follow suit, they must either play an A or their highest card in this suit.</li>
+            <li><span class="card">A</span>: You lead the next Trick if you lose this one.</li>
+            <li><span class="card">3</span>: Immediately swap the trump card with a card from your hand.</li>
+            <li><span class="card">5</span>: Immediately draw one card and then place a card from your hand on the bottom of the deck.</li>
+            <li><span class="card">7</span>: +1 point to whoever takes this trick.</li>
+            <li><span class="card">9</span>: If only one 9 was played at the end of a trick, treat it like a trump suit.</li>
+            <li><span class="card">Q</span>: If your opponent can follow suit, they must either play an A or their highest card in this suit.</li>
             </ul>
         <li>End of Hand Scoring:</li>
             <ul>
