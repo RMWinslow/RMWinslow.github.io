@@ -42,27 +42,12 @@
 <body>
 
 
-    <span hidden>
-        ♣♦♥♠	
-        <b><span style="color:black">[Q♠]</span></b>
-        <b><span style="color:red">[Q♥]</span></b>
-        <b><span style="color:blue">[Q♦]</span></b>
-        <b><span style="color:green">[Q♣]</span></b>
-    </span>
 
 <h1>Poker Games</h1>
-
-
-
 <h2>Hand Ranking:</h2>
 
-
-TODO: Switch the above to svg playing cards.
-
-<p>Individual Cards are ranked AKQJT98765432, highest-to-lowest.</p>
-<p>With two cards of the same rank, the <b><span style="color:black">♠</span></b> is ranked highest, followed by  <b><span style="color:red">♥</span></b>,  <b><span style="color:blue">♦</span></b> , and then  <b><span style="color:green">♣</span></b>. Reverse of alphabetical order: SHDC.</p>
-
 <table style="font-size: larger;">
+    <tr><th></th><th></th></tr>
     <tr><td><h3>Straight Flush</h3></td><td>
         <img class="bigCard" src=imgs/9C.svg>
         <img class="bigCard" src=imgs/8C.svg>
@@ -112,15 +97,31 @@ TODO: Switch the above to svg playing cards.
         <img class="bigCard" src=imgs/cardBlank.svg>
         <img class="bigCard" src=imgs/cardBlank.svg></td></tr>
 </table>
-<p>Ace can be high or low, but not both.</p>
 
 
 
 
+<hr>
 
+<h2>Other Notes on Ranking</h2>
 
+<p>Individual Cards are ranked AKQJT98765432A, highest-to-lowest.</p>
 
+<p>Ace can be high or low, but not both. So you can have a run of A2345 or 10JQKA, but not QKA23.</p>
 
+<p>To break ties between hands:
+    <ul>
+        <li>Look at the ranks of the cards that count towards the hand.</li>
+        <li>Look at the rank of other cards in the hand.</li>
+        <li>Look at the highest ranked card that counts towards part of the hand.</li>
+    </ul> </p>
+
+<p>Hands of the </p>
+
+<p>Individual Cards are ranked AKQJT98765432, highest-to-lowest.</p>
+<p>With two cards of the same rank, the <b><span style="color:black">♠</span></b> is ranked highest, followed by  <b><span style="color:red">♥</span></b>,  <b><span style="color:blue">♦</span></b> , and then  <b><span style="color:green">♣</span></b>. Reverse of alphabetical order: SHDC.</p>
+
+<hr>
 
 
 
