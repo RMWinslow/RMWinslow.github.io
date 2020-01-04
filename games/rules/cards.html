@@ -2,41 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
-    <script src="https://code.highcharts.com/highcharts.js"></script> 
-    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
-    <!--Latex Definitions:-->
-    <script type="text/x-mathjax-config">
-		MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
-    </script>
-    <div hidden>
-        \[
-            \definecolor{conditionColor}{RGB}{150,150,50}
-            \newcommand{\condition}[1]{\color{conditionColor} \text{(#1)}}
-            \newcommand{\mytag}[1]{\tag*{\(\condition{#1}\)}}
-    
-            \definecolor{heartcolor}{rgb}{1, 0, 0}
-            \definecolor{spadecolor}{rgb}{0, 0, 0}
-            \definecolor{diamondcolor}{rgb}{0, 0, 1}
-            \definecolor{clubcolor}{rgb}{0, 0.5, 0}
-        
-            \newcommand{\heartpip}{{\color{heartcolor}♥}}
-            \newcommand{\spadepip}{{\color{spadecolor}\spadesuit}}
-            \newcommand{\diamondpip}{{\color{diamondcolor}♦}}
-            \newcommand{\clubpip}{{\color{clubcolor}\clubsuit}}
-    
-    
-            \newcommand{\c}[1]{{\color{clubcolor}\textbf{[#1♣]}}}
-            \newcommand{\d}[1]{{\color{diamondcolor}\textbf{[#1♦]}}}
-            \newcommand{\h}[1]{{\color{heartcolor}\textbf{[#1♥]}}}
-            \newcommand{\s}[1]{{\color{spadecolor}\textbf{[#1♠]}}}
-            
-        \]
-    </div>
-
-    
-
-
+<!--These rules blurbs use graphics from the Twemoji project: https://github.com/twitter/twemoji
+Also from openmoji-->
 <link href="../../styles/sakura.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -71,14 +38,15 @@
 <h2>Games I have yet to play.</h2>
 
 <script type="text/javascript" src="rulesBlurbs/hearts.js"></script>
-
 <script type="text/javascript" src="rulesBlurbs/diamonds.js"></script>
-
 <script type="text/javascript" src="rulesBlurbs/foxInTheForest.js"></script>
+<script type="text/javascript" src="rulesBlurbs/noThanks.js"></script>
+<script type="text/javascript" src="rulesBlurbs/reno.js"></script>
 
 
-
-
+<script type="text/javascript" src="rulesBlurbs/chimera.js"></script>
+<script type="text/javascript" src="rulesBlurbs/tichu.js"></script>
+<script type="text/javascript" src="rulesBlurbs/haggis.js"></script>
 
 
 
@@ -92,7 +60,7 @@
 
 
 <script type="text/javascript" src="rulesBlurbs/斗地主.js"></script>
-
+<script type="text/javascript" src="rulesBlurbs/kickball.js"></script>
 
 
 
@@ -102,6 +70,7 @@
 
 <script type="text/javascript" src="rulesBlurbs/devilsPoker.js"></script>
 
+<script type="text/javascript" src="rulesBlurbs/winLoseBanana.js"></script>
 
 
 
@@ -110,7 +79,10 @@
 
 <h2>Games I have played but do not like.</h2>
 
-
+<ul>
+    <li>Abstrac</li>
+    <li>Hey, Bartender! </li>
+</ul>
 
 
 
@@ -143,8 +115,8 @@
 
 <hr> 
 
-Need to move these elsewhere but too lazy to make a seperate test page.
 
+<!--
 
 
 <h4 id="skull">Skull and Roses</h4>
@@ -185,50 +157,6 @@ Need to move these elsewhere but too lazy to make a seperate test page.
         </ol>
     <li>First player to 6 points wins..</li>
 </ul>
-
-
-
-
-
-
-
-
-<h4 id="blank">Blank</h4>
-<i>YET TO PLAY</i>
-<p>(?) Mechanics. Standard Deck, no Jokers.</p>
-<ul>
-    <li></li>
-    <li></li>
-</ul>   
-
-
-
-
-
-
-
-<h4 id="blank">Dao DiZhu, Chimera</h4>
-<i>YET TO PLAY</i>
-<p>(?) Mechanics. Standard Deck, no Jokers.</p>
-<ul>
-    <li></li>
-    <li></li>
-</ul>   
-
-
-
-
-
-
-
-
-<h4 id="blank">Tichu</h4>
-<i>YET TO PLAY</i>
-<p>(?) Mechanics. Standard Deck, no Jokers.</p>
-<ul>
-    <li></li>
-    <li></li>
-</ul>   
 
 
 
@@ -318,7 +246,7 @@ Need to move these elsewhere but too lazy to make a seperate test page.
 
 
 
-<!--
+
 Interested in:
 Abstrac (2p)
 Addenda (2 – 4p)

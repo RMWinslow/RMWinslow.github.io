@@ -15,9 +15,15 @@ document.write(`
     <div class="rulesBody"  style="">
         <ul>
         <li>One person is the landlord; the other two are farmers. Farmers are on a team.</li>
-        <li>Deal 17 cards to each farmer, 20 to the landlord.</li>
-        <li>Landlord leads first.</li>
-        <li>Landlord wins if they play out all of their cards first. Otherwise, both farmers win.</li>
+        <li>Deal 17 cards to each farmer, 20 to landlord.</li>
+        <li>Landlord plays a pattern.</li>
+        <li>Within a hand, hearts cannot be played as lead suit until at least one heart has already been played.</li>
+        <li>Valid patterns:</li>
+            <ul>
+            <li></li>
+            </ul>
+        <li>Player with the <i>fewest</i> points wins.</li>
+        </ul>
     </div>
 </div><br>
 `)
