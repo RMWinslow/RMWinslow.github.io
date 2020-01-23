@@ -255,7 +255,9 @@ pre > code {
   border-radius: 0.2em;
   border: 2px solid #3a3a3a;}
 
-
+/*span {
+  overflow-x: scroll;
+}*/
 
 
 
@@ -266,6 +268,7 @@ table {
   text-align: justify;
   width: 100%;
   border-collapse: collapse;
+  
 }
 
 td, th {
