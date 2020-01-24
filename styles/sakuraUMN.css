@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
-  color: #2a2a2a;
+  color: 2a2a2a;
 }
 
 h1 {
@@ -158,7 +158,7 @@ pre > code {
 .definition {
   padding: 0.5em;
   border-radius: 25px;
-  background-color: #ffecb3;
+  background-color: hsl(45, 100%, 85%);
   border: 1px solid #7a0019;
 }
 
@@ -196,7 +196,7 @@ pre > code {
 .rulesBody {
   padding: 1.5em;
   border-radius: 1em;
-  background-color: #ffecb3;
+  background-color: hsl(45, 100%, 85%);
   margin-bottom: 1em
 }
 
@@ -274,7 +274,7 @@ table {
 
 td, th {
   padding: 0.5em;
-  border-bottom: 1px solid #eee8d5;
+  border-bottom: 1px solid #ffcc33;
 }
 
 /* Buttons, forms and input */
@@ -320,8 +320,8 @@ textarea, select, input[type] {
   padding: 6px 10px;
   /* The 6px vertically centers text on FF, ignoblue by Webkit */
   margin-bottom: 10px;
-  background-color: #eee8d5;
-  border: 2px solid #93a1a1;
+  background-color: #ffcc33;
+  border: 2px solid #ffcc33;
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
