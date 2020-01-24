@@ -33,7 +33,7 @@ body {
   margin: auto;
   color: #002b36;
   background-color: #fdf6e3;
-  padding: 5px;
+  padding: 10px;
 }
 
 @media (max-width: 684px) {
@@ -103,8 +103,8 @@ a {
   color: #7a0019;
 }
 a:hover {
-  color: #5e5e5e;
-  border-bottom: 2px solid #3a3a3a;
+  color: #073642;
+  border-bottom: 2px solid #073642;
 }
 
 ul {
@@ -128,7 +128,7 @@ img {
 
 /* Pre and Code */
 pre {
-  background-color: #ffcc33;
+  background-color: #eee8d5;
   display: block;
   padding: 1em;
   overflow-x: auto;
@@ -137,7 +137,7 @@ pre {
 code {
   font-size: 0.9em;
   padding: 0;
-  background-color: #ffcc33;
+  background-color: #eee8d5;
   white-space: pre-wrap;
 }
 
@@ -268,6 +268,7 @@ pre > code {
 table {
   text-align: justify;
   width: 100%;
+  max-width: 100%;
   border-collapse: collapse;
   
 }
@@ -298,8 +299,8 @@ textarea {
   white-space: nowrap;
   font-size: 1.35rem;
   background-color: #7a0019;
-  color: #fdf6e3;
-  border-radius: 1px;
+  color: #eee8d5;
+  border-radius: 5px;
   border: 1px solid #7a0019;
   cursor: pointer;
   box-sizing: border-box;
@@ -309,8 +310,8 @@ textarea {
   opacity: 0.5;
 }
 .button:focus, .button:hover, button:focus, button:hover, input[type=submit]:focus, input[type=submit]:hover, input[type=reset]:focus, input[type=reset]:hover, input[type=button]:focus, input[type=button]:hover {
-  background-color: #5e5e5e;
-  border-color: #5e5e5e;
+  background-color: #073642;
+  border-color: #073642;
   color: #eee8d5;
   outline: 0;
 }

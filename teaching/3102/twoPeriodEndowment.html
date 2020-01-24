@@ -5,16 +5,15 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
     <script src="https://code.highcharts.com/highcharts.js"></script> 
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
-    <meta name="viewport" content="width=400 px, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
-
-<link href="../../styles/sakura.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+    <link href="../../styles/sakura.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
 
 <h1>Two-Period Endowment Economy</h1>
 
-<div id="endowmentEconomy" style="width: 400px;  height: 500px; margin: 0 auto"></div>
+<div id="endowmentEconomy" style="width: 80vmin;  height: 85vmin; margin: 0 auto"></div>
 
 <b><table style="text-align: center; ">
         <tr>
@@ -27,7 +26,7 @@
 </table></b>
 
 <b>Exogenous Variables and Parameters:</b>    <button type="button" style="float: right;" >Click here to update.</button>
-<b><table style="text-align: center; ">
+<b><table style="text-align: center;">
         <tr>
             <td>\(y\):     <input type="number" id="income1"  min="0" step="1" style="width: 4em;">  &nbsp; </td>
             <td>\(y'\):   <input type="number" id="income2" min="0" step="1" style="width: 4em;"> &nbsp;  </td>
@@ -35,7 +34,7 @@
             <td>\(t'\):   <input type="number" id="tax2"  step="1" style="width: 4em;"> &nbsp;     </td>
             <td>\(\beta\):     <input type="number" id="beta"  min="0.01" max="1" step="0.01" style="width: 4em;">  &nbsp; </td>
             <td>\(r\):     <input type="number" id="r"  step="0.01" style="width: 4em;">  &nbsp; </td>
-        </tr>
+        </tr  >
 </table></b>
 
 
@@ -60,7 +59,6 @@ Therefore \(c'=(1+r)\beta c\) and
 \[c={we\over 1+\beta}\]
 
 At this point, we have found the formulas for all the endogenous variables, and can plug in the exogenous parameters to find the result.
-
 
 
 
@@ -187,7 +185,9 @@ At this point, we have found the formulas for all the endogenous variables, and 
             //height: axissize,            
            // width: axissize,
             min:minx,
-            max: maxx
+            max: maxx,
+            gridLineWidth: 1,
+            tickInterval: 20
         },
         yAxis: {
             title: {
@@ -196,7 +196,8 @@ At this point, we have found the formulas for all the endogenous variables, and 
             //height: axissize,            
             //width: axissize,
             min:minx,
-            max: maxx
+            max: maxx,
+            tickInterval: 20
         },
         tooltip: {
             headerFormat: '<b>{series.name}</b><br>',
