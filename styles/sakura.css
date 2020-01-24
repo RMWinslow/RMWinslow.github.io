@@ -31,7 +31,7 @@ body {
   line-height: 1.618;
   max-width: 45em;
   margin: auto;
-  color: #3a3a3a;
+  color: #002b36;
   background-color: #fdf6e3;
   padding: 5px;
 }
@@ -95,7 +95,7 @@ small, sub, sup {
 }
 
 hr {
-  border-color: #7a0019;
+  border: 1.5px solid #7a0019;
 }
 
 a {
@@ -311,7 +311,7 @@ textarea {
 .button:focus, .button:hover, button:focus, button:hover, input[type=submit]:focus, input[type=submit]:hover, input[type=reset]:focus, input[type=reset]:hover, input[type=button]:focus, input[type=button]:hover {
   background-color: #5e5e5e;
   border-color: #5e5e5e;
-  color: #fdf6e3;
+  color: #eee8d5;
   outline: 0;
 }
 
