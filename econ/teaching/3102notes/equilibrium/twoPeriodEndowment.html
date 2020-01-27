@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script> 
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+    <link href="https://www.robertmwinslow.com/styles/sakura.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+<h1>Two-Period Endowment Economy</h1>
+
+<div id="endowmentEconomy" style="width: 80vmin;  height: 85vmin; margin: 0 auto"></div>
+
+<b><table style="text-align: center; ">
+        <tr>
+            <td>\(we\): <output id='wealth'>test</output></td>
+            <td>\(c\): <output id='consumption1'>test</output></td>
+            <td>\(c'\): <output id='consumption2'>test</output></td>
+            <td>\(s\): <output id='savings'>test</output></td>
+            <td>\(U\): <output id='utility'>test</output></td>
+        </tr>
+</table></b>
+
+<b>Exogenous Variables and Parameters:</b>    <button type="button" style="float: right;" >Click here to update.</button>
+<b><table style="text-align: center;">
+        <tr>
+            <td>\(y\):     <input type="number" id="income1"  min="0" step="1" style="width: 4em;">  &nbsp; </td>
+            <td>\(y'\):   <input type="number" id="income2" min="0" step="1" style="width: 4em;"> &nbsp;  </td>
+            <td>\(t\):     <input type="number" id="tax1"   step="1" style="width: 4em;">  &nbsp;</td>
+            <td>\(t'\):   <input type="number" id="tax2"  step="1" style="width: 4em;"> &nbsp;     </td>
+            <td>\(\beta\):     <input type="number" id="beta"  min="0.01" max="1" step="0.01" style="width: 4em;">  &nbsp; </td>
+            <td>\(r\):     <input type="number" id="r"  step="0.01" style="width: 4em;">  &nbsp; </td>
+        </tr  >
+</table></b>
+
+
+
+<h3>Solving the problem algebraically:</h3>
+The consumer's problem is 
+\[\max_{c,c',s}\log c + \beta \log c'\]
+\[s.t. c\geq 0;c'\geq 0\]
+\[c+s\leq y-t\]
+\[c'\leq (1+r)s+y'-t'\]
+
+Utility is strictly increasing, so the budget constraint will bind with equality.
+Solve for \(s\) in the second period, and then plug it into the first to get 
+\[s={c' -y' +t' \over 1+r}\]
+\[c+{c'\over 1+r}= y+{y' \over 1+r} - t - {t' \over 1+r}\equiv we\]
+
+If the consumer is behaving optimally, they will choose consumption such that their marginal rate of substitution is equal to the exchange rate between past and future consumption:
+\[(1+r)=MRS={{1/ c} \over {\beta / c'}}={c\over \beta c'}\]
+
+Therefore \(c'=(1+r)\beta c\) and 
+\[c+{(1+r)\beta c \over 1+r}=c(1+\beta)=we\]
+\[c={we\over 1+\beta}\]
+
+At this point, we have found the formulas for all the endogenous variables, and can plug in the exogenous parameters to find the result.
+
+
+
+
+
+<script type="text/javascript">
+
+
+    //Jquery gobbledygook to listen to the form and update parameters.
+    $(document).ready(function(){
+        $("button").click(function(){
+            updateExogenous();
+            updateEndogenous();
+            updateChart();
+        });            
+    });
+    //--------------------------------------------------------------------------------------------
+    
+
+    //default values for exogenous variables
+    y1 = 20;
+    y2 = 40;
+    t1 = 0;
+    t2 = 0;
+    beta = 0.8;
+    r = 0.25;
+
+    //chart parameters
+    minx = 0;
+    maxx = 100;
+    axissize = 600; //unused currently. Had weird side effects
+    chartSteps = 200; // The number of data points to sample when drawing a chart.
+
+    //populate the input forms with the default values
+    $('#income1').val(y1);
+    $('#income2').val(y2);
+    $('#tax1').val(t1);
+    $('#tax2').val(t2);
+    $('#beta').val(beta);
+    $('#r').val(r);
+
+
+    //Pull data from the forms and update the exogenous variables
+    function updateExogenous(){
+        y1 = Number($('#income1').val());
+        y2 = Number($('#income2').val());
+        t1 = Number($('#tax1').val());
+        t2 = Number($('#tax2').val());
+        beta = Number($('#beta').val());
+        r = Number($('#r').val());
+    }
+
+    //calculate and update values for endogenous variables
+    function updateEndogenous(){
+        wealth = y1-t1 + (y2-t2)/(1+r);
+        c1 = wealth / (1+beta);
+        c2 = (1+r)*beta*c1;
+        s = (c2-y2+t2)/(1+r);
+        utility = Math.log(c1)+beta*Math.log(c2);
+        MRS = c2/(beta*c1)
+        
+        $("#wealth").text(wealth.toFixed(2));
+        $("#consumption1").text(c1.toFixed(2));
+        $("#consumption2").text(c2.toFixed(2));
+        $("#savings").text(s.toFixed(2));
+        $("#utility").text(utility.toFixed(2));
+    }
+    updateEndogenous();
+   
+//----------------------------------------------------------------
+
+    //Functions for drawing lines.
+    function genBC(w,r,minx,maxx,steps){
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y = w*(1+r)-(1+r)*x;
+            data.push([x,y]);
+        }
+        data.push([w,0]); //manually add x intercept
+        return data;
+    }
+
+    function MRSline(r,beta,minx,maxx,steps){
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y =(1+r)*beta*x;       
+            data.push([x,y]);
+        }
+        return data;
+    }
+
+    function genIsoquant(c1,c2,minx,maxx,steps){
+        //returns an array of points to draw an isoquant through this point
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        utility = Math.log(c1)+beta*Math.log(c2);
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y = Math.exp((utility-Math.log(x))/beta) ;   
+            data.push([x,y]);
+        }
+        return data;
+    }
+
+//---------------------------------------------------------------------------
+    //Code for rendering the graphs.
+
+    var endowChart = Highcharts.chart('endowmentEconomy', {
+        chart: {
+            type: 'line',
+            backgroundColor: null
+        },
+        title: {
+            text: "The Consumer's Problem with log Utility"
+        },
+        xAxis: {
+            title: {
+                text: 'c - Consumption Today'
+            },           
+            //height: axissize,            
+           // width: axissize,
+            min:minx,
+            max: maxx,
+            gridLineWidth: 1,
+            tickInterval: 20
+        },
+        yAxis: {
+            title: {
+                text: "c' - Consumption Tomorrow"
+            },
+            //height: axissize,            
+            //width: axissize,
+            min:minx,
+            max: maxx,
+            tickInterval: 20
+        },
+        tooltip: {
+            headerFormat: '<b>{series.name}</b><br>',
+            pointFormat: "c={point.x:.2f}, c'={point.y:.2f} ,"
+        },
+
+        plotOptions: {
+            spline: {
+                marker: {
+                    enabled: true
+                }
+            },
+            series: {
+                states: {
+                    hover: {
+                        enabled: true,
+                    },
+                    inactive: {
+                        opacity: 1
+                    }
+                }
+            }
+        },
+
+        legend:{
+            enabled:true
+        },
+
+        //colors: ['#6CF', '#39F', '#06C', '#036', '#000'],
+
+        series: [{
+            name: "Utility  Iso ",
+            color : '#ada',
+            data: genIsoquant(c1,c2,minx,maxx,chartSteps),//[{x:0,y:0,egg:5},{x:35,y:36,egg:5},{x:4,y:0,egg:5},{x:0,y:43,egg:5}],
+            tooltip: {
+                pointFormat: "c={point.x:.2f}, c'={point.y:.2f} ,{point.egg}"
+            }
+        },{
+            name: "Budget Constraint",
+            color: '#000',
+            data: genBC(wealth,r,minx,maxx,chartSteps)
+        }, {
+            name: "MRS = (1+r)",
+            color: '#aaf',
+            data: MRSline(r,beta,minx,maxx,chartSteps)
+        }, {
+            name:"Endowment",
+            color: '#cc0000',
+            data:[{x:y1-t1,y:y2-t2,marker: {symbol: 'url(bigE.png)'}}],
+            tooltip: {
+                snap: 50
+            },
+        },{
+            name:"Optimum",
+            color: '#ffff00',
+            data:[{x:c1,y:c2,marker: {symbol: 'url(star.png)'}}]
+        }]
+    });
+
+//------------------------------------------------------------------------
+
+
+
+//Functions to update the graph's  data
+function updateChart(){
+    endowChart.series[0].setData(genIsoquant(c1,c2,minx,maxx,chartSteps), redraw=false);
+    endowChart.series[1].setData(genBC(wealth,r,minx,maxx,chartSteps), redraw=false);
+    endowChart.series[2].setData(MRSline(r,beta,minx,maxx,chartSteps), redraw=false);
+    endowChart.series[3].data[0].update([y1-t1,y2-t2], redraw=false);
+    endowChart.series[4].data[0].update([c1,c2], redraw=false);
+    endowChart.redraw();
+}
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
