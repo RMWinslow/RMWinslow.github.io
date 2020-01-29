@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+		<title>Human Capital</title>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+		<link href="../../../styles/sakuraBlue.css" rel="stylesheet" type="text/css">
+		<!--<style>body{background-color: #ffccee;}</style>-->
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+		</script>
+		<!--Latex Definitions:-->
+		\[
+			\definecolor{name}{RGB}{200,200,210}
+			\newcommand{\condition}[1]{\color{name} \text{(#1)}}
+			\newcommand{\mytag}[1]{\tag*{\(\condition{#1}\)}}
+		\]
+</head>
+<body>
+
+
+<h2>Neoclassical Growth Model with Human Capital</h2>
+<h5>Setup:</h5>
+
+<b>
+	Consider the following Planner's Problem:
+		\[\max \sum \beta^t {c_t^{1-\sigma} \over 1-\sigma}\]
+	<div style="padding-left:5em">subject to</div>
+	\begin{gather*} 
+		c_t + x_{kt} + x_{ht} \leq y_t = Ak_t^\alpha z_t^{1-\alpha} \\
+		k_{t+1} \leq (1-\delta_k ) k_t + x_{kt} \\ 
+		h_{t+1} \leq (1-\delta_h ) h_t + x_{ht} \\
+		z_t \leq n_t h_t \\ 
+		0 \leq l_t + n_t \leq 1 \\
+		h_0, k_0 \text{ given.} 
+	\end{gather*}
+</b>
+<hr>
+
+
+
+<h5>(a) Show that the value function for this problem is homogeneous of degree \((1-\sigma)\) in the initial capital stocks, \((h_0, k_0)\).</h5>
+
+<h5>(b) Characterize the homogeneity properties of the optimal decision rules in initial	capital stocks, \((h_0, k_0)\). Specifically if the initial conditions on the capital stocks	are \((\eta h_0, \eta k_0)\) instead of  \((h_0, k_0)\) where  \(\eta > 0\), how are the optimal time paths for	consumption, labor supply, investment, etc., affected? Prove your claims.</h5>
+
+<h6>The easy but tedious way:</h6>
+<p>
+	Assume that \(\alpha, \beta \in (0,1)\), \(\delta_k, \delta_h \in (0,1]\), and \(\sigma,A,h_0,k_0 > 0\).
+</p>
+<p>
+	Because leisure does not enter into the utility function, we can safely assume that \(n_t=1 \; \forall t\), and because the utility and production function are strictly increasing, the other constraints will bind. This suggests some obvious simplifications to  to make in the constraints via the following substitutions:
+	\begin{align}
+		z_t & = h_t \\
+		x_{kt} & = k_{t+1} - (1-\delta_k ) k_t \\ 
+		x_{ht} & = h_{t+1} - (1-\delta_h ) h_t \\
+	\end{align}
+</p>
+<p>
+	Then the value function for the planner's problem above is equivalent to the following:
+		\[V(k_0, h_0) = \max_{\{c_t,k_{t+1},h_{t+1}\}_t} \sum_{t=0}^\infty \beta^t {c_t^{1-\sigma} \over 1-\sigma}\]
+	<div style="padding-left:5em">such that, for all \(t\),</div>
+	\begin{gather*} 
+		c_t +  k_{t+1} - (1-\delta_k ) k_t + h_{t+1} - (1-\delta_h ) h_t  = Ak_t^\alpha h_t^{1-\alpha} \\
+		h_0, k_0 \text{ given.} 
+	\end{gather*}
+</p>
+<p>
+	The first order conditions for this simplified problem are:
+	\begin{align}
+		0 & = \beta^t c_t^{-\sigma} - \lambda_t \\
+		0 & = - \lambda_t + (1-\delta_k )\lambda_{t+1} + Ak_{t+1}^{\alpha-1}h_{t+1}^{1-\alpha} \lambda_{t+1} \\ 
+		0 & = - \lambda_t + (1-\delta_h )\lambda_{t+1} + Ak_{t+1}^{\alpha}h_{t+1}^{-\alpha} \lambda_{t+1} \\ 
+	\end{align}
+</p>
+<p>
+	The FOCs, together with the budget constraint, characterize the optimal sequence of allocations. Suppose that the sequence \(\{\hat{c}_t,\hat{k}_{t+1},\hat{h}_{t+1}\}_t\) is a solution to the above maximization problem for initial stocks  \((\bar{k}_0,\bar{h}_0)\).  Then there exist some lagrange multipliers \(\{\hat{\lambda}_t\}_t\) such that:
+	\begin{align}
+		0 & = \beta^t \hat{c}_t^{-\sigma} - \hat{\lambda}_t \\
+		0 & = - \hat{\lambda}_t + (1-\delta_k )\hat{\lambda}_{t+1} + A\hat{k}_{t+1}^{\alpha-1}\hat{h}_{t+1}^{1-\alpha} \hat{\lambda}_{t+1} \\ 
+		0 & = - \hat{\lambda}_t + (1-\delta_h )\hat{\lambda}_{t+1} + A\hat{k}_{t+1}^{\alpha}\hat{h}_{t+1}^{-\alpha} \hat{\lambda}_{t+1} \\ 
+		\hat{c}_t + \hat{k}_{t+1} + \hat{h}_{t+1}  & = A\hat{k}_t^\alpha \hat{h}_t^{1-\alpha} + (1-\delta_k ) \hat{k}_t + (1-\delta_h ) \hat{h}_t \\
+		\hat{c}_0 + \hat{k}_{1} + \hat{h}_{1}  & = A\bar{k}_0^\alpha \bar{h}_0^{1-\alpha} + (1-\delta_k ) \bar{k}_0 + (1-\delta_h ) \bar{h}_0 \\
+	\end{align}
+</p>
+add term including initial condition, show multiopliers still work, badabing
+
+
+
+<hr><hr><hr>
+
+
+
+
+
+
+
+
+
+The agent has preferences given by \[ \sum_{t}\beta^t c_t \]
+
+<ul>
+	<li>
+		If the agent is unemployed at the start of the period (state \( S^U \)), then a random wage offer \(w\) is drawn from the fixed distribution \(F(w)\), which has support \([0,B]\). The agent can choose to accept or reject the offer.
+		<ul>
+			<li>If they accept, they earn income \(w\), and then enter the next period employed at wage \(w\).</li>
+			<li>If they reject, they earn fixed income \(b\), and then enter the next period unemployed. Assume \(b \in[0,B)\).</li>
+		</ul>
+	</li>
+	<li>
+		If the agent is employed at the start of the period with wage \(w\) (state \(S^E(w)\)), they earn income \(w\), and then enter the next period employed with wage \(w\). Jobs can never be lost.
+	</li>	
+	<li>Income is in terms of units of consumption, and cannot be saved. There is also no borrowing nor lending, so the agent will consume their income each period.</li>
+</ul>
+
+<p>This system can be summarized by the following diagram. (<a href="../FlowChartKey.html">key</a>)</p>
+
+<img src="KehoeSearchLabels.png" alt="Flowchart for a simple job search with no firing.">
+
+The loop of being employed is on the right, and the loop of searching for a job is on the left. \(V(w)\) is the present value of having offer \(w\) in hand. \(V^U\) is the present value of starting a period unemployed.
+
+
+
+
+<h5>Characterizing the Decision Rule</h5>
+
+Note that per-period utility flow is bounded, and so with discounting, all present values are bounded as well. At  this point, we don't know what these present values are numerically, nor even if they are computable. But by the time-invariance of the process, we know that they exist, and can establish some relationships between them:
+
+\[V^R = b +\beta V^U\]
+\[V^U = E[V(w)] \]
+\[V(w) = \max \left\{V^A (w),V^R\right\} \]
+\[ V^A (w) = V^E (w) = w + \beta V^E (w) = {w \over 1-\beta} \]
+
+It is optimal to accept an offer iff \({w \over 1-\beta}\geq V^R\). The expression \({w \over 1-\beta}\) is strictly increasing in \(w\), and  \( V^R\) is constant, though we don't know it yet. By the intermediate value theorem, there must be a reservation wage \(\bar{w}\) such that \({\bar{w} \over 1-\beta}= V^R\) and it is optimal to accept an offer iff \(w\geq\bar{w}\). Therefore:
+
+\begin{split}
+	V^U = E\left[V(w)\right] & = \Pr(w<\bar{w})V^R & + \Pr(w\geq\bar{w})E\left[{w \over 1-\beta}\mid w\geq\bar{w}\right] \\
+	V^U = E\left[V(w)\right] & = F(\bar{w})V^R & + \int_{\bar{w}}^{B} {w \over 1-\beta} f(w) dw
+\end{split}
+
+\[ {\bar{w} \over 1-\beta} = V^R = b +\beta V^U = b + \beta F(\bar{w}){\bar{w} \over 1-\beta} +\beta \int_{\bar{w}}^{B} {w \over 1-\beta} f(w) dw  \]
+
+The above formula characterizes the reservation wage for given \(b\) and \(F\). Rearranging:
+\[ 0 = \bar{w}\left({1-\beta F(\bar{w}) \over 1-\beta}\right) -b - \beta \int_{\bar{w}}^{B} {w \over 1-\beta} f(w) dw \]
+
+You can verify that this has only exactly solution by evaluating the right-hand side as a continuous function of \(\bar{w}\). The RHS is negative at \(\bar{w}=0\), positive at \(\bar{w}=B\), and the derivative is strictly positive over \((0,B)\).
+
+
+
+
+
+
+
+<h5> Comparative Statics: Increasing Unemployment Benefits \(b\).</h5>
+
+<p><i>Consider two economies with different unemployment benefits \(b_1\) and \(b_2\), but that are otherwise identical. </i></p>
+
+Let \(b_2 > b_1\). Define:
+\[ \hat{b}(x) \equiv x\left({1-\beta F(x) \over 1-\beta}\right) - \beta \int_{x}^{B} {w \over 1-\beta} f(w) dw \]
+
+From above, we know that \(b_i = \hat{b}(\bar{w_i})\). Taking the derivative, 
+\[ \hat{b}'(x) = \left({1-\beta F(x) \over 1-\beta}\right) - x{\beta\over 1-\beta}f(x) - {\beta\over 1-\beta} (-xf(x)) = \left({1-\beta F(x) \over 1-\beta}\right) > 0\]
+
+So because \(\hat{b}(x)\) is <!--continuous and--> strictly increasing, \(b_2>b_1 \implies \hat{b}(\bar{w_2})>\hat{b}(\bar{w_1}) \implies \bar{w_2} > \bar{w_1} \)
+
+<hr>
+
+<p>More intuitively, but a bit less rigourously, let \(V^U_i\) be the present value of starting a period unemployed in economy \(i\). We know that \({\bar{w_i} \over 1-\beta} = V^E(\bar{w_i})=b_i+\beta V^U_i\) <!--and so \(b_i=V^E(\bar{w_i})-\beta V^U_i\)--> and so \(\bar{w_i}=(1-\beta)(b_i+\beta V^U_i)\)
+</p>
+
+Note that \(V_2^U \geq V_1^U\). If the agents in each economy follow the same strategy, and witness the same sequence of random events, then the agent in economy 2 will always have per-period income at least as high as the agent in economy 1. So it can't possibly be that \(V_2^U < V_1^U\). And so:
+
+\[\bar{w_2}=(1-\beta)(b_2+\beta V^U_2) > (1-\beta)(b_1+\beta V^U_1) = \bar{w_1}\]
+<!--\[0 < b_2-b_1=V^E(\bar{w_2})-V^E(\bar{w_1})-\beta(V^U_2-V^U_1) \leq V^E(\bar{w_2})-V^E(\bar{w_1})=({1 \over 1-\beta})(\bar{w_2}-\bar{w_1})\]	
+\[\bar{w_2}>\bar{w_1}\]-->
+
+This makes sense. Higher unemployment benefits make being unemployed a more attractive prospect, increasing the opportunity cost of accepting any given job offer, which means that fewer job offers will be accepted.
+
+
+
+
+
+
+
+<h5>Comparative Statics: Riskier Job Market.</h5>
+
+<p><i>Consider two economies with different distributions for job offers \(F_1\) and \(F_2\), but that are otherwise identical. </i></p>
+
+<p>Let \(F_2\) be a mean-preserving spread of \(F_1\), and let both distributions have support within \([0,B]\). We will prove that the reservation wage is at least as high in economy 2:  \(\bar{w_2}\geq\bar{w_1}\)</p>
+
+<div class="definition">
+	<b>Definition: Mean Preserving Spread</b><br>
+	Let \(F_1\) and \(F_2\) be the distribution functions of random variables \(X_1\) and \(X_2\).<br>
+	 \(X_2\) is a mean preserving spread of (and is 'riskier than') \(X_1\) iff:
+	 <ul>
+		<li>
+				\(X_1\) and \(X_2\) have the same mean: 
+				\[ E[X_1] = \int_{-\infty}^{\infty}wf_1(w)dw = \int_{-\infty}^{\infty}wf_2(w)dw = E[X_2]   \]
+		</li>
+		<li>
+				And \(X_2\) gives more weight to the tails of the distribution:
+				\[\forall x, \int_{-\infty}^{x} F_2(w) dw \geq \int_{-\infty}^{x} F_1(w) dw\]
+		</li>
+	 </ul>
+</div><br>
+
+Now to apply this definition to the characterizing formula for reservation wage \(\bar{w_i}\), we need to rearrange the integral in a few ways. First, notice that in this environment, 
+	\[ E_i[w] = \int_{0}^{B} {w} f_i(w) dw = \int_{0}^{\bar{w_i}} {w} f_i(w) dw + \int_{\bar{w_i}}^{B} {w} f_i(w) dw \]
+	\[\therefore \int_{\bar{w_i}}^{B} {w} f_i(w) dw = E_i[w] - \int_{0}^{\bar{w_i}} {w} f_i(w) dw   \]
+
+Next, note that \(f(w)dw=dF(w)\), so applying integration by parts:
+	\[ \int_{0}^{\bar{w_i}} {w} f_i(w) dw  = \int_{0}^{\bar{w_i}} {w} dF_i(w) = \left[F_i(w)w\right]_0^{\bar{w_i}} - \int_{0}^{\bar{w_i}}  F_i(w) dw  = F_i(\bar{w_i})\bar{w_i} - \int_{0}^{\bar{w_i}}  F_i(w) dw \]
+
+Putting this together, we have that 
+	\[\int_{\bar{w_i}}^{B} {w} f_i(w) dw = E_i[w] - F_i(\bar{w_i})\bar{w_i} + \int_{0}^{\bar{w_i}}  F_i(w) dw\]
+
+And substituting this into the characterizing formula for reservation wage \(\bar{w_i}\):
+\begin{split}
+	{\bar{w_i} \over 1-\beta} & = V_i^R = b +\beta V_i^U = b + \beta F_i(\bar{w_i}){\bar{w_i} \over 1-\beta} +\beta \int_{\bar{w_i}}^{B} {w \over 1-\beta} f_i(w) dw \\
+	& = b + {\beta \over 1-\beta}F_i(\bar{w_i}){\bar{w_i}} + {\beta \over 1-\beta} \left[ E_i[w] - \bar{w_i}F_i(\bar{w_i}) + \int_{0}^{\bar{w_i}}  F_i(w) dw \right]\\
+	& = b + {\beta \over 1-\beta} \left[ E_i[w]  + \int_{0}^{\bar{w_i}}  F_i(w) dw \right]
+\end{split}
+
+<p>If you are comparing distributions of the form \(F(w,r)\) where \(r\) is a parameter such that riskiness increases as \(r\) increases, then you can take the derivative of both sides with respect to \(r\) and find that \(\bar{w_i}'(r) > 0\). Otherwise: </p>
+
+<!--Recall that the properties of a mean preserving spread imply that \(E_1[w]=E_2[w]\) and that  for any value of \(\bar{w}\), \(\int_{0}^{\bar{w}}  F_2(w) dw \geq \int_{0}^{\bar{w}}  F_1(w) dw\). Then:
+\begin{split}
+	\bar{w_2} - \bar{w_1} & = (1-\beta)b + \beta  E_2[w]  + \beta \int_{0}^{\bar{w_2}}  F_2(w) dw - (1-\beta)b - \beta  E_1[w]  - \beta \int_{0}^{\bar{w_1}}  F_1(w) dw \\
+	& = \beta \int_{0}^{\bar{w_2}}  F_2(w) dw  - \beta \int_{0}^{\bar{w_1}}  F_1(w) dw \\
+	& = \beta \int_{\bar{w_1}}^{\bar{w_2}}  F_2(w) dw + \beta \int_{0}^{\bar{w_1}} \left[ F_2(w)-F_1(w)\right] dw   \\
+	& \geq \beta \int_{\bar{w_1}}^{\bar{w_2}}  F_2(w) dw \geq \beta \int_{\bar{w_1}}^{\bar{w_2}}  F_2(\bar{w_1}) dw = (\bar{w_2}-\bar{w_1})   \beta F_2(\bar{w_1})  \\
+\end{split}
+
+\(	\implies (\bar{w_2} - \bar{w_1}) (1 - \beta F_2(\bar{w_1})) \geq 0  \implies \bar{w_2} \geq \bar{w_1} \). <br>
+
+Note that for the last inquality  
+
+<hr>-->
+
+Recall that the properties of a mean preserving spread imply that \(E_1[w]=E_2[w]\) and that  for any value of \(\bar{w}\), \(\int_{0}^{\bar{w}}  F_2(w) dw \geq \int_{0}^{\bar{w}}  F_1(w) dw\). Then:
+\begin{split}
+	\bar{w_2} - \bar{w_1} & = (1-\beta)b + \beta  E_2[w]  + \beta \int_{0}^{\bar{w_2}}  F_2(w) dw - (1-\beta)b - \beta  E_1[w]  - \beta \int_{0}^{\bar{w_1}}  F_1(w) dw \\
+	& = \beta \int_{0}^{\bar{w_2}}  F_2(w) dw  - \beta \int_{0}^{\bar{w_1}}  F_1(w) dw \\
+	& = \beta \int_{\bar{w_1}}^{\bar{w_2}}  F_2(w) dw + \beta \int_{0}^{\bar{w_1}} \left[ F_2(w)-F_1(w)\right] dw   \geq \beta \int_{\bar{w_1}}^{\bar{w_2}}  F_2(w) dw \\
+\end{split}
+
+Note that if \(\bar{w_2} \geq \bar{w_1}\), then \(\int_{\bar{w_1}}^{\bar{w_2}}  F_2(w) dw \geq  0 \) and \(F_2(\bar{w_1}) \leq F(w)\) for all \(w \in [\bar{w_1}, \bar{w_2}]\). <br>
+Likewise, if \(\bar{w_2} \leq \bar{w_1}\), then \(\int_{\bar{w_1}}^{\bar{w_2}}  F_2(w) dw \leq  0 \) and \(F_2(\bar{w_1}) \geq F(w)\) for all \(w \in [\bar{w_2}, \bar{w_1}]\).  In either case, 
+
+\[\bar{w_2} - \bar{w_1} = \beta \int_{\bar{w_1}}^{\bar{w_2}}  F_2(w) dw  \geq \beta \int_{\bar{w_1}}^{\bar{w_2}}  F_2(\bar{w_1}) dw =  (\bar{w_2} - \bar{w_1}) \beta F_2(\bar{w_1})\]
+\[	\implies (\bar{w_2} - \bar{w_1}) (1 - \beta F_2(\bar{w_1})) \geq 0  \implies \bar{w_2} \geq \bar{w_1} \]
+
+<hr>
+
+
+It is also worth noting that a higher optimal reservation wage implies \(V^R_2 > V^R_1\), and so the agent's present value will be at least as high in economy 2 for any given wage offer.  Intuitively, when the distribution of wages is spread out, the expected value of accepting a job offer in the next period remains the same; it's just that the chances of very good offers and very bad offers increase. But the agent just <i>ignores</i> the very bad offers.
+
+<!--
+	
+	\begin{split}
+		0 & > \bar{w_2} - \bar{w_1} \\
+		& = (1-\beta)b + \beta  E_2[w]  + \beta \int_{0}^{\bar{w_2}}  F_2(w) dw - (1-\beta)b - \beta  E_1[w]  - \beta \int_{0}^{\bar{w_1}}  F_1(w) dw \\
+		& = \beta \int_{0}^{\bar{w_2}}  F_2(w) dw  - \beta \int_{0}^{\bar{w_1}}  F_1(w) dw \\
+		& \geq \beta \int_{0}^{\bar{w_2}}  F_1(w) dw  - \beta \int_{0}^{\bar{w_1}}  F_1(w) dw \\
+		& = \beta \int_{\bar{w_1}}^{\bar{w_2}}  F_1(w) dw  \geq 0 \\
+	\end{split}
+	
+	
+	
+	
+	Note that the properties of a mean preserving spread imply that \(E_1[w]=E_2[w]\) and that  for any value of \(\bar{w}\), \(\int_{0}^{\bar{w}}  F_2(w) dw \geq \int_{0}^{\bar{w}}  F_1(w) dw\). If we define \(\hat{V}_i^R(x)\equiv  b + {\beta \over 1-\beta} \left[ E_i[w]  + \int_{0}^{x}  F_i(w) dw \right]  \), then the following three statements hold:
+
+<ul>
+	<li>
+		For all \(x\in[0,B]\), \(\hat{V}_2^R(x)\geq\hat{V}_1^R(x)\).
+	</li>
+	<li>
+		For each \(i\), \(\hat{V}_i^R(\cdot) \) is an increasing function, and \(\hat{V}_i^R(0)>{0 \over 1-\beta}\)
+	</li>
+	<li>
+		\(\bar{w_i}\) is the unique solution to \(\hat{V}_i^R(x)={x \over 1-\beta}\).
+	</li>
+	<li>
+			\(\bar{w_i}\) is the unique solution to \(\hat{V}_i^R(0)>{0 \over 1-\beta}\).
+	</li>
+</ul>
+
+The last statement comes from the section above about characterizing the decision rule. Together, these three statements imply that \(\boldsymbol{\bar{w_2}\geq\bar{w_1}}\). (See here if this isn't intuitively clear). Intuitively, a mean preserving spread in job offers makes it so that both very good and very bad offers are more likely to appear. 
+
+
+<br><br><br><br><br><br><br><br>-->
+
+<!--This one is actually rigorous, but still a bit overcomplicated.
+
+Note that the properties of a mean preserving spread imply that \(E_1[w]=E_2[w]\) and that  for any value of \(\bar{w}\), \(\int_{0}^{\bar{w}}  F_2(w) dw \geq \int_{0}^{\bar{w}}  F_1(w) dw\). If we define \(\hat{W_i}(x)\equiv  b(1-\beta) + {\beta } \left[ E_i[w]  + \int_{0}^{x}  F_i(w) dw \right]  \), then the following three statements hold:
+
+<ul>
+	<li>
+		For all \(x\in[0,B]\), \(\hat{W}_2(x)\geq\hat{W}_1(x)\).
+	</li>
+	<li>
+		For each \(i\), \(\hat{W}_i(\cdot) \) is an increasing function, and \(\hat{W}_i(0) = b(1-\beta) + \beta E_i[w] > 0\)
+	</li>
+	<li>
+		For each \(i\), \(\bar{w_i}\) is the unique solution to \(\hat{W}_i(x)=x\).
+	</li>
+</ul>
+
+The last statement comes from the section above about characterizing the decision rule. Together, these three statements imply that \(\boldsymbol{\bar{w_2}\geq\bar{w_1}}\). (See <a href="crossingProof.html">here</a> if this isn't intuitively clear). -->
+
+<!--<hr>
+
+Alternatively, Let \(V^U_i(x)\) be the present value of starting a period unemployed in economy \(i\) if, instead of playing optimally, the agent plays with reservation wage \(x\). <br>
+\begin{split}
+	V^U_i(x) & = F_i(x)(b+\beta V^U_i(x)) + \int_{x}^{B} {w \over 1-\beta} f_i(w) dw \\
+	& = F_i(x)(b+\beta V^U_i(x)) + {1 \over 1-\beta} \left[E_i[w] - F_i(x)x + \int_{0}^{x}  F_i(w) dw\right] \\
+	V^U_i(x) (1-\beta F_i(x)) & = F_i(x)b + {1 \over 1-\beta} \left[E_i[w] - F_i(x)x + \int_{0}^{x}  F_i(w) dw\right]
+\end{split}
+
+
+<hr>-->
+
+
+</body>
+</html>
+
+
+

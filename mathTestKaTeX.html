@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Testing Math Stuff</title>
+
+
+	
+
+
+	<link rel="stylesheet" type="text/css" 
+	href="katex/katex.min.css">
+
+	<script type="text/javascript" 
+	src="katex/katex.min.js"></script>
+
+
+	
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+
+
+
+	<link href="styles/sakura.css" rel="stylesheet" type="text/css">
+	<!--<style>body{background-color: #ffccee;}</style>-->
+
+	<!--Mathjax, KaTeX, and jqmath
+	https://www.intmath.com/cg5/katex-mathjax-comparison.php-->
+	<!--MathML gubbins as shown here https://golem.ph.utexas.edu/category/-->
+	<!--https://mathscribe.com/author/jqmath.html-->
+
+
+	
+	<script>
+		$(function(){
+			$(".math").each(function() {
+				var texTxt = $(this).text();
+				el = $(this).get(0);
+				if(el.tagName == "DIV"){
+					addDisp = "\\displaystyle  ";
+				} else {
+					addDisp = "";
+				}
+				try {
+					katex.render(addDisp+texTxt, el);
+				}
+				catch(err) {
+					$(this).html("<span class='err'>"+err);
+				}
+			}); 
+			})(); 				
+	</script>
+
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86" >
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+<body>
+
+
+
+<h1>Cash Credit with Private Money</h1>
+
+<h5>Setup:</h5>
+<p><b>
+	Consider a cash credit goods economy in which households have preferences of the form <span class="math">\sum_{t=0}^\infty \beta^t (\log c_{1t}+\phi \log c_{2t})</span>, where <span class="math">c_{1t}</span> and <span class="math">c_{2t}</span> denote consumption of cash and credit goods, respectively, <span class="math">\phi</span>  is a parameter, and <span class="math">0 < \beta < 1 </span> is the discount factor. ε  &epsilon;
+	Households supply labor inelastically. 
+	The resource constraint is given by 
+		<div class="math">   c_{1t} + c_{2t} + k_{t+1} = k_t^\alpha + (1-\delta) k_t</div>
+	where <span class="math">k_t</span> denotes the capital stock, and the capital share parameter <span class="math">\alpha</span> and the depreciation rate <span class="math">\delta</span> are both positive and less than 1.
+
+	It is convenient to let <span class="math">q_t</span> denote the price of money (or the inverse of the price level). The representative household's budget constraint is given by 
+		<div class="math">  q_t M_{t+1} + c_{1t} + c_{2t} + k_{t+1} \leq q_t M_t + R_{kt}k_t + w_t l_t + q_t T_t   </div>
+	where <span class="math">M_t</span> denotes cash balances, <span class="math">R_{kt}</span> denotes the return to capital, and <span class="math">T_t</span> denotes lump sum transfers of cash by the government. The household can use a fraction <span class="math">\theta</span> of its capital stock to purchase cash goods. The cash in advance constraint is 
+		<div class="math">c_{1t} \leq q_t M_t + \theta k_t</div>
+</b></p>
+
+<hr>
+
+
+
+
+<h4>Define a competitive Equilibrium</h4>
+
+<p>A few quick notes: I will assume that labor is supplied inelastically at  <span class="math">\overline{l}=1</span>.  And I will assume that the production function is cobb-douglass; this matches the given resource constraint. I will  write <span class="math">r_t</span> for the price of renting a unit of capital. Then the return on capital described above is:  <span class="math">R_t=1+r_t-\delta </span>.</p>
+
+<p>
+Given parameters <span class="math">(\beta, \phi, \alpha, \delta, \theta)</span>, and initial quantities <span class="math">(\bar{k_0},\bar{M_0} )</span>, a competitive equilibrium in this economy consists of the following sets:
+	<ul>
+		<li> An allocation for the representative household: <span class="math"> HH\equiv \left\{ c_{1t},  c_{2t}, k_{t+1}, M_{t+1} \right\}_{t=0}^\infty </span></li>
+		<li>An allocation for the firm: <span class="math">\left\{ k^f_{t}, l^f_{t}  \right\}_{t=0}^\infty</span></li>
+		<li>Government policy: <span class="math">\left\{ M^g_{t}, T_{t}  \right\}_{t=0}^\infty</span></li>
+		<li>and Prices: <span class="math">\left\{ q_t, r_t, w_t \right\}_{t=0}^\infty  </span></li>
+	</ul>
+Such that the following conditions are satisfied:
+<ul>
+		<li><b>HH Optimization</b>: Taking prices and policy as given, the household allocation solves:
+				<div class="math">\max_{HH} \sum_{t=0}^\infty \beta^t (\log c_{1t}+\phi \log c_{2t})</div>
+			such that:
+				<div class="math">\bar{k_0}=k_0, \;   M_0 = \bar{M_0}</div>
+			and for all <span class="math">t\geq 0:</span>
+			\begin{align}
+				 c_{1t}\geq 0,\;     c_{2t}\geq 0,\;   &   k_{t+1}\geq 0,\;   M_{t+1}\geq 0    &\;\; \condition{Non-Negativity}\\
+				q_t M_{t+1} + c_{1t} + c_{2t} + k_{t+1} & \leq q_t M_t + (1+r_t-\delta)k_t + w_t + q_t T_t   &\;\; \condition{Budget}\\
+				c_{1t} & \leq q_t M_t + \theta k_t    &\;\; \condition{CIA}\\
+			\end{align}
+		</li>
+		<li><b>Firm Optimization</b>: Taking prices as given, in each period, the firm's allocation solves
+			<div class="math">\max_{l_t^f,k_t^f}\; {(k_t^f)}^\alpha {(l_t^f)}^{1-\alpha} - r_t k_t^f - w_t l_t^f</div>
+		</li>
+		<li><b>Gov Budget Balance</b>: In all periods <span class="math">t</span>, the government's budget is balanced:
+			<div class="math">T_t = M_{t+1}^g - M_t^g</div>
+		</li>
+		<li><b>Markets Clear</b>: In all periods <span class="math">t</span>, 
+			\begin{align}
+				l_t^f &= \overline{l} = 1 \\
+				k_t^f &= k_t   \\ 
+				M_t &= M_t^g\\
+				c_{1t} + c_{2t} + k_{t+1}  &= k_t^\alpha + (1-\delta) k_t  &\;\; \condition{RC}\\
+			\end{align}
+		</li>
+	</ul>
+</p>
+
+<hr>
+
+
+
+
+
+
+<h4>First Order Conditions:</h4>
+<p>
+	Assumming an interior solution with nonbinding NNCs,  letting <span class="math">\lambda_t</span> be the Lagrange Multipliers for the Budget constraints, and letting <span class="math">\gamma_t</span> be the Lagrange Multipliers for the Cash In Advance constraints, the FOCs are:
+	\begin{align}
+		{\color{name}c_{1t}:} && {\beta^t \over c_{1t}} &= \lambda_t  + \gamma_t\\ 
+		{\color{name}c_{2t}:} && {\phi\beta^t \over c_{2t}} &= \lambda_t \\ 
+		{\color{name}k_{t+1}:} && \lambda_t &= \lambda_{t+1}(1+r_{t+1}-\delta) + \theta\gamma_{t+1} \\ 
+		{\color{name}M_{t+1}:} && \lambda_t q_t &= \lambda_{t+1}q_{t+1} + \gamma_{t+1}q_{t+1} \\ 
+		{\color{name}k^f_{t}:} && r_t &= \alpha {(k_t^f)}^{\alpha-1}{(l_t^f)}^{1-\alpha}=\alpha {k_t}^{\alpha-1}\\ 
+		{\color{name}l^f_{t}:} && w_t &= (1-\alpha) {(k_t^f)}^{\alpha}{(l_t^f)}^{-\alpha}=(1-\alpha) {k_t}^{\alpha}\\ 
+	\end{align}
+	Combining the first order conditions for capital, we get:
+		<div class="math"> \lambda_t = \lambda_{t+1}(1+\alpha {k_{t+1}}^{\alpha-1}-\delta) + \theta\gamma_{t+1} </div>
+	These equations, along with the market clearing, CIA, and budget constraints, characterize the equilibrium.
+</p>
+<hr>
+
+
+
+
+
+<h4>Assume that the aggregate stock of money grows at a constant rate, <span class="math">\pi</span>. Characterize the steady state.</h4>
+<p>There are two new assumptions in play now:</p>
+<p>
+	<div class="definition">
+			<b>"The aggregate stock of money grows at a constant rate, <span class="math">\pi</span>":</b><br>
+			This means that:
+				<div class="math">M_t=(1+\pi)M_{t-1}=(1+\pi)^t M_0</div>
+				<div class="math">T_t=M_{t+1}-M_t=(1+\pi-1)M_{t}=\pi(1+\pi)^t M_0</div>
+			If we define <span class="math">\Pi\equiv 1+\pi</span>, then this is equivalently:
+				<div class="math">M_t=\Pi M_{t-1}=\Pi^t M_0</div>
+				<div class="math">T_t=(\Pi-1)M_{t}=(\Pi-1)\Pi^t M_0</div>
+	</div>
+	<div class="definition">
+			<b>Steady State: </b><br>
+			In a steady state, the real allocations are  constant across time. So for all <span class="math">t</span>,
+			\begin{align}
+				k_t=k   &&   c_{1t}=c_1   &&   c_{2t}=c_2
+			\end{align}
+			These quantities are such that if <span class="math">k_t=k ,\;   c_{1t-1}=c_1,\;   c_{2t-1}=c_2</span>, then the optimal choice for next-period allocations are <span class="math">k_{t+1}=k ,\;   c_{1t}=c_1,\;   c_{2t}=c_2</span>, and these allocations are also feasible.
+	</div>
+</p>
+<p>
+	Rewriting the FOCs, CIA, and Resource Constraint with the above two assumptions:
+	\begin{align}
+		{\color{name}c_{1}:} && {\beta^t \over c_{1}} &= \lambda_t  + \gamma_t\\ 
+		{\color{name}c_{2}:} && {\phi\beta^t \over c_{2}} &= \lambda_t \\ 
+		{\color{name}k:} && \lambda_t &= \lambda_{t+1}(1+\alpha {k}^{\alpha-1}-\delta) + \theta\gamma_{t+1}  \\ 
+		{\color{name}M_{t+1}:} && \lambda_t q_t &= \lambda_{t+1}q_{t+1} + \gamma_{t+1}q_{t+1} \\  \\
+		{\color{name}CIA:} && c_{1} & \leq q_t M_t + \theta k \\
+		{\color{name}RC:} &&c_{1} + c_{2}   &= k^\alpha - \delta k \\
+	\end{align}
+</p>
+<p>
+	Note that the CIA constraint can be rewritten as <span class="math">q_t M_0 \geq {c_1 - \theta k \over \Pi^t M_0}</span>. 
+</p>
+If <span class="math">c_1 < \theta k</span>, then the right-hand side of the above is negative, and so the CIA constraint is nonbinding. Suppose otherwise. <span class="math">M_t \geq 0</span> by the non-negativity constraint, so it must therefore be that <span class="math">q_t < 0</span>.  But <span class="math">q_t</span> cannot possibly be less than 0, because then the household would demand infinite amounts of money in period <span class="math">t+1</span>, using it to fund infinite amounts of consumption, and so a well-defined solution to the household's optimization problem couldn't exist. Thus, to avoid contradiction, it must be that <span class="math">c_1 < \theta k \implies \gamma_t = 0</span>
+</p>
+
+<h5>Case 1: A monetary equilibrium. Assume the CIA binds with equality each period, <span class="math">\gamma_t>0</span>.</h5>
+<p>
+	In this case, <span class="math">c_{1} = q_t M_t + \theta k</span>, which implies
+		<div class="math">q_t = {1 \over M_t}(c_1 -\theta k) </div>
+		<div class="math">\color{red}   {q_{t} \over q_{t+1}} = {M_{t+1} \over M_{t}} = \Pi </div>
+	So the price of money is decreasing at the same rate as the stock of money is increasing, which means the value of the money stock is in a steady state. <span class="math">q_t M_t = q_0 M_0</span>.
+</p>
+<p>
+	The FOC for money can be rewritten as <span class="math">\lambda_t {q_{t} \over q_{t+1}} = {\lambda_{t+1}+\gamma_{t+1}} </span>. Combine with <font color="red">the above</font> to get:
+		<div class="math">\color{Rhodamine} \Pi \lambda_t = \lambda_{t+1}+\gamma_{t+1} </div>
+	Or similarly, <span class="math">\color{Rhodamine}\Pi \lambda_t -\lambda_{t+1} = \gamma_{t+1}</span>.
+</p>
+<p>
+	Also note that from the FOC for the credit good, 
+		<div class="math">\color{NavyBlue}{\lambda_t \over \lambda_{t+1}} = {\phi \beta^t  \over c_2 } { c_2 \over \phi \beta^{t+1}} = {1 \over \beta} </div>
+</p>
+<p>
+	From the FOC for capital, 
+	\begin{align}
+		(1+\alpha {k}^{\alpha-1}-\delta) &= {\lambda_{t} \over \lambda_{t+1}} - \theta{{\color{Rhodamine} \gamma_{t+1}} \over \lambda_{t+1}} \\
+		&= {\lambda_{t} \over \lambda_{t+1}} - \theta{{\color{Rhodamine}\Pi \lambda_t -\lambda_{t+1}  \over \lambda_{t+1}}} \\
+		&= (1-\theta \Pi){\color{NavyBlue} {\lambda_{t} \over \lambda_{t+1}}}  +\theta \\
+		&= (1-\theta \Pi){\color{NavyBlue} {1 \over \beta }} +\theta \\
+	\end{align}
+	<div class="math">\boxed{\implies k = \left({1 \over \alpha}\left[ { {1-\theta \Pi \over \beta }} +\theta -1 + \delta \right]\right)^{1 \over \alpha - 1}}</div>
+</p>
+<p>
+	Use the above to relate the FOCs for consumption:
+		<div class="math">{\beta^{t+1} \over c_{1}} = {\color{Rhodamine} \lambda_{t+1}  + \gamma_{t+1} = \Pi \lambda_t} = \Pi {\phi\beta^t \over c_{2}}  </div>
+		<div class="math">c_2 = {\Pi \phi \over \beta} c_1</div>
+	And plug this into the Resource Constraint:
+		<div class="math">c_1 + c_2 = {\beta +\Pi \phi \over \beta }c_1 = k^\alpha - k </div>
+		<div class="math">\boxed{
+			\begin{align}
+				c_1 &= (k^\alpha - k){\beta \over \beta +\Pi \phi} \\
+				c_2 &= (k^\alpha - k){\Pi \phi \over \beta +\Pi \phi} 
+			\end{align}
+		}</div>
+</p>
+<p>
+	And at this point, we can express the equilibrium in terms of exogenous parameters using the above boxed equations, along with:
+	<div class="math">\boxed{
+		\begin{align}
+			k_t^f &= k & \\
+			l_t^f &= 1 \\
+			M_t^g &= M_t = \Pi^t M_0 \\
+			T_t &= (\Pi-1)\Pi^t M_0 \\
+			w_t &= w \equiv (1-\alpha) k^\alpha \\
+			r_t &= r \equiv \alpha k^{\alpha-1} \\
+			q_t &= {c_1 - \theta k \over M_t} = {c_1 - \theta k \over \Pi^t M_0}
+		\end{align}
+	}</div>
+</p>
+
+
+
+<h5>Case 2:  Assume the CIA is nonbinding, <span class="math">\gamma_t=0</span>.</h5>
+
+<p>Then <span class="math">{\beta^t \over c_1} = \lambda_t = {\beta^t \phi\over c_2} </span>, and so <span class="math">{c_2 = \phi c_1}</span>. Also, as in case 1, <span class="math">{\lambda_t \over \lambda_{t+1}}={1\over\beta}</span>.</p>
+<p>
+	The FOC for capital implies that  <span class="math">1+\alpha k^{\alpha-1}-\delta = {\lambda_t \over \lambda_{t+1}} = {1\over\beta}</span>. Then:
+	<div class="math">\boxed{\begin{align}
+			k &= \left({1\over\alpha}\left[ {1\over\beta}-1+\delta \right]\right)^{1\over \alpha - 1} \\
+			c_1 &= {1\over 1+\phi}(k^\alpha - k) \\
+			c_2 &= {\phi\over 1+\phi}(k^\alpha - k)
+	\end{align}}</div>
+</p>
+<p>
+	As for the price of money, <span class="math">q_{t+1} = {\lambda_t \over \lambda_{t+1}}q_t = {1\over\beta}q_t</span>. Setting <span class="math">q_t = 0 \;\forall t</span> satisfies this condition. And the other characterizing equations are the same as in Case 1.
+</p>
+<p>
+	So if there is a steady state equilibrium with a constantly growing money supply, and if the CIA doesn't bind, then there is such an equilibrium that is nonmonetary. 
+</p>
+
+
+
+<hr>
+
+<h5>Show that if <span class="math">\pi</span> is above a critical threshold, the economy has a nonmonetary steady state in which the price of money is zero.</h5>
+
+<p>Observe that in the monetary steady state equilibrium above:
+	\begin{align}
+		\theta k > c_1 &\iff  \theta k > (k^\alpha - k){\beta \over \beta +\Pi \phi} \\
+		& \iff \beta +\Pi \phi > \beta {k^\alpha - k \over \theta k} \\
+		& \iff \Pi > {\beta \over \phi \theta}(k^{\alpha-1}-1) - {\beta \over \phi} 
+	\end{align}
+	And <span class="math">k^{\alpha-1} = {1 \over \alpha}\left[ { {1-\theta \Pi \over \beta }} +\theta -1 + \delta \right]</span>, so 
+		\begin{align}
+			\theta k > c_1 &\iff \Pi  > {\beta \over \phi \theta}({1 \over \alpha}\left[ { {1-\theta \Pi \over \beta }} +\theta -1 + \delta \right]-1) - {\beta \over \phi}  \\
+			&\iff \Pi + {\Pi \over \alpha\theta} > {\beta \over \phi \theta}({1 \over \alpha}\left[ { {1 \over \beta }} +\theta -1 + \delta \right]-1) - {\beta \over \phi}  \\ 
+			&\iff \Pi  > {\alpha\theta \over \alpha\theta +1}\left[{\beta \over \phi \theta}({1 \over \alpha}\left[ { {1 \over \beta }} +\theta -1 + \delta \right]-1) - {\beta \over \phi}\right] \equiv \bar{\Pi} \\ 
+		\end{align}
+	Therefore if <span class="math">\pi > \bar{\Pi} - 1 </span>, then <span class="math">c_1 - \theta  k < 0</span>. 
+</p>
+<p>
+	Recall from above that if <span class="math">c_1 - \theta  k < 0</span>, then the CIA is nonbinding, and so it cannot be that <span class="math">c_1 - \theta  k < 0</span>  in a Case 1 equilibrium. Thus if <span class="math">\pi>\bar{\Pi} - 1</span>, the optimum must be attained in a Case 2 equilibrium, in which case there is a nonmonetary steady state in which the price of money is zero.
+</p>
+
+<!--
+<p>
+	Recall the cash in advance constraint: <span class="math">q_t M_t \geq c_1 - \theta k </span>. For this to bind with equality when <span class="math">\pi > \bar{\Pi} - 1 </span>, it must be that <span class="math">q_t M_t < 0</span>, and <span class="math">M_t \geq 0</span> by the non-negativity constraint, so it must therefore be that <span class="math">q_t < 0</span>.  
+</p>
+<p>
+	But <span class="math">q_t</span> cannot possibly be less than 0, because then the household would demand infinite amounts of money in period <span class="math">t+1</span>, using it to fund infinite amounts of consumption, and so a solution to the household's optimization problem couldn't exist. 
+</p>
+<p>
+	Thus, lest a contradiction be induced, it must be that when  <span class="math">\pi > \bar{\Pi} - 1 </span>, the CIA constraint is nonbinding.
+</p>-->
+
+<hr>
+
+
+
+
+
+<h5>Show that below the critical threshold, comparing steady states,  comparing steady states, the capital output ratio	rises as the growth rate of money rises.</h5>
+
+<p>In a monetary steady state, the level of capital is given by:
+	<div class="math">k = \left({1 \over \alpha}\left[ { {1-\theta \Pi \over \beta }} +\theta -1 + \delta \right]\right)^{1 \over \alpha - 1}</div>
+	This is a decreasing function of <span class="math">\Pi</span>.  And capital output ratio is 
+	<div class="math">{k \over k^\alpha} = k^{1-\alpha}= \left({1 \over \alpha}\left[ { {1-\theta \Pi \over \beta }} +\theta -1 + \delta \right]\right)^{-1}</div>
+	This is a decreasing function of \Pi, as that term will now be a negative in the denominator.
+</p>
+<hr>
+
+
+
+
+
+<h5>Do your results imply that the Friedman Rule is not optimal in this economy?</h5>
+
+The Friedman Rule is optimal.
+
+<div class="definition">
+<b>The Friedman Rule:</b><br>
+The  net nominal  interest rate should be set to zero, to alleviate the frictions induced by inflation. Equivalently, the gross nominal interest rate should be 1. <br>
+In this economy, it is hepful to note that the nominal interest rate is equal to the real interest rate times the change in price levels: <span class="math">R_t \Pi</span><br>
+
+<img src="FriedmanRule.png" style="display: block; margin-left: auto; margin-right: auto" >
+
+</div>
+
+<p>The social optimization problem for this economy is:<blockquote>
+		<div class="math">\max_{} \sum_{t=0}^\infty \beta^t (\log c_{1t}+\phi \log c_{2t})</div>
+		such that:
+			<div class="math">\bar{k_0}=k_0</div>
+		and for all <span class="math">t\geq 0:</span>
+		\begin{align}
+			 c_{1t}\geq 0,\;     c_{2t}&\geq 0,\;      k_{t+1}\geq 0,\;     &\;\; \condition{Non-Negativity}\\
+			 c_{1t} + c_{2t} + k_{t+1}  &= k_t^\alpha + (1-\delta) k_t  &\;\; \condition{RC}\\
+		\end{align}</blockquote>
+</p>
+
+<p>
+	The First order conditions for the above problem imply that <span class="math"> c_{2t}=\phi  c_{1t}</span>. Compare this to the Euler condition from the steady-state monetary competitive equilibrium above, where <span class="math">c_{2t}={\phi  \Pi\over \beta}c_{1t}</span>.  For the competitive equilibrium to attain a social optimum, it must be then that <span class="math">\Pi = \beta</span>.
+</p>
+<p>
+	And also from the competive equilibrium, 
+		\begin{align}
+			R_t &= 1-\delta + r_t\\
+			&= 1-\delta + \alpha k^{\alpha-1} \\
+			&= (1-\theta \Pi){ {1 \over \beta }} +\theta\\
+			& = (1-\theta \beta){ {1 \over \beta }} +\theta \\
+			& = {1 - \theta \beta + \theta\beta \over \beta} = {1\over \beta}
+		\end{align}
+	</p>
+
+<p>
+	So in this economy, the optimal policy will set <span class="math">R\Pi={\beta\over\beta}=1</span>, and the Friedman Rule holds.
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
