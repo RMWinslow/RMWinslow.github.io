@@ -6,13 +6,17 @@
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 	<script type="text/x-mathjax-config">
-		MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+		MathJax.Hub.Config({ TeX: { extensions: ["color.js", "autobold.js"] }});
 	</script>
 	<!--Latex Definitions:-->
 	<div hidden>
 	\[
 		\definecolor{name}{RGB}{200,210,200}
 		\newcommand{\condition}[1]{\color{name} \text{(#1)}}
+
+		
+		\newtagform{blu}[\textcolor{blue}]{\color{red}(}{)}
+		usetagform{blu}
 	\]
 	</div>
 
@@ -31,7 +35,7 @@
 
 	<script type="text/x-mathjax-config">
 		MathJax.Hub.Config({
-		  CommonHTML: { linebreaks: { automatic: true } },
+		  CommonHTML: { linebreaks: { automatic: true }, scale:100, },
 		  "HTML-CSS": { linebreaks: { automatic: true } },
 				 SVG: { linebreaks: { automatic: true } }
 		});
@@ -89,11 +93,49 @@ Such that the following conditions are satisfied:
 			such that:
 				\[\bar{k_0}=k_0, \;   M_0 = \bar{M_0}\]
 			and for all \(t\geq 0:\)
+			
 			\begin{align}
-				 c_{1t}\geq 0,\;     c_{2t}\geq 0,\;   &   k_{t+1}\geq 0,\;   M_{t+1}\geq 0    &\;\; \condition{Non-Negativity}\\
+				c_{1t}\geq 0,\quad     c_{2t}\geq 0,\quad   &   k_{t+1}\geq 0,\quad   M_{t+1}\geq 0    &\;\; \condition{Non-Negativity}\\
 				q_t M_{t+1} + c_{1t} + c_{2t} + k_{t+1} & \leq q_t M_t + (1+r_t-\delta)k_t + w_t + q_t T_t   &\;\; \condition{Budget}\\
 				c_{1t} & \leq q_t M_t + \theta k_t    &\;\; \condition{CIA}\\
 			\end{align}
+
+
+\newtagform{bbbbbbbb}{\color{red}(}{)}
+
+			\begin{align}
+				\tag{Non-Negativity}    c_{1t}\geq 0,\quad     c_{2t}\geq 0,\   &\quad   k_{t+1}\geq 0,\quad   M_{t+1}\geq 0   \\
+				\tag{Budget}    q_t M_{t+1} + c_{1t} + c_{2t} + k_{t+1} & \leq q_t M_t + (1+r_t-\delta)k_t + w_t + q_t T_t   \\
+				\tag{CIA}    c_{1t} & \leq q_t M_t + \theta k_t   \\
+			\end{align}
+
+			<table style="width:100%; background-color: black;">
+				<tr>
+					<td style="">
+							\[TEST  a +x^2_3 * \sum_x^y \] 
+							\[q_t M_{t+1} + c_{1t} + c_{2t} + k_{t+1}  \leq q_t M_t + (1+r_t-\delta)k_t + w_t + q_t T_t\] 
+							\[TEST  c\] 
+					<td style="padding:0px">
+						\begin{align}
+							TEST X \\
+							TEST Y \\
+							TEST Z \\
+						\end{align}</div>
+				</table><br>
+
+				\[\begin{array}{rlr}
+				q_t M_{t+1} + c_{1t} + c_{2t} + k_{t+1} & \leq q_t M_t + (1+r_t-\delta)k_t + w_t + q_t T_t   &\;\; \condition{Budget}\\
+					4&5&6
+			  	\end{array}\]
+
+			<table style="width:100%; background-color: antiquewhite; padding:0px">
+				<tr style="padding:0px">
+					<td style="padding:0px">\[c_{1t}\geq 0,\quad     c_{2t}\geq 0,\quad      k_{t+1}\geq 0,\quad   M_{t+1}\geq 0 \] <td> \(\condition{Non-Negativity}\)
+				<tr>
+					<td>\[q_t M_{t+1} + c_{1t} + c_{2t} + k_{t+1}  \leq q_t M_t + (1+r_t-\delta)k_t + w_t + q_t T_t\] <td> \(\condition{Budget}\)
+				<tr>
+					<td>\[c_{1t}  \leq q_t M_t + \theta k_t\] <td> \(\condition{CIA}\)
+			</table>
 		</li>
 		<li><b>Firm Optimization</b>: Taking prices as given, in each period, the firm's allocation solves
 			\[\max_{l_t^f,k_t^f}\; {(k_t^f)}^\alpha {(l_t^f)}^{1-\alpha} - r_t k_t^f - w_t l_t^f\]
