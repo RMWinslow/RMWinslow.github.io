@@ -9,7 +9,7 @@
 		MathJax = {
 			chtml: {
 				scale: 1,                      // global scaling factor for all expressions
-				matchFontHeight: false,         // true to match ex-height of surrounding font
+				matchFontHeight: true,         // true to match ex-height of surrounding font
 				mathmlSpacing: false,          // true for MathML spacing rules, false for TeX rules
 				adaptiveCSS: true              // true means only produce CSS that is used in the processed equations
 			}
@@ -89,6 +89,8 @@ Given parameters (<i>&beta;</i> \((\beta, \phi, \alpha, \delta, \theta)\) ), and
 		<li>and Prices: \(\left\{ q_t, r_t, w_t \right\}_{t=0}^\infty  \)</li>
 	</ul>
 Such that the following conditions are satisfied:
+
+\[\left( \left( \left( \left( \frac{1}{2} \right)^2 \right) \right) \right)\]
 <ul>
 		<li><b>HH Optimization</b>: Taking prices and policy as given, the household allocation solves:
 				\[\max_{HH} \sum_{t=0}^\infty \beta^t (\log c_{1t}+\phi \log c_{2t})\]

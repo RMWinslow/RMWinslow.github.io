@@ -142,7 +142,7 @@ pre {
 }
 
 code {
-  font-size: 0.9em;
+  font-size: 1em;
   padding: 0;
   background-color: #eee8d5;
   white-space: pre-wrap;
@@ -376,8 +376,15 @@ label, legend, fieldset {
 
 /*TODO: Remove after testing    font-size: 1.2em !important;*/
 
-.MathJax { color:hsl(193, 14%, 26%) !important;}
+.MathJax { color:hsl(193, 14%, 26%) !important; font-size: 1.1em !important;}
 mjx-labels {color: #b58900 !important;}
 
-.mjx-chtml {color:hsl(193, 14%, 26%) !important; }
+.mjx-chtml {color:hsl(193, 14%, 26%) !important; font-size: 1.1em !important;}
 .mjx-label {color: #b58900 !important; }
+
+@media screen and (max-width: 600px) {
+  .column {
+    .MathJax { color:hsl(193, 14%, 26%) !important; font-size: 1.4em !important;}
+    .mjx-chtml {color:hsl(193, 14%, 26%) !important; font-size: 1.4em! important;}
+  }
+}
