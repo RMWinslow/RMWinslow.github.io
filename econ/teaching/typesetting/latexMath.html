@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TeX Math Commands</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script><!--MathJaX for TeX Math-->
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86"><!--Improves mobile experience-->
+    <link href="../../../styles/sakura.css" rel="stylesheet" type="text/css"><!---->
+
+    <!--Make the reference items bigger.-->
+    <style>
+        td{text-align: center; font-size:1.3em; vertical-align: center;}
+        table{max-width: 500px;}
+    </style>
+    
+</head>
+<body>
+
+    <h1>LaTeX Math Guide</h1>
+
+    <h2>How to enter math mode</h2>
+
+    <p>There are two kinds of ways to display math on a page. You can either have <i>inline</i> math, which is part of the line that you type it in, like  \(x^2 + {A \over B}\). Or you can have <i>display</i> math, which is centered and enlarged:
+        \[  x^2 + {A \over B}  \]</p>
+
+
+    <h6>LyX</h6>
+        <p> In LyX, you can insert an inline equation with the keyboard shortcut <b style="background-color: #eee8d5;">control m</b> or <b style="background-color: #eee8d5;">command m</b>, depending on your operating system. You can also insert an equation by selecting <b style="background-color: #eee8d5;">insert</b>, then <b style="background-color: #eee8d5;">math</b> in the menu or by clicking on the equation button at the top of the page:</p>
+        <div style="text-align:center;"><img src="lyxEqn.png" alt="The MS Offic Equation Button"></div>
+
+        For a display equation, the keyboard shortcuts are instead <b style="background-color: #eee8d5;">control shift m</b> or <b style="background-color: #eee8d5;">command shift m</b>. You can also switch an equation's mode by selecting that equation and then pressing this button at the buttom of the page:
+        <div style="text-align:center;"><img src="lyxMathMode.png" alt="The MS Offic Equation Button"></div>
+
+
+    <h6>Microsoft Office</h6>
+        <p>In Microsoft Office, you can create an equation by clicking <b style="background-color: #eee8d5;">insert</b>, then <b style="background-color: #eee8d5;">equation</b>. You can also use the keyboard shortcut <b style="background-color: #eee8d5;">control =</b> or <b style="background-color: #eee8d5;">alt =</b>, depending on your version of Office.</p> 
+        <div style="text-align:center;"><img src="MSWordEqn.png" alt="The MS Offic Equation Button"></div>
+
+        <p>You can then use a drop-down menu to switch an equation between inline and display mode.</p> 
+        <div style="text-align:center;"><img src="MSWordMathMode.png" alt="Logo"></div>
+
+
+
+    <h6>Pure LaTex</h6>
+        <p>If you are typing in a pure LaTeX environment (like in Overleaf), you can use <code>\( x^2 \)</code> or <code>$ x^2 $</code> to insert an inline equation like this: \( x^2 \). And you can use <code>\[ x^2 \]</code> or <code>$$ x^2 $$</code> to insert a display-mode equation like this: \[ x^2 \]</p>
+
+        <!--<p>In fact, if you look at the source code for this webpage, you can see many equations of this form interspersed among the html.</p>--><br>
+
+
+
+    <hr>
+
+
+    <h2>Common Bits of Math</h2>
+
+        <p>Below are a few examples for how to type math expressions. These examples only scratch the surface of what LaTeX math formatting can do, and <a href="https://www.overleaf.com/learn/latex/Mathematical_expressions">Overleaf has a helpful tutorial here.</a></p>
+
+
+
+
+    <h3>Subscripts and Superscripts</h3>
+        <p>The carat symbol <b style="background-color: #eee8d5;">^</b> <i>(shift 6)</i> can be used to add a superscript, raising the next character up and making it smaller. Likewise, an underscore <b style="background-color: #eee8d5;">_</b> <i>(shift -)</i> can be used to add a subscript, lowering the next character.</p>
+        <p style="">In some software, if you want to include multiple characters in a superscript or subscript, you will need to use curly braces <b style="background-color: #eee8d5;">{ }</b>.</p>
+
+        <div style="display: flex;  justify-content: center;">
+        <table>
+            <tr><th><b>Input:</b><th><b>Result:</b>
+            <tr><td>  x^2  </td><td>\(  x^2  \)</td></tr>
+            <tr><td>  Q_d  </td><td>\(  Q_d  \)</td></tr>
+            <tr><td>  A^B_C  </td><td>\(  A^B_C  \)</td></tr>
+            <tr><td>  x^23  </td><td>\(  x^23  \)</td></tr>
+            <tr><td>  x^{23}  </td><td>\(  x^{23}  \)</td></tr>
+            <tr><td>  a^2 + b^2 = c^2  </td><td>\(  a^2 + b^2 = c^2  \)</td></tr>
+            <tr><td>    </td><td>\(    \)</td></tr>
+        </table></div>
+
+        
+
+
+
+        <h3>Greek Letters</h3>
+        <p>To type a greek letter, first type a backslash  <b style="background-color: #eee8d5;">\</b> <i>(near the enter key)</i> and then type the name of the letter. If you want a capital greek letter, capitalize the first character in the name. </p>
+
+        <div style="display: flex;  justify-content: center;">
+        <table>
+            <tr><th><b>Input:</b><th><b>Result:</b>
+            <tr><td>  \gamma  </td><td>\(  \gamma  \)</td></tr>
+            <tr><td>  \Gamma  </td><td>\(  \Gamma  \)</td></tr>
+            <tr><td>  \alpha \beta \gamma  </td><td>\(  \alpha \beta \gamma  \)</td></tr>
+            <tr><td>  \alpha^\beta_\gamma  </td><td>\(  \alpha^\beta_\gamma  \)</td></tr>
+            <tr><td>    </td><td>\(    \)</td></tr>
+        </table></div>
+        
+
+
+
+        <h3>Other common math symbols.</h3>
+        <p>Typing other math symbols is very similar to typing greek letters. You just need to know the name of the symbol in LaTeX. I've included some of the most common symbols below. A more expansive list can be found <a href="https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols"> can be found here</a>. And if you know what a symbol looks like but don't know what it's called, <a href="http://detexify.kirelabs.org/classify.html">here's is a neat tool</a> that lets you draw a symbol, and then gives you the LaTeX name for it.</p>
+
+        <p>Note that unlike greek letters, the names of these symbols are usually abbreviated to make them easier to type. For example, "<b>G</b>reater than or <b>EQ</b>ual to" is abbreviated to simply "\geq"</p>
+
+        <div style="display: flex;  justify-content: center;">
+        <table>
+            <tr><th><b>Input:</b><th><b>Result:</b>
+            <tr><td>  \geq  </td><td>\(  \geq  \)</td></tr>
+            <tr><td>  \leq  </td><td>\(  \leq  \)</td></tr>
+            <tr><td>  \to  </td><td>\(  \to  \)</td></tr>
+            <tr><td>  \partial  </td><td>\(  \partial  \)</td></tr>
+            <tr><td>  \infty  </td><td>\(  \infty  \)</td></tr>
+            <tr><td>  \times  </td><td>\(  \times  \)</td></tr>
+            <tr><td>  \cdot  </td><td>\(  \cdot  \)</td></tr>
+            <tr><td>  \sqrt{2}  </td><td>\(  \sqrt{2}  \)</td></tr>
+            <tr><td>    </td><td>\(    \)</td></tr>
+        </table></div>
+
+
+
+        <h3>Other common math symbols.</h3>
+        <p>Oftentimes in math, you will see a symbol which looks like a normal letter, but written in a strange font. For example, \(\mathbb{R}\) is used to represent the real numbers, and \(\mathcal{L}\) is used as a symbol for  Lagrangian optimization. These special fonts are called "Math <b>B</b>lackboard <b>B</b>old" and "Math <b>Cal</b>igraphy", and are abbreviated as mathbb and mathcal, respectively.</p>
+
+        <div style="display: flex;  justify-content: center;">
+        <table>
+            <tr><th><b>Input:</b><th><b>Result:</b>
+            <tr><td>  \mathbb{R}  </td><td>\(  \mathbb{R} \)</td></tr>
+            <tr><td>  \mathbb{ABCD} </td><td>\(  \mathbb{ABCD}  \)</td></tr>
+            <tr><td>  \mathcal{L}  </td><td>\(  \mathcal{L}  \)</td></tr>
+            <tr><td>  \mathcal{ABCD}  </td><td>\(  \mathcal{ABCD}  \)</td></tr>
+            <tr><td>    </td><td>\(    \)</td></tr>
+        </table></div>
+        
+
+
+
+
+
+        <h3>Fractions</h3>
+        <p>There are a few different ways to type fractions, as you can see below:</p>
+
+        <div style="display: flex;  justify-content: center;">
+        <table>
+            <tr><th><b>Input:</b><th><b>Result:</b>
+            <tr><td>  A/B  </td><td>\(  A/B  \)</td></tr>
+            <tr><td>  A \over B  </td><td>\(  A \over B  \)</td></tr>
+            <tr><td>  \frac{A}{B}  </td><td>\(  \frac{A}{B}  \)</td></tr>
+            <tr><td>    </td><td>\(    \)</td></tr>
+        </table></div>
+
+        <p>In complex equations, curly braces can be used to control what is inside the fraction and what is not. </p>
+
+        <div style="display: flex;  justify-content: center;">
+        <table>
+            <tr><th><b>Input:</b><th><b>Result:</b>
+            <tr><td>  A + B \over C  </td><td>\(  A + B \over C  \)</td></tr>
+            <tr><td>  A + {B \over C}   </td><td>\(  A + {B \over C}   \)</td></tr>
+            <tr><td>  A + {B \over C} \over D  </td><td>\(  A + {B \over C} \over D  \)</td></tr>
+            <tr><td>  \frac{A+\frac{B}{C}}{D}  </td><td>\(  \frac{A+\frac{B}{C}}{D}  \)</td></tr>
+            <tr><td>    </td><td>\(    \)</td></tr>
+        </table></div>
+        
+
+
+
+
+
+
+
+
+        <h3>Limits, Integrals, and Sums</h3>
+        <p>Some symbols have special formatting rules in display mode. For example, when we talk about the limit of a function as \(x\) approaches infinity, we want to place the symbols <b style="background-color: #eee8d5;">\(x\to\infty\)</b> directly underneath the <b style="background-color: #eee8d5;">\(\lim\)</b> symbol.</p>
+
+        <p>The following table shows three of these special symbols in inline mode:</p>
+
+        <div style="display: flex;  justify-content: center;">
+        <table>
+            <tr><th><b>Input:</b><th><b>Result:</b>
+            <tr><td>  \lim_{x \to \infty}  </td><td>\(  \lim_{x\to\infty}  \)</td></tr>
+            <tr><td>  \int_A^B   </td><td>\(    \int_A^B \)</td></tr>
+            <tr><td>  \sum_{i=0}^N  </td><td>\(   \sum_{i=0}^N  \)</td></tr>
+            <tr><td>    </td><td>\(    \)</td></tr>
+        </table></div>
+
+        <p>And here are those same symbols in display mode:</p>
+
+        <div style="display: flex;  justify-content: center;">
+        <table>
+            <tr><th><b>Input:</b><th><b>Result:</b>
+            <tr><td>  \lim_{x \to \infty}  </td><td>\( \displaystyle \lim_{x \to \infty}  \)</td></tr>
+            <tr><td>  \int_A^B   </td><td>\(  \displaystyle  \int_A^B \)</td></tr>
+            <tr><td>  \sum_{i=0}^N  </td><td>\( \displaystyle  \sum_{i=0}^N  \)</td></tr>
+            <tr><td>    </td><td>\(    \)</td></tr>
+        </table></div>
+
+
+        <!--
+            <tr><td>    </td><td>\(    \)</td></tr>
+        -->
+</body>
+</html>
+
+
+
