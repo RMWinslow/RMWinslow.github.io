@@ -10,7 +10,7 @@ document.write(`
         <img src="imgs/H.svg" class="rch">-->
         <h4 id="landlord">斗地主</h4> 
         <p><i>Inlaws like this game.</i></p>
-        <p>(3) Climbing Game. Standard Deck with Jokers.</p>
+        <p>(3) Climbing Game. Poker Deck with Jokers.</p>
     </center>
     <div class="rulesBody"  style="">
         <ul>
@@ -19,5 +19,6 @@ document.write(`
         <li>Landlord leads first.</li>
         <li>Landlord wins if they play out all of their cards first. Otherwise, both farmers win.</li>
     </div>
+    <p class="cardAuthor">traditional game</p>
 </div><br>
 `)

@@ -7,7 +7,7 @@ document.write(`
         <img src="imgs/D.svg" class="rch">
         <img src="imgs/D.svg" class="rch">
         <h4 id="diamonds">Diamonds</h4> 
-        <p><i>By Mike Fitzgerald. Yet to play. </i></p>
+        <p><i>Yet to play. </i></p>
         <p>(3-5) <a href="tricktaking.html">Trick-Taking</a>. <br>Standard Deck, no Jokers, chips, and a bag or cup for each player.</p>
     </center>
     <div class="rulesBody"  style="background-color: hsl(240, 100%, 95%)">
@@ -37,6 +37,7 @@ document.write(`
         <li>Chips in the bag count as doubled.</li>
         </ul>
     </div>
+    <p class="cardAuthor">by Mike Fitzgerald</p>
 </div><br>
 `)
 

@@ -3,14 +3,24 @@
 
 document.write(`
 <div class="rulesBlock"   style="background-color: hsl(330, 80%, 85%);">
+    
     <center>
-        <img src="imgs/twemojiDNA.svg" class="lch">
-        <img src="imgs/twemojiDNA.svg" class="lch">
-        <img src="imgs/twemojiDNA.svg" class="rch">
-        <img src="imgs/twemojiDNA.svg" class="rch">
-        <h4 id="lamarckian">Lamarckian Poker</h4> 
-        <p><i>YET TO PLAY</i></p>
-        <p>(3-6) <a href="poker.html">Poker Hands</a>. Standard Deck, no Jokers.</p>
+
+    <div id="flex-container">
+        <div class="flex-item">   <img src="imgs/twemojiDNA.svg" >    </div>
+        <div class="flex-item">   <img src="imgs/twemojiDNA.svg" >    </div>
+        <div class="flex-item">   <img src="imgs/twemojiDNA.svg" >    </div>
+        <div class="flex-title">    
+            <h4 id="lamarckian">    Lamarckian Poker    </h4> 
+            <p><i>  Dad is freakishly good at this. </i></p>
+        </div>
+        <div class="flex-item">   <img src="imgs/twemojiDNA.svg">    </div>
+        <div class="flex-item">   <img src="imgs/twemojiDNA.svg" >    </div>
+        <div class="flex-item">   <img src="imgs/twemojiDNA.svg" >    </div>
+    </div>
+
+    <p>(3-6) <a href="poker.html">Poker Hands</a>. Poker deck, no jokers.</p>
+
     </center>
     <div class="rulesBody"  style="background-color: hsl(240, 100%, 95%)">
         <ul>
@@ -30,6 +40,7 @@ document.write(`
         <li>Players use the cards in their hand to form a single poker hand of 5 cards.</li>
         </ul>
     </div>
+    <p class="cardAuthor">by James Ernest and Dave Howel</p>
 </div><br>
 `)
 

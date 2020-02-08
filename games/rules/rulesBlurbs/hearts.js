@@ -4,13 +4,18 @@
 document.write(`
 <div class="rulesBlock"   style="background-color: hsl(0, 80%, 80%);">
     <center>
-        <img src="imgs/H.svg" class="lch">
-        <img src="imgs/H.svg" class="lch">
-        <img src="imgs/H.svg" class="rch">
-        <img src="imgs/H.svg" class="rch">
-        <h4 id="hearts">Hearts</h4> 
-        <p><i>YET TO PLAY</i></p>
-        <p>(4) <a href="tricktaking.html">Trick-Taking</a>. Standard Deck, no Jokers.</p>
+        <div id="flex-container">
+            <div class="flex-item" >   <img src="imgs/H.svg" >    </div>
+            <div class="flex-item" >   <img src="imgs/H.svg" >    </div>
+            <div class="flex-title">    
+                <h3 id="hearts">    Hearts    </h3> 
+            </div>
+            <div class="flex-item" >   <img src="imgs/H.svg">    </div>
+            <div class="flex-item" >   <img src="imgs/H.svg" >    </div>
+        </div>
+
+        <p><i>  YET TO PLAY </i></p>
+        <p>(4) <a href="tricktaking.html">Trick-Taking</a>. Poker Deck, no Jokers.</p>
     </center>
     <div class="rulesBody"  style="background-color: hsl(0, 100%, 95%)">
         <ul>
@@ -33,5 +38,18 @@ document.write(`
         <li>Player with the <i>fewest</i> points wins.</li>
         </ul>
     </div>
+    <p class="cardAuthor">traditional game</p>
 </div><br>
 `)
+
+
+
+
+
+
+
+
+
+
+
+

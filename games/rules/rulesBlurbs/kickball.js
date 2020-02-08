@@ -4,13 +4,9 @@
 document.write(`
 <div class="rulesBlock"   style="background-color: hsl(0, 100%, 80%);">
     <center>
-        <!--<img src="imgs/H.svg" class="lch">
-        <img src="imgs/H.svg" class="lch">
-        <img src="imgs/H.svg" class="rch">
-        <img src="imgs/H.svg" class="rch">-->
-        <h4 id="kickball">Kickball</h4> 
+        <h3 id="kickball">Kickball</h3> 
         <p><i>Symetric Do Dizhu.</i></p>
-        <p>(4) Climbing Game. Standard Deck, no Jokers.</p>
+        <p>(4) Climbing Game. Poker Deck, no Jokers.</p>
     </center>
     <div class="rulesBody"  style="">
         <ul>
@@ -32,5 +28,6 @@ document.write(`
             </ul>
 
     </div>
+    <p class="cardAuthor">variant with scoring taken from "Tichu", by Urs Hostettler</p>
 </div><br>
 `)
