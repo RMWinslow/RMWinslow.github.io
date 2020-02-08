@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exogenous Shocks in Real Intertemporal Model</title>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+	<link href="../../../styles/sakura.css" rel="stylesheet" type="text/css">
+	<!--<style>body{background-color: #ffccee;}</style>-->
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+	</script>
+	<!--Latex Definitions:-->
+	\[
+		\definecolor{conditionColor}{RGB}{150,150,50}
+		\newcommand{\condition}[1]{\color{conditionColor} \text{(#1)}}
+		\newcommand{\mytag}[1]{\tag*{\(\condition{#1}\)}}
+	\]
+</head>
+<body>
+
+
+
+
+<h1>Real Intertemporal Equilibrium</h1>
+<h2>Examples of Exogenous Shocks</h2>
+
+<h5>Basic Graphs:</h5>
+<p>
+    Here we see graphs summarizing the markets in the first period.
+</p>
+<p>
+    The market for labor is on the left, and for goods and assets is on the right:
+</p>
+
+<center><img src="images/basicModel.svg"></center>
+
+<hr>
+
+
+
+
+
+
+<h5>Increase in \(z\):</h5>
+<p>
+    Labor Demand is chosen to satisfy \(w=MP_N\).  An increase in \(z\) increases the marginal productivity of labor, and so leads to the firm demanding higher amounts of labor for each real wage, shifting the labor demand curve outward.
+</p>
+<p>
+    This shift causes the labor market to supply more labor at the original market clearing interest rate. The increase in labor and the increase in \(z\)  both lead to more output at each given interest rate. The Output supply curve is determined by the relationship between \(r\) and the ouput produced by the labor market, and so then shifts outwards. 
+</p>
+<p>
+    Finally, a higher interest rate shifts the labor supply curve as a result of changing the consumer's wealth. 
+</p>
+<center><img src="images/zUp.svg"></center>
+<hr>
+
+
+
+
+
+<h5>Increase in \(K\):</h5>
+<p>
+    The initial effects on labor demand and thus output supply are similar to what happens when we increase \(z\).
+</p>
+<p>
+    However, the increase in initial capital stock also leads to less investment (because less investment is need to get the desired level of \(K^\prime\)), causing the output demand, determined by \(C+I+G\), to shift as well.
+</p>
+<center><img src="images/KUp.svg"></center>
+<hr>
+
+
+
+
+
+
+<h5>Increase in \(z^\prime\):</h5>
+<p>
+    Note that invesment is chosen according to the equation \(r=MP_{K^\prime}-\delta\), and a change in \(z^\prime\) changes the marginal product of second-period  capital. Thus the increase in \(z^\prime\) increases investment demand, and so shifts the output demand outward.
+</p>
+<p>
+    On the other hand, a change in total factor productivity tomorrow doesn't affect the labor demand today, and as such doesn't cause the shifts in output supply.
+</p>
+<p>
+    Finally, the decrease in \(r\) shifts the labor supply curve.
+</p>
+<center><img src="images/zPrimeUp.svg"></center>
+<hr>
+
+
+
+
+
+
+
+<h5>Increase in   both \(z\)  and   \(z^\prime\):</h5>
+<p>
+    With both changes occuring, the change in interest rate becomes ambigous. The labor supply will shift in response to the change in \(r\), but without specifying the details, we can't say in which direction.
+</p>
+<center><img src="images/zUpPersist.svg"></center>
+<hr>
+
+
+
+
+
+
+
+
+<h5>Increase in \(G\), holding \(G^\prime\) fixed:</h5>
+<p>
+    To fund this increase in government expenditures decreases the consumer's wealth, reducing the amount of leisure chosen by the consumer, and increasing the labor supplied.
+</p>
+<p>
+    This shift in labor demand in turn shifts the output supply.
+</p>
+<p>
+    At the same time, the increase in \(G\) directly increase output demand, shifting it outward.
+</p>
+<p>
+    This changes the equilibrium in the goods market, and in the abstract could decrease or increase equilibrium interest rate. However, for  reasons discussed in the book, the shift in output demand will typically be much larger, resulting in an increase in the interest rate, and a second shift outwards in the labor supply.
+</p>
+<center><img src="images/GUp.svg"></center>
+<hr>
+
+
+
+
+
+
+
+
+<hr>
+
+<h4>Reminder for definition of the model:</h4>
+
+
+
+
+<div class="definition">
+	<center><h6 style="margin-top: 5px;">Real intertemporal Competitive Equilibrium</h6></center>
+	<p>
+	Given exogenous policy \(\left\{ G, G^\prime, \tau, \tau^\prime\right\}_{t=0}^\infty\),  exogenous parameters \((z, z^\prime, \delta )\), exogenous endowments of time \(h,h^\prime\) and initial stock of capital \(K\), a competitive equilibrium in this economy consists of the following endogenous variables:
+		<ul>
+			<li> An allocation for the representative household: \( \left\{ c,c^\prime, s, l, l^\prime, N^S,N^{S\prime}  \right\} \)</li>
+			<li>An allocation for the firm: \(\left\{ K^\prime, I, N^D,N^{D\prime}   \right\}\)</li>
+			<li>and Prices: \(\left\{  w, w^\prime, r \right\}  \)</li>
+		</ul>
+	Such that the following conditions are satisfied:
+	<ul>
+			<li><b>Consumer Optimization</b>: Taking prices  as given, the representative consumer solves:
+					\[\max_{c,c^\prime ,l,l^\prime ,s} \sum_{t=0}^\infty \beta^t U( c_{t},l_{t})\]
+				subject to the constraints:
+				\begin{align}
+					c\geq 0,    \;\; \; \;   c^\prime \geq 0    \;\; \; &\;\;\;         h\geq l \geq 0        \;\; \;\;    h\geq l^\prime \geq 0   \mytag{Non-Negativity}\\
+					c + s       \leq&          w\cdot(h-l) + \pi -\tau                                      \mytag{1st Period Budget}\\
+					c ^\prime       \leq&          w^\prime\cdot(h^\prime-l^\prime) + \pi -\tau                                      \mytag{2nd Period Budget}\\
+				\end{align}
+			</li>
+			<li><b>Firm Optimization</b>: Taking prices as given, the firm maximizes the present value of profits:
+                \[\max_{N^D,N^{D\prime},I,K^\prime,}\;   \pi+\frac{\pi^\prime}{1+r} \]
+                \[= \max_{N^D,N^{D\prime},I,K^\prime,}\;   \left[    zF(K,N^D) - wN^D - I +  \frac{z^\prime F(K^\prime,N^{D\prime}) - w^\prime N^{D^\prime} +  (1-\delta)K^\prime }{1+r}     \right]       \]
+                subject to the law of motion for  capital: 
+                \[K^\prime =  (1-\delta) K + I\]
+			</li>
+			<li><b>Gov Budget Balance</b>: In each period, the government's budget is balanced:
+                \[G + S^G = \tau\]
+                \[G^\prime  = \tau^\prime +  (1+r)S^G\]
+			</li>
+			<li><b>Markets Clear</b>: In all periods \(t\), 
+				\begin{align}
+                    N^D &= N^S = h-l     \mytag{1st period Labor Market}\\ 
+					N^D &= N^S = h-l      \mytag{2nd period Labor Market}\\ 
+                    c+I+G &= zF(K,N)     \mytag{1st period Assets Market}\\ 
+					c^\prime+G^\prime &= z^\prime F(K^\prime ,N^\prime )      \mytag{2nd period Assets Market}\\ 
+					s + S^G &= 0      \mytag{Credit Market}\\ 
+				\end{align}
+			</li>
+		</ul>
+	</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+
+
+Note that on a test, the most important thing is that you have each of the conditions: Maximization for each agent, government budget, and market clearing. The preface is needed for strict rigour, but I won't be too harsh about it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+

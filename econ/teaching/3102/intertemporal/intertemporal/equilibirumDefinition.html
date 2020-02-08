@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Real Intertemporal Model</title>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+	<link href="../../../styles/sakura.css" rel="stylesheet" type="text/css">
+	<!--<style>body{background-color: #ffccee;}</style>-->
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+	</script>
+	<!--Latex Definitions:-->
+	\[
+		\definecolor{conditionColor}{RGB}{150,150,50}
+		\newcommand{\condition}[1]{\color{conditionColor} \text{(#1)}}
+		\newcommand{\mytag}[1]{\tag*{\(\condition{#1}\)}}
+	\]
+</head>
+<body>
+
+
+
+
+<h1>Real Intertemporal Equilibrium</h1>
+
+<h5>Setup:</h5>
+<p>
+	Consider a simple two-period production economy populated by a large number of identical individuals with the same preferences, and a large number of firms with the same technology. We will represent the  individuals with a representative consumer, and the firms with a representative firm. All agents are price takers.
+</p>
+<p>
+	The firm produces using a production technology of the form \(zF(K,N^S)\), where \(z\) is an exogenous constant representing total-factor productivity, \(K\) is the amount of capital used in production, and \(N^D\) is the amount of labor the firm hires. (Likewise, production in the second period is denoted \(z^\prime F(K^\prime,N^{D\prime})\)). Labor is hired at real wages \(w,w^\prime\). Capital in the first period is exogenous and owned by the firm at the start. And capital in the second period is determined according to the investment decision \(K^\prime = (1-\delta)K + I\), where investment \(I\) is deducted from the firm's first-period profits. Finally, any capital left over at the end of period two, \((1-\delta)K^\prime\),  is added to the firm's second-period profits.
+</p>
+<p>
+	The consumer has some endowment of time (\(h,h^\prime\))  and faces a decision each period about how to allocate that time between labor (\(N^S,N^{S\prime}\)) and leisure (\(l,l^\prime\)). Each unit of labor supplied earns a real wage. In addition to labor income, the consumer also earns the profits of the firm, and pays taxes.  Using this income, the consumer must also choose how much to allocate between consumption (\(c,c^\prime\)), and how much to allocate to savings \(s\). Savings reduce the income available to consumption in the first period, but then increase income by   \((1+r)s\) in the second period, where \(r\) is the interest rate on government bonds.
+</p>
+<p>
+	The level of government consumption in each period, denoted \(G\) and \(G^\prime\), is exogenously specified.  The government raises revenues by levying a lump-sum tex  \(\tau\) and \(\tau^\prime\)) on labor income, and can also save in the same market and at the same rate as the consumer. Government savings is denoted \(S^G\). 
+</p>
+
+<hr>
+
+<h4>Define a competitive equilibrium for this economy.</h4>
+
+
+
+
+<div class="definition">
+	<center><h6 style="margin-top: 5px;">Real intertemporal Competitive Equilibrium</h6></center>
+	<p>
+	Given exogenous policy \(\left\{ G, G^\prime, \tau, \tau^\prime\right\}_{t=0}^\infty\),  exogenous parameters \((z, z^\prime, \delta )\), exogenous endowments of time \(h,h^\prime\) and initial stock of capital \(K\), a competitive equilibrium in this economy consists of the following endogenous variables:
+		<ul>
+			<li> An allocation for the representative household: \( \left\{ c,c^\prime, s, l, l^\prime, N^S,N^{S\prime}  \right\} \)</li>
+			<li>An allocation for the firm: \(\left\{ K^\prime, I, N^D,N^{D\prime}   \right\}\)</li>
+			<li>and Prices: \(\left\{  w, w^\prime, r \right\}  \)</li>
+		</ul>
+	Such that the following conditions are satisfied:
+	<ul>
+			<li><b>Consumer Optimization</b>: Taking prices  as given, the representative consumer solves:
+					\[\max_{c,c^\prime ,l,l^\prime ,s} \sum_{t=0}^\infty \beta^t U( c_{t},l_{t})\]
+				subject to the constraints:
+				\begin{align}
+					c\geq 0,    \;\; \; \;   c^\prime \geq 0    \;\; \; &\;\;\;         h\geq l \geq 0        \;\; \;\;    h\geq l^\prime \geq 0   \mytag{Non-Negativity}\\
+					c + s       \leq&          w\cdot(h-l) + \pi -\tau                                      \mytag{1st Period Budget}\\
+					c ^\prime       \leq&          w^\prime\cdot(h^\prime-l^\prime) + \pi -\tau                                      \mytag{2nd Period Budget}\\
+				\end{align}
+			</li>
+			<li><b>Firm Optimization</b>: Taking prices as given, the firm maximizes the present value of profits:
+                \[\max_{N^D,N^{D\prime},I,K^\prime,}\;   \pi+\frac{\pi^\prime}{1+r} \]
+                \[= \max_{N^D,N^{D\prime},I,K^\prime,}\;   \left[    zF(K,N^D) - wN^D - I +  \frac{z^\prime F(K^\prime,N^{D\prime}) - w^\prime N^{D^\prime} +  (1-\delta)K^\prime }{1+r}     \right]       \]
+                subject to the law of motion for  capital: 
+                \[K^\prime =  (1-\delta) K + I\]
+			</li>
+			<li><b>Gov Budget Balance</b>: In each period, the government's budget is balanced:
+                \[G + S^G = \tau\]
+                \[G^\prime  = \tau^\prime +  (1+r)S^G\]
+			</li>
+			<li><b>Markets Clear</b>: In all periods \(t\), 
+				\begin{align}
+                    N^D &= N^S = h-l     \mytag{1st period Labor Market}\\ 
+					N^D &= N^S = h-l      \mytag{2nd period Labor Market}\\ 
+                    c+I+G &= zF(K,N)     \mytag{1st period Assets Market}\\ 
+					c^\prime+G^\prime &= z^\prime F(K^\prime ,N^\prime )      \mytag{2nd period Assets Market}\\ 
+					s + S^G &= 0      \mytag{Credit Market}\\ 
+				\end{align}
+			</li>
+		</ul>
+	</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+
+
+Note that on a test, the most important thing is that you have each of the conditions: Maximization for each agent, government budget, and market clearing. The preface is needed for strict rigour, but I won't be too harsh about it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
