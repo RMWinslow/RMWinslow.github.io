@@ -22,9 +22,11 @@ Admin-related Folders (for function of the website):
 
 
 Content Folders:
-    econ
+    econ  (for anything academic related)
         prelimnotes
         teaching
         researchnotes
-
+    games 
+    lists (just notes about anything inconsequential. articles online, etc)
+    
     
