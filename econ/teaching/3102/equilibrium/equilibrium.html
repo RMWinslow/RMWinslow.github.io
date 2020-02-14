@@ -2,26 +2,124 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Real Intertemporal Model</title>
+	<title>Competitive Equilibrium</title>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 	<link href="../../../../styles/sakura.css" rel="stylesheet" type="text/css">
-	<!--<style>body{background-color: #ffccee;}</style>-->
-	<script type="text/x-mathjax-config">
-		MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
-	</script>
-	<!--Latex Definitions:-->
-	\[
-		\definecolor{conditionColor}{RGB}{150,150,50}
-		\newcommand{\condition}[1]{\color{conditionColor} \text{(#1)}}
-		\newcommand{\mytag}[1]{\tag*{\(\condition{#1}\)}}
-	\]
+	<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+	
 </head>
 <body>
 
 
 
 
-<h1>Real Intertemporal Equilibrium</h1>
+<h1>What is a Competitive Equilibrium?</h1>
+
+<p>These notes cover chapters 4 and 5 from Williamson.</p>
+
+<p>In these chapters, we build a simple economic model called a competitive equilibrium. Note that "competitive equilibrium" doesn't refer to a single specific model, but rather refers to a class of economic models, which all share some commonalities. The key features are as follows:</p>
+
+<ul>
+	<li>The model will have some set of <b><i>exo</i>genous parameters</b>, which are fixed in place from outside the model.</li>
+	<li>There will also be <b><i>endo</i>genous parameters</b>, which are determined within the model. </li>
+		<ul><li>In particular, we will have some parameters for <b>prices</b>.</li></ul>
+	<li>There are one or more <b>price-taking agents</b>, each solving their own optimization problem.</li>
+		<ul>
+		<li>For example, we typically have a "Representative Consumer", and a "Representative Firm". The consumer is trying to maximize their utility subject to some budgetary constraints, and the firm is trying to maximize profits by using some sort of technology that allows them to transform inputs into outputs.</li>
+		<li>Each agent will have "choice variables", which are some subset of the equilibrium's endogenous parameters, and that agent will treat all of the other parameters in the equilibrium model as if they were exogenous.</li>
+			<ul><li>For example, the firm's profits are endogenous to the equilibrium, and determined by the firm's decisions. But the consumer will treat the firm's profits as if they're given.</li></ul>
+		<li>By price-taking, we mean that the agents will always treat the prices as exogenous. This is what puts the <i>Competitive</i> in a Competitive Equilibrium. So although the prices will be endogenous to the equilibrium as a whole, each individual agent will behave as if their actions have no effect on the price-level.</li>
+		</ul>
+	<li>There will be <b>Market Clearing Conditions</b>, which ensure that the choices of individual agents are consistent with one another.</li>
+	<li>And finally, there may be extra conditions, representing some other relationship between the endogenous parameters. </li>
+		<ul><li>For example, we could require that the government budget is balanced.</li></ul>
+	</ul>
+
+
+
+<p>And we can write out the model like so: </p>
+
+<div class="definition">
+	<h4>A Vague Competitive Equilibrium:</h4>
+	<p>
+	Given {some set of exogenous parameters}, our {set of endogenous parameters} will be in competitive equilibrium if the following conditions are satisfied:
+	<ul>
+		<li>Parameters: We have some exogenous variables which are fixed in place outside the model, and endogenous parameters which are determined within the model. In particular, there are prices for goods which are traded.</li>
+		<li>There are <i>Price-taking</i> Agents who each individually solve some constrained optimization problem.
+			<ul>
+				<li>For example, we typically have a "Representative Consumer", and a "Representative Firm". The consumer is trying to maximize their utility subject to some budgetary constraints, and the firm is trying to maximize profits by using some sort of technology that allows them to transform inputs into outputs.</li>
+				<li>Note that each agent will treat the prices as given. They are price-takers. This is what puts the <i>Competitive</i> in a Competitive Equilibrium.</li>
+				<li></li>
+			</ul></li>
+		<li>Market Clearing Conditions, which ensure that the individual agents' decisions are consistent with one another.</li>
+	</ul>
+	</p>
+</div>
+
+<div class="definition">
+	<h4>A Vague Competitive Equilibrium:</h4>
+	<p>
+	Given some set of fixed exogenous parameters, our set of endogenous parameters will be in "competitive equilibrium" if the following conditions are satisfied:</p>
+
+	<ul>
+		<li>Parameters: We have some exogenous variables which are fixed in place outside the model, and endogenous parameters which are determined within the model. In particular, there are endogenous prices.</li>
+		<li>There are <i>Price-taking</i> Agents who each individually solve some constrained optimization problem.
+			<ul>
+				<li>For example, we typically have a "Representative Consumer", and a "Representative Firm". The consumer is trying to maximize their utility subject to some budgetary constraints, and the firm is trying to maximize profits by using some sort of technology that allows them to transform inputs into outputs.</li>
+			</ul></li>
+		<li>Market Clearing Conditions, which ensure that the individual agents' decisions are consistent with one another.</li>
+	</ul>
+	</ul>
+</div>
+
+<p>Let's go a bit more in detail about each of these pieces.</p>
+
+<h5>The Agents:</h5>
+<p>
+
+
+
+
+
+
+<p>In this class, we look at several simple examples of a competitive equilibrium. </p>
+
+
+<hr>
+
+
+
+<hr>
+
+
+
+<hr>
+
+TODO:
+<pre>
+	Concepts
+	Agents
+		Consumer
+		Firm
+		Government
+	Market Clearing
+
+
+</pre>
+
+
+<hr>
+
+
+<center><ul class="mySimpleNavBar">
+	<li><a href="#contact">Home</a></li>
+	<li><a href="#contact">News</a></li>
+	<li><a href="#contact">Contact</a></li>
+</ul></center>
+
+
+
+<hr><hr><hr>
 
 <h5>Setup:</h5>
 <p>
