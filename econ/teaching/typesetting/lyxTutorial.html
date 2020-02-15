@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script> 
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+    <link href="https://www.robertmwinslow.com/styles/sakura.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>Using LyX</h1>
+
+Below is a brief overview of what I think are the most important things to know about using LyX. A more comprehensive tutorial can be found <a href="https://wiki.lyx.org/uploads/LyX/tutorials/essentials/LyX_Essentials.pdf">here</a> and the official documentation can be found <a href="https://wiki.lyx.org/LyX/Documentation">here</a>.
+
+<h3>The idea behind LyX</h3>
+<p>The main difference between LyX and a program like MS Word is that Word has you format the document as you work on it. LyX, on the other hand, is set up so that you worry only about the structure and content of the document, and the details of the formatting are left until you export the document at the end.</p>
+
+<h3>Document Structure</h3>
+
+<p>In the top left of the window there is a drop-down menu which allows you to change the layout environment for the current paragraph.
+<div style="text-align:center;"><img src="lyxEnvironments.png" alt="LyX Environments Drop-down"></div>
+"Standard" just means that you are in a normal paragraph. You can use this drop-down menu to create section and subsection headers, to create lists, and to insert a specially formatted title at the top of your document.</p> 
+
+
+<h3>Inserting Math</h3>
+
+<p>If you insert an inline formula, you get something like this: \(U=\sum_t\beta^t u(c_t)\). The shortcut for creating an inline formula is ctrl-m on Windows and command-m on Mac. You can also insert a ’display’ formula (shortcut: ctrl-shift-m or cmd-shift-m) which is bigger and occupies its own line:
+    \[U=\sum_t\beta^t u(c_t)\]</p>
+
+<p>When typing in a formula, there’s a bar at the bottom of the window full of common mathematical symbols. You can click on these buttons to add them to your formula. Or if you hover over the button, a tooltip will appear to tell you the LaTeX command for entering that symbol. <a href="latexMath.html">This page has some of the most common math commands.</a>
+
+<h3>Inserting an Image</h3>
+
+<p>If you click on insert→graphics in the menu at the top, you will be prompted to select an image file. This will insert that image into LyX. You can then click on the image to change its size in your document. Note that LyX only points to that original image file, so if you edit or delete the image, if will change in LyX as well.</p>
+
+<h3>Formatting Options</h3>
+
+Optionally, you can change the format of the page by clicking on document→settings at the top. There are lots of options, but the only thing I ever change are the page margins because I like to save paper.
+
+<h3>Finishing and Exporting Your File</h3>
+
+<p>If you click on the eye at the top of the page, you can view a preview of how your final document will appear.</p> 
+
+<p>To actually generate your final document, once you're done writing, click File→Export→PDF. There are several different backend options (LuaTeX, XeTeX, etc), but for math homework, it doesn’t matter which one you click.</p>
+
+<p>The program will generate a pdf in the same folder you saved the .lyx file in. This pdf is what you want to print off or email. </p>
+
+
+
+
+</body>
+</html>
+
+
+

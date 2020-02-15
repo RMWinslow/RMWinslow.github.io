@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Solving an Example Competitive Equilibrium</title>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+	<link href="../../../../styles/sakura.css" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+	
+</head>
+<body>
+
+
+
+<h1>Solving a Competitive Equilibrium</h1>
+
+<p>Let's take our basic competitive equilibrium from chapters 4 and 5, and work through it with the following specifications:</p>
+<ul>
+	<li>The consumer has preferences described by the utility function \(U(C,l)=\ln(C)+\ln(l)\)</li>
+	<li>The production function is Cobb-Douglass: \(zF(K,N) = z K^\alpha N^{1-\alpha} \)  with \(\alpha = \frac{1}{2}\).</li>
+	<li>Exogenous parameters are as follows: TODO</li>
+</ul>
+
+<p>Then the model looks like this:</p>
+
+
+
+<div class="definition">
+	<h4>Example Competitive Equilibrium:</h4>
+	<p>
+	Given exogenous \(\left\{   h,z,K,g   \right\}\), 
+	a competitive equilibrium is a set of allocations \(\left\{   C,l,N_s,N_d,T   \right\}\) 
+	and a real wage \(\left\{   w   \right\}\)   
+	which satisfy the following:
+	<ul>
+		<li><b>Consumer Optimization</b>: Taking the real wage as given, the representative consumer chooses an allocation \(\left\{ C,l,N_s \right\}\) such that  \(N_s = h-l\) and such that their allocation solves:
+				\[\max_{C,l}\; \ln(C) + \ln(l) \]
+			subject to the constraints:
+				\begin{gather}
+					C\geq 0,    \quad        \quad         h \geq l \geq 0             \tag{NonNeg}\\
+					C    \leq  w\cdot(h-l)  +  \pi -  T              \tag{Budget}\\
+				\end{gather}
+		</li>
+		<li><b>Firm Optimization</b>: Taking the real wage as given, the representative firm chooses their labor demand, \(N_d\) to maximize profits:
+				\[\max_{N_d}\; \left[z K^\alpha N_d^{1-\alpha} - w N_d \right]\]
+			subject to the constraint that \(N_d \geq 0\).
+		</li>
+		<li><b>Markets Clear:</b>
+			\begin{gather}
+				N_d = N_s    \tag{labor}\\
+				C + g = z K^\alpha N_d^{1-\alpha}     \tag{goods}\\
+			\end{gather}
+		</li>
+		<li>The government's budget is balanced: \(T=g\)</li>
+	</ul>
+	</p>
+</div><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4>Step 1: Characterizing the Consumer's Problem.</h4>
+
+<p>First note that \(U\) is strictly increasing, so at the optimum, the budget constraint will hold with equality.</p>
+
+<p>Also note that the constriant \(C \geq 0\) and \(l\geq 0\) will be nonbinding because 
+	\[     \lim_{C \to 0}  \frac{\partial U}{\partial C} = +\infty    \quad    \text{and}    \quad
+	\lim_{l \to 0}  \frac{\partial U}{\partial l} = +\infty  \]</p>
+
+<p>Assuming that \(l < h \), we can write the Lagrangian for the consumer's problem like so:</p>
+	\[\mathcal{L} = \ln(C) + \ln(l) - \lambda\cdot \left[    C - w\cdot(h-l) + \pi - T   \right]\]
+
+<p>Taking the partial derivatives of this, and setting them equal to zero, we get the First-order conditions:</p>
+
+\begin{align}
+	0 =& \frac{\partial \mathcal{L}}{\partial C} = {1 \over C} - \lambda                  \\
+	0 =& \frac{\partial \mathcal{L}}{\partial l} = {1 \over l} - \lambda w                \\
+	0 =& \frac{\partial \mathcal{L}}{\partial \lambda} =   - C + w\cdot(h-l) + \pi - T    \\
+\end{align}
+
+<p>The first two FOCs can be combined to get the equation \(   {1 \over l} = {1 \over C}  w    \), and then rearranging things, we get the following system of equations which characterizes the solution to the consumer's problem:</p>
+
+\[\boxed{\begin{gather}
+	{C \over l} = w                  \\
+	C = w\cdot(h-l) + \pi - T        \\
+\end{gather}}\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4>Step 2: Characterizing the Firm's Problem.</h4>
+
+<p>First note that the constraint \(N_d \geq 0\)  will be nonbinding because 
+	\[     \lim_{N \to 0}  \frac{\partial F}{\partial N} = +\infty   \]</p>
+
+<p>Since there is only one choice variable, take the derivative of the profit function and set it equal to zero: </p>
+
+\begin{split}
+	0 &= {\partial \over \partial N_d}\left[z K^\alpha N_d^{1-\alpha} - w N_d \right]   \\
+	  &= (1-\alpha) \cdot z \cdot K^\alpha N_d^{-\alpha} - w  \\
+	  &= (1-\alpha) \cdot z \cdot \left(  {K \over N_d}  \right)^\alpha  - w   \\
+\end{split}
+
+<p>Solving for \(N_d\), we get:</p>
+\begin{align}
+	w &= (1-\alpha)  z  K^\alpha N_d^{-\alpha}  \\
+	N_d^\alpha w &= (1-\alpha)  z  K^\alpha       \\
+	N_d^\alpha &= \left(    \frac{(1-\alpha) z K^\alpha }{w}    \right)      \\
+	N_d  &= \left(  \frac{(1-\alpha) z  }{w}  \right)^{1 \over \alpha}    K  \\
+\end{align}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4>Step 3: Combining the Results</h4>
+
+<p>If we combine the characterizing equations from each agent's problem with the other equilibrium conditions, we get the following system of equations:</p>
+\begin{align}
+	{C \over l} &= w                 \tag{MRS=w} \\
+	C &= w\cdot(h-l) + \pi - T         \tag{Budget}  \\
+	N_d  &= \left(  \frac{(1-\alpha) z  }{w}  \right)^{1 \over \alpha}    K  \tag{Firm's Choice}\\
+	N_d &= N_s = h-l \tag{Labor Market}\\ 
+	C + g &= z K^\alpha N_d^{1-\alpha}    \tag{Goods Market}\\
+	g &= T  \tag{Gov Budget}\\
+	\pi = z K^\alpha N_d^{1-\alpha} - w N_d \tag{Profit} \\
+\end{align}
+
+<p>Any solution to this system of equations will give us a competitive equilibrium for this economy.</p>
+
+
+<h4>Step 4: Solving</h4>
+
+Todo: set w = 1/2 and wwork things out
+
+<p>First let's solve this system of equations without plugging in our exogenous parameters. We can combine the first and second equations above to get:</p>
+	\[C = lw \]
+	\[lw  = w\cdot(h-l) + \pi - T   \]
+	\[l   =   \frac{wh+\pi-T}{2w} = {h \over 2} + {\pi - T  \over 2w}  \]
+	\[C = \frac{wh+\pi-T}{2}  \]
+<p>And of course, we can plug \(g=T\)into this to get </p>
+	\[l   =   \frac{wh+\pi-T}{2w} = {h \over 2} + {\pi - g  \over 2w}  \]
+	\[C = \frac{wh+\pi-g}{2}  \]
+<p>From the market-clearing condition for the labor market, we get </p>
+\begin{split}
+	N_d = N_s &= h-l \\
+		&=  h - {h \over 2} - {\pi - g  \over 2w} \\
+		&=  {h \over 2} - {\pi - g  \over 2w}
+\end{split}
+
+<p>Plug the formula for profit into the budget constraint to get:</p>
+	\[C &= w\cdot(h-l) + z K^\alpha N_d^{1-\alpha} - w N_d - g\]
+<p>And \(h-l=N_s=N_d\), so</p>
+	\[C &=  z K^\alpha N_d^{1-\alpha} - g\]
+
+
+	\[C=lw=(h-N)w\]
+	\[w= (1-\alpha)  z K^\alpha N_d^{-\alpha} \]
+
+
+
+
+Need to solve for C,w,N
+
+	\[C &= N^{1-\alpha} -0\]
+	\[C=lw=(h-N)w\]
+	\[w= (1-\alpha)  N^{-\alpha} \]
+	---
+	\[C &=  N_d^{1-\alpha}\]
+	\[C=lw=(h-N)w\]
+	\[w= (1-\alpha)  N^{-\alpha} \]
+	\[N^{1-\alpha}   =  (h-N)w\]
+	\[w= {N^{1-\alpha}  \over (h-N)\]
+
+	
+
+<h4>Step 4: Solving Again</h4>
+
+<p>This time, let's start by plugging in the values given for the exogenous parameters. Then the characterizing system of equations becomes: </p>
+\begin{align}
+	{C \over l} &= w                 \\
+	C &= w\cdot(h-l) + \pi - T          \\
+	N_d  &= \left(  \frac{(1-\alpha) z  }{w}  \right)^{1 \over \alpha}    K  \\
+	N_d &= N_s = h-l \\ 
+	C + g &= z K^\alpha N_d^{1-\alpha}   \\
+	g &= T  \\
+	\pi = z K^\alpha N_d^{1-\alpha} - w N_d \\
+\end{align}
+
+h = 1
+K = 1
+g = 1
+z = 1
+alpha = 1/2
+
+\begin{align}
+	C &= lw  =   w(1-N)               \\
+	C &= wN + \pi - 1          \\
+	N  &= \left(  {1 \over 2w}  \right)^2   =     {1 \over 4w^2}    \\
+	C + 1 &= z K^\alpha N_d^{1-\alpha}   \\
+	\pi &=  N_d^{1-\alpha} - w N_d \\
+\end{align}
+
+
+2wN +pi-1=w - pi +1
+N = w-pi+1  /    2w
+
+<p>knjnjnjinij</p>
+	\[C = lw \]
+	\[lw  = w\cdot(h-l) + \pi - T   \]
+	\[l   =   \frac{wh+\pi-T}{2w} = {h \over 2} + {\pi - T  \over 2w}  \]
+	\[C = \frac{wh+\pi-T}{2}  \]
+<p>And of course, we can plug \(g=T\)into this to get </p>
+	\[l   =   \frac{w+\pi-1}{2w} = {1 \over 2} + {\pi - 1  \over 2w}  \]
+	\[C = \frac{w+\pi-1}{2}  \]
+<p>From the market-clearing condition for the labor market, we get </p>
+\begin{split}
+	N_d = N_s &= h-l \\
+		&=  h - {h \over 2} - {\pi - g  \over 2w} \\
+		&=  {1 \over 2} - {\pi - 1  \over 2w}
+\end{split}
+
+
+Combining these:
+	\[N = {1 \over 2} - {\pi - 1  \over 2w}\]
+	\[\pi =  N^{1\over 2} - w N\]
+	\[C = wN + \pi - 1 = N^{1\over 2} - 1\]
+
+	--
+
+	\[wN=N^{1\over 2}-\pi\]
+	\[N^{1\over 2}-\pi + \pi - 1 = N^{1\over 2} - 1\]
+
+	\[N^{1\over 2} = N^{1\over 2} \]
+
+</body>
+</html>
+
+
+
