@@ -62,11 +62,43 @@
 
 <h3>Solving the constrained optimization problem</h3>
 
-<p>Firstly, the problem will be easier to solve if we can narrow down which of the constraints are binding. We know that if \(U\) is strictly increasing, then the budget constraint will hold with equality. And for a wide array of utility functions, we can find arguments for why setting either \(C=0\) or \(l=0\) would be suboptimal.</p>
+<p>Firstly, the problem will be easier to solve if we can narrow down which of the constraints are binding. </p>
 
-<p>But the constraint that \(l=\leq h\) is more tricky to deal with. If we have parameters such that \(\pi-T > 0\), then in principle, the consumer's optimal response could be to choose \(l=0,C = \pi-T\). In practice, we can just solve the problem as if this constraint is non-binding, and if we get a contradictory result when we plug in values for our parameters, then we know we were mistaken and that the consumer's optimal response is instead at \(l=0\).</p>
+<p>We know that if \(U\) is strictly increasing, then the budget constraint will hold with equality. And for a wide array of concave utility functions, we can find arguments for why setting either \(C=0\) or \(l=0\) would be suboptimal.</p>
 
-<p>So if the budget constraint above is the only binding constraint in the consumer's constrained optimization problem, then we can find the solution by setting up a Lagrangian equation like so:</p>
+<p>But the constraint that \(l \leq h\) is more tricky to deal with. If we have parameters such that \(\pi-T > 0\), then in principle, the consumer's optimal response could be to choose \(l=0,C = \pi-T\). In practice, we can just solve the problem assuming that this constraint is non-binding, and if we get a contradictory result when we plug in values for our parameters, then we know we were mistaken and that the consumer's optimal response is instead at \(l=h\).</p>
+
+<p>So if the budget constraint above is the only binding constraint in the consumer's constrained optimization problem, then we can find the solution by setting up a Lagrangian like so:</p>
+
+	\[ \mathcal{L} = U(C,l) - \lambda \cdot \left[ c -  w\cdot(h-l)  -  \pi +  T    \right]  \]
+
+<p>Now we take the partial derivatives and set them equal to zero to get:</p>
+
+\begin{align}
+	0 = {\partial \mathcal{L} \over \partial C} &= {\partial U \over \partial C} - \lambda    \\
+	0 = {\partial \mathcal{L} \over \partial l} &= {\partial U \over \partial l} - \lambda w  \\ 
+	0 = {\partial \mathcal{L} \over \partial \lambda} &=  - \left[ c -  w\cdot(h-l)  -  \pi +  T    \right]             \\
+\end{align}
+
+<p>If we rearrange this, then we get the following system of equations:</p>
+
+\begin{align}
+	\lambda &= {\partial U \over \partial C}    \\
+	\lambda w  &= {\partial U \over \partial l}   \\ 
+	c    &=  w\cdot(h-l)  +  \pi -  T                 \\
+\end{align}
+
+<p>Combine the first two and we get that the solution of 
+
+
+
+
+
+
+
+
+
+
 
 
 
