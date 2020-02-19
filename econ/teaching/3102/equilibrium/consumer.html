@@ -56,11 +56,21 @@
 </div><br>
 
 
+<p>On this page, I show how to find the algebraic solution to this constrained optimization problem in its general form, and then work through the problem with several specific forms of the utility function.</p>
+
+<h6>Sections</h6>
+<ul>
+	<li><a href="#general">The general case.</a><br>
+	<li><a href="#loglog">Example 1: \(U(C,l) = \ln(C) + \gamma \ln(l)\)</a><br>
+</ul>
 
 
 
 
-<h3>Solving the constrained optimization problem</h3>
+
+<hr>
+
+<h3 id="general">Solving the constrained optimization problem</h3>
 
 <p>Firstly, the problem will be easier to solve if we can narrow down which of the constraints are binding. </p>
 
@@ -75,20 +85,38 @@
 <p>Now we take the partial derivatives and set them equal to zero to get:</p>
 
 \begin{align}
-	0 = {\partial \mathcal{L} \over \partial C} &= {\partial U \over \partial C} - \lambda    \\
-	0 = {\partial \mathcal{L} \over \partial l} &= {\partial U \over \partial l} - \lambda w  \\ 
-	0 = {\partial \mathcal{L} \over \partial \lambda} &=  - \left[ c -  w\cdot(h-l)  -  \pi +  T    \right]             \\
+	0 = \mathcal{L}_c^\prime  &= U^\prime_C - \lambda    \\
+	0 = \mathcal{L}_l^\prime  &= U^\prime_l - \lambda w  \\ 
+	0 = \mathcal{L}_\lambda^\prime &=  - \left[ c -  w\cdot(h-l)  -  \pi +  T    \right]             \\
 \end{align}
 
 <p>If we rearrange this, then we get the following system of equations:</p>
 
 \begin{align}
-	\lambda &= {\partial U \over \partial C}    \\
-	\lambda w  &= {\partial U \over \partial l}   \\ 
+	\lambda &= U^\prime_C    \\
+	\lambda w  &= U^\prime_l  \\ 
 	c    &=  w\cdot(h-l)  +  \pi -  T                 \\
 \end{align}
 
-<p>Combine the first two and we get that the solution of 
+<p>Combine the first two and we get that \(U^\prime_l = w U^\prime_C\), and so the consumer's problem has a solution characterized by the following two equations:</p>
+
+\[\boxed{\begin{gather}
+	w = {U^\prime_l \over U^\prime_C} = MRS_{lC} \\
+	c    =  w\cdot(h-l)  +  \pi -  T                 \\
+\end{gather}}\]
+
+<p>The first equation is saying that the utility isoquant through the optimum is parallel to the budget constraint at the optimum. And the second equation is saying that the optimum is on the budget constraint. Together, these two conditions establish that the optimum is at a point where the utility isoquant is tangent to the budget constraint.</p>
+
+<p>Depending on the utility function, it may be possible to find  an explicit formula for \(l\) and \(C\). </p>
+
+
+<h6>Changing the exogenous parameters.</h6>
+
+<p>When \(\pi\) is increased or \(T\) is decreased, we expect that both \(C\) and \(l\) will increase from the increased income. The textbook assumes that this is always the case.</p>
+
+<p>When the real wage \(w\) is increased, there will be both an income effect and a substitution effect. The income effect will increase both \(C\) and \(l\), while the substution effect will increase \(C\) and decrease \(l\). Thus the effect of a change in wages on leisure may depend on the choice of utility function or even the specific parameters used.</p>
+
+<hr>
 
 
 
@@ -101,257 +129,89 @@
 
 
 
+<h2>Examples:</h2>
+<hr>
+<h3 id="loglog">Example 1: \(\boldsymbol{ U(C,l) = \ln(C) + \gamma \ln(l) }\)</h3>
+
+<p>(Here, \(\ln()\) is the natural log and \(\gamma\) is just some positive constant.)
+
+<p>First note that the marginal utilities are like so:</p>
+\begin{gather}
+	U^\prime_C = \frac{1}{C} \\
+	U^\prime_l = \frac{\gamma}{l} \\
+\end{gather}
+
+<p>Both of these are positive for \(C,l\geq 0\), so U is strictly increasing, and the budget constraint will bind with equality.</p>
+<p>Note that as \(C \to 0^{+}\), \(U^\prime_C \to +\infty\), and so \(C\) will be strictly positive at the optimum. A similar argument can be used for \(l\).</p>
+
+<p>Assuming that \(l < h\), we can set up the Lagrangian:</p>
+	\[ \mathcal{L} = \ln(C) + \gamma \ln(l) - \lambda \cdot \left[ c -  w\cdot(h-l)  -  \pi +  T    \right]  \]
+
+<p>Take the partial derivatives and set equal to \(0\) to get the first-order conditions:</p>
+\begin{align}
+	0 = \mathcal{L}_c^\prime  &= \frac{1}{C} - \lambda    \\
+	0 = \mathcal{L}_l^\prime  &= \frac{\gamma}{l} - \lambda w  \\ 
+	0 = \mathcal{L}_\lambda^\prime &=  - \left[ c -  w\cdot(h-l)  -  \pi +  T    \right]             \\
+\end{align}
+
+<p>Rearrange and combine to get:</p>
+\[\boxed{\begin{gather}
+	w = {\left(\frac{\gamma}{l}\right) \over \left(\frac{1}{C}\right)} =  \frac{\gamma C}{l}  = MRS_{lC} \\
+	c    =  w\cdot(h-l)  +  \pi -  T           \\
+\end{gather}}\]
+
+<h6>Explicitly solving:</h6>
+
+<p>For this utility function, we can also explicitly solve for the optimal allocation. Rearrange to get \(C=\frac{w}{\gamma} l \), then plug this into the budget constraint and solve for \(l\):</p>
+\begin{gather}
+	\frac{w}{\gamma} l =  w\cdot(h-l)  +  \pi -  T  \\
+	\left(1+\frac{1}{\gamma}\right)lw =  wh  +  \pi -  T \\
+	l^* = \frac{\gamma}{1+\gamma}\frac{wh  +  \pi -  T}{w}\\
+	l^* = \frac{\gamma}{1+\gamma}\left(h+\frac{ \pi -  T}{w}\right)\\
+\end{gather}
+
+<p>And plug this into \(C=\frac{w}{\gamma} l \) to get:</p>
+	\[C^* = \frac{wh  +  \pi -  T}{1+\gamma}\]
 
 
-Examples
+<h6>Effect of increase in real wage:</h6>
 
+<p>Now we have explicit equations for the optimal choice of \(C\) and \(l\). If we take the derivatives of these formula with respect to \(w\), we get:</p>
+	\[{\partial C^* \over \partial w}  =  \frac{h}{1+\gamma}\]
+	\[{\partial l^* \over \partial w}  =  - \frac{\gamma}{1+\gamma}\frac{ \pi -  T}{w^2}\]
 
+<p>When the real wage is increased, there will be both an income effect and a substitution effect. The income effect will increase both \(C\) and \(l\), while the substution effect will increase \(C\) and decrease \(l\).</p>
 
-
-
-
-
-
-
-
-
-
-<hr><hr><hr>
-
-<p>These notes cover chapters 4 and 5 from Williamson.</p>
-
-<p>In these chapters, we build a simple economic model called a competitive equilibrium. Note that "competitive equilibrium" doesn't refer to a single specific model, but rather refers to a class of economic models, which all share some commonalities. If we write one of these models out, it will look something like this:</p>
-
-<div class="definition">
-	<h4>A Vague Competitive Equilibrium:</h4>
-	<p>
-	Given {some set of exogenous parameters}, our {set of endogenous parameters} will be in competitive equilibrium if the following conditions are satisfied:
-	<ul>
-		<li>Each agent's choice variables solve that agent's optimization problem.</li>
-		<li>Markets Clear</li>
-		<li>Any extra conditions, like government budget balance.</li>
-	</ul>
-	</p>
-</div><br>
-
-<p>Let's go into a bit more detail about each of these pieces. The key features of a competitive equilibrium model are as follows:</p>
-
+<p>So consumption increases as the real wage goes up, while the effect on leisure depends on the value of \(\pi-T\). </p>
 <ul>
-	<li>The model will have some set of <b><i>exo</i>genous parameters</b>, which are fixed in place from outside the model.</li>
-	<li>There will also be <b><i>endo</i>genous parameters</b>, which are determined within the model. </li>
-		<ul><li>In particular, we will have some parameters for <b>prices</b>.</li></ul>
-	<li>There are one or more <b>price-taking agents</b>, each solving their own optimization problem.</li>
-		<ul>
-		<li>For example, we typically have a "Representative Consumer", and a "Representative Firm". The consumer is trying to maximize their utility subject to some budgetary constraints, and the firm is trying to maximize profits by using some sort of technology that allows them to transform inputs into outputs.</li>
-		<li>Each agent will have "choice variables", which are some subset of the equilibrium's endogenous parameters, and that agent will treat all of the other parameters in the equilibrium model as if they were exogenous.</li>
-			<ul><li>For example, the firm's profits are endogenous to the equilibrium, and determined by the firm's decisions. But the consumer will treat the firm's profits as if they're given.</li></ul>
-		<li>By price-taking, we mean that the agents will always treat the prices as exogenous. This is what puts the <i>Competitive</i> in a Competitive Equilibrium. So although the prices will be endogenous to the equilibrium as a whole, each individual agent will behave as if their actions have no effect on the price-level.</li>
-		</ul>
-	<li>There will be <b>Market Clearing Conditions</b>, which ensure that the choices of individual agents are consistent with one another.</li>
-		<ul><li>This is the <i>Equilibrium</i> part of a Competitive Equilibrium.</li></ul>
-	<li>And finally, sometimes there may be extra conditions, representing some other relationship between the parameters. </li>
-		<ul><li>For example, we could require that the government budget is balanced.</li></ul>
-	</ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h3>Making assumptions about the world</h3>
-
-<p>To build a model like this, we have to make assumptions about which agents are in the economy, what markets they are interacting with, what kinds of choices each agent can make, etc. The details of these assumptions will change the structure of our model. Then if the model behaves in a way which is consistent with the real world, it hints that our assumptions may be reasonable.</p>
-
-<p>But more importantly, if the model makes bad predictions, and doesn't match up with what we see, this suggests that one or more of our assumptions are innacurate. And this can be just as informative, if not more so.</p>
-
-<p>The point of representing the economy algebraically in models like these isn't that math-notation makes an argument true. But rather that math-notation forces us to be rigourous and specific about our assumptions. And this allows us to more meaningfully evaluate and learn from those assumptions.</p>
-
-<p>In chapters 4 and 5, we build a very simple competitive equilibrium. And we make many assumptions to simplify the math. The point of these chapters isn't to have you memorize the specific assumptions we are using in this model and treat them as gospel truth about the world. Rather, the aim is to practice the process of taking a description of the economy and expressing it as a model like these ones.</p>
-
-<p>In later chapters, we will change our assumptions about the structure of the economy, and build different competitive equilibrium models. For example, we might open the economy to trade, or add multiple time periods.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h3>So what is our model for these chapters?</h3>
-
-<p>In the model for chapters 4 and 5, we make plenty of assumptions about the economy that definitely aren't true. For example:</p>
-
-<ul>
-	<li>We assume that the only two goods are an aggregate consumption good, \(C\), and units of labor, \(N\).</li>
-	<li>We assume that money is neutral, prices don't affect agents' decisions, and so we can put things in real terms, setting the price of \(C\) to \(1\), and using \(w\) to represent the real wage. </li>
-	<li>We assume that there is only a single period of time. No agents can make any decisions which affect the future.</li>
-	<li>Likewise, even though we assume capital, \(K\),  is needed for production, we just make \(K\) exogenous. No time means nobody can make decisions about investment.</li>
-</ul> 
-
-<p> Both of these first two assumptions are fairly reasonable for looking at aggregate economic activity. We will add multiple time periods into the model in the second half of the course. And if we have time near the end of the semester, we may look at what happens when we change our assumptions about the role of prices.</p>
-
-<p>The model for chapters 4 and 5, in it's full form, looks like this:</p>
-
-<div class="definition">
-	<h4>A Closed-Economy One-Period Macroeconomic Model, with Lump-sum Taxes:</h4>
-	<p>
-	Given exogenous \(\left\{   h,z,K,g   \right\}\), 
-	a competitive equilibrium is a set of allocations \(\left\{   C,l,N_s,N_d,T   \right\}\) 
-	and a real wage \(\left\{   w   \right\}\)   
-	which satisfy the following:
-	<ul>
-		<li><b>Consumer Optimization</b>: Taking the real wage as given, the representative consumer chooses an allocation \(\left\{ C,l,N_s \right\}\) such that  \(N_s = h-l\) and such that their allocation solves:
-				\[\max_{C,l}\; U(C,l)\]
-			subject to the constraints:
-				\begin{gather}
-					c\geq 0,    \quad      c^\prime \geq 0,    \quad         h \geq l \geq 0             \tag{NonNeg}\\
-					c    \leq  w\cdot(h-l)  +  \pi -  T              \tag{Budget}\\
-				\end{gather}
-		</li>
-		<li><b>Firm Optimization</b>: Taking the real wage as given, the representative firm chooses their labor demand, \(N_d\) to maximize profits:
-				\[\max_{N_d}\; \pi  \]
-			where profits are equal to revenue minus costs:
-				\[ \pi = Y - w N_d \]
-			output is determined by some production function:
-				\[Y = zF(K,N_d)\]
-			and subject to the constraint that \(N_d \geq 0\).
-		</li>
-		<li><b>Markets Clear:</b>
-			\begin{gather}
-				N_d = N_s    \tag{labor}\\
-				C + g = Y = zF(K,N)     \tag{goods}\\
-			\end{gather}
-		</li>
-		<li>The government's budget is balanced: \(T=g\)</li>
-	</ul>
-	</p>
-</div><br>
-
-
-<p>In the above model, we are using the following variables to represent different things in our economy:</p>
-<ul>
-	<li>\(h\) is the consumer's endowment of time which can be split between leisure and labor.</li>
-	<li>\(z\) is the total-factor-productivity.</li>
-	<li>\(K\) is the stock of capital.</li>
-	<li>\(g\) is the level of government spending, which needs to be funded.</li>
-	<li>\(C\) is the amount of the consumption good the consumer has.</li>
-	<li>\(l\) is the amount of time the consumer allocates to leisure.</li>
-	<li>\(N_s\) is the labor supplied, the amount of time the consumer allocates to labor.</li>
-	<li>\(N_d\) is the labor demanded.</li>
-	<li>\(T\) is a lump-sum tax placed on the consumer. </li>
-	<li>\(\pi\) is the firm's profits, which are paid to the consumer as dividends.</li>
-	<li>\(Y\) is just shorthand for the firm's output. </li>
-	<li> And \(w\) is the real wage, the number of consumption goods the consumer earns for each unit of labor supplied.</li>
+	<li>If \(\pi-T > 0\), then leisure is decreasing in \(w\), and so labor supplied is decreasing in \(w\). Thus the substitution effect is stronger than the income effect, and the labor supply curve is upwards sloping.</li>
+	<li>If \(\pi-T = 0\), then leisure is invariant in \(w\). Thus the labor supply curve is perfectly inelastic.</li>
+	<li>If \(\pi-T < 0\), then leisure is increasing in \(w\), and so labor supplied is increasing in \(w\). Thus the income effect is stronger, and the labor supply curve is downwards sloping.</li>
 </ul>
 
 
 
-
-
-
-
-
-
-
-
-
-<p>And we can write out the model like so: </p>
-
-
-
-<p>Let's go a bit more in detail about each of these pieces.</p>
-
-<h5>The Agents:</h5>
-<p>
-
-
-
-
-
-
-<p>In this class, we look at several simple examples of a competitive equilibrium. </p>
-
-
 <hr>
 
 
+<!--https://en.wikipedia.org/wiki/Category:Utility_function_types
+-->
 
-<hr>
-
-
-
-<hr>
-
-TODO:
-<pre>
-	Concepts
-	Agents
-		Consumer
-		Firm
-		Government
-	Market Clearing
-
-
-</pre>
-
-
-<hr>
-
-
-<center><ul class="mySimpleNavBar">
-	<li><a href="#contact">Test</a></li>
-	<li><a href="#contact">test2</a></li>
-	<li><a href="#contact">thisoneisreallylong</a></li>
-</ul></center>
-
-
-
-<hr><hr><hr>
+<p>TODO: more examples (perfect complements, no income effect, perfect substitutes, cobb douglass?...)</p>
 
 
 
 
 
 
-<hr>
 
 
-Note that on a test, the most important thing is that you have each of the conditions: Maximization for each agent, government budget, and market clearing. The preface is needed for strict rigour, but I won't be too harsh about it.
+
+
+
+
+
+
 
 
 

@@ -5,15 +5,71 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
 
-<link href="../styles/sakura.css" rel="stylesheet" type="text/css">
-<title>Research Notes</title>
+<link href="../../styles/sakura.css" rel="stylesheet" type="text/css">
+<title>Random Musings</title>
 </head>
 <body>
     <h1>Research Notes</h1>
     <h2>Random Unpolished Thoughts</h2>
 
+    <p>This page is for storing half-baked ideas in one place so that I don't just forget about them. If you are reading this, don't expect coherent models or profound insights. Expect something stylistically more along the lines of a long-form twitter ramble. </p>
 
-    <h3>Addiction</h>
+
+
+
+    <hr>
+
+
+
+
+
+
+    <h3 id="rentcontrol1">Rent Control</h3>
+    <p>Here's a pickle. All the experts agree that rent control is a bad idea. Makes housing quality worse, increases time spent driving, increases housing costs in the long run etc. etc. But cities keep enacting rent control. Why?</p>
+
+    <ul>
+        <li>Maybe there is some sort of principal agent type problem where city councils are incentivized to enact bad policies which sound good to the average voter?</li>
+        <li>Maybe its just a matter of existing house owners engaging in rent-seeking behavior to restrict the supply of housing and make their own property have inflated value? </li>
+        <li>Maybe it's just that lawmakers only value the wellbeing of current residents and not potential residents?</li>
+        <li>Maybe economists are all wrong, and price signals are a martian conspiracy?</li>
+    </ul>
+
+    <p>Here's the thought that struck me. Maybe it's a time-consistency problem. Wherein enacting rent control has short term benefits, but long term harms. And lawmakers care more about the short term either because of political re-election type stuff, or simply because forecasting long-term effects is more difficult than hearing about the immediate problems facing the people who come into city council meetings.</p>
+
+    <p>In Econ 101, we show students that a binding price ceiling has an ambiguous effect on consumer surplus. In a price-control-induced shortage, we can no longer use the price mechanism to allocate the good, and so we can't say which of the buyers will actually get to buy. If the people with the highest valuation of the good end up buying it, consumer surplus might decrease. But if the people with a lower valuation on the good end up buying it, then consumer surplus goes down. Many people are hurt for the benefit of the few.</p>
+
+    <p>Sitting on the toilet and thinking about this, my intution is that it takes time to switch housing. So after rent control is enacted, in the short run it's the people already living there that get the houses, and people are actually better off. But then the value that people place on living somewhere changes. You could have kids being born or moving out. You could get job offers in different locations. And so if you take any set of potential residents, the distribution of the values that they place on the housing will drift over time towards the overall population's distribution.</p>
+
+    <p>So here's a silly little toy example to play around with this intuition:</p>
+    <ul>
+        <li>There are 4 houses in the city. No depreciation or construction. Four houses forever.</li>
+        <li>There are 12 people, and each person values a house in the city at either 11 dollars per period (urbanite) or 9 dollars per period (countryfolk). There are initially 4 urbanites and 8 countryfolk, and the urbanites start with the houses.</li>
+        <li> Each house holds exactly one person, and any people without one of these 5 houses will have to live outside the city. (In the suburbs or in Texas or whatever.)</li>
+        <li>The value a person gets from living in the city is equal to the difference between their value and the price. The value of living outside the city is 0. Assume that the price of outside housing is exactly equal to how much poeple value it.</li>
+        <li>Life circumstances change, and so at the end of each period, one urbanite will become countryfolk and one countryfolk will become an urbanite, at random.</li>
+        <li>Also at the end of a period, anyone who wants to leave the city can, and then vacancies can be filled by someone moving in. If there are multiple people who want to move in, then pick one at random.</li>
+    </ul>
+
+    <p>So first, let's look at what happens if the price is set to 10 dollars. Each urbanite with a house  earns 1 unit of surplus, so there are 4 units of surplus total. At the end of the period, one of the urbanites becomes a countryfolk, while one of the countryfolk becomes an urbanite. Because the newly turned countrylover now  is only willing to pay 9 dollars to live in the city, they move out, and then the new urbanite is the only person who wants to move in, and does so. </p>
+
+    INSERT IMAGES HERE
+
+    <p> And even if we start with all four houses occupied by countryfolk, they'll move out at the end of the first period, and so we will end up with all four houses occupied by the people willing to pay more. Every period, 4 total surplus.</p>
+
+    <p>Now lower the price to 9. In this first period, where the urbanites all live in the city, each resident is getting 2 units of surplus, for a total of 8. But at the end of the period, when one of the resident urbanites turns into a countryfolk, they will choose to stay in their house. And next period, the total surplus will be only 6. Then after that, we could either have the resident countryfolk switch back to being an urbanite, or have another one of the resident urbanites switch to being a countryfolk. In the long run, we'll only have one third of residents actually being urbanites.</p>
+
+    <p>TODO: Insert picture, do little simulation to find expected path of surplus over time.</p>
+
+    <p>Now obviously, this example doesn't actually have a price mechanism in the first place, so doesn't look at why prices get high. And the fact that rent control discourages the building of new houses is a big part of why it causes long term harm. I mean, the price controls above don't even reduce the housing supply. Also moving is costly, so there's a friction there... Thoughts for another time.</p>
+
+
+
+    <hr>
+
+
+    <!--<h3>Addiction</h3>
+    <h3>3rd world farmers?</h3>
+    Unifying theme: The paths that things take is just as important as the equilibrium-->
 
 
 </body>

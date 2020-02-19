@@ -453,7 +453,8 @@ label, legend, fieldset {
 .MathJax { color:hsl(193, 14%, 26%) !important; font-size: 1.0em !important;}
 mjx-labels {color: #b58900 !important;}
 
-.mjx-chtml {color:hsl(193, 14%, 26%) !important; font-size: 1.05em !important;}
+/*.mjx-chtml {color:hsl(193, 14%, 26%) !important; font-size: 1.05em !important;}*/
+.mjx-chtml { font-size: 1.05em !important;}
 .mjx-label {color: #b58800 !important; }
 
 @media screen and (max-width: 600px) {
