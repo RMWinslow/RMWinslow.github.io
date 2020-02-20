@@ -13,7 +13,7 @@
 
 <h1>Consumer's Problem</h1>
 
-<div id="endowmentEconomy" style="width: 80vmin;  height: 85vmin; margin: 0 auto"></div>
+<div id="endowmentEconomy" style="width: 80vmin;  height: 80vmin; margin: 0 auto"></div>
 
 <b><table style="text-align: center; ">
         <tr>
@@ -21,7 +21,6 @@
             <td>\(c\): <output id='consumption1'>test</output></td>
             <td>\(c'\): <output id='consumption2'>test</output></td>
             <td>\(s\): <output id='savings'>test</output></td>
-            <td>\(U\): <output id='utility'>test</output></td>
         </tr>
 </table></b>
 
@@ -34,31 +33,66 @@
             <td>\(t'\):   <input type="number" id="tax2"  step="1" style="width: 4em;"> &nbsp;     </td>
             <td>\(\beta\):     <input type="number" id="beta"  min="0.01" max="1" step="0.01" style="width: 4em;">  &nbsp; </td>
             <td>\(r\):     <input type="number" id="r"  step="0.01" style="width: 4em;">  &nbsp; </td>
+            <td>\(w\):     <input type="number" id="w"  step="0.01" style="width: 4em;">  &nbsp; </td>
+            <td>\(h\):     <input type="number" id="h"  step="0.01" style="width: 4em;">  &nbsp; </td>
+            <td>\(\pi\):     <input type="number" id="pi"  step="0.01" style="width: 4em;">  &nbsp; </td>
+            <td>\(T\):     <input type="number" id="T"  step="0.01" style="width: 4em;">  &nbsp; </td>
         </tr  >
+        <tr>
+            <td colspan="4"><b>Endogenous Variables and Parameters:</b> </td>
+        </tr>
+        <tr>
+            <td>\(C\): <output id='consumption'>test</output></td>
+            <td>\(l\): <output id='leisure'>test</output></td>
+            <td>\(N_s\): <output id='labor'>test</output></td>
+            <td>\(U\): <output id='utility'>test</output></td>
+        </tr>
 </table></b>
 
 
 
 <h3>Solving the problem algebraically:</h3>
 The consumer's problem is 
-\[\max_{c,c',s}\log c + \beta \log c'\]
-\[s.t. c\geq 0;c'\geq 0\]
-\[c+s\leq y-t\]
-\[c'\leq (1+r)s+y'-t'\]
+    \[\max_{C,l}\; U(C,l)\]
+subject to the constraints:
+    \begin{gather}
+        c\geq 0,    \quad        \quad         h \geq l \geq 0             \tag{NonNeg}\\
+        c    \leq  w\cdot(h-l)  +  \pi -  T              \tag{Budget}\\
+    \end{gather}
 
-Utility is strictly increasing, so the budget constraint will bind with equality.
-Solve for \(s\) in the second period, and then plug it into the first to get 
-\[s={c' -y' +t' \over 1+r}\]
-\[c+{c'\over 1+r}= y+{y' \over 1+r} - t - {t' \over 1+r}\equiv we\]
+<p>Assuming that \(l < h\), we can set up the Lagrangian like so:</p>
+	\[ \mathcal{L} = \ln(C) +  \ln(l) - \lambda \cdot \left[ c -  w\cdot(h-l)  -  \pi +  T    \right]  \]
 
-If the consumer is behaving optimally, they will choose consumption such that their marginal rate of substitution is equal to the exchange rate between past and future consumption:
-\[(1+r)=MRS={{1/ c} \over {\beta / c'}}={c\over \beta c'}\]
+<p>Take the partial derivatives and set equal to \(0\) to get the first-order conditions:</p>
+\begin{align}
+	0 = \mathcal{L}_c^\prime  &= \frac{1}{C} - \lambda    \\
+	0 = \mathcal{L}_l^\prime  &= \frac{1}{l} - \lambda w  \\ 
+	0 = \mathcal{L}_\lambda^\prime &=  - \left[ c -  w\cdot(h-l)  -  \pi +  T    \right]             \\
+\end{align}
 
-Therefore \(c'=(1+r)\beta c\) and 
-\[c+{(1+r)\beta c \over 1+r}=c(1+\beta)=we\]
-\[c={we\over 1+\beta}\]
+<p>Rearrange and combine to get:</p>
+\[\boxed{\begin{gather}
+	w = {\left(\frac{1}{l}\right) \over \left(\frac{1}{C}\right)} =  \frac{ C}{l}  = MRS_{lC} \\
+	c    =  w\cdot(h-l)  +  \pi -  T           \\
+\end{gather}}\]
 
-At this point, we have found the formulas for all the endogenous variables, and can plug in the exogenous parameters to find the result.
+<h6>Explicitly solving:</h6>
+
+<p>For this utility function, we can also explicitly solve for the optimal allocation. Rearrange to get \(C= w l \), then plug this into the budget constraint and solve for \(l\):</p>
+\begin{gather}
+	w l =  w\cdot(h-l)  +  \pi -  T  \\
+	2lw =  wh  +  \pi -  T \\
+	l^* = \frac{1}{2}\frac{wh  +  \pi -  T}{w}\\
+	l^* = \frac{1}{2}\left(h+\frac{ \pi -  T}{w}\right)\\
+\end{gather}
+
+<p>And plug this into \(C=\frac{w}{\gamma} l \) to get:</p>
+    \[C^* = \frac{wh  +  \pi -  T}{2}\]
+    
+
+
+<p>Of course, if the above expressions give us an allocation in which \(l>h\), then our assumption that \(l < h \) was faulty, and the optimum is at the corner case, where \(l=h\) and \(C = \pi - T\).</p>
+
 
 
 
@@ -85,6 +119,11 @@ At this point, we have found the formulas for all the endogenous variables, and 
     t2 = 0;
     beta = 0.8;
     r = 0.25;
+    //
+    w = 2;
+    h = 80;
+    pi = 20;
+    T = 10;
 
     //chart parameters
     minx = 0;
@@ -99,6 +138,11 @@ At this point, we have found the formulas for all the endogenous variables, and 
     $('#tax2').val(t2);
     $('#beta').val(beta);
     $('#r').val(r);
+    //
+    $('#w').val(w);
+    $('#h').val(h);
+    $('#pi').val(pi);
+    $('#T').val(T);
 
 
     //Pull data from the forms and update the exogenous variables
@@ -109,6 +153,11 @@ At this point, we have found the formulas for all the endogenous variables, and 
         t2 = Number($('#tax2').val());
         beta = Number($('#beta').val());
         r = Number($('#r').val());
+        //
+        w = Number($('#w').val());
+        h = Number($('#h').val());
+        pi = Number($('#pi').val());
+        T = Number($('#T').val());
     }
 
     //calculate and update values for endogenous variables
@@ -119,6 +168,8 @@ At this point, we have found the formulas for all the endogenous variables, and 
         s = (c2-y2+t2)/(1+r);
         utility = Math.log(c1)+beta*Math.log(c2);
         MRS = c2/(beta*c1)
+
+        C = (w*h + pi - T)/2;
         
         $("#wealth").text(wealth.toFixed(2));
         $("#consumption1").text(c1.toFixed(2));
@@ -240,7 +291,7 @@ At this point, we have found the formulas for all the endogenous variables, and 
             color: '#000',
             data: genBC(wealth,r,minx,maxx,chartSteps)
         }, {
-            name: "MRS = (1+r)",
+            name: "MRS = w",
             color: '#aaf',
             data: MRSline(r,beta,minx,maxx,chartSteps)
         }, {

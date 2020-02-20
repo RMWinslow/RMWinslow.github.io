@@ -16,11 +16,103 @@
 
 
 
-
     <hr>
 
+    Information. If information can be muffled, then a coarser typespace is what we're going to see in equilibrium. Delayed signals
 
 
+    <hr>
+    Joe Roots's extension of Gibbersatherwates. Similar extension of Arrows?
+    <hr>
+
+    <p>In five cucumbers, can we find a counterexample to the greedy strategy? This is just me getting nerdsniped.</p>
+
+    <p>For simplicity, assume zero sum version. Two players. Number of cucumbers doesn't matter.</p>
+
+    <p>With one card left, lead player wins iff their card is \(\leq\) the follower's</p>
+
+    <p>There are two cards left, you are the follower. You have cards X and Y, with \(X \geq Y\). Lead player plays Z. If Z > X, you must play Y. Otherwise, you have a choice of X or Y, and you should play X because playing Y dominates playing X in the final round. Therefore, the game is solved after the lead plays in the penultimate round.</p>
+
+    <p>There are two cards left, you are the lead. You have cards A and B, with \(A > B\). Opponent has cards X and Y, with \(X \geq Y\). Now what do? 
+        If you play a card greater than X, the opponent will play Y then follow in the final round with X. 
+        Otherwise the opponent will play X and lead in the final round with Y. Let's look at all the possibilities:</p>
+    <ul>
+        <li>Case 1: \(A > B > X \geq Y\). You will lose either way.</li>
+        <li>Case 2: \(A > B = X \geq Y\). Play A, and the opponent plays plays Y; You lead with B, opponent loses. You play </li>
+        <li>Case 3: \(A > B X \geq Y\)</li>
+        <li>Case 4: \(A > B X \geq Y\)</li>
+        <li>Case 5: \(A > B X \geq Y\)</li>
+    </ul>
+    
+    <p>There are two tricks left. You are the lead, with cards \(A\) and \(a\), where \(A > a\) (If A=a, your choice doesn't matter). Your opponent has cards \(B\) and \(b\). You don't know what the values of \(B\) and \(b\) are, but without loss of generality, have \(B \geq b\). Your opponent will play optimally, so the following is true:</p>
+    <ul>
+        <li>If the card you play is strictly greater than B, the opponent will play b, you will take the trick and lead the final round. And then in the final round, your opponent will play B.</li>
+            <ul>
+            <li>If you played A, you win when a ≤ B.</li>
+            <li>If you played a, you win when A ≤ B.</li>
+            </ul>
+        <li>Otherwise, if the card you play is less than or equal to B, the opponent will play B, take the trick, and lead the final round with b.</li>
+            <ul>
+            <li>If you played A, you win when a < b.</li>
+            <li>If you played a, you win when A < b.</li>
+            </ul>
+    </ul>
+    <p>But if you played a and a > B, it can't be that A ≤ B. 
+        And if A < B, then you win when playing A if a < b.</p>
+
+
+    <p>So therefore A is a winning move iff (A > B AND a ≤ B) OR (A ≤ B AND a < b). This condition is equal to the union of mutually exclusive events: (a < b) OR (A > B AND b ≤ a ≤ B). We can then find the condition for when A loses by applying De Morgan's Law. NOT((a < b) OR (A > B AND b ≤ a ≤ B)) = NOT(a < b) AND NOT(A > B AND b ≤ a ≤ B) = (a ≥ b) AND (A ≤ B OR b > a  OR a > B). This simplifies to ...((a ≥ b AND A ≤ B) OR (a > B))</p>
+
+    <p>Likewise, a is a winning move iff (a > B AND A ≤ B) OR (a ≤ B AND A < b). Note that (a > B AND A ≤ B) is impossible. Note also that (A < b) implies (a ≤ B). Thus we can simplify, and say that a is a winning move iff (A < b). And a is a losing move iff (A ≥ b)</p>
+
+    <p>Putting this together, we get the following results: </p>
+    <ul>
+        <li>Either card wins when ((a < b) OR (A > B AND b ≤ a ≤ B)) AND (A < b). This simplifies to  (A < b).</li>
+        <li>A wins, a loses: ((a < b) OR (A > B AND b ≤ a ≤ B)) AND (A ≥ b)  simplifies to: (a < b AND A ≥ b) OR (A > B AND b ≤ a ≤ B)...
+            (a < b AND B ≥ A ≥ b) OR (A > B AND a ≤ B)</li>
+        <li>a wins, A loses: ((a ≥ b AND A ≤ B) OR (a > B)) AND (A < b)...((a ≥ b AND A < b))...FALSE </li> T
+        <li>Either card loses: ((a ≥ b AND A ≤ B) OR (a > B)) AND (A ≥ b)...</li>
+    </ul>
+
+
+    <p>Now remember, you don't know the actual values of b and B. In Game Theory terms, your information set is determined only by the values of a and A, and your choice of strategy must depend only on that information. (In an actual game, the sequence of cards already played would also determine your information set.)</p>
+
+    <p>Which card is better? The cases where you win either way or lose either way are irrelevant to this decisions. What matters is the values of the probabilities:
+        A is better when 
+        a is better when Pr((a ≥ b AND A < b)) > Pr((a < b AND A ≥ b) OR (A > B AND b ≤ a ≤ B))</p>
+
+    <p>Can we find a case where it is better to play your low card? We would need that Pr((A > B AND a ≤ B)OR(a < b AND A = B)) < Pr().</p>
+
+    Suppose A cant equal B and a cant equal b. Then need Pr((A > B AND a < B)) < Pr((a > b AND A < B)).
+
+    Say A = 8, a = 7, and all other 7s,8s are in discard. Otherwise, dscard is even. 
+    Play the 8, 
+
+
+
+    So actually nvm, always better for penultimate lead to play high
+
+
+    <!--
+        
+
+    1100
+    1010
+    1001
+    0110
+    0101
+    0011
+
+    ABXY DONE
+    AXBY
+    AXYB
+    XABY
+    XAYB
+    XYAB
+    -->
+        
+
+    <hr>
 
 
 
