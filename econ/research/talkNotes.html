@@ -13,6 +13,72 @@
     <p>Here is where I keep notes about the talks that I have attended.</p>
     
 
+
+
+
+
+
+
+
+
+
+    <h3>Mar 2nd: Kris Iyer - Persuasion with risk-conscious agents: A geometric approach</h3>
+    <ul>
+        <li>Online, the payoff to a user depends on the state of the network. Congestion, other users, remainging itesm, etc. </li>
+        <li>How should a platform share information with users to persuade them to "better" outcomes? Operations Research</li>
+        <li>Uncertain wait times are percieved to be longer. Customers are risk averase over wait time.</li>
+        <li>Straightforward expected utility doesn't capture the fact that consumers tend to dislike variance.</li>
+        <li>My Thought: asymetric time costs due to delays necessitating schedule restructuring??</li>
+        <li>Bayesian Persuasion is a hot field.  Platform has commitment power.</li>
+        <li>Basic Model</li>
+            <ul>
+                <li>  State of the world \(\omega\in\Omega\). e.g. waiting times</li>
+                <li>  Reciever chooses an action \(a\in A\). Like choosing ot wait.</li>
+                <li> Sender commits to a signaling scheme \(S,\sigma\), where S is the set of possible signals. \sigma is a mapping from state and signal \(\sigma(\omega,s)=P(sendsignal \; s  |  state=\omega \)</li>
+                <li>Reciever utility for an action under belief \(\mu\) is given by \(\rho(\mu,a)\). EX: mean variance utility, conditional value at risk, risk measures, cumulative prospect theory.</li>
+            </ul>
+        <li>With expected utility maximizers, utility is linear in belief. With risk-concious agents, utility need not be linear in belief. </li>
+        <li>Lookup later: Equilibirum topology: weak star. Alea pardox? Ellesburg Paradox?</li>
+        <li>The reciever upon getting signal s, chooses the action to maximize \(\rho(\mu_s, a)\\)</li>
+        <li>Sender's goal is to select a signalling machanism \(s,\sigma\) to maximize expect sender's expected utility. </li>
+        <li>Linear Programming formulation fails in this setting.</li>
+        <li>Coalescing signals will not change optimal actions if spaces which induce each optimal action are convex. Happens with expected utiltiy.</li>
+        <li>Sender can control action directly. Given obeidience constraint</li>
+        <li>Relax assumption of expected utility. Then coalescing can change actions. Revalation principle fails. action recomendations may not suffice.</li>
+        <li>Outside idea: Apply this to patrick's farming thing. Non-expected utility, I mean.</li>
+        <li>Set up a persusion scheme so the reciever will always choose something other than their prior. (myexample:choosecareer) cant do that with expected utiilty</li>
+        <li>Lemma: if two signals induce the same beliefm the coalescing those signals induces that belief. CAn use belief recomendatons. Need that mean mean posterior is the prior. Baye's plasubility. </li>
+        <li>Instead of optimizing over the entire space of ditributions of beliefs. Instead we can compute over \(m_a\)s where each \(m_a\) is the mean posterior mean over the cluster of bbelifes which induce action \(a\)</li>
+        <li>Sender's optial signaling mechanism can be found by solving a convex optimization problem.</li>
+        <li>My thought: what if sender might not be credible.???</li>
+        <li>At most (\Omega\) actions per signal. convex analysis.</li>
+        <li>Binary Persuasion:</li>
+            <ul>
+                <li>Two actions (1 and 0), Sender prefers 1 over 0.</li>
+                <li>Assume that ht eset of beliefs which induces action 0 is negative.</li>
+            </ul>
+        <li>If the prior is in the convex hull of \(P_1\) and in \(P_0\), then the reciever can be fully persuaded.</li>
+        <li>Robust Persuasion: Sender Minimaxes against rciever with private type </li>
+        <li>According to Lingebrunk an dIyer 2017, with expected utility customers, the optimal signaliing mechanism sends "join" or "leave" signals, and has a threshold structure.</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+    <hr>
+
     <h3>Feb 14: Firm Creation and Local Growth, Conor Walsh</h3>
     <ul>
         <li>New firms create new ideas, they creatively destroy old stuff, and they provide idea diffusion. Lots of important stuff.</li>

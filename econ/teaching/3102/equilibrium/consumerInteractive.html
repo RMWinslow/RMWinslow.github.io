@@ -18,8 +18,8 @@
 <b><table style="text-align: center; ">
         <tr>
             <td>\(we\): <output id='wealth'>test</output></td>
-            <td>\(c\): <output id='consumption1'>test</output></td>
-            <td>\(c'\): <output id='consumption2'>test</output></td>
+            <td>\(c\): <output id='consumption'>test</output></td>
+            <td>\(l\): <output id='leisure'>test</output></td>
             <td>\(s\): <output id='savings'>test</output></td>
         </tr>
 </table></b>
@@ -120,8 +120,8 @@ subject to the constraints:
     beta = 0.8;
     r = 0.25;
     //
-    w = 2;
-    h = 80;
+    w = 1;
+    h = 50;
     pi = 20;
     T = 10;
 
@@ -162,19 +162,17 @@ subject to the constraints:
 
     //calculate and update values for endogenous variables
     function updateEndogenous(){
-        wealth = y1-t1 + (y2-t2)/(1+r);
-        c1 = wealth / (1+beta);
-        c2 = (1+r)*beta*c1;
-        s = (c2-y2+t2)/(1+r);
-        utility = Math.log(c1)+beta*Math.log(c2);
-        MRS = c2/(beta*c1)
+        wealth = w*h + pi - T;
+        l = wealth / (2*w);
+        c = wealth / (2);
+        utility = Math.log(l)+Math.log(c);
+        MRS = c/l
 
-        C = (w*h + pi - T)/2;
+        //C = (w*h + pi - T)/2;
         
         $("#wealth").text(wealth.toFixed(2));
-        $("#consumption1").text(c1.toFixed(2));
-        $("#consumption2").text(c2.toFixed(2));
-        $("#savings").text(s.toFixed(2));
+        $("#leisure").text(l.toFixed(2));
+        $("#consumptions").text(c.toFixed(2));
         $("#utility").text(utility.toFixed(2));
     }
     updateEndogenous();
@@ -182,37 +180,43 @@ subject to the constraints:
 //----------------------------------------------------------------
 
     //Functions for drawing lines.
-    function genBC(w,r,minx,maxx,steps){
-        data = [];
-        stepsize = (maxx-minx)/steps;
-        for (var i = 0; i <= 50; i++){
-            x = minx+i*stepsize;
-            y = w*(1+r)-(1+r)*x;
-            data.push([x,y]);
-        }
-        data.push([w,0]); //manually add x intercept
-        return data;
-    }
-
-    function MRSline(r,beta,minx,maxx,steps){
+    function genBC(w,h,pi,T,minx,maxx,steps){
+        //TODO: split into two loops around the number of steps needed to get to h.
         data = [];
         stepsize = (maxx-minx)/steps;
         for (var i = 0; i <= steps; i++){
             x = minx+i*stepsize;
-            y =(1+r)*beta*x;       
+            y = w*h + pi - T - w*x;
+            if (x > h){
+                data.push([h, pi-T]);
+            }
+            else{
+                data.push([x,y]);}
+        }
+        data.push([h,0]); //manually add x intercept
+
+        return data;
+    }
+
+    function MRSline(w,minx,maxx,steps){
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y = w*x;       
             data.push([x,y]);
         }
         return data;
     }
 
-    function genIsoquant(c1,c2,minx,maxx,steps){
+    function genIsoquant(l,c,minx,maxx,steps){
         //returns an array of points to draw an isoquant through this point
         data = [];
         stepsize = (maxx-minx)/steps;
-        utility = Math.log(c1)+beta*Math.log(c2);
+        utility = Math.log(l) + Math.log(c);
         for (var i = 0; i <= steps; i++){
             x = minx+i*stepsize;
-            y = Math.exp((utility-Math.log(x))/beta) ;   
+            y = Math.exp((utility-Math.log(x))) ;   
             data.push([x,y]);
         }
         return data;
@@ -282,29 +286,22 @@ subject to the constraints:
         series: [{
             name: "Utility  Iso ",
             color : '#ada',
-            data: genIsoquant(c1,c2,minx,maxx,chartSteps),//[{x:0,y:0,egg:5},{x:35,y:36,egg:5},{x:4,y:0,egg:5},{x:0,y:43,egg:5}],
+            data: genIsoquant(l,c,minx,maxx,chartSteps),//[{x:0,y:0,egg:5},{x:35,y:36,egg:5},{x:4,y:0,egg:5},{x:0,y:43,egg:5}],
             tooltip: {
                 pointFormat: "c={point.x:.2f}, c'={point.y:.2f} ,{point.egg}"
             }
         },{
             name: "Budget Constraint",
             color: '#000',
-            data: genBC(wealth,r,minx,maxx,chartSteps)
+            data: genBC(w,h,pi,T,minx,maxx,chartSteps)
         }, {
             name: "MRS = w",
             color: '#aaf',
-            data: MRSline(r,beta,minx,maxx,chartSteps)
+            data: MRSline(w,minx,maxx,chartSteps)
         }, {
-            name:"Endowment",
-            color: '#cc0000',
-            data:[{x:y1-t1,y:y2-t2,marker: {symbol: 'url(bigE.png)'}}],
-            tooltip: {
-                snap: 50
-            },
-        },{
             name:"Optimum",
             color: '#ffff00',
-            data:[{x:c1,y:c2,marker: {symbol: 'url(star.png)'}}]
+            data:[{x:l,y:c,marker: {symbol: 'url(star.png)'}}]
         }]
     });
 
@@ -314,11 +311,10 @@ subject to the constraints:
 
 //Functions to update the graph's  data
 function updateChart(){
-    endowChart.series[0].setData(genIsoquant(c1,c2,minx,maxx,chartSteps), redraw=false);
+    endowChart.series[0].setData(genIsoquant(l,c,minx,maxx,chartSteps), redraw=false);
     endowChart.series[1].setData(genBC(wealth,r,minx,maxx,chartSteps), redraw=false);
-    endowChart.series[2].setData(MRSline(r,beta,minx,maxx,chartSteps), redraw=false);
-    endowChart.series[3].data[0].update([y1-t1,y2-t2], redraw=false);
-    endowChart.series[4].data[0].update([c1,c2], redraw=false);
+    endowChart.series[2].setData(MRSline(w,minx,maxx,chartSteps), redraw=false);
+    endowChart.series[3].data[0].update([l,c], redraw=false);
     endowChart.redraw();
 }
 
