@@ -140,11 +140,9 @@ subject to the constraints:
             c=pi-T
         }
 
-        N = h-l;
 
         $("#wealth").text(wealth.toFixed(2));
         $("#leisure").text(l.toFixed(2));
-        $("#labor").text(N.toFixed(2));
         $("#consumptions").text(c.toFixed(2));
         $("#utility").text(utility.toFixed(2));
     }
@@ -229,7 +227,7 @@ subject to the constraints:
         },
         tooltip: {
             headerFormat: '<b>{series.name}</b><br>',
-            pointFormat: "l={point.x:.2f}, c={point.y:.2f} ,"
+            pointFormat: "c={point.x:.2f}, c'={point.y:.2f} ,"
         },
 
         plotOptions: {
