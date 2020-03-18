@@ -2,34 +2,138 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Root Notes</title>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
-    <link href="../../styles/sakura.css" rel="stylesheet" type="text/css">
-    <title>Root Notes</title>
+    <link href="../../../styles/sakura.css" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
 </head>
 <body>
-    <h1>Axioms</h1>
-    <h3>In Root's Paper:</h3>
+
+<div hidden>
+    \[
+        \newcommand{\choiceSet}{O}
+        \newcommand{\population}{N}
+        \newcommand{\preferences}{P}
+        \newcommand{\choiceRule}{f}
+    \]
+</div>
+
+<h1>Axioms and setup</h1>
+
+
+
+
+<h3>In Root's Paper:</h3>
+
+<h5>Setup in Root</h5>
+    <p>We have the following elements:
     <ul>
-        <li></li>
+        <li>A set of agents: \(N\)</li>
+        <li>A set of objects: \(O\)</li>
+        <li>The set of all possible allocations: \(A\equiv O^{|N|}\). (\(a_i\) denotes the object allocated to agent \(i\))</li>
+        <li>A nonempty constraint \(C\subset A\), which exogenously specifies the set of feasible allocations.</li>
+        <li>Each agent's strict preferences over objects: \(\succsim_i \in P\), where \(P\) is the set of linear orders  on \(O\).</li>
+        <li>A feasible mechanism mapping profiles of preferences to specific feasible allocations: \(f: P^{|N|}\to C\)</li>
+    </ul></p>
+
+
+<h5>Mechanism Properties in Root</h5>
+    <p> The following are some properties that mechanisms might have:
+    <ul>
+        <li>A mechanism is <b>Strategy Proof</b> if truth-telling is a weakly dominant strategy when every other agent is truth-telling. That is, for every agent \(i\in N\),  every preference profile \(\succsim \in P^{|N|}\), and every alternate ranking this agent could lie about having \(\succsim^\prime_i\in P^{|N|}\), the outcome that the agent gets from telling the truth is at least as good as the outcome if they lie: \[f_i(\succsim) \succsim_i f_i(\succsim^\prime_i, \succsim_{-i})\] </li>
+        <li>A mechanism is <b>Group Strategy Proof</b> if a group of agents can never benefit by collectively lying. That is, for every preference profile \(\succsim \in P^{|N|}\), and every subset of agents \(M\subset N\), there is no falsely reported preferences for the group \(\succsim^\prime_M\) which results in a Pareto Improvement for the group:
+            \[\begin{gather*}
+                f_j(\succsim^\prime_M, \succsim_{-M}) \succsim_j f_j(\succsim) \text{ for all }  j\in M \\
+                f_j(\succsim^\prime_M, \succsim_{-M}) \succ_j f_j(\succsim) \text{ for at least one }  j\in M.
+            \end{gather*}\] </li>
+        <li>A mechanism is <b>Weakly Group Strategy Proof</b> if there is no group lie which strictly benefits every member of the group. That is,   for every \(\succsim \in P^{|N|}\), and every \(M\subset N\), there is no  \(\succsim^\prime_M\) such that:\[f_j(\succsim^\prime_M, \succsim_{-M}) \succ_j f_j(\succsim) \text{ for all }j\in M \] </li>
+        <li>A mechanism is <b>Pareto Efficient</b> or <b>Unanimous</b> if there is no feasible allocation \(a\in C\)  and preference profile \(\succsim\) such that \(a \neq f(\succsim)\) but \(a_j \succsim_j f(\succsim)\) for all \(j\).</li>
+        <li>A mechanism is <b>"Nonbossy"</b> if an agent cannot lie about their own preferences in a way that changes another agent's allocation without also changing their own. That is, for all \(\succsim\) and \(\succsim^\prime_i\), \[f_i(\succsim^\prime_i, \succsim_{-i}) = f_i (\succsim) \implies f(\succsim^\prime_i, \succsim_{-i}) = f(\succsim)\]</li>
+        <li>A mechanism is <b>Maskin Monotonic</b> if increasing the ranking that each agent places on the object they are allocated never results in the mechanism instead giving them a different object. <i>("You get chocolate." "Oh, good. I recently found out that I love chocolate." "Oh, nevermind then. You get strawberry instead.")</i> That is, for all \(succsim, \succsim^\prime\), 
+            \[\{o \in O | o \succ_i f(\succsim) \}   \subset  \{o \in O | o \succ^\prime_i f(\succsim) \}  \text{ for all } i \implies   f(\succsim) = f(\succsim^\prime)\]</li>
+    </ul></p>
+
+<h5>Local Dictatorship</h5>
+    <p>Let \(\bar{C^*}\) be the set of infeasible allocations in which each agent's object is individually given to them in some feasible allocation. Let The blocks of \(\bar{C^*}\), \(E_1,...E_p\) be a partition formed by equivocating any two allocations in \(\bar{C^*}\) which assign the same object to at least one person.</p>
+
+    <p>\(f: P^2 \to C\) is called a <b>Local Dictatorship</b> if each block  \(E_i\) is assigned a local dictator \(d_i\) so that for any \(\succsim\), if agent one ranks object \(a\) the highest and agent two ranks object \(b\) the highest, then:
+        $$f(\succsim) =\begin{cases}
+            (a,b), & (a,b)\in C\\
+            (a,\max_{\succsim_2}\{y|(a,y)\in C\}), & (a,b)\in E_k \text{ and } d_k=1 \\
+            (\max_{\succsim_1}\{x|(x,b)\in C\}, b), & (a,b)\in E_k \text{ and } d_k=2 \\
+        \end{cases}$$
+    </p>
+
+
+<h5>Theorems in Root</h5>
+    <ul>
+        <li>The following are equivalent:
+            <ul>
+                <li>\(f\) is group strategy proof.</li>
+                <li>\(f\) is strategy proof and nonbossy.</li>
+                <li>\(f\) is Maskin monotonic.</li>
+            </ul>
+        </li>
+        <li>If \(f\) is group strategy proof, then it is Pareto Efficient on its image.</li>
+        <li>\(f:P^2 \to C \) is strategy proof and Pareto efficient iff it is a local dictatorship.</li>
+        <li>The mechanism \(f\)  is group strategy proof iff for every pair of agents and preference profile for all other agents, the marginal mechanism is group strategy proof. In other words, no group of agents can team up to cheat the system  iff no pair of agents can team up to cheat the system. TODO: Clean up.</li>
+        <li>For any constraint \(C\), the generalized serial dictatorship mechanism are group strategy proof and pareto efficient.</li>
+        <li>A roommates mechanism is a group strategy-proof and Pareto efficient iff it is a generalized serial dictatorship.</li>
+        <li>Gibbard-Saitherwaite: If  \(|O| > 2 \), \(C\) is the diagonal, and \(f\) is surjective and strategy proof, then \(f\) is dictatorial </li>
+        <li>Converse to GS</li>
     </ul>
 
 
-    <h3>In Standard Gibber-Saitherwaite:</h3>
+<h5>Root's GS proof</h5>
+<p>Look at marginal mechanisms, show that there is some pair of agents and profile of preferences such that the marginal mechanism has at least three allocations in its option set. </p>
+<p>Next, in this marginal mechanism, we have a dictator.  
+
+
+
+<hr>
 
 
 
 
 
-    <h3> In standard Arrow</h3>
 
 
 
 
-    <h3>Modify Arrow for Root's \(\gamma\):</h3>
 
 
+<h3>In Standard Gibbard-Saitherwaite:</h3>
+    <p>There is a set of social outcomes, \(O\), and a set of individuals \(N\) with ordinal preferences \(\in P\) over these outcomes. A social choice function  is a map from the profiles of everyone's preferences onto specific social outcomes: \(f: P^{|N|} \to O \)</p>
+    <ul>
+        <li>The rule is <b>unanimous</b> if \(f(\succsim)=a\) whenever \(a\succsim_i b\) for each \(i\in N\)  and \(b\in A\).</li>
+        <li>The rule is called <b>dictatorial</b> if there is some individual \(i\) such that \(f(\succsim) \succsim_i b  \forall b \in O\) </li>
+        <li>The rule is called <b>strategy proof</b> if for every \(i, \succsim_{-i}, \succsim_i, \succsim_i^\prime, \)  we have that \(f(\succsim) \succsim_i f(\succsim_i^\prime, \succsim_{-i})\) </li>
+    </ul>
+<p> The theorem states that If  \(|O| > 2 \), \(C\) is the diagonal, the domain of \(f\) is unrestricted, and \(f\) is surjective and strategy proof, then \(f\) is dictatorial .</p>
+
+<h5>GS Compared to Root's Setup</h5>
+<p>In both setups, agents have preferences over \(O\). But the difference is that in GS, the mechanism selects a single element from \(O\), while in Root, the mechanism selects a single element from a subset of \(O^{|N|}\), and GS comes as a result of restricting \(O^{|N|}\) to the diagonals.</p>
+
+
+
+
+
+
+<h3> Standard Arrow</h3>
+
+
+
+
+
+
+
+
+<h3>Modify Arrow for Root's \(C\):</h3>
+
+<p>So standard social choice has a mapping from preference profiles to a single object. Root maps profiles of preferences to a profile of outcomes and says social choice is the specific case where only diagonals are feasible.</p>
+
+<p>Standard Arrow maps prefence profiles to a social preference ordering. To apply the same generalization, we need to map preference profiles to a profile of preference profiles???</p>
 
 
     
