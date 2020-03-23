@@ -11,73 +11,54 @@
 <body>
 
 
-<h1>Consumer's Problem</h1>
+<h1>Two-Period Endowment Economy</h1>
 
-<div id="endowmentEconomy" style="width: 80vmin;  height: 80vmin; margin: 0 auto"></div>
+<div id="endowmentEconomy" style="width: 80vmin;  height: 85vmin; margin: 0 auto"></div>
+
+<b><table style="text-align: center; ">
+        <tr>
+            <td>\(we\): <output id='wealth'>test</output></td>
+            <td>\(c\): <output id='consumption1'>test</output></td>
+            <td>\(c'\): <output id='consumption2'>test</output></td>
+            <td>\(s\): <output id='savings'>test</output></td>
+            <td>\(U\): <output id='utility'>test</output></td>
+        </tr>
+</table></b>
 
 <b>Exogenous Variables and Parameters:</b>    <button type="button" style="float: right;" >Click here to update.</button>
 <b><table style="text-align: center;">
         <tr>
-            <td>\(w\):     <input type="number" id="w"  step="0.1" style="width: 4em;">  &nbsp; </td>
-            <td>\(h\):     <input type="number" id="h"  step="1" style="width: 4em;">  &nbsp; </td>
-            <td>\(\pi\):     <input type="number" id="pi"  step="1" style="width: 4em;">  &nbsp; </td>
-            <td>\(T\):     <input type="number" id="T"  step="1" style="width: 4em;">  &nbsp; </td>
+            <td>\(y\):     <input type="number" id="income1"  min="0" step="1" style="width: 4em;">  &nbsp; </td>
+            <td>\(y'\):   <input type="number" id="income2" min="0" step="1" style="width: 4em;"> &nbsp;  </td>
+            <td>\(t\):     <input type="number" id="tax1"   step="1" style="width: 4em;">  &nbsp;</td>
+            <td>\(t'\):   <input type="number" id="tax2"  step="1" style="width: 4em;"> &nbsp;     </td>
+            <td>\(\beta\):     <input type="number" id="beta"  min="0.01" max="1" step="0.01" style="width: 4em;">  &nbsp; </td>
+            <td>\(r\):     <input type="number" id="r"  step="0.01" style="width: 4em;">  &nbsp; </td>
         </tr  >
-        <tr>
-            <td colspan="4"><b>Endogenous Variables and Parameters:</b> </td>
-        </tr>
-        <tr>
-            <td>\(C\): <output id='consumption'>test</output></td>
-            <td>\(l\): <output id='leisure'>test</output></td>
-            <td>\(N_s\): <output id='labor'>test</output></td>
-            <td>\(U\): <output id='utility'>test</output></td>
-        </tr>
 </table></b>
 
 
 
 <h3>Solving the problem algebraically:</h3>
 The consumer's problem is 
-    \[\max_{C,l}\; U(C,l)\]
-subject to the constraints:
-    \begin{gather}
-        c\geq 0,    \quad        \quad         h \geq l \geq 0             \tag{NonNeg}\\
-        c    \leq  w\cdot(h-l)  +  \pi -  T              \tag{Budget}\\
-    \end{gather}
+\[\max_{c,c',s}\log c + \beta \log c'\]
+\[s.t. c\geq 0;c'\geq 0\]
+\[c+s\leq y-t\]
+\[c'\leq (1+r)s+y'-t'\]
 
-<p>Assuming that \(l < h\), we can set up the Lagrangian like so:</p>
-	\[ \mathcal{L} = \ln(C) +  \ln(l) - \lambda \cdot \left[ c -  w\cdot(h-l)  -  \pi +  T    \right]  \]
+Utility is strictly increasing, so the budget constraint will bind with equality.
+Solve for \(s\) in the second period, and then plug it into the first to get 
+\[s={c' -y' +t' \over 1+r}\]
+\[c+{c'\over 1+r}= y+{y' \over 1+r} - t - {t' \over 1+r}\equiv we\]
 
-<p>Take the partial derivatives and set equal to \(0\) to get the first-order conditions:</p>
-\begin{align}
-	0 = \mathcal{L}_c^\prime  &= \frac{1}{C} - \lambda    \\
-	0 = \mathcal{L}_l^\prime  &= \frac{1}{l} - \lambda w  \\ 
-	0 = \mathcal{L}_\lambda^\prime &=  - \left[ c -  w\cdot(h-l)  -  \pi +  T    \right]             \\
-\end{align}
+If the consumer is behaving optimally, they will choose consumption such that their marginal rate of substitution is equal to the exchange rate between past and future consumption:
+\[(1+r)=MRS={{1/ c} \over {\beta / c'}}={c\over \beta c'}\]
 
-<p>Rearrange and combine to get:</p>
-\[\boxed{\begin{gather}
-	w = {\left(\frac{1}{l}\right) \over \left(\frac{1}{C}\right)} =  \frac{ C}{l}  = MRS_{lC} \\
-	c    =  w\cdot(h-l)  +  \pi -  T           \\
-\end{gather}}\]
+Therefore \(c'=(1+r)\beta c\) and 
+\[c+{(1+r)\beta c \over 1+r}=c(1+\beta)=we\]
+\[c={we\over 1+\beta}\]
 
-<h6>Explicitly solving:</h6>
-
-<p>For this utility function, we can also explicitly solve for the optimal allocation. Rearrange to get \(C= w l \), then plug this into the budget constraint and solve for \(l\):</p>
-\begin{gather}
-	w l =  w\cdot(h-l)  +  \pi -  T  \\
-	2lw =  wh  +  \pi -  T \\
-	l^* = \frac{1}{2}\frac{wh  +  \pi -  T}{w}\\
-	l^* = \frac{1}{2}\left(h+\frac{ \pi -  T}{w}\right)\\
-\end{gather}
-
-<p>And plug this into \(C=\frac{w}{\gamma} l \) to get:</p>
-    \[C^* = \frac{wh  +  \pi -  T}{2}\]
-    
-
-
-<p>Of course, if the above expressions give us an allocation in which \(l>h\), then our assumption that \(l < h \) was faulty, and the optimum is at the corner case, where \(l=h\) and \(C = \pi - T\).</p>
-
+At this point, we have found the formulas for all the endogenous variables, and can plug in the exogenous parameters to find the result.
 
 
 
@@ -98,10 +79,12 @@ subject to the constraints:
     
 
     //default values for exogenous variables
-    w = 1;
-    h = 50;
-    pi = 20;
-    T = 10;
+    y1 = 20;
+    y2 = 40;
+    t1 = 0;
+    t2 = 0;
+    beta = 0.8;
+    r = 0.25;
 
     //chart parameters
     minx = 0;
@@ -110,40 +93,37 @@ subject to the constraints:
     chartSteps = 200; // The number of data points to sample when drawing a chart.
 
     //populate the input forms with the default values
-
-    $('#w').val(w);
-    $('#h').val(h);
-    $('#pi').val(pi);
-    $('#T').val(T);
+    $('#income1').val(y1);
+    $('#income2').val(y2);
+    $('#tax1').val(t1);
+    $('#tax2').val(t2);
+    $('#beta').val(beta);
+    $('#r').val(r);
 
 
     //Pull data from the forms and update the exogenous variables
     function updateExogenous(){
-        w = Number($('#w').val());
-        h = Number($('#h').val());
-        pi = Number($('#pi').val());
-        T = Number($('#T').val());
+        y1 = Number($('#income1').val());
+        y2 = Number($('#income2').val());
+        t1 = Number($('#tax1').val());
+        t2 = Number($('#tax2').val());
+        beta = Number($('#beta').val());
+        r = Number($('#r').val());
     }
 
     //calculate and update values for endogenous variables
     function updateEndogenous(){
-        wealth = w*h + pi - T;
-        l = wealth / (2*w);
-        c = wealth / (2);
-        utility = Math.log(l)+Math.log(c);
-        MRS = c/l
-
-        //C = (w*h + pi - T)/2;
+        wealth = y1-t1 + (y2-t2)/(1+r);
+        c1 = wealth / (1+beta);
+        c2 = (1+r)*beta*c1;
+        s = (c2-y2+t2)/(1+r);
+        utility = Math.log(c1)+beta*Math.log(c2);
+        MRS = c2/(beta*c1)
         
-        if(l>h){
-            l=h
-            c=pi-T
-        }
-
-
         $("#wealth").text(wealth.toFixed(2));
-        $("#leisure").text(l.toFixed(2));
-        $("#consumptions").text(c.toFixed(2));
+        $("#consumption1").text(c1.toFixed(2));
+        $("#consumption2").text(c2.toFixed(2));
+        $("#savings").text(s.toFixed(2));
         $("#utility").text(utility.toFixed(2));
     }
     updateEndogenous();
@@ -151,43 +131,37 @@ subject to the constraints:
 //----------------------------------------------------------------
 
     //Functions for drawing lines.
-    function genBC(w,h,pi,T,minx,maxx,steps){
-        //TODO: split into two loops around the number of steps needed to get to h.
+    function genBC(w,r,minx,maxx,steps){
         data = [];
         stepsize = (maxx-minx)/steps;
         for (var i = 0; i <= steps; i++){
             x = minx+i*stepsize;
-            y = w*h + pi - T - w*x;
-            if (x > h){
-                data.push([h, pi-T]);
-            }
-            else{
-                data.push([x,y]);}
+            y = w*(1+r)-(1+r)*x;
+            data.push([x,y]);
         }
-        data.push([h,0]); //manually add x intercept
-
+        data.push([w,0]); //manually add x intercept
         return data;
     }
 
-    function MRSline(w,minx,maxx,steps){
+    function MRSline(r,beta,minx,maxx,steps){
         data = [];
         stepsize = (maxx-minx)/steps;
         for (var i = 0; i <= steps; i++){
             x = minx+i*stepsize;
-            y = w*x;       
+            y =(1+r)*beta*x;       
             data.push([x,y]);
         }
         return data;
     }
 
-    function genIsoquant(l,c,minx,maxx,steps){
+    function genIsoquant(c1,c2,minx,maxx,steps){
         //returns an array of points to draw an isoquant through this point
         data = [];
         stepsize = (maxx-minx)/steps;
-        utility = Math.log(l) + Math.log(c);
+        utility = Math.log(c1)+beta*Math.log(c2);
         for (var i = 0; i <= steps; i++){
             x = minx+i*stepsize;
-            y = Math.exp((utility-Math.log(x))) ;   
+            y = Math.exp((utility-Math.log(x))/beta) ;   
             data.push([x,y]);
         }
         return data;
@@ -206,7 +180,7 @@ subject to the constraints:
         },
         xAxis: {
             title: {
-                text: 'l (leisure)'
+                text: 'c - Consumption Today'
             },           
             //height: axissize,            
            // width: axissize,
@@ -217,7 +191,7 @@ subject to the constraints:
         },
         yAxis: {
             title: {
-                text: "C (Consumption)"
+                text: "c' - Consumption Tomorrow"
             },
             //height: axissize,            
             //width: axissize,
@@ -257,22 +231,29 @@ subject to the constraints:
         series: [{
             name: "Utility  Iso ",
             color : '#ada',
-            data: genIsoquant(l,c,minx,maxx,chartSteps),//[{x:0,y:0,egg:5},{x:35,y:36,egg:5},{x:4,y:0,egg:5},{x:0,y:43,egg:5}],
+            data: genIsoquant(c1,c2,minx,maxx,chartSteps),//[{x:0,y:0,egg:5},{x:35,y:36,egg:5},{x:4,y:0,egg:5},{x:0,y:43,egg:5}],
             tooltip: {
                 pointFormat: "c={point.x:.2f}, c'={point.y:.2f} ,{point.egg}"
             }
         },{
             name: "Budget Constraint",
             color: '#000',
-            data: genBC(w,h,pi,T,minx,maxx,chartSteps)
+            data: genBC(wealth,r,minx,maxx,chartSteps)
         }, {
-            name: "MRS = w",
+            name: "MRS = (1+r)",
             color: '#aaf',
-            data: MRSline(w,minx,maxx,chartSteps)
+            data: MRSline(r,beta,minx,maxx,chartSteps)
         }, {
+            name:"Endowment",
+            color: '#cc0000',
+            data:[{x:y1-t1,y:y2-t2,marker: {symbol: 'url(bigE.png)'}}],
+            tooltip: {
+                snap: 50
+            },
+        },{
             name:"Optimum",
             color: '#ffff00',
-            data:[{x:l,y:c,marker: {symbol: 'url(star.png)'}}]
+            data:[{x:c1,y:c2,marker: {symbol: 'url(star.png)'}}]
         }]
     });
 
@@ -282,10 +263,11 @@ subject to the constraints:
 
 //Functions to update the graph's  data
 function updateChart(){
-    endowChart.series[0].setData(genIsoquant(l,c,minx,maxx,chartSteps), redraw=false);
-    endowChart.series[1].setData(genBC(w,h,pi,T,minx,maxx,chartSteps), redraw=false);
-    endowChart.series[2].setData(MRSline(w,minx,maxx,chartSteps), redraw=false);
-    endowChart.series[3].data[0].update([l,c], redraw=false);
+    endowChart.series[0].setData(genIsoquant(c1,c2,minx,maxx,chartSteps), redraw=false);
+    endowChart.series[1].setData(genBC(wealth,r,minx,maxx,chartSteps), redraw=false);
+    endowChart.series[2].setData(MRSline(r,beta,minx,maxx,chartSteps), redraw=false);
+    endowChart.series[3].data[0].update([y1-t1,y2-t2], redraw=false);
+    endowChart.series[4].data[0].update([c1,c2], redraw=false);
     endowChart.redraw();
 }
 

@@ -11,12 +11,6 @@
 <body>
 
 <div hidden>
-    \[
-        \newcommand{\choiceSet}{O}
-        \newcommand{\population}{N}
-        \newcommand{\preferences}{P}
-        \newcommand{\choiceRule}{f}
-    \]
 </div>
 
 <h1>Axioms and setup</h1>
@@ -82,6 +76,7 @@
         <li>A roommates mechanism is a group strategy-proof and Pareto efficient iff it is a generalized serial dictatorship.</li>
         <li>Gibbard-Saitherwaite: If  \(|O| > 2 \), \(C\) is the diagonal, and \(f\) is surjective and strategy proof, then \(f\) is dictatorial </li>
         <li>Converse to GS</li>
+        <li>...</li>
     </ul>
 
 
@@ -104,22 +99,35 @@
 
 
 <h3>In Standard Gibbard-Saitherwaite:</h3>
-    <p>There is a set of social outcomes, \(O\), and a set of individuals \(N\) with ordinal preferences \(\in P\) over these outcomes. A social choice function  is a map from the profiles of everyone's preferences onto specific social outcomes: \(f: P^{|N|} \to O \)</p>
+    <p>There is a set of social outcomes, \(O\), and a set of individuals \(N\), with individual \(i\) having ordinal preferences \(\succsim_i\in P\) over these outcomes. A social choice function  is a map from the profiles \(\succsim \equiv (\succsim_1, ... \succsim_{|N|})\) of everyone's preferences onto specific social outcomes: \(f: P^{|N|} \to O \)</p>
     <ul>
         <li>The rule is <b>unanimous</b> if \(f(\succsim)=a\) whenever \(a\succsim_i b\) for each \(i\in N\)  and \(b\in A\).</li>
-        <li>The rule is called <b>dictatorial</b> if there is some individual \(i\) such that \(f(\succsim) \succsim_i b  \forall b \in O\) </li>
+        <li>The rule is called <b>dictatorial</b> if there is some individual \(i\) such that \(f(\succsim) \succsim_i b  \ \  \forall b \in O\) </li>
         <li>The rule is called <b>strategy proof</b> if for every \(i, \succsim_{-i}, \succsim_i, \succsim_i^\prime, \)  we have that \(f(\succsim) \succsim_i f(\succsim_i^\prime, \succsim_{-i})\) </li>
+        <li>The rules is called <b>monotonic</b> if for any pair of preference profiles, \(\succsim, \succsim^\prime\)\[
+            \{b : f(\succsim) \succsim_i  b \}  \subset \{b : f(\succsim) \succsim^\prime_i b\} \; \forall i \in N \; \implies \; f(\succsim)=f(\succsim^\prime)
+            \]</li>
     </ul>
-<p> The theorem states that If  \(|O| > 2 \), \(C\) is the diagonal, the domain of \(f\) is unrestricted, and \(f\) is surjective and strategy proof, then \(f\) is dictatorial .</p>
+<p> The theorem states that if  \(|O| > 2 \), the domain of \(f\) is unrestricted, and \(f\) is onto and strategy proof, then \(f\) is dictatorial .</p>
 
 <h5>GS Compared to Root's Setup</h5>
-<p>In both setups, agents have preferences over \(O\). But the difference is that in GS, the mechanism selects a single element from \(O\), while in Root, the mechanism selects a single element from a subset of \(O^{|N|}\), and GS comes as a result of restricting \(O^{|N|}\) to the diagonals.</p>
+<p>In both setups, each agent has preferences \(\succsim_i\in P\) over \(O\).  And the social mechanism \(f\) has domain \(P^{|N|}\). In both theorems, \(|O|\geq 3\)</p>
+
+<table>
+    <tr><th style="width:50%">GS</th><th>Root</th></tr>
+    <tr><td>The mechanism selects an option from \(O\)</td><td>The mechanism selects an option from \(O^{|N|}\)</td></tr>
+    <tr><td>The codomain of \(f\) is \(O\).</td><td>The codomain of \(f\) is \( O^{|N|}\).</td></tr>
+    <tr><td>The image of \(f\) is the entire set of social options \(O\).</td><td>The image of \(f\) is  some feasible subset of the set of profiles of societal options \(C \subset O^{|N|}\). In this case, \(C\) is the diagonals.</td></tr>
+    <tr><td>Requires that \(|O|>2\) and \(f\) surjective.</td><td>Technically only requires that the image of \(f\) has more than two elements.</td></tr>
+    <tr><td>strategy-proofness: \[f(\succsim) \succsim_i f(\succsim^\prime_i, \succsim_{-i})\]</td><td>strategy-proofness:  \[f_i(\succsim) \succsim_i f_i(\succsim^\prime_i, \succsim_{-i})\] (Agent only cares about the part of the social allocation given to them)</td></tr>
+    <tr><td>Dictatorial</td><td>Concerned more generally with mechanisms which are serial dictatorships. In the diagnonals, the first dictator happens to be a full dictator.</td></tr>
+</table>
 
 
 
 
 
-
+<hr>
 <h3> Standard Arrow</h3>
 
 

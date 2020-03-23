@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script> 
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+    <link href="https://www.robertmwinslow.com/styles/sakura.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+<h1>Example Problem</h1>
+
+<div id="graphHolder" style="width: 80vmin;  height: 80vmin; margin: 0 auto"></div>
+
+<b>Exogenous Variables and Parameters:</b>    <button type="button" style="float: right;" >Click here to update.</button>
+<b><table style="text-align: center;">
+        <tr>
+            <td>\(A\):     <input type="number" id="endovar1"  step="0.1" style="width: 4em;">  &nbsp; </td>
+            <td>\(B\):     <input type="number" id="endovar2"  step="1" style="width: 4em;">  &nbsp; </td>
+        </tr  >
+        <tr>
+            <td colspan="4"><b>Endogenous Variables and Parameters:</b> </td>
+        </tr>
+        <tr>
+            <td>\(C\): <output id='exovar1'>test</output></td>
+            <td>\(D\): <output id='exovar2'>test</output></td>
+        </tr>
+</table></b>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+    //Jquery gobbledygook to listen to the form and update parameters.
+    $(document).ready(function(){
+        $("button").click(function(){
+            updateExogenous();
+            updateEndogenous();
+            updateChart();
+        });            
+    });
+    //
+    
+    
+    //chart parameters
+    minx = 0;
+    maxx = 100;
+    axissize = 600; //unused currently. Had weird side effects
+    chartSteps = 400; // The number of data points to sample when drawing a chart.
+
+    //--------------------------------------------------------------------------------------------
+    
+
+    //default values for exogenous variables
+    A =50;
+    B =5;
+
+    //populate the input forms with the default values
+    $('#endovar1').val(A);
+    $('#endovar2').val(B);
+
+
+    //Pull data from the forms and update the exogenous variables
+    function updateExogenous(){
+        A = Number($('#endovar1').val());
+        B = Number($('#endovar2').val());
+    }
+
+    //calculate and update values for endogenous variables
+    function updateEndogenous(){
+        C = A+10;
+        D = B/2;
+
+        $("#exovar1").text(C.toFixed(2));
+        $("#exovar2").text(D.toFixed(2));
+    }
+    updateEndogenous();
+   
+//----------------------------------------------------------------
+
+    //Functions for drawing lines.
+
+    function testLine1(minx,maxx,steps){
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y = A+B*x
+            data.push([x,y]);
+        }
+        return data;
+    }
+
+    function testLine2(minx,maxx,steps){
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y = C+D*x
+            data.push([x,y]);
+        }
+        return data;
+    }
+
+//---------------------------------------------------------------------------
+    //Code for rendering the graphs.
+
+    var endowChart = Highcharts.chart('graphHolder', {
+        chart: {
+            type: 'line',
+            backgroundColor: null
+        },
+        title: {
+            text: "Title of the Chart"
+        },
+        xAxis: {
+            title: {
+                text: 'x axis label'
+            },           
+            //height: axissize,            
+            //width: axissize,
+            min: minx,
+            max: maxx,
+            gridLineWidth: 1,
+            tickInterval: 20
+        },
+        yAxis: {
+            title: {
+                text: "y axis label"
+            },
+            //height: axissize,            
+            //width: axissize,
+            min:minx,
+            max: maxx,
+            tickInterval: 20
+        },
+        tooltip: {
+            headerFormat: '<b>{series.name}</b><br>',
+            pointFormat: "x={point.x:.2f}, y={point.y:.2f} ,"
+        },
+
+        plotOptions: {
+            spline: {
+                marker: {
+                    enabled: true
+                }
+            },
+            series: {
+                states: {
+                    hover: {
+                        enabled: true,
+                    },
+                    inactive: {
+                        opacity: 1
+                    }
+                }
+            }
+        },
+
+        legend:{
+            enabled:true
+        },
+
+        //colors: ['#6CF', '#39F', '#06C', '#036', '#000'],
+
+        series: [{
+            name: "Example Line 1",
+            color : '#ada',
+            data: testLine1(minx,maxx,chartSteps),
+        },{
+            name: "Example Line 2",
+            color: '#000',
+            data: testLine2(minx,maxx,chartSteps)
+        },{
+            name:"Example Point",
+            color: '#ffff00',
+            data:[{x:C,y:D,marker: {symbol: 'url(star.png)'}}]
+        }]
+    });
+
+//------------------------------------------------------------------------
+
+
+
+//Functions to update the graph's  data. redraw=false makes everything update at once
+function updateChart(){
+    endowChart.series[0].setData(testLine1(minx,maxx,chartSteps), redraw=false);
+    endowChart.series[1].setData(testLine2(minx,maxx,chartSteps), redraw=false);
+    endowChart.series[2].data[0].update([C,D], redraw=false);
+    endowChart.redraw();
+}
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
