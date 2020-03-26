@@ -36,6 +36,7 @@
 
 
 
+<h3>Solving the problem algebraically:</h3>
 The consumer's problem is 
     \[\max_{C,l}\; U(C,l)\]
 subject to the constraints:
@@ -44,8 +45,41 @@ subject to the constraints:
         c    \leq  w\cdot(h-l)  +  \pi -  T              \tag{Budget}\\
     \end{gather}
 
+<p>Assuming that \(l < h\), we can set up the Lagrangian like so:</p>
+	\[ \mathcal{L} = \ln(C) +  \ln(l) - \lambda \cdot \left[ c -  w\cdot(h-l)  -  \pi +  T    \right]  \]
 
+<p>Take the partial derivatives and set equal to \(0\) to get the first-order conditions:</p>
+\begin{align}
+	0 = \mathcal{L}_c^\prime  &= \frac{1}{C} - \lambda    \\
+	0 = \mathcal{L}_l^\prime  &= \frac{1}{l} - \lambda w  \\ 
+	0 = \mathcal{L}_\lambda^\prime &=  - \left[ c -  w\cdot(h-l)  -  \pi +  T    \right]             \\
+\end{align}
+
+<p>Rearrange and combine to get:</p>
+\[\boxed{\begin{gather}
+	w = {\left(\frac{1}{l}\right) \over \left(\frac{1}{C}\right)} =  \frac{ C}{l}  = MRS_{lC} \\
+	c    =  w\cdot(h-l)  +  \pi -  T           \\
+\end{gather}}\]
+
+<h6>Explicitly solving:</h6>
+
+<p>For this utility function, we can also explicitly solve for the optimal allocation. Rearrange to get \(C= w l \), then plug this into the budget constraint and solve for \(l\):</p>
+\begin{gather}
+	w l =  w\cdot(h-l)  +  \pi -  T  \\
+	2lw =  wh  +  \pi -  T \\
+	l^* = \frac{1}{2}\frac{wh  +  \pi -  T}{w}\\
+	l^* = \frac{1}{2}\left(h+\frac{ \pi -  T}{w}\right)\\
+\end{gather}
+
+<p>And plug this into \(C=\frac{w}{\gamma} l \) to get:</p>
+    \[C^* = \frac{wh  +  \pi -  T}{2}\]
     
+
+
+<p>Of course, if the above expressions give us an allocation in which \(l>h\), then our assumption that \(l < h \) was faulty, and the optimum is at the corner case, where \(l=h\) and \(C = \pi - T\).</p>
+
+
+
 
 
 
