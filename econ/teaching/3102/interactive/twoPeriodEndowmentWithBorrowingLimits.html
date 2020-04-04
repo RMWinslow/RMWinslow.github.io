@@ -22,6 +22,7 @@
             <td>\(y^\prime\):     <input type="number" id="income2"  step="1" style="width: 4em;">  &nbsp; </td>
             <td>\(t\):     <input type="number" id="tax1"  step="1" style="width: 4em;">  &nbsp; </td>
             <td>\(t^\prime\):     <input type="number" id="tax2"  step="1" style="width: 4em;">  &nbsp; </td>
+            <td>\(pH\):     <input type="number" id="collateral"  step="1" style="width: 4em;">  &nbsp; </td>
             <td>\(r\):     <input type="number" id="rateBorrow"  step="0.01" style="width: 4em;">  &nbsp; </td>
             <td>\(\beta \):     <input type="number" id="beta"  step="0.01" style="width: 4em;">  &nbsp; </td>
         </tr  >
@@ -49,7 +50,7 @@
     <li>The consumer can choose to save or borrow in the first period. Savings are denoted by \(s\). For each unit they save, they will earn an additional \((1+r)\) units of income in the second period. For each unit they borrow, they must pay back \((1+r)\) units in the second period. Borrowing is limited by the value of the consumer's asset, so \[-s \leq pH\]</li>
     <li>The consumer's budget constraints are given by: 
         \[c + s \leq y - T\]
-        \[c \leq y^\prime - T^\prime  + (1+r) s \]
+        \[c \leq y^\prime - T^\prime  + (1+r) s + pH\]
     </li>
 </ul>
 
@@ -83,7 +84,7 @@
     
 
     //default values for exogenous variables
-    Y1 = 40;
+    Y1 = 20;
     Y2 = 40;
     T1 = 0;
     T2 = 0;
@@ -100,6 +101,7 @@
     $('#tax2').val(T2);
     $('#rateBorrow').val(rb);
     $('#beta').val(beta);
+    $('#collateral').val(pH);
 
 
     //Pull data from the forms and update the exogenous variables
@@ -110,6 +112,7 @@
         T2 = Number($('#tax2').val());
         rb = Number($('#rateBorrow').val());
         beta = Number($('#beta').val());
+        pH = Number($('#collateral').val());
     }
 
 
@@ -119,7 +122,7 @@
     //calculate and update values for endogenous variables
     function updateEndogenous(){
 
-        wb = ((Y1-T1) + (Y2-T2)/(1+rb))//wealth for a borrower
+        wb = ((Y1-T1) + (Y2-T2 + pH)/(1+rb) )//wealth for a borrower
 
         //calculate the optimum for the borrowing interest rate
         c1 = wb / (1+beta);
@@ -283,7 +286,7 @@
         },{
             name:"Endowment Point",
             color: '#C00',
-            data:[{x:(Y1-T1),y:(Y2-T2),marker: {symbol: 'url(bigE.png)'}}]
+            data:[{x:(Y1-T1),y:(Y2-T2+pH),marker: {symbol: 'url(bigE.png)'}}]
         },{
             name:"Optimum",
             color: '#FF0',
@@ -305,7 +308,7 @@ function updateChart(){
     endowChart.series[0].setData(MRSline(minx,maxx,chartSteps));
     endowChart.series[1].setData(genIsoquant(minx,maxx,chartSteps));
     endowChart.series[2].setData(Budget(minx,maxx,chartSteps));
-    endowChart.series[3].data[0].update([(Y1-T1),(Y2-T2)]);
+    endowChart.series[3].data[0].update([(Y1-T1),(Y2-T2+pH)]);
     endowChart.series[4].data[0].update([c1,c2]);
     endowChart.redraw();
 
