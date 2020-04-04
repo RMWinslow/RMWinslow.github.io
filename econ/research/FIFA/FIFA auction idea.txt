@@ -1,0 +1,10 @@
+Finite set of bidders, with different values for the good. Each bidder chooses a bribe and a bid.
+Principle has beliefs about the distribution of bids for each bidder, Chooses some threshold of skepticism, and a wage to pay the auctioneer.
+Auctioneer sees all bribes and bids, and chooses one bidder. Announces a winning bidder and their bid to the Principle.
+
+The principle behaves according to the following procedure: 
+Observe the auctioneer's announcement. If the probability of this outcome is below the threshold, the auction is nullifeid. All agents recieve 0 utility. Otherwise, the good is rewarded to the auctioneer's declared winner, who must then pay the declared bid. They recieve utility equal to (their valuation of the good - their bribe - the bid.) Auctioneer recieves utility equal to the bribe of the winner plus their wage.
+
+If the threshold, wage, and beliefs of the Principle are publically known, then what is the optimal strategy for the other agents?
+Given the above, can the Principle's choice of wage affect the probability of an auction being nuliifed?
+If the Principle is benevolent and wants to maximize the total utility of all other agents, how skeptical should they be?
