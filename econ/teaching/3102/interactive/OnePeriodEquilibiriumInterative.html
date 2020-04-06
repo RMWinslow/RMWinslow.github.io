@@ -11,7 +11,8 @@
 <body>
 
 
-<h1>Producer's Problem</h1>
+<h1>One period equilibrium</h1>
+
 
 <div id="graphHolder" style="width: 75vmin;  height: 80vmin; margin: 0 auto"></div>
 
@@ -20,16 +21,22 @@
         <tr>
             <td>\(K\):     <input type="number" id="capital"  step="1" style="width: 4em;">  &nbsp; </td>
             <td>\(z\):     <input type="number" id="tfp"  step="0.1" style="width: 4em;">  &nbsp; </td>
-            <td>\(w\):     <input type="number" id="wage"  step="0.1" style="width: 4em;">  &nbsp; </td>
             <td>\(\alpha\):     <input type="number" id="alpha"  step="0.05" style="width: 4em;">  &nbsp; </td>
+            <td>\(h\):     <input type="number" id="h"  step="1" style="width: 4em;">  &nbsp; </td>
+            <td>\(G\):     <input type="number" id="T"  step="1" style="width: 4em;">  &nbsp; </td>
+            <td></td>
+            <td> </td>
         </tr  >
         <tr>
             <td colspan="4"><b>Endogenous Variables and Parameters:</b> </td>
         </tr>
         <tr>
                 <td>\(N_d\): <output id='laborDemand'>test</output></td>
+                <td>\(w\): <output id='wage'>test</output></td>
                 <td>\(Y\): <output id='output'>test</output></td>
                 <td>\(\pi\): <output id='profit'>test</output></td>
+                <td>\(C\): <output id='consumption'>test</output></td>
+                <td>\(U\): <output id='utility'>test</output></td>
                 <td></td>
         </tr>
 </table></b>
@@ -37,9 +44,22 @@
 
 
 
+<h3>Details</h3>
 
-In this example,capital stock is given exogenously, and output is determined by the production function:
-\[Y = zF(K,N_d)=zK^\alpha N_d^{1-\alpha}\]
+<ul>
+        <li>The firm solves 
+            \[\max_{N_s}\left[ zK^\alpha N_d^{1-\alpha} - wN_s\right]\]
+        </li>
+        <li>The consumer solves
+                \[\max_{C,l}\;\left[\ln C + \ln l\right]\]
+                subject to the constraints:
+                    \begin{gather}
+                        c\geq 0,    \quad        \quad         h \geq l \geq 0             \tag{NonNeg}\\
+                        c    \leq  w\cdot(h-l)  +  \pi -  T              \tag{Budget}\\
+                    \end{gather}
+        </li>
+        <li>Market Clearing Conditions are \[Y=C+G\]   \[N_d = N_s = h-l\]</li>
+        <li>Gov Budget is \[G=T\]</li>
 
 
 
@@ -71,15 +91,20 @@ In this example,capital stock is given exogenously, and output is determined by 
 
     //default values for exogenous variables
     z = 5;
-    K = 3;
+    K = 4;
     w = 1;
     α = 0.5;
+    h = 80;
+    T = 10;
+
 
     //populate the input forms with the default values
     $('#tfp').val(z);
     $('#capital').val(K);
     $('#wage').val(w);
     $('#alpha').val(α);
+    $('#h').val(h);
+    $('#T').val(T);
 
 
     //Pull data from the forms and update the exogenous variables
@@ -88,17 +113,74 @@ In this example,capital stock is given exogenously, and output is determined by 
         K = Number($('#capital').val());
         w = Number($('#wage').val());
         α = Number($('#alpha').val());
+        h = Number($('#h').val());
+        T = Number($('#T').val());
     }
 
     //calculate and update values for endogenous variables
     function updateEndogenous(){
+
+        //Because  I'm too lazy to actually solve for w, I'll just iterate through a set of candidate values and choose the one which puts us closest to equilibrium.
+
+        var bestLaborGap = 999999;
+        var bestWage = 0;
+
+        for (var i = 0; i <= 5; i = i + 0.001){
+            w=i;
+
+            console.log(i);
+
+            Nd = (((1-α)*z)/w)**(1/α) * K;
+            Y = z * K**α * Nd**(1-α);
+            pi = Y - w*Nd;
+
+            wealth = w*h + pi - T;
+            l = wealth / (2*w);
+            c = wealth / (2);
+            utility = Math.log(l)+Math.log(c);
+            MRS = c/l
+
+            if(l>h){
+                l=h
+                c=pi-T
+            }
+
+
+            currentLaborGap = Math.abs(Nd - (h-l));
+            if (currentLaborGap < bestLaborGap){
+                bestLaborGap = currentLaborGap;
+                bestWage = w;
+            }
+
+        }
+
+        w = bestWage;
+
         Nd = (((1-α)*z)/w)**(1/α) * K;
         Y = z * K**α * Nd**(1-α);
         pi = Y - w*Nd;
 
-        $("#laborDemand").text(Nd.toFixed(2));
-        $("#output").text(Y.toFixed(2));
-        $("#profit").text(pi.toFixed(2));
+        wealth = w*h + pi - T;
+        l = wealth / (2*w);
+        c = wealth / (2);
+        utility = Math.log(l)+Math.log(c);
+        MRS = c/l
+
+        if(l>h){
+            l=h
+            c=pi-T
+        }
+
+
+
+        $("#laborDemand").text(Nd.toFixed(1));
+        $("#output").text(Y.toFixed(1));
+        $("#profit").text(pi.toFixed(1));
+        $("#wealth").text(wealth.toFixed(1));
+        $("#leisure").text(l.toFixed(1));
+        $("#consumption").text(c.toFixed(1));
+        $("#utility").text(utility.toFixed(1));
+        $("#wage").text(w.toFixed(1));
     }
     updateEndogenous();
    
@@ -111,7 +193,7 @@ In this example,capital stock is given exogenously, and output is determined by 
         stepsize = (maxx-minx)/steps;
         for (var i = 0; i <= steps; i++){
             x = minx+i*stepsize;
-            y = z * K**α * x**(1-α);
+            y = z * K**α * (h-x)**(1-α) - T;
             data.push([x,y]);
         }
         return data;
@@ -122,20 +204,40 @@ In this example,capital stock is given exogenously, and output is determined by 
         stepsize = (maxx-minx)/steps;
         for (var i = 0; i <= steps; i++){
             x = minx+i*stepsize;
-            y = x*w
+            y = (h-x)*w
             data.push([x,y]);
         }
         return data;
     }
 
-    function tangentline(minx,maxx,steps){
+    function isoquant(minx,maxx,steps){
+        //returns an array of points to draw an isoquant through this point
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        utility = Math.log(l) + Math.log(c);
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y = Math.exp((utility-Math.log(x))) ;   
+            data.push([x,y]);
+        }
+        return data;
+    }
+
+    function genBC(minx,maxx,steps){
+        //TODO: split into two loops around the number of steps needed to get to h.
         data = [];
         stepsize = (maxx-minx)/steps;
         for (var i = 0; i <= steps; i++){
             x = minx+i*stepsize;
-            y = x*w+pi
-            if(x<Nd+10 && x>Nd-10){data.push([x,y]);}
+            y = w*h + pi - T - w*x;
+            if (x > h){
+                data.push([h, pi-T]);
+            }
+            else{
+                data.push([x,y]);}
         }
+        data.push([h,0]); //manually add x intercept
+
         return data;
     }
 
@@ -148,11 +250,11 @@ In this example,capital stock is given exogenously, and output is determined by 
             backgroundColor: null
         },
         title: {
-            text: "Producer's Problem with Cobb-Douglas Production and Exogenous Capital"
+            text: "Producer and Consumer"
         },
         xAxis: {
             title: {
-                text: 'Labor Demand'
+                text: 'l = h - N'
             },           
             //height: axissize,            
             //width: axissize,
@@ -163,7 +265,7 @@ In this example,capital stock is given exogenously, and output is determined by 
         },
         yAxis: {
             title: {
-                text: ""
+                text: "C=Y-G"
             },
             //height: axissize,            
             //width: axissize,
@@ -201,20 +303,21 @@ In this example,capital stock is given exogenously, and output is determined by 
         //colors: ['#6CF', '#39F', '#06C', '#036', '#000'],
 
         series: [{
-            name: "Cost",
-            data: cost(minx,maxx,chartSteps),
-            enableMouseTracking: false
-        },{
-            name: "MPN = w",
-            data: tangentline(minx,maxx,chartSteps),
+            name: "Isoquant",
+            color: "#ada",
+            data: isoquant(minx,maxx,chartSteps),
             enableMouseTracking: false
         },{
             name: "Output",
             data: output(minx,maxx,chartSteps),
         },{
-            name:"Profit-Maximizing Point",
+            name: "Budget",
+            color: "#000",
+            data: genBC(minx,maxx,chartSteps),
+        },{
+            name:"Equilibrium",
             color: '#ffff00',
-            data:[{x:Nd,y:Y,marker: {symbol: 'url(star2.png)'}}]
+            data:[{x:h-Nd,y:Y-T,marker: {symbol: 'url(star.png)'}}]
         },]
     });
 
@@ -224,10 +327,10 @@ In this example,capital stock is given exogenously, and output is determined by 
 
 //Functions to update the graph's  data. redraw=false makes everything update at once
 function updateChart(){
-    endowChart.series[2].setData(output(minx,maxx,chartSteps), redraw=false);
-    endowChart.series[0].setData(cost(minx,maxx,chartSteps), redraw=false);
-    endowChart.series[1].setData(tangentline(minx,maxx,chartSteps), redraw=false);
-    endowChart.series[3].data[0].update([Nd,Y], redraw=false);
+    endowChart.series[0].setData(isoquant(minx,maxx,chartSteps), redraw=false);
+    endowChart.series[1].setData(output(minx,maxx,chartSteps), redraw=false);
+    endowChart.series[2].setData(genBC(minx,maxx,chartSteps), redraw=false);
+    endowChart.series[3].data[0].update([h-Nd,Y-T], redraw=false);
     endowChart.redraw();
 }
 
