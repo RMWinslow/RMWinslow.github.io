@@ -24,15 +24,14 @@ def chance(p):
 
 #Each time period:
 '''
-Get a list of all infected people.
-Generate a list of all their neighbors.
-Update all infected to be recovered
-Iterate through list of neighbors. For each:
-    Check to see if they are susceptible.
-    If so, random chance of switching to infected.
+TODO:
+    -Put entire simulation into a class. Advancement/display as a method
+    -add diagonal connections
+    -create alternate graph where head of row connects to everybody
+    -Create alternate graph with local simplices connected into larger simplex
 '''
 
-globalInfectionChance = 0.6
+globalInfectionChance = 0.7
 globalRecoveryRate = 1
 globalWidth = 50
 globalHeight = 10
@@ -152,7 +151,7 @@ def runVisibleTrial():
         advanceTime()
         displayGrid()
         print()
-        time.sleep(0.2)
+        time.sleep(0.5)
           
 
 
