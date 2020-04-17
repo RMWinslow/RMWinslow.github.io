@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Word Generator</title>
+<link href="../styles/sakura.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86"><!--Improves mobile experience-->
+</head>
+<body>
+
+<center>
+<h1>Random Words</h1>
+<p>For Charades, Medium, Goldfish, etc.</p>
+
+
+<hr>
+
+
+<button style='font-family:inherit; font-size: xx-large' onclick='generateWord()'>Generate Word</button>
+
+
+<hr>
+
+<br>
+<b><h1 id='newOutput' style=' font-size: xx-large'></h1></b>
+
+
+<p id='oldOutputs' style='font-family:inherit; font-size: large'></p>
+
+</center>
+
+
+
+<script>
+    function rD(i){return i[Math.floor(Math.random()*i.length)];} //draw a random item from a list.
+
+    wordList = ['River', 'Train', 'Beautiful', 'Chip', 'Ant', 'Table', 'Firefighter', 'Hammer', 'Banana', 'Wedding', 'Shakespeare', 'Rodeo', 'Antarctica', 'Melt', 'Fireworks', 'Muscle', 'Heart', 'Ski', 'Cloud', 'Canoe', 'Cough', 'Waffle', 'Horse', 'Lamp', 'Soldier', 'Brush', 'Angel', 'Halloween', 'Voyage', 'Rollercoaster', 'England', 'Ring', 'Chalk', 'Nose', 'Ribbon', 'Tropical', 'Ocean', 'Space', 'Boil', 'Wild', 'Turtle', 'Kitchen', 'Actor', 'Cup', 'Ketchup', 'Playground', 'Hero', 'Strike', 'Mexico', 'Oatmeal', 'Camping', 'Slippers', 'North', 'Peel', 'Tree', 'Bicycle', 'Sticky', 'Short', 'Dolphin', 'Bathtub', 'Chef', 'Bat', 'Doughnut', 'Vacation', 'Mug', 'Fence', 'Canada', 'Crawl', 'Machine', 'Tower', 'Maze', 'Pop', 'Flower', 'Cart', 'Tiny', 'Castle', 'Bear', 'Couch', 'Doctor', 'Glove', 'Coffee', 'July Fourth', 'Ghost', 'Thumb', 'Pyramid', 'Fly', 'Cookie', 'Cabin', 'Hawaii', 'Horn', 'Rock', 'Whisky', 'Eagle', 'Blue', 'owl', 'Refrigerator', 'Teacher', 'Ball', 'Pretzel', 'Airport', 'Brother', 'Sky', 'China', 'Trip', 'Danger', 'Eye', 'Equipment', 'Burger', ]
+
+
+    
+
+
+    function generateWord(){
+        //Choose a random word from the wordlist
+        word = rD(wordList);
+        //Get the old words 
+        previousWord = document.getElementById("newOutput").innerHTML;
+        wordLog = document.getElementById("oldOutputs").innerHTML;
+        //move the words around. Add previous word to log, set new word as the main one at the top
+        wordLog = previousWord + "<br>" + wordLog;
+        document.getElementById("newOutput").innerHTML = word;
+        document.getElementById("oldOutputs").innerHTML = wordLog;
+
+
+    }
+
+
+</script>
+
+
+</body>
+</html>
+
+
+

@@ -15,9 +15,7 @@ specialcards = ['WE','WN','WS','WW','DR','DG','DB',]
 
 pokerdeck = [suit+str(rank) for suit in ['C','S','H','D'] for rank in [1,2,3,4,5,6,7,8,9,'T','J','Q','K']]
 
-deck = (pipcards+specialcards)
-deck = [suit+str(rank) for suit in suits for rank in range(1,5)]
-deck = pokerdeck
+deck = (pipcards+specialcards)*4
 
 
 #%% Poker Hand Counts
@@ -26,30 +24,30 @@ handTypeCount = {"5 of a kind": 0, "Straight Flush": 0, "4 of a kind": 0, "Full 
 
 '''
 For deck = pipcards+specialcards:, 
-{ '5 of a kind':        117,
- 'Straight Flush':      499
- '4 of a kind':         10956,
- 'Full House':          17463,
- 'Flush':               43693,                  !!!
- 'Straight':            18632,
- '3 of a kind':         220069,
- '2 pair':              258201,
- '1 pair':              1882858,
- 'High card':           1999608,}         
+{ '5 of a kind':        0,
+ 'Straight Flush':      15,
+ '4 of a kind':         0,
+ 'Full House':          216,
+ 'Flush':               363,                  
+ 'Straight':            1200,
+ '3 of a kind':         3969,
+ '2 pair':              9072,
+ '1 pair':              103005,
+ 'High card':           160416,}         
 
 
 
 For deck = (pipcards+specialcards)*4:, 
-{ '5 of a kind':    22970048,
- 'Straight Flush':  244840,                    !!!
- '4 of a kind':     13366628,
- 'Full House':      20845041,
- 'Flush':           22970048,                  
- 'Straight':        18171572,
- '3 of a kind':     264790047,
- '2 pair':          299230109,
- '1 pair':          2388575191,
- 'High card':       2730503184,}              
+{ '5 of a kind':    7128,
+ 'Straight Flush':  15360,                    
+ '4 of a kind':     553344,
+ 'Full House':      1146240,
+ 'Flush':           1114224,                  
+ 'Straight':        1228800,
+ '3 of a kind':     14145984,
+ '2 pair':          20542896,
+ '1 pair':          156913152,
+ 'High card':       164265984,}              
 
 
 
@@ -64,7 +62,34 @@ Pung = three identical
 kong = 4 identical
 '''
 
-MahjongHandTypeCount = {"Kong": 0, "Chow": 0, "Pair": 0, "Pung": 0, "Pair+Chow": 0, "Pair+Pung": 0, "2 Pair": 0, "High":0, "Pung+Chow":0}
+MahjongHandTypeCount = {"Kong": 0, "Chow": 0, "Pair": 0, "Pung": 0, "Pair+Chow": 0, "Pair+Pung": 0, "2 Pair": 0, "High":0, "Pung+Chow":0, "2Pair+Chow":0}
+
+'''Without duplicate tiles:
+    {'2 Pair': 0,
+ 'Chow': 9225,
+ 'High': 269031,
+ 'Kong': 0,
+ 'Pair': 0,
+ 'Pair+Chow': 0,
+ 'Pair+Pung': 0,
+ 'Pung': 0,
+ 'Pung+Chow': 0}
+    
+    
+    
+    
+    with duplicate tiles:
+        {'2 Pair': 2576016,
+ '2Pair+Chow': 9072,
+ 'Chow': 9446400,
+ 'High': 275487744,
+ 'Kong': 4488,
+ 'Pair': 70261248,
+ 'Pair+Chow': 972288,
+ 'Pair+Pung': 26928,
+ 'Pung': 1144896,
+ 'Pung+Chow': 4032}
+        '''
 
 #%% Check for various cards
 
@@ -99,7 +124,6 @@ def analyzePokerHand(c1,c2,c3,c4,c5):
     if countcounts[5]:
         return "5 of a kind"
     elif flushTag and straightTag:
-        print(c1,c2,c3,c4,c5)
         return "Straight Flush"
     elif countcounts[4]:
         return "4 of a kind"
@@ -159,11 +183,11 @@ def analyzeMiniMahjongHand(c1,c2,c3,c4,c5):
     wanRanks = []
     for card in [c1,c2,c3,c4,c5]:
         if card[0]=='C':
-            coinRanks.append(int(card[1]))
+            coinRanks.append(myInt(card[1]))
         elif card[0]=='S':
-            stringRanks.append(int(card[1]))
+            stringRanks.append(myInt(card[1]))
         elif card[0]=='M':
-            wanRanks.append(int(card[1]))
+            wanRanks.append(myInt(card[1]))
     coinRun = len(maxRun(coinRanks))    
     stringRun = len(maxRun(stringRanks))
     wanRun = len(maxRun(wanRanks))    
@@ -190,6 +214,9 @@ def analyzeMiniMahjongHand(c1,c2,c3,c4,c5):
     elif runFlag:
         if countcounts[2] == 1:
             return "Pair+Chow"
+        if countcounts[2] == 2:
+            return "2Pair+Chow"
+        listofchows.append([c1,c2,c3,c4,c5])
         return "Chow"
     elif countcounts[2] == 2:
         return "2 Pair"
@@ -200,39 +227,18 @@ def analyzeMiniMahjongHand(c1,c2,c3,c4,c5):
 
 #%% Lazy way to loop through possible combinations in canonical order
 
-count = 0
-
-
-'''for i1, c1 in enumerate(deck[:len(deck)-5]):
-    for i2, c2 in enumerate(deck[i1+1:len(deck)-4]):
-        for i3, c3 in enumerate(deck[i2+1:len(deck)-3]):
-            for i4, c4 in enumerate(deck[i3+1:len(deck)-2]):
-                for i5, c5 in enumerate(deck[i4+1:len(deck)-1]):
-                    for i6, c6 in enumerate(deck[i5+1:]):
-                        count += 1'''
-                        
-'''for i1, c1 in enumerate(deck[:len(deck)-4]):
-    for i2, c2 in enumerate(deck[i1+1:len(deck)-3]):
-        for i3, c3 in enumerate(deck[i1+i2+2:len(deck)-2]):
-            for i4, c4 in enumerate(deck[i1+i2+i3+3:len(deck)-1]):
-                for i5, c5 in enumerate(deck[i1+i2+i3+i4+4:len(deck)-0]):
-                    handTypeCount[analyzePokerHand(c1,c2,c3,c4,c5)] +=1
-                    #MahjongHandTypeCount[analyzeMiniMahjongHand(c1,c2,c3,c4,c5)] +=1
-                    #print(c1,c2,c3,c4,c5)'''
-                    
-
-
-
-
-#%% Everything above is borked so I am starting over
 
 count = 0
+listofchows = []
 
-handTypeCount = {"5 of a kind": 0, "Straight Flush": 0, "4 of a kind": 0, "Full House": 0, "Flush": 0, "Straight": 0, "3 of a kind": 0, "2 pair": 0, "1 pair":0, "High card":0}
-
-pokerdeck = [suit+str(rank) for suit in ['C','S','H','D'] for rank in [1,2,3,4,5,6,7,8,9,'T','J','Q','K']]
                            
 for combo in itertools.combinations(deck, 5):  # 2 for pairs, 3 for triplets, etc
-    handTypeCount[analyzePokerHand(*combo)] += 1
+    handTypeCount[analyzePokerHand(*combo, )] += 1
+    MahjongHandTypeCount[analyzeMiniMahjongHand(*combo, )] += 1
                     
-                    
+'''for card in deck:    
+    count = 0                
+    for hand in listofchows:
+        if card in hand:
+            count += 1
+    print(card,count) '''
