@@ -12,6 +12,7 @@ ranks = range(1,10)
 pipcards = [suit+str(rank) for suit in suits for rank in ranks]
 
 specialcards = ['WE','WN','WS','WW','DR','DG','DB',]
+specialcards = ['WE','WN','WS','WW','WR','WG','WB',]
 
 pokerdeck = [suit+str(rank) for suit in ['C','S','H','D'] for rank in [1,2,3,4,5,6,7,8,9,'T','J','Q','K']]
 
@@ -47,11 +48,30 @@ For deck = (pipcards+specialcards)*4:,
  '3 of a kind':     14145984,
  '2 pair':          20542896,
  '1 pair':          156913152,
- 'High card':       164265984,}              
+ 'High card':       164265984,}           
+
+
+
+For deck = (pipcards+specialcards)*4 when dragons and winds are counted as the same suit:, 
+{ '5 of a kind':    7128,
+ 'Straight Flush':  15360,                    
+ '4 of a kind':     553344,
+ 'Full House':      1146240,
+ 'Flush':           1206672, *                  
+ 'Straight':        1228800,
+ '3 of a kind':     14140224, *
+ '2 pair':          20529936, *
+ '1 pair':          156860928, * 
+ 'High card':       164244480,  * }        
 
 
 
 For deck = pokerdeck
+
+
+
+there are people at harvard who are imaginitive but don't know any economics
+take a model you know well and apply it for the people who cant get into the nitty gritty
 '''
 
 #%% Mahjong Hand Counts
