@@ -1,0 +1,405 @@
+/* Duotone color scheming:
+   Uses blossom as the revealing/stark color
+   Uses fade as the more prominent color
+*/
+/* bg color is used for the background of the page
+   bg-alt is used for code-blocks etc
+*/
+/* color of all the text on the page */
+/* Sakura.css v1.0.0
+ * ================
+ * Minimal css theme.
+ * Project: https://github.com/oxalorg/sakura
+ */
+
+
+ /*
+BG color is 
+ */
+
+
+  
+  
+  
+  /* Body */
+  html {
+    font-size: 62.5%;
+    font-family: serif;
+    background-color: #eee8d5;
+  }
+  
+  body {
+    font-size: 1.8rem;
+    line-height: 1.618;
+    /*max-width: 60em;*/
+    margin: auto;
+    color: #657b83;
+    color: #586e75;
+    color: #073642;
+    color: hsl(192, 81%, 14%);
+    color: hsl(194, 14%, 30%);
+    background-color: #fdf6e3;
+    padding: 0px;
+  }
+  
+  @media (max-width: 684px) {
+    body {
+      font-size: 1.53rem;
+    }
+  }
+  @media (max-width: 382px) {
+    body {
+      font-size: 1.35rem;
+    }
+  }
+  p {
+    margin-top: 0px;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5em;
+    line-height: 1.1;
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: 700;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    color: #002b36;
+  }
+  
+  h1 {
+    font-size: 2.35em;
+  }
+  
+  h2 {
+    font-size: 2em;
+  }
+  
+  h3 {
+    font-size: 1.75em;
+  }
+  
+  h4 {
+    font-size: 1.5em;
+  }
+  
+  h5 {
+    font-size: 1.25em;
+  }
+  
+  h6 {
+    font-size: 1em;
+  }
+  
+  small, sub, sup {
+    font-size: 75%;
+  }
+  
+  hr {
+    border: 1.5px solid #7a0019;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #7a0019;
+  }
+  a:hover {
+    color: #073642;
+    border-bottom: 2px solid #073642;
+  }
+  
+  ul {
+    padding-left: 1.4em;
+  }
+  
+  li {
+    margin-bottom: 0.4em;
+  }
+  
+  blockquote {
+    font-style: italic;
+    margin-left: 1.5em;
+    padding-left: 1em;
+    border-left: 3px solid #7a0019;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  /* Pre and Code */
+  pre {
+    background-color: #eee8d5;
+    display: block;
+    padding: 1em;
+    overflow-x: auto;
+  }
+  
+  code {
+    font-size: 1em;
+    padding: 0;
+    background-color: #eee8d5;
+    white-space: pre-wrap;
+  }
+  
+  pre > code {
+    padding: 0;
+    background-color: transparent;
+    white-space: pre;
+  }
+  
+  
+  
+  /* Tables */
+  table {
+    text-align: justify;
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    
+  }
+  
+  td, th {
+    padding: 0.5em;
+    border-bottom: 1px solid #eee8d5;
+  }
+  
+  /* Buttons, forms and input */
+  input, textarea {
+    border: 1px solid #3a3a3a;
+    font-size: 1.26rem;
+  }
+  input:focus, textarea:focus {
+    border: 1px solid #7a0019;
+  }
+  
+  textarea {
+    width: 100%;
+  }
+  
+  .button, button, input[type=submit], input[type=reset], input[type=button] {
+    display: inline-block;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 1.35rem;
+    background-color: #7a0019;
+    color: #eee8d5;
+    border-radius: 5px;
+    border: 1px solid #7a0019;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  .button[disabled], button[disabled], input[type=submit][disabled], input[type=reset][disabled], input[type=button][disabled] {
+    cursor: default;
+    opacity: 0.5;
+  }
+  .button:focus, .button:hover, button:focus, button:hover, input[type=submit]:focus, input[type=submit]:hover, input[type=reset]:focus, input[type=reset]:hover, input[type=button]:focus, input[type=button]:hover {
+    background-color: #073642;
+    border-color: #073642;
+    color: #eee8d5;
+    outline: 0;
+  }
+  
+  textarea, select, input[type] {
+    color: #3a3a3a;
+    padding: 6px 10px;
+    /* The 6px vertically centers text on FF, ignoblue by Webkit */
+    margin-bottom: 10px;
+    background-color: #eee8d5;
+    border: 2px solid #93a1a1;
+    border-radius: 4px;
+    box-shadow: none;
+    box-sizing: border-box;
+    padding:6px 2px;
+  }
+  textarea:focus, select:focus, input[type]:focus {
+    border: 2px solid #7a0019;
+    outline: 0;
+  }
+  
+  input[type=checkbox]:focus {
+    outline: 1px dotted #7a0019;
+  }
+  
+  label, legend, fieldset {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  
+  
+  details {
+      border: 2px solid #7a0019;
+      border-radius: 10px;
+      padding: .5em .5em 0;
+      /*background-color: #fff2cc;*/
+  }
+  
+  summary {
+      font-weight: bold;
+      margin: -.5em -.5em 0;
+      padding: .5em;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /*-------------------------------------------------------------------------------------------------------------------------------------*/
+  /*THIS IS PRETTY HACKY AND WILL PROBABLY NEED TO BE CHANGED WHEN I UPDATE MATHJAX*/
+  /*MathJax Styling*/
+  
+  /*TODO: Remove after testing    font-size: 1.2em !important;*/
+  
+  .MathJax { color:hsl(193, 14%, 26%) !important; font-size: 1.0em !important;}
+  mjx-labels {color: #b58900 !important;}
+  
+  /*.mjx-chtml {color:hsl(193, 14%, 26%) !important; font-size: 1.05em !important;}*/
+  .mjx-chtml { font-size: 1.05em !important;}
+  .mjx-label {color: #b58800 !important; }
+  
+  @media screen and (max-width: 600px) {
+    .column {
+      .MathJax { color:hsl(193, 14%, 26%) !important; font-size: 1.4em !important;}
+      .mjx-chtml {color:hsl(193, 14%, 26%) !important; font-size: 1.4em! important;}
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 10000px;
+  width: 100vmin;  height: 85vmin;
+  position: relative;
+  margin: 0px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
