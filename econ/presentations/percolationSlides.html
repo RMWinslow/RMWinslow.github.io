@@ -1,0 +1,549 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Percolation in Graphs</title>
+
+		<link rel="stylesheet" href="../../styles/reveal/css/reveal.css">
+		<link rel="stylesheet" href="../../styles/reveal/css/theme/white.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+
+
+
+
+
+
+
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <!--Introductory Matter-->
+                
+<section>
+    <h1>Percolation</h1>
+    <p>Spread in a network with faulty connections.</p>
+</section>
+    
+
+<section>
+    <section>
+        <h1>Graph Theory Terms</h1>
+    </section>
+    <section>
+        <h2>Graph</h2>
+        <img src="testgraph.png">
+        \[G=(V,E)\]
+    </section>
+    <section>
+        <h2>Vertices</h2>
+        <img src="testgraphVlabel.svg" style="height:300px">
+        \[V =   \{  v_1,v_2,v_3,v_4,v_5,v_6, v_7 ,  \\ v_8 , v_9 , v_A , v_B , v_C , v_D , v_E , \}  \]
+    </section>
+    <section>
+        <h2>Order</h2>
+        <img src="testgraphV.svg" style="height:300px">
+        \[n \equiv |V| = 14  \]
+    </section>
+    <section>
+        <h2>Edges</h2>
+        <img src="testgraphElabel.svg" style="height:300px">
+        \(E =  \{ (v_2, v_4),  (v_2, v_5), (v_3, v_6), (v_4, v_5), (v_5, v_6), \\ (v_6, v_7), (v_6, v_8), (v_7, v_8), (v_8, v_D),  (v_8, v_E), (v_9, v_A), \\ (v_9, v_B), (v_9, v_C),  (v_A, v_B), (v_B, v_C), (v_D, v_E),  \}   \)
+    </section>
+    <section>
+        <h2>Size</h2>
+        <img src="testgraphE.svg" style="height:300px">
+        \[M \equiv |E| = 16  \]
+    </section>
+    <section>
+        <h2>Neighborhood</h2>
+        <img src="testgraphNeighbor5.svg" style="height:300px">
+        \[N(v_5)=\{v_2,v_4,v_6\}\]
+    </section>
+    <section>
+        <h2>Degree</h2>
+        <img src="testgraphNeighbor5.svg" style="height:300px">
+        \[d(v_5)\equiv |N(v_5)| = 3\]
+    </section>
+    <section>
+        <h2>Degree</h2>
+        <img src="testGraphNeighborDegree.svg" style="height:400px">
+    </section>
+    <section>
+        <h2>Path</h2>
+        <img src="testgraphPath.svg" style="height:300px">
+        <p>Path from \(v_2\) to \(v_E\): \((v_2,v_5,v_6,v_8,v_E)\)</P>
+    </section>
+    <section>
+        <h2>Path</h2>
+        <img src="testgraphNoPath.svg" style="height:300px">
+        <br>No path from \(v_B\) to \(v_3\)
+    </section>
+    <section>
+        <h2>Connected Components</h2>
+        <img src="testGraphConnectedComponents.svg" style="height:300px">
+    </section>
+    <!--Clustering-->
+</section>
+
+
+<!--Examples of Graphs, compare and contrast-->
+<section>
+    <section>
+        <h1>Notable Types of Graphs</h1> 
+    </section>
+    <section>
+        <h2>Complete Graph</h2>
+        <img src="complete6.svg" style="height:400px">
+    </section>
+    <section>
+        <h2>Star Graph</h2>
+        <img src="star6.svg" style="height:400px">
+    </section>
+    <section>
+        <h2>Star Graph</h2>
+        <img src="star6v2.svg" style="height:400px">
+    </section>
+    <section>
+        <h2>Bipartite Graph</h2>
+        <img src="bipartite33.svg" style="height:400px">
+    </section>
+    <section>
+        <h2>Cycle Graph</h2>
+        <img src="cycle6.svg" style="height:400px">
+    </section>
+    <section>
+        <h2>Erdős–Rényi  Random Graph</h2>
+        <img src="testgraphRandom.svg" style="height:400px">
+    </section>
+    <section>
+        <h2>Erdős–Rényi  Random Graph</h2>
+        \(G(n,p)\)
+        <ul>
+            <li>Start with a set of \(n\) vertices \(V\)</li>
+            <li>For each pair of distinct vertices in \(V\), \(v_i,v_j\), flip a weighted coin which lands head with prob \(p\) </li>
+                <ul>
+                    <li>If the coin comes up heads, the edge \((v_i,v_j)\in E\).</li>
+                    <li>If the coin comes up tails, the edge \((v_i,v_j)\notin E\).</li>
+                </ul>
+            <li>Equivalent to removing each edge with independent prob \((1-p)\) from a complete graph.</li>
+    </section>
+    <section>
+        <!--As n to infty, random graphs converge to here. Distribution of degrees and properties don't reflect real world graphs-->
+        <h2><i>The</i>  Random Graph</h2>
+        <img src="Rado_graph.svg" style="height:400px">
+    </section>
+    <section data-background-image="1D lattice.svg" data-background-size="1000px" data-background-repeat="repeat-x">
+        <h2>Integer Lattice </h2>\[\mathbb{Z}\]
+    </section>
+    <section data-background-image="2D lattice.svg" data-background-size="50px" data-background-repeat="repeat">
+        <div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; ">
+            <h1 style="color: white;">Square Lattice</h1>
+            \[\mathbb{Z}^2\]
+        </div>
+    </section>
+</section>
+
+
+
+<section>
+    <section>
+        <h1>Real World Examples</h1>
+    </section>
+    <section>
+        <h2>Neurons</h2>
+        <!--neuron by Georgiana Ionescu from the Noun Project-->
+        <img src="worldgraphNerves.svg" style="height:400px">
+    </section>
+    <section>
+        <h2>Electric Grids</h2>
+        <img src="worldgraphElectricity.svg" style="height:400px">
+    </section>
+    <section>
+        <h2>Electric Grids</h2>
+        <figure>
+            <img src="transmissionnetworks.png" style="height:400px">
+            <figcaption style="color: gainsboro;">Attribution: Wikipedia user Alinor</figcaption>
+        </figure>
+        
+    </section>
+    <section>
+        <h2>Transportation</h2>
+        <img src="worldgraphRoads.svg" style="height:400px">
+    </section>
+    <section>
+        <h2>Social Networks</h2>
+        <img src="worldgraphSocial.svg" style="height:400px">
+    </section>
+    <section>
+        <h2>Rumors</h2>
+        <img src="worldgraphRumor.svg" style="height:400px">
+    </section>
+    <section>
+        <h2>Disease</h2>
+        <img src="worldgraphGerm.svg" style="height:400px">
+    </section>
+    <!--Scale free and Small world-->
+</section>
+
+
+
+
+<section>
+    
+    <section>
+        <h1>Guaranteed Transmission</h1> 
+    </section>
+    <section>
+        <!--Slide for example graph animated-->
+        <img src="breadth/sample1.svg" style="height:600px">
+    </section>
+    <section>
+        <!--Slide for example graph animated-->
+        <img src="breadth/sample2.svg" style="height:600px">
+    </section>
+    <section>
+        <!--Slide for example graph animated-->
+        <img src="breadth/sample3.svg" style="height:600px">
+    </section>
+    <section>
+        <!--Slide for example graph animated-->
+        <img src="breadth/sample4.svg" style="height:600px">
+    </section>
+    <section>
+        <!--Slide for example graph animated-->
+        <img src="breadth/sample5.svg" style="height:600px">
+    </section>
+    <section>
+        <!--Slide for example graph animated-->
+        <img src="breadth/sample6.svg" style="height:600px">
+    </section>
+    <section>
+        <h2>Breadth-First Search</h2>
+        <ul>
+            <li>Each vertex is marked as Undiscovered, Discovered, or Visited. </li>
+            <li>One vertex starts as Discovered, the rest Undiscovered</li>
+            <li>Each period:</li>
+            <ul>
+                <li>For each vertex which was already Discovered at the start of the period:</li>
+                    <ul>
+                        <li>Mark the vertex as Visited</li>
+                        <li>Mark each of its Undiscovered neighbors as Discovered</li>
+            </ul>
+        </ul>
+    </section>
+    <section>
+        <h2>Breadth-First Search</h2>
+        <p>A vertex will be visited iff there is a path to it from the initial Discovered vertex.</P>
+    </section>
+    <section>
+        <h2>Breadth-First Search</h2>
+        <p>Undiscovered ~ Susceptible</p>
+        <p>Discovered ~ Infectious</p>
+        <p>Visited ~ Removed</P>
+    </section>
+    <section>
+        <!--Slide for example graph animated-->
+        <img src="breadth/complete0.svg" style="height:600px">
+    </section>
+    <section>
+        <!--Slide for example graph animated-->
+        <img src="breadth/complete1.svg" style="height:600px">
+    </section>
+    <section>
+        <!--Slide for example graph animated-->
+        <img src="breadth/complete2.svg" style="height:600px">
+    </section>
+</section>
+
+
+<section>
+    <section>
+            <h1>Bernouilli Transmission</h1> 
+    </section>
+    <section>
+        Change the algorithm:
+        <ul>
+            <li>One vertex starts as Discovered, the rest Undiscovered</li>
+            <li>Each period:</li>
+            <ul>
+                <li>For each vertex which was already Discovered at the start of the period:</li>
+                    <ul>
+                        <li>Mark the vertex as Visited</li>
+                        <li>For each Undiscovered neighbor, mark that neighbor as Discovered with independent probability \(p\).</li>
+            </ul>
+        </ul>
+    </section>
+    <section>
+        <!--Slide for example graph animated-->
+        <img src="bern/complete0.svg" style="height:600px">
+    </section>
+    <section>
+        <!--Slide for example graph animated-->
+        <img src="bern/complete1.svg" style="height:600px">
+    </section>
+    <section>
+        <!--Slide for example graph animated-->
+        <img src="bern/complete2.svg" style="height:600px">
+    </section>
+    <section>
+        With this algorithm:
+        <ul>
+            <li>If a vertex starts the period Undiscovered with \(N\) Discovered neighbors, then it will become Discovered with probability \(1-(1-p)^N\) </li>
+            <li>In complete graphs, average number of newly Discovered each period is \(D^\prime = U\cdot(1-(1-p)^D)\)</li>
+            <li>Similar dynamics to standard "fully-mixed" SIR epidemic model.</li>
+        </ul>
+        </section>
+        <section>
+            With this algorithm:
+            <ul>
+                <li>We randomly traverse along each edge at most once.</li>
+                <li>Therefore, the algorithm doesn't change if we do all the random draws at the start of time: </li>
+                <li>Call each edge "Open" with probability \(p\) and "Closed" with probability \(1-p\). Then perform breadth-first search on the subgraph for which all closed edges are removed.</li>
+                <li>On complete graphs, equivalent to Erdős–Rényi  Random Graphs.</li>
+            </ul>
+            </section>
+</section>
+
+
+<section>
+    <section>
+        <h1>Bond Percolation</h1> 
+    </section>
+    <section>
+        <ul>
+            <li>Start with some graph \(G=\{V,E\}\)</li>
+            <li>Generate subgraphs of \(G\) by removing each edge with independent probability \((1-p)\).</li>
+            <li>This generates a probability distribution \(f(G,p)\) over subgraphs of \(G\): \(\{  \{V,e\} | e \subset E  \}\).  </li>
+            <li>On complete graphs, equivalent to Erdős–Rényi  Random Graphs.</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Percolation Probability</h2>
+        <ul>
+            <li>Define \(C(v,g)\) to be the connected component of vertex \(v\) in subgraph \(g\).</li>
+            <li>Percolation probability:
+                \[\theta(p,v, X) = P_p[|C(v,g)| \geq X]\]
+            </li>
+            <li>In particular: 
+                \[\theta(p,v) = P_p[|C(v,g)| \geq \infty]\]
+            </li>
+        </ul>
+    </section>
+    <section>
+        <ul>
+            <li></li>
+        </ul>
+    </section>
+    <section>
+            <p>For any \(X\), and any \(v\), \theta(p,v, X)  is non-decreasing in \(p\).</p> 
+    </section>
+    <section>
+            <ul>
+                    <li>For \(p=0\), \(X>1\), \theta(p, v, X)=0.</li>
+                    <li>Critical Probability:
+                        \[\p_c = \sup \{p: \theta(p) = 0 \} \]
+                    </li>
+                    <li>For \(p < p_c \), \theta(p, v)=0.</li>
+                </ul>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h1>Critical Probability Examples</h1> 
+    </section>
+    <section data-background-image="1D lattice.svg" data-background-size="1000px" data-background-repeat="repeat-x">
+        <h2>Integer Lattice \(\mathbb{Z}\)</h2>\[p_c = 1\]
+    </section>
+    <section data-background-image="2D lattice.svg" data-background-size="50px" data-background-repeat="repeat">
+        <div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; ">
+            <h1 style="color: white;">Square Lattice</h1>
+            \[p_c = \frac{1}{2}\]
+        </div>
+    </section>
+    <section data-background-image="2DDual.svg" data-background-size="50px" data-background-repeat="repeat">
+        <div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; ">
+            <h1 style="color: white;">Square Lattice</h1>
+            \[p_c = \frac{1}{2}\]
+        </div>
+    </section>
+    <section>
+        <img src="2DDual.svg" style="height:600px">
+    </section>
+    <section>
+        \(p_c = \(1 \over N\)  for complete graphs \)
+    </section>
+    <section>
+        <h2>A few approximations</h2>
+        <img src="examplenums.png" style="height:600px">
+    </section>
+    <!--Lattice Examples-->
+</section>
+
+
+<section>
+    Scale Free and Small World graphs.
+</section>
+<section>
+    Scale Free and Small World graphs.
+</section>
+
+
+
+
+
+
+
+<section>
+    <!--Citations-->
+</section>
+
+<section>
+    <!--Citations-->
+    Main Sources:
+    <ul>
+        <li>Newman ME, Barabási AL, Watts DJ. The structure and dynamics of networks. Princeton university press; 2006.</li>
+        <li> Keeling MJ, Eames KT. Networks and epidemic models. Journal of the Royal Society Interface. 2005 Sep 22;2(4):295-307.</li>
+    </ul>
+</section>
+    
+			</div>
+		</div>
+
+
+
+
+	<!--TODO LIST:
+		Create outline of talk:
+			Graph theory intro
+				Basic Terms (5 minutes)
+					Vertices
+					Edges
+					Graph
+						Matrix Representation?
+					Degree
+						indegree outdegree
+					Path vs walk
+					order |V|
+					size |E|
+					Connected components
+					(Extensions: direction, weight, loop, multigraph)
+
+			examples of graphs (10 mins)
+				complete graph
+				star graph
+				bipartite
+				random (javascript)
+				lattice
+				number line, grid, cycle
+
+			Examples of graph theory problems (create graph with image then update that image) (5 minutes)
+				rumor networks*
+				citations
+				disease transmission*
+				map coloring
+				electrical grids*
+				communications
+				Make a note about how many of these problems involve flow
+
+			Faulty connections and connected components (10 minutes)
+				Very entertaining rumor. Will flow around to everyone that is connected. breadth first search
+				Theoretically the electrical grid
+				Erdos random graphs certain order and size
+					Properties that arise beyond some threshold
+				vs random subgraph
+				edge and node percolation
+				Giant component contrains a fraction of all the graphs vertices
+
+
+			Percolation through a graph 
+				simplex example
+				1d lattice example
+				coupling argument for existence of a critical threshold
+                dual argument for 1/2 threshold in a 2d lattic
+                
+            Example of how R0 isn't enough.
+            Strongly clustered graph with no interconnections
+
+
+
+			Clustering cooefficient?
+
+			
+
+			Anecdotes: Ebola had similar R0 to 
+
+
+
+
+			Erdos' Random graphs
+			Percolation Theory
+			Contagion and Social Distancing
+				scale free and small world
+				two examples of social distancing
+
+
+
+	
+		Create interactive examples:
+			Random Complete Graph generator
+			Random Lattice Flood fill
+			Lattice Contagion Example x2
+			Need a lattice flood fill.
+	
+		Time usage:
+			Fill out tutor forms
+			Send out mea culpa announcment
+			Go to bed at 5.
+			Fall asleep by 5:30
+			Sleep for 4.5 hours
+			Wake up at 10
+			Tutor from 10:30 to 12:30 
+			1-6 write talk.
+			6:00pm send out details of talk
+			6-6:45  practice talk
+		
+		
+		random vs strategic attakvs
+	https://www.youtube.com/watch?v=kNn81dGhFak-->	
+
+
+
+
+
+
+		<script src="../../styles/reveal/js/reveal.js"></script>
+
+		<script>
+			Reveal.initialize({
+				// other options ...
+
+				math: {
+					mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+					config: 'TeX-AMS_HTML-full', // See http://docs.mathjax.org/en/latest/config-files.html
+					// pass other options into `MathJax.Hub.Config()`
+					TeX: { Macros: { RR: "{\\bf R}" } }
+				},
+
+				dependencies: [
+					{ src: '../../styles/reveal/plugin/math/math.js', async: true }
+				],
+
+				transition: 'none',
+				transitionSpeed: 'slow',
+                backgroundTransition: 'none',
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="17.504128mm"
+   height="12.442697mm"
+   viewBox="0 0 17.504128 12.442697"
+   version="1.1"
+   id="svg1921"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="testGraphNeighborNoPath.svg">
+  <defs
+     id="defs1915" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="-60.755328"
+     inkscape:cy="59.080081"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1858"
+     inkscape:window-height="1058"
+     inkscape:window-x="1016"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata1918">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-134.31205,-151.39486)">
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#999999;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
+       d="m 135.43025,154.81823 8.55263,0.66818 -2.85644,5.24516 10.12283,2.07135"
+       id="path823-9-3-24-3"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"
+       inkscape:export-filename="C:/Users/RobertWinslow/Documents/website/RMWinslow.github.io/econ/presentations/testgraphVlabel.png" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#999999;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
+       d="m 139.77338,152.89724 -4.34313,1.92099"
+       id="path825-0-7-9-0"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"
+       inkscape:export-filename="C:/Users/RobertWinslow/Documents/website/RMWinslow.github.io/econ/presentations/testgraphVlabel.png" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#999999;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
+       d="m 143.98288,155.48641 -4.2095,-2.58917"
+       id="path827-5-0-8-7"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"
+       inkscape:export-filename="C:/Users/RobertWinslow/Documents/website/RMWinslow.github.io/econ/presentations/testgraphVlabel.png" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#999999;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
+       d="m 141.12644,160.73157 -2.77293,-3.60814"
+       id="path829-5-2-0-3"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"
+       inkscape:export-filename="C:/Users/RobertWinslow/Documents/website/RMWinslow.github.io/econ/presentations/testgraphVlabel.png" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#999999;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
+       d="m 151.24927,162.80292 -1.70385,-4.5937"
+       id="path831-5-1-02-9"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"
+       inkscape:export-filename="C:/Users/RobertWinslow/Documents/website/RMWinslow.github.io/econ/presentations/testgraphVlabel.png" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#999999;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
+       d="m 149.54542,158.20922 -8.16842,5.06142 -0.25056,-2.53907"
+       id="path833-4-0-2-1"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"
+       inkscape:export-filename="C:/Users/RobertWinslow/Documents/website/RMWinslow.github.io/econ/presentations/testgraphVlabel.png" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#999999;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
+       d="m 145.50297,152.57985 1.35305,3.64155 2.88986,-1.9043 -1.28624,-2.43883 z"
+       id="path861-0-8-1-3"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"
+       inkscape:export-filename="C:/Users/RobertWinslow/Documents/website/RMWinslow.github.io/econ/presentations/testgraphVlabel.png" />
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#999999;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
+       d="m 145.50297,152.57985 4.24291,1.73725"
+       id="path863-7-8-76-0"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"
+       inkscape:export-filename="C:/Users/RobertWinslow/Documents/website/RMWinslow.github.io/econ/presentations/testgraphVlabel.png" />
+    <circle
+       id="path835-8-6-9-8"
+       style="fill:#ff0000;stroke:none;stroke-width:1"
+       cx="138.3535"
+       cy="157.12343"
+       r="0.5669291"
+       inkscape:export-xdpi="599.98401"
+       inkscape:export-ydpi="599.98401" />
+    <circle
+       id="path837-8-3-59-0"
+       style="fill:#b3b3b3;stroke:none;stroke-width:1"
+       cx="135.43024"
+       cy="154.81822"
+       r="0.5669291"
+       inkscape:export-xdpi="599.98401"
+       inkscape:export-ydpi="599.98401" />
+    <circle
+       id="path839-0-9-56-0"
+       style="fill:#b3b3b3;stroke:none;stroke-width:1"
+       cx="139.77336"
+       cy="152.89723"
+       r="0.5669291"
+       inkscape:export-xdpi="599.98401"
+       inkscape:export-ydpi="599.98401" />
+    <circle
+       id="path841-7-2-7-2"
+       style="fill:#b3b3b3;stroke:none;stroke-width:1"
+       cx="143.98286"
+       cy="155.4864"
+       r="0.5669291"
+       inkscape:export-xdpi="599.98401"
+       inkscape:export-ydpi="599.98401" />
+    <circle
+       id="path843-2-1-4-2"
+       style="fill:#b3b3b3;stroke:none;stroke-width:1"
+       cx="141.12642"
+       cy="160.73157"
+       r="0.5669291"
+       inkscape:export-xdpi="599.98401"
+       inkscape:export-ydpi="599.98401" />
+    <circle
+       id="path845-4-9-6-3"
+       style="fill:#b3b3b3;stroke:none;stroke-width:1"
+       cx="144.30025"
+       cy="161.34962"
+       r="0.5669291"
+       inkscape:export-xdpi="599.98401"
+       inkscape:export-ydpi="599.98401" />
+    <circle
+       id="path847-8-7-2-8"
+       style="fill:#b3b3b3;stroke:none;stroke-width:1"
+       cx="149.54541"
+       cy="158.20921"
+       r="0.5669291"
+       inkscape:export-xdpi="599.98401"
+       inkscape:export-ydpi="599.98401" />
+    <circle
+       id="path849-6-2-4-6"
+       style="fill:#b3b3b3;stroke:none;stroke-width:1"
+       cx="151.24925"
+       cy="162.8029"
+       r="0.5669291"
+       inkscape:export-xdpi="599.98401"
+       inkscape:export-ydpi="599.98401" />
+    <circle
+       id="path851-1-4-4-5"
+       style="fill:#b3b3b3;stroke:none;stroke-width:1"
+       cx="141.37698"
+       cy="163.27063"
+       r="0.5669291"
+       inkscape:export-xdpi="599.98401"
+       inkscape:export-ydpi="599.98401" />
+    <circle
+       id="path853-5-8-8-4"
+       style="fill:#b3b3b3;stroke:none;stroke-width:1"
+       cx="146.85602"
+       cy="156.18799"
+       r="0.5669291"
+       inkscape:export-xdpi="599.98401"
+       inkscape:export-ydpi="599.98401" />
+    <circle
+       id="path855-0-4-6-7"
+       style="fill:#b3b3b3;stroke:none;stroke-width:1"
+       cx="145.55307"
+       cy="152.59656"
+       r="0.5669291"
+       inkscape:export-xdpi="599.98401"
+       inkscape:export-ydpi="599.98401" />
+    <circle
+       id="path857-9-4-1-9"
+       style="fill:#ff0000;stroke:none;stroke-width:1"
+       cx="149.76256"
+       cy="154.41733"
+       r="0.5669291"
+       inkscape:export-xdpi="599.98401"
+       inkscape:export-ydpi="599.98401" />
+    <circle
+       id="path859-7-9-5-3"
+       style="fill:#b3b3b3;stroke:none;stroke-width:1"
+       cx="148.44292"
+       cy="151.96179"
+       r="0.5669291"
+       inkscape:export-xdpi="599.98401"
+       inkscape:export-ydpi="599.98401" />
+    <circle
+       inkscape:export-xdpi="599.98401"
+       inkscape:export-ydpi="599.98401"
+       id="path865-4-8-4-8"
+       style="fill:#b3b3b3;stroke:none;stroke-width:1"
+       cx="134.87898"
+       cy="158.87738"
+       r="0.5669291" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="134.54489"
+       y="159.26993"
+       id="text1726-41-1"
+       inkscape:export-filename="C:/Users/RobertWinslow/Documents/website/RMWinslow.github.io/econ/presentations/testgraphVlabel.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         sodipodi:role="line"
+         id="tspan1724-7-9"
+         x="134.54489"
+         y="159.26993"
+         style="font-size:1.05833328px;fill:#ffffff;stroke-width:0.26458332">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="135.09503"
+       y="155.19589"
+       id="text1726-9-46-4"
+       inkscape:export-filename="C:/Users/RobertWinslow/Documents/website/RMWinslow.github.io/econ/presentations/testgraphVlabel.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         sodipodi:role="line"
+         id="tspan1724-0-68-9"
+         x="135.09503"
+         y="155.19589"
+         style="font-size:1.05833328px;fill:#ffffff;stroke-width:0.26458332">2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="139.42145"
+       y="153.25819"
+       id="text1726-9-0-6-5"
+       inkscape:export-filename="C:/Users/RobertWinslow/Documents/website/RMWinslow.github.io/econ/presentations/testgraphVlabel.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         sodipodi:role="line"
+         id="tspan1724-0-3-9-3"
+         x="139.42145"
+         y="153.25819"
+         style="font-size:1.05833328px;fill:#ffffff;stroke-width:0.26458332">4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="138.00159"
+       y="157.51781"
+       id="text1726-9-5-2-3"
+       inkscape:export-filename="C:/Users/RobertWinslow/Documents/website/RMWinslow.github.io/econ/presentations/testgraphVlabel.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         sodipodi:role="line"
+         id="tspan1724-0-34-88-0"
+         x="138.00159"
+         y="157.51781"
+         style="font-size:1.05833328px;fill:#ffffff;stroke-width:0.26458332">3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="140.80791"
+       y="161.09253"
+       id="text1726-9-3-84-7"
+       inkscape:export-filename="C:/Users/RobertWinslow/Documents/website/RMWinslow.github.io/econ/presentations/testgraphVlabel.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         sodipodi:role="line"
+         id="tspan1724-0-2-80-5"
+         x="140.80791"
+         y="161.09253"
+         style="font-size:1.05833328px;fill:#ffffff;stroke-width:0.26458332">6</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="143.66435"
+       y="155.88078"
+       id="text1726-9-4-8-8"
+       inkscape:export-filename="C:/Users/RobertWinslow/Documents/website/RMWinslow.github.io/econ/presentations/testgraphVlabel.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         sodipodi:role="line"
+         id="tspan1724-0-5-9-8"
+         x="143.66435"
+         y="155.88078"
+         style="font-size:1.05833328px;fill:#ffffff;stroke-width:0.26458332">5</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="143.91492"
+       y="161.7774"
+       id="text1726-9-38-4-6"
+       inkscape:export-filename="C:/Users/RobertWinslow/Documents/website/RMWinslow.github.io/econ/presentations/testgraphVlabel.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         sodipodi:role="line"
+         id="tspan1724-0-30-82-4"
+         x="143.91492"
+         y="161.7774"
+         style="font-size:1.05833328px;fill:#ffffff;stroke-width:0.26458332">8</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="141.09189"
+       y="163.61488"
+       id="text1726-9-1-7-2"
+       inkscape:export-filename="C:/Users/RobertWinslow/Documents/website/RMWinslow.github.io/econ/presentations/testgraphVlabel.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         sodipodi:role="line"
+         id="tspan1724-0-6-84-9"
+         x="141.09189"
+         y="163.61488"
+         style="font-size:1.05833328px;fill:#ffffff;stroke-width:0.26458332">7</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="149.1935"
+       y="158.57018"
+       id="text1726-9-2-3-3"
+       inkscape:export-filename="C:/Users/RobertWinslow/Documents/website/RMWinslow.github.io/econ/presentations/testgraphVlabel.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         sodipodi:role="line"
+         id="tspan1724-0-8-6-6"
+         x="149.1935"
+         y="158.57018"
+         style="font-size:1.05833328px;fill:#ffffff;stroke-width:0.26458332">D</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="150.91403"
+       y="163.18057"
+       id="text1726-9-7-1-3"
+       inkscape:export-filename="C:/Users/RobertWinslow/Documents/website/RMWinslow.github.io/econ/presentations/testgraphVlabel.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         sodipodi:role="line"
+         id="tspan1724-0-7-6-8"
+         x="150.91403"
+         y="163.18057"
+         style="font-size:1.05833328px;fill:#ffffff;stroke-width:0.26458332">E</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="146.45398"
+       y="156.56564"
+       id="text1726-9-06-9-1"
+       inkscape:export-filename="C:/Users/RobertWinslow/Documents/website/RMWinslow.github.io/econ/presentations/testgraphVlabel.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         sodipodi:role="line"
+         id="tspan1724-0-1-6-5"
+         x="146.45398"
+         y="156.56564"
+         style="font-size:1.05833328px;fill:#ffffff;stroke-width:0.26458332">C</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="145.20114"
+       y="153.00763"
+       id="text1726-9-36-3-8"
+       inkscape:export-filename="C:/Users/RobertWinslow/Documents/website/RMWinslow.github.io/econ/presentations/testgraphVlabel.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         sodipodi:role="line"
+         id="tspan1724-0-82-6-6"
+         x="145.20114"
+         y="153.00763"
+         style="font-size:1.05833328px;fill:#ffffff;stroke-width:0.26458332">9</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="148.091"
+       y="152.32275"
+       id="text1726-9-29-5-1"
+       inkscape:export-filename="C:/Users/RobertWinslow/Documents/website/RMWinslow.github.io/econ/presentations/testgraphVlabel.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         sodipodi:role="line"
+         id="tspan1724-0-70-1-1"
+         x="148.091"
+         y="152.32275"
+         style="font-size:1.05833328px;fill:#ffffff;stroke-width:0.26458332">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:1.41111112px;line-height:1;font-family:Verdana;-inkscape-font-specification:Verdana;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="149.41064"
+       y="154.77827"
+       id="text1726-9-6-0-0"
+       inkscape:export-filename="C:/Users/RobertWinslow/Documents/website/RMWinslow.github.io/econ/presentations/testgraphVlabel.png"
+       inkscape:export-xdpi="600"
+       inkscape:export-ydpi="600"><tspan
+         sodipodi:role="line"
+         id="tspan1724-0-69-8-2"
+         x="149.41064"
+         y="154.77827"
+         style="font-size:1.05833328px;fill:#ffffff;stroke-width:0.26458332">B</tspan></text>
+  </g>
+</svg>

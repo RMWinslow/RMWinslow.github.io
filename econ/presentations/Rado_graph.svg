@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="702" height="324" viewBox="0 0 702 324"
+	 overflow="visible" enable-background="new 0 0 702 324" xml:space="preserve">
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M333,207c0,0-18-27-18-45"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M342,198c0,0-27-18-27-36"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M315,162c0,18,36,27,36,27"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M477,207c0,0-18-27-18-45"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M486,198c0,0-27-18-27-36"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M459,162c0,18,36,27,36,27"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M621,207c0,0-18-27-18-45"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M630,198c0,0-27-18-27-36"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M603,162c0,18,36,27,36,27"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M549,117c0,0-18,27-18,45"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M558,126c0,0-27,18-27,36"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M531,162c0-18,36-27,36-27"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M405,117c0,0-18,27-18,45"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M414,126c0,0-27,18-27,36"/>
+
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M387,162c0-18,36-27,36-27"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M387,306c0,0-144-9-144-144"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M243,162c0,108,144,126,144,126"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M243,162c0,144,360,144,360,0"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M315,18c0,0-144,27-144,144"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M315,36c0,0-144,27-144,126"/>
+<path fill="none" stroke="#FFFFFF" stroke-width="7.5" d="M99,162c0-144,432-144,432,0"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M171,162c0-144,360-99,360,0"/>
+<path fill="none" stroke="#FFFFFF" stroke-width="7.5" d="M99,162c0-108,360-108,360,0"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M171,162c0-99,288-99,288,0"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M171,162c0-72,216-72,216,0"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M171,162c0-54,144-54,144,0"/>
+<path fill="none" stroke="#FFFFFF" stroke-width="7.5" d="M27,162c0,144,504,144,504,0"/>
+<path fill="none" stroke="#FFFFFF" stroke-width="7.5" d="M387,162c0,108-360,108-360,0"/>
+<path fill="none" stroke="#FFFFFF" stroke-width="7.5" d="M99,162c0-45,144-36,144,0"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M99,162c0-144,432-144,432,0"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M99,162c0-108,360-108,360,0"/>
+
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M99,162c0-45,144-36,144,0"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M171,54c0,0-72,36-72,108"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M171,36c0,0-72,45-72,126"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M99,279c0,0-72-36-72-117"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M27,162c0,63,72,99,72,99"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M27,162c0,144,504,144,504,0"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M387,162c0,108-360,108-360,0"/>
+<path fill="none" stroke="#D5AA78" stroke-width="3" d="M27,162c0,72,216,72,216,0"/>
+<polyline fill="none" stroke="#D5AA78" stroke-width="3" points="27,162 99,162 171,162 "/>
+<path fill="#F0FFFF" stroke="#000000" d="M45,168c0,6.627-5.373,12-12,12H21c-6.627,0-12-5.373-12-12v-12c0-6.627,5.373-12,12-12h12
+	c6.627,0,12,5.373,12,12V168z"/>
+<text transform="matrix(1 0 0 1 21.75 169)" style="font-family:DejaVu Serif;font-size:21px">0</text>
+<path fill="#F0FFFF" stroke="#000000" d="M117,168c0,6.627-5.373,12-12,12H93c-6.627,0-12-5.373-12-12v-12c0-6.627,5.373-12,12-12
+	h12c6.627,0,12,5.373,12,12V168z"/>
+<text transform="matrix(1 0 0 1 93.75 169)" style="font-family:DejaVu Serif;font-size:21px">1</text>
+<path fill="#F0FFFF" stroke="#000000" d="M189,168c0,6.627-5.373,12-12,12h-12c-6.627,0-12-5.373-12-12v-12c0-6.627,5.373-12,12-12
+	h12c6.627,0,12,5.373,12,12V168z"/>
+<text transform="matrix(1 0 0 1 165.75 169)" style="font-family:DejaVu Serif;font-size:21px">2</text>
+
+<path fill="#F0FFFF" stroke="#000000" d="M261,168c0,6.627-5.373,12-12,12h-12c-6.627,0-12-5.373-12-12v-12c0-6.627,5.373-12,12-12
+	h12c6.627,0,12,5.373,12,12V168z"/>
+<text transform="matrix(1 0 0 1 237.75 169)" style="font-family:DejaVu Serif;font-size:21px">3</text>
+<path fill="#F0FFFF" stroke="#000000" d="M333,168c0,6.627-5.373,12-12,12h-12c-6.627,0-12-5.373-12-12v-12c0-6.627,5.373-12,12-12
+	h12c6.627,0,12,5.373,12,12V168z"/>
+<text transform="matrix(1 0 0 1 309.75 169)" style="font-family:DejaVu Serif;font-size:21px">4</text>
+<path fill="#F0FFFF" stroke="#000000" d="M405,168c0,6.627-5.373,12-12,12h-12c-6.627,0-12-5.373-12-12v-12c0-6.627,5.373-12,12-12
+	h12c6.627,0,12,5.373,12,12V168z"/>
+<text transform="matrix(1 0 0 1 381.75 169)" style="font-family:DejaVu Serif;font-size:21px">5</text>
+<path fill="#F0FFFF" stroke="#000000" d="M477,168c0,6.627-5.373,12-12,12h-12c-6.627,0-12-5.373-12-12v-12c0-6.627,5.373-12,12-12
+	h12c6.627,0,12,5.373,12,12V168z"/>
+<text transform="matrix(1 0 0 1 453.75 169)" style="font-family:DejaVu Serif;font-size:21px">6</text>
+<path fill="#F0FFFF" stroke="#000000" d="M549,168c0,6.627-5.373,12-12,12h-12c-6.627,0-12-5.373-12-12v-12c0-6.627,5.373-12,12-12
+	h12c6.627,0,12,5.373,12,12V168z"/>
+<text transform="matrix(1 0 0 1 525.75 169)" style="font-family:DejaVu Serif;font-size:21px">7</text>
+<path fill="#F0FFFF" stroke="#000000" d="M621,168c0,6.627-5.373,12-12,12h-12c-6.627,0-12-5.373-12-12v-12c0-6.627,5.373-12,12-12
+	h12c6.627,0,12,5.373,12,12V168z"/>
+<text transform="matrix(1 0 0 1 597.75 169)" style="font-family:DejaVu Serif;font-size:21px">8</text>
+
+<circle cx="642" cy="162" r="3"/>
+<circle cx="666" cy="162" r="3"/>
+<circle cx="690" cy="162" r="3"/>
+<circle cx="110.002" cy="266" r="2"/>
+<circle cx="122.002" cy="270.666" r="2"/>
+<circle cx="133.336" cy="275.333" r="2"/>
+<circle cx="108.669" cy="280.667" r="2"/>
+<circle cx="120.669" cy="285.333" r="2"/>
+<circle cx="132.003" cy="290" r="2"/>
+<circle cx="181.336" cy="50" r="2"/>
+<circle cx="193.336" cy="45.333" r="2"/>
+<circle cx="205.336" cy="42" r="2"/>
+<circle cx="179.336" cy="32" r="2"/>
+<circle cx="192.669" cy="25.333" r="2"/>
+<circle cx="206.002" cy="20.666" r="2"/>
+<circle cx="324.002" cy="34" r="2"/>
+<circle cx="336.002" cy="32" r="2"/>
+
+<circle cx="350.002" cy="30" r="2"/>
+<circle cx="325.336" cy="15.333" r="2"/>
+<circle cx="336.669" cy="12.666" r="2"/>
+<circle cx="350.67" cy="10.666" r="2"/>
+<circle cx="396.669" cy="290" r="2"/>
+<circle cx="409.336" cy="291.333" r="2"/>
+<circle cx="422.669" cy="292" r="2"/>
+<circle cx="397.336" cy="308" r="2"/>
+<circle cx="409.336" cy="308.666" r="2"/>
+<circle cx="424.003" cy="309.333" r="2"/>
+<rect fill="none" width="702" height="324"/>
+</svg>

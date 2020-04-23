@@ -93,6 +93,23 @@ def initializeGrid():
     coordsToAgent[(1,1)].sirState = 'I'
     
     
+#Initialize grid of agents with different set of connections
+def initializeGrid():
+    coordsToAgent.clear()
+    agentSet.clear()
+    for y in range(globalHeight):
+        for x in range(globalWidth):
+            newAgent = agent(x,y)
+            agentSet.add(newAgent)
+            coordsToAgent[(x,y)] = newAgent
+            if x > 0:
+                connectAgents(newAgent,coordsToAgent[(x-1,y)])
+            if y > 0:
+                connectAgents(newAgent,coordsToAgent[(x,y-1)])
+    #Seed initial infection
+    coordsToAgent[(1,1)].sirState = 'I'
+    
+    
 def checkForInfected():
     "returns True if anyone is currently infected."
     infectedFlag = False
