@@ -37,7 +37,7 @@
 
 
 The consumer's problem is 
-    \[\max_{C,l}\; U(C,l)\]
+    \[\max_{c,l}\; U(c,l)\]
 subject to the constraints:
     \begin{gather}
         c\geq 0,    \quad        \quad         h \geq l \geq 0             \tag{NonNeg}\\
@@ -45,7 +45,8 @@ subject to the constraints:
     \end{gather}
 
 
-    
+<br>
+In this example, \(U(c,l) = \ln c + \ln l\)
 
 
 
@@ -107,9 +108,9 @@ subject to the constraints:
         }
 
 
-        $("#wealth").text(wealth.toFixed(2));
+        $("#labor").text((h-l).toFixed(2));
         $("#leisure").text(l.toFixed(2));
-        $("#consumptions").text(c.toFixed(2));
+        $("#consumption").text(c.toFixed(2));
         $("#utility").text(utility.toFixed(2));
     }
     updateEndogenous();
@@ -193,7 +194,7 @@ subject to the constraints:
         },
         tooltip: {
             headerFormat: '<b>{series.name}</b><br>',
-            pointFormat: "c={point.x:.2f}, c'={point.y:.2f} ,"
+            pointFormat: "l={point.x:.2f}, c={point.y:.2f} ,"
         },
 
         plotOptions: {

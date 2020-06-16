@@ -30,6 +30,7 @@ html {
   font-size: 62.5%;
   font-family: serif;
   background-color: #eee8d5;
+  background-color: #fdf6e3;
 }
 
 body {
@@ -42,7 +43,7 @@ body {
   color: #073642;
   color: hsl(192, 81%, 14%);
   color: hsl(194, 14%, 30%);
-  background-color: #fdf6e3;
+  background-color: #;
   padding: 10px;
 }
 
@@ -286,6 +287,11 @@ summary {
   margin-bottom: 5px;
   background-color: hsl(45, 100%, 90%);
   text-align: center;
+}
+
+.highlight{
+    padding: 0.5em;
+    background-color: #eee8d5;
 }
 
 .mySimpleNavBar {
