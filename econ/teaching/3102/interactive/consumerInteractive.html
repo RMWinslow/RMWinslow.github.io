@@ -15,6 +15,22 @@
 
 <p>In the following graph, the agent has the utility function \(U(c,l)=\ln c + \ln l\)</p>
 
+
+<div class="flexBox">
+    <div>d </div>
+    <div>f </div>
+    <div>g </div>
+    <div> s</div>
+</div>
+
+<div class="flexBox">
+    <div>One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+
+
+
 <div id="consumerChart" style="max-width: 90vmin;   ; margin: 0 auto"></div>
 
 <b>Exogenous Variables and Parameters:</b>    <button type="button" style="float: right;" >Click here to update.</button>
@@ -35,6 +51,8 @@
             <td>\(U\): <output id='utility'>test</output></td>
         </tr>
 </table></b>
+
+
 
 
 <br><br><br><br>
@@ -165,11 +183,11 @@ In this example, \(U(c,l) = \ln c + \ln l\)
     //chart parameters
     minx = 0;
     maxx = 100;
-    axissize = '100%'; //unused currently. Had weird side effects
+    axissize = '100%'; 
     chartSteps = 200; // The number of data points to sample when drawing a chart.
 
     var endowChart = Highcharts.chart('consumerChart', {
-        chart: {type: 'line',  backgroundColor: null, height: '100%', },
+        chart: {type: 'line',  backgroundColor: null,  height: '100%', },
         title: {text: "" },
         legend:{ enabled:true,  align: 'right', verticalAlign: 'top', floating: true, itemDistance:10,},
 

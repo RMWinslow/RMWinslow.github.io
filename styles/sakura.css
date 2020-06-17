@@ -269,7 +269,7 @@ summary {
 
 
 /*-------------------------------------------------------------------------------------------------------------------------------------*/
-/*THIS IS CUSTOM STUFF MEANT TO BE ACTUALLY USEFUL FOR MAKING ECON NOTES*/
+/*THIS IS CUSTOM STUFF MEANT TO BE ACTUALLY USEFUL FOR MAKING NOTES*/
 /* Custom Stuff */
 
 .definition {
@@ -302,6 +302,24 @@ summary {
   margin-left:3em;
   margin-right:3em;
 }
+
+
+
+
+
+
+.flexRow {
+    width:100%
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+
+
+
+
+
 
 
 
