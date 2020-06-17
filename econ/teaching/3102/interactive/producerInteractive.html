@@ -163,7 +163,7 @@ In this example,capital stock is given exogenously, and output is determined by 
         },
         yAxis: {
             title: {
-                text: ""
+                text: "Units of Real Output"
             },
             //height: axissize,            
             //width: axissize,
@@ -198,7 +198,7 @@ In this example,capital stock is given exogenously, and output is determined by 
             enabled:true
         },
 
-        //colors: ['#6CF', '#39F', '#06C', '#036', '#000'],
+        colors: [,'#000','#7cb5ec', '#00F'],
 
         series: [{
             name: "Cost",
@@ -213,7 +213,6 @@ In this example,capital stock is given exogenously, and output is determined by 
             data: output(minx,maxx,chartSteps),
         },{
             name:"Profit-Maximizing Point",
-            color: '#ffff00',
             data:[{x:Nd,y:Y,marker: {symbol: 'url(star2.png)'}}]
         },]
     });
