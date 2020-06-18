@@ -6,7 +6,7 @@
     <script src="https://code.highcharts.com/highcharts.js"></script> 
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
     <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
-    <link href="https://www.robertmwinslow.com/styles/sakura.css" rel="stylesheet" type="text/css">
+    <link href="../../../../styles/sakura.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -16,41 +16,28 @@
 <p>In the following graph, the agent has the utility function \(U(c,l)=\ln c + \ln l\)</p>
 
 
-<div class="flexBox">
-    <div>d </div>
-    <div>f </div>
-    <div>g </div>
-    <div> s</div>
+
+<div id="consumerChart" style="max-width: 80vmin;   ; margin: 0 auto"></div>
+
+<b>Exogenous Parameters:</b>    <button type="button" style="float: right;" >Click to update chart.</button>
+
+<div class="flexRow">
+    <div>\(w\):     <input type="number" id="w"  step="0.1" style="width: 4em;"> </div>
+    <div>\(h\):     <input type="number" id="h"  step="1" style="width: 4em;">   </div>
+    <div>\(\pi\):     <input type="number" id="pi"  step="1" style="width: 4em;">   </div>
+    <div>\(T\):     <input type="number" id="T"  step="1" style="width: 4em;">   </div>
+</div>
+<hr class="smallLine">
+<b>Endogenous Parameters:</b>
+<div class="flexRow">
+    <div>\(C\): <output id='consumption'>test</output></div>
+    <div>\(l\): <output id='leisure'>test</output></div>
+    <div>\(N_s\): <output id='labor'>test</output></div>
+    <div>\(U\): <output id='utility'>test</output></div>
 </div>
 
-<div class="flexBox">
-    <div>One</div>
-    <div>Two</div>
-    <div>Three</div>
-  </div>
 
 
-
-<div id="consumerChart" style="max-width: 90vmin;   ; margin: 0 auto"></div>
-
-<b>Exogenous Variables and Parameters:</b>    <button type="button" style="float: right;" >Click here to update.</button>
-<b><table style="text-align: center;">
-        <tr>
-            <td>\(w\):     <input type="number" id="w"  step="0.1" style="width: 4em;">  &nbsp; </td>
-            <td>\(h\):     <input type="number" id="h"  step="1" style="width: 4em;">  &nbsp; </td>
-            <td>\(\pi\):     <input type="number" id="pi"  step="1" style="width: 4em;">  &nbsp; </td>
-            <td>\(T\):     <input type="number" id="T"  step="1" style="width: 4em;">  &nbsp; </td>
-        </tr  >
-        <tr>
-            <td colspan="4"><b>Endogenous Variables and Parameters:</b> </td>
-        </tr>
-        <tr>
-            <td>\(C\): <output id='consumption'>test</output></td>
-            <td>\(l\): <output id='leisure'>test</output></td>
-            <td>\(N_s\): <output id='labor'>test</output></td>
-            <td>\(U\): <output id='utility'>test</output></td>
-        </tr>
-</table></b>
 
 
 

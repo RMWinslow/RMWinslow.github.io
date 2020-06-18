@@ -15,33 +15,31 @@
 
 <p>In this graph, the market-clearing conditions aren't  enforced. Play around with the real wage and see how there is only one wage at which the Producer's and Consumer's Decisions align.</p>
 
-<div id="graphHolder" style="width: 75vmin;  height: 80vmin; margin: 0 auto"></div>
+<div id="graphHolder" style="width: 75vmin; margin: 0 auto"></div>
 
-<b>Exogenous Variables and Parameters:</b>    <button type="button" style="float: right;" >Click here to update.</button>
-<b><table style="text-align: center;">
-        <tr>
-            <td>\(K\):     <input type="number" id="capital"  step="1" style="width: 4em;">  &nbsp; </td>
-            <td>\(z\):     <input type="number" id="tfp"  step="0.1" style="width: 4em;">  &nbsp; </td>
-            <td>\(\alpha\):     <input type="number" id="alpha"  step="0.05" style="width: 4em;">  &nbsp; </td>
-            <td>\(h\):     <input type="number" id="h"  step="1" style="width: 4em;">  &nbsp; </td>
-            <td>\(G\):     <input type="number" id="T"  step="1" style="width: 4em;">  &nbsp; </td>
-            <td></td>
-            <td>\(w\):     <input type="number" id="wage"  step="0.1" style="width: 4em;">  &nbsp; </td>
-        </tr  >
-        <tr>
-            <td colspan="4"><b>Endogenous Variables and Parameters:</b> </td>
-        </tr>
-        <tr>
-                <td>\(N_d\): <output id='laborDemand'>test</output></td>
-                <td>\(N_s\): <output id='laborSupply'>test</output></td>
-                <td>\(Y\): <output id='output'>test</output></td>
-                <td>\(\pi\): <output id='profit'>test</output></td>
-                <td>\(C\): <output id='consumption'>test</output></td>
-                <td>\(l\): <output id='leisure'>test</output></td>
-                <td>\(U\): <output id='utility'>test</output></td>
-                <td></td>
-        </tr>
-</table></b>
+
+<b>Exogenous Parameters:</b>    <button type="button" style="float: right;" >Click to update chart.</button>
+<div class="flexRow">
+    <div>\(K\):     <input type="number" id="capital"  step="1" style="width: 4em;">  &nbsp; </div>
+    <div>\(z\):     <input type="number" id="tfp"  step="0.1" style="width: 4em;">  &nbsp; </div>
+    <div>\(\alpha\):     <input type="number" id="alpha"  step="0.05" style="width: 4em;">  &nbsp; </div>
+    <div>\(h\):     <input type="number" id="h"  step="1" style="width: 4em;">  &nbsp; </div>
+    <div>\(G\):     <input type="number" id="T"  step="1" style="width: 4em;">  &nbsp; </div>
+    <div></div>
+    <div>\(w\):     <input type="number" id="wage"  step="0.1" style="width: 4em;">  &nbsp; </div>
+</div>
+<hr class="smallLine">
+<b>Endogenous Parameters:</b>
+<div class="flexRow">
+    <div>\(N_d\): <output id='laborDemand'>test</output></div>
+    <div>\(N_s\): <output id='laborSupply'>test</output></div>
+    <div>\(Y\): <output id='output'>test</output></div>
+    <div>\(\pi\): <output id='profit'>test</output></div>
+    <div>\(C\): <output id='consumption'>test</output></div>
+    <div>\(l\): <output id='leisure'>test</output></div>
+    <div>\(U\): <output id='utility'>test</output></div>
+</div>
+
 
 
 
@@ -82,11 +80,7 @@
     //
     
     
-    //chart parameters
-    minx = 0;
-    maxx = 100;
-    axissize = 600; //unused currently. Had weird side effects
-    chartSteps = 400; // The number of data points to sample when drawing a chart.
+    
 
     //--------------------------------------------------------------------------------------------
     
@@ -210,20 +204,24 @@
 //---------------------------------------------------------------------------
     //Code for rendering the graphs.
 
+    //chart parameters
+    minx = 0;
+    maxx = 100;
+    axissize = '100%'; //unused currently. Had weird side effects
+    chartSteps = 400; // The number of data points to sample when drawing a chart.
+
     var endowChart = Highcharts.chart('graphHolder', {
-        chart: {
-            type: 'line',
-            backgroundColor: null
-        },
-        title: {
-            text: "Producer and Consumer"
-        },
+        
+        chart: {type: 'line',  backgroundColor: null,  height: '100%', },
+        title: {text: "" },
+        legend:{ enabled:true,  align: 'right', verticalAlign: 'top', floating: true, itemDistance:10,},
+
         xAxis: {
             title: {
                 text: 'l = h - N'
             },           
-            //height: axissize,            
-            //width: axissize,
+            height: axissize,            
+            width: axissize,
             min: minx,
             max: maxx,
             gridLineWidth: 1,
@@ -233,8 +231,8 @@
             title: {
                 text: "C=Y-G"
             },
-            //height: axissize,            
-            //width: axissize,
+            height: axissize,            
+            width: axissize,
             min:minx,
             max: maxx,
             tickInterval: 20
@@ -262,9 +260,6 @@
             }
         },
 
-        legend:{
-            enabled:true
-        },
 
         //colors: ['#6CF', '#39F', '#06C', '#036', '#000'],
 

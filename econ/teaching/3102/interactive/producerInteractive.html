@@ -13,26 +13,28 @@
 
 <h1>Producer's Problem</h1>
 
-<div id="graphHolder" style="width: 75vmin;  height: 80vmin; margin: 0 auto"></div>
+<p>The following is an intereactive example of a producer's problem with Cobb-Douglass production and exogenous capital.</p>
 
-<b>Exogenous Variables and Parameters:</b>    <button type="button" style="float: right;" >Click here to update.</button>
-<b><table style="text-align: center;">
-        <tr>
-            <td>\(K\):     <input type="number" id="capital"  step="1" style="width: 4em;">  &nbsp; </td>
-            <td>\(z\):     <input type="number" id="tfp"  step="0.1" style="width: 4em;">  &nbsp; </td>
-            <td>\(w\):     <input type="number" id="wage"  step="0.1" style="width: 4em;">  &nbsp; </td>
-            <td>\(\alpha\):     <input type="number" id="alpha"  step="0.05" style="width: 4em;">  &nbsp; </td>
-        </tr  >
-        <tr>
-            <td colspan="4"><b>Endogenous Variables and Parameters:</b> </td>
-        </tr>
-        <tr>
-                <td>\(N_d\): <output id='laborDemand'>test</output></td>
-                <td>\(Y\): <output id='output'>test</output></td>
-                <td>\(\pi\): <output id='profit'>test</output></td>
-                <td></td>
-        </tr>
-</table></b>
+<div id="graphHolder" style="width: 75vmin; margin: 0 auto"></div>
+
+
+<b>Exogenous Parameters:</b>    <button type="button" style="float: right;" >Click to update chart.</button>
+
+<div class="flexRow">
+    <div>\(K\):     <input type="number" id="capital"  step="1" style="width: 4em;">  &nbsp; </div>
+    <div>\(z\):     <input type="number" id="tfp"  step="0.1" style="width: 4em;">  &nbsp; </div>
+    <div>\(w\):     <input type="number" id="wage"  step="0.1" style="width: 4em;">  &nbsp; </div>
+    <div>\(\alpha\):     <input type="number" id="alpha"  step="0.05" style="width: 4em;">  &nbsp; </div>
+</div>
+<hr class="smallLine">
+<b>Endogenous Parameters:</b>
+<div class="flexRow">
+    <div>\(N_d\): <output id='laborDemand'>test</output></div>
+    <div>\(Y\): <output id='output'>test</output></div>
+    <div>\(\pi\): <output id='profit'>test</output></div>
+</div>
+
+
 
 
 
@@ -59,12 +61,6 @@ In this example,capital stock is given exogenously, and output is determined by 
     });
     //
     
-    
-    //chart parameters
-    minx = 0;
-    maxx = 100;
-    axissize = 600; //unused currently. Had weird side effects
-    chartSteps = 400; // The number of data points to sample when drawing a chart.
 
     //--------------------------------------------------------------------------------------------
     
@@ -142,22 +138,24 @@ In this example,capital stock is given exogenously, and output is determined by 
 //---------------------------------------------------------------------------
     //Code for rendering the graphs.
 
+    
+    //chart parameters
+    minx = 0;
+    maxx = 100;
+    axissize = '100%'; 
+    chartSteps = 400; // The number of data points to sample when drawing a chart.
+
+
     var endowChart = Highcharts.chart('graphHolder', {
-        chart: {
-            type: 'line',
-            backgroundColor: null
-        },
-        title: {
-            text: "Producer's Problem with Cobb-Douglas Production and Exogenous Capital"
-        },
+        chart: {type: 'line',  backgroundColor: null,  height: '100%', },
+        title: {text: "" },
+        legend:{ enabled:true,  align: 'right', verticalAlign: 'top', floating: true, itemDistance:10,},
+
         xAxis: {
             title: {
                 text: 'Labor Demand'
             },           
-            //height: axissize,            
-            //width: axissize,
-            min: minx,
-            max: maxx,
+            height: axissize, width: axissize,  min: minx, max: maxx,
             gridLineWidth: 1,
             tickInterval: 20
         },
@@ -165,10 +163,7 @@ In this example,capital stock is given exogenously, and output is determined by 
             title: {
                 text: "Units of Real Output"
             },
-            //height: axissize,            
-            //width: axissize,
-            min:minx,
-            max: maxx,
+            height: axissize, width: axissize,  min: minx, max: maxx,
             tickInterval: 20
         },
         tooltip: {
@@ -192,10 +187,6 @@ In this example,capital stock is given exogenously, and output is determined by 
                     }
                 }
             }
-        },
-
-        legend:{
-            enabled:true
         },
 
         colors: [,'#000','#7cb5ec', '#00F'],

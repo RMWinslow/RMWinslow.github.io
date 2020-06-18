@@ -108,6 +108,9 @@ small, sub, sup {
 hr {
   border: 1.5px solid #7a0019;
 }
+.smallLine {
+    border: 0.1px solid #657b8322; width:80%;
+}
 
 a {
   text-decoration: none;
@@ -307,12 +310,14 @@ summary {
 
 
 
-
 .flexRow {
-    width:100%
+    width:100%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.flexRow div {
 }
 
 
