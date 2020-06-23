@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    \[
+    \newcommand{\test}{The Wikibook about \LaTeX}
+    \newcommand{\manugood}{{}_👚}
+    \newcommand{\agrigood}{{}_🌽}
+    \]
+
+<link href="../../../styles/sakura.css" rel="stylesheet" type="text/css">
+<title>Can't specialize in manufactured goods.</title>
+</head>
+<body>
+
+    \[ 👚 = z_{\manugood} N_{\manugood}   + \gamma z_{\manugood} + z_{\manugood} \gamma + z_👚 \gamma +\]
+    
+
+<h1>Autarky</h1>
+
+<h3>Assumptions:</h3>
+<ul>
+    <li>Two goods: manufactured goods  and \(👚\) agricultural goods \(🌽\)</li>
+    <li>Consumer <i>needs</i> to have non-zero food, but can have zero manufactured goods and still survive.</li>
+        \[ U=\ln (🌽) + \gamma \ln (👚+1) \]
+    <li>Both goods are produced with CRS technology.</li>
+        \[ Y_👚 = z_👚 N_👚 \]
+        \[ Y_🌽 = z_🌽 N_🌽 \]
+    <li>No leisure decisions, I guess, just to keep things easy. Set price of 🌽 as numeraire?</li>
+</ul>
+
+
+
+
+<h3>Formal Definition of Equilibrium:</h3>
+<details><summary>Click to expand definition</summary>
+    <h6>Consumer's Problem:</h6>
+        Taking prices \(\{w,p\}\) as given, chooses \(\{👚,🌽\}\) to solve 
+            \[\max_{👚,🌽} \ln (🌽) + \gamma \ln (👚+1)\]
+        subject to the constraints that 
+            \[👚,🌽 \geq 0\]
+            \[p👚 + 🌽 \leq w + \pi_👚 + \pi_🌽\]
+    <h6>Manufacturing Firm's Problem:</h6>
+        Taking prices \(\{w,p\}\) as given, chooses \(\{N_👚\}\) to solve 
+            \[\max p z_👚 N_👚 - w N_👚\]
+    <h6>Agricultural Firm's Problem:</h6>
+        Taking prices \(\{w,p\}\) as given, chooses \(\{N_🌽\}\) to solve 
+            \[\max z_🌽 N_🌽 - w N_🌽\]
+    <h6>Market Clearing:</h6>
+        \[N_👚 + N_🌽 = 1\]
+        \[ 👚 = z_👚 N_👚 \]
+        \[ 🌽 = z_🌽 N_🌽 \]
+</details>
+
+
+
+<h3>Solution to firms' problems:</h3>
+<p>For non-zero finite output, it must be that 
+    \[p z_👚 = w = z_🌽\]
+and for zero output of 👚, it must be that 
+    \[w \geq p z_👚\]
+In either case, profits will be zero.
+</p>
+
+
+
+
+<h3>Solution to consumer's problem:</h3>
+<p>In an interior solution where \(👚>0\), 
+    \[\frac{(👚+1)}{\gamma 🌽} = p\]
+    \[ p👚 + 🌽 = w \]
+    \[🌽 = \frac{w+p}{\left(1+\gamma\right)}\]
+    \[👚 = \frac{w\gamma-p}{p\left(1+\gamma\right)}\]
+And in a solution where \(👚=0\),
+    \[🌽 = w\]
+Note that interior solution requires that \(p < w\gamma\)
+</p>
+<details><summary>Click to expand work for consumer problem</summary>
+    Assume profits are zero. Will be true in equilibrium, so no big deal. Then 
+    Assuming interior solution where \(🌽,👚>0\), Lagrangian is:
+        \[\mathcal{L} = \ln (🌽) + \gamma \ln (👚+1) - \lambda [ p👚 + 🌽 - w ] \]
+    FOCs:
+        \[{1 \over 🌽} = \lambda\]
+        \[{\gamma \over (👚+1)} = \lambda p\]
+        \[p👚 + 🌽 = w \]
+    Implies   
+        \[{\gamma \over (👚+1)} = {1 \over 🌽} p\]
+    Solve this to express each variable in terms of the other:
+        \[🌽=👚\frac{p}{\gamma}+\frac{p}{\gamma}\]
+        \[👚=🌽\frac{\gamma}{p}-1\]
+    Combine these with  budget constraint to solve explicitly for allocation variables:
+        \[🌽 = \frac{w+p}{\left(1+\gamma\right)}\]
+        \[👚 = \frac{w\gamma-p}{p\left(1+\gamma\right)}\]
+</details>
+
+
+
+<h3>Combine problems to get equilibrium</h3>
+<p>
+    If \(\gamma z_👚 > 1\), then we have the interior solution:
+        \[🌽 = z_🌽 \cdot \left( \frac{1+z_👚}{z_👚\left(1+\gamma\right)} \right) \]
+        \[👚 =  \frac{\gamma z_👚 - 1}{\left(1+\gamma\right)}\]
+        \[N_🌽 = \frac{🌽}{z_{🌽}} = \frac{\left(z_{👚}+1\right)}{z_{👚}\left(1+\gamma\right)}\]
+        \[N_{👚} = \frac{👚}{z_{👚}}=\frac{\gamma-\frac{1}{z_{👚}}}{1+\gamma}\]
+    Otherwise,  if \(\gamma z_👚 \leq 1\),
+        \[N_🌽 = 1\]
+        \[N_👚 = 0\]
+        \[🌽 = w = z_🌽\]
+
+</p>
+
+<details><summary>Click to expand work for solving for the equilibrium allocations</summary>
+    For an interior solution, we have the following characterizing equations:<br>
+    From consumer:
+        \[\frac{(👚+1)}{\gamma 🌽} = p\]
+        \[ p👚 + 🌽 = w \]
+        \[🌽 = \frac{w+p}{\left(1+\gamma\right)}\]
+        \[👚 = \frac{w\gamma-p}{p\left(1+\gamma\right)}\]
+        \[🌽,👚>0\]
+    From firms:
+        \[p z_👚 = w = z_🌽\]
+    From Market Clearing
+        \[N_👚 + N_🌽 = 1\]
+        \[ Y_👚 = z_👚 N_👚 \]
+        \[ Y_🌽 = z_🌽 N_🌽 \]
+    <br>
+    Note how this implies that 
+        \[p=\frac{ z_🌽 }{ z_👚 }\]
+    And substitute out the prices to get allocations:
+        \[🌽 = \frac{ z_🌽 + {z_🌽 \over z_👚} }{\left(1+\gamma\right)}  
+            = z_🌽 \frac{1+z_👚}{z_👚\left(1+\gamma\right)} \]
+        \[👚 = \frac{z_🌽 \gamma-{z_🌽 \over z_👚}}{{z_🌽 \over z_👚}\left(1+\gamma\right)}   
+            =   \frac{\gamma z_👚 - 1}{\left(1+\gamma\right)}\]
+        \[N_🌽 = \frac{🌽}{z_{🌽}} = \frac{\left(z_{👚}+1\right)}{z_{👚}\left(1+\gamma\right)}\]
+        \[N_{👚} = \frac{👚}{z_{👚}}=\frac{\gamma-\frac{1}{z_{👚}}}{1+\gamma}\]
+    Note that the above equations are consistent with \(👚>0\) iff \(\gamma z_👚 > 1\). If this isn't the case, then it must instead be that \(👚=0\) and 
+        \[N_🌽 = 1\]
+        \[N_👚 = 0\]
+        \[🌽 = w = z_🌽\]
+    
+</details>
+
+    
+
+<h3>Key takeaways.</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
