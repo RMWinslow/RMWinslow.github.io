@@ -1,0 +1,180 @@
+Presentation Planning Notes
+
+Meng
+O ring theory
+
+
+
+
+
+
+
+
+
+Virus automata
+    Simplex
+    Connections to all 8 neighbors
+
+
+    Observation: Spread throughout graph. If no randomness, time is equal to diameter of graph
+
+
+Can a reduction in average outdegree increase the rate of spread?
+    Increase the connections within families?
+    http://www.overcomingbias.com/2020/04/beware-r0-variance.html
+
+
+
+Graph Theory
+    Network Theory
+        Electric network analysis
+            Susceptibility of electrical networks to failures in specific nodes
+                Reverse to consider how to target specific social nodes?
+            https://ieeexplore.ieee.org/document/8191215
+        Social network analysis
+        Network robustness
+    Centrality
+        Eigenvector centrality:  A high eigenvector score means that a node is connected to many nodes who themselves have high scores. Like google search ranks
+        Degree centrality is just degree. 
+            Graph centralization compares these to star graph
+        Closeness centrality:
+            Average length of shortest path to each other node
+        Betweenness Centrality: the number of times a node acts as a bridge along the shortest path between two other nodes.
+        Percolation Centrality: Portion of percolated paths that go through this node
+            Percolation Theory - Eh, not quite relevant. More of a materials science thing.
+                Percolation threshold: What portion of bonds or nodes need to be filled to get large scale connectivity
+                    ACTUALLY VERY IMPORTANT
+                Papers from Rahman: 
+            Contact networks
+            https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3551907/
+
+    Clustering Cooefficient
+
+    Complex Network
+        Scale-free network: Power law distribution of Degree
+        Small-world network: short paths. Neighbor are likely to be neighbors.
+
+    Spread
+    Clustering
+        Networks with the Smallest Average Distance and the Largest Average Clustering
+    Immunization
+        Immunization of complex networks
+    Interdependent Networks
+    Assortive Mixing
+        Friendship paradox
+    The Structure and Dynamics of Networks 
+
+
+    can removing edges ioncrease disease spread?
+    Effect on percolation?
+
+
+
+Networks and epidemic models: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1578276/
+
+Kremer has two papers about the aids epidemic.
+"More Sex is safer sex"
+
+
+https://towardsdatascience.com/the-mathematics-of-epidemiology-fa0ba15e44a2
+
+
+Institute for disease modelling - Maybe download the software to play around with.
+
+
+
+
+
+
+
+
+-percolation threshold
+-supply chains (levine) and percolation theory
+    Acemoglu networks and intermediate goods
+
+Make an effort for tomorrow. Translate to COVID
+Three Ideas:
+    Percolation threshold*******
+    Assortive graphs
+        HIV tranmission Kremer
+
+
+
+
+What you can provide new is endogenizing the network.
+
+
+-real world examples related to patient 31
+
+-Present two graphs. The latter has reduced connctions but increased centrality and so greater disease spread
+-Relate to epidemic transmission
+-Implications for policy? Cite electric grid papers about Susceptibility to damage, cite immunization?
+-Argue that in the presence of extroverts who refuse to distance, it is more important to, say, put up blast shields at the grocery store.
+-optimal allocation of ppe
+
+
+
+
+
+
+
+Use images for the 
+
+
+
+5 minutes - Refresher of Graph Theory Terms
+    Vertex, Edge, mention the axon thing,
+    matrix representation
+    path, neighbors, degree
+    metion the thing abuot multiple edges, loops, direction, and weight
+10 minutes - Examples of Graphs
+    Complete graph
+    star graph
+    lattice
+    random graph
+        number line, grid
+Resilience of graphs
+    Compare star graph and ring. Remove a point and see what happens
+    Compare small world with random graph. Remove a connection and see what happens
+
+
+
+
+
+INTERSETING TIDBITS
+Percolation Threshold is computed for lattices with duals.
+can assign an order to edges to nest possible graphs within each other,
+Does an infinite graph have a path of infinite length. Or an infinite connected component?
+
+Variability in connectivity lowering the percolation threshold?
+
+percolation threshold for complete graph is 1/N, where N is number of vertices
+ Erdős–Rényi graph where {\displaystyle p_{c}=1/{\bar {k}}}{\displaystyle p_{c}=1/{\bar {k}}}, where {\displaystyle {\bar {k}}}{\displaystyle {\bar {k}}} is the average degree
+"Localized Attacks" - Remove a neighbor and then its neighbor
+
+which, as described in detail in Section 4.2,
+is a model of a social network that introduces clustering (or network transitivity)
+into the random graph in a controlled way.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Housing Problem
+

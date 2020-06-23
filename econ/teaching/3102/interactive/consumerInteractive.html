@@ -6,38 +6,47 @@
     <script src="https://code.highcharts.com/highcharts.js"></script> 
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
     <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
-    <link href="https://www.robertmwinslow.com/styles/sakura.css" rel="stylesheet" type="text/css">
+    <link href="../../../../styles/sakura.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
 
 <h1>Consumer's Problem</h1>
 
-<div id="endowmentEconomy" style="width: 80vmin;  height: 80vmin; margin: 0 auto"></div>
+<p>In the following graph, the agent has the utility function \(U(c,l)=\ln c + \ln l\)</p>
 
-<b>Exogenous Variables and Parameters:</b>    <button type="button" style="float: right;" >Click here to update.</button>
-<b><table style="text-align: center;">
-        <tr>
-            <td>\(w\):     <input type="number" id="w"  step="0.1" style="width: 4em;">  &nbsp; </td>
-            <td>\(h\):     <input type="number" id="h"  step="1" style="width: 4em;">  &nbsp; </td>
-            <td>\(\pi\):     <input type="number" id="pi"  step="1" style="width: 4em;">  &nbsp; </td>
-            <td>\(T\):     <input type="number" id="T"  step="1" style="width: 4em;">  &nbsp; </td>
-        </tr  >
-        <tr>
-            <td colspan="4"><b>Endogenous Variables and Parameters:</b> </td>
-        </tr>
-        <tr>
-            <td>\(C\): <output id='consumption'>test</output></td>
-            <td>\(l\): <output id='leisure'>test</output></td>
-            <td>\(N_s\): <output id='labor'>test</output></td>
-            <td>\(U\): <output id='utility'>test</output></td>
-        </tr>
-</table></b>
 
+
+<div id="consumerChart" style="max-width: 80vmin;   ; margin: 0 auto"></div>
+
+<b>Exogenous Parameters:</b>    <button type="button" style="float: right;" >Click to update chart.</button>
+
+<div class="flexRow">
+    <div>\(w\):     <input type="number" id="w"  step="0.1" style="width: 4em;"> </div>
+    <div>\(h\):     <input type="number" id="h"  step="1" style="width: 4em;">   </div>
+    <div>\(\pi\):     <input type="number" id="pi"  step="1" style="width: 4em;">   </div>
+    <div>\(T\):     <input type="number" id="T"  step="1" style="width: 4em;">   </div>
+</div>
+<hr class="smallLine">
+<b>Endogenous Parameters:</b>
+<div class="flexRow">
+    <div>\(C\): <output id='consumption'>test</output></div>
+    <div>\(l\): <output id='leisure'>test</output></div>
+    <div>\(N_s\): <output id='labor'>test</output></div>
+    <div>\(U\): <output id='utility'>test</output></div>
+</div>
+
+
+
+
+
+
+
+<br><br><br><br>
 
 
 The consumer's problem is 
-    \[\max_{C,l}\; U(C,l)\]
+    \[\max_{c,l}\; U(c,l)\]
 subject to the constraints:
     \begin{gather}
         c\geq 0,    \quad        \quad         h \geq l \geq 0             \tag{NonNeg}\\
@@ -45,7 +54,8 @@ subject to the constraints:
     \end{gather}
 
 
-    
+<br>
+In this example, \(U(c,l) = \ln c + \ln l\)
 
 
 
@@ -69,11 +79,6 @@ subject to the constraints:
     pi = 20;
     T = 10;
 
-    //chart parameters
-    minx = 0;
-    maxx = 100;
-    axissize = 600; //unused currently. Had weird side effects
-    chartSteps = 200; // The number of data points to sample when drawing a chart.
 
     //populate the input forms with the default values
 
@@ -107,9 +112,9 @@ subject to the constraints:
         }
 
 
-        $("#wealth").text(wealth.toFixed(2));
+        $("#labor").text((h-l).toFixed(2));
         $("#leisure").text(l.toFixed(2));
-        $("#consumptions").text(c.toFixed(2));
+        $("#consumption").text(c.toFixed(2));
         $("#utility").text(utility.toFixed(2));
     }
     updateEndogenous();
@@ -162,38 +167,34 @@ subject to the constraints:
 //---------------------------------------------------------------------------
     //Code for rendering the graphs.
 
-    var endowChart = Highcharts.chart('endowmentEconomy', {
-        chart: {
-            type: 'line',
-            backgroundColor: null
-        },
-        title: {
-            text: "The Consumer's Problem with log Utility"
-        },
+    //chart parameters
+    minx = 0;
+    maxx = 100;
+    axissize = '100%'; 
+    chartSteps = 200; // The number of data points to sample when drawing a chart.
+
+    var endowChart = Highcharts.chart('consumerChart', {
+        chart: {type: 'line',  backgroundColor: null,  height: '100%', },
+        title: {text: "" },
+        legend:{ enabled:true,  align: 'right', verticalAlign: 'top', floating: true, itemDistance:10,},
+
         xAxis: {
-            title: {
-                text: 'l (leisure)'
-            },           
-            //height: axissize,            
-           // width: axissize,
-            min:minx,
-            max: maxx,
+            title: {text: 'l (leisure)'},           
+            height: axissize, width: axissize, min:minx, max: maxx,
             gridLineWidth: 1,
             tickInterval: 20
         },
+
         yAxis: {
-            title: {
-                text: "C (Consumption)"
-            },
-            //height: axissize,            
-            //width: axissize,
-            min:minx,
-            max: maxx,
-            tickInterval: 20
+            title: {text: "C (Consumption)"},
+            height: axissize, width: axissize, min:minx, max: maxx,
+            tickInterval: 20,
+            lineColor: '#000'
         },
+
         tooltip: {
             headerFormat: '<b>{series.name}</b><br>',
-            pointFormat: "c={point.x:.2f}, c'={point.y:.2f} ,"
+            pointFormat: "l={point.x:.2f}, c={point.y:.2f} ,"
         },
 
         plotOptions: {
@@ -212,10 +213,6 @@ subject to the constraints:
                     }
                 }
             }
-        },
-
-        legend:{
-            enabled:true
         },
 
         //colors: ['#6CF', '#39F', '#06C', '#036', '#000'],

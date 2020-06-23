@@ -1,0 +1,5 @@
+closed form of distribution of people infected
+try to micro-found links on the network
+having fewer links make you more resiliant but also  more vulnerable to losing a connection
+input output across counties
+BOB Lucas Ben Mohl - Erzo working on extensions - diffusion of ideas

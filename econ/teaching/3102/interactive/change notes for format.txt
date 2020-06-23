@@ -1,0 +1,13 @@
+Move the chart parameters
+Delete the legend:true
+Paste the new lines for chart objects
+
+axissize to 100%
+
+Edit Title
+
+
+Replace table with flex.
+
+
+Fix any obvious bugs
