@@ -787,14 +787,14 @@ Country r produces both goods, country d produces and consumes only food
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $p_{f}z_{f}^{r}=w^{r}=p_{c}^{r}z_{c}^{r}$
+\begin_inset Formula $p_{f}^{r}z_{f}^{r}=w^{r}=p_{c}^{r}z_{c}^{r}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $p_{f}z_{f}^{d}=w^{d}\geq p_{c}^{d}z_{c}^{d}$
+\begin_inset Formula $p_{f}^{d}z_{f}^{d}=w^{d}=p_{c}^{d}z_{c}^{d}$
 \end_inset
 
  
@@ -830,41 +830,6 @@ Country r produces both goods, country d produces and consumes only food
 
 \begin_layout Itemize
 +MC conditions
-\end_layout
-
-\begin_layout Itemize
-\begin_inset Formula $p_{c}^{d}\geq p_{c}^{r}$
-\end_inset
-
-, 
-\begin_inset Formula $p_{f}^{r}=p_{f}^{d}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Therefore:
-\end_layout
-
-\begin_layout Standard
--
-\end_layout
-
-\begin_layout Standard
--
-\end_layout
-
-\begin_layout Standard
--
-\end_layout
-
-\begin_layout Standard
--
-\end_layout
-
-\begin_layout Standard
-Substistance consumption 
 \end_layout
 
 \end_body

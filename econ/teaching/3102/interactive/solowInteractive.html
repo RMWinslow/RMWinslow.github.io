@@ -6,40 +6,38 @@
     <script src="https://code.highcharts.com/highcharts.js"></script> 
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
     <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
-    <link href="https://www.robertmwinslow.com/styles/sakura.css" rel="stylesheet" type="text/css">
+    <link href="../../../../styles/sakura.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
 
-<h1>Producer's Problem</h1>
+<h1>Solow Growth</h1>
 
-<div id="graphHolder" style="width: 75vmin;  height: 80vmin; margin: 0 auto"></div>
+<p>The following is an interactive example showing how per-capita steady state is determined in a  Solow growth model with output given by \(Y=zK^\alpha N^{1-\alpha}\).</p>
 
-<b>Exogenous Variables and Parameters:</b>    <button type="button" style="float: right;" >Click here to update.</button>
-<b><table style="text-align: center;">
-        <tr>
-            <td>\(K\):     <input type="number" id="capital"  step="1" style="width: 4em;">  &nbsp; </td>
-            <td>\(z\):     <input type="number" id="tfp"  step="0.1" style="width: 4em;">  &nbsp; </td>
-            <td>\(w\):     <input type="number" id="wage"  step="0.1" style="width: 4em;">  &nbsp; </td>
-            <td>\(\alpha\):     <input type="number" id="alpha"  step="0.05" style="width: 4em;">  &nbsp; </td>
-        </tr  >
-        <tr>
-            <td colspan="4"><b>Endogenous Variables and Parameters:</b> </td>
-        </tr>
-        <tr>
-                <td>\(N_d\): <output id='laborDemand'>test</output></td>
-                <td>\(Y\): <output id='output'>test</output></td>
-                <td>\(\pi\): <output id='profit'>test</output></td>
-        </tr>
-</table></b>
+<div id="graphHolder" style="width: 75vmin; margin: 0 auto"></div>
 
 
+<b>Exogenous Parameters:</b>    <button type="button" style="float: right;" >Click to update chart.</button>
+
+<div class="flexRow">
+    <div>\(z\):     <input type="number" id="tfp"  step="0.1" style="width: 4em;">  &nbsp; </div>
+    <div>\(s\):     <input type="number" id="savings"  step="0.1" style="width: 4em;">  &nbsp; </div>
+    <div>\(\delta\):     <input type="number" id="depreciation"  step="0.1" style="width: 4em;">  &nbsp; </div>
+    <div>\(n\):     <input type="number" id="populationGrowth"  step="0.1" style="width: 4em;">  &nbsp; </div>
+    <div>\(\alpha\):     <input type="number" id="alpha"  step="0.05" style="width: 4em;">  &nbsp; </div>
+</div>
+<hr class="smallLine">
+<b>Endogenous Parameters:</b>
+<div class="flexRow">
+    <div>\(\overline{k}\): <output id='steadyState'>test</output></div>
+</div>
 
 
 
-In this example,capital stock is given exogenously, and output is determined by the production function:
-\[Y = zF(K,N_d)\]
 
+
+<br><br><br><br><br>
 
 
 
@@ -58,27 +56,27 @@ In this example,capital stock is given exogenously, and output is determined by 
     });
     //
     
-    
-    //chart parameters
-    minx = 0;
-    maxx = 100;
-    axissize = 600; //unused currently. Had weird side effects
-    chartSteps = 400; // The number of data points to sample when drawing a chart.
 
     //--------------------------------------------------------------------------------------------
     
 
     //default values for exogenous variables
-    z = 5;
+    z = 3;
     K = 3;
     w = 1;
     α = 0.5;
+    𝛿 = 0.2;
+    s = 0.5;
+    n = 0.2;
 
     //populate the input forms with the default values
     $('#tfp').val(z);
     $('#capital').val(K);
     $('#wage').val(w);
     $('#alpha').val(α);
+    $('#depreciation').val(𝛿);
+    $('#savings').val(s);
+    $('#populationGrowth').val(n);
 
 
     //Pull data from the forms and update the exogenous variables
@@ -87,6 +85,9 @@ In this example,capital stock is given exogenously, and output is determined by 
         K = Number($('#capital').val());
         w = Number($('#wage').val());
         α = Number($('#alpha').val());
+        𝛿 = Number($('#depreciation').val());
+        s = Number($('#savings').val());
+        n = Number($('#populationGrowth').val());
     }
 
     //calculate and update values for endogenous variables
@@ -95,9 +96,12 @@ In this example,capital stock is given exogenously, and output is determined by 
         Y = z * K**α * Nd**(1-α);
         pi = Y - w*Nd;
 
-        $("#laborDemand").text(Nd.toFixed(2));
-        $("#output").text(Y.toFixed(2));
-        $("#profit").text(pi.toFixed(2));
+        ssK = ((s*z)/(n+𝛿))**(1/(1-α));
+        ssY = z*ssK**α;
+        ssI = s*ssY;
+        ssC = (1-s)*ssY;
+
+        $("#steadyState").text(ssK.toFixed(2));
     }
     updateEndogenous();
    
@@ -105,12 +109,48 @@ In this example,capital stock is given exogenously, and output is determined by 
 
     //Functions for drawing lines.
 
+
+    function investmentCurve(minx,maxx,steps){
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y = s*z*x**α;
+            data.push([x,y]);
+        }
+        return data;
+    }
+
+    function depreciationCurve(minx,maxx,steps){
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y = (n+ 𝛿)*x;
+            data.push([x,y]);
+        }
+        return data;
+    }
+
+
+    function equalLine(minx,maxx,steps){
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y = x;
+            data.push([x,y]);
+        }
+        return data;
+    }
+
+
     function output(minx,maxx,steps){
         data = [];
         stepsize = (maxx-minx)/steps;
         for (var i = 0; i <= steps; i++){
             x = minx+i*stepsize;
-            y = z * K**α * x**(1-α);
+            y = z * x**α ;
             data.push([x,y]);
         }
         return data;
@@ -141,34 +181,33 @@ In this example,capital stock is given exogenously, and output is determined by 
 //---------------------------------------------------------------------------
     //Code for rendering the graphs.
 
+    
+    //chart parameters
+    minx = 0;
+    maxx = 20;
+    axissize = '100%'; 
+    chartSteps = 400; // The number of data points to sample when drawing a chart.
+
+
     var endowChart = Highcharts.chart('graphHolder', {
-        chart: {
-            type: 'line',
-            backgroundColor: null
-        },
-        title: {
-            text: "Producer's Problem with Cobb-Douglas Production and Exogenous Capital"
-        },
+        chart: {type: 'line',  backgroundColor: null,  height: '100%', },
+        title: {text: "" },
+        legend:{ enabled:true,  align: 'right', verticalAlign: 'top', floating: true, itemDistance:10,},
+
         xAxis: {
             title: {
-                text: 'Labor Demand'
+                text: 'k'
             },           
-            //height: axissize,            
-            //width: axissize,
-            min: minx,
-            max: maxx,
+            height: axissize, width: axissize,  min: minx, max: maxx,
             gridLineWidth: 1,
-            tickInterval: 20
+            tickInterval: 1
         },
         yAxis: {
             title: {
                 text: ""
             },
-            //height: axissize,            
-            //width: axissize,
-            min:minx,
-            max: maxx,
-            tickInterval: 20
+            height: axissize, width: axissize,  min: minx, max: maxx,
+            tickInterval: 1
         },
         tooltip: {
             headerFormat: '<b>{series.name}</b><br>',
@@ -193,27 +232,20 @@ In this example,capital stock is given exogenously, and output is determined by 
             }
         },
 
-        legend:{
-            enabled:true
-        },
-
-        //colors: ['#6CF', '#39F', '#06C', '#036', '#000'],
+        colors: [,'#000','#7cb5ec', '#00F'],
 
         series: [{
-            name: "Cost",
-            data: cost(minx,maxx,chartSteps),
-            enableMouseTracking: false
+            name: "investment",
+            data: investmentCurve(minx,maxx,chartSteps),
         },{
-            name: "MPN = w",
-            data: tangentline(minx,maxx,chartSteps),
-            enableMouseTracking: false
+            name: "depreciation",
+            data: depreciationCurve(minx,maxx,chartSteps),
         },{
-            name: "Output",
+            name: "output",
             data: output(minx,maxx,chartSteps),
         },{
-            name:"Profit-Maximizing Point",
-            color: '#ffff00',
-            data:[{x:Nd,y:Y,marker: {symbol: 'url(star.png)'}}]
+            name:"steady state",
+            data:[{x:ssK,y:ssI,marker: {symbol: 'url(star2.png)'}}]
         },]
     });
 
@@ -223,10 +255,11 @@ In this example,capital stock is given exogenously, and output is determined by 
 
 //Functions to update the graph's  data. redraw=false makes everything update at once
 function updateChart(){
+    //endowChart.series[0].setData(equalLine(minx,maxx,chartSteps), redraw=false);
+    endowChart.series[0].setData(investmentCurve(minx,maxx,chartSteps), redraw=false);
+    endowChart.series[1].setData(depreciationCurve(minx,maxx,chartSteps), redraw=false);
     endowChart.series[2].setData(output(minx,maxx,chartSteps), redraw=false);
-    endowChart.series[0].setData(cost(minx,maxx,chartSteps), redraw=false);
-    endowChart.series[1].setData(tangentline(minx,maxx,chartSteps), redraw=false);
-    endowChart.series[3].data[0].update([Nd,Y], redraw=false);
+    endowChart.series[3].data[0].update([ssK,ssI], redraw=false);
     endowChart.redraw();
 }
 

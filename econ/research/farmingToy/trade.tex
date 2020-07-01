@@ -1,0 +1,43 @@
+%% LyX 2.3.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{luainputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=3cm,rmargin=3cm}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+Farming Problem with Trade:
+
+Rich country is country r or 1
+
+Developing country is country d or 2
+
+price of good produced in country $i$: $p_{c}^{i}$
+
+consumption of good from country i in country j: $c_{j}^{i}$
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline 
+ & Rich Country & Poor Country\tabularnewline
+\hline 
+consumer & $\max$$\left[\ln(f_{r}^{r}+f_{r}^{d})+\gamma_{r}\ln(c_{r}^{r}+c_{r}^{d}+1)\right]$ & $\max$$\left[\ln(f_{d}^{r}+f_{d}^{d})+\gamma_{d}\ln(c_{d}^{r}+c_{d}^{d}+1)\right]$\tabularnewline
+\hline 
+agri producer &  & \tabularnewline
+\hline 
+manu producer &  & \tabularnewline
+\hline 
+ &  & \tabularnewline
+\hline 
+\end{tabular}
+\par\end{center}
+\end{document}
