@@ -370,10 +370,512 @@ then newly infected is going to be
 \end_inset
 
  and will start dropping once 
-\begin_inset Formula $(rS-\rho)I<$
+\begin_inset Formula $(rS-\rho)I<0$
+\end_inset
+
+ so once 
+\begin_inset Formula $rS<\rho$
+\end_inset
+
+ so once 
+\begin_inset Formula $S<\frac{\rho}{r}$
+\end_inset
+
+.
+ So with 
+\begin_inset Formula $r=5$
+\end_inset
+
+ and 
+\begin_inset Formula $\rho=1$
+\end_inset
+
+, infected will start decaying once 
+\begin_inset Formula $S<20\%$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+With multiple types of people, 
+\end_layout
+
+\begin_layout Standard
+-
+\end_layout
+
+\begin_layout Standard
+Here's a simple discrete-time SIR where disease lasts only one period.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename simpleSIR.png
+
 \end_inset
 
 
+\begin_inset Graphics
+	filename simpleSIR with estimated total impat.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the above, 
+\begin_inset Formula 
+\[
+S^{\prime}=S-\eta rSI
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+I^{\prime}=\eta rSI
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+R^{\prime}=R+I
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here is a simply two group SIR.
+ tranmisions rate is 9% per contact.
+ Each agent has 10 connections to each of {introverts,extraverts}.
+ First graph total, second graph extraverts, third graph introverts.
+ Equal population of each.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted1.png
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted3.png
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted2.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now change contacts so extraverts are twice as connected, while introverts
+ completely shut down.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted4.png
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted5.png
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted6.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now each extrovert has 19 extravert neighbors and one introvert neighbor.
+ That's that person's only contact.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted7.png
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted8.png
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted9.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+I think I can prove that (at least for two groups) if no groups degree goes
+ up, infection maximum and speed can't go up.
+ For this kind of standard SIR spread.
+\end_layout
+
+\begin_layout Standard
+-
+\end_layout
+
+\begin_layout Standard
+-
+\end_layout
+
+\begin_layout Standard
+But what if spread isn't linearly proportional to number of infectious neighbors
+? what if we use the 
+\begin_inset Formula $1-(1-r)^{n}$
+\end_inset
+
+ formula? 10 neighbors for each group for everyone:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename graphtransmission1.png
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted11.png
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted10.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now 20 and 0:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted12.png
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted13.png
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted14.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now 19 and 1:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted15.png
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted16.png
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted17.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+What if infection starts specifically among the introverts?
+\end_layout
+
+\begin_layout Standard
+Then with 10,10 connections:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted18.png
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted20.png
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted19.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And with 15,5 connections
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted21.png
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted22.png
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted23.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+-Does persistance matter?
+\end_layout
+
+\begin_layout Standard
+With the 10 10 going on
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted24.png
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted25.png
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted25.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+With the 15 5 going on:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename pasted26.png
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted27.png
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename pasted28.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+-
+\end_layout
+
+\begin_layout Standard
+-
+\end_layout
+
+\begin_layout Standard
+-
+\end_layout
+
+\begin_layout Standard
+Can I prove that these randomly mixed networks can't increase in risk when
+ no agent has decreased connections?
+\end_layout
+
+\begin_layout Standard
+Induction over time periods.
+ Start with initial state set equal.
+ Induct to say that percentage infected is higher with high number of connection
+s.
+ Induct by saying if all infection rates are higher and degree hgiher., then
+ next period this is also true.
+\end_layout
+
+\begin_layout Standard
+No.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename infected at different risk rates.png
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename susceptible paths.png
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename recovered paths.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+But maybe the recovered will never exceed.
+\end_layout
+
+\begin_layout Standard
+-
+\end_layout
+
+\begin_layout Standard
+-
+\end_layout
+
+\begin_layout Standard
+-
+\end_layout
+
+\begin_layout Standard
+-
+\end_layout
+
+\begin_layout Standard
+but there are networks where this isn't the case, right? Where extra connections
+ can increase risk?
+\end_layout
+
+\begin_layout Standard
+What if even in the lower state, you are garunteed to eventually get it
+ as an introvert? Then maybe having it accelerate through extraverts won't
+ change final number but will speed things up.
+\end_layout
+
+\begin_layout Subsection*
+Try to prove no acceleration with only two groups:
+\end_layout
+
+\begin_layout Standard
+With two groups, i, e for introvert extravert, then an introverts risk of
+ infection is (in simplified case):
+\begin_inset Formula 
+\[
+r\cdot n_{ie}\cdot I_{e}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $I$
+\end_inset
+
+ is the percentage of a group which is infected, and 
+\begin_inset Formula 
+\[
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Example of Acceleration with Three Groups:
+\end_layout
+
+\begin_layout Standard
+Group 1: introverts.
+ Only one connection.
+\end_layout
+
+\begin_layout Standard
+Group 2: Intermediaries
+\end_layout
+
+\begin_layout Standard
+Group 3: Extroverts.
+ Incredibly dangerous.
+\end_layout
+
+\begin_layout Standard
+-
+\end_layout
+
+\begin_layout Standard
+Step 1: Show that the intermediaries are made higher risk.
+ 
+\end_layout
+
+\begin_layout Standard
+Step 2: See if that can make introverts higher risk in turn.
 \end_layout
 
 \end_body

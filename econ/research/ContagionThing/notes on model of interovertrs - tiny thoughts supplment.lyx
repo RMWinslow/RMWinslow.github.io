@@ -128,5 +128,210 @@ See
 
 \end_layout
 
+\begin_layout Standard
+https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations
+\end_layout
+
+\begin_layout Standard
+https://en.wikipedia.org/wiki/Kolmogorov_equations
+\end_layout
+
+\begin_layout Standard
+Social Contacts and Mixing Patterns Relevant to the Spread of Infectious
+ Diseases (Mossong et al 2008)
+\end_layout
+
+\begin_layout Standard
+Alessandra Fogli, GERMS, SOCIAL NETWORKS AND GROWTH - Endogenous Network
+ Evolution 
+\end_layout
+
+\begin_layout Standard
+OPTIMAL TARGETED LOCKDOWNS IN A MULTI-GROUP SIR MODEL Already nearly does
+ my thing.
+ - Has multi-group evolution like the kind I'm trying to describe.
+ 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ parameter mediates between number of infected neighbors and percent of
+ neighbors infected as key part.
+\end_layout
+
+\begin_layout Standard
+Does religious belief about afterlife shape savings decisions?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Host contact structure is important for the recurrence of Influenza A
+\series default
+ has a very interesting take on categorixing by contact number - Doesn't
+ seem to take network structure into account?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Modeling Control Strategies of Respiratory Pathogens
+\series default
+ - Builds a specific simulated network of a specific city.
+ 
+\begin_inset Quotes eld
+\end_inset
+
+R0 = γT, where γ depends on the structure of the network (equations 1 and
+ 8 in Appendix).
+\begin_inset Quotes erd
+\end_inset
+
+ https://web.archive.org/web/20090608042334/http://www.cdc.gov/ncidod/EID/vol11no08/
+04-0449_app.htm - has eqyations for average size of outbreak in a graph.
+ But do these really work? - interesting note in appendix about standard
+ model only really working for 
+\begin_inset Quotes eld
+\end_inset
+
+undirected contact network with a Poisson distribution
+\begin_inset Quotes erd
+\end_inset
+
+ (equivalent to fully mixed with lower transmission rate?)
+\end_layout
+
+\begin_layout Standard
+Spread of epidemic disease on networks - Classic paper solves for lots of
+ networks.
+ percolation theory - but assumes distribution of population a priori determined
+? No.
+ 
+\begin_inset Formula $T_{ij}$
+\end_inset
+
+ is a random variable specific to two people 
+\begin_inset Formula $i$
+\end_inset
+
+ and 
+\begin_inset Formula $j$
+\end_inset
+
+.
+ - integrates over time to just look at a single 
+\begin_inset Formula $T$
+\end_inset
+
+ (percolation theory falls out as a result) - don't really understand the
+ generator - distribution defined over number of degrees, but connections
+ are randomly formed to match the degrees instead of being defined between
+ types - technically a tree at the limit - equation 40 involves types.
+ - damn this one even has heterogenity inside of multiple types.
+ Threshold is a hyperbola in transmission space.
+ - REALLY need to learn about moment generators - fascinating result about
+ power law and epidemic susceptibility.
+\end_layout
+
+\begin_layout Standard
+Need to read this later: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7094100/
+\end_layout
+
+\begin_layout Standard
+Several papers talk about 
+\begin_inset Formula $T$
+\end_inset
+
+ instead of 
+\begin_inset Formula $R_{0}.$
+\end_inset
+
+ Still don't quite understand.
+\end_layout
+
+\begin_layout Standard
+Infinite graph is a tree.
+ Unrealistic for actual disease transmisison
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+-
+\end_layout
+
+\begin_layout Standard
+-
+\end_layout
+
+\begin_layout Standard
+-
+\end_layout
+
+\begin_layout Standard
+-
+\end_layout
+
+\begin_layout Standard
+Ideas:
+\end_layout
+
+\begin_layout Standard
+plot with different rates.
+ See if higher rates ever lead to fewer cases at any point in time.
+\end_layout
+
+\begin_layout Standard
+Three groups: Biohazards – intermediates – introverts.
+ If introverts reduce contact, then perhaps intermediates will become more
+ risky.
+\end_layout
+
+\begin_layout Standard
+Add chance of recovery decaying to susceptible, so that model will equilibriate
+ to steady state.
+\end_layout
+
+\begin_layout Standard
+-
+\end_layout
+
+\begin_layout Standard
+Basic Reproductive number
+\end_layout
+
+\begin_layout Standard
+Threshold for infection.
+\end_layout
+
+\begin_layout Standard
+-
+\end_layout
+
+\begin_layout Standard
+Average cases at start with fully susceptible population.
+\end_layout
+
+\begin_layout Standard
+-
+\end_layout
+
+\begin_layout Standard
+percolation thresholds on nodes.
+\end_layout
+
+\begin_layout Standard
+-
+\end_layout
+
+\begin_layout Standard
+Market for lemons but with new technologies
+\end_layout
+
+\begin_layout Standard
+https://twitter.com/s_r_constantin/status/1280578575628824576
+\end_layout
+
 \end_body
 \end_document

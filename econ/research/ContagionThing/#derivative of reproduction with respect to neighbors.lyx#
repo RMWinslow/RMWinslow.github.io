@@ -1,0 +1,1020 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Given the assumptions that:
+\end_layout
+
+\begin_layout Itemize
+There are some number of discrete types of people, indexed by 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Each type has a certain number of connections 
+\begin_inset Formula $n_{ij}$
+\end_inset
+
+ to each other type.
+\end_layout
+
+\begin_layout Itemize
+Only a tiny portion of the population is infected.
+ Likewise for each type.
+ So all neighbors are susceptible.
+\end_layout
+
+\begin_layout Itemize
+People have chance 
+\begin_inset Formula $r=\beta/\gamma$
+\end_inset
+
+ of transmitting contagion to each of their neighbors.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\Phi_{i}$
+\end_inset
+
+ be the portion of infected people of type 
+\begin_inset Formula $i.$
+\end_inset
+
+ That is 
+\begin_inset Formula $\Phi_{i}=Pr(\text{type i}|\text{infected})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $I_{i}$
+\end_inset
+
+ be the number of infected of type 
+\begin_inset Formula $i$
+\end_inset
+
+, and 
+\begin_inset Formula $I=\sum_{i}I_{i}$
+\end_inset
+
+ be the total number infected.
+\end_layout
+
+\begin_layout Standard
+Then in discrete time, next period's expected 
+\begin_inset Formula $\Phi_{i}$
+\end_inset
+
+,
+\begin_inset Formula $\Phi_{i}^{\prime}$
+\end_inset
+
+ will be 
+\begin_inset Formula 
+\begin{align*}
+\Phi_{i}^{\prime} & =\frac{\#\text{transmissions to type }i}{\#\text{transmissions }}\\
+ & =\frac{\sum_{j}\left(I_{j}rn_{ji}\right)}{\sum_{j}\left(I_{j}\sum_{k}\left(rn_{jk}\right)\right)}\\
+ & =\frac{\sum_{j}\left(I_{j}rn_{ji}\right)}{\sum_{j}\left(I_{j}\sum_{k}\left(rn_{jk}\right)\right)}\cdot\frac{\left(\frac{1}{rI}\right)}{\left(\frac{1}{rI}\right)}\\
+ & =\frac{\sum_{j}\left(\frac{I_{j}}{I}n_{ji}\right)}{\sum_{j}\left(\frac{I_{j}}{I}\sum_{k}\left(n_{jk}\right)\right)}\\
+ & =\frac{\sum_{j}\left(\Phi_{j}n_{ji}\right)}{\sum_{j}\left(\Phi_{j}\sum_{k}\left(n_{jk}\right)\right)}\\
+ & =\frac{\sum_{j}\left(\Phi_{j}n_{ji}\right)}{\sum_{j}\left(\Phi_{j}n_{j}\right)}\\
+ & =\frac{\text{avg number of type \ensuremath{i} neighbors among infected}}{\text{avg number neighbors among infected}}
+\end{align*}
+
+\end_inset
+
+(
+\emph on
+not
+\emph default
+ the same as weighted avg of portion neighbors type 
+\begin_inset Formula $i$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+For example, if there are only two types:
+\begin_inset Formula 
+\[
+\Phi_{1}^{\prime}=\frac{\sum_{\{1,2\}}\left(\Phi_{j}n_{j1}\right)}{\sum_{\{1,2\}}\left(\Phi_{j}\sum_{\{1,2\}}\left(n_{jk}\right)\right)}=\frac{\Phi_{1}n_{11}+\Phi_{2}n_{21}}{\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{2}n_{j1}+\Phi_{2}n_{j2}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Phi_{2}^{\prime}=\frac{\sum_{\{1,2\}}\left(\Phi_{j}n_{j2}\right)}{\sum_{\{1,2\}}\left(\Phi_{j}\sum_{\{1,2\}}\left(n_{jk}\right)\right)}=\frac{\Phi_{1}n_{12}+\Phi_{2}n_{22}}{\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{2}n_{j1}+\Phi_{2}n_{j2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Find avg number of transmission as a function of the distribution.
+\end_layout
+
+\begin_layout Standard
+The expected number of transmission cases from an infectious individual
+ of type 
+\begin_inset Formula $i$
+\end_inset
+
+ will be 
+\begin_inset Formula 
+\[
+\sum_{k}rn_{ik}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(Actually poisson.
+ Not always just the mean like this.
+ Also, technically subtract one potential case depending on who transmitted
+ to the person.)
+\end_layout
+
+\begin_layout Standard
+Then expected number of transmissions per infective person will be 
+\begin_inset Formula 
+\[
+\sum_{i}\left(\Phi_{i}\sum_{k}\left(rn_{ik}\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Can I then prove properties related to the fixed point and contraction mapping
+ of this distribution?
+\end_layout
+
+\begin_layout Standard
+Fixed point is straightforward.
+ Continuous vector field on difference between point and mapped point.
+ IVT.
+ Hairy Ball etc.
+ Lefschetz fixed-point theorem specifically I think.
+ This assumes the mapping isn't singular.
+ Acctually, think I just need Simplicial approximation theorem.
+ It is a simplex after all.
+\end_layout
+
+\begin_layout Standard
+Contraction Mapping? - The operation linearly combines the distributions
+ generated by the corners, and then scales them by some variable factor
+ bounded between the number of neighbors of the most connected type and
+ the number of neighbors of the least connected type.
+ So distance between two points gets stretched out at most by the diff between
+ least and most neighbors (times transmission.) Then we shove those points
+ closer together....
+ Not a proof but the concept 
+\emph on
+feels
+\emph default
+ right.
+ dist before adjust is less than dist for simplex map without adjust.
+ and then shrink somewhow? Yeah.
+ Distance after mapping but before normalization will just be some linear
+ whatnot.
+ Then shrink down.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Can I take the derivative of the above? wrt to both the distribution parameters?
+\end_layout
+
+\begin_layout Standard
+Any directional vector 
+\begin_inset Formula $(\Delta\Phi_{1},\Delta\Phi_{2},\Delta\Phi_{3},...)$
+\end_inset
+
+ in the simplex will have the property that 
+\begin_inset Formula $\sum_{i}\Delta\Phi_{i}=0$
+\end_inset
+
+.
+ The partial derivatives of the function for expected next period 
+\begin_inset Formula $\Phi_{i}$
+\end_inset
+
+ will be 
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial\Phi_{h}}\Phi_{i}^{\prime} & =\frac{\partial}{\partial\Phi_{h}}\frac{\sum_{j}\left(\Phi_{j}n_{ji}\right)}{\sum_{j}\left(\Phi_{j}\sum_{k}\left(n_{jk}\right)\right)}\\
+ & =\frac{n_{hi}\sum_{j}\left(\Phi_{j}\sum_{k}\left(n_{jk}\right)\right)-\sum_{j}\left(\Phi_{j}n_{ji}\right)\sum_{k}\left(n_{hk}\right)}{\left(\sum_{j}\left(\Phi_{j}\sum_{k}\left(n_{jk}\right)\right)\right)^{2}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And the partial derivative of the average number of transmissions per person
+ will be 
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial\Phi_{i}}\sum_{i}\left(\Phi_{i}\sum_{k}\left(rn_{ik}\right)\right)=\sum_{k}\left(rn_{ik}\right)=rn_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so the directional derivative if 
+\begin_inset Formula $(\Delta\Phi_{1},\Delta\Phi_{2},\Delta\Phi_{3},...)=(\Delta_{1},\Delta_{2},...)=\Delta$
+\end_inset
+
+ will be 
+\begin_inset Formula 
+\[
+\Delta\cdot\nabla''=\sum_{i}\Delta_{i}rn_{i}=r\sum_{i}\Delta_{i}n_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And normalize by dividing by 
+\begin_inset Formula $|\Delta|$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Makes sense.
+ If we increase 
+\begin_inset Formula $\Phi_{j}$
+\end_inset
+
+ while decreasing 
+\begin_inset Formula $\Phi_{k}$
+\end_inset
+
+, then our directional derivative will be 
+\begin_inset Formula $r\frac{n_{j}-n_{k}}{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Can I take the derivative of the above? wrt to the neighbor params?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For example, with two types, the partial derivatives wrt to distribution
+ are 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial\Phi_{1}}\Phi_{1}^{\prime} & =\frac{\partial}{\partial\Phi_{1}}\frac{\Phi_{1}n_{11}+\Phi_{2}n_{21}}{\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{2}n_{21}+\Phi_{2}n_{22}}\\
+ & =\frac{n_{11}\left(\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{2}n_{21}+\Phi_{2}n_{22}\right)-\left(\Phi_{1}n_{11}+\Phi_{2}n_{21}\right)\left(n_{11}+n_{12}\right)}{\left(\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{2}n_{21}+\Phi_{2}n_{22}\right)^{2}}\\
+ & =\frac{\Phi_{1}n_{11}n_{11}+\Phi_{1}n_{12}n_{11}+\Phi_{2}n_{21}n_{11}+\Phi_{2}n_{22}n_{11}-\Phi_{1}n_{11}n_{11}-\Phi_{2}n_{21}n_{11}-\Phi_{1}n_{11}n_{12}-\Phi_{2}n_{21}n_{12}}{\left(\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{2}n_{21}+\Phi_{2}n_{22}\right)^{2}}\\
+ & =\frac{\Phi_{2}n_{22}n_{11}-\Phi_{2}n_{21}n_{12}}{\left(\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{2}n_{21}+\Phi_{2}n_{22}\right)^{2}}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial\Phi_{2}}\Phi_{1}^{\prime} & =\frac{\partial}{\partial\Phi_{1}}\frac{\Phi_{1}n_{11}+\Phi_{2}n_{21}}{\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{2}n_{21}+\Phi_{2}n_{22}}\\
+ & =\frac{\Phi_{1}n_{12}n_{21}-\Phi_{1}n_{11}n_{22}}{\left(\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{2}n_{21}+\Phi_{2}n_{22}\right)^{2}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Therefore the directional derivative of 
+\begin_inset Formula $\Phi_{1}^{\prime}$
+\end_inset
+
+ when we increase 
+\begin_inset Formula $\Phi_{1}$
+\end_inset
+
+ and decrease 
+\begin_inset Formula $\Phi_{2}$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial\Phi_{1}^{\prime}}{\partial\Phi_{1}}-\frac{\partial\Phi_{1}^{\prime}}{\partial\Phi_{2}} & =\frac{\Phi_{2}n_{22}n_{11}-\Phi_{2}n_{21}n_{12}-\Phi_{1}n_{12}n_{21}+\Phi_{1}n_{11}n_{22}}{\left(\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{2}n_{21}+\Phi_{2}n_{22}\right)^{2}}\\
+ & =\frac{\left(\Phi_{2}+\Phi_{1}\right)\left(n_{22}n_{11}-n_{21}n_{12}\right)}{\left(\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{2}n_{21}+\Phi_{2}n_{22}\right)^{2}}\\
+ & =\frac{\left(n_{22}n_{11}-n_{21}n_{12}\right)}{\left(\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{2}n_{21}+\Phi_{2}n_{22}\right)^{2}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+(Divide by 
+\begin_inset Formula $\sqrt{2}$
+\end_inset
+
+ if you want to make unit vector.)
+\end_layout
+
+\begin_layout Plain Layout
+Likewise, 
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial\Phi_{2}}\Phi_{2}^{\prime} & =\frac{\partial}{\partial\Phi_{1}}\frac{\Phi_{1}n_{12}+\Phi_{2}n_{22}}{\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{2}n_{21}+\Phi_{2}n_{22}}\\
+ & =\frac{\Phi_{1}n_{11}n_{22}+\Phi_{1}n_{12}n_{22}+\Phi_{2}n_{21}n_{22}+\Phi_{2}n_{22}n_{22}-\Phi_{1}n_{12}n_{21}-\Phi_{2}n_{22}n_{21}-\Phi_{1}n_{12}n_{22}-\Phi_{2}n_{22}n_{22}}{\left(\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{2}n_{21}+\Phi_{2}n_{22}\right)^{2}}\\
+ & =\frac{\Phi_{1}n_{22}n_{11}-\Phi_{1}n_{21}n_{12}}{\left(\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{2}n_{21}+\Phi_{2}n_{22}\right)^{2}}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial\Phi_{1}}\Phi_{2}^{\prime} & =\frac{\partial}{\partial\Phi_{2}}\frac{\Phi_{1}n_{12}+\Phi_{2}n_{22}}{\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{2}n_{21}+\Phi_{2}n_{22}}\\
+ & =\frac{\Phi_{1}n_{11}n_{12}+\Phi_{1}n_{12}n_{12}+\Phi_{2}n_{21}n_{12}+\Phi_{2}n_{22}n_{12}-\Phi_{1}n_{12}n_{11}-\Phi_{2}n_{22}n_{11}-\Phi_{1}n_{12}n_{12}-\Phi_{2}n_{22}n_{12}}{\left(\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{2}n_{21}+\Phi_{2}n_{22}\right)^{2}}\\
+ & =\frac{\Phi_{2}n_{21}n_{12}-\Phi_{2}n_{22}n_{11}}{\left(\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{2}n_{21}+\Phi_{2}n_{22}\right)^{2}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+And the direction derivative of 
+\begin_inset Formula $\Phi_{2}^{\prime}$
+\end_inset
+
+ when we increase 
+\begin_inset Formula $\Phi_{1}$
+\end_inset
+
+ and decrease 
+\begin_inset Formula $\Phi_{2}$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial\Phi_{2}^{\prime}}{\partial\Phi_{1}}-\frac{\partial\Phi_{2}^{\prime}}{\partial\Phi_{2}} & =\frac{\Phi_{2}n_{21}n_{12}-\Phi_{2}n_{22}n_{11}-\Phi_{1}n_{22}n_{11}+\Phi_{1}n_{21}n_{12}}{\left(\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{2}n_{21}+\Phi_{2}n_{22}\right)^{2}}\\
+ & =\frac{\left(\Phi_{2}+\Phi_{1}\right)\left(n_{21}n_{12}-n_{22}n_{11}\right)}{\left(\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{2}n_{21}+\Phi_{2}n_{22}\right)^{2}}\\
+ & =\frac{n_{21}n_{12}-n_{22}n_{11}}{\left(\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{2}n_{21}+\Phi_{2}n_{22}\right)^{2}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Then bottom of each of these changes as we change the distribution, however,
+ it's always positive.
+ And the top is costant as we move through the simplex.
+ So the sign of the directional derivative never changes.
+ If you move in a straight line through the simplex, each piece of the distribut
+ion will be monotonic or constant.
+\end_layout
+
+\begin_layout Plain Layout
+In fact, for any direction that stays within the simplex, represent this
+ direction vector as 
+\begin_inset Formula $\Delta\Phi_{1},\Delta\Phi_{2}=A,B$
+\end_inset
+
+ where 
+\begin_inset Formula $A+B=0$
+\end_inset
+
+.
+ Then the directional derivative of 
+\begin_inset Formula $\Phi_{1}^{\prime}$
+\end_inset
+
+ will be 
+\begin_inset Formula 
+\begin{align*}
+A\frac{\partial\Phi_{1}^{\prime}}{\partial\Phi_{1}}+B\frac{\partial\Phi_{1}^{\prime}}{\partial\Phi_{2}} & =\frac{A\Phi_{2}n_{22}n_{11}-A\Phi_{2}n_{21}n_{12}+B\Phi_{1}n_{12}n_{21}-B\Phi_{1}n_{11}n_{22}}{\left(\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{2}n_{21}+\Phi_{2}n_{22}\right)^{2}}\\
+ & =\frac{\left(A\Phi_{2}-B\Phi_{1}\right)\left(n_{22}n_{11}-n_{21}n_{12}\right)}{\left(\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{2}n_{21}+\Phi_{2}n_{22}\right)^{2}}\\
+ & =\frac{A\left(\Phi_{2}+\Phi_{1}\right)\left(n_{22}n_{11}-n_{21}n_{12}\right)}{\left(\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{2}n_{21}+\Phi_{2}n_{22}\right)^{2}}\\
+ & =\frac{A\left(n_{22}n_{11}-n_{21}n_{12}\right)}{\left(\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{2}n_{21}+\Phi_{2}n_{22}\right)^{2}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This will be monotonic.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+How well does this work out with three types of people?
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial\Phi_{1}}\Phi_{1}^{\prime} & =\frac{\partial}{\partial\Phi_{1}}\frac{\Phi_{1}n_{11}+\Phi_{2}n_{21}+\Phi_{3}n_{31}}{\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{1}n_{13}+\Phi_{2}n_{21}+\Phi_{2}n_{22}+\Phi_{2}n_{23}+\Phi_{3}n_{31}+\Phi_{3}n_{32}+\Phi_{3}n_{33}}\\
+ & =\frac{n_{11}\sum_{j}\sum_{k}\Phi_{j}n_{jk}-\left(n_{11}+n_{12}+n_{13}\right)\left(\Phi_{1}n_{11}+\Phi_{2}n_{21}+\Phi_{3}n_{31}\right)}{\left(\sum_{j}\sum_{k}\Phi_{j}n_{jk}\right)^{2}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The top expands to 
+\begin_inset Formula $\Phi_{1}n_{11}n_{11}$
+\end_inset
+
+
+\begin_inset Formula $+\Phi_{1}n_{12}n_{11}$
+\end_inset
+
+
+\begin_inset Formula $+\Phi_{1}n_{13}n_{11}$
+\end_inset
+
+
+\begin_inset Formula $+\Phi_{2}n_{21}n_{11}$
+\end_inset
+
+
+\begin_inset Formula $+\Phi_{2}n_{22}n_{11}$
+\end_inset
+
+
+\begin_inset Formula $+\Phi_{2}n_{23}n_{11}$
+\end_inset
+
+ 
+\begin_inset Formula $+\Phi_{3}n_{31}n_{11}$
+\end_inset
+
+
+\begin_inset Formula $+\Phi_{3}n_{32}n_{11}$
+\end_inset
+
+
+\begin_inset Formula $+\Phi_{3}n_{33}n_{11}$
+\end_inset
+
+ 
+\begin_inset Formula $-\Phi_{1}n_{11}n_{11}-\Phi_{2}n_{21}n_{11}$
+\end_inset
+
+
+\begin_inset Formula $-\Phi_{3}n_{31}n_{11}$
+\end_inset
+
+ 
+\begin_inset Formula $-\Phi_{1}n_{11}n_{12}-\Phi_{2}n_{21}n_{12}$
+\end_inset
+
+
+\begin_inset Formula $-\Phi_{3}n_{31}n_{12}$
+\end_inset
+
+ 
+\begin_inset Formula $-\Phi_{1}n_{11}n_{13}-\Phi_{2}n_{21}n_{13}$
+\end_inset
+
+
+\begin_inset Formula $-\Phi_{3}n_{31}n_{13}$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Plain Layout
+which simplifies to 
+\begin_inset Formula $\xcancel{\Phi_{1}n_{11}n_{11}}$
+\end_inset
+
+
+\begin_inset Formula $+\xcancel{\Phi_{1}n_{12}n_{11}}$
+\end_inset
+
+
+\begin_inset Formula $+\xcancel{\Phi_{1}n_{13}n_{11}}$
+\end_inset
+
+
+\begin_inset Formula $+\xcancel{\Phi_{2}n_{21}n_{11}}$
+\end_inset
+
+
+\begin_inset Formula $+\Phi_{2}n_{22}n_{11}$
+\end_inset
+
+
+\begin_inset Formula $+\Phi_{2}n_{23}n_{11}$
+\end_inset
+
+ 
+\begin_inset Formula $+\xcancel{\Phi_{3}n_{31}n_{11}}$
+\end_inset
+
+
+\begin_inset Formula $+\Phi_{3}n_{32}n_{11}$
+\end_inset
+
+
+\begin_inset Formula $+\Phi_{3}n_{33}n_{11}$
+\end_inset
+
+ 
+\begin_inset Formula $\xcancel{-\Phi_{1}n_{11}n_{11}}-\xcancel{\Phi_{2}n_{21}n_{11}}$
+\end_inset
+
+
+\begin_inset Formula $-\xcancel{\Phi_{3}n_{31}n_{11}}$
+\end_inset
+
+ 
+\begin_inset Formula $\xcancel{-\Phi_{1}n_{11}n_{12}}-\Phi_{2}n_{21}n_{12}$
+\end_inset
+
+
+\begin_inset Formula $-\Phi_{3}n_{31}n_{12}$
+\end_inset
+
+ 
+\begin_inset Formula $-\xcancel{\Phi_{1}n_{11}n_{13}}-\Phi_{2}n_{21}n_{13}$
+\end_inset
+
+
+\begin_inset Formula $-\Phi_{3}n_{31}n_{13}$
+\end_inset
+
+ so
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial\Phi_{1}}\Phi_{1}^{\prime} & =\frac{\Phi_{2}n_{22}n_{11}+\Phi_{2}n_{23}n_{11}+\Phi_{3}n_{32}n_{11}+\Phi_{3}n_{33}n_{11}-\Phi_{2}n_{21}n_{12}-\Phi_{3}n_{31}n_{12}-\Phi_{2}n_{21}n_{13}-\Phi_{3}n_{31}n_{13}}{\left(\sum_{j}\sum_{k}\Phi_{j}n_{jk}\right)^{2}}\\
+ & =\frac{n_{11}\left(\Phi_{2}n_{22}+\Phi_{2}n_{23}+\Phi_{3}n_{32}+\Phi_{3}n_{33}\right)-\left(\Phi_{2}n_{21}+\Phi_{3}n_{31}\right)\left(n_{12}+n_{13}\right)}{\left(\sum_{j}\sum_{k}\Phi_{j}n_{jk}\right)^{2}}
+\end{align*}
+
+\end_inset
+
+And likewise, for 
+\begin_inset Formula $i\neq1$
+\end_inset
+
+, where 
+\begin_inset Formula $h\neq i,1$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial\Phi_{i}}\Phi_{1}^{\prime} & =\frac{\partial}{\partial\Phi_{i}}\frac{\Phi_{1}n_{11}+\Phi_{2}n_{21}+\Phi_{3}n_{31}}{\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{1}n_{13}+\Phi_{2}n_{21}+\Phi_{2}n_{22}+\Phi_{2}n_{23}+\Phi_{3}n_{31}+\Phi_{3}n_{32}+\Phi_{3}n_{33}}\\
+ & =\frac{n_{i1}\sum_{j}\sum_{k}\Phi_{j}n_{jk}-\left(n_{i1}+n_{i2}+n_{i3}\right)\left(\Phi_{1}n_{11}+\Phi_{2}n_{21}+\Phi_{3}n_{31}\right)}{\left(\sum_{j}\sum_{k}\Phi_{j}n_{jk}\right)^{2}}\\
+ & =\frac{n_{i1}\left(\Phi_{1}n_{1i}+\Phi_{1}n_{1h}+\Phi_{h}n_{hi}+\Phi_{h}n_{hh}\right)-\left(n_{ii}+n_{ih}\right)\left(\Phi_{1}n_{11}+\Phi_{h}n_{h1}\right)}{\left(\sum_{j}\sum_{k}\Phi_{j}n_{jk}\right)^{2}}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial\Phi_{2}}\Phi_{1}^{\prime} & =\frac{\partial}{\partial\Phi_{2}}\frac{\Phi_{1}n_{11}+\Phi_{2}n_{21}+\Phi_{3}n_{31}}{\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{1}n_{13}+\Phi_{2}n_{21}+\Phi_{2}n_{22}+\Phi_{2}n_{23}+\Phi_{3}n_{31}+\Phi_{3}n_{32}+\Phi_{3}n_{33}}\\
+ & =\frac{n_{21}\sum_{j}\sum_{k}\Phi_{j}n_{jk}-\left(n_{21}+n_{22}+n_{23}\right)\left(\Phi_{1}n_{11}+\Phi_{2}n_{21}+\Phi_{3}n_{31}\right)}{\left(\sum_{j}\sum_{k}\Phi_{j}n_{jk}\right)^{2}}\\
+ & =\frac{n_{21}\left(\Phi_{1}n_{12}+\Phi_{1}n_{13}+\Phi_{3}n_{32}+\Phi_{3}n_{33}\right)-\left(n_{22}+n_{23}\right)\left(\Phi_{1}n_{11}+\Phi_{3}n_{31}\right)}{\left(\sum_{j}\sum_{k}\Phi_{j}n_{jk}\right)^{2}}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial\Phi_{3}}\Phi_{1}^{\prime} & =\frac{\partial}{\partial\Phi_{3}}\frac{\Phi_{1}n_{11}+\Phi_{2}n_{21}+\Phi_{3}n_{31}}{\Phi_{1}n_{11}+\Phi_{1}n_{12}+\Phi_{1}n_{13}+\Phi_{2}n_{21}+\Phi_{2}n_{22}+\Phi_{2}n_{23}+\Phi_{3}n_{31}+\Phi_{3}n_{32}+\Phi_{3}n_{33}}\\
+ & =\frac{n_{31}\sum_{j}\sum_{k}\Phi_{j}n_{jk}-\left(n_{31}+n_{32}+n_{33}\right)\left(\Phi_{1}n_{11}+\Phi_{2}n_{21}+\Phi_{3}n_{31}\right)}{\left(\sum_{j}\sum_{k}\Phi_{j}n_{jk}\right)^{2}}\\
+ & =\frac{n_{31}\left(\Phi_{1}n_{13}+\Phi_{1}n_{12}+\Phi_{2}n_{23}+\Phi_{2}n_{22}\right)-\left(n_{33}+n_{32}\right)\left(\Phi_{1}n_{11}+\Phi_{2}n_{21}\right)}{\left(\sum_{j}\sum_{k}\Phi_{j}n_{jk}\right)^{2}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(Derivative of 
+\begin_inset Formula $\frac{Ax+C}{Ax+Bx+C+D}$
+\end_inset
+
+ is 
+\begin_inset Formula $\frac{AD-BC}{\left(Ax+Bx+C+D\right)^{2}}$
+\end_inset
+
+ )
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+So if we have a vector 
+\begin_inset Formula $(A,B,C)$
+\end_inset
+
+ such that 
+\begin_inset Formula $A+B+C=0,$
+\end_inset
+
+ our directional derivative will be 
+\begin_inset Formula 
+\[
+\frac{An_{11}\left(\Phi_{2}n_{22}+\Phi_{2}n_{23}+\Phi_{3}n_{32}+\Phi_{3}n_{33}\right)-A\left(\Phi_{2}n_{21}+\Phi_{3}n_{31}\right)\left(n_{12}+n_{13}\right)+Bn_{21}\left(\Phi_{1}n_{12}+\Phi_{1}n_{13}+\Phi_{3}n_{32}+\Phi_{3}n_{33}\right)-B\left(n_{22}+n_{23}\right)\left(\Phi_{1}n_{11}+\Phi_{3}n_{31}\right)+Cn_{31}\left(\Phi_{1}n_{13}+\Phi_{1}n_{12}+\Phi_{2}n_{23}+\Phi_{2}n_{22}\right)-C\left(n_{33}+n_{32}\right)\left(\Phi_{1}n_{11}+\Phi_{2}n_{21}\right)}{\left(\sum_{j}\sum_{k}\Phi_{j}n_{jk}\right)^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Take the top: 
+\begin_inset Formula $An_{11}\left(\Phi_{2}n_{22}+\Phi_{2}n_{23}+\Phi_{3}n_{32}+\Phi_{3}n_{33}\right)-A\left(\Phi_{2}n_{21}+\Phi_{3}n_{31}\right)\left(n_{12}+n_{13}\right)$
+\end_inset
+
+ 
+\begin_inset Formula $+Bn_{21}\left(\Phi_{1}n_{12}+\Phi_{1}n_{13}+\Phi_{3}n_{32}+\Phi_{3}n_{33}\right)-B\left(n_{22}+n_{23}\right)\left(\Phi_{1}n_{11}+\Phi_{3}n_{31}\right)$
+\end_inset
+
+ 
+\begin_inset Formula $+Cn_{31}\left(\Phi_{1}n_{13}+\Phi_{1}n_{12}+\Phi_{2}n_{23}+\Phi_{2}n_{22}\right)-C\left(n_{33}+n_{32}\right)\left(\Phi_{1}n_{11}+\Phi_{2}n_{21}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Combine and rerrange to get 
+\begin_inset Formula 
+\[
+\left(A\Phi_{2}\right)\left(n_{11}n_{22}+n_{11}n_{23}-n_{12}n_{21}-n_{13}n_{21}\right)+\left(A\Phi_{3}\right)\left(n_{11}n_{32}+n_{11}n_{33}-n_{12}n_{31}-n_{13}n_{31}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
++\left(B\Phi_{1}\right)\left(n_{12}n_{21}+n_{13}n_{21}-n_{11}n_{22}-n_{11}n_{23}\right)+\left(B\Phi_{3}\right)\left(n_{21}n_{32}+n_{21}n_{33}-n_{22}n_{31}-n_{23}n_{31}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
++\left(C\Phi_{1}\right)\left(n_{13}n_{31}+n_{12}n_{31}-n_{11}n_{33}-n_{11}n_{32}\right)+\left(C\Phi_{2}\right)\left(n_{23}n_{31}+n_{22}n_{31}-n_{21}n_{32}-n_{21}n_{33}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Or equivalently: 
+\begin_inset Formula 
+\[
+\left(A\Phi_{2}-B\Phi_{1}\right)\left(n_{11}n_{22}+n_{11}n_{23}-n_{12}n_{21}-n_{13}n_{21}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
++\left(A\Phi_{3}-C\Phi_{1}\right)\left(n_{11}n_{32}+n_{11}n_{33}-n_{12}n_{31}-n_{13}n_{31}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
++\left(B\Phi_{3}-C\Phi_{2}\right)\left(n_{21}n_{32}+n_{21}n_{33}-n_{22}n_{31}-n_{23}n_{31}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Not obvious whether monotonic property generalizes to 3d.
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Maybe I could just use the unnormalized matrix and figure out how fast it
+ grows in the limit?
+\end_layout
+
+\begin_layout Standard
+If the neighbor parameters are chosen such that there are (number of types)
+ of distinct eigenvectors (need to fix this condition), then re-express
+ the transformation matrix as 
+\begin_inset Formula $ES^{n}E^{-1}$
+\end_inset
+
+ where 
+\begin_inset Formula $E$
+\end_inset
+
+ is a matrix that changes basis.
+ ...
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Special case where everyone has the same number of neighbors and only the
+ connection structure differs.
+ In this case, 
+\begin_inset Formula $n$
+\end_inset
+
+ is just equal to 
+\begin_inset Formula $n$
+\end_inset
+
+ for everyone.
+ 
+\end_layout
+
+\begin_layout Standard
+Then the average number of transmissions per infective person will be 
+\begin_inset Formula 
+\[
+\sum_{i}\left(\Phi_{i}\sum_{k}\left(rn_{ik}\right)\right)=\sum_{i}\left(\Phi_{i}rn\right)=rn
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which is just the standard SIR model type stuff.
+\end_layout
+
+\begin_layout Standard
+But now it will be much easier to figure out the fixed point among types.
+\begin_inset Formula 
+\begin{align*}
+\Phi_{i}^{\prime} & =\frac{\#\text{transmissions to type }i}{\#\text{transmissions }}\\
+ & =\frac{\sum_{j}\left(\Phi_{j}n_{ji}\right)}{\sum_{j}\left(\Phi_{j}\sum_{k}\left(n_{jk}\right)\right)}\\
+ & =\frac{\sum_{j}\left(\Phi_{j}n_{ji}\right)}{\sum_{j}\left(\Phi_{j}n_{j}\right)}\\
+ & =\frac{\text{avg number of type \ensuremath{i} neighbors among infected}}{\text{avg number neighbors among infected}}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In a fully mixed model witha random graph, from Newman 2002: The probability
+ that a vertex does not become infected via one of its edges is thus 
+\begin_inset Formula $v=1-T+Tu$
+\end_inset
+
+, which is the sum of the probability 
+\begin_inset Formula $T$
+\end_inset
+
+ that the edge is unoccupied, and the probability 
+\begin_inset Formula $Tu$
+\end_inset
+
+ that it is occupied but connects to an uninfected vertex.
+ The total probability of being uninfected if a vertex has degree 
+\begin_inset Formula $k$
+\end_inset
+
+ is 
+\begin_inset Formula $v^{k}$
+\end_inset
+
+ , 
+\end_layout
+
+\begin_layout Standard
+Combine this with the estimate of 
+\begin_inset Formula $u$
+\end_inset
+
+ from standard SIR model.
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
