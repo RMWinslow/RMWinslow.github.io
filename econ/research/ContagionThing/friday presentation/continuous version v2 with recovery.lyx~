@@ -1,0 +1,596 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3cm
+\rightmargin 3cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+your percentage 
+\begin_inset Formula $\Phi_{i}$
+\end_inset
+
+ is equal to 
+\begin_inset Formula $\frac{I_{i}}{I}$
+\end_inset
+
+.
+ Thus the rate of change of your percentage 
+\begin_inset Formula $\frac{\partial\Phi_{i}}{\partial t}$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\frac{I_{i}}{I}=\frac{\left(\frac{\partial}{\partial t}I_{i}\right)\left(I\right)-\left(I_{i}\right)\left(\frac{\partial}{\partial t}I\right)}{\left(I^{2}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If we assume that the rate of change of a population is proportional to
+ the size of the group it is spreading from, then when 
+\begin_inset Formula $S_{i}\approx1$
+\end_inset
+
+, and that recovery happens randomly at rate 
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}I_{i}=\sum_{j}\left[r\eta_{ji}I_{j}\right]-\gamma I_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Because 
+\begin_inset Formula $I=\sum_{k}I_{k}$
+\end_inset
+
+, we get that 
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}I=\sum_{k}\left(\sum_{j}\left[r\eta_{jk}I_{j}\right]-\gamma I_{k}\right)=\sum_{k}\left(\sum_{j}\left[r\eta_{jk}I_{j}\right]\right)-\gamma I
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And so 
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\frac{I_{i}}{I}=\frac{\left(\sum_{j}\left[r\eta_{ji}I_{j}\right]-\gamma I_{i}\right)\left(I\right)-\left(I_{i}\right)\left(\sum_{k}\left(\sum_{j}\left[r\eta_{jk}I_{j}\right]\right)-\gamma I\right)}{\left(I^{2}\right)}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial t}\frac{I_{i}}{I} & =r\frac{\left(\sum_{j}\left[\eta_{ji}I_{j}\right]-\gamma I_{i}\right)\left(I\right)}{\left(I^{2}\right)}-r\frac{I_{i}\left(\sum_{k}\left(\sum_{j}\left[\eta_{jk}I_{j}\right]\right)-\gamma I\right)}{\left(I^{2}\right)}\\
+ & =r\frac{\sum_{j}\left[\eta_{ji}I_{j}\right]-\gamma I_{i}}{I}-r\frac{I_{i}}{I}\frac{\sum_{k}\left(\sum_{j}\left[\eta_{jk}I_{j}\right]\right)-\gamma I}{I}\\
+ & =r\sum_{j}\left[\eta_{ji}\frac{I_{j}}{I}\right]-r\gamma\frac{I_{i}}{I}-r\frac{I_{i}}{I}\left[\sum_{k}\left(\sum_{j}\left[\eta_{jk}\frac{I_{j}}{I}\right]\right)-\gamma\right]\\
+ & =r\sum_{j}\left[\eta_{ji}\frac{I_{j}}{I}\right]-\xcancel{r\gamma\frac{I_{i}}{I}}-r\frac{I_{i}}{I}\sum_{k}\left(\sum_{j}\left[\eta_{jk}\frac{I_{j}}{I}\right]\right)+\xcancel{r\frac{I_{i}}{I}\gamma}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial t}\Phi_{i} & =r\sum_{j}\left[\eta_{ji}\Phi_{j}\right]-r\Phi_{i}\sum_{k}\sum_{j}\left[\eta_{jk}\Phi_{j}\right]\\
+ & =r\sum_{j}\left[\eta_{ji}\Phi_{j}-\Phi_{i}\sum_{k}\left[\eta_{jk}\Phi_{j}\right]\right]\\
+ & =r\sum_{j}\left[\Phi_{j}\left[\eta_{ji}-\Phi_{i}\sum_{k}\eta_{jk}\right]\right]\\
+ & =r\left[\sum_{j}\eta_{ji}\left[\Phi_{j}-\Phi_{j}\Phi_{i}\right]-\Phi_{i}\sum_{j}\sum_{k\neq i}\Phi_{j}\eta_{jk}\right]\\
+ & =r\sum_{j}\left[\Phi_{j}\left[\left(1-\Phi_{i}\right)\eta_{ji}-\Phi_{i}\sum_{k\neq i}\eta_{jk}\right]\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(Weird how the recovery rate cancels out.
+ It's still implicitly there in the form of the rate of transmission 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\beta$
+\end_inset
+
+ chance of transmission each period and 
+\begin_inset Formula $\frac{1}{\gamma}$
+\end_inset
+
+ periods of infectiveness on average then overall chance of transmission
+ is only 
+\begin_inset Formula $\frac{\beta}{\gamma}$
+\end_inset
+
+.
+ So recovery rate only matters for the evolution of distribution insomuch
+ as it affects transmission rate, and tranmission rate only effects speed
+ of adjustment.)
+\end_layout
+
+\begin_layout Standard
+For example, with only two groups, we have that 
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial t}\Phi_{1} & =r\sum_{j=1,2}\left[\Phi_{j}\left[\eta_{j1}-\Phi_{1}\sum_{k=1,2}\eta_{jk}\right]\right]\\
+ & =r\left[\Phi_{1}\left[\eta_{11}-\Phi_{1}\left[\eta_{11}+\eta_{12}\right]\right]+\Phi_{2}\left[\eta_{21}-\Phi_{1}\left[\eta_{21}+\eta_{22}\right]\right]\right]\\
+ & =r\left[\Phi_{1}\eta_{11}-\Phi_{1}\Phi_{1}\eta_{11}-\Phi_{1}\Phi_{1}\eta_{12}+\Phi_{2}\eta_{21}-\Phi_{2}\Phi_{1}\eta_{21}-\Phi_{2}\Phi_{1}\eta_{22}\right]\\
+ & =r\left[\eta_{11}\left[\Phi_{1}-\Phi_{1}\Phi_{1}\right]-\eta_{12}\Phi_{1}\Phi_{1}+\eta_{21}\left[\Phi_{2}-\Phi_{2}\Phi_{1}\right]-\eta_{22}\Phi_{2}\Phi_{1}\right]
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial t}\Phi_{2} & =r\sum_{j=1,2}\left[\Phi_{j}\left[\eta_{j2}-\Phi_{2}\sum_{k=1,2}\eta_{jk}\right]\right]\\
+ & =r\left[-\eta_{11}\Phi_{1}\Phi_{2}+\eta_{12}\left[\Phi_{1}-\Phi_{1}\Phi_{2}\right]+\eta_{21}\Phi_{2}\Phi_{2}+\eta_{22}\left[\Phi_{2}-\Phi_{2}\Phi_{2}\right]\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note that 
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\Phi_{1}=r\left[\underbrace{\eta_{11}\left[\Phi_{1}-\Phi_{1}\Phi_{1}\right]}_{positive}\underbrace{-\eta_{12}\Phi_{1}\Phi_{1}}_{negative}\underbrace{+\eta_{21}\left[\Phi_{2}-\Phi_{2}\Phi_{1}\right]}_{positive}\underbrace{-\eta_{22}\Phi_{2}\Phi_{1}}_{negative}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also note that stationary point doesn't depend on 
+\begin_inset Formula $r$
+\end_inset
+
+ so 
+\begin_inset Formula $r$
+\end_inset
+
+ only affects the speed at which convergence happens and whether the overall
+ rate is 
+\end_layout
+
+\begin_layout Standard
+Oh wait, forgot the healing factor.
+ People recover.
+ They don't just keep on infecting.
+\end_layout
+
+\begin_layout Standard
+Also, with only two groups, we have that 
+\begin_inset Formula $\Phi_{2}=1-\Phi_{1}$
+\end_inset
+
+.
+ Thus
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\Phi_{1}=r\left[\eta_{11}\left[\Phi_{1}-\Phi_{1}\Phi_{1}\right]-\eta_{12}\Phi_{1}\Phi_{1}+\eta_{21}\left[\left(1-\Phi_{1}\right)-(1-\Phi_{1})\Phi_{1}\right]-\eta_{22}\left(1-\Phi_{1}\right)\Phi_{1}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=r\left[\eta_{11}\left[\Phi_{1}-\Phi_{1}\Phi_{1}\right]-\eta_{12}\Phi_{1}\Phi_{1}+\eta_{21}\left[1-2\Phi_{1}+\Phi_{1}\Phi_{1}\right]-\eta_{22}\left(\Phi_{1}-\Phi_{1}\Phi_{1}\right)\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=r\left[\eta_{11}\left[\Phi_{1}-\Phi_{1}\Phi_{1}\right]-\eta_{12}\Phi_{1}\Phi_{1}+\eta_{21}\left[1-\Phi_{1}\right]^{2}-\eta_{22}\left(1-\Phi_{1}\right)\Phi_{1}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=r\left[\left(\eta_{11}-\eta_{22}\right)\left(1-\Phi_{1}\right)\Phi_{1}-\eta_{12}\Phi_{1}\Phi_{1}+\eta_{21}\left[1-\Phi_{1}\right]^{2}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If we are at the stationary point, then 
+\begin_inset Formula $\frac{\partial}{\partial t}\Phi_{1}=0$
+\end_inset
+
+ so 
+\begin_inset Formula 
+\[
+0=\eta_{11}\left[\Phi_{1}-\Phi_{1}\Phi_{1}\right]-\eta_{12}\Phi_{1}\Phi_{1}+\eta_{21}\left[1-\Phi_{1}\right]^{2}-\eta_{22}\left(1-\Phi_{1}\right)\Phi_{1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\eta_{11}\left(1-\Phi_{1}\right)\Phi_{1}+\eta_{21}\left[1-\Phi_{1}\right]^{2}=\eta_{12}\Phi_{1}\Phi_{1}+\eta_{22}\left(1-\Phi_{1}\right)\Phi_{1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\eta_{11}+\eta_{21}\frac{1-\Phi_{1}}{\Phi_{1}}=\eta_{12}\frac{\Phi_{1}}{\left(1-\Phi_{1}\right)}+\eta_{22}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Analysis of the two-group scenario:
+\end_layout
+
+\begin_layout Standard
+Note how each of the following chunks responds to changes in 
+\begin_inset Formula $\Phi_{1}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $+\eta_{11}\left[\Phi_{1}-\Phi_{1}\Phi_{1}\right]$
+\end_inset
+
+: Increases until 
+\begin_inset Formula $\Phi_{1}$
+\end_inset
+
+ reaches 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ then starts decreasing 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $+\eta_{21}\left[1-\Phi_{1}\right]^{2}$
+\end_inset
+
+: decreasing in 
+\begin_inset Formula $\Phi_{1}$
+\end_inset
+
+.
+ Higher portion means slower growth from the other portion.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $-\eta_{12}\Phi_{1}\Phi_{1}$
+\end_inset
+
+: increase in 
+\begin_inset Formula $\Phi_{1}$
+\end_inset
+
+ which means the whole term is decreasing of course.
+ Higher portion means more bleeding off.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $-\eta_{22}\left(1-\Phi_{1}\right)\Phi_{1}$
+\end_inset
+
+: same as first part.
+ Just negative
+\end_layout
+
+\begin_layout Standard
+So two of the pieces decrease when we increase 
+\begin_inset Formula $\Phi_{1}$
+\end_inset
+
+ and the other two pieces add up to a parabola with the peak at 0.5.
+\end_layout
+
+\begin_layout Standard
+At 
+\begin_inset Formula $\Phi_{1}=0$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\Phi_{1}=r\eta_{21}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+At 
+\begin_inset Formula $\Phi_{1}=1$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\Phi_{1}=-r\eta_{12}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore if 
+\begin_inset Formula $\eta_{21}=0$
+\end_inset
+
+, we have a steady state at 
+\begin_inset Formula $\Phi_{1}=0$
+\end_inset
+
+ and if 
+\begin_inset Formula $\eta_{21}=0$
+\end_inset
+
+, then we have 
+\begin_inset Formula $\Phi_{1}=1$
+\end_inset
+
+ as stable state.
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $\eta_{11}=\eta_{22}$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial t}\Phi_{1} & =r\left[\eta_{21}\left[1-\Phi_{1}\right]^{2}-\eta_{12}\Phi_{1}\Phi_{1}\right]\\
+ & =r\left[\eta_{21}-2\eta_{21}\Phi_{1}+\left[\eta_{21}-\eta_{12}\right]\Phi_{1}\Phi_{1}\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Set equal to zero and solve.
+ Then solutions are:
+\begin_inset Formula 
+\begin{align*}
+\Phi_{1} & =\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}\\
+ & =\frac{2\eta_{21}\pm\sqrt{4\eta_{21}^{2}-4\left[\eta_{21}-\eta_{12}\right]}}{2\left[\eta_{21}-\eta_{12}\right]}\\
+ & =\frac{2\eta_{21}\pm2\sqrt{\eta_{21}\eta_{21}-\eta_{12}+\eta_{12}}}{2\left[\eta_{21}-\eta_{12}\right]}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $a=\left[\eta_{21}-\eta_{12}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $b=-2\eta_{21}$
+\end_inset
+
+ , and 
+\begin_inset Formula $c=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Note that there will always be two real solutions here.
+ But is one of them inside of the correct range? Well, yes, as long as 
+\begin_inset Formula $\eta_{21}\neq0$
+\end_inset
+
+ and 
+\begin_inset Formula $\eta_{12}\neq0$
+\end_inset
+
+, then by IVT there is some value of 
+\begin_inset Formula $\Phi_{1}$
+\end_inset
+
+ between 0 and 1 such that 
+\begin_inset Formula $\frac{\partial}{\partial t}\Phi_{1}=0$
+\end_inset
+
+.
+ See above for how 
+\begin_inset Formula $\frac{\partial}{\partial t}\Phi_{1}>0$
+\end_inset
+
+ at 
+\begin_inset Formula $\Phi_{1}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{\partial}{\partial t}\Phi_{1}<0$
+\end_inset
+
+ at 
+\begin_inset Formula $\Phi_{1}=1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Vertex of parabola is at 
+\begin_inset Formula $\frac{\eta_{21}}{\eta_{21}-\eta_{12}}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\eta_{21}>\eta_{12}$
+\end_inset
+
+, then 
+\begin_inset Formula $a>0$
+\end_inset
+
+ parabola is concave up, and fixed point is at 
+\begin_inset Formula $\Phi_{1}=\frac{\eta_{21}-\sqrt{\eta_{21}\eta_{21}-\eta_{12}+\eta_{12}}}{\left[\eta_{21}-\eta_{12}\right]}$
+\end_inset
+
+.
+ Likewise if 
+\begin_inset Formula $\eta_{12}>\eta_{21}$
+\end_inset
+
+, then parabola is concave down and fixed point is at 
+\begin_inset Formula $\Phi_{1}=\frac{\eta_{21}+\sqrt{\eta_{21}\eta_{21}-\eta_{12}+\eta_{12}}}{\left[\eta_{21}-\eta_{12}\right]}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+Wait, I need to double check things here.
+ Like plug in 200 and 100 and you get a fixed point of 
+\begin_inset Formula $\frac{190}{100}=19$
+\end_inset
+
+ .
+ That don't make a lick of sense.
+\end_layout
+
+\begin_layout Subsection*
+Let's break down how this evolve in reponse to different parameter cases:
+\end_layout
+
+\end_body
+\end_document

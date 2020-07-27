@@ -1,0 +1,1106 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 3cm
+\rightmargin 3cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Why are people still outside playing sports? Why are people still having
+ parties?
+\end_layout
+
+\begin_layout Standard
+Core idea: different kinds of people have different structure to their social
+ connections.
+ The nature of this structure may be important for thinking about whether
+ outbreaks of a contagion break out into epidemics or dissapear.
+ May also be important for reasoning about how people respond to risk induced
+ by social connections.
+\end_layout
+
+\begin_layout Section
+Basic assumptions of how the contagion spreads
+\end_layout
+
+\begin_layout Standard
+Let's start by supposing that you are host to some contagion – a virus,
+ an idea, etc.
+ And suppose that you have a fixed number 
+\begin_inset Formula $n$
+\end_inset
+
+ of neighbors, and for each neighbor, you have an independent chance 
+\begin_inset Formula $r$
+\end_inset
+
+ of transmitting some contagion to that neighbor.
+ (For simplicity, none of your neighbors are immune to the contagion.)
+\end_layout
+
+\begin_layout Standard
+What is the expected number of neighbors whom you transmit the contagion
+ to? The answer is of course 
+\begin_inset Formula $n\cdot r$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And what if there are multiple people like you who can transmit the contagion,
+ such that each other such person also has 
+\begin_inset Formula $n$
+\end_inset
+
+ neighbors with a chance 
+\begin_inset Formula $r$
+\end_inset
+
+ of transmitting the contagion? Then in expectation, if there are 
+\begin_inset Formula $I$
+\end_inset
+
+ such people, the group of you will transmit 
+\begin_inset Formula $Inr$
+\end_inset
+
+ new cases.
+\end_layout
+
+\begin_layout Standard
+And if 
+\begin_inset Formula $nr>1$
+\end_inset
+
+, then on average, each of you will transmit to more than one person, and
+ 
+\begin_inset Formula $Inr>I$
+\end_inset
+
+ so the number of new infectious people has grown.
+\end_layout
+
+\begin_layout Standard
+So far, this resembles the early stages of a standard epidemic model, where
+ the disease is growing exponentially.
+\end_layout
+
+\begin_layout Subsection
+Adding some structure 
+\end_layout
+
+\begin_layout Standard
+Next, let's impose some additional structure on the network of conections
+ between people.
+ In principle, we could have contagion spread randomly through any arbitray
+ graph, with individuals as nodes and the edges as social connections along
+ which the disease can spread.
+ 
+\end_layout
+
+\begin_layout Standard
+To keep things simple, I'll make the following assumptions about the structure
+ of the social graph: There are some number of distinct 'types' of people,
+ indexed by 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Each type is defined by the number of connections is has to each other
+ type.
+ Let 
+\begin_inset Formula $n_{ij}$
+\end_inset
+
+ represent the number of connections a type 
+\begin_inset Formula $i$
+\end_inset
+
+ person has to type 
+\begin_inset Formula $j$
+\end_inset
+
+ people.
+ Suppose that each of these groups is very large and that the connections
+ are chosen at random, save for the fact about which group they connect.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $I_{i}$
+\end_inset
+
+ be the number of infectious people of type 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ And let 
+\begin_inset Formula $\Phi_{i}$
+\end_inset
+
+ be the portion of infectious people who are of type 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $\Phi_{i}\equiv\frac{I_{i}}{\sum_{k}I_{k}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+What is the total number of expected new tranmission events?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{k}\left[I_{k}\sum_{j}rn_{kj}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+What is the number of new transmission events divided by the number of currently
+ infectious?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\sum_{k}\left[I_{k}\sum_{j}rn_{kj}\right]}{\sum_{h}I_{h}}=\sum_{k}\left[\frac{I_{k}}{\sum_{h}I_{h}}\sum_{j}rn_{kj}\right]=\sum_{k}\left[\Phi_{k}\sum_{j}rn_{kj}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And what is the expected number of new transmission events where the contagion
+ is specifically transmitted to a person of type 
+\begin_inset Formula $i$
+\end_inset
+
+?
+\begin_inset Formula 
+\[
+\sum_{k}\left[I_{k}rn_{ki}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore the portion of the newly infected who are of type 
+\begin_inset Formula $i$
+\end_inset
+
+ will be 
+\begin_inset Formula 
+\begin{align*}
+\Phi_{i}^{\prime} & =\frac{\sum_{k}\left[I_{k}rn_{ki}\right]}{\sum_{k}\left[I_{k}\sum_{j}rn_{kj}\right]}\\
+ & =\frac{\sum_{k}\left[I_{k}rn_{ki}\right]}{\sum_{k}\left[I_{k}\sum_{j}rn_{kj}\right]}\cdot\frac{\left(\frac{1}{r\sum_{h}I_{h}}\right)}{\left(\frac{1}{r\sum_{h}I_{h}}\right)}\\
+ & =\frac{\sum_{k}\left[\left(\frac{I_{k}}{r\sum_{h}I_{h}}\right)n_{ki}\right]}{\sum_{k}\left[\left(\frac{I_{k}}{r\sum_{h}I_{h}}\right)\sum_{j}rn\right]}\\
+ & =\frac{\sum_{k}\left[\Phi_{k}n_{ki}\right]}{\sum_{k}\left[\Phi_{k}\sum_{j}rn\right]}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the later stages of a contagion, some of the neighbors of an infestious
+ individual may be immune to the contagion.
+ But in the early stages, the dynamics are described above.
+\end_layout
+
+\begin_layout Section
+Fixed Point results and other dynamics
+\end_layout
+
+\begin_layout Standard
+Note that, holding the parameters 
+\begin_inset Formula $\eta_{..}$
+\end_inset
+
+ constant, the system of equations describing each 
+\begin_inset Formula $\Phi_{i}^{\prime}$
+\end_inset
+
+ is a mapping from a probability distribution to itself, which doesn't depend
+ on the transmission rate 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+In other words, I'm splitting up two questions about how the contagion spreads:
+ how does the distribution of types amongst the infected evolve?, and does
+ the incidence of the infection grow or shrink?
+\end_layout
+
+\begin_layout Standard
+First let's note a few things about this mapping that describes how the
+ probability distribution evolves.
+ Because it's a continous mapping from a simplex to the same simplex, there
+ must be at least one fixed point.
+ This fixed point is not necessarily unique.
+ If the connecton parameters 
+\begin_inset Formula $\left\{ \eta\right\} $
+\end_inset
+
+ are chosen such that 
+\begin_inset Formula $\eta_{ij}\neq0$
+\end_inset
+
+ for any 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+ , then the fixed point must be in the interior of the probability.
+ simplex.
+\end_layout
+
+\begin_layout Standard
+In the latter case, subsequent generations of infectious will evolve to
+ have a distribution of types which converges to the fixed distribution.
+ 
+\end_layout
+
+\begin_layout Standard
+Then the question of whether the contagion can spread to a large portion
+ of the network depends on the average number of new tranmissions per person
+ among this distribution of infectious people.
+ So if the distribution evolves in such a way as to concentrate the contagion
+ among the highly connected, then an outbreak is more likely to occur than
+ would be suggested by the transmissions caused by a randomly selected person.
+\end_layout
+
+\begin_layout Standard
+[Insert image of hyperplane and tranmission threshold]
+\end_layout
+
+\begin_layout Standard
+Then after the distribution evolves in a way determined by the structure
+ of connections between types, the number of new transmissions per infectious
+ person will be a weighted sum of the average number of transmissions per
+ type of person 
+\begin_inset Formula 
+\[
+\sum_{k}\left[\Phi_{k}\sum_{j}rn_{kj}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And the contagion will increase in prevalence iff this quantity is 
+\begin_inset Formula $>1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section
+Continuous example with two distinct types.
+\end_layout
+
+\begin_layout Standard
+your percentage 
+\begin_inset Formula $\Phi_{i}$
+\end_inset
+
+ is equal to 
+\begin_inset Formula $\frac{I_{i}}{I}$
+\end_inset
+
+.
+ Thus the rate of change of your percentage 
+\begin_inset Formula $\frac{\partial\Phi_{i}}{\partial t}$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\frac{I_{i}}{I}=\frac{\left(\frac{\partial}{\partial t}I_{i}\right)\left(I\right)-\left(I_{i}\right)\left(\frac{\partial}{\partial t}I\right)}{\left(I^{2}\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If we assume that the rate of change of a population is proportional to
+ the size of the group it is spreading from, then when 
+\begin_inset Formula $S_{i}\approx1$
+\end_inset
+
+, and that recovery happens randomly at rate 
+\begin_inset Formula $\gamma$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}I_{i}=\sum_{j}\left[r\eta_{ji}I_{j}\right]-\gamma I_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Because 
+\begin_inset Formula $I=\sum_{k}I_{k}$
+\end_inset
+
+, we get that 
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}I=\sum_{k}\left(\sum_{j}\left[r\eta_{jk}I_{j}\right]-\gamma I_{k}\right)=\sum_{k}\left(\sum_{j}\left[r\eta_{jk}I_{j}\right]\right)-\gamma I
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And so 
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\frac{I_{i}}{I}=\frac{\left(\sum_{j}\left[r\eta_{ji}I_{j}\right]-\gamma I_{i}\right)\left(I\right)-\left(I_{i}\right)\left(\sum_{k}\left(\sum_{j}\left[r\eta_{jk}I_{j}\right]\right)-\gamma I\right)}{\left(I^{2}\right)}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial t}\frac{I_{i}}{I} & =r\frac{\left(\sum_{j}\left[\eta_{ji}I_{j}\right]-\gamma I_{i}\right)\left(I\right)}{\left(I^{2}\right)}-r\frac{I_{i}\left(\sum_{k}\left(\sum_{j}\left[\eta_{jk}I_{j}\right]\right)-\gamma I\right)}{\left(I^{2}\right)}\\
+ & =r\frac{\sum_{j}\left[\eta_{ji}I_{j}\right]-\gamma I_{i}}{I}-r\frac{I_{i}}{I}\frac{\sum_{k}\left(\sum_{j}\left[\eta_{jk}I_{j}\right]\right)-\gamma I}{I}\\
+ & =r\sum_{j}\left[\eta_{ji}\frac{I_{j}}{I}\right]-r\gamma\frac{I_{i}}{I}-r\frac{I_{i}}{I}\left[\sum_{k}\left(\sum_{j}\left[\eta_{jk}\frac{I_{j}}{I}\right]\right)-\gamma\right]\\
+ & =r\sum_{j}\left[\eta_{ji}\frac{I_{j}}{I}\right]-\xcancel{r\gamma\frac{I_{i}}{I}}-r\frac{I_{i}}{I}\sum_{k}\left(\sum_{j}\left[\eta_{jk}\frac{I_{j}}{I}\right]\right)+\xcancel{r\frac{I_{i}}{I}\gamma}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial t}\Phi_{i} & =r\sum_{j}\left[\eta_{ji}\Phi_{j}\right]-r\Phi_{i}\sum_{k}\sum_{j}\left[\eta_{jk}\Phi_{j}\right]\\
+ & =r\sum_{j}\left[\eta_{ji}\Phi_{j}-\Phi_{i}\sum_{k}\left[\eta_{jk}\Phi_{j}\right]\right]\\
+ & =r\sum_{j}\left[\Phi_{j}\left[\eta_{ji}-\Phi_{i}\sum_{k}\eta_{jk}\right]\right]\\
+ & =r\left[\sum_{j}\eta_{ji}\left[\Phi_{j}-\Phi_{j}\Phi_{i}\right]-\Phi_{i}\sum_{j}\sum_{k\neq i}\Phi_{j}\eta_{jk}\right]\\
+ & =r\sum_{j}\left[\Phi_{j}\left[\left(1-\Phi_{i}\right)\eta_{ji}-\Phi_{i}\sum_{k\neq i}\eta_{jk}\right]\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(Weird how the recovery rate cancels out.
+ It's still implicitly there in the form of the rate of transmission 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\beta$
+\end_inset
+
+ chance of transmission each period and 
+\begin_inset Formula $\frac{1}{\gamma}$
+\end_inset
+
+ periods of infectiveness on average then overall chance of transmission
+ is only 
+\begin_inset Formula $\frac{\beta}{\gamma}$
+\end_inset
+
+.
+ So recovery rate only matters for the evolution of distribution insomuch
+ as it affects transmission rate, and tranmission rate only effects speed
+ of adjustment.)
+\end_layout
+
+\begin_layout Standard
+For example, with only two groups, we have that 
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial t}\Phi_{1} & =r\sum_{j=1,2}\left[\Phi_{j}\left[\eta_{j1}-\Phi_{1}\sum_{k=1,2}\eta_{jk}\right]\right]\\
+ & =r\left[\Phi_{1}\left[\eta_{11}-\Phi_{1}\left[\eta_{11}+\eta_{12}\right]\right]+\Phi_{2}\left[\eta_{21}-\Phi_{1}\left[\eta_{21}+\eta_{22}\right]\right]\right]\\
+ & =r\left[\Phi_{1}\eta_{11}-\Phi_{1}\Phi_{1}\eta_{11}-\Phi_{1}\Phi_{1}\eta_{12}+\Phi_{2}\eta_{21}-\Phi_{2}\Phi_{1}\eta_{21}-\Phi_{2}\Phi_{1}\eta_{22}\right]\\
+ & =r\left[\eta_{11}\left[\Phi_{1}-\Phi_{1}\Phi_{1}\right]-\eta_{12}\Phi_{1}\Phi_{1}+\eta_{21}\left[\Phi_{2}-\Phi_{2}\Phi_{1}\right]-\eta_{22}\Phi_{2}\Phi_{1}\right]
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial t}\Phi_{2} & =r\sum_{j=1,2}\left[\Phi_{j}\left[\eta_{j2}-\Phi_{2}\sum_{k=1,2}\eta_{jk}\right]\right]\\
+ & =r\left[-\eta_{11}\Phi_{1}\Phi_{2}+\eta_{12}\left[\Phi_{1}-\Phi_{1}\Phi_{2}\right]+\eta_{21}\Phi_{2}\Phi_{2}+\eta_{22}\left[\Phi_{2}-\Phi_{2}\Phi_{2}\right]\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Note that 
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\Phi_{1}=r\left[\underbrace{\eta_{11}\left[\Phi_{1}-\Phi_{1}\Phi_{1}\right]}_{positive}\underbrace{-\eta_{12}\Phi_{1}\Phi_{1}}_{negative}\underbrace{+\eta_{21}\left[\Phi_{2}-\Phi_{2}\Phi_{1}\right]}_{positive}\underbrace{-\eta_{22}\Phi_{2}\Phi_{1}}_{negative}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also note that stationary point doesn't depend on 
+\begin_inset Formula $r$
+\end_inset
+
+, so 
+\begin_inset Formula $r$
+\end_inset
+
+ only affects the speed at which convergence happens.
+ Then it also matters for whether the outbreak is above one of course.
+\end_layout
+
+\begin_layout Standard
+Oh wait, forgot the healing factor.
+ People recover.
+ They don't just keep on infecting.
+\end_layout
+
+\begin_layout Standard
+Also, with only two groups, we have that 
+\begin_inset Formula $\Phi_{2}=1-\Phi_{1}$
+\end_inset
+
+.
+ Thus
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\Phi_{1}=r\left[\eta_{11}\left[\Phi_{1}-\Phi_{1}\Phi_{1}\right]-\eta_{12}\Phi_{1}\Phi_{1}+\eta_{21}\left[\left(1-\Phi_{1}\right)-(1-\Phi_{1})\Phi_{1}\right]-\eta_{22}\left(1-\Phi_{1}\right)\Phi_{1}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=r\left[\eta_{11}\left[\Phi_{1}-\Phi_{1}\Phi_{1}\right]-\eta_{12}\Phi_{1}\Phi_{1}+\eta_{21}\left[1-2\Phi_{1}+\Phi_{1}\Phi_{1}\right]-\eta_{22}\left(\Phi_{1}-\Phi_{1}\Phi_{1}\right)\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=r\left[\eta_{11}\left[\Phi_{1}-\Phi_{1}\Phi_{1}\right]-\eta_{12}\Phi_{1}\Phi_{1}+\eta_{21}\left[1-\Phi_{1}\right]^{2}-\eta_{22}\left(1-\Phi_{1}\right)\Phi_{1}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=r\left[\left(\eta_{11}-\eta_{22}\right)\left(1-\Phi_{1}\right)\Phi_{1}-\eta_{12}\Phi_{1}\Phi_{1}+\eta_{21}\left[1-\Phi_{1}\right]^{2}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If we are at the stationary point, then 
+\begin_inset Formula $\frac{\partial}{\partial t}\Phi_{1}=0$
+\end_inset
+
+ so 
+\begin_inset Formula 
+\[
+0=\eta_{11}\left[\Phi_{1}-\Phi_{1}\Phi_{1}\right]-\eta_{12}\Phi_{1}\Phi_{1}+\eta_{21}\left[1-\Phi_{1}\right]^{2}-\eta_{22}\left(1-\Phi_{1}\right)\Phi_{1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\eta_{11}\left(1-\Phi_{1}\right)\Phi_{1}+\eta_{21}\left[1-\Phi_{1}\right]^{2}=\eta_{12}\Phi_{1}\Phi_{1}+\eta_{22}\left(1-\Phi_{1}\right)\Phi_{1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\eta_{11}+\eta_{21}\frac{1-\Phi_{1}}{\Phi_{1}}=\eta_{12}\frac{\Phi_{1}}{\left(1-\Phi_{1}\right)}+\eta_{22}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Analysis of the two-group scenario:
+\end_layout
+
+\begin_layout Standard
+Note how each of the following chunks responds to changes in 
+\begin_inset Formula $\Phi_{1}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $+\eta_{11}\left[\Phi_{1}-\Phi_{1}\Phi_{1}\right]$
+\end_inset
+
+: Increases until 
+\begin_inset Formula $\Phi_{1}$
+\end_inset
+
+ reaches 
+\begin_inset Formula $\frac{1}{2}$
+\end_inset
+
+ then starts decreasing 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $+\eta_{21}\left[1-\Phi_{1}\right]^{2}$
+\end_inset
+
+: decreasing in 
+\begin_inset Formula $\Phi_{1}$
+\end_inset
+
+.
+ Higher portion means slower growth from the other portion.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $-\eta_{12}\Phi_{1}\Phi_{1}$
+\end_inset
+
+: increase in 
+\begin_inset Formula $\Phi_{1}$
+\end_inset
+
+ which means the whole term is decreasing of course.
+ Higher portion means more bleeding off.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $-\eta_{22}\left(1-\Phi_{1}\right)\Phi_{1}$
+\end_inset
+
+: same as first part.
+ Just negative
+\end_layout
+
+\begin_layout Standard
+So two of the pieces decrease when we increase 
+\begin_inset Formula $\Phi_{1}$
+\end_inset
+
+ and the other two pieces add up to a parabola with the peak at 0.5.
+\end_layout
+
+\begin_layout Standard
+At 
+\begin_inset Formula $\Phi_{1}=0$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\Phi_{1}=r\eta_{21}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+At 
+\begin_inset Formula $\Phi_{1}=1$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial t}\Phi_{1}=-r\eta_{12}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore if 
+\begin_inset Formula $\eta_{21}=0$
+\end_inset
+
+, we have a steady state at 
+\begin_inset Formula $\Phi_{1}=0$
+\end_inset
+
+ and if 
+\begin_inset Formula $\eta_{21}=0$
+\end_inset
+
+, then we have 
+\begin_inset Formula $\Phi_{1}=1$
+\end_inset
+
+ as stable state.
+\end_layout
+
+\begin_layout Subsubsection*
+No self propagation:
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $\eta_{11}=\eta_{22}$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\begin{align*}
+\frac{\partial}{\partial t}\Phi_{1} & =r\left[\eta_{21}\left[1-\Phi_{1}\right]^{2}-\eta_{12}\Phi_{1}\Phi_{1}\right]\\
+ & =r\left[\eta_{21}-2\eta_{21}\Phi_{1}+\left[\eta_{21}-\eta_{12}\right]\Phi_{1}\Phi_{1}\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Set equal to zero and solve.
+ Then solutions are:
+\begin_inset Formula 
+\begin{align*}
+\Phi_{1} & =\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}\\
+ & =\frac{2\eta_{21}\pm\sqrt{4\eta_{21}^{2}-4\left[\eta_{21}-\eta_{12}\right]}}{2\left[\eta_{21}-\eta_{12}\right]}\\
+ & =\frac{2\eta_{21}\pm2\sqrt{\eta_{21}\eta_{21}-\eta_{12}+\eta_{12}}}{2\left[\eta_{21}-\eta_{12}\right]}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $a=\left[\eta_{21}-\eta_{12}\right]$
+\end_inset
+
+, 
+\begin_inset Formula $b=-2\eta_{21}$
+\end_inset
+
+ , and 
+\begin_inset Formula $c=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Note that there will always be two real solutions here.
+ But is one of them inside of the correct range? Well, yes, as long as 
+\begin_inset Formula $\eta_{21}\neq0$
+\end_inset
+
+ and 
+\begin_inset Formula $\eta_{12}\neq0$
+\end_inset
+
+, then by IVT there is some value of 
+\begin_inset Formula $\Phi_{1}$
+\end_inset
+
+ between 0 and 1 such that 
+\begin_inset Formula $\frac{\partial}{\partial t}\Phi_{1}=0$
+\end_inset
+
+.
+ See above for how 
+\begin_inset Formula $\frac{\partial}{\partial t}\Phi_{1}>0$
+\end_inset
+
+ at 
+\begin_inset Formula $\Phi_{1}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{\partial}{\partial t}\Phi_{1}<0$
+\end_inset
+
+ at 
+\begin_inset Formula $\Phi_{1}=1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Vertex of parabola is at 
+\begin_inset Formula $\frac{\eta_{21}}{\eta_{21}-\eta_{12}}$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\eta_{21}>\eta_{12}$
+\end_inset
+
+, then 
+\begin_inset Formula $a>0$
+\end_inset
+
+ parabola is concave up, and fixed point is at 
+\begin_inset Formula $\Phi_{1}=\frac{\eta_{21}-\sqrt{\eta_{21}\eta_{21}-\eta_{12}+\eta_{12}}}{\left[\eta_{21}-\eta_{12}\right]}$
+\end_inset
+
+.
+ Likewise if 
+\begin_inset Formula $\eta_{12}>\eta_{21}$
+\end_inset
+
+, then parabola is concave down, denominator is negative and fixed point
+ is at 
+\begin_inset Formula $\Phi_{1}=\frac{\eta_{21}-\sqrt{\eta_{21}\eta_{21}-\eta_{21}+\eta_{12}}}{\left[\eta_{21}-\eta_{12}\right]}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+So either way, fixed point is at 
+\begin_inset Formula $\Phi_{1}=\frac{\eta_{21}-\sqrt{\eta_{21}\eta_{21}-\eta_{21}+\eta_{12}}}{\left[\eta_{21}-\eta_{12}\right]}$
+\end_inset
+
+, which is in 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+, and any other distribution wil evolve towards this distribution.
+\end_layout
+
+\begin_layout Section
+A note about endogenizing the network connections.
+\end_layout
+
+\begin_layout Standard
+The above sections look at the question of how the contagion evolves on
+ a fixed network of social connections.
+ 
+\end_layout
+
+\begin_layout Standard
+But another interesting question is how the network of connections will
+ itself evolve in response to the contagion.
+ 
+\end_layout
+
+\begin_layout Standard
+Suppose you are an individual with 
+\begin_inset Formula $n$
+\end_inset
+
+ social contacts.
+ You are susceptible to the contagion, and you know that all else being
+ equal, some portion 
+\begin_inset Formula $R$
+\end_inset
+
+ of your contacts will eventually get the contagion and become infectious
+ before the end of the outbreak.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The likelihood that you 
+\emph on
+don't
+\emph default
+ get the contagion transmitted to you from any particular one of your contacts
+ is Pr(
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+that contact doesn't get infected 
+\begin_inset Formula $\lor$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+they don't sneeze on you
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+).
+ There is a probability 
+\begin_inset Formula $R$
+\end_inset
+
+ that they get infected, a prob 
+\begin_inset Formula $r$
+\end_inset
+
+ that they transmit to you if they do get infected, and a proability 
+\begin_inset Formula $(1-R)(1-r)$
+\end_inset
+
+ that they neither get infected nor would tranmit to you if they counterfactuall
+y did.
+ 
+\begin_inset Formula 
+\[
+(1-R)+(1-r)+(
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The chance that any one of your particular contacts 
+\emph on
+does not
+\emph default
+ transmit the disease to you is given by 
+\begin_inset Formula $\left(1-rR\right)$
+\end_inset
+
+.
+ Thus the probability that none of your contacts transmit to you over the
+ course of the outbreak is 
+\begin_inset Formula $(1-rR)^{n}$
+\end_inset
+
+ where 
+\begin_inset Formula $n$
+\end_inset
+
+ is the total number of your neighbors.
+ Thus the total exposure risk over the entire outbreak for you personally
+ is 
+\begin_inset Formula 
+\[
+1-(1-rR)^{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now consider the marginal benefit of reducing your contacts by one.
+ If catching the contagion will impose a cost of 
+\begin_inset Formula $C$
+\end_inset
+
+ to you, then the benefit of cutting somebody out from your contacts is
+ 
+\begin_inset Formula 
+\[
+C\left[1-(1-rR)^{n}-\left[1-(1-rR)^{n-1}\right]\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+C\left[(1-rR)^{n-1}-(1-rR)^{n}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
