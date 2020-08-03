@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Symmetric Melitz-Ottaviano Model</title>
+<link href="../../../styles/sakura.css" rel="stylesheet" type="text/css">
+<!--The following is used to allow the math to wordwrap.-->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        CommonHTML: { linebreaks: { automatic: true } },
+        "HTML-CSS": { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } },
+        TeX: {extensions: ["enclose.js"]},
+        tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          processEscapes: true
+        }
+    });
+    </script>
+    <!--The following is used to make subtle highlights and red crossthroughs on cancelled terms.-->
+    <div hidden>\(   \def\dashbox#1#2{ \bbox[border:2px dashed #1,3px]{#2}   }                 \def\cancel#1{\color{red}{\enclose{updiagonalstrike,downdiagonalstrike}{\color{black}{#1}}}}                   \)</div>
+<!--Renders math--><script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+<!--For mobile--><meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+</head>
+<body>
+
+
+
+<h1>Trade Prelim Notes</h1>
+<h2>Symmetric Melitz-Ottaviano Model</h2>
+<p>This problem is from Doireann Fitzgerald. It showed up on the trade prelims in 2016, 2017 (fall), and 2019</p>
+
+
+
+
+
+<h3>Setup</h3>
+
+<p>Start with a closed economy population by \(L\) identical households, each of which supplies \(1\) unit of labhor inelastically. Household \(i\)'s  preferences are:
+    \[    U_i = c_{i0} + \alpha \sum_{j=1}^N c_{ij} - \frac{\beta}{2} \sum_{j=1}^N (c_{ij})^2  - \frac{\gamma}{2} \left(   \sum_{j=1}^N c_{ij}  \right)^2   \]
+where good \(0\) is a homogenous numeraire good and \(j=1,...,N\) are differentiated goods. The number \(N\) of differentiated goods in this economy is endogenous. The labor market is perfectly competitive. The numeraire good is produced under constant returns to scale at unit cost and sold in a perfectly competitive market. This implies \(w=1\). In order to produce a differentiated good, the firm must incur and upfront cost given by \(Sw = s\). After that, production is constant returns to scale, and each unit of labor produces \(1 /  \sigma\) units of the good, so marginal cost is given by \(\sigma\) for all firms. Assume monopolistic competition in the differentiated goods sector. That is, each firm chooses its price to maximize profit taking as given the behavior or all other firms.</p>   
+
+
+
+
+
+
+
+<h3>Problem (a): Write down the budget constraint of the consumer.</h3>
+
+
+
+
+<h3>Problem (b): Consumer maximization problem and FOC.</h3>
+<p><b>Set up the maximization problem of the consumer. What is the first order condition for household \(i\)'s consumption of differentiated good \(h\) (ie FOC with respect to \(c_{ih}\)? You can assume there is positive consumption of the numeraire, and \(N > 0\).   </b></p>
+
+
+
+<h3>Problem (c): Sum over differentiated goods.</h3>
+<p><b>Sum this condition across all \(h = 1,...,N\) and use the notation \(\overline{p} = (1/N) \sum_{h=1}^N p_h \) to obtain an expression for $\sum_{h=1}^N c_{ih}$  in terms of \(N\), \(\overline{p}\) and preference parameters. </b></p>
+
+
+
+<h3>Problem (d): Derive demand function.</h3>
+<p><b>Use the solution to part (c) to express $c_{ih}$, household $i$'s demand for good $h$ as a function of $p_h$, $N$,  $\overline{p}$ and preference parameters. What is the market demand $q_h$ (remember that there are $L$ agents)?   </b></p>
+
+
+
+<h3>Problem (e): Firm's profit and pricing rule.</h3>
+<p><b>Now write down the profits of differentiated goods firm $h$ as a function of $p_h$, marginal cost $\sigma$, $L$, $N$, $\overline{p}$ and preference parameters.  Assuming that firm $h$ takes $\overline{p}$ as given (ie monopolistic competition), what is the first order condition with respect to $p_h$? Use this to write the firm's optimal $p_h$ as a function of $\sigma$, $N$, $\overline{p}$, and preference parameters.</b></p>
+
+
+
+<h3>Problem (f): Price index and profit.</h3>
+<p><b>Now use the fact that all differentiated goods are identical so $p_h=\overline{p}$ to write $\overline{p}$ as a function of $\sigma$, $N$ and preference parameters. Use this to write maximized profit as a function of $\sigma$, $L$, $N$, and preference parameters.</b></p>
+
+
+
+<h3>Problem (g): Number of firms with free entry.</h3>
+<p><b>What is the free entry condition? Rearrange it to obtain an expression for $N$ as a fucntion of $\sigma$, $L$, $S$ and preference parameters. You can assume $\alpha - \sigma > 0 $.</b></p>
+
+
+
+<h3>Problem (h): Solve for quantities produced.</h3>
+<p><b>Use the market demand together with teh expressions for $\overline{p}$ and $N$ to solve for $q_h$, production of good $h$, as a function of  $\sigma$, $L$, $S$ and preference parameters.</b></p>
+
+
+
+<h3>Problem (i): Pareto Optimality</h3>
+<p><b>Is the competitive equilibrium in this closed economy Pareto optimal?</b></p>
+
+
+
+<h3>Problem (j): Opening to trade. </h3>
+<p><b>Suppose the competitive economy opens up to (costless) trade with an identical economy with $L^*$ households. What happens to the set of varieties the consumer has access to? What happens to $q_h$? What happens to the set of varieties produced in the home country? Give some intuition for what happens. What happens to welfare?</b></p>
+
+
+
+<h3>Problem (k): Alternate Preferences.</h3>
+<p><b>How would you answers to (j) differ if preferences were CES as in Krugman(1980)?</b></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+
+<a href="melitzottaviano_solution">Solution</a>
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
