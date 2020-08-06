@@ -2,32 +2,306 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Macro Prelim Notes</title>
-<link href="../../styles/sakura.css" rel="stylesheet" type="text/css">
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
-<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+<title>Dynamic Heckscher-Ohlin Model</title>
+<link href="../../../styles/sakura.css" rel="stylesheet" type="text/css">
+<!--The following is used to allow the math to wordwrap.-->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        CommonHTML: { linebreaks: { automatic: true } },
+        "HTML-CSS": { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } },
+        TeX: {extensions: ["enclose.js"]},
+        tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          processEscapes: true
+        }
+    });
+    </script>
+    <!--The following is used to make subtle highlights and red crossthroughs on cancelled terms.-->
+    <div hidden>\(   \def\dashbox#1#2{ \bbox[border:2px dashed #1,3px]{#2}   }                 \def\cancel#1{\color{red}{\enclose{updiagonalstrike,downdiagonalstrike}{\color{black}{#1}}}}                   \)</div>
+<!--Renders math--><script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+<!--For mobile--><meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
 </head>
 <body>
 
 
+
 <h1>Trade Prelim Notes</h1>
+<h2>Dynamic Heckscher-Ohlin Model</h2>
+<p>This problem is from Tim Kehoe. It showed up on the trade prelims in 2013, 2015 (fall), 2016 (fall) and 2017(spring).</p>
 
 
 
-<h2>Tim Kehoe's Prelim Problems</h2>
-Intl Trade with Monopolistic Competition and Heterogenous Firms xx
-Self Fulfilling Debt Crises xx
-Dynamic Hecksher Ohlin
-Learning by Doing
+
+<h3>Setup</h3>
+<p>Consider a two-sector growth model in which the representative consumer has the utility function
+    $$\sum_{t=0}^\infty \beta^t \log (c_{1t}^{a_1}, c_{2t}^{a_2})$$
+The investment good is produced according to
+    $$k_{t+1} = d x_{1t}^{a_1} x_{2t}^{a_2}$$
+Feasible consumption/investment plans satisfy the feasibility constraints
+    $$c_{1t}+x_{1t}=\phi_{1}(k_{1t},l_{1t})=k_{1t}$$
+    $$c_{2t}+x_{2t}=\phi_{2}(k_{2t},l_{2t})=l_{2t}$$
+where
+    $$k_{1t}+k_{2t}=k_{t}$$
+    $$l_{1t}+l_{2t}=1$$
+The initial value of $k_t$ is $\bar{k_0}$. All of the variables specified above are in per capita terms.
+There is a measure $L$ of consumer/workers.
+</p>
 
 
 
-<h2>Doireann Fitzgerald's Prelim Problems</h2>
-Symmetric Mellitz Otivanio xx
-Armington Model of Trade and the gravity equation xx
 
 
-<h2>Amadors's Prelim Problems</h2>
+
+<hr>
+<h3>Problem (-): Define Equilibrium for this economy.</h3>
+<h5>Solution:</h5>
+
+
+
+
+
+
+
+
+<hr>
+<h3>Problem (a): Setup Social Planner's Problem</h3>
+<p><b>Write out a social planner’s problem for this economy. Explain how the solution to this social planner’s problem is related to that of the one-sector social planner’s 
+    $$\sum_{t=0}^\infty \beta^t \log c_t $$
+    $$ \text{s.t.:   } c_t + k_{t+1} = dk_t^{a_1} $$
+    $$c_t, k_t \geq 0$$
+    $$k_0 = \bar{k_0}$$
+[You can write done a proposition or propositions without providing a proof or proofs,
+but be sure to carefully relate the variables in the two-sector model to the variables in the
+one-sector model.]</b></p>
+<h5>Solution:</h5>
+
+
+The social planner's problem for the two sector economy is to choose $C \equiv\{c_{1t}, c_{2t}, x_{1t}, x_{2t}, k_{1t}, k_{2t} \}_t$ to solve
+<div class="highlight">
+        $$  \max_{C}\sum_{t=0}^{\infty}\beta^{t}\log\left(d c_{1t}^{a_{1}}c_{2t}^{a_{2}}\right) $$
+
+    subject to the constraints:
+    \begin{gather}
+        c_{1t}, c_{2t}, x_{1t}, x_{2t}  \geq 0, \quad              \forall t             \tag{NonNeg}\\
+        c_{1t} + x_{1t} = k_{1t} \quad \forall t              \tag{Resource 1} \\
+        c_{2t} + x_{2t} = 1 \quad \forall t              \tag{Resource 2} \\
+        k_{1,t+1} + k_{2,t+1} = d   x_{1t}^{a_1} x_{2t}^{a_2}     \tag{Capital} \\
+        k_{10} \quad given    \tag{initial k} \\
+    \end{gather}
+</div>
+
+<p>Assume that $a_1 + a_2 = 1$</p>
+
+<p>Proposition 1: If  $C \equiv\{c_{1t}, c_{2t}, x_{1t}, x_{2t}, k_{1t}, k_{2t} \}_t$  is a solution to the two-sector social planner's problem, then $\{c_t, k_t\}_t$ is the solution to the one-sector social planner's problem if for each time period $t$:
+    $$c_t = d c_{1t}^{a_1} c_{2t}^{a_2}$$
+    $$k_{t+1} = k_{1,t+1} = d x_{1t}^{a_1} x_{2t}^{a_2}$$
+</p>
+
+<p>Proposition 2: If  $\{c_t, k_t\}_t$ is a solution to the two-sector social planner's problem, then  $C \equiv\{c_{1t}, c_{2t}, x_{1t}, x_{2t}, k_{1t}, k_{2t} \}_t$ is the solution to the one-sector social planner's problem if for each time period $t:
+    $$k_{1,t+1} = k_{t+1}$$
+    $$k_{2,t+1} = 0$$
+    $$c_{1t} = \frac{k_t}{d k_t^{a_1}}c_t$$
+    $$c_{2t} = \frac{1}{d k_t^{a_1}}c_t$$
+    $$x_{1t} =\frac{k_t}{d k_t^{a_1}} k_{t+1}$$
+    $$x_{2t} =\frac{1}{d k_t^{a_1}} k_{t+1}$$
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+<h3>Problem (b): Solve Social Planner's Problem</h3>
+<p><b>Solve the one-sector social planner’s problem in part b. [Recall that the policy
+function for investment has the form $k_{t+1} (k_t) = A d k^{a_1}$ where $A$ is a constant that you
+remember or can determine with a bit of algebra and calculus.]</b></p>
+<h5>Solution:</h5>
+
+<p>Assuming an interior solution with binding budget constraints, the FOCs will be:
+    $$\beta^t \frac{1}{c_t} = \lambda_t \tag{c}$$
+    $$\lambda_t = \lambda_{t+1} a_1 d k_{t+1}^{a_1 - 1} \tag{k}$$
+    $$c_t + k_{t+1} = d k_t^{a_1}    \tag{budget}$$
+And the transversality condition will be that:
+    $$\lim \beta^t \frac{1}{c_t} k_t = 0$$
+</p>
+
+<p>Now assume that the policy function has the form 
+    $$k_{t+1} (k_t) = K^\prime (k_t) = A d k_t^{a_1}$$
+Combine with the budget to get
+    $$c_t = d k_t^{a_1} - k_{t+1} =  d k_t^{a_1} - A d k_t^{a_1} = (1-A) d k_t^{a_1}$$
+Divide the above and compare to the FOCs:
+    $$\frac{k_{t+1}^{a_1}}{k_t^{a_1}} = \frac{c_{t+1}}{c_t} = \beta \frac{\lambda_{t+1}}{\lambda_t} = \beta a_1 d k_{t+1}^{a_1 - 1}  $$
+    $$k_{t+1} = \beta a_1 d k_{t}^{a_1 } $$
+Therefore, comparing to the policy function, this means that $A = \beta a_1$ and $c_t = (1-\beta a_1) d k_t^{a_1}$. 
+</p>
+
+<p>Then applying this policy function recursively, we can find that 
+    $$k_t = (a_1 \beta d)^{\frac{a_1^t - 1}{a_1 - 1}} k_0^{a_1^t}$$
+    $$c_t = (1-\beta a_1) d k_t^{a_1}$$
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+<h3>Problem (c): Define International Equilibrium</h3>
+<p><b>Suppose now that there is a world made up of $n$ different countries, all with the same
+technologies and preferences, but with different constant populations, $L^i$, and with
+different initial capital-labor ratios $\bar{b_\theta^i}$. Suppose that goods $1$ and $2$ can be  freely traded   
+across countries, but that the investment good cannot be traded. Suppose too that there is
+no international borrowing. Define an equilibrium for the world economy.</b></p>
+<h5>Solution:</h5>
+
+
+TODO: DEFINITION
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+<h3>Problem (d): Whole Buncha Theorems</h3>
+<p><b>State and prove versions of the factor price equalization theorem, the Stolper-
+Samuelson theorem, the Rybczynski theorem, and the Heckscher-Ohlin theorem for this
+particular world economy.</b></p>
+
+<h5>Factor Price Equalization Theorem:</h5>
+<h6>Statement:</h6>
+This theorem states that if factor of production is used to produce goods in multiple countries, then the prices of that factor should be the same across each of those countries. That is, if $y_{1t}^i, y_{1t}^j$, then $r_t^i = r_t^j$. And if  $y_{2t}^i, y_{2t}^j$, then $w_t^i = w_t^j$
+<h6>Proof:</h6>
+
+
+<h5>Stolper-Samuelson theorem</h5>
+<h6>Statement:</h6>
+If the relative price of a good increases, then the factor most used in producing that good will also increase in relative price. That is, let $\left\{ \hat{p_{1t}},\hat{p_{2t}},\hat{r_{t}^{i}},\hat{w_{t}^{i}}\right\} $ and $\left\{ \widetilde{p_{1t}},\widetilde{p_{2t}},\widetilde{r_{t}^{i}},\widetilde{w_{t}^{i}}\right\} $ represent the prices is two different equilibriums. If production of each good is nonneagtive in both equilibriums then $\frac{\hat{p_{1t}}}{\hat{p_{2t}}}>\frac{\widetilde{p_{1t}}}{\widetilde{p_{2t}}}\implies\frac{\hat{r_{t}^{i}}}{\hat{w_{t}^{i}}}>\frac{\widetilde{r_{t}^{i}}}{\widetilde{w_{t}^{i}}}$
+<h6>Proof:</h6>
+
+
+
+<h5>Rybczynski Theorem:</h5>
+<h6>Statement:</h6>
+The Rybczynski Theorem states that an increase in the endowment of one factor of production will cause an increase in the production of the output which uses that good more extensively. For this economy, let there be two different equilibriums as defined above. If $\hat{k_{1t}^{i}}>\widetilde{k_{1t}^{i}} $ and $\hat{L^i} = \widetilde{L^i}$ then $\hat{y_{1t}^{i}}>\widetilde{y_{1t}^{i}}$ but $\hat{y_{2t}^{i}}=\widetilde{y_{2t}^{i}}$
+<h6>Proof:</h6>
+
+
+
+
+
+<h5>Heckscher-Ohlin Theorem:</h5>
+<h6>Statement:</h6>
+The Heckscher-Ohlin  states that the capital abundant country will export the capital intensive good while the labor abundant country exports the labor intensive good. In this economy, this means that.
+TODO
+<h6>Proof:</h6>
+
+
+
+
+
+
+
+
+TODO: Rerrange as GENERAL CONCEPT, SPECIFIC STATEMENT, PROOF. WRITE PROOFS
+
+
+
+
+
+
+
+
+
+
+<hr>
+<h3>Problem (e): Further Maths</h3>
+<p><b>Let $S_t = $c_t / y_t$ where $y_t = p_{1t} k_t + p_{2t} = dk_t^{a_1} is world GDP per capita. Explain how you could show that 
+    $$\frac{y_{t}^{i}-y_{t}}{y_{t}}=\frac{s_{t}}{s_{t-1}}\left(\frac{y_{t-1}^{i}-y_{t-1}}{y_{t-1}}\right)=\frac{s_{t}}{s_{0}}\left(\frac{y_{0}^{i}-y_{0}}{y_{0}}\right)$$
+That is, explain the logic of the argument. You do not need to go into details.
+</b></p>
+<h5>Solution:</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+<h3>Problem (f): Finish and Discuss</h3>
+<p><b>Use the solution to the one-sector social planner’s problem in part b to solve for $s_t$.
+Discuss the economic significance of the result that you obtain </b></p>
+<h5>Solution:</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
