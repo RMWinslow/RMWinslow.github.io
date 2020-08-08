@@ -3,7 +3,7 @@
 <html>
 <head>
 <title>Monpolistic Competition</title>
-<link href="../../../styles/sakura.css" rel="stylesheet" type="text/css">
+<link href="../../../styles/basic_sakura.css" rel="stylesheet" type="text/css">
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
         CommonHTML: { linebreaks: { automatic: true } },
@@ -562,6 +562,198 @@ TODO: Maybe skip right to \(\pi_h = \left[             \alpha  [ w\bar l  +  \pi
         </p>
     </div><br>
 -->
+
+
+<br>
+<br>
+<br>
+<br>
+<h1>LaTeX Dump</h1>
+
+\section*{Problem 3 (HW4)}
+
+Consider the economy where consumers solve the following:
+\[
+\max\left[(1-\alpha)\log c_{0}+\frac{\alpha}{\rho}\log\int_{0}^{m}c(z)^{\rho}dz\right]
+\]
+\[
+\text{s.t. }p_{0}c_{0}+\int_{0}^{m}p(z)x(z)dz=wl+\pi
+\]
+\[
+c(z)\geq0
+\]
+
+Here $\alpha,\rho\in(0,1)$. Furthermore, $m$ is the measure of firms,
+which is dtermined in equilbvirum. The measure of potential firms
+is fixed at $\mu>0$ . Suppose that good zero is produced with production
+function $y_{0}=l_{0}$. 
+
+\subsection*{a) Suppose producer of good z takes the prices of other producers
+as given. Then this producer has the production fucntion $y(z)=\max\left[x(z)\left(l(z)-f\right),0\right]$
+where $x(z)>0$ is the firms prductivity and $f>0$. Solve the firms
+profit maximizing problem and derive a rule for optimal pricing. }
+
+The solution to the consumer's problem in reponse to prices is 
+\[
+c_{0}=(1-\alpha)\frac{w\bar{l}+\pi}{p_{0}}
+\]
+\[
+c(z)=\frac{\alpha(w\bar{l}+\pi)}{p(z)^{\frac{1}{1-\rho}}\left(\int_{0}^{m}p(z')^{\frac{-\rho}{1-\rho}}dz'\right)}
+\]
+
+Good 1 is produced in a competitive market with $y_{0}=l_{0}$ so
+$w=p_{0}$ and we can normalize prices so that $p_{0}=w=1$.
+
+The firm that makes good $z$wants problem is to set prices to maximize
+profit. If they produce at all, revenue is $p(z)c(z)$ and cost is
+$f+\frac{c(z)}{x(z)}$ because $w=1.$ Thus the firms problem is given
+the prices of other firms, choose $p(z)$ to solve
+\[
+\max_{p(z)}\left(p(z)\frac{\alpha(w\bar{l}+\pi)}{p(z)^{\frac{1}{1-\rho}}\left(\int_{0}^{m}p(z')^{\frac{-\rho}{1-\rho}}dz'\right)}-\frac{\alpha(w\bar{l}+\pi)}{x(z)p(z)^{\frac{1}{1-\rho}}\left(\int_{0}^{m}p(z')^{\frac{-\rho}{1-\rho}}dz'\right)}-\frac{f}{x(z)}\right)
+\]
+
+Setting the derivative equal to zero yields
+\begin{align*}
+\frac{\rho}{\rho-1}p(z)^{\frac{1}{1-\rho}}\frac{\alpha(w\bar{l}+\pi)}{\left(\int_{0}^{m}p(z')^{\frac{-\rho}{1-\rho}}dz'\right)} & =\frac{1}{\rho-1}p(z)^{\frac{1}{1-\rho}-1}\frac{\alpha(w\bar{l}+\pi)}{x(z)\left(\int_{0}^{m}p(z')^{\frac{-\rho}{1-\rho}}dz'\right)}\\
+p(z) & =\frac{1}{\rho x(z)}
+\end{align*}
+
+Because $\left(\int_{0}^{m}p(z')^{\frac{-\rho}{1-\rho}}dz'\right)$
+does not change with respect to an individual firm's behavior.
+
+\subsection*{b) Suppose firm productivities are distributed on the interval $x\protect\geq1$
+according to the Pareto distribution with distribution function $F(x)=1-x^{-\gamma}$
+where $\gamma>2$ and $\gamma>\frac{\rho}{1-\rho}.$ Define an equilibirum
+for this economy.}
+
+An equiliibrum for this economy consists of the number of manufacturing
+firms $m$ in the market, prices $p(z)$, wage $w$ consumption allocations
+$c(z)$ and production plans $y(z)$ ,$l(z)$ such that
+\begin{itemize}
+\item Given prices and wages, the consumer's allocation solves
+\end{itemize}
+\[
+\max\left[(1-\alpha)\log c_{0}+\frac{\alpha}{\rho}\log\int_{0}^{m}c(z)^{\rho}dz\right]
+\]
+\[
+\text{s.t. }p_{0}c_{0}+\int_{0}^{m}p(z)c(z)dz=w\bar{l}+\pi
+\]
+
+\[
+c(z)\geq0
+\]
+
+\begin{itemize}
+\item $p_{0}=w$
+\item Given the indirect demand function 
+\[
+c(z)=\frac{\alpha(w\bar{l}+\pi)}{p(z)^{\frac{1}{1-\rho}}\left(\int_{0}^{m}p(z')^{\frac{-\rho}{1-\rho}}dz'\right)}
+\]
+firm j chooses $p(z)$ to solve 
+\[
+\max_{p(z)}\left(p(z)\frac{\alpha(w\bar{l}+\pi)}{p(z)^{\frac{1}{1-\rho}}\left(\int_{0}^{m}p(z')^{\frac{-\rho}{1-\rho}}dz'\right)}-\frac{\alpha(w\bar{l}+\pi)}{x(z)p(z)^{\frac{1}{1-\rho}}\left(\int_{0}^{m}p(z')^{\frac{-\rho}{1-\rho}}dz'\right)}-f\right)
+\]
+\item $p(z)c(z)-wc(z)/x(z)-f\leq0$ $ $ with equality if $c(z)>0$
+\item $y_{0}=l_{0}$
+\item $c(z)=y(z)=\max\left[x(z)\left(l(z)-f\right),0\right]$
+\item $l_{0}+\int_{0}^{m}l(z)=\bar{l}$
+\end{itemize}
+
+\subsection*{c) Suppose in equilibirum that not all firms produce. Find an expression
+fo the productivity of the least productive firm that produces. Relate
+the measure of firms that produce $m$ to the measure of potential
+firms $\mu$ and the cutoof $\bar{x}$. }
+
+$f(x)=\gamma x^{-\gamma-1}$
+
+If a firm has producitivty at the cutoff, then it must be that they
+make zero profits in equilibrium. This will make it so that any firm
+with lower productivity does not produce. 
+
+First let us convert the integral of prices over index to one of prices
+over productiivty:
+
+\begin{align*}
+\left(\int_{0}^{m}p(z)^{\frac{-\rho}{1-\rho}}dz\right) & =\mu\int_{\bar{x}}^{\infty}p(z)^{\frac{-\rho}{1-\rho}}dF(x)\\
+ & =\mu\int_{\bar{x}}^{\infty}p(z)^{\frac{-\rho}{1-\rho}}\gamma x^{-\gamma-1}dx\\
+ & =\frac{\mu\rho^{\frac{\rho}{1-\rho}}(1-\rho)\gamma\bar{x}^{\frac{\rho-\gamma(1-\rho)}{1-\rho}}}{\gamma(1-\rho)-\rho}
+\end{align*}
+
+Thus indirect demand for a firm with producitivyt $x$ is 
+\[
+c(x)=\frac{\alpha(w\bar{l}+\pi)}{p(z)^{\frac{1}{1-\rho}}\left(\frac{\mu\rho^{\frac{\rho}{1-\rho}}(1-\rho)\gamma\bar{x}^{\frac{\rho-\gamma(1-\rho)}{1-\rho}}}{\gamma(1-\rho)-\rho}\right)}=\frac{\rho\left(\gamma(1-\rho)-\rho\right)\alpha(w\bar{l}+\pi)x^{\frac{1}{1-\rho}}}{\mu(1-\rho)\bar{x}^{\frac{\rho-\gamma(1-\rho)}{1-\rho}}}
+\]
+
+Thus when we set profit of firm with productivity $\bar{x}$ to zero:
+\[
+0=\left(\frac{\rho\left(\gamma(1-\rho)-\rho\right)\alpha(w\bar{l}+\pi)x^{\frac{1}{1-\rho}}}{\mu(1-\rho)\bar{x}^{\frac{\rho-\gamma(1-\rho)}{1-\rho}}}\right)\left(\frac{1}{\rho\bar{x}}-\frac{1}{\bar{x}}\right)-f
+\]
+which implies 
+\[
+\bar{x}=\left(\frac{(\gamma-\rho\alpha)\mu f}{\gamma(1-\rho)-\rho\alpha\bar{l}}\right)^{\frac{1}{\gamma}}
+\]
+
+And the portion of firms which produce is equal to the portion of
+firms with productivity at least $\bar{x}$. 
+\[
+m/\mu=1-F(\bar{x})
+\]
+
+
+\subsection*{d) Suppose 2 countries are engaged in trade. Each country $i$ has
+population $\bar{l_{i}}$ and potential firms $\mu_{i}$ . A firm
+in country i faces a fixed cost of exporting to country $j,$ $j\protect\neq i$
+of $f_{e}$ where $f_{e}>f_{d}=f$. Each country also imposes an ad
+valorem tariff $\tau$ on imports of differentiated goods form the
+other county. The revenue is given in a lump sum to the consumer in
+that country. Define an equilibrium fo this world economy.}
+
+INCOMPLETE
+
+An equilibrium is the number of manufacturing firms, consumption allocaations
+for the consumers in each country, the prices of goods in their home
+countries, wages in each country, and production plans for the firms
+in each nation whereby
+\begin{itemize}
+\item Given prices and wages, the consumer in country $i$ has an allocation
+which solves
+\end{itemize}
+\[
+\max\left[(1-\alpha)\log c_{0}+\frac{\alpha}{\rho}\log\int_{0}^{m}\left(c_{i}^{i}(z)+c_{i}^{j}(z)\right)dz\right]
+\]
+\[
+\text{s.t. }p_{0}c_{0}+\int_{0}^{m}\left(c_{i}^{i}(z)p_{i}^{i}(z)+c_{i}^{j}(z)\left(p_{j}^{i}(z)\right)\right)dz=w\bar{l}+\pi
+\]
+
+\[
+c(z)\equiv\left(c_{i}^{i}(z)+c_{i}^{j}(z)\right)\geq0
+\]
+
+$p_{j}^{i}=p_{i}^{i}+f_{e}-f$ ?
+
+...
+
+INCOMPLETE
+
+\subsection*{e) Suppose that the two countries have the same population and measure
+of potential firms. Explain how to characterize the equilibrium production
+pattersn with a cutoff value as in part c. }
+
+By symettry, both countries are producing the same measure of goods
+
+People will buy from whichever producer of $z$ can provide it most
+cheaply, so the only trade will occur with goods where luck of the
+draw has made one producer so much more effective that the productivity
+gains outweigh the transport costs. This is uncorelated to $z$. So
+this will be largely random and just be a certain poriton of goods.
+
+\subsection*{f) Disuss the strengths and limitations of this sort of model for
+accounting for firm level data on exports.}
+
+Good: Most firms don't export, just like in this model. More productive
+firms are more likely to export, like in the model.
+
+Bad: ..
 
 
 </body>

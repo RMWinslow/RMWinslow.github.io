@@ -303,6 +303,716 @@ TODO: type out maths
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr><hr><hr>
+<h1>LaTeX Dump</h1>
+
+
+Consumer utility:
+\[
+\sum_{t=0}^{\infty}\beta^{t}\log\left(dc_{1t}^{\alpha_{1}}c_{2t}^{\alpha_{2}}\right)
+\]
+
+with $\alpha_{1}+\alpha_{2}=1$ both nonneg.
+
+The investment good is produced according to 
+\[
+k_{t+1}=dx_{1t}^{\alpha_{1}}x_{2t}^{\alpha_{2}}
+\]
+
+Feasibility Constraints:
+\[
+c_{1t}+x_{1t}=\phi(k_{1t},l_{2t})=k_{1t}
+\]
+\[
+c_{2t}+x_{2t}=\phi\left(k_{2t},l_{2t}\right)=l_{2t}
+\]
+
+where $k_{1t}+k_{2t}=k_{t}$ and $l_{1t}+l_{2t}=1$
+
+$k_{0}$ given.
+
+Measure $L$ of consumers/workers.
+
+\section*{(a) Define an equilibrium:}
+
+An equilibrium is 
+
+HH allocation: $\left\{ c_{1t},c_{2t},x_{1t},x_{2t},k_{t+1}\right\} _{t}$
+
+Firm allocations $\left\{ k_{1t},l_{1t},y_{1t}\right\} _{t}$$\left\{ k_{2t},l_{2t},y_{2t}\right\} _{t}$
+
+Prices $\left\{ p_{1t},p_{2t,}r_{t},w_{t}\right\} _{t}$
+
+Such that 
+\begin{itemize}
+\item Given prices, the HH allocation solves
+\[
+\max_{HH}\sum_{t=0}^{\infty}\beta^{t}\log\left(dc_{1t}^{\alpha_{1}}c_{2t}^{\alpha_{2}}\right)
+\]
+\begin{align*}
+\ni & p_{1t}\left(c_{1t}+x_{1t}\right)+p_{2t}\left(c_{2t}+x_{2t}\right)=r_{t}k_{t}+w_{t}\\
+ & k_{t+1}=dx_{1t}^{\alpha_{1}}x_{2t}^{\alpha_{2}}\\
+ & k_{0}\text{ given}\\
+ & c_{1t},c_{2t},x_{1t},x_{2t}\geq0
+\end{align*}
+\item Given prices and firm 2's allocation, firm 1's allocation solves
+\[
+\max_{k_{1t},l_{1t},y_{1t}}p_{1t}y_{1t}-r_{t}k_{1t}-w_{t}l_{1t}
+\]
+\begin{align*}
+\ni & y_{1t}=k_{1t}\\
+ & 0\leq l_{1t}\leq1-l_{2t}\\
+ & 0\leq k_{1t}\leq k_{t}-k_{2t}
+\end{align*}
+\item Given prices and firm 1's allocation, firm 2's allocation solves
+\[
+\max_{k_{2t},l_{2t},y_{2t}}p_{2t}y_{2t}-r_{t}k_{2t}-w_{t}l_{2t}
+\]
+\begin{align*}
+\ni & y_{12t}=l_{2t}\\
+ & 0\leq l_{2t}\leq1-l_{2t}\\
+ & 0\leq k_{2t}\leq k_{t}-k_{2t}
+\end{align*}
+\item Market clears:
+\begin{align*}
+c_{1t}+x_{1t} & =y_{1t}\\
+c_{2t}+x_{2t} & =y_{2t}\\
+k_{1t}+k_{2t} & =k_{t}\\
+l_{1t}+l_{2t} & =1
+\end{align*}
+\end{itemize}
+-
+
+Note that in the FOCs
+\[
+\beta^{t}\frac{\alpha_{1}}{c_{1t}}=\lambda_{bt}p_{1t}
+\]
+\[
+\beta^{t}\frac{\alpha_{2}}{c_{2t}}=\lambda_{bt}p_{2t}
+\]
+\[
+\frac{c_{1t}}{c_{2t}}=\frac{\alpha_{1}p_{2t}}{p_{1t}\alpha_{2}}
+\]
+
+
+\section*{(b) Write out a social planner's problem. Explain how the solution
+to this social planner's problem is related to thtat of the one-sector
+social planner's problem
+\[
+\sum_{t=0}\beta^{t}\log c_{t}
+\]
+\[
+\ni c_{t}+k_{t+1}=dk_{t}^{\alpha_{1}}
+\]
+\[
+c_{t},k_{t}\protect\geq0
+\]
+\[
+k_{0}=\bar{k_{0}}
+\]
+}
+
+Because in this economy, an equilibrium is Pareto optimal, the problem
+can be rewritten as a SPP. The 2 sector social planner's problem for
+this economy is 
+\[
+\max_{\{c_{1t},c_{2t}\}_{t}}\sum_{t=0}^{\infty}\beta^{t}\log\left(dc_{1t}^{\alpha_{1}}c_{2t}^{\alpha_{2}}\right)
+\]
+\begin{align*}
+\ni\forall t\  & c_{1t}+x_{1t}=k_{t}\\
+ & c_{2t}+x_{2t}=1\\
+ & k_{t+1}=dx_{1t}^{\alpha_{1}}x_{2t}^{\alpha_{2}}\\
+ & k_{0}\text{ given}\\
+ & c_{1t},c_{2t},x_{1t},x_{2t}\geq0
+\end{align*}
+
+Going from the 1 sector SPP to the 2 sector SPP:
+\begin{align*}
+c_{1t} & =\frac{k_{t}}{dk_{t}^{\alpha_{1}}}c_{t}\\
+c_{2t} & =\frac{1}{dk_{t}^{\alpha_{1}}}c_{t}\\
+x_{1t} & =\frac{k_{t}}{dk_{t}^{\alpha_{1}}}k_{t+1}\\
+x_{2t} & =\frac{1}{dk_{t}^{\alpha_{1}}}k_{t+1}
+\end{align*}
+
+Going from the 2 sector SPP to the 1 sector SPP:
+
+\begin{align*}
+c_{t} & =dc_{1t}^{\alpha_{1}}c_{2t}^{\alpha_{2}}\\
+k_{t+1} & =dx_{1t}^{\alpha_{1}}x_{2t}^{\alpha_{2}}
+\end{align*}
+
+\textbf{Proof:}
+
+In the FOCs for the 2SSPP, 
+\begin{align*}
+\beta^{t}\frac{\alpha_{1}}{c_{1t}}=\lambda_{1t} &  & \beta^{t}\frac{\alpha_{2}}{c_{2t}}=\lambda_{2t}\\
+\lambda_{1t}=\lambda_{kt}+d\alpha_{1}x_{1t}^{\alpha_{1}-1}x_{2t}^{\alpha_{2}} &  & \lambda_{2t}=\lambda_{kt}+d\alpha_{2}x_{1t}^{\alpha_{1}}x_{2t}^{\alpha_{2}-1}
+\end{align*}
+\[
+\therefore\beta^{t}\frac{\alpha_{1}}{c_{1t}}=\lambda_{1t}=\lambda_{2t}\frac{\alpha_{1}}{\alpha_{2}}\frac{x_{1}}{x_{2}}=\beta^{t}\frac{\alpha_{2}}{c_{2t}}\frac{\alpha_{1}}{\alpha_{2}}\frac{x_{1}}{x_{2}}
+\]
+\[
+\frac{c_{2t}}{c_{1t}}=\frac{x_{2t}}{x_{1t}}
+\]
+ 
+
+Combined with the feasibility constraints, this means that any optimal
+consumption and investment plan will satisfy 
+\[
+\frac{c_{1t}}{c_{2t}}=k_{t}=\frac{x_{1t}}{x_{2t}}
+\]
+
+Define $f(x_{1},x_{2})=dx_{1}^{\alpha_{1}}x_{2}^{\alpha_{2}}$, $c_{t}\equiv f(c_{1t},c_{2t})$,
+and suppose the constraints for the 2SSPP hold. Note that
+\begin{align*}
+dk_{t}^{\alpha_{1}} & =dk_{t}^{\alpha_{1}}\cdot1=d\left(\frac{c_{1t}}{c_{2t}}\right)^{\alpha_{1}}\left(c_{2t}+x_{2t}\right)\\
+ & =d\left(\frac{c_{1t}}{c_{2t}}\right)^{\alpha_{1}}c_{2t}+dx_{2t}\left(\frac{c_{1t}}{c_{2t}}\right)^{\alpha_{1}}=d\left(\frac{c_{1t}}{c_{2t}}\right)^{\alpha_{1}}c_{2t}+dx_{2t}\left(\frac{x_{1t}}{x_{2t}}\right)^{\alpha_{1}}\\
+ & =dc_{1t}^{\alpha_{1}}c_{2t}^{1-\alpha_{1}}+dx_{2t}^{1-\alpha_{1}}x_{1t}^{\alpha_{1}}=dc_{1t}^{\alpha_{1}}c_{2t}^{\alpha_{2}}+dx_{2t}^{\alpha_{2}}x_{1t}^{\alpha_{1}}\\
+ & =c_{t}+k_{t+1}
+\end{align*}
+
+So the constraints for the 1SSPP hold. (NNC is trivial)
+
+Now suppose the constraints for the 1SSPP hold. And let $c_{1t}\equiv\frac{k_{t}}{dk_{t}^{\alpha_{1}}}c_{t}$,
+$c_{1t}\equiv\frac{1}{dk_{t}^{\alpha_{1}}}c_{t}$, $x_{1t}\equiv\frac{k_{t}}{dk_{t}^{\alpha_{1}}}k_{t+1}$,
+$x_{2t}\equiv\frac{1}{dk_{t}^{\alpha_{1}}}x_{t+1}$. Then 
+\[
+c_{1t}+x_{1t}=\frac{k_{t}}{dk_{t}^{\alpha_{1}}}c_{t}+\frac{k_{t}}{dk_{t}^{\alpha_{1}}}k_{t+1}=\frac{k_{t}}{dk_{t}^{\alpha_{1}}}\left(c_{t}+k_{t+1}\right)=k_{t}
+\]
+
+\[
+c_{2t}+x_{2t}=\frac{1}{dk_{t}^{\alpha_{1}}}c_{t}+\frac{1}{dk_{t}^{\alpha_{1}}}k_{t+1}=\frac{1}{dk_{t}^{\alpha_{1}}}\left(c_{t}+k_{t+1}\right)=1
+\]
+\[
+dc_{1t}^{\alpha_{1}}c_{2t}^{\alpha_{2}}=d\left(\frac{k_{t}}{dk_{t}^{\alpha_{1}}}c_{t}\right)^{\alpha_{1}}\left(\frac{1}{dk_{t}^{\alpha_{1}}}c_{t}\right)^{\alpha_{2}}=dk_{t}^{\alpha_{1}}\left(\frac{c_{t}}{dk_{t}^{\alpha_{1}}}\right)^{\alpha_{1}+\left(1-\alpha_{1}\right)}=c_{t}
+\]
+\[
+dx_{1t}^{\alpha_{1}}x_{2t}^{\alpha_{2}}=d\left(\frac{k_{t}}{dk_{t}^{\alpha_{1}}}k_{t+1}\right)^{\alpha_{1}}\left(\frac{1}{dk_{t}^{\alpha_{1}}}k_{t+1}\right)^{\alpha_{2}}=k_{t+1}
+\]
+
+So the constraints for the 2SSPP hold. (NNC is trivial)
+
+So each SPP is clearly optimizing the same value and with optimal
+behavior, the constraints characterize the same set of possibilities.
+Thus the solutions to the two SPPs must be related by the above. definitions.
+
+\section*{(c) Solve the 1SSPP:}
+
+Recall the the budget constraint is 
+\[
+c_{t}+k_{t+1}=dk_{t}^{\alpha_{1}}
+\]
+
+FOC for 1SSPP:
+\[
+\beta^{t}\frac{1}{c_{t}}=\lambda_{t}
+\]
+\[
+\lambda_{t}=\lambda_{t+1}\alpha_{1}dk_{t+1}^{\alpha_{1}-1}
+\]
+
+So
+\[
+\frac{c_{t+1}}{c_{t}}=\beta\frac{\lambda_{t}}{\lambda_{t+1}}=\beta\alpha_{1}dk_{t+1}^{\alpha_{1}-1}
+\]
+
+TVC:
+\[
+\lim\frac{\beta^{t}}{c_{t}}k_{t}=0
+\]
+
+Guess that the policy function for investment has the form 
+\[
+k_{t+1}=K'(k_{t})\equiv Adk_{t}^{\alpha_{1}}
+\]
+
+From the budget, this means that 
+\[
+c_{t}=C(k_{t})\equiv\left(1-A\right)dk_{t}^{\alpha_{1}}
+\]
+
+\[
+\frac{c_{t+1}}{c_{t}}=\frac{k_{t+1}^{\alpha_{1}}}{k_{t}^{\alpha_{1}}}=\beta\alpha_{1}dk_{t+1}^{\alpha_{1}-1}
+\]
+\[
+k_{t+1}=\beta\alpha_{1}dk_{t}^{\alpha_{1}}
+\]
+
+So $A=\beta\alpha_{1}$, and $c_{t}=\left(1-\beta\alpha_{1}\right)dk_{t}^{\alpha_{1}}$.
+
+Then recursively, 
+\begin{align*}
+k_{1} & =\beta\alpha_{1}dk_{0}^{\alpha_{1}}\\
+k_{2} & =\beta\alpha_{1}dk_{1}^{\alpha_{1}}=\beta\alpha_{1}d\left(\beta\alpha_{1}dk_{0}^{\alpha_{1}}\right)^{\alpha_{1}}=\left(\beta\alpha_{1}d\right)^{1+\alpha_{1}}k_{0}^{\alpha_{1}^{2}}\\
+k_{3} & =\beta\alpha_{1}dk_{2}^{\alpha_{1}}=\left(\beta\alpha_{1}d\right)^{1+\alpha_{1}+\alpha_{1}^{2}}k_{0}^{\alpha_{1}^{3}}\\
+k_{t} & =\left(\beta\alpha_{1}d\right)^{\frac{\alpha_{1}^{t}-1}{a_{1}-1}}k_{0}^{\alpha_{1}^{t}}
+\end{align*}
+
+\[
+c_{t}=\left(1-\beta\alpha_{1}\right)dk_{t}^{\alpha_{1}}=\left(1-\beta\alpha_{1}\right)d\left(\beta\alpha_{1}d\right)^{\alpha_{1}\frac{\alpha_{1}^{t}-1}{a_{1}-1}}k_{0}^{\alpha_{1}^{t+1}}
+\]
+
+-
+
+Also note that $x_{2t}(k_{t})=\frac{1}{dk_{t}^{\alpha_{1}}}k_{t+1}=\beta\alpha_{1}$
+
+\section*{(d) International Economy. There are n countries, all with the same
+technology and preferences, but different populations, $L^{i}$. And
+with different initial capital-labor ratios $\bar{k_{0}^{i}}$. Goods
+1 and 2 can be freely traded, but the investment good cannot. There
+is no international borrowing. Define an equilibrium:}
+
+An equilibrium is 
+
+HH allocation $C^{i}$ for each country $i\in\left\{ 1,...,n\right\} $:
+$\left\{ c_{1t}^{i},c_{2t}^{i},x_{1t}^{i},x_{2t}^{i},k_{t+1}^{i}\right\} _{t}$
+
+Firm allocations $F_{j}^{i}$ for each country $i$ and goods $j\in\left\{ 1,2\right\} :$
+$\left\{ k_{jt}^{i},l_{jt}^{i},y_{jt}^{i}\right\} _{t}$
+
+Prices $\left\{ p_{1t},p_{2t,}\left\{ r_{t}^{i},w_{t}^{i}\right\} _{n}\right\} _{t}$
+(Goods prices equalize across countries, but labor and capital can't
+move freely.)
+
+Such that 
+\begin{itemize}
+\item Given prices, each HH allocation $C^{i}$ solves
+\[
+\max_{C^{i}}\sum_{t=0}^{\infty}\beta^{t}\log\left(d\left(c_{1t}^{i}\right)^{\alpha_{1}}\left(c_{2t}^{i}\right)^{\alpha_{2}}\right)
+\]
+\begin{align*}
+\ni & p_{1t}\left(c_{1t}^{i}+x_{1t}^{i}\right)+p_{2t}\left(c_{2t}^{i}+x_{2t}^{i}\right)=r_{t}^{i}k_{t}^{i}+w_{t}^{i}\\
+ & k_{t+1}^{i}=d\left(x_{1t}^{i}\right)^{\alpha_{1}}\left(x_{2t}^{i}\right)^{\alpha_{2}}\\
+ & k_{0}^{i}=\bar{k_{0}^{i}}\text{ given}\\
+ & c_{1t}^{i},c_{2t}^{i},x_{1t}^{i},x_{2t}^{i},k_{t+1}^{i}\geq0
+\end{align*}
+\item Given prices and other firms' allocations, firm allocation $F_{1}^{i}$
+solves
+\[
+\max_{k_{1t},l_{1t},y_{1t}}p_{1t}y_{1t}^{i}-r_{t}k_{1t}^{i}-w_{t}^{i}l_{1t}^{i}
+\]
+\begin{align*}
+\ni & y_{1t}^{i}=k_{1t}^{i}\\
+ & 0\leq l_{1t}^{i}\\
+ & 0\leq k_{1t}^{i}
+\end{align*}
+\item Given prices and other firms' allocations, firm allocation $F_{2}^{i}$
+solves
+\[
+\max_{k_{2t},l_{2t},y_{2t}}p_{2t}y_{2t}^{i}-r_{t}^{i}k_{2t}^{i}-w_{t}^{i}l_{2t}^{i}
+\]
+\begin{align*}
+\ni & y_{2t}^{i}=l_{2t}^{i}\\
+ & 0\leq l_{2t}^{i}\\
+ & 0\leq k_{2t}^{i}
+\end{align*}
+\item Market clears:
+\begin{align*}
+\sum_{i}L^{i}\left(c_{1t}^{i}+x_{1t}^{i}\right) & =\sum_{i}L^{i}y_{1t}^{i}\\
+\sum_{i}L^{i}\left(c_{2t}^{i}+x_{2t}^{i}\right) & =\sum_{i}L^{i}y_{2t}^{i}\\
+k_{1t}^{i}+k_{2t}^{i} & =k_{t}^{i}\\
+l_{1t}^{i}+l_{2t}^{i} & =1
+\end{align*}
+\end{itemize}
+
+\subsection*{For HW version}
+
+WTS that AVG k = k implies AVG k' = k'. Then the problem will follow
+from the sequence of capital.
+
+Note from the discussion later in proving the HO theorem that if $A_{t}\equiv\frac{\alpha_{1}p_{2t}}{p_{1t}\alpha_{2}}$,
+then for all $i$, $t$, $x_{1t}^{i}=A_{t}x_{2t}^{i}.$ Also, $\sum_{i}L^{i}x_{1t}^{i}=A_{t}\sum_{i}L^{i}x_{2t}^{i}.$ 
+
+Also $A_{t}=c_{1t}^{i}/c_{2t}^{i}$ . $\sum_{i}L^{i}c_{1t}^{i}=A_{t}\sum_{i}L^{i}c_{2t}^{i}.$ 
+
+So
+\begin{align*}
+\frac{\sum_{i}L^{i}k_{t+1}^{i}}{\sum_{i}L^{i}} & =\frac{\sum_{i}L^{i}\left(d\left(x_{1t}^{i}\right)^{\alpha_{1}}\left(x_{2t}^{i}\right)^{1-\alpha_{1}}\right)}{\sum_{i}L^{i}}=\frac{\sum_{i}L^{i}\left(dx_{2t}^{i}A^{\alpha_{1}}\right)}{\sum_{i}L^{i}}\\
+ & =dA^{\alpha_{1}}\frac{\sum_{i}L^{i}\left(x_{2t}^{i}\right)}{\sum_{i}L^{i}}=d\left(\frac{\sum_{i}L^{i}\left(x_{1t}^{i}\right)}{\sum_{i}L^{i}\left(x_{2t}^{i}\right)}\right)^{\alpha_{1}}\frac{\sum_{i}L^{i}x_{2t}^{i}}{\sum_{i}L^{i}}\\
+ & =d\left(\frac{\sum_{i}L^{i}x_{1t}^{i}}{\sum_{i}L^{i}}\right)^{\alpha_{1}}\left(\frac{\sum_{i}L^{i}x_{2t}^{i}}{\sum_{i}L^{i}}\right)^{\alpha_{2}}
+\end{align*}
+
+So
+
+\[
+k_{t+1}=d\left(x_{1t}\right)^{\alpha_{1}}\left(x_{2t}\right)^{\alpha_{2}}
+\]
+
+Similarly, 
+\[
+c_{t}\equiv\frac{\sum_{i}L^{i}\left(d\left(c_{1t}^{i}\right)^{\alpha_{1}}\left(c_{2t}^{i}\right)^{1-\alpha_{1}}\right)}{\sum_{i}L^{i}}=d\left(\frac{\sum_{i}L^{i}c_{1t}^{i}}{\sum_{i}L^{i}}\right)^{\alpha_{1}}\left(\frac{\sum_{i}L^{i}c_{2t}^{i}}{\sum_{i}L^{i}}\right)^{\alpha_{2}}
+\]
+
+And by a process analogous to that from the 1SSPP, we can find that
+\[
+c_{t}+k_{t+1}=k_{t}
+\]
+
+And
+\[
+c_{1t}+x_{1t}=\frac{\sum_{i}L^{i}\left(c_{1t}^{i}\right)}{\sum_{i}L^{i}}+\frac{\sum_{i}L^{i}\left(x_{1t}^{i}\right)}{\sum_{i}L^{i}}=\frac{\sum_{i}L^{i}k_{t}^{i}}{\sum_{i}L^{i}}=\frac{\sum_{i}L^{i}\left(c_{1t}^{i}+x_{1t}^{i}\right)}{\sum_{i}L^{i}\left(c_{2t}^{i}+x_{2t}^{i}\right)}=A_{t}=k_{t}
+\]
+
+\[
+c_{2t}+x_{2t}=\frac{\sum_{i}L^{i}\left(c_{2t}^{i}\right)}{\sum_{i}L^{i}}+\frac{\sum_{i}L^{i}\left(x_{2t}^{i}\right)}{\sum_{i}L^{i}}=\frac{\sum_{i}L^{i}\left(1\right)}{\sum_{i}L^{i}}=1
+\]
+
+Note that because 
+\[
+\frac{\sum_{i}L^{i}p_{1t}\left(c_{1t}^{i}+x_{1t}^{i}\right)}{\sum_{i}L^{i}p_{2t}\left(c_{2t}^{i}+x_{2t}^{i}\right)}=\frac{\alpha_{1}}{\alpha_{2}}
+\]
+
+the portion of total income spent on good 1 is fixed at $\frac{\alpha_{1}}{\alpha_{1}+\alpha_{2}}=\alpha_{1}$. 
+
+Because each consumer has the same preferences, technology, and choice
+set, their policy functions will be the same as those found above,
+except that the level of capital stock will differ. As such, we can
+use the previous result that 
+\[
+\frac{c_{2t}^{i}}{x_{2t}^{i}}=\frac{1-\alpha_{1}\beta}{\alpha_{1}\beta}
+\]
+\[
+1=\frac{\sum_{i}L^{i}\left(c_{2t}^{i}\right)}{\sum_{i}L^{i}}+\frac{\sum_{i}L^{i}\left(x_{2t}^{i}\right)}{\sum_{i}L^{i}}=\frac{\sum_{i}L^{i}\left(\frac{1-\alpha_{1}\beta}{\alpha_{1}\beta}c_{2t}^{i}\right)}{\sum_{i}L^{i}}+\frac{\sum_{i}L^{i}\left(x_{2t}^{i}\right)}{\sum_{i}L^{i}}=\left(1+\frac{1-\alpha_{1}\beta}{\alpha_{1}\beta}\right)\frac{\sum_{i}L^{i}\left(x_{2t}^{i}\right)}{\sum_{i}L^{i}}
+\]
+\[
+\alpha_{1}\beta=\frac{\sum_{i}L^{i}\left(x_{2t}^{i}\right)}{\sum_{i}L^{i}}
+\]
+\[
+k_{t+1}=\frac{\sum_{i}L^{i}k_{t+1}^{i}}{\sum_{i}L^{i}}=dA^{\alpha_{1}}\frac{\sum_{i}L^{i}\left(x_{2t}^{i}\right)}{\sum_{i}L^{i}}=\alpha_{1}\beta dk_{t}^{\alpha_{1}}
+\]
+
+\[
+k_{t+1}=\frac{\sum_{i}L^{i}\left(\alpha_{1}\beta dk_{t}^{\alpha_{1}}\right)}{\sum_{i}L^{i}}=\alpha_{1}\beta d\frac{\sum_{i}L^{i}\left(k_{t}^{\alpha_{1}}\right)}{\sum_{i}L^{i}}=\alpha_{1}\beta dk_{t}^{\alpha_{1}}
+\]
+
+So with the correct starting capital level, the sequence of average
+capitals will impose a sequence of average consumption and investement
+that forms an equilibrium from part a.
+
+\section*{(e) For this particular world econmy, state and prove versions of
+the Factor Price Equalization Theorem, the Stolper-Samuelson Theorem,
+the Rybcynzki Theorem, and the Heckscher-Ohlin theorem.}
+
+\subsection*{Factor Price Equalization Theorem}
+
+If $y_{1t}^{i},y_{1t}^{j}>0$, then $r_{t}^{i}=r_{t}^{j}$. And if
+$y_{2t}^{i},y_{2t}^{j}>0$, then $w_{t}^{i}=w_{t}^{j}$. 
+
+In other words, if two countries in this economy are producing the
+same good, it must be that that good's input prices are the same between
+the two countries.
+
+-
+
+Note that technology is CRT, so $p_{1t}\leq r_{t}^{i}$, with equality
+if $y_{1t}^{i}>0$. Otherwise, the firm's problem cannot be satisfied. 
+
+Thus for any two countries, with $y_{1t}^{i},y_{1t}^{j}>0$, $r_{t}^{i}=p_{1t}=r_{t}^{j}$. 
+
+Likewise, $p_{2t}\leq w_{t}^{i}$ with equality if $y_{2t}^{i}>0$.
+So or any two countries with $y_{2t}^{i},y_{2t}^{j}>0$, then $w_{t}^{i}=p_{2t}=w_{t}^{j}$. 
+
+\subsection*{Stolper-Samuelson Theorem}
+
+If $\left(\hat{p_{1t},}\hat{p_{2t,}}\hat{r_{t}^{i}},\hat{w_{t}^{i}}\right)$
+represent prices from an equilibrium with particular endowments, and
+$\left(\tilde{p_{1t}},\tilde{p_{2t,}}\tilde{r_{t}^{i}},\tilde{w_{t}^{i}}\right)$
+represent prices from an equilibrium with different endowments, an
+if $\hat{y_{1t}^{i}},\hat{y_{2t}^{i}},\tilde{y_{1t}^{i}},\tilde{y_{2t}^{i}}>0$,
+then $\frac{\hat{p_{1t},}}{\hat{p_{2t,}}}>\frac{\tilde{p_{1t}}}{\tilde{p_{2t,}}}\implies\frac{\hat{r_{t}^{i}}}{\hat{w_{t}^{i}}}>\frac{\tilde{r_{t}^{i}},}{\tilde{w_{t}^{i}}}$.
+
+This theorem states that if the relative price of a good rises, then
+the relative price of the factor used most heavily in that good will
+also rise.
+
+-
+
+By the factor price equalization theorem, $\hat{y_{1t}^{i}},\hat{y_{2t}^{i}},\tilde{y_{1t}^{i}},\tilde{y_{2t}^{i}}$
+implies that $r_{t}^{i}=p_{1t}$ and $w_{t}^{i}=p_{2t}$, so the proof
+of the theorem trivially follows.
+
+\subsection*{Rybcynzki Theorem}
+
+Similar to the SS theorem above, let there be two different equilibriums.
+The Rybcynzki theorem in this economy states that 
+
+If $\hat{k_{1t}^{i}}>\tilde{k_{1t}^{i}}$, then $\hat{y_{1t}^{i}}>\tilde{y_{1t}^{i}}$,
+but $\hat{y_{2t}^{i}}=\tilde{y_{2t}^{i}}$.
+
+-
+
+From the production technology $y_{1t}^{i}=k_{1t}^{i}$, $y_{2t}^{i}=l_{2t}^{i}$
+and the market clearing conditions, we conclude that $y_{1t}^{i}=k_{t}^{i}$,
+$y_{2t}^{i}=1$. 
+
+The theorem trivially follows. 
+
+\subsection*{Heckscher-Ohlin theorem}
+
+In equilibrium,
+
+\[
+\frac{L^{i}k_{t}^{i}}{L^{i}}\geq\frac{\sum_{j}\left(L^{j}k_{t}^{j}\right)}{\sum_{j}L^{j}}\implies\begin{array}{cc}
+y_{1t}^{i} & >c_{1t}^{i}+x_{1t}^{i}\\
+y_{2t}^{i} & <c_{2t}^{i}+x_{2t}^{i}
+\end{array}
+\]
+
+In other words, if a nation has more capital than average, it will
+export the capital-intensive good and import the labor-intensive good.
+
+-
+
+Assume $\frac{L^{i}k_{t}^{i}}{L^{i}}\geq\frac{\sum_{j}\left(L^{j}k_{t}^{j}\right)}{\sum_{j}L^{j}}$.
+
+First note a simple lemma. In general, if $a_{i}=Ab_{i}$ for $i\in I$,
+then for any subset $\mathcal{I}$ of $I$, $\sum_{\mathcal{I}}a_{i}=\sum_{\mathcal{I}}Ab_{i}=A\sum_{\mathcal{I}}b_{i}$
+and so $A=\frac{\sum_{\mathcal{I}}a_{i}}{\sum_{\mathcal{I}}b_{i}}$.
+
+From the FOCs for any $i$:
+\begin{align*}
+\beta^{t}\frac{\alpha_{1}}{c_{1t}^{i}}=\lambda_{bt}^{i}p_{1t} &  & \beta^{t}\frac{\alpha_{2}}{c_{2t}^{i}}=\lambda_{bt}^{i}p_{2t}\\
+\lambda_{bt}^{i}p_{1t}=\lambda_{kt}^{i}d\alpha_{1}\left(x_{1t}^{i}\right)^{\alpha_{1}-1}\left(x_{2t}^{i}\right)^{\alpha_{2}} &  & \lambda_{bt}^{i}p_{2t}=\lambda_{kt}^{i}d\alpha_{2}\left(x_{1t}^{i}\right)^{\alpha_{1}}\left(x_{2t}^{i}\right)^{\alpha_{2}-1}
+\end{align*}
+\[
+p_{1t+1}=\frac{\lambda_{kt}^{i}}{\lambda_{bt+1}^{i}}
+\]
+\[
+\therefore\frac{c_{1t}^{i}}{c_{2t}^{i}}=\frac{\alpha_{1}p_{2t}}{p_{1t}\alpha_{2}}
+\]
+\begin{align*}
+\frac{\lambda_{kt}^{i}d\alpha_{1}\left(x_{1t}^{i}\right)^{\alpha_{1}-1}\left(x_{2t}^{i}\right)^{\alpha_{2}}}{p_{1t}} & =\frac{\lambda_{kt}^{i}d\alpha_{2}\left(x_{1t}^{i}\right)^{\alpha_{1}}\left(x_{2t}^{i}\right)^{\alpha_{2}-1}}{p_{2t}}\\
+\frac{\alpha_{1}p_{2t}}{p_{1t}\alpha_{2}} & =\frac{x_{1t}^{i}}{x_{2t}^{i}}
+\end{align*}
+\[
+\therefore\frac{c_{1t}^{j}+x_{1t}^{j}}{c_{2t}^{j}+x_{2t}^{j}}=\frac{\alpha_{1}p_{2t}}{p_{1t}\alpha_{2}}
+\]
+
+Define $A_{t}\equiv\frac{\alpha_{1}p_{2t}}{p_{1t}\alpha_{2}}$.Then
+for any country $i$, $L^{i}c_{1t}^{i}=A_{t}L^{i}c_{2t}^{i}$ and
+$L^{i}x_{1t}^{i}=A_{t}L^{i}x_{2t}^{i}$ 
+
+Which means that applying the simple lemma above to the proof's asumption,
+\begin{equation}
+\frac{L^{i}k_{t}^{i}}{L^{i}}>\frac{\sum_{j}\left(L^{j}k_{t}^{j}\right)}{\sum_{j}L^{j}}=\frac{\text{total capital}}{\text{total labor}}=\frac{\sum_{j}L^{j}\left(c_{1t}^{j}+x_{1t}^{j}\right)}{\sum_{j}L^{j}\left(c_{2t}^{j}+x_{2t}^{j}\right)}=A_{t}=\frac{c_{1t}^{j}+x_{1t}^{j}}{c_{2t}^{j}+x_{2t}^{j}}
+\end{equation}
+
+Secondly, because $p_{1t}=r_{t}$ , $p_{2t}=w_{t}$ as shown previously,
+the budget constraint can be rewritten:
+
+\[
+p_{1t}\left(c_{1t}^{i}+x_{1t}^{i}\right)+p_{2t}\left(c_{2t}^{i}+x_{2t}^{i}\right)=p_{1t}k_{t}^{i}+p_{2t}
+\]
+
+\[
+p_{1t}\left(c_{1t}^{i}+x_{1t}^{i}-k_{t}^{i}\right)=-p_{2t}\left(c_{2t}^{i}+x_{2t}^{i}-1\right)
+\]
+
+Prices are nonnegative. Therefore exactly one of the following three
+statements holds:
+\[
+\begin{array}{ccc}
+\left(c_{1t}^{i}+x_{1t}^{i}<k_{t}^{i}\right) & \wedge & \left(c_{2t}^{i}+x_{2t}^{i}>1\right)\\
+\left(c_{1t}^{i}+x_{1t}^{i}>k_{t}^{i}\right) & \wedge & \left(c_{2t}^{i}+x_{2t}^{i}<1\right)\\
+\left(c_{1t}^{i}+x_{1t}^{i}=k_{t}^{i}\right) & \wedge & \left(c_{2t}^{i}+x_{2t}^{i}=1\right)
+\end{array}
+\]
+
+But note that the latter two of these statements implies that $\frac{c_{1t}^{j}+x_{1t}^{j}}{c_{2t}^{j}+x_{2t}^{j}}\geq k_{t}^{i}$,
+which contradicts $(1)$, so the first statement must be true.
+
+Note that $y_{1t}^{i}=k_{t}^{i}$, $y_{2t}^{i}=1$, and the proof
+is complete.
+
+\section*{(e) Set $s_{t}=\frac{c_{t}}{y_{t}}$, where $y_{t}=p_{1t}k_{t}+p_{2t}=dk_{t}^{\alpha_{1}}$
+is world GDP per capita. Explain how to show
+\[
+\frac{y_{t}^{i}-y_{t}}{y_{t}}=\frac{s_{t}}{s_{t-1}}\left(\frac{y_{t-1}^{i}-y_{t-1}}{y_{t-1}}\right)=\frac{s_{t}}{s_{0}}\left(\frac{y_{0}^{i}-y_{0}}{y_{0}}\right)
+\]
+}
+
+Aggregate the economy. $f(k,l)=dk^{\alpha_{1}}l^{\alpha_{2}}$, and
+consumers consume and invest using this aggregate good. $\tilde{p_{t}}$
+is the price of this aggregate good. 
+
+From factor price equalization, we know that the consumer's problem
+can be rewritten
+\[
+\max_{C^{i}}\sum_{t}\beta^{t}\log(c_{t}^{i})
+\]
+\begin{align*}
+\ni & c_{t}^{i}+k_{t+1}^{i}\leq p_{1t}k_{t}^{i}+p_{2t}\\
+ & c_{t}^{i},k_{t+1}^{i}\geq0\\
+ & k_{0}^{i}\text{ given}
+\end{align*}
+
+Countries vary only in their endowments of capital, and all have the
+same policy functions.
+
+Argue that the average allocations (eg $c_{t}\equiv\frac{\sum L^{i}c_{t}^{i}}{\sum L^{i}}$)
+also satisfy the conditions for equilbrium and thus also fulfill the
+SPP above.
+
+But the variations in income average out to $dk_{t}^{\alpha_{1}}$
+leaving us with a problem equivalent to that from the 1SSPP. 
+
+Use the first order conditions from each problem and combine to get
+the desired result.
+
+From 1SSPP, 
+\begin{align*}
+\frac{c_{t+1}}{c_{t}} & =\beta\alpha_{1}dk_{t+1}^{\alpha_{1}-1}\\
+c_{t}+k_{t+1} & =dk_{t}^{\alpha_{1}}
+\end{align*}
+
+Plugging in $y_{t}=dk_{t}^{\alpha_{1}}=c_{t}/s_{t}$ or $c_{t}=dk_{t}^{\alpha_{1}}s_{t}$:
+\begin{align*}
+\frac{dk_{t}^{\alpha_{1}}s_{t+1}}{dk_{t}^{\alpha_{1}}s_{t}} & =\beta\alpha_{1}dk_{t+1}^{\alpha_{1}-1}\\
+\frac{s_{t+1}}{s_{t}} & \frac{\beta\alpha_{1}dk_{t}^{\alpha_{1}}}{k_{t+1}}\\
+\\
+dk_{t}^{\alpha_{1}}s_{t}+k_{t+1} & =dk_{t}^{\alpha_{1}}\\
+s_{t} & =1-\frac{k_{t+1}}{dk_{t}^{\alpha_{1}}s_{t}}
+\end{align*}
+
+-
+
+To disaggregate, take FOCs of a country's problem
+\begin{align*}
+\beta^{t}\frac{1}{c_{t}^{i}} & =\lambda_{t}^{i}\\
+\lambda_{t}^{i} & =p_{1t+1}\lambda_{t+1}^{i}
+\end{align*}
+\[
+\frac{c_{t+1}^{i}}{c_{t}^{i}}=\beta\frac{\lambda_{t}^{i}}{\lambda_{t+1}^{i}}=\beta p_{1t}=\beta r_{t+1}
+\]
+
+This is the same for all countries, so 
+\[
+\frac{c_{t+1}}{c_{t}}=\frac{c_{t+1}^{i}}{c_{t}^{i}}=\beta r_{t+1}
+\]
+\[
+\frac{c_{t+1}}{r_{t+1}}=\beta c_{t}
+\]
+
+\[
+\frac{c_{t+2}}{r_{t+2}r_{t+1}}=\beta\frac{c_{t+1}}{r_{t+1}}=\beta^{2}c_{t}
+\]
+
+\[
+\frac{c_{t+n}}{\prod_{i=1}^{n}r_{t+i}}=\beta^{n}c_{t}
+\]
+
+-
+
+From the budget,
+
+\begin{align*}
+k_{t} & =\frac{c_{t}}{r_{t}}+\frac{k_{t+1}}{r_{t}}-\frac{w_{t}}{r_{t}}=\beta c_{t-1}+\frac{k_{t+1}}{r_{t}}-\frac{w_{t}}{r_{t}}\\
+k_{t+n} & =\frac{c_{t+n}}{r_{t+n}}+\frac{k_{t+n+1}}{r_{t+n}}-\frac{w_{t+n}}{r_{t+n}}
+\end{align*}
+\begin{align*}
+c_{t} & =r_{t}k_{t}+w_{t}-k_{t+1}\\
+ & =r_{t}k_{t}+w_{t}-\left(\frac{c_{t+1}}{r_{+1}}+\frac{k_{t+2}}{r_{t+1}}-\frac{w_{t+1}}{r_{t+1}}\right)\\
+c_{t}\left(1+\beta\right) & =r_{t}k_{t}+w_{t}+\frac{w_{t+1}}{r_{t+1}}-\frac{k_{t+2}}{r_{t+1}}=r_{t}k_{t}+w_{t}+\frac{w_{t+1}}{r_{t+1}}-\frac{\frac{c_{t+2}}{r_{t+2}}+\frac{k_{t+3}}{r_{t+2}}-\frac{w_{t+2}}{r_{t+2}}}{r_{t+1}}\\
+c_{t}\left(1+\beta+\beta^{2}\right) & =r_{t}k_{t}+w_{t}+\frac{w_{t+1}}{r_{t+1}}+\frac{w_{t+2}}{r_{t+1}r_{t+2}}-\frac{k_{t+3}}{r_{t+1}r_{t+2}}\\
+c_{t}\left(\sum_{i=0}^{\infty}\beta^{t}\right) & =r_{t}k_{t}+\sum_{T=0}^{\infty}\left[w_{t+T}\prod_{i=1}^{T}\frac{1}{r_{t+1}}\right]-\lim_{T\to\infty}\left[k_{t+T+1}\prod_{i=1}^{T}\frac{1}{r_{t+i}}\right]
+\end{align*}
+
+By the transversality condition,
+\[
+\lim_{T\to\infty}\left[k_{t+T+1}\prod_{i=1}^{T}\frac{1}{r_{t+i}}\right]=\lim_{T\to\infty}\left[k_{t+T+1}\prod_{i=1}^{T}\frac{\lambda_{t+1+i}^{i}}{\lambda_{t+i}^{i}}\right]=\lim_{T\to\infty}\left[k_{t+T+1}\left(\frac{\lambda_{t+1+T}^{i}}{\lambda_{t+1}^{i}}\right)\right]=0
+\]
+
+Likewise, for each country, 
+\[
+c_{t}^{i}\left(\sum_{i=0}^{\infty}\beta^{t}\right)=r_{t}k_{t}^{i}+\sum_{T=0}^{\infty}\left[w_{t+T}\prod_{i=1}^{T}\frac{1}{r_{t+1}}\right]
+\]
+
+Subtract:
+\begin{align*}
+\left(c_{t}^{i}-c_{t}\right)\left(\sum_{i=0}^{\infty}\beta^{t}\right) & =r_{t}\left(k_{t}^{i}-k_{t}\right)\\
+\left(c_{t}^{i}-c_{t}\right) & =\left(1-\beta\right)r_{t}\left(k_{t}^{i}-k_{t}\right)
+\end{align*}
+
+-
+
+Finally, note that by subtracting the integrated budget constraint
+from the country bc, 
+\[
+\left(c_{t}^{i}+k_{t}^{i}\right)-\left(c_{t}+k_{t}\right)=r_{t}\left(k_{t}^{i}-k_{t}\right)-w_{t}(l_{t}-l_{t}^{i})=r_{t}\left(k_{t}^{i}-k_{t}\right)
+\]
+
+-
+
+Summing it up, we have that 
+
+\begin{align*}
+\frac{c_{t+1}}{c_{t}} & =\beta r_{t+1}\\
+\left(c_{t}^{i}+k_{t+1}^{i}\right)-\left(c_{t}+k_{t+1}\right) & =r_{t}\left(k_{t}^{i}-k_{t}\right) & \implies k_{t+1}^{i}-k_{t+1}=\beta r_{t}\left(k_{t}^{i}-k_{t}\right)=\frac{c_{t}}{c_{t-1}}\left(k_{t}^{i}-k_{t}\right)\\
+c_{i}-c_{t} & =\left(1-\beta\right)r_{t}\left(k_{t}^{i}-k_{t}\right)
+\end{align*}
+\[
+c_{t+1}=\beta r_{t+1}c_{t}
+\]
+\[
+y_{t}^{i}-y_{t}=r_{t}\left(k_{t}^{i}-k_{t}\right)
+\]
+
+\begin{align*}
+\frac{y_{t}^{i}-y_{t}}{y_{t}} & =\frac{r_{t}\left(k_{t}^{i}-k_{t}\right)}{y_{t}}=\frac{r_{t}}{y_{t}}\left(\frac{c_{t-1}}{c_{t-2}}\right)\left(k_{t-1}^{i}-k_{t-1}\right)=\frac{r_{t}}{y_{t}}\left(\frac{c_{t-1}}{c_{t-2}}\right)\left(\frac{y_{t-1}^{i}-y_{t-1}}{r_{t-1}}\right)\\
+ & =\frac{r_{t}}{y_{t}}\left(\frac{c_{t-1}}{c_{t-2}}\right)\left(\frac{y_{t-1}^{i}-y_{t-1}}{r_{t-1}}\right)\frac{\beta}{\beta}\frac{y_{t-1}}{y_{t-1}}=\frac{\beta t_{t}c_{t-1}}{y_{t}}\left(\frac{y_{t-1}}{\beta r_{t-1}c_{t-2}}\right)\left(\frac{y_{t-1}^{i}-y_{t-1}}{y_{t-1}}\right)\\
+ & =\frac{c_{t}}{y_{t}}\left(\frac{y_{t-1}}{c_{t-1}}\right)\left(\frac{y_{t-1}^{i}-y_{t-1}}{y_{t-1}}\right)=\frac{s_{t}}{s_{t-1}}\left(\frac{y_{t-1}^{i}-y_{t-1}}{y_{t-1}}\right)
+\end{align*}
+
+And 
+\begin{align*}
+\frac{y_{t}^{i}-y_{t}}{y_{t}} & =\frac{s_{t}}{s_{t-1}}\left(\frac{y_{t-1}^{i}-y_{t-1}}{y_{t-1}}\right)=\frac{s_{t}}{s_{t-1}}\left(\frac{s_{t-1}}{s_{t-2}}\left(\frac{y_{t-2}^{i}-y_{t-2}}{y_{t-2}}\right)\right)=\frac{s_{t}}{s_{t-2}}\left(\frac{y_{t-2}^{i}-y_{t-2}}{y_{t-2}}\right)\\
+ & =\frac{s_{t}}{s_{t-n}}\left(\frac{y_{t-n}^{i}-y_{t-n}}{y_{t-n}}\right)=\frac{s_{t}}{s_{0}}\left(\frac{y_{0}^{i}-y_{0}}{y_{0}}\right)
+\end{align*}
+
+
+\section*{(f) Find $s_{t}$and interpret. }
+
+From 1SSPP, $s_{t}=\frac{\left(1-\alpha_{1}\beta\right)dk_{t}^{\alpha_{1}}}{dk_{t}^{\alpha_{1}}}=\left(1-\alpha_{1}\beta\right)$,
+which means $s_{t}$doesn't change over time, and so the portion of
+aggregate wealth spent on consumption does not vary over time. 
+
+Also, this means the following is also constant
+\[
+\frac{y_{t}^{i}-y_{t}}{y_{t}}=\left(\frac{y_{0}^{i}-y_{0}}{y_{0}}\right)
+\]
+
+Which means that relative income levels remain constant over time
+as well.
+
+
+
+
+
 </body>
 </html>
 
