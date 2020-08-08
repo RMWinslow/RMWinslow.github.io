@@ -199,5 +199,21 @@ l_{1t}+l_{2t}=1
 
 \end_layout
 
+\begin_layout Standard
+If 
+\begin_inset Formula $\hat{k_{1t}^{i}}>\widetilde{k_{1t}^{i}}$
+\end_inset
+
+ then 
+\begin_inset Formula $\hat{y_{1t}^{i}}>\widetilde{y_{1t}^{i}}$
+\end_inset
+
+ but 
+\begin_inset Formula $\hat{y_{2t}^{i}}=\widetilde{y_{2t}^{i}}$
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document

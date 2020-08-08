@@ -575,7 +575,7 @@ FOC
 \begin_layout Standard
 \begin_inset Formula 
 \[
-p_{h}=\frac{\sigma}{\left(2-\theta\right)}
+p_{h}^{*}=\frac{\sigma}{\left(2-\theta\right)}
 \]
 
 \end_inset

@@ -583,5 +583,24 @@ p_{h}^{*}=\frac{\sigma}{\left(2-\theta\right)}
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Formula 
+\[
+q_{h}=L\left(\frac{\left(\frac{\sigma}{\left(2-\theta\right)}\right)}{\theta}\right)^{\frac{1}{1-\theta}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=L\left(\frac{\sigma}{\left(2\theta-\theta^{2}\right)}\right)^{\frac{1}{1-\theta}}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
