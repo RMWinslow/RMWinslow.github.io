@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learning By Doing - Prelim</title>
+
+    <!--renders latex-->
+    <link href="../../../../styles/basic_sakura.css" rel="stylesheet" type="text/css">
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <!--The following is used to allow the math to wordwrap.-->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            CommonHTML: { linebreaks: { automatic: true } },
+            "HTML-CSS": { linebreaks: { automatic: true } },
+            SVG: { linebreaks: { automatic: true } },
+            TeX: {extensions: ["enclose.js"]},
+            tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            processEscapes: true
+            }
+        });
+    </script>
+    
+    <!--mobile stuff-->
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+</head>
+<body >
+
+
+<h1>Trade Prelim Notes</h1>
+<h2>Learning by Doing - Prelim Problem</h2>
+<p>This problem is from Tim Kehoe. It showed up on the trade prelims in Fall of 2017 and Spring of 2014</p>
+
+
+
+
+
+
+<h3>Setup:</h3>
+
+Consider an economy in which the consumption space is the set of functions $c:R_{+}\times R_{+}\to R_{+}$. In $c(x,t)$ the index $x$ denotes the type of good and the index $t$ denotes the date at which it is consumed. An individual consumer has preferences given by the functional
+    \[u(c)=\int_{0}^{\infty}e^{-\rho t}\left[\int_{0}^{\infty}\log(c(x,t)+1)dx\right]dt\]
+
+Goods are produced using a single factor of production, labor:
+    \[y(x,t)=\frac{l(x,t)}{a(x,t)}\]
+
+Each consumer has an endowment of labor equal to $l$, and the total number of consumers is fixed at $\bar{l}$.  The unit labor requirement $a(x,t)$ is bounded from below, $a(x,t) > \bar{a}(x)$ where 
+    $$\bar{a}(x)=e^{-x}$$ 
+
+At $t=0$, there is a $z(0)>0$ such that $a(x,0)=e^{-x}$ for all $x < z(0)$ and that $a(x,0) = e^{x-2 z(0)}$ for all $x\geq z(0)$. There is learning by doing of the form
+    $$\frac{\dot{a}(x,t)}{a(x,t)}=
+    \begin{cases}
+        -\int_{0}^{\infty}b(v,t)l(v,t)\thinspace dv & \text{if }a(x,t)>\bar{a}(x)\\
+        0        & \text{if }a(x,t)=\bar{a}(x)
+    \end{cases}$$
+Here $\dot{a}(x,t)$ denotes the partial derivative of $a(x,t)$ with respect to $t$ and 
+    $$b(v,t)=
+    \begin{cases}
+        b>0 & a(v,t)>\bar{a}(v)\\
+        0     & a(v,t)=\bar{a}(v)
+    \end{cases}$$
+
+There is no storage.
+
+
+
+
+
+<h3>Problem (a): Motivation</h3>
+Provide a motivation for both the utility function and the production technology described above.
+
+
+
+
+
+<h3>Problem (b): Characterize Equilibrium</h3>
+Define an equilibrium for this economy. Characterize the equilibrium  as much as possible.
+
+
+
+
+
+<h3>Problem (c): Two-Country Equilibrium</h3>
+Consider now a two country world in which the two countries are identical except in their endowments of labor and their initial technology levels. In particular, $z_1 (0) > z_2 (0)$. There is no borrowing or lending. Define an equilibrium.
+
+
+
+
+
+
+
+
+
+
+
+
+<h3>Problem (d): Different possibilities for equilibrium</h3>
+Suppose that $z^1 (t) > z^2 (t)$. Explain carefully and illustrate two of the five qualitatively different possible equiblirbium configurations for production, consumption and trade at time $t$. 
+(To make things easier, assume the $z^1 (t)$ and $z^2 (t)$ are sufficiently large such that good $x=0$ is not produced in equilibirum.)
+
+
+
+
+
+
+
+
+<h3>Problem (e): Explain Dynamics</h3>
+Briefly describe the dynamics of the model, explaining the crucial role played by the sizes of the two countries, $\bar{l}^1$ and $\bar{l}^2$. 
+In particular, how much larger than $\bar{l}^1$  does $\bar{l}^2$ have to be so that $z^2 (t)$ eventually passes $z^1 (t)$? 
+Discuss the economic significance of this result.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<br><br><br><br>
+<footer>
+    <span style="float:left">a</span>
+    <span style="float:right">a</span>
+</footer>
+</html>
+
+
+

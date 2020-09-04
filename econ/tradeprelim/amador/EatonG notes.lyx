@@ -110,5 +110,22 @@ customHeadersFooters
 Original Paper: Eaton Gersovitz 1981
 \end_layout
 
+\begin_layout Standard
+Bulow and Rogoff argument is that when small country has access to rich
+ asset market they will default at some point because sdafjlksjdfl? So never
+ any borrowing from creditors in equilibrium
+\begin_inset Formula 
+\[
+\frac{\dot{a}(x,t)}{a(x,t)}=\begin{cases}
+-\int_{0}^{\infty}b(v,t)l(v,t)\thinspace dv & \text{if }a(x,t)>\bar{a}(x)\\
+0 & \text{if }a(x,t)=\bar{a}(x)
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document

@@ -11,6 +11,7 @@
 --c3:#fdf6e3;
 --c4:#000;
 --c5:#fff;
+--c6: #073642;
 --m1: 8px;
 --rc: 8px;
 }
@@ -26,6 +27,8 @@
 html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    min-height: 100%;
+    position: relative;
 }
 
 
@@ -38,8 +41,18 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     background-color: var(--c3);
-    color: var(--c4);
+    color: var(--c6);
     padding: 10px;
+    min-height: 100%;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    padding: 10px; 
+    margin: 0; margin-top: 3rem;
 }
 
 img, iframe {border: none; max-width: 100%}
@@ -65,14 +78,15 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: 600;  
     font-family: Verdana, Geneva, sans-serif;
     line-height: 1.1;
+    color: var(--c4);
 }
 
-h1 {font-size: 2.35em;}
-h2 {font-size: 2em;}
-h3 {font-size: 1.75em;}
-h4 {font-size: 1.5em;}
-h5 {font-size: 1.25em; }
-h6 {font-size: 1em; }
+h1 {font-size: 2.25rem;}
+h2 {font-size: 2rem;}
+h3 {font-size: 1.75rem;}
+h4 {font-size: 1.5rem;}
+h5 {font-size: 1.25rem; }
+h6 {font-size: 1rem; }
 
 
 /* Table */
@@ -98,7 +112,7 @@ textarea {width: 100%;}
 
 input, select, textarea {font-size: 1rem; color:var(--c4); background: var(--c2); border: 2px solid var(--c2); padding: 0.4em}
 
-textarea:focus, select:focus {border: 2px solid #7a0019;   }
+textarea:focus, select:focus {border: 2px solid var(--c1);   }
 
 button, input[type=submit], input[type=reset], input[type="button"] { -webkit-appearance: none; font-size: 1em; display: inline-block; color: var(--c5); background: var(--c1);  border: 0; margin: 4px;  padding: 0.6em; cursor: pointer; text-align: center}
 

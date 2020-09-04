@@ -1,0 +1,658 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Macro Prelim Notes</title>
+<link href="../../../../styles/basic_sakura.css" rel="stylesheet" type="text/css">
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+</head>
+<body>
+
+
+<h1>Trade Prelim Notes</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<footer>
+    <hr>
+    <Section>
+        <article><a href="link"><center> ← Concepts </center></a></article>
+        <section></section>
+        <section></section>
+        <section></section>
+        <article><a href="google.com"><center>→</center></a></article>
+    </Section>
+    <Section>
+        <section style="background-color: aquamarine"><a href="google.com"><center>sfsdfsd sdf sdf sf→</center></a></section>
+        <section style="background-color: aquamarine; text-align: center;">   →  </section>
+        <section style="background-color: aquamarine; text-align: center;">   <p style="text-align:center; width:100%;">Center this text!</p>  </section>
+        <section style="background-color: aquamarine; text-align: center;">   →  </section>
+        <section style="background-color: aquamarine; text-align: center;">   →  </section>
+    </Section>
+    <section>
+        <section><button>Testr</button></section>
+        <section><button>Testr</button></section>
+        <section><button>Testr</button></section>
+        <section><button>Testr</button></section>
+    </section>
+    <section>
+        <section><center><button>Testr</button></center></section>    
+        <section><center><button>Testr</button></center></section>    
+        <section><center><button>Testr</button></center></section>    
+        <section><center><button>Testr</button></center></section>    
+        <section><center><button>Testr</button></center></section>    
+    </section>
+    <section>
+        <a href="LBDconcepts.html"><section><article>Introduction</article></section></a>
+        <section></section>
+        <section><a href="LBDconcepts.html"><article>Introduction</article></a></section>
+    </section>
+    <section>
+        <a><article></article></a>
+        <article></article>
+        <article></article>
+    </section>
+    <Section>
+        <article><a href="link"><center> ← Concepts </center></a></article>
+        <section></section>
+        <section></section>
+        <section></section>
+        <article><a href="google.com"><center>→</center></a></article>
+    </Section>
+
+    <p style="text-align:center">Center this text!</p> 
+    
+    <section>
+            <article><a href="LBDconcepts.html"><section>Introduction</section></a></article>
+            <section></section>
+            <section><a href="LBDconcepts.html"><article>Introduction</article></a></section>
+        </section>
+</footer>-->
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+<hr>
+<hr>
+
+
+
+<h1>Dump of LaTeX solution</h1>
+
+
+
+
+
+
+\section*{Consider an economy in which the consumption space is the set of
+    functoins $c:R_{+}\times R_{+}\to R_{+}$. In $c(x,t)$ the index
+    $x$ denotes the type of good and the index $t$ denotes the date
+    at which it is consumed. An individual consumer has preferences given
+    by the functional }
+    
+    \[
+    u(c)=\int_{0}^{\infty}e^{-\rho t}\left[\int_{0}^{\infty}\log(c(x,t)+1)dx\right]dt
+    \]
+    
+    Goods are produced using a single factor of production, labor:
+    \[
+    y(x,t)=\frac{l(x,t)}{a(x,t)}
+    \]
+    
+    Each consumer has an endowment of labor equal to l, and the total
+    number of consumers is fixed at $\bar{l}$. The unit labor requirement
+    $a(x,t)$ is bounded from below, $a(x,t)$>$\bar{a}(x,t)=e^{-x}$.
+    At $t=0$, there is a $z(0)>0$ such that $a(x,0)=e^{-x}$ for all
+    $x<z(0)$ and that $a(x,0)=e^{x-2z(0)}$ for all $x\geq z(0).$ There
+    is learning by doing of the form 
+    \[
+    \frac{\frac{\partial}{\partial t}a(x,t)}{a(x,t)}=\begin{cases}
+    -\int_{0}^{\infty}b(v,t)l(v,t)dv & \text{if }a(x,t)>\bar{a}(x,t)\\
+    0 & \text{if }a(x,t)=\bar{a}(x,t)
+    \end{cases}
+    \]
+    \[
+    b(v,t)=\begin{cases}
+    b>0 & a(v,t)>\bar{a}(v,t)\\
+    0 & a(v,t)=\bar{a}(v,t)
+    \end{cases}
+    \]
+    
+    
+    \section*{(a) Provide a motivation for both the utility function and the production
+    technology described above.}
+    
+    The utility function's inner integral reflects consumers who like
+    having a variety of goods but are content with (don't get infinitely
+    negative utility from) consuming 0 of some non-zero measure of goods.
+    This reflects that some goods are too advanced to be worth the cost,
+    while others become outdated.
+    
+    The motivation for the prodcution function is that goods vary in the
+    level of technological sopistication needed to make them. Goods beyond
+    the technological 'frontier' of a society are increasingly difficult
+    to make. A neolithic society could in principle make a large mechanical
+    computer, but doing so would take so much time and effort that everyone
+    would starve. But these same technologies that are initially difficult
+    to make also tend to be less labor intensive once fully researched.
+    
+    And the more people working on advanced technology, the faster the
+    frontier of technology is moved outward.
+    
+    Population growth feedback loop?
+    
+    \section*{(b) Define the equilibrium and characterize as much as possible.}
+    
+    Note that there is no storage, or intertemporal trade, so consumption
+    cannot be smoothed over time.
+    
+    An equilbirum consists of prices $w(t),P(x,t)$ and consumption allocations
+    $c(x,t)$ and labor allocations $l(x,t)$ such that 
+    \begin{itemize}
+    \item Given prices, consumers choose $c(x,t)$ so that at each time $c(x,t)$
+    maximizes 
+    \[
+    \int_{0}^{\infty}e^{-\rho t}\left[\int_{0}^{\infty}\log(c(x,t)+1)dx\right]dt
+    \]
+    \[
+    \ni\int_{0}^{\infty}P(x,t)c(x,t)dx\leq w(t)\ \forall t
+    \]
+    \[
+    c(x,t)\geq0
+    \]
+    \item Given prices, firms choose labor to maximize 
+    \[
+    \max_{l(x,t)}\left[p(x,t)\frac{l(x,t)}{a(x,t)}-w(t)l(x,t)\right]
+    \]
+    \item Perfectly competitive firms:
+    \[
+    P(x,t)=w(t)a(x,t)
+    \]
+    \item Non-negativity in prices
+    \item Markets clear. For all x,t:
+    \[
+    y(x,t)a(x,t)=l(x,t)\ \ \ \forall x,t
+    \]
+    \[
+    \bar{l}c(x,t)=y(x,t)=\frac{l(x,t)}{a(x,t)}
+    \]
+    \[
+    \int_{0}^{\infty}l(x,t)dx=\bar{l}
+    \]
+    \item The production function evolves as a fucntional of $l(x,t)$ as described:
+    \[
+    \bar{a}(x,t)\equiv e^{-x}
+    \]
+    \[
+    \frac{\frac{\partial}{\partial t}a(x,t)}{a(x,t)}=\begin{cases}
+    -\int_{0}^{\infty}b(v,t)l(v,t)dv & \text{if }a(x,t)>\bar{a}(x,t)\\
+    0 & \text{if }a(x,t)=\bar{a}(x,t)
+    \end{cases}
+    \]
+    \[
+    b(v,t)=\begin{cases}
+    b>0 & a(v,t)>\bar{a}(v,t)\\
+    0 & a(v,t)=\bar{a}(v,t)
+    \end{cases}
+    \]
+    \end{itemize}
+    \textemdash \textemdash \textemdash \textemdash \textemdash \textemdash \textemdash \textemdash \textemdash \textemdash \textemdash \textemdash \textemdash \textemdash \textemdash \textemdash \textemdash \textemdash{}
+    
+    \subsubsection*{There is some cutoff productivity.}
+    
+    Because there is no storage, and consumers are identical, budget constraint
+    is period by period. And with perfect competition, the budget becomes
+    \[
+    \int_{0}^{\infty}a(x,t)c(x,t)dx\leq1
+    \]
+    
+    FOC for any $c(x,t)>0$ is thus:
+    \[
+    \frac{\partial\mathcal{L}}{\partial c(x,t)}=\frac{1}{c(x,t)+1}-\lambda_{t}a(x,t)
+    \]
+    
+    \[
+    c(x,t)=\frac{1}{\lambda_{t}a(x,t)}-1
+    \]
+    \[
+    \frac{1}{a(x,t)\left(c(x,t)+1\right)}=\lambda_{t}
+    \]
+    
+    Define $\tilde{a_{t}}\equiv\frac{1}{\lambda_{t}}$. Then for all $c(x,t)>0,$
+    \begin{align*}
+    c(x,t) & =\frac{\tilde{a_{t}}}{a(x,t)}-1
+    \end{align*}
+    
+    \[
+    c(x,t)a(x,t)=\tilde{a_{t}}-a(x,t)
+    \]
+    
+    And if $a(x,t)>\tilde{a_{t}}$, $c(x,t)$ must then be zero. Thus
+    $\tilde{a_{t}}$ is a cutoff value, and goods are produced iff they
+    have better productivity than the cutoff.
+    
+    \subsubsection*{The shape is always symetric around some point.}
+    
+    Because $\frac{\frac{\partial}{\partial t}a(x,t)}{a(x,t)}$ is the
+    same for all $x$ such that $a(x,t)>e^{-x}$, $a(x,t)=\max\left\{ e^{-x},\alpha(t)e^{x-2z(0)}\right\} $for
+    some scaling factor $\alpha(t)$
+    
+    Also note that $\alpha(t)e^{x-2z(0)}=e^{x-2z(t)}$ where $z(t)\equiv z(0)-\frac{1}{2}\log\alpha(t)$.
+    And $e^{-x}=\alpha(t)e^{x-2z(0)}$at $x=z(t).$ So at any time $t$,
+    there is a $z(t)>0$ such that $a(x,t)=e^{-x}$ for all $x<z(t)$
+    and that $a(x,t)=e^{x-2z(t)}$ for all $x\geq z(t).$ 
+    
+    Thus the productivity is always symetric around the point $z(t)$.
+    And 
+    \[
+    a(x,t)=\max\left\{ e^{-x},\alpha(t)e^{x-2z(t)}\right\} 
+    \]
+    
+    
+    \subsubsection*{z(t) is the midpoint of the range of goods being produced}
+    
+    Assuming that the economy is sufficiently advanced that none of good
+    0 is produced in equilibirum at time $t$, we can then find $M_{t}$
+    and $N_{t}$ such that $a(M_{t},t)=\tilde{a_{t}}=a(N_{t},t)$. and
+    $\tilde{a_{t}}=e^{-M_{t}}=e^{N_{t}-2z(t)}$. Note that $-M_{t}=N_{t}-2z(t)$.
+    Thus $z(t)-M_{t}=N_{t}-z(t)$, and so $z(t)$ is the midpoint between
+    these two values
+    
+    Because of this and the fact that productivity is symetric around
+    $z(t),$ 
+    \[
+    \int_{0}^{\infty}b(v,t)l(v,t)dv=\int_{z(t)}^{M_{t}}bl(v,t)dv=\frac{b}{2}\int_{N_{t}}^{M_{t}}l(v,t)dv=\frac{\bar{l}b}{2}
+    \]
+    
+    
+    \subsubsection*{Find the value for z(t)}
+    
+    Note that in general 
+    \[
+    \frac{\frac{\partial}{\partial t}f(t)}{f(t)}=k\implies f(t)=f(0)e^{\left(kt\right)}
+    \]
+    
+    Applying this to the scaling factor described above, 
+    
+    \begin{align*}
+    \frac{\frac{\partial}{\partial t}\alpha(t)e^{x-2z(0)}}{\alpha(t)e^{x-2z(0)}} & =-\int_{0}^{\infty}b(v,t)l(v,t)dv=-\frac{\bar{l}b}{2}\\
+    \alpha(t)e^{x-2z(0)} & =e^{x-2z(0)}e^{\left(-\frac{\bar{l}b}{2}t\right)}
+    \end{align*}
+    \begin{align*}
+    \alpha(t) & =e^{\left(-\frac{\bar{l}b}{2}t\right)}\\
+    e^{-z(t)} & =e^{\left(-\frac{\bar{l}b}{2}t\right)}e^{z(t)-2z(0)}\\
+    z(t) & =z(0)+\frac{\bar{l}b}{4}t
+    \end{align*}
+    
+    
+    \subsubsection*{Find the value for $\tilde{a_{t}}$.}
+    
+    Note that 
+    \[
+    \tilde{a_{t}}e^{z(t)}=e^{z(t)-M_{t}}=e^{\frac{1}{2}\left(N_{t}-M_{t}\right)}
+    \]
+    
+    \begin{align*}
+    1=\int_{0}^{\infty}a(x,t)c(x,t)dx & =\int_{M_{t}}^{N_{t}}\left(\tilde{a_{t}}-a(x,t)\right)dx\\
+     & =\int_{M_{t}}^{z(t)}\left(\tilde{a_{t}}-e^{-x}\right)dx+\int_{z(t)}^{N_{t}}\left(\tilde{a_{t}}-e^{x-2z(t)}\right)dx\\
+     & =\left(N_{t}-M_{t}\right)\tilde{a_{t}}+e^{-x}]_{M_{t}}^{z(t)}-e^{x-2z(t)}]_{z(t)}^{N_{t}}\\
+     & =\left(N_{t}-M_{t}\right)\tilde{a_{t}}+e^{-z(t)}-e^{-M_{t}}-e^{N_{t}-2z(t)}+e^{-z(t)}\\
+     & =\left(N_{t}-M_{t}-2\right)\tilde{a_{t}}+2e^{-z(t)}\\
+    e^{z(t)} & =\left(N_{t}-M_{t}-2\right)e^{\frac{1}{2}\left(N_{t}-M_{t}\right)}+2
+    \end{align*}
+    
+    This looks like a pain, but it can in principle be solved to find
+    the value of $N_{t}-M_{t}\equiv2\tau_{t}$. Which will yield 
+    \[
+    \tau_{t}=W\left(\frac{-2+e^{z(t)}}{2e}\right)+1
+    \]
+    
+    where $W$ is the product log, defined as the inverse of $W^{-1}(x)\equiv xe^{x}$.
+    
+    Then $M_{t}=z(0)+\frac{\bar{l}b}{4}t-\tau_{t}$and $N_{t}=z(0)+\frac{\bar{l}b}{4}t+\tau_{t}$.
+    \[
+    a(x,t)=\max\left[e^{-x},e^{x-2z(t)}\right]
+    \]
+    \[
+    c(x,t)=\max\left[\frac{e^{-M_{t}}}{a(x,t)}-1,0\right]
+    \]
+    
+    \[
+    l(x,t)=\bar{l}c(x,t)a(x,t)
+    \]
+    \[
+    y(x,t)=\bar{l}c(x,t)
+    \]
+    
+    And because there is no savings and thus no smoothing over time, any
+    set of prices is fine as long as $\tilde{P}(x,t)=\tilde{w}(t)\tilde{a}(x,t)$.
+    For simplicity, we can set $w(t)=1$ and $\tilde{P}(x,t)=\tilde{a}(x,t)$.
+    
+    \section*{(c) Consider now a two country world in which the two countries are
+    identical except in their endowments of labor and their initial technology
+    levels. In particular, $z^{1}(0)>z^{2}(0).$ There is no borrowing
+    or lending. Define an equilibrium. }
+    
+    (no transportation costs so prices are the same between countries.)
+    
+    A competitive equilibirum consists of prices $w_{1}(t),w_{2}(t),P(x,t)$;
+    consumption functions $c_{1}(x,t),c_{2}(x,t)$, labor allocation functions
+    $l_{1}(x,t)$,$l_{2}(x,t)$; and output such that $y_{1}(x,t)$,$y_{2}(x,t)$
+    \begin{itemize}
+    \item Given prices, in each country $i$, consumers choose $c_{i}$ so that
+    at each time $c_{i}$ maximizes 
+    \[
+    \int_{0}^{\infty}e^{-\rho t}\left[\int_{0}^{\infty}\log(c_{i}(x,t)+1)dx\right]dt
+    \]
+    \[
+    \ni\int_{0}^{\infty}P(x,t)c_{i}(x,t)dx\leq w_{i}(t)\ \forall t
+    \]
+    \[
+    c_{i}(x,t)\geq0
+    \]
+    \item Given prices, each firm chooses labor allocation $l_{i}(x,t)\geq0$
+    to solve
+    \[
+    \max_{l_{i}(x,t)}P(x,t)\frac{l_{i}(x,t)}{a_{i}(x,t)}-w_{i}(t)l_{i}(x,t)
+    \]
+    \item Market Clears. For all x,i,t,:
+    \[
+    y_{i}(x,t)=\frac{l_{i}(x,t)}{a_{i}(x,t)}
+    \]
+    \[
+    \bar{l_{i}}=\int_{0}^{\infty}l_{i}(x,t)dx
+    \]
+    \[
+    \bar{l_{1}}c_{1}(x,t)+\bar{l_{2}}c_{2}(x,t)=\frac{l_{1}(x,t)}{a_{1}(x,t)}+\frac{l_{2}(x,t)}{a_{2}(x,t)}
+    \]
+    Perfectly competitive firms:
+    \[
+    P(x,t)=\min_{i}\left[w_{i}(t)a_{i}(x,t)\right]
+    \]
+    \item Non-negativity in prices
+    \item Evolution of production function by LearningByDoing:
+    \[
+    \frac{\frac{\partial}{\partial t}a_{i}(x,t)}{a_{i}(x,t)}=\begin{cases}
+    -\int_{0}^{\infty}b_{i}(v,t)l_{i}(v,t)dv & \text{if }a_{i}(x,t)>\bar{a}(x,t)\\
+    0 & \text{if }a_{i}(x,t)=\bar{a}(x,t)
+    \end{cases}
+    \]
+    \[
+    b_{i}(v,t)=\begin{cases}
+    b>0 & a_{i}(v,t)>\bar{a}(v,t)\\
+    0 & a_{i}(v,t)=\bar{a}(v,t)
+    \end{cases}
+    \]
+    \end{itemize}
+    
+    \section*{(d)Suppose that $z^{1}(t)>z^{2}(t).$ Explain carefully and illustrate
+    two of the five qualitatively different possible equiblirbium configurations
+    for production, consumption and trade at time $t.$ To make things
+    easier, assume the $z(t)$s are sufficiently large such that good
+    $0$ is not produced in equilibirum.}
+    
+    Consumers will only buy a good from the nation that produces it most
+    cheaply. Let $w_{2}(t)$ be the numeraire, and let $W\equiv\frac{w_{1}}{w_{2}}=w_{1}$.
+    Then the price of a good produced in country 1 is $Wa_{1}(x,t)$ and
+    the price of a good produced in country 2 is $a_{2}(x,t)$.
+    
+    In each graph below, which plots good index vs price, $Wa_{1}(x,t)$
+    is the solid blue line, $a_{2}(x,t)$ is the dotted orange line, The
+    solid green line represents the maximum price that consumers from
+    country 1 will pay for a good, and the dotted red line is the maximum
+    price for consumers from country 2.
+    
+    For each graph, there is a region shaded with yellow horizontal lines,
+    cooresponding to the consumption patterns of country 2 (area=$1$),
+    and blue vertical lines for country 1 (area=$W$).
+    
+    Whenever a good is produced by both countries, it really means that
+    that region of goods is produced by some combination of the two countries
+    which is not specified in equilibirum. 
+    
+    $M_{i}^{j}\equiv$the leftmost point at which the price curve for
+    country $j$ is equal to the maximum price paid by consumers in country
+    $i$. Likewise, $N_{i}^{j}$ is the rightmost such point. 
+    
+    First some impossibilities:
+    
+    \subsubsection*{Impossibility 1: $W<1$}
+    
+    \includegraphics{LbdCase-1}
+    
+    In this case, all goods are cheaper to produce in country 1, so none
+    will be produced in country 2. But without lending, there is no way
+    for the balance of trade to work out. This would mean, for example,
+    that the total labor income of country 2 is $0$. But then country
+    2 cannot possible inmport goods at nonnegative price. So this example
+    contradicts the setup of the problem.
+    
+    \subsubsection*{Impossiblity 2: $W>e^{2(z_{1}(t)-z_{2}(t))}$}
+    
+    \includegraphics{LbdCase-2}
+    
+    This results in all goods being cheaper in country 2, which also makes
+    balanced trade impossible.
+    
+    \subsubsection*{Case 1: Equal wages}
+    
+    \includegraphics{LbdCase1annotated}
+    
+    $W=1$ is the minimum possible $W$ with trade.
+    
+    Because wages are the same, the budget constraint is the same for
+    each country, and consumption patterns will be identical. 
+    
+    Both countries consume goods in the range $[M,N^{1}]$
+    
+    Goods with $N^{1}\geq x>z_{2}(t)$ will be exclusively produced by
+    country 1.
+    
+    Goods with $M\leq x\leq z_{2}(t)$ will be produced and by some combination
+    of the two countries, which is not uniquely specified in equilibirum.
+    
+    \subsubsection*{Case 2: Maximum possible wage ratio}
+    
+    \includegraphics{LbdCase2annotated}
+    
+    Here $W=e^{2(z_{1}(t)-z_{2}(t))}$.
+    
+    All goods with $x\in[M_{1}^{2},M_{2}^{2})$ will be produced exclusively
+    by country 2, and consumed only by country 1.
+    
+    Goods with $x\in[M_{2}^{2},z_{1}(t))$ will be produced by country
+    2, and consumed by both countries.
+    
+    Goods with $x\in\left[z_{1}(t),N_{2}\right]$ will be produced and
+    consumed by both countries. 
+    
+    Goods with $x\in(N_{2},N_{1}]$will be produced by both countries
+    and consumed only by country 1.
+    
+    \subsubsection*{Case 3-5: Intermediate wages}
+    
+    If $1<W<e^{2(z_{1}(t)-z_{2}(t))}$, then the two price functions will
+    cross at exactly one point $v$ . Country 1 will not produce goods
+    $x<v$ and country 2 will not produce goods $x>v$. 
+    
+    \subsubsection*{In case 3,}
+    
+    $P(v,t)<\tilde{P_{2}}$, and so this crossover good will be produced
+    and consumed by both countries.
+    
+    \includegraphics{LbdCase3annotated}
+    
+    Country 1 produces in the range $\left[M_{1}^{2},v\right]$
+    
+    Country 1 produces in the range $\left[v,N_{1}^{1}\right]$
+    
+    Country one consumes the range$\left[M_{1}^{2},N_{1}^{1}\right]$
+    
+    Country one consumes the range$\left[M_{2}^{2},N_{2}^{1}\right]$
+    
+    \subsubsection*{In Case 4,}
+    
+    $\tilde{P_{1}}>P(v,t)>\tilde{P_{2}}$and so good $v$ will be produced
+    by both countries, but consumed only by country 1.
+    
+    \includegraphics{LbdCase4annotated}
+    
+    In fact, there is now a gap around $v$ in the middle of country 2's
+    range of consumed goods. Only country 2 consumes goods in this gap.
+    
+    \subsubsection*{In Case 5,}
+    
+    $P(v,t)>\tilde{P_{1}}$ and so neither country consumes good $v$
+    
+    \includegraphics{LbdCase5annotated}
+    
+    Consumption and production are like Case 3, except that there is now
+    a region of goods around $v$ such that neither country consumes or
+    produces in this region.
+    
+    \emph{(Note: All the other cases had graphs generated using actual
+    parameters for $z_{1},z_{2},w_{1},w_{2}$, but I couldn't find nice
+    looking parameters for case 5, so I just faked the graph.)}
+    
+    \section*{(e) Describe the dynamics of the model, explaining the crucial role
+    played by the sizes of the two countries, $\bar{l}_{1}$ and $\bar{l_{2}}$.
+    In particular, how much larger does $\bar{l_{2}}$ need to be so that
+    $z_{2}(t)$ eventually passes $z_{1}(t)$? Describe the economic significance
+    of this result.}
+    
+    For country 2 to eventually surpass country 1, it must be that $\bar{l_{2}}\geq\left(2+e^{2(z_{1}-z_{2})}\right)\bar{l}_{1}$.
+    
+    -
+    
+    The percentage change of $a_{i}$ for technology which isn't fully
+    researched is $b\bar{l}_{i}\cdot$(portion of labor in country $i$
+    allocated to producing hi tech goods.) $\frac{\partial}{\partial t}z_{i}(t)$
+    is half of this rate. Thus the rate of change for $z_{i}$is proportional
+    to the amount of $\bar{l_{i}}$ being used to produce goods $x>z_{i}$
+    
+    Note that in all 5 cases, Country 1 has a weakly greater share of
+    its labor contributing to hi-tech fields. So for country 2 to catch
+    up, it must have a larger population. 
+    
+    Also note that Case 1 can only happen if country 1 is larger, because
+    the majority of the share of each country's consumption is produced
+    in country 1. (The majority of two things adds up to more than the
+    smaller of the two things.) For similar reasons, \textbf{Case 2 can
+    only happen if country 2 is larger.}
+    
+    -
+    
+    Case 1 is the only case in which a country does not have increasing
+    technology. In case 1, country 2 devotes all of their labor to fully-research
+    technology, and so $z_{2}(t)$ remains static while $z_{1}(t)$ increases,
+    until eventually the economy shifts into case 3 as country 1 exhausts
+    their potential to shift labor into higher-tech industries without
+    driving up wages.
+    
+    In all other cases, $\frac{\partial}{\partial t}z_{i}(t)$ is positive
+    for both countries.
+    
+    -
+    
+    In Case 3-5, both countries technologically develop. When the relative
+    size of the gap between tech levels in countries increase, it drives
+    the equilibrium from case 3 to 4 to 5. And a decreasing gap drives
+    things in the other direction. 
+    
+    \textbf{If Country 1 is bigger}, country 1 grows faster, and so the
+    economy tends towards Case E over time. 
+    
+    \textbf{If the countries are of equal size,} then Case 3 has country
+    1 growing relatively faster, driving the equilibrium to case 5. In
+    case 5, each country devotes precisely half of its labor to producing
+    hi-tech goods and thus both $z_{i}$increase the same. With the gap
+    between tech levels constant, but tech levels inceasing, the relative
+    size of the gap shrinks, driving the equilbirum to Case 4. 
+    
+    \textbf{If country 2 is bigger, }then Case 5 is quickly driven down
+    into case 4. Cases 3 and 4 both exhibit widening gaps in technology.
+    
+    -
+    
+    So the only way for the gap between $z_{i}$s to shrink is for country
+    2 to be bigger and the equilibrium to be in Case 2.
+    
+    Even in this case, for the tech gap to shrink, it must be that Country
+    2 has a greater amount of labor in high tech industries.
+    
+    Country 1 uses all of it's labor on goods with $x>z_{2}$. This labor
+    is equivalent to $w_{1}\bar{l_{1}}$ units of country 2's labor. When
+    figuring out the share of labor used above the tech thresholds, we
+    can, without loss of generality, presume that there is some $H$ such
+    that country 1 does all production for $x>z_{2}+H$ and country two
+    does all prodcution for $x<z_{2}+H$. By symmetry, country 2 allocates
+    $w_{1}\bar{l_{1}}$ units of labor to $x<z_{2}-H$.
+    
+    \includegraphics{\string"rough proof\string".png}
+    
+    Then breaking country 2's labor up into chunks, we see that
+    \[
+    2A+2B+w_{1}\bar{l}_{1}=\bar{l_{2}}
+    \]
+    \[
+    A+B=\frac{\bar{l_{2}}-w_{1}\bar{l}_{1}}{2}
+    \]
+    
+    which is the amount of labor allocated by country 2 to hi tech goods.
+    And in Case 2, $w_{1}=e^{2(z_{1}(t)-z_{2}(t))}$
+    
+    For $\frac{\partial}{\partial t}z_{2}(t)$>$\frac{\partial}{\partial t}z_{1}(t)$,
+    it must be that 
+    \[
+    \frac{\bar{l_{2}}-e^{2(z_{1}(t)-z_{2}(t))}\bar{l}_{1}}{2}>\bar{l_{1}}
+    \]
+    \[
+    \bar{l_{2}}>\left(2+e^{2(z_{1}(t)-z_{2}(t))}\right)\bar{l_{1}}
+    \]
+     
+    
+    - 
+    
+    The economic implication here is that if developing nations want to
+    technologically advance they should become very large. Beacuse a nation
+    in this model is defined as a region in which labor can freely move
+    around, one strategy for development is to join unions with other
+    nations to allow free movement of labor.
+
+</body>
+</html>
+
+
+
