@@ -3,11 +3,11 @@
 <head>
     <title>Testing the Style Sheet</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    
+    <!--renders latex
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>-->
 
-    <!--renders latex-->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
-
-    <!--The following is used to allow the math to wordwrap.-->
+    <!--The following is used to allow the math to wordwrap.
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
             CommonHTML: { linebreaks: { automatic: true } },
@@ -19,24 +19,31 @@
             processEscapes: true
             }
         });
-    </script>
+    </script>-->
 
     <!--mobile stuff-->
     <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
 
-    <link href="styles/basic.css" rel="stylesheet" type="text/css">
+    <!--<link href="styles/basic.css" rel="stylesheet" type="text/css">-->
     <!--<link href="styles/sakura_basic.css" rel="stylesheet" type="text/css">-->
+    <!--<link href="styles/basic_sakura.css" rel="stylesheet" type="text/css">-->
+    <link href="styles/everythingbagel.css" rel="stylesheet" type="text/css">
 
 
 
-    <!--
-        Alternate method for rendering latex using katex. Faster but can't copypaste latex code. Or can I...
-    -->
+
+
+
+    <!-- Alternate method for rendering latex using katex. Faster but can't copypaste latex code. Or can I...   -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
 
 </head>
 <body>
 
-
+<main>
 <h1>Robert Winslow</h1>
 
 <p>I am a PhD candidate in economics at the $test_sf$ University of Minnesota. gg ff fj fi </p>
@@ -205,9 +212,27 @@ goto first step (or shut off burner when done)</code></pre>
 <hr>
 <p>Images are responsive by default:</p>
 <div>
-<img alt="example image" src="sakura.png" title="An exemplary image">
+<img alt="example image" src="dogtest.jpg" title="An exemplary image">
 <p>example image</p>
 </div>
+
+<hr>
+
+
+<p>This is a big ol chunk of text. This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.</p>
+
+<p>This is a big ol chunk of text. This is a big ol chunk of text.This is a big ol chunk of text...
+    
+<aside>Sidenote test with lots and lots of text just so much you can't even belives it. I'm just going to keep on going and going until this text overlaps with the sidenote below it and makes everything just look dreadful. You watch me. You think I'll stop but I won't I'll keep typing I'm a maverick. Oh geez, it's taking more text than I expected to make the overlap actually happen. I underestimated the magnitude of this task. Come on mr doge please be overlapped now. Okay, it's finall made it down these are default text sizes and screen width stuff</aside>
+
+This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.</p>
+
+<aside>Sidenote test
+    <img alt="example image" src="dogtest.jpg" title="An exemplary image">Wee</aside>
+
+<p>This is a big ol chunk of text. This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.</p>
+
+
 
 <hr>
 
@@ -489,6 +514,6 @@ goto first step (or shut off burner when done)</code></pre>
 
 
 
-
+</main>
 </body>
 </html>
