@@ -186,15 +186,15 @@ aside {
     margin-right: calc(max(-50% - 2.5rem, -1 * (100vw - 100%) / 2 + 2.5rem));*/
     width: 18rem;
     max-width: 50%;
-    margin-right: max(-22rem, -1 * (100vw - 100%) / 2  + 1rem);
+    margin-right: max(-22rem, -1 * (100vw - 100%) / 2  );
     margin-left: 1rem;
 }
 
 
 
-@media (max-width: 65rem) {
+@media (max-width: 90rem) {
     aside {
-        padding: 1em;
+        padding: 1rem;
         background-color: var(--c2);
         border-left: 3px solid var(--c7);  
     }
