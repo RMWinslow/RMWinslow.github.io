@@ -182,14 +182,17 @@ aside {
     /*100vw is viewport width*/ 
     /*100% is parent's width is viewport width*/
     /*(100vw - 100%) / 2 is therefore the width of one margin*/
+    /*UUGHGHGH. The viewport width includes the scrollbar! WHY?!
     /*width: calc((100vw - 100%) / 2  - 5rem); 
     margin-right: calc(max(-50% - 2.5rem, -1 * (100vw - 100%) / 2 + 2.5rem));*/
     width: 18rem;
     max-width: 50%;
-    margin-right: max(-22rem, -1 * (100vw - 100%) / 2  );
+    margin-right: max(-22rem, -1 * (100vw - 100%) / 2  + 0rem);
     margin-left: 1rem;
 }
 
+html{
+    overflow-x: hidden;}
 
 
 @media (max-width: 90rem) {
