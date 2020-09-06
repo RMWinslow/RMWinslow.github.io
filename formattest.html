@@ -39,6 +39,8 @@
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
         onload="renderMathInElement(document.body);"></script>
+    <!--<link href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/copy-tex.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/copy-tex.min.js" integrity="sha384-XhWAe6BtVcvEdS3FFKT7Mcft4HJjPqMQvi5V4YhzH9Qxw497jC13TupOEvjoIPy7" crossorigin="anonymous"></script>-->
 
 </head>
 <body>
@@ -223,11 +225,18 @@ goto first step (or shut off burner when done)</code></pre>
 
 <p>This is a big ol chunk of text. This is a big ol chunk of text.This is a big ol chunk of text...
 
-<span><aside>Left margin note test</aside></span>
+<aside>Left margin note test</aside>
 
-<aside>Sidenote test with lots and lots of text just so much you can't even belives it. I'm just going to keep on going and going until this text overlaps with the sidenote below it and makes everything just look dreadful. You watch me. You think I'll stop but I won't I'll keep typing I'm a maverick. Oh geez, it's taking more text than I expected to make the overlap actually happen. I underestimated the magnitude of this task. Come on mr doge please be overlapped now. Okay, it's finall made it down these are default text sizes and screen width stuff</aside>
+Okay and if I put some text in between?
+
+<aside>Sidenote test with lots and lots of text just so much you can't even belives it. I'm just going to keep on going and going until this text overlaps with the sidenote below it and makes everything just look dreadful. You watch me. You think I'll stop but I won't I'll keep typing I'm a 
+    $$\sum_i^\infty x^i$$
+    \[a^2 + a^2  \]
+maverick. Oh geez, it's taking more text \(x^3_i\) than I expected to make the overlap actually happen. I underestimated the magnitude of this task. Come on mr doge please be overlapped now. Okay, it's finall made it down these are default text sizes and screen width stuff</aside>
 
 This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.This is a big ol chunk of text.</p>
+
+<p>By default (on desktop), the notes are floated right into the margin; no measures are taken to avoid collisions or overlaps (presumably if you have that problem, you ought to just rewrite your page or fix it yourself). On narrow windows & mobile, a media-query overrides the regular CSS, so the margin notes are not floated, simply indented, and toggled. The CSS looks like:
 
 <aside>Sidenote test
     <img alt="example image" src="dogtest.jpg" title="An exemplary image">Wee</aside>
