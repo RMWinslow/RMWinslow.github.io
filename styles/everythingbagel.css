@@ -102,13 +102,16 @@ th, td {vertical-align: top; border: 1px solid; padding: 0.4em}
 thead,tfoot {background: var(--c2)}
 
 
+
+
 /* Rounded Corners*/
 
-pre,code,input, select,button,img, details {border-radius: var(--rc)}
+pre,code,input, select,button,img, details,aside {border-radius: var(--rc)}
 /*pre,code,input,select,textarea,button,img {border-radius: var(--rc)}*/
 
 
 /* Forms */
+/* Maybe I should change these to just be the default style?*/
 
 textarea {width: 100%;}
 
@@ -194,15 +197,33 @@ aside {
         /*Usually margin-top is set to -1 to cancel out the padding, 
         but here I set to 0 so  the visible bounding box is flush with start of paragraph*/
         background-color: var(--c2);
-        border-left: 3px solid var(--c7);  
+        border-left: 3px solid var(--c7); 
     }
 }
 
 
 
+/*Figures and Captions and definitions
+I really just want every single element to be supported for some reason.*/
 
+figcaption {
+    color: var(--c7);
+    text-align: center;
+    font-size: .9rem;
+}
 
-
+dt {
+    font-weight: bold;
+}
+dd {
+    font-size: .9rem;
+    margin-bottom: 1em;
+}
+abbr {
+    font-style: italic;
+    font-weight: 100;
+    font-variant: small-caps;
+}
 
 
 
