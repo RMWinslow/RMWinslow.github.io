@@ -19,6 +19,31 @@
 <canvas id="nSizeMapper" width="500" height="500">
 Your browser does not support the HTML5 canvas tag.</canvas>
 
+
+
+
+<form action="">
+    N_rr:     <input type="number" name="N_rr"  min="0" step="1" value="5"> &nbsp; 
+    N_rg:   <input type="number" name="N_rb" min="0" step="1" value="0"> &nbsp; 
+	N_rb:     <input type="number" name="N_rg"  min="0" step="1" value="0"> &nbsp; 
+	<br>
+	N_gr:     <input type="number" name="N_gr"  min="0" step="1" value="0"> &nbsp; 
+    N_gg:   <input type="number" name="N_gg" min="0" step="1" value="5"> &nbsp; 
+	N_gb:     <input type="number" name="N_gb"  min="0" step="1" value="0"> &nbsp; 
+	<br>
+	N_br:     <input type="number" name="N_br"  min="0" step="1" value="0"> &nbsp; 
+    N_bg:   <input type="number" name="N_bg" min="0" step="1" value="0"> &nbsp; 
+	N_bb:     <input type="number" name="N_bb"  min="0" step="1" value="5"> &nbsp; 
+	<br>
+	<label for="gridCheck">Draw grid?</label> <input type="checkbox" id="gridCheck" name="gridCheck" checked>&nbsp; &nbsp; &nbsp; 
+    <input type="button" name="genButton" Value="Update" onClick="updateNumbers(this.form)">
+</form><br>
+
+
+
+
+
+
 <script>
 var canvas = document.getElementById("nSizeMapper");
 var ctx = canvas.getContext("2d");
@@ -29,15 +54,23 @@ var cornerB = [250,50+.866*400];
 var cornerC = [450,50];
 //define the connections between types
 //neighbors[i][j] is the connections from type i to type j%whibbledibble
-neighbors = [[10,  1,  1],
-			[1,  1,  1],
-			[0.1,  5,  1]]
+var neighbors = [[5,  	0,  	0],
+				[0,  	5,  	0],
+				[0,  	0, 		5]];
 //Number of neighbors for each type:
 var nTypeA = neighbors[0][0]+neighbors[0][1]+neighbors[0][2];
 var nTypeB = neighbors[1][0]+neighbors[1][1]+neighbors[1][2];
 var nTypeC = neighbors[2][0]+neighbors[2][1]+neighbors[2][2];
 
+var drawGrid_flag = true;
 
+function updateNumbers(form){
+    neighbors = [[form.N_rr.value,  form.N_rg.value,	form.N_rb.value],
+				 [form.N_gr.value,  form.N_gg.value,	form.N_gb.value],
+				 [form.N_br.value,  form.N_bg.value,	form.N_bb.value]];
+	drawGrid_flag = form.gridCheck.checked;
+	genGraph();
+}
 //-------------------------------------------------------------------------------------------------------------
 
 
@@ -68,8 +101,17 @@ function drawRectangle(x1, y1,x2,y2,fillColor,lineColor){
   ctx.rect(x1, y1,x2,y2);
   ctx.fillStyle = fillColor;
   ctx.fill();
-  //ctx.strokeStyle = lineColor; faster?
+  //ctx.strokeStyle = lineColor; //faster?
   //ctx.stroke(); 
+}
+
+function drawText(x,y,content){
+  //write the actual dang letters
+  ctx.font = "20px serif";
+  ctx.textAlign = "center";
+  ctx.textBaseline = 'middle'; 
+  ctx.fillStyle = '#000';
+  ctx.fillText(content,x,y);
 }
 
 function drawDot(x, y,color){
@@ -172,6 +214,9 @@ function genGraph(){
 	//refresh canvas
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	drawRectangle(0, 0, canvas.width, canvas.height,'#00f3','#0000');
+	drawText(50,35,"100% R");
+	drawText(250,420,"100% G");
+	drawText(450,35,"100% B");
 	//Draw background triangle
 	drawPoly([cornerA,cornerB,cornerC],'#eeef','#0005');
 	//Plot Points
@@ -181,9 +226,11 @@ function genGraph(){
 		drawDotABC(gridOfPointsABC[i],ABCposition);
 	}
 	//Plot gridlines
-	for (var i = 0; i < gridLinePoints.length; i++) {
-		ABCposition = iterateInfection(gridLinePoints[i]);
-		drawDotABC([0,0,0],ABCposition);
+	if (drawGrid_flag){
+		for (var i = 0; i < gridLinePoints.length; i++) {
+			ABCposition = iterateInfection(gridLinePoints[i]);
+			drawDotABC([0,0,0],ABCposition);
+		}
 	}
 	
 }
