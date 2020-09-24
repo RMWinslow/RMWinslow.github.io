@@ -50,5 +50,7 @@
 
 -note about endogenizing connections )pdf
 
+-point about eigenvectors
+
 
 [ ] What do checkmarks look like?
