@@ -1,0 +1,681 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Symmetric Melitz-Ottaviano Model</title>
+<link href="../../../../styles/sakura.css" rel="stylesheet" type="text/css">
+<!--The following is used to allow the math to wordwrap.-->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        CommonHTML: { linebreaks: { automatic: true } },
+        "HTML-CSS": { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } },
+        TeX: {extensions: ["enclose.js"]},
+        tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          processEscapes: true
+        }
+    });
+    </script>
+    <!--The following is used to make subtle highlights and red crossthroughs on cancelled terms.-->
+    <div hidden>\(   \def\dashbox#1#2{ \bbox[border:2px dashed #1,3px]{#2}   }                 \def\cancel#1{\color{red}{\enclose{updiagonalstrike,downdiagonalstrike}{\color{black}{#1}}}}                   \)</div>
+<!--Renders math--><script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+<!--For mobile--><meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+</head>
+<body>
+
+
+
+<h1>Trade Prelim Notes</h1>
+<h2>Symmetric Melitz-Ottaviano Model</h2>
+<p>This problem is from Doireann Fitzgerald. It showed up on the trade prelims in 2016, 2017 (fall), and 2019</p>
+
+
+
+
+
+<h3>Setup</h3>
+
+<p>Start with a closed economy population by \(L\) identical households, each of which supplies \(1\) unit of labhor inelastically. Household \(i\)'s  preferences are:
+    \[    U_i = c_{i0} + \alpha \sum_{j=1}^N c_{ij} - \frac{\beta}{2} \sum_{j=1}^N (c_{ij})^2  - \frac{\gamma}{2} \left(   \sum_{j=1}^N c_{ij}  \right)^2   \]
+where good \(0\) is a homogenous numeraire good and \(j=1,...,N\) are differentiated goods. The number \(N\) of differentiated goods in this economy is endogenous. The labor market is perfectly competitive. The numeraire good is produced under constant returns to scale at unit cost and sold in a perfectly competitive market. This implies \(w=1\). In order to produce a differentiated good, the firm must incur and upfront cost given by \(Sw = s\). After that, production is constant returns to scale, and each unit of labor produces \(1 /  \sigma\) units of the good, so marginal cost is given by \(\sigma\) for all firms. Assume monopolistic competition in the differentiated goods sector. That is, each firm chooses its price to maximize profit taking as given the behavior or all other firms.</p>   
+
+
+
+
+
+
+
+<h3>Problem (a): Write down the budget constraint of the consumer.</h3>
+
+
+
+
+<h3>Problem (b): Consumer maximization problem and FOC.</h3>
+<p><b>Set up the maximization problem of the consumer. What is the first order condition for household \(i\)'s consumption of differentiated good \(h\) (ie FOC with respect to \(c_{ih}\)? You can assume there is positive consumption of the numeraire, and \(N > 0\).   </b></p>
+
+
+
+<h3>Problem (c): Sum over differentiated goods.</h3>
+<p><b>Sum this condition across all \(h = 1,...,N\) and use the notation \(\overline{p} = (1/N) \sum_{h=1}^N p_h \) to obtain an expression for $\sum_{h=1}^N c_{ih}$  in terms of \(N\), \(\overline{p}\) and preference parameters. </b></p>
+
+
+
+<h3>Problem (d): Derive demand function.</h3>
+<p><b>Use the solution to part (c) to express $c_{ih}$, household $i$'s demand for good $h$ as a function of $p_h$, $N$,  $\overline{p}$ and preference parameters. What is the market demand $q_h$ (remember that there are $L$ agents)?   </b></p>
+
+
+
+<h3>Problem (e): Firm's profit and pricing rule.</h3>
+<p><b>Now write down the profits of differentiated goods firm $h$ as a function of $p_h$, marginal cost $\sigma$, $L$, $N$, $\overline{p}$ and preference parameters.  Assuming that firm $h$ takes $\overline{p}$ as given (ie monopolistic competition), what is the first order condition with respect to $p_h$? Use this to write the firm's optimal $p_h$ as a function of $\sigma$, $N$, $\overline{p}$, and preference parameters.</b></p>
+
+
+
+<h3>Problem (f): Price index and profit.</h3>
+<p><b>Now use the fact that all differentiated goods are identical so $p_h=\overline{p}$ to write $\overline{p}$ as a function of $\sigma$, $N$ and preference parameters. Use this to write maximized profit as a function of $\sigma$, $L$, $N$, and preference parameters.</b></p>
+
+
+
+<h3>Problem (g): Number of firms with free entry.</h3>
+<p><b>What is the free entry condition? Rearrange it to obtain an expression for $N$ as a fucntion of $\sigma$, $L$, $S$ and preference parameters. You can assume $\alpha - \sigma > 0 $.</b></p>
+
+
+
+<h3>Problem (h): Solve for quantities produced.</h3>
+<p><b>Use the market demand together with teh expressions for $\overline{p}$ and $N$ to solve for $q_h$, production of good $h$, as a function of  $\sigma$, $L$, $S$ and preference parameters.</b></p>
+
+
+
+<h3>Problem (i): Pareto Optimality</h3>
+<p><b>Is the competitive equilibrium in this closed economy Pareto optimal?</b></p>
+
+
+
+<h3>Problem (j): Opening to trade. </h3>
+<p><b>Suppose the competitive economy opens up to (costless) trade with an identical economy with $L^*$ households. What happens to the set of varieties the consumer has access to? What happens to $q_h$? What happens to the set of varieties produced in the home country? Give some intuition for what happens. What happens to welfare?</b></p>
+
+
+
+<h3>Problem (k): Alternate Preferences.</h3>
+<p><b>How would you answers to (j) differ if preferences were CES as in Krugman(1980)?</b></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>  
+<h1>Trade Prelim Notes</h1>
+<h2>Symmetric Melitz-Ottaviano Model</h2>
+<p>This problem is from Doireann Fitzgerald. It showed up on the trade prelims in 2016, 2017 (fall), and 2019</p>
+
+<h3>Setup</h3>
+
+<p><b>Different types of goods: </b> There's a continuum of types of goods indexed from \(0\) to \(m\). Good \(0\), the numeraire good,  is homogenous. Think of it like grain. Each other good with index in \((0,m]\) is somewhat interchangeable, and  produced by a monopoly. Call these the differentiated goods. You can think of these goods as different songs or different brands of clothing or something else along those lines. </p>
+
+<p>
+    <b>Consumer's problem: </b>Consumers have Dixit Stiglitz utility functions. They want some of the numeraire good, and some diversified bundle of the differentiated goods.   The  consumer's utility maximization problem is to choose \(c_z\) for each \(z\) in the range \([0,m]\) to solve:
+    <div class="highlight">
+            \[\max \; \left[[1-\alpha]\ln c_0 + {\alpha \over \rho} \ln \left(   \int_0^m c_z^\rho \, dz    \right)\right]\]
+        subject to the constraints:
+            \begin{gather}
+                c_z\geq 0    \quad        \forall z \in [0,m]             \tag{NonNeg}\\
+                p_0 c_0 +   \int_0^m p_z c_z \, dz \leq  w\bar l  +  \pi               \tag{Budget}\\
+            \end{gather}
+    </div>
+</p>
+
+<p>In the above consumer's problem, \(0 < \alpha < 1\), and \(0 < \rho < 1\). \(m\) represents the measure of firms, which is determined in equilibrium, and taken as given by the consumer. The measure of <i>potential</i> firms is fixed at \(\mu>0\). As you might expect, \(p_z\) represents the price of good \(z\),  \(w\) represents the real wage, and \(\pi\) represents the total dividend profits from the firms, all of which the consumer takes as given.</p>
+
+<p>
+    <b>Firm production: </b> Different amounts of labor \(l_z\) can be used in the production of each good \(z\). Labor is the only input. Good \(0\) is produced using the CRS production function
+        \[\bbox[#eee8d5, 5px]{y_0=l_0}\]
+    ,while each of the differentiated goods is produced according to the production function
+        \[\bbox[#eee8d5, 5px]{y_z(l_z) = \max \left\{  x_z  \cdot [l_z-f] , 0  \right\}}\]
+    where \(x_z > 0\) represents the individual firm's productivity level, while \(f > 0\) represents a fixed cost in terms of units of labor that is the same  across all the monopolistic firms. 
+</p>
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3>Problem (a): Optimal Pricing Rule </h3>
+<p><b>  Suppose that the producer of differentiated good \(z\) takes the prices \(p_{z^\prime}\), for \(z^\prime \neq z\), as given. Solve the firm's profit maximization problem to derive an optimal pricing rule.</b></p>
+
+<h5>Solution:</h5>
+
+<p>First, we need to figure out how much of good \(z\) the consumer will be willing to buy as a function of the prices. Once we know the consumer's demand function, we can use it to describe the firm's profits as a function of the prices. And once we have that information, we can find our optimal pricing rule.  </p>
+
+<h6>Step 1: Finding the consumer's demand function:</h6>
+
+<p>Note that the budget constraint will be binding because utility is strictly increasing. Let's assume that the nonegativity constraints are nonbinding. That is, assume \( c_z > 0  \, \forall z \in [0,m] \). With this assumption, we can set up a Lagrangian for the consumer's optimization problem like so:
+    \[\mathcal{L} =  [1-\alpha]\ln c_0 + {\alpha \over \rho} \ln \left(   \int_0^m c_z^\rho \, dz    \right)      -  \lambda \left[     p_0 c_0 +   \int_0^m p_z c_z \, dz -  w\bar l  - \pi        \right] \]
+First order Conditions are:
+    \[{\partial \mathcal{L} \over  \partial c_0}   = 0 = {1-\alpha \over c_0} - \lambda p_0                        \]
+    \[{\partial \mathcal{L} \over  \partial c_h}   = 0 = {\alpha \over \rho}{1 \over \int_0^m c_z^\rho \, dz } \rho c_h^{\rho-1} - \lambda p_h                         \]
+    \[-{\partial \mathcal{L} \over  \partial \lambda}   = 0 = p_0 c_0 +   \int_0^m p_z c_z \, dz -  w\bar l  - \pi                         \]
+    where the FOC for \(c_h\) applies for any differentiated good \(h\in(0,m]\).
+Rearrange to get:
+    \[ {1-\alpha \over c_0} = \lambda  p_0                    \]
+    \[ {\alpha  c_h^{\rho-1} \over \int_0^m c_z^\rho \, dz }  = \lambda p_h                         \]
+    \[p_0 c_0 +   \int_0^m p_z c_z \, dz    =   w\bar l  +  \pi      \]
+Further rearrange the first order conditions for consumption to get
+    \[p_0 c_0 = {1-\alpha \over \lambda}\]
+    \[p_h c_h =       {\alpha  c_h^\rho \over \lambda \int_0^m c_z^\rho \, dz }               \]
+Plug these into the budget constraint:
+    \[        {1-\alpha \over \lambda}    +   \int_0^m {\alpha  c_h^\rho \over \lambda \int_0^m c_z^\rho \, dz }    \, dh    =   w\bar l  +  \pi               \]
+    \[        {1-\alpha \over \lambda}    +   {\alpha \over \lambda \int_0^m c_z^\rho \, dz }  \int_0^m { c_h^\rho  }    \, dh    =   w\bar l  +  \pi               \]
+    \[        {1-\alpha \over \lambda}    +   {\alpha \over \lambda  }      =   w\bar l  +  \pi               \] 
+    \[        {1 \over \lambda}      =   w         \bar l  +  \pi               \] 
+Now that we have an explicit expression for \(\lambda\), we can substitute it back into the FOC for undifferentiated consumption:
+    \[\bbox[#eee8d5, 5px]{p_0 c_0 = [1-\alpha]\cdot [ w\bar l  +  \pi   ]} \]
+And this, along with the budget constraint, implies that 
+    \[        \int_0^m p_z c_z \, dz  = \alpha \cdot [ w\bar l  +  \pi   ]        \]
+One last piece of the puzzle: If we divide the FOCs for two distinct differentiated goods, \(h\) and \(k\), we get
+    \[{\alpha  c_h^{\rho-1}  \int_0^m c_z^\rho \, dz       \over     \alpha  c_k^{\rho-1}  \int_0^m c_z^\rho \, dz      }  = {\lambda p_h \over \lambda p_k}\]
+    \[{  c_h^{\rho-1}    \over    c_k^{\rho-1}      }  = { p_h \over  p_k}\]
+    \[c_k = c_h \left({p_k \over  p_h} \right)^{1\over \rho - 1}\]
+Combine these two results to get:
+    \begin{align}
+        \alpha \cdot [ w\bar l  +  \pi   ]   &= \int_0^m p_z c_z \, dz \\
+        &= \int_0^m p_z c_h \left({p_z \over  p_h} \right)^{1\over \rho - 1} \, dz \\
+        &= c_h  \left({1 \over  p_h} \right)^{1\over \rho - 1}         \int_0^m p_z  p_z^{1\over \rho - 1} \, dz \\
+        &= c_h  \left({1 \over  p_h} \right)^{1\over \rho - 1}         \int_0^m p_z^{\rho\over \rho - 1} \, dz \\
+    \end{align}
+So we get the following equation for the consumption demand of differentiated good \(h\):
+    \[\bbox[#eee8d5, 5px]{c_h  =   {\alpha \cdot [ w\bar l  +  \pi   ]\cdot  p_h^{1\over \rho - 1}  \over \int_0^m p_z^{\rho\over \rho - 1} \, dz }}\]
+Or more succintly, if we denote \(P\equiv \int_0^m p_z^{\rho\over \rho - 1} \, dz \), 
+    \[\bbox[#eee8d5, 5px]{c_h  =   {\alpha \cdot [ w\bar l  +  \pi   ]\cdot  p_h^{1\over \rho - 1} \cdot  {1\over P} }}\]
+</p>
+              
+<h6>Step 2: Firm's optimization problem:</h6>
+
+<p>From step 1, we've learned that If differentiated firm \(h\) sets their price at \(p_h\), then they'll sell 
+    \[c_h = y_h = \alpha  [ w\bar l  +  \pi   ]  p_h^{1\over \rho - 1}   {1\over P}\]
+units of goods.  
+</p>
+
+<p>From the setup, we are told that when  firm  \(h\) is producing non-negative quantities of goods, their output as a function of labor is given by
+    \[y_h  (l_h) = x_h l_h - f\]
+Rearranging this, we get that the amount of labor needed to produce \(y_h\) units of output is 
+    \[l_h (y_h) = {y_h \over x_h} + f\]
+</p>
+
+<p>Put these together and we get that the profit for firm \(h\) will be 
+    \begin{align}
+        \pi_h &= p_h y_h - w l_h \\
+        &= p_h y_h - w \left[{y_h \over x_h} + f\right] \\
+        &= y_h \left[   p_h  - {w \over x_h}   \right] - f\\
+        &= \left[             \alpha  [ w\bar l  +  \pi   ]  p_h^{1\over \rho - 1}   {1\over P}                \right] \cdot \left[   p_h  - {w \over x_h}   \right] - f\\
+    \end{align}
+The derivative of profit with respect to price is then:
+    \[{\partial \pi_h \over \partial p_h} =  \alpha  [ w\bar l  +  \pi   ]  {1\over P} \left[    {\rho \over \rho - 1}  p_h^{1\over \rho - 1}   -    {w \over x_h} {1\over \rho - 1}{p_h^{{1\over \rho - 1}-1} }    \right] \]
+Set this equal to zero and solve for p_h to get:
+    \[   {\rho \over \rho - 1}  p_h^{1\over \rho - 1}             =               {w \over x_h} {1\over \rho - 1}{p_h^{{1\over \rho - 1}-1} }    \]
+    \[   \rho p_h^{1\over \rho - 1}             =               {w \over x_h}{p_h^{{1\over \rho - 1}-1} }    \]
+    \[\bbox[#eee8d5, 5px]{p_h = {w \over \rho x_h }}\]
+This is the optimal pricing rule for differentiated firm \(h\).
+</p>
+
+<!--<p>(It's also worth noting that good \(0\) is produced with  CRS, so \(\pi_0=0\) and \(p_0 = w\))</p>-->
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3>Problem (b): Define equilibrium</h3>
+<p><b>   Suppose that good \(0\) is is produced with the constant-returns production function \(y_0 = l_0\). Suppose that firm productivities are distributed on the interval \(x\geq 1\) according to the Pareto distribution with distribution function \[F(x)=1-x^{-\gamma}\] where \(\gamma > 2\) and \(\gamma > {\rho \over 1-\rho}\). Also suppose the measure of potential firms is fixed at \(\mu\).  Define an equilibrium for this economy.</b></p>
+
+<h5>Solution:</h5>
+
+An equilibrium in this economy consists of 
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+Such that the following conditions are satisfied:
+
+<h6>Consumer Optimization</h6>
+
+
+<h6>Firm 0 optimization</h6>
+
+
+<h6>Differentiated firm optimization.</h6>
+
+
+<h6>Markets Clear:</h6>
+    \[\bar{l} = l_0 + \int_z=0^m l_0 \, dz \]
+    \[y_0 = c_0, \;\; y_z = c_z \;\forall z\in (0,m] \]
+
+
+
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3>Problem (c): Productivity Threshold</h3>
+<p><b>   Suppose that, in equilibrium, not all potential firms actually produce. Find an expression for the productivity of the least productive firm that produces. That is, find a productivity \(\bar{x} > 1\) such that no firm with \(x(z) < \bar{x}\)  produces and all firms with  \(x(z) \geq \bar{x}\) produce. Relate the measure of firms that produce, \(m\) to the measure of potential firms \(\mu\)  and to the cutoff \(\bar{x}\).  </b></p>
+
+
+<h5>Solution:</h5>
+
+<p>The latter part is easy. \(F(\bar{x})=1-\bar{x}^{-\gamma}\) is the portion of potential firms with productivity at or below \(\bar{x}\). Thus \(\mu F(\bar{x})\) is the total measure of such firms. And if only firms at or above this threshold produce, then the measure \(m\) or producing firms will be 
+    \[\bbox[#eee8d5, 5px]{m = \mu \cdot [1- F(\bar{x})] = \mu \bar{x}^{-\gamma}}\]</p>
+
+<p>Actually finding this threshold \(\bar{x}\) will be a bit trickier. A firm will produce iff it can make a non-negative profit by doing so.  We need to find a firm's profits in equilibrium as a function of their productivity level, then  the productivity threshold \(\bar{x}\)  will be the productivity at which the firm makes exactly 0 profit.</p>
+
+<h6>What we already know:</h6>
+<p>Recall from part (a) the following facts about a differentiated firm \(h\) which produces non-zero output:
+    \[\pi_h = p_h y_h - w l_h                                                                  \tag{profit}\]
+    \[l_h  = {y_h \over x_h} + f                                                             \tag{labor required}\]
+    \[c_h  =   {\alpha \cdot [ w\bar l  +  \pi   ]\cdot  p_h^{1\over \rho - 1}  \over \int_0^m p_z^{\rho\over \rho - 1} \, dz }                                                                                                     \tag{demand}\]
+    \[p_h = {w \over \rho x_h }                                                              \tag{optimal pricing}\]
+And also note that \(y_h = c_h\) in equilibrium for every firm which produces.
+</p>
+
+
+<h6>Step 1: Convert the above to functions of productivity.</h6>
+
+<p>Optimal pricing as a function of productivity is fairly straightforward:
+    \[p(x) = {w \over \rho x} \]</p>
+
+<p>Now use this to convert the expression for the price index:
+    \begin{align}
+        P &\equiv \int_0^m p_z^{\rho\over \rho - 1} \, dz \\
+        & = \mu \int_{\bar{x}}^\infty \bbox[border:2px dashed #eee8d5,3px]{p(x)}^{\rho\over \rho - 1} \, \bbox[border:2px dashed #eee8d5,3px]{dF(x)}\\
+        & = \mu \int_{\bar{x}}^\infty \bbox[border:2px dashed #eee8d5,1px]{{\left[w \over \rho x\right]}}^{\rho\over \rho - 1} \, \bbox[border:2px dashed #eee8d5,3px]{\gamma {x}^{-\gamma - 1} dx} \\
+        & = \mu \gamma   {\left[w \over \rho \right]}^{\rho\over \rho - 1} \cdot \int_{\bar{x}}^\infty {\left[1 \over  x\right]}^{\rho\over \rho - 1} \,  { {x}^{-\gamma - 1} \, dx} \\
+        & = \mu \gamma   {\left[w \over \rho \right]}^{\rho\over \rho - 1} \cdot \int_{\bar{x}}^\infty x^{\left[ {\rho \over 1-\rho} - \gamma - 1\right]} \, dx \\
+        & =    {\mu \gamma  \over \left[ {\rho \over 1-\rho} - \gamma \right]} {\left[w \over \rho \right]}^{\rho\over \rho - 1} \cdot  x^{\left[ {\rho \over 1-\rho} - \gamma \right]} \Big|_{\bar{x}}^\infty \\
+        & =    {\mu \gamma  \over \left[ {\rho \over 1-\rho} - \gamma \right]} {\left[w \over \rho \right]}^{\rho\over \rho - 1} \cdot  \left[-\bar{x}^{\left[ {\rho \over 1-\rho} - \gamma \right]} \right] \\
+        & =   - {\mu \gamma  \over \left[ {\rho \over 1-\rho} - \gamma \right]} {\left[w \over \rho \right]}^{\rho\over \rho - 1} \bar{x}^{\left[ {\rho \over 1-\rho} - \gamma \right]}  \\
+        & =   - \mu \gamma {1-\rho \over \rho -\gamma +  \gamma \rho   } {\left[w \over \rho \right]}^{\rho\over \rho - 1} \bar{x}^{\left[ {\rho \over 1-\rho} - \gamma \right]}  \\
+    \end{align}
+Note that the evalutation of the integral requires use of the fact that \( \gamma > {\rho \over 1-\rho} \). We can pretty this up a bit by rearranging things to get 
+    \[P = \mu \gamma {1-\rho \over \gamma -  \gamma \rho  - \rho } {\left[w \over \rho \right]}^{\rho\over \rho - 1} \bar{x}^{\left[ {\rho \over 1-\rho} - \gamma \right]}  \]</p>
+
+<p>And then we can plug this into the demand function to get 
+    \begin{align}
+        y(x) = c(x) &=  {\alpha \cdot [ w\bar l  +  \pi   ]\cdot  \dashbox{#eee8d5}{p(x)}^{1\over \rho - 1}  \over \dashbox{#eee8d5}{\int_0^m p_z^{\rho\over \rho - 1} \, dz} }        \\
+            \newcommand{\PExpression}{\mu \gamma {1-\rho \over \gamma -  \gamma \rho  - \rho } {\left[w \over \rho \right]}^{\rho\over \rho - 1} \bar{x}^{\left[ {\rho \over 1-\rho} - \gamma \right]} }
+        & =               {\alpha \cdot [ w\bar l  +  \pi   ]\cdot  \dashbox{#eee8d5}{\left[{w \over \rho x}\right]}^{1\over \rho - 1}  \over \dashbox{#eee8d5}{\PExpression} }        \\
+        & = \alpha [w\bar l  +  \pi] {\gamma -\gamma\rho - \rho \over   \mu \gamma [1-\rho] }  {\rho \over w}           x^{1 \over 1 - \rho}            \bar{x}^{\left[\gamma - {  \rho \over 1-\rho}  \right]} 
+    \end{align}
+</p>
+
+<p>Next, we can get the expression for the profits of a firm with productivity \(x > \bar{x}\):
+    \begin{align}
+        \pi(x) &= p(x) y(x) - w l(x) \\
+        &=  p(x) y(x) - w {y(x) \over x} - w f \\
+        & =  \left[\dashbox{#eee8d5}{ p(x)} - {w \over x} \right] \dashbox{#eee8d5}{y(x)} -wf \\
+            \newcommand{YExpression}{{\alpha [w\bar l  +  \pi] {\gamma -\gamma\rho - \rho \over   \mu \gamma [1-\rho] }  {\rho \over w}          x^{1 \over 1 - \rho}          \bar{x}^{\left[\gamma - {  \rho \over 1-\rho}  \right]}         }}
+        & =  \left[ \dashbox{#eee8d5}{{w \over \rho x}} - {w \over x} \right] \dashbox{#eee8d5}{\left[\YExpression\right]} -wf \\
+        & =  \cancel{\left[ {1-\rho \over \rho}{w \over x} \right]}   \alpha [w\bar l  +  \pi] {\gamma -\gamma\rho - \rho \over   \mu \gamma \cancel{[1-\rho]} }  {\cancel{\rho} \over \cancel{w}}          {x^{1 \over 1 - \rho} \over \color{red}{x}}         \bar{x}^{\left[\gamma - {  \rho \over 1-\rho}  \right]}        -wf \\
+        &= \alpha[w\bar{l}+\pi]\frac{\gamma-\gamma\rho-\rho}{\mu\gamma}x^{\frac{\rho}{1-\rho}}\bar{x}^{\left[\gamma-\frac{\rho}{1-\rho}\right]}-wf
+    \end{align}
+</p>
+
+
+<h6>Step 2: Finding the threshold productivity.</h6>
+
+<p>A firm will produce iff they can make positive profits iff \(x = \bar{x}\). Thus 
+    \begin{align}
+        0 &= \pi(\bar{x}) \\
+        &= \alpha[w\bar{l}+\pi]\frac{\gamma-\gamma\rho-\rho}{\mu\gamma}\bar{x}^{\frac{\rho}{1-\rho}}\bar{x}^{\left[\gamma-\frac{\rho}{1-\rho}\right]}-wf \\
+        &= \alpha[w\bar{l}+\pi]\frac{\gamma-\gamma\rho-\rho}{\mu\gamma}\bar{x}^\gamma-wf
+    \end{align} 
+    \[\bar{x}^\gamma = {wf \over \alpha[w\bar{l}+\pi]} \frac{\mu\gamma}{\gamma-\gamma\rho-\rho}\]
+    \[\bar{x} = \left[{w f \mu \gamma \over \alpha[w\bar{l}+\pi][\gamma-\gamma\rho-\rho]}\right]^{1\over\gamma}\]</p>
+
+<p>But we aren't quite done, because this expression includes two endogenous parameters \(w\) and \(\pi\). We can deal with \(w\) by just setting \(p_0 = w\) as the numeraire. But we need to find the total industry profit: 
+    \begin{align}
+        \pi &=  \mu \int_{\bar{x}}^\infty \dashbox{#eee8d5}{\pi(x)} \,  \dashbox{#eee8d5}{ dF(x)}  \\
+        &= \mu \int_{\bar{x}}^\infty \dashbox{#eee8d5}{\left[\alpha[w\bar{l}+\pi]\frac{\gamma-\gamma\rho-\rho}{\mu\gamma}x^{\frac{\rho}{1-\rho}}\bar{x}^{\left[\gamma-\frac{\rho}{1-\rho}\right]}-wf\right]} \,  \dashbox{#eee8d5}{ \gamma {x}^{-\gamma - 1} \, dx}\\
+        &= \left[\mu\alpha[w\bar{l}+\pi]\frac{\gamma-\gamma\rho-\rho}{\mu\gamma}\bar{x}^{\left[\gamma-\frac{\rho}{1-\rho}\right]}\gamma \int_{\bar{x}}^{\infty}x^{\left[\frac{\rho}{1-\rho}-\gamma-1\right]}\,dx\right]-\left[\mu wf \gamma\int_{\bar{x}}^{\infty}{x}^{-\gamma-1}\,dx\right] \\
+        &=  \left[\cancel{\mu}\alpha[w\bar{l}+\pi]\frac{\cancel{\gamma-\gamma\rho-\rho}}{\cancel{\mu}\cancel{\gamma}}\bar{x}^{\left[\gamma-\frac{\rho}{1-\rho}\right]}\frac{1-\rho}{\cancel{\rho-\gamma+\gamma\rho}}\cancel{\gamma}x^{\left[\frac{\rho}{1-\rho}-\gamma\right]}\Big|_{\bar{x}}^{\infty}\right]-\left[\frac{\mu w f \cancel{\gamma}}{-\cancel{\gamma}}{x}^{-\gamma}\Big|_{\bar{x}}^{\infty}\right] \\
+        &= \left[\alpha[w\bar{l}+\pi]\bar{x}^{\left[\gamma-\frac{\rho}{1-\rho}\right]}{1-\rho \over -1}\left[0-\bar{x}^{\left[\frac{\rho}{1-\rho}-\gamma\right]}\right]\right]-\left[-\mu w f \left[0-{\bar{x}}^{-\gamma}\right]\right] \\
+        &= \left[\alpha[w\bar{l}+\pi]\cancel{\bar{x}^{\left[\gamma-\frac{\rho}{1-\rho}\right]}}[1-\rho]\cancel{\bar{x}^{\left[\frac{\rho}{1-\rho}-\gamma\right]}}\right]-\mu wf{\bar{x}}^{-\gamma}\\
+        &= \alpha[w\bar{l}+\pi][1-\rho]-\mu wf{\bar{x}}^{-\gamma}
+    \end{align}
+    \[\pi - \alpha[1-\rho]\pi = \alpha w\bar{l}[1-\rho]-\mu wf{\bar{x}}^{-\gamma}\]
+    \[\pi = {\alpha w\bar{l}[1-\rho]-\mu wf{\bar{x}}^{-\gamma} \over  1 - \alpha[1-\rho]}\]
+</p>
+
+<p>Great! We now have an expression for \(\pi\) in terms of \(\bar{x}\) and vice versa. Plug one into the other, and we can solve. First note that 
+    \[\bar{x}^{-\gamma} = \left[{w f \mu \gamma \over \alpha[w\bar{l}+\pi][\gamma-\gamma\rho-\rho]}\right]^{-1}\]
+    \[\bar{x}^{-\gamma} = \left[{\alpha[w\bar{l}+\pi][\gamma-\gamma\rho-\rho] \over w f \mu \gamma }\right]\]
+So 
+    \begin{align}
+        \pi &= \alpha[w\bar{l}+\pi][1-\rho]-\mu wf\left[{\alpha[w\bar{l}+\pi][\gamma-\gamma\rho-\rho] \over w f \mu \gamma }\right] \\
+        &= \alpha[w\bar{l}+\pi][1-\rho]-\cancel{\mu wf}\left[{\alpha[w\bar{l}+\pi][\gamma-\gamma\rho-\rho] \over\cancel{ w f \mu} \gamma }\right] \\
+        &= \alpha[w\bar{l}+\pi][1-\rho]-\frac{\alpha[w\bar{l}+\pi][\gamma-\gamma\rho-\rho]}{\gamma}\\
+        &= \alpha[w\bar{l}+\pi][1-\rho-1+\rho+\frac{\rho}{\gamma}] \\
+        &= \alpha[w\bar{l}+\pi]\frac{\rho}{\gamma}
+    \end{align}
+    \[\pi-\alpha\frac{\rho}{\gamma}\pi=\alpha w\bar{l}\frac{\rho}{\gamma}\]
+    \[\pi=\frac{\alpha w\bar{l}\frac{\rho}{\gamma}}{1-\alpha\frac{\rho}{\gamma}}=\frac{\alpha w\bar{l}\frac{\rho}{\gamma}}{\left[\frac{\gamma-\alpha\rho}{\gamma}\right]}=\frac{\alpha w\bar{l}\rho}{\gamma-\alpha\rho}\]
+And plugging this back into the formula for \(\bar{x}\), we get 
+    \begin{align}
+        \bar{x} &=\left[\frac{wf\mu\gamma}{\alpha[w\bar{l}+\dashbox{#eee8d5}{\pi}][\gamma-\gamma\rho-\rho]}\right]^{\frac{1}{\gamma}}\\
+        &=\left[\frac{wf\mu\gamma}{\alpha[w\bar{l}+\dashbox{#eee8d5}{\frac{\alpha w\bar{l}\rho}{\gamma-\alpha\rho}}][\gamma-\gamma\rho-\rho]}\right]^{\frac{1}{\gamma}}\\
+        &= \left[\frac{wf\mu\gamma}{\alpha w\bar{l}[1+\frac{\alpha\rho}{\gamma-\alpha\rho}][\gamma-\gamma\rho-\rho]}\right]^{\frac{1}{\gamma}}\\
+        &= \left[\frac{wf\mu\gamma}{\alpha w\bar{l}[\frac{\gamma}{\gamma-\alpha\rho}][\gamma-\gamma\rho-\rho]}\right]^{\frac{1}{\gamma}}\\
+        &= \left[\frac{f\mu[\gamma-\alpha\rho]}{\alpha\bar{l}[\gamma-\gamma\rho-\rho]}\right]^{\frac{1}{\gamma}}
+    \end{align}
+    \[\bbox[#eee8d5, 5px]{\bar{x}=\left[\frac{f\mu[\gamma-\alpha\rho]}{\alpha\bar{l}[\gamma-\gamma\rho-\rho]}\right]^{\frac{1}{\gamma}}}\]
+
+
+
+\dashbox{#eee8d5}{test}
+<hr>
+TODO: Maybe skip right to \(\pi_h = \left[             \alpha  [ w\bar l  +  \pi   ]  p_h^{1\over \rho - 1}   {1\over P}                \right] \cdot \left[   p_h  - {w \over x_h}   \right] - f\)
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3>Problem (d): Trade Equilibrium Definition</h3>
+<p><b>  </b></p>
+
+
+
+
+
+
+
+
+
+
+
+
+<h3>Problem (e): Characterize Symettric Equilibrium</h3>
+<p><b>  </b></p>
+
+
+
+
+
+
+
+
+<h3>Problem (e): Costly Entry Definition</h3>
+<p><b>Suppose that the set of potential firms \(\mu\) is not fixed but instead is determined by a       costly entry condition. Potential firms pay an entry cost \(\phi > 0\) in terms of their country’s      labor. Consider the closed economy model in part b and explain how the definition of       equilibrium changes.</b></p>
+
+
+
+
+
+
+<h3>Problem (e): The Real World</h3>
+<p><b>Discuss the strengths and limitations of this sort of model for account for firm-level data on exports.</b></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<!--
+<div class="definition">
+        <h4>A Closed-Economy One-Period Macroeconomic Model, with Lump-sum Taxes:</h4>
+        <p>
+        Given exogenous \(\left\{   h,z,K,g   \right\}\), 
+        a competitive equilibrium is a set of allocations \(\left\{   C,l,N_s,N_d,T   \right\}\) 
+        and a real wage \(\left\{   w   \right\}\)   
+        which satisfy the following:
+        <ul>
+            <li><b>Consumer Optimization</b>: Taking the real wage as given, the representative consumer chooses an allocation \(\left\{ C,l,N_s \right\}\) such that  \(N_s = h-l\) and such that their allocation solves:
+                    \[\max_{C,l}\; U(C,l)\]
+                subject to the constraints:
+                    \begin{gather}
+                        c\geq 0,    \quad        \quad         h \geq l \geq 0             \tag{NonNeg}\\
+                        c    \leq  w\cdot(h-l)  +  \pi -  T              \tag{Budget}\\
+                    \end{gather}
+            </li>
+            <li><b>Firm Optimization</b>: Taking the real wage as given, the representative firm chooses their labor demand, \(N_d\) to maximize profits:
+                    \[\max_{N_d}\; \pi  \]
+                where profits are equal to revenue minus costs:
+                    \[ \pi = Y - w N_d \]
+                output is determined by some production function:
+                    \[Y = zF(K,N_d)\]
+                and subject to the constraint that \(N_d \geq 0\).
+            </li>
+            <li><b>Markets Clear:</b>
+                \begin{gather}
+                    N_d = N_s    \tag{labor}\\
+                    C + g = Y = zF(K,N)     \tag{goods}\\
+                \end{gather}
+            </li>
+            <li>The government's budget is balanced: \(T=g\)</li>
+        </ul>
+        </p>
+    </div><br>
+-->
+
+
+</body>
+</html>
+
+
+

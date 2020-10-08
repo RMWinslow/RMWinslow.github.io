@@ -1,5 +1,12 @@
 # RMWinslow.github.io
 
+Todo:
+
+* add the nifty card stufff from basic.css into my css file
+* clean up the repos I used for testing
+* Make a markdown pages repo for my lists.
+
+
 This is currently only partially accurate.
 
 Site Map:

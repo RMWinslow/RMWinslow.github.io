@@ -1,0 +1,235 @@
+/* This css file draws from basic.css, sakura.css, and tufte.css  */
+
+* {box-sizing: border-box}
+
+:root{
+--sans: 1rem/1.6 system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue, Fira Sans, sans-serif;
+--mono: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, 'Courier New', monospace;
+--serif:  1.1rem/1.6 serif;
+--c1:#7a0019;
+--c2:#eee8d5;
+--c3:#fdf6e3;
+--c4:#000;
+--c5:#fff;
+--c6: #073642;
+--c7: #93a1a1;
+--m1: 8px;
+--rc: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+    --c2:#333;
+    --c3:#1e1f20;
+    --c4:#fff;
+	}
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    min-height: 100%;
+    position: relative;
+}
+
+
+/* General settings */
+
+body {
+    margin: auto;
+    font: var(--serif);
+    max-width: 45em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--c3);
+    color: var(--c6);
+    min-height: 100%;
+    padding: 10px;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    padding: 10px; 
+    margin: 0; margin-top: 3rem;
+}
+
+img, iframe {border: none; max-width: 100%}
+
+a {color: var(--c1);  text-decoration:underline}
+
+a:hover {color: var(--c4); text-decoration: underline}
+
+pre {font: 1rem/1.6 var(--mono); background: var(--c2); padding: 1em; overflow: auto}
+
+code {font: 1rem/1.6 var(--mono);}
+
+blockquote { font-style: italic;  border-left: 5px solid var(--c2);  padding-left: 1em; margin-left: 1.5em;}
+
+hr {border:0; border-bottom: 2px solid var(--c1)}
+
+
+
+/* Headers */
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0.6em 0; 
+    font-weight: 600;  
+    font-family: Verdana, Geneva, sans-serif;
+    line-height: 1.1;
+    color: var(--c4);
+}
+
+h1 {font-size: 2.25rem;}
+h2 {font-size: 2rem;}
+h3 {font-size: 1.75rem;}
+h4 {font-size: 1.5rem;}
+h5 {font-size: 1.25rem; }
+h6 {font-size: 1rem; }
+
+
+/* Table */
+
+table {border-collapse: collapse; border-spacing: 0; margin:1em 0;
+    width: 100%;
+    max-width: 100%;}
+
+th, td {vertical-align: top; border: 1px solid; padding: 0.4em}
+
+thead,tfoot {background: var(--c2)}
+
+
+/* Rounded Corners*/
+
+pre,code,input, select,button,img, details {border-radius: var(--rc)}
+/*pre,code,input,select,textarea,button,img {border-radius: var(--rc)}*/
+
+
+/* Forms */
+
+textarea {width: 100%;}
+
+input, select, textarea {font-size: 1rem; color:var(--c4); background: var(--c2); border: 2px solid var(--c2); padding: 0.4em}
+
+textarea:focus, select:focus {border: 2px solid var(--c1);   }
+
+button, input[type=submit], input[type=reset], input[type="button"] { -webkit-appearance: none; font-size: 1em; display: inline-block; color: var(--c5); background: var(--c1);  border: 0; margin: 4px;  padding: 0.6em; cursor: pointer; text-align: center}
+
+button:hover, button:focus, input:hover, textarea:hover, select:hover {opacity: 0.8}
+
+input[type=checkbox]:focus {outline: 1px dotted var(--c1);}
+
+
+
+
+
+/*Details and Summary*/
+details {
+    border: 2px solid var(--c2); 
+    padding: 0.5em .5em 0;
+}
+
+summary {
+    font-weight: bold;
+    margin: -.5em -.5em 0;
+    padding: .5em;
+    background-color: var(--c2);
+}
+
+
+
+
+
+
+/* Infinite Grid (from basic.css) */
+
+section {display: flex; flex-flow: row wrap}
+
+[style*="--c:"], section>section, aside, article {flex:var(--c,1); margin:var(--m1)}
+
+/* Cards  (from basic.css)*/
+
+article {background: var(--c2); border-radius: var(--rc); padding: 1em; box-shadow: 0px 1px 0px rgba(0,0,0,0.3)}
+
+[style*="--c:"]:first-child, section>section:first-child, article:first-child {margin-left:0}
+[style*="--c:"]:last-child, section>section:last-child, article:last-child {margin-right:0}
+
+/*Reflow cards on mobile (from basic.css)*/
+
+@media (max-width: 481px) {
+    section,article {flex:none; width:100%; margin-left: 0;}
+}
+
+
+
+
+
+
+
+/*My attempt at a tufte style sidenote css*/
+/*Little more than tweaking tufte to use an aside because I hate classism*/
+
+aside {
+    color: var(--c7);
+    font-size: .9rem;
+    float: right;
+    margin-top: 0;
+    /*100vw is viewport width*/ 
+    /*100% is parent's width is viewport width*/
+    /*(100vw - 100%) / 2 is therefore the width of one margin*/
+    width: calc(0.8* (100vw - 100%) / 2); 
+    margin-right: calc(max(-0.8 * (100vw - 100%) / 2, -80%)   -  2.5rem);
+    max-width: 80%;
+}
+
+/*
+aside {
+    display: block;
+    float: left;
+    position: absolute;
+    margin-left: 0;
+    left: 2.5rem;
+    width: calc(2.5rem * 3);
+    text-align: right;
+    list-style-type: none;
+    clear:both; margin-bottom: 1rem;
+    font-variant-numeric: normal;
+}
+
+@media all and (min-width:1200px) {
+    aside {
+        left : 0;
+        width: calc(2.5rem * 4);
+    }
+}*/
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/*THIS IS PRETTY HACKY AND WILL PROBABLY NEED TO BE CHANGED WHEN I UPDATE MATHJAX*/
+/*MathJax Styling*/
+
+/*TODO: Remove after testing    font-size: 1.2em !important;*/
+
+.MathJax { color:hsl(193, 14%, 26%) !important; font-size: 1.0em !important;}
+mjx-labels {color: #b58900 !important;}
+
+/*.mjx-chtml {color:hsl(193, 14%, 26%) !important; font-size: 1.05em !important;}*/
+.mjx-chtml { font-size: 1.05em !important;}
+.mjx-label {color: #b58800 !important; }
+
+@media screen and (max-width: 600px) {
+  .column {
+    .MathJax { color:hsl(193, 14%, 26%) !important; font-size: 1.4em !important;}
+    .mjx-chtml {color:hsl(193, 14%, 26%) !important; font-size: 1.4em! important;}
+  }
+}

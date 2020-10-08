@@ -2,32 +2,357 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Macro Prelim Notes</title>
-<link href="../../styles/sakura.css" rel="stylesheet" type="text/css">
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
-<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+<title>Self-fulfilling Debt Crises</title>
+<link href="../../../styles/basic_sakura.css" rel="stylesheet" type="text/css">
+<!--The following is used to allow the math to wordwrap.-->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        CommonHTML: { linebreaks: { automatic: true } },
+        "HTML-CSS": { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } },
+        TeX: {extensions: ["enclose.js"]},
+        tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          processEscapes: true
+        }
+    });
+    </script>
+    <!--The following is used to make subtle highlights and red crossthroughs on cancelled terms.-->
+    <div hidden>\(   \def\dashbox#1#2{ \bbox[border:2px dashed #1,3px]{#2}   }                 \def\cancel#1{\color{red}{\enclose{updiagonalstrike,downdiagonalstrike}{\color{black}{#1}}}}                   \)</div>
+<!--Renders math--><script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+<!--For mobile--><meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
 </head>
 <body>
 
 
+
 <h1>Trade Prelim Notes</h1>
+<h2>Self-fulfilling Debt Crises</h2>
+<p>This problem is from Tim Kehoe. It showed up on the trade prelims in 2016 (spring) and 2018.</p>
+
+<h3>Setup:</h3>
 
 
 
-<h2>Tim Kehoe's Prelim Problems</h2>
-Intl Trade with Monopolistic Competition and Heterogenous Firms xx
-Self Fulfilling Debt Crises xx
-Dynamic Hecksher Ohlin
-Learning by Doing
 
 
 
-<h2>Doireann Fitzgerald's Prelim Problems</h2>
-Symmetric Mellitz Otivanio xx
-Armington Model of Trade and the gravity equation xx
+<hr>
+<hr>
+<hr>
 
 
-<h2>Amadors's Prelim Problems</h2>
+
+<h1>Dump of LaTeX solution</h1>
+
+
+
+\newpage Problem 4
+
+Consider a small open economy with a governemen tthat borrows. In
+each period, value of output is 
+\[
+y(z)=Z^{1-z}\bar{y}
+\]
+ $Z\in(0,1)$ and $z=0$ iff the government defaults or has ever defaulted.
+
+Tax revenue is
+\[
+\theta y(z)
+\]
+ with constant $\theta\in(0,1)$ . The consumers consume 
+\[
+c=(1-\theta)y(z)
+\]
+ The fovernemnt seeks to maximize the expected discounted value of
+\[
+u(c,g)=\log c+\gamma\log g
+\]
+
+$B$ is level of governemnt debt, $\zeta\in[0,1]$ is the realization
+of a sunspot variable.
+
+The governemtn offers $B'$ to international bankers, who have same
+discount factor, risk neutral.
+
+Bond is bought at price $q(B',B,z,\zeta).$Then the governemnt choose
+whether to default.
+
+governemnt spending determined by
+\[
+g+zB=\theta y(z)+q(B',s)B'
+\]
+
+If the goverenment defaults, setting $z=0$, then assume that $z_{-1}=0$
+forever after. And $q(B',s)=0.$
+
+\subsection*{a) Define recursive equilibrium.}
+
+A recursive equiliibrum in this economy is a value function for the
+government $V(s)$ and policy functions $B'(s)$, $z(B',s,q),$ $g(B',s,q)$
+such that
+
+At the beginning of the period, given the policy and price functions,
+the governement chooses $B'$ to solve
+\[
+V(s)=\max_{B'}\left[\log c+\gamma\log g+\beta EV(s')\right]
+\]
+\[
+\text{s.t. }c=(1-\theta)y(z(B',s,q(B',s)))
+\]
+\[
+g(B',s,q(B',s))+z(B',s,q(B',s))B=\theta y(z)+q(B',s)B'
+\]
+
+Bond prices are equal to risk-free price times probability of repayment
+\[
+q(B'(s),s)=\beta Ez(B'(s'),s',q(B'(s'),s'))
+\]
+
+At the end of the period, given the value fucntion, $B'$ and $q$,
+the government chooses z and g to solve
+\[
+\max_{z,g}\left[\log c+\gamma\log g+\beta EV(B',z,\zeta')\right]
+\]
+\[
+\text{s.t. }c=(1-\theta)y(z)
+\]
+\[
+g+zB=\theta y(z)+qB'
+\]
+\[
+z\in\{0,1\}\ \ \text{and}\ \ z=0\text{ if }z_{-1}=0
+\]
+
+
+\subsection*{b)Assume bankers expect gov to default if $\zeta>1-\pi$ and if such
+expectation is self fulfilling. Find a level of debt $\bar{b}$ such
+that no default occurs if $B\protect\leq\bar{b}$ but does in equilibirum
+if $B>\bar{b}.$}
+
+Let's first consider what the value function looks like if the government
+is garunteed not to default and has never defaulted before. And where
+the level of debt is kept at a steady state $B$ (That is, $B'(s)=B$).
+
+\[
+q(B,s)=\beta
+\]
+
+\[
+V(B,1,\zeta)=\log\left((1-\theta)\bar{y}\right)+\gamma\log\left(\theta\bar{y}-B+\beta B\right)+\beta EV(B,1,\zeta')
+\]
+
+If there is no chance of default, then $V(B,1,\zeta)=V(B,1,\zeta')$
+for all $\zeta'$. And so:
+\[
+(1-\beta)V(B,1,\zeta)=u\left((1-\theta)\bar{y},\theta\bar{y}-B+\beta B\right)
+\]
+\[
+V(B,1,\zeta)=\frac{\log(1-\theta)\bar{y}+\gamma\log\left(\theta\bar{y}-B+\beta B\right)}{1-\beta}
+\]
+
+If the gov defaults and bankers don't lend this period, then the goverenment
+will collect $\theta Z\bar{y}$ forever, spending all of it on $g.$
+$\sum_{t=0}^{\infty}\beta^{t}=\frac{1}{1-\beta}$. Thus time-discounted
+expected utility of exiting from the financial market if bankers do
+not lend is
+\[
+\frac{1}{1-\beta}\left(\log((1-\theta)Z\bar{y})+\gamma\log(\theta Z\bar{y})\right)
+\]
+
+Now suppose that the bankers all decide to blacklist the government
+and never lend, but the gov decides not to default. Then they pay
+off the current debt and then starting collect and spend $\theta\bar{y}$
+starting from next period unti lthe end of of time. $\sum_{t=1}^{\infty}\beta^{t}=\frac{\beta}{1-\beta}$
+so the expected discounted utility of repaying the current debt if
+the bankers decide never to lend again is
+\[
+\log(1-\theta)\bar{y}+\gamma\log\left(\theta\bar{y}-B\right)+\frac{\beta}{1-\beta}\left(\log\left((1-\theta)\bar{y}\right)+\gamma\log\left(\theta\bar{y}\right)\right)
+\]
+
+The higher the debt, the more tempting it is for the government to
+default when the bankers stop lending. We can use the two above equations
+to find the $B$ that makes the government indifferent between default
+and repayment:
+\[
+\log(1-\theta)\bar{y}+\gamma\log\left(\theta\bar{y}-B\right)+\frac{\beta}{1-\beta}\left(\log\left((1-\theta)\bar{y}\right)+\gamma\log\left(\theta\bar{y}\right)\right)=\frac{1}{1-\beta}\left(\log((1-\theta)Z\bar{y})+\gamma\log(\theta Z\bar{y})\right)
+\]
+\[
+\gamma\log\left(\theta\bar{y}-B\right)=\frac{1}{1-\beta}\log\left((1-\theta)\theta^{\gamma}Z^{\gamma+1}\bar{y}^{\gamma+1}\right)-\frac{\beta}{1-\beta}\log\left((1-\theta)\theta^{\gamma}\bar{y}^{\gamma+1}\right)-\log(1-\theta)\bar{y}
+\]
+\[
+\gamma\log\left(\theta\bar{y}-B\right)=\log\left((1-\theta)\theta^{\gamma}Z^{\gamma+1}\bar{y}^{\gamma+1}\right)^{\frac{1}{1-\beta}}-\log\left((1-\theta)\theta^{\gamma}\bar{y}^{\gamma+1}\right)^{\frac{\beta}{1-\beta}}-\log(1-\theta)\bar{y}
+\]
+\begin{align*}
+\log\left(\theta\bar{y}-B\right) & =\log\left(\frac{\left((1-\theta)\theta^{\gamma}Z^{\gamma+1}\bar{y}^{\gamma+1}\right)^{\frac{1}{1-\beta}}}{\left((1-\theta)\theta^{\gamma}\bar{y}^{\gamma+1}\right)^{\frac{\beta}{1-\beta}}(1-\theta)\bar{y}}\right)^{\frac{1}{\gamma}}\\
+ & =\log\left(\frac{\left(\theta^{\gamma}Z^{\gamma+1}\bar{y}^{\gamma+1}\right)^{\frac{1}{1-\beta}}}{\left(\theta^{\gamma}\bar{y}^{\gamma+1}\right)^{\frac{\beta}{1-\beta}}\bar{y}}\right)^{\frac{1}{\gamma}}\\
+ & =\log\left(\frac{\left(Z^{\gamma+1}\right)^{\frac{1}{1-\beta}}}{\bar{y}}\theta^{\gamma}\bar{y}^{\gamma+1}\right)^{\frac{1}{\gamma}}\\
+ & =\log\left(Z^{\frac{\gamma+1}{1-\beta}}\theta^{\gamma}\bar{y}^{\gamma}\right)^{\frac{1}{\gamma}}\\
+ & =\log Z^{\frac{\gamma+1}{\gamma(1-\beta)}}\theta\bar{y}
+\end{align*}
+\[
+\bar{b}=\left(1-Z^{\frac{\gamma+1}{\gamma(1-\beta)}}\right)\theta\bar{y}
+\]
+
+If $B\leq\bar{b}$, then the penalty to production is enough to make
+the governemnet pay its debts, and so bankers can know with certainty
+that there will be no defaulting this period.
+
+\subsection*{c) Suppose that $B_{0}>\bar{b}$ and the government chooses to run
+down its debt to $B_{T}\protect\leq\bar{b}$\textmd{\normalsize{}
+in} $T$ periods. }
+
+Prove that it is not optimal to set $B_{T}<\bar{b}$. Prove that it
+is optimal for gov to set $g_{t}$ constant as long as $B_{t}>\bar{b}$
+and no crisis occurs. Find expresions for $g_{t}$ and $B_{t}$that
+depend on $B_{0}$ and $T.$ Find expresion for expected discounted
+value of utiltiy of running down the debt that starts at $B_{0}$
+to $\bar{b}$ in $T$ periods. Find the limit of these expresions
+when $T=\infty$
+
+-
+
+Suppose that the government is trying to decide whether to reduce
+its debt to $B_{T}<\bar{b}$ or $\bar{b}$. The time to reduce is
+the same in either case, and so the probability of debt crisis and
+default is the same in either plan. If the gov defaults, they ignore
+debt levels for the rest of time. Thus when choosing between the two
+plans, the government only needs to consider $c$ and $g$ during
+these rundown period. 
+
+If the optimal plan involves going to the lower debt level, then the
+government could follow that plan until they reach the point where
+debt is $\bar{b}$ and then take the money which the plan says is
+for further debt repayment and instead use that money on additional
+expenditure in the current period. This is a strictly better alternate
+plan which runs down debt to $\bar{b}$. Therefore, by contradiction,
+the optimal plan cannot feature $B_{T}<\bar{b}$ as its target debt.
+
+-
+
+In running down the debt, the government is essentially redirecting
+a portion of tax revenue from spending to repaying debts. Because
+of the logarithmic form of the objective fucntion, it is valuable
+to smooth government spending over time. And so taking a constant
+chunk from production each period is better than taking one large
+chunk from production in one period. 
+
+-
+
+Let $\tilde{g}(T,B_{0})$ be the optimal government spending when
+running down an initial debt of $B_{0}$ over $T$ periods. From HW5,
+we know that 
+\[
+\tilde{g}(T,B_{0})=\theta\bar{y}-\frac{1-\beta(1-\pi)}{1-\left(\beta(1-\pi)\right)^{T}}\left(B_{0}-(\beta(1-\pi))^{T-1}\beta\bar{b}\right)
+\]
+
+\[
+\tilde{g}(\infty,B_{0})=\lim_{T\to\infty}\tilde{g}(T,B_{0})=\theta\bar{y}-\left(1-\beta(1-\pi)\right)\left(B_{0}\right)
+\]
+
+And let $\tilde{V}(T,B_{0})$ be the time discounted expected value
+of the same plan above. Again, from the hw, 
+\begin{align*}
+\tilde{V}(T,B_{0}) & =P\left(\text{No crisis occurs}\right)\left(\text{Value of following plan for T periods+}\beta^{t}V(\bar{b},1,\zeta)\right)\\
+ & +\sum_{t=0}^{T}\left[\left(P(\text{crisis at time exactly t})\right)\left(\text{Value of following plan for t-1 periods+}\beta^{t}V(0,0,\zeta)\right)\right]
+\end{align*}
+\begin{align*}
+\tilde{V}(T,B_{0})= & \frac{1-\left(\beta(1-\pi)\right)^{T}}{1-\beta(1-\pi)}\left(\log\left((1-\theta)\bar{y}\right)+\gamma\log\left(\tilde{g}(T,B_{0})\right)\right)\\
+ & +\frac{1-\left(\beta(1-\pi)\right)^{T-1}}{1-\beta(1-\pi)}\frac{\beta\pi\left(\log\left((1-\theta)Z\bar{y}\right)+\gamma\log\left(\theta Z\bar{y}\right)\right)}{1-\beta}\\
+ & +\left(\beta(1-\pi)\right)^{T-2}\frac{\beta\left(\log\left((1-\theta)\bar{y}\right)+\gamma\log\left(\theta\bar{y}\right)\right)}{1-\beta}
+\end{align*}
+\begin{align*}
+\tilde{V}(\infty,B_{0})= & \frac{1}{1-\beta(1-\pi)}\left(\log\left((1-\theta)\bar{y}\right)+\gamma\log\left(\tilde{g}(\infty,B_{0})\right)\right)\\
+ & +\frac{1}{1-\beta(1-\pi)}\frac{\beta\pi\left(\log\left((1-\theta)Z\bar{y}\right)+\gamma\log\left(\theta Z\bar{y}\right)\right)}{1-\beta}
+\end{align*}
+
+
+\subsection*{d) Using the answers to part c, write down a formula that determines
+a value of debt $\bar{B}(\pi)$ such that the government would choose
+to default if $B>\bar{B}(\pi)$ even if international bankers do not
+expect a default. }
+
+If the government is going to run down their debt, they will choose
+the time period of the rundown to maximize expected discounted value
+of the objective function. To find the threshold at which the government
+will always choose to default, we find the point at which the government
+is indifferent between defaulting and the optimal rundown policy.
+that is, 
+\begin{align*}
+\frac{1}{1-\beta}\left(\log((1-\theta)Z\bar{y})\right)+\frac{\beta}{1-\beta}\left(\gamma\log(\theta Z\bar{y})\right)+\gamma\log(\theta Z\bar{y}+\beta(1-\pi)\bar{B}(\pi))=\max_{T}\tilde{V}(T,\bar{B}(\pi))
+\end{align*}
+
+Not sure how to solve this algebraicaly. But the above can be solved
+for $\bar{B}(\pi)$. At any debt levels higher than this, the government
+has higher utility from just taking the loaned money $\beta(1-\pi)\bar{B}(\pi)$
+than they lose from default penalties. 
+
+\subsection*{e) construct recursive equilibirum based on a-d}
+
+A recursive equiliibrum in this economy is a value function for the
+government $V(s)$ and policy functions $B'(s)$, $z(B',s,q),$ $g(B',s,q)$
+such that
+
+At the beginning of the period, given the policy and price functions,
+the governement chooses $B'$ to solve
+\[
+V(s)=\max_{B'}\left[\log c+\gamma\log g+\beta EV(s')\right]
+\]
+\[
+\text{s.t. }c=(1-\theta)y(z(B',s,q(B',s)))
+\]
+\[
+g(B',s,q(B',s))+z(B',s,q(B',s))\delta B=\theta y(z)+q(B',s)\left(B'-(1-\delta)B\right)
+\]
+
+Bond prices are equal to risk-free price times probability of repayment
+\[
+q(B'(s),s)=\beta Ez(B'(s'),s',q(B'(s'),s'))
+\]
+
+At the end of the period, given the value fucntion, $B'$ and $q$,
+the government chooses z and g to solve
+\[
+\max_{z,g}\left[\log c+\gamma\log g+\beta EV(B',z,\zeta')\right]
+\]
+\[
+\text{s.t. }c=(1-\theta)y(z)
+\]
+\[
+g+z\delta B=\theta y(z)+q\left(B'-(1-\delta)B\right)
+\]
+\[
+z\in\{0,1\}\ \ \text{and}\ \ z=0\text{ if }z_{-1}=0
+\]
+
+Here, $\delta$ is the fraction of the debt rundown each period, which
+can be derived from the $g$ policy function in part c
+
+\subsection*{f) Use this model to interpret Mexican financial crisis of Dec 1994
+through 1995. Discuss the strengths and weaknesses of this model.}
+
+Mexico issued short term debt in Pesos but garunteed repayment in
+American Dollars. This meant that devaluation of the Peso could lead
+to the real value of the debt to increase. Thus when capital began
+flowing out of Mexico, the Mexican government's debt increased without
+them issuing additional bonds.
+
+As such, what they thought was a safe level of debt (with $B<\bar{b}$
+) entered into the crisis zone. Then a sunspot occured in the form
+of the central bank running out of cash reserves, and so Mexico wasn't
+able to raise enough new funds to pay off the old bonds and so was
+forced to default.
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>

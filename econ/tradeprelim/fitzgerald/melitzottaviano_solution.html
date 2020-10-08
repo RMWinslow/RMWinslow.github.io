@@ -1,0 +1,549 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Symmetric Melitz-Ottaviano Model</title>
+<link href="../../../styles/sakura.css" rel="stylesheet" type="text/css">
+<!--The following is used to allow the math to wordwrap.-->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        CommonHTML: { linebreaks: { automatic: true } },
+        "HTML-CSS": { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } },
+        TeX: {extensions: ["enclose.js"]},
+        tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          processEscapes: true
+        }
+    });
+    </script>
+    <!--The following is used to make subtle highlights and red crossthroughs on cancelled terms.-->
+    <div hidden>\(   \def\dashbox#1#2{ \bbox[border:2px dashed #1,3px]{#2}   }                 \def\cancel#1{\color{red}{\enclose{updiagonalstrike,downdiagonalstrike}{\color{black}{#1}}}}                   \)</div>
+    <!--For highlighting answers:  \[\bbox[#eee8d5, 5px]{}\]-->
+<!--Renders math--><script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+<!--For mobile--><meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+</head>
+<body>
+
+
+
+<h1>Trade Prelim Notes</h1>
+<h2>Symmetric Melitz-Ottaviano Model</h2>
+<p>This problem is from Doireann Fitzgerald. It showed up on the trade prelims in 2016, 2017 (fall), and 2019</p>
+
+
+
+
+
+<h3>Setup</h3>
+
+<p>Start with a closed economy population by \(L\) identical households, each of which supplies \(1\) unit of labhor inelastically. Household \(i\)'s  preferences are:
+    \[    U_i = c_{i0} + \alpha \sum_{j=1}^N c_{ij} - \frac{\beta}{2} \sum_{j=1}^N (c_{ij})^2  - \frac{\gamma}{2} \left(   \sum_{j=1}^N c_{ij}  \right)^2   \]
+where good \(0\) is a homogenous numeraire good and \(j=1,...,N\) are differentiated goods. The number \(N\) of differentiated goods in this economy is endogenous. The labor market is perfectly competitive. The numeraire good is produced under constant returns to scale at unit cost and sold in a perfectly competitive market. This implies \(w=1\). In order to produce a differentiated good, the firm must incur an upfront cost given by \(Sw = s\). After that, production is constant returns to scale, and each unit of labor produces \(1 /  \sigma\) units of the good, so marginal cost is given by \(\sigma\) for all firms. Assume monopolistic competition in the differentiated goods sector. That is, each firm chooses its price to maximize profit taking as given the behavior or all other firms.</p>   
+
+
+
+
+
+
+<hr>
+<h3>Problem (a): Budget Constraint</h3>
+<p><b>Write down the budget constraint of the consumer.</b></p>
+<h5>Solution:</h5>
+
+\[    c_{i0} + \sum_{j=1}^N c_{ij} p_j \leq w + \pi = 1 +\pi    \]
+
+Going forward, I'll assume that firms can enter and exit, and that non-integer number of firms can be in the market, so that profits will be zero.
+
+\[\bbox[#eee8d5, 5px]{c_{i0} + \sum_{j=1}^N c_{ij} p_j \leq 1 }\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+<h3>Problem (b): Consumer maximization problem and FOC.</h3>
+<p><b>Set up the maximization problem of the consumer. What is the first order condition for household \(i\)'s consumption of differentiated good \(h\) (ie FOC with respect to \(c_{ih}\) )? You can assume there is positive consumption of the numeraire, and \(N > 0\).   </b></p>
+<h5>Solution:</h5>
+
+The consumer's problem is to choose $c_{i0}$ and $\left\{ c_{i1},...,c_{iN} \right\}$ to solve 
+
+<div class="highlight">
+        $$    \max_{c_{i0}, \{c_{i1},...,c_{iN} \}} \left[  c_{i0} + \alpha \sum_{j=1}^N c_{ij} - \frac{\beta}{2} \sum_{j=1}^N (c_{ij})^2  - \frac{\gamma}{2} \left(   \sum_{j=1}^N c_{ij}  \right)^2  \right]   $$
+
+    subject to the constraints:
+    \begin{gather}
+        c_{i0} \geq 0, \quad         c_{ij} \geq 0    \quad        \forall j \in \{1,...,N\}            \tag{NonNeg}\\
+        c_{i0} + \sum_{j=1}^N c_{ij} p_j \leq 1              \tag{Budget} \\
+    \end{gather}
+</div>
+
+<!--<p>
+    Note that the marginal utility of differentiated good $h$ is 
+        $$ \frac{\partial U_i}{\partial c_{ih}}    \alpha - \beta c_{ih} - \gamma  \left(   \sum_{j=1}^N c_{ij}  \right)    $$
+    Wait. should this be positive?
+</p>-->
+
+Assuming that only the budget constraint will be binding, the Lagrangian will be 
+    $$    \mathcal{L} = 
+    c_{i0} + \alpha \sum_{j=1}^N c_{ij} - \frac{\beta}{2} \sum_{j=1}^N (c_{ij})^2  - \frac{\gamma}{2} \left(   \sum_{j=1}^N c_{ij}  \right)^2 
+    - \lambda_i   \left( c_{i0} + \sum_{j=1}^N c_{ij} p_j  -  1 \right)  $$
+
+And the first order conditions will be 
+    $$       0 = 1 - \lambda_i        $$
+for $c_{i0}$
+    $$ 0 = \alpha - \beta c_{ih} - \gamma     \sum_{j=1}^N c_{ij}   -\lambda_i p_h        $$
+for $c_{ih}$. Combining these two and rearranging, we get:
+    \[\bbox[#eee8d5, 5px]{\alpha - \beta c_{ih} - \gamma  \left(   \sum_{j=1}^N c_{ij}  \right) =  p_h }\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+<h3>Problem (c): Sum over differentiated goods.</h3>
+<p><b>Sum this condition across all \(h = 1,...,N\) and use the notation \(\overline{p} = (1/N) \sum_{h=1}^N p_h \) to obtain an expression for $\sum_{h=1}^N c_{ih}$  in terms of \(N\), \(\overline{p}\) and preference parameters. </b></p>
+<h5>Solution:</h5>
+
+    $$\sum_{h=1}^N \left(
+        \alpha - \beta c_{ih} - \gamma     \sum_{j=1}^N c_{ij}        
+    \right) = \sum_{h=1}^N  p_h $$
+
+    \begin{align}
+        \sum_{h=1}^N \left( \alpha - \beta c_{ih} - \gamma     \sum_{j=1}^N c_{ij}        \right) 
+        &= N  \bar{p} \\
+
+        N \alpha - \beta \sum_{h=1}^N c_{ih} - \gamma N \sum_{j=1}^N c_{ij}
+        &= N  \bar{p} \\
+
+        ( - \beta  - \gamma N ) \sum_{h=1}^N c_{ih}  
+        &= N  \bar{p} - N \alpha\\
+    
+        \sum_{h=1}^N c_{ih}  
+        &= N  \frac{ \alpha - \bar{p}}{ \beta  + \gamma N}\\
+    \end{align}
+
+    $$\bbox[#eee8d5, 5px]{        \sum_{h=1}^N c_{ih}  = N  \frac{ \alpha - \bar{p}}{ \beta  + \gamma N}}$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+<h3>Problem (d): Derive demand function.</h3>
+<p><b>Use the solution to part (c) to express $c_{ih}$, household $i$'s demand for good $h$ as a function of $p_h$, $N$,  $\overline{p}$ and preference parameters. What is the market demand $q_h$ (remember that there are $L$ agents)?   </b></p>
+<h5>Solution:</h5>
+
+Recall the FOC for $C_{ih}$:
+    $$\alpha - \beta c_{ih} - \gamma  \left(   \sum_{j=1}^N c_{ij}  \right) =  p_h$$
+
+Rearrange to get the consumer's demand for $c_{ih}$:
+    \begin{align}  
+        c_{ih} &= \frac{1}{- \beta} \left[p_h + \gamma  \left(   \sum_{j=1}^N c_{ij}\right)  - \alpha \right] \\
+        &= \frac{1}{\beta} \left[\alpha - \gamma  \left(    N  \frac{ \alpha - \bar{p}}{ \beta  + \gamma N} \right)  - p_h  \right]
+    \end{align}
+
+The market demand is then 
+
+
+    $$\bbox[#eee8d5, 5px]{   q_h  =    L  c_{ih} = \frac{L}{\beta} \left[\alpha - \gamma  \left(    N  \frac{ \alpha - \bar{p}}{ \beta  + \gamma N} \right)  - p_h \right]
+    }$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+<h3>Problem (e): Firm's profit and pricing rule.</h3>
+<p><b>Now write down the profits of differentiated goods firm $h$ as a function of $p_h$, marginal cost $\sigma$, $L$, $N$, $\overline{p}$ and preference parameters.  Assuming that firm $h$ takes $\overline{p}$ as given (ie monopolistic competition), what is the first order condition with respect to $p_h$? Use this to write the firm's optimal $p_h$ as a function of $\sigma$, $N$, $\overline{p}$, and preference parameters.</b></p>
+<h5>Solution:</h5>
+
+The firm's profit is given by 
+    $$\pi_h = p_h q_h - S - \sigma q_h = q_h \cdot [p_h -\sigma] - S $$
+
+Plugging in the formula from $q_h$ from part (d) yields
+    $$\pi_h  = \frac{L}{\beta} \left[\alpha - \gamma  \left(    N  \frac{ \alpha - \bar{p}}{ \beta  + \gamma N} \right)  - p_h \right]  \cdot [p_h -\sigma] - S $$
+
+    $$\pi_h  = 
+    -\frac{L}{\beta} p_h^2
+
+    + \frac{L}{\beta}
+        \left[
+            \alpha -  \gamma  \left(    N  \frac{ \alpha - \bar{p}}{ \beta  + \gamma N} \right)  + \sigma
+        \right] p_h 
+
+    - \sigma \frac{L}{\beta}
+    \left[
+        \alpha -\gamma  \left(    N  \frac{ \alpha - \bar{p}}{ \beta  + \gamma N} \right)   
+    \right] - S
+     $$
+
+
+Take the derivative and set it equal to zero to get the FOC for $p_h$:
+    $$
+        0 = -2 \frac{L}{\beta} p_h 
+        + \frac{L}{\beta}
+        \left[
+            \alpha -\gamma  \left(    N  \frac{ \alpha - \bar{p}}{ \beta  + \gamma N} \right)  + \sigma
+        \right]
+    $$
+
+Solve for $p_h$ to get optimal price:
+    $$\bbox[#eee8d5, 5px]{   
+        p_h =  \frac{1}{2}
+        \left[
+            \alpha -\gamma  \left(    N  \frac{ \alpha - \bar{p}}{ \beta  + \gamma N} \right)  +\sigma
+        \right]
+    }$$
+
+<!--while working through this, I make a weird mistake with the sign of the \alpha and ('')-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+<h3>Problem (f): Price index and profit.</h3>
+<p><b>Now use the fact that all differentiated goods are identical so $p_h=\overline{p}$ to write $\overline{p}$ as a function of $\sigma$, $N$ and preference parameters. Use this to write maximized profit as a function of $\sigma$, $L$, $N$, and preference parameters.</b></p>
+<h5>Solution:</h5>
+
+Plug $\bar{p} = p_h$  into the solution from part (e) to get:
+    \begin{align}
+        \bar{p} &=  \frac{1}{2}
+            \left[
+                \alpha -\gamma  \left(    N  \frac{ \alpha - \bar{p}}{ \beta  + \gamma N} \right)  +\sigma
+            \right] \\
+
+        \bar{p} &=  \frac{1}{2}
+            \left[
+                \alpha -\gamma  \left(    N  \frac{ \alpha }{ \beta  + \gamma N} \right)  +\sigma
+            \right] + \frac{1}{2} \frac{\gamma N}{\beta+\gamma N} \bar{p}  \\
+
+        \left[2-\frac{\gamma N}{\beta+\gamma N}\right]\bar{p} &=\alpha-\gamma\left(N\frac{\alpha}{\beta+\gamma N}\right)  +\sigma \\
+
+        \left[\frac{2\beta+2\gamma N-\gamma N}{\beta+\gamma N}\right]\bar{p} &=\frac{\alpha\beta+\alpha\gamma N-\gamma N\alpha+\sigma\beta+\sigma\gamma N}{\beta+\gamma N}\\
+
+        \bar{p} &=\frac{\alpha\beta+\sigma\beta+\sigma\gamma N}{2\beta+\gamma N} \\ 
+    \end{align}
+
+    Plugging this into the result from part (d) yields:
+
+        \begin{align}
+            q_{h} &= \frac{L}{\beta}\left[\alpha-\gamma\left(N\frac{\alpha-\bar{p}}{\beta+\gamma N}\right)-p_{h}\right] \\
+
+            &=\frac{L}{\beta}\left[\alpha-\frac{\gamma N\alpha}{\beta+\gamma N}\right]+\frac{L}{\beta}\left[\frac{1}{\beta+\gamma N}-1\right]\bar{p} \\
+
+            &= \frac{L\alpha}{\beta+\gamma N}-\frac{L}{\beta+\gamma N}
+            \dashbox{#eee8d5}{
+                \bar{p}
+             } \\
+
+            &= \frac{L\alpha}{\beta+\gamma N}-\frac{L}{\beta+\gamma N}
+            \dashbox{#eee8d5}{
+                \frac{\alpha\beta+\sigma\beta+\sigma\gamma N}{2\beta+\gamma N} 
+            }\\
+
+            &=\frac{L}{\beta+\gamma N}\left[\alpha-\frac{\alpha\beta+\sigma\beta+\sigma\gamma N}{2\beta+\gamma N}\right]\\
+
+            &= \frac{L}{\beta+\gamma N}\left[\frac{\beta\alpha+\gamma\alpha N-\sigma\beta-\sigma\gamma N}{2\beta+\gamma N}\right] \\
+
+            &= \frac{L}{\beta+\gamma N}\left[\frac{\left(\beta+\gamma N\right)\left(\alpha-\sigma\right)}{2\beta+\gamma N}\right] \\
+
+            &= \frac{L\left(\alpha-\sigma\right)}{2\beta+\gamma N}
+
+        \end{align}
+
+    Finally, we can plug this into the formula for profit from  part (e) to get the maximized profit for a firm which produces:
+
+        \begin{align}
+            \pi_h &=  
+            \dashbox{#eee8d5}{  q_h  }  \cdot [ \dashbox{#eee8d5}{ p_h} -\sigma] - S \\
+
+            \pi_h &=  
+            \dashbox{#eee8d5}{\frac{L\left(\alpha-\sigma\right)}{2\beta+\gamma N}}
+            \cdot \left[
+            \dashbox{#eee8d5}{\frac{\alpha\beta+\sigma\beta+\sigma\gamma N}{2\beta+\gamma N} }
+            -\sigma\right] - S \\
+
+            &= \frac{L\left(\alpha-\sigma\right)}{2\beta+\gamma N}\left[\frac{\alpha\beta+\sigma\beta+\cancel{\sigma\gamma N}-2\sigma\beta-\cancel{\sigma\gamma N}}{2\beta+\gamma N}\right]-S\\
+
+            &= L\beta\left[\frac{\alpha-\sigma}{2\beta+\gamma N}\right]^{2}-S\\
+
+        \end{align}
+
+        To summarize:
+
+        $$\bbox[#eee8d5, 5px]{   
+            \bar{p} =  \frac{\alpha\beta+\sigma\beta+\sigma\gamma N}{2\beta+\gamma N} 
+        }$$
+        $$\bbox[#eee8d5, 5px]{   
+            q_h =  \frac{L\left(\alpha-\sigma\right)}{2\beta+\gamma N}
+        }$$
+        $$\bbox[#eee8d5, 5px]{   
+            \pi_h^* =  L\beta\left[\frac{\alpha-\sigma}{2\beta+\gamma N}\right]^{2}-S
+        }$$
+
+
+
+
+
+
+
+
+<hr>
+<h3>Problem (g): Number of firms with free entry.</h3>
+<p><b>What is the free entry condition? Rearrange it to obtain an expression for $N$ as a function of $\sigma$, $L$, $S$ and preference parameters. You can assume $\alpha - \sigma > 0 $.</b></p>
+<h5>Solution:</h5>
+
+With free entry, a firm  $h$ will enter iff they can make a nonnegative profit.  That is, iff $\pi_h^* \geq 0$. Or, using the formula from part (f), the $N$th firm will enter iff:
+        $$L\beta\left[\frac{\alpha-\sigma}{2\beta+\gamma N}\right]^{2}-S \geq 0 $$
+
+Note that because of the assumptions on the parameters, it's possible for nonzero firms to make a profit as long as 
+    $$L\beta\left[\frac{\alpha-\sigma}{2\beta}\right]^{2}  \geq   S $$
+
+Solving for $N$ which leads to zero profits:
+    $$L\beta\left[\frac{\alpha-\sigma}{2\beta+\gamma N}\right]^{2}=S$$
+    $$\frac{\alpha-\sigma}{2\beta+\gamma N}=\sqrt{\frac{S}{L\beta}}$$
+    $$\sqrt{\frac{L\beta}{S}}\left[\alpha-\sigma\right]=2\beta+\gamma N$$
+    $$\bbox[#eee8d5, 5px]{   
+        \frac{1}{\gamma}\left[\sqrt{\frac{L\beta}{S}}[\alpha-\sigma]-2\beta\right]=N
+    }$$
+
+    (If we restrict $N$ to integer values, it's the floor of the above formula that yields the equilibrium number of firms.)
+
+
+
+
+
+<hr>
+<h3>Problem (h): Solve for quantities produced.</h3>
+<p><b>Use the market demand together with teh expressions for $\overline{p}$ and $N$ to solve for $q_h$, production of good $h$, as a function of  $\sigma$, $L$, $S$ and preference parameters.</b></p>
+<h5>Solution:</h5>
+
+Plugging the solution to part (g) into the formula for market demand from part (f), we get:
+    $$q_{h}=\frac{L\left(\alpha-\sigma\right)}{2\beta+\gamma \dashbox{#eee8d5}{N}}$$
+    $$q_{h}=\frac{L\left(\alpha-\sigma\right)}{2\beta+\gamma \dashbox{#eee8d5}{\frac{1}{\gamma}\left[\sqrt{\frac{L\beta}{S}}\left[\alpha-\sigma\right]-2\beta\right]}}$$
+    $$q_{h}=\frac{L\left(\alpha-\sigma\right)}{\sqrt{\frac{L\beta}{S}}\left(\alpha-\sigma\right)}$$
+    $$\bbox[#eee8d5, 5px]{   
+        q_h = \sqrt{\frac{LS}{\beta }}
+    }$$
+
+
+
+
+
+
+
+
+<hr>
+<h3>Problem (i): Pareto Optimality</h3>
+<p><b>Is the competitive equilibrium in this closed economy Pareto optimal?</b></p>
+<h5>Solution:</h5>
+
+<p>No.</p>
+<p> If it were, then the equilibrium outcome would have the same allocation as some social planner's problem. All consumer's are indentical, so this SPP would assign equal weights to each consumer. And we may as well set these weights to $1\over L$ so that we can set up the SPP in a per-capita way. The resource constraint for this economy is that the labor spent to produce the goods cannot exceed $1$. $c_{i0}$ units of labor are used to produce the undifferentiated goods for a consumer, $\sigma$ units of labor are used to produce each unit of differentiated good, and $NS\over L$ units of labor are spent per person on fixed costs. </p>
+
+<p>Therefore, the per-capita SPP is to choose consumption allocations $c_{i0}$, $\left\{ c_{i1},...,c_{iN} \right\}$ and number of firms $N$ to solve:</p>
+<div class="highlight">
+        $$    \max_{N, c_{i0}, \{c_{i1},...,c_{iN} \}} \left[  c_{i0} + \alpha \sum_{j=1}^N c_{ij} - \frac{\beta}{2} \sum_{j=1}^N (c_{ij})^2  - \frac{\gamma}{2} \left(   \sum_{j=1}^N c_{ij}  \right)^2  \right]   $$
+
+    subject to the constraints:
+    \begin{gather}
+        c_{i0} \geq 0, \quad         c_{ij} \geq 0    \quad        \forall j \in \{1,...,N\}            \tag{NonNeg}\\
+        c_{i0} + \sigma \sum_{j=1}^N c_{ij}  + \frac{NS}{L} \leq 1              \tag{Resource} \\
+    \end{gather}
+</div>
+
+<p>And the utility function is concave down in the differentiated goods, so any solution to the above will have $c_{ij}=c_{i1}$ for all differentiated goods $j=1,...,N$. So any solutions to the above SPP will be solutions to the following, simpler SPP, and vice versa. </p>
+<div class="highlight">
+        $$    \max_{N, c_{i0}, c_{i1}} 
+        \left[  c_{i0} + \alpha N c_{i1} - \frac{\beta}{2} N (c_{i1})^2  - \frac{\gamma}{2} \left(   N c_{i1}  \right)^2  \right]   $$
+
+    subject to the constraints:
+    \begin{gather}
+        c_{i0} \geq 0, \quad         c_{i1} \geq 0            \tag{NonNeg}\\
+        c_{i0} + \sigma N c_{i1}  + \frac{NS}{L} \leq 1              \tag{Resource} \\
+    \end{gather}
+</div>
+
+<p>Assuming parameters are chosen so that only the budget constraint is binding, the first order conditions for this SPP will be:</p>
+     \begin{gather}
+        0 = 1 - \lambda                                                         \tag{numeraire}\\
+        0 = \alpha N - \beta N c_{i1} - \gamma N^2 c_{i1} - \lambda \sigma N         \tag{differentiated} \\
+        0 = \alpha c_{i1} - \frac{\beta}{2} (c_{i1})^2  - \gamma  N (  c_{i1} )^2  - \lambda \frac{S}{L}         \tag{N}
+    \end{gather}
+
+<p>Combining the first two FOCs, and dividing by $N$, we get that 
+    $$\alpha - \beta c_{i1} - \gamma N c_{i1} = \sigma $$
+    $$c_{i1} = \frac{\alpha - \sigma}{\beta + \gamma N}$$
+and already we have run into an issue.  We previously derived that in the competitive equilibrium, the consumer consumes $\frac{\alpha - \sigma}{2\beta + \gamma N}$, and if $\beta >  0$, then
+    $$\frac{\alpha - \sigma}{2\beta + \gamma N} < \frac{\alpha - \sigma}{\beta + \gamma N}$$
+so the competive equilibrium allocation can't equal the SPP allocation, and so the CE allocation is not Pareto optimal, even if the competitive equilibrium has the optimal number of firms.  </p>
+
+<!--Is there some set of parameters where CE = SPP?-->
+
+
+
+
+
+
+
+<hr>
+<h3>Problem (j): Opening to trade. </h3>
+<p><b>Suppose the competitive economy opens up to (costless) trade with an identical economy with $L^*$ households. What happens to the set of varieties the consumer has access to? What happens to $q_h$? What happens to the set of varieties produced in the home country? Give some intuition for what happens. What happens to welfare?</b></p>
+<h5>Solution:</h5>
+
+<p>As before, we'll ignore the issue of non-integer numbers of firms.</p>
+
+<p> Because trade is costless, and the countries are symetrical (other than population) the effects will be very similar to simply increasing the population from $L$ to $L+L^*$.  (Wages will be equal in equilibrium because otherwise firms would leave one country to go to the other.) </p>
+
+<p>Assuming that $\alpha > \sigma$, and $\beta,S > 0$, both the formula for $N$ from part (h) and the formula for $q_h$ from part (h) are increasing in $L$. As such, opening to costless trade will increase both the variety of differentiated goods and the market demand for each differentiated good.
+    $$N_{new} = \frac{1}{\gamma}\left[\sqrt{\frac{(L+L^*)\beta}{S}}[\alpha-\sigma]-2\beta\right] 
+    > \frac{1}{\gamma}\left[\sqrt{\frac{L\beta}{S}}[\alpha-\sigma]-2\beta\right]=N_{old}$$
+    $$q_{h,new} = \sqrt{(L+L^*) S \over \beta } > \sqrt{L S \over \beta } = q_{h,old} $$
+</p>
+
+<p>To find the number of varieties produced specifically in the home country, we need to assume that labor cannot move between countries. Also, assume that the numeraire good is produced proportionally within each country. Note that because of symmetry, each agent in each country will consume $c_0$ of the numeraire, and $c_1$ of each differentiated good. Let $N_H$ be the number of varieties produced in the home country, and $N_F$ the total varieties produced in the foreign country. The total labor spent on  producing all the goods must equal the total population:
+    $$(L+L^*) c_0 + (L+L^*) \sigma N c_1 + N S = (L+L^*) $$
+And likewise the total ammount of labor spent within a country must equal the population of that country:
+    $$L c_0 + (L+L^*) \sigma N_H c_1 + N_H S = L $$
+    $$L^* c_0 + (L+L^*) \sigma N_F c_1 + N_F S = L^* $$
+Rearranging each of these three equations to put them in per-capita terms:
+    $$ c_0 + {(L+L^*) \over (L+L^*)}\sigma N c_1 + {N S \over (L+L^*)} = 1 $$
+    $$ c_0 + {(L+L^*) \over L} \sigma N_H c_1 + {N_H S \over L} = 1 $$
+    $$ c_0 + {(L+L^*) \over L^*} \sigma N_F c_1 + {N_F S \over L^*} = 1 $$
+Together, the first two of these imply that 
+    $$ {(L+L^*) \over (L+L^*)}\sigma N c_1 + {N S \over (L+L^*)} = {(L+L^*) \over L} \sigma N_H c_1 + {N_H S \over L}$$
+    $$\frac{N}{L+L^{*}}\left[\frac{L+L^{*}}{1}\sigma c+\frac{S}{1}\right]=\frac{N_{H}}{L}\left[\frac{L+L^{*}}{1}\sigma c+\frac{S}{1}\right]$$
+    $$\frac{N}{L+L^{*}}=\frac{N_{H}}{L}$$
+    $$N_{H}=\frac{L}{L+L^{*}}N$$
+</p>
+
+<p>Whether this quantity is larger or smaller than the initial value of $N$ before opening to trade depends on the specific parameters.</p>
+TODO:WELFARE ---
+TODO:INTUITION
+
+
+<hr>
+<h3>Problem (k): Alternate Preferences.</h3>
+<p><b>How would you answers to (j) differ if preferences were CES as in Krugman(1980)?</b></p>
+<h5>Solution:</h5>
+
+In Krugman(1980), Utility is given as 
+    $$U = \sum_{i} c_i^\theta $$
+
+
+    TODO:EXPLAIN CHANGES
+
+Lazy version as follows:
+Part a same. part b becaumes 
+    $$p_h = \theta c_{ih}^{1-\theta}$$
+Part d demand fucntion becomes
+    $$q_{ih} = L \left(p_h \over \theta \right)^{1 \over 1-\theta }$$
+Optimal price in part (e) becomes 
+    $$p_{h}^{*}=\frac{\sigma}{\left(2-\theta\right)}$$
+So market demand at optimal price is:
+    $$q_h =L\left(\frac{\sigma}{\left(2\theta-\theta^{2}\right)}\right)^{\frac{1}{1-\theta}}$$
+ ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+

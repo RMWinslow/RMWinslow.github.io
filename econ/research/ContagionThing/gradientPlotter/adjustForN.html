@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html>
+<html>
+<style>
+    html, body {
+      width:  100%;
+      height: 100%;
+      margin: 0px;
+    }
+</style>
+<body>
+
+
+
+
+
+
+
+
+<canvas id="nSizeMapper" width="500" height="500">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+
+
+
+<form action="">
+    n_rr:     <input type="number" name="N_rr"  min="0" step="1" value="5"> &nbsp; 
+    n_rg:   <input type="number" name="N_rg" min="0" step="1" value="0"> &nbsp; 
+	n_rb:     <input type="number" name="N_rb"  min="0" step="1" value="0"> &nbsp; 
+	<br>
+	n_gr:     <input type="number" name="N_gr"  min="0" step="1" value="0"> &nbsp; 
+    n_gg:   <input type="number" name="N_gg" min="0" step="1" value="5"> &nbsp; 
+	n_gb:     <input type="number" name="N_gb"  min="0" step="1" value="0"> &nbsp; 
+	<br>
+	n_br:     <input type="number" name="N_br"  min="0" step="1" value="0"> &nbsp; 
+    n_bg:   <input type="number" name="N_bg" min="0" step="1" value="0"> &nbsp; 
+	n_bb:     <input type="number" name="N_bb"  min="0" step="1" value="5"> &nbsp; 
+	<br>
+	<label for="gridCheck">Draw grid?</label> <input type="checkbox" id="gridCheck" name="gridCheck" checked>&nbsp; &nbsp; &nbsp; 
+    <input type="button" name="genButton" Value="Update" onClick="updateNumbers(this.form)">
+</form><br>
+
+
+
+
+
+
+<script>
+var canvas = document.getElementById("nSizeMapper");
+var ctx = canvas.getContext("2d");
+var numPointsAlongAxis = 500;
+//Define the coordinates for the vertices of the triangle
+var cornerA = [50,50];
+var cornerB = [250,50+.866*400];
+var cornerC = [450,50];
+//define the connections between types
+//neighbors[i][j] is the connections from type i to type j%whibbledibble
+var neighbors = [[5,  	0,  	0],
+				[0,  	5,  	0],
+				[0,  	0, 		5]];
+//Number of neighbors for each type:
+var nTypeA = neighbors[0][0]+neighbors[0][1]+neighbors[0][2];
+var nTypeB = neighbors[1][0]+neighbors[1][1]+neighbors[1][2];
+var nTypeC = neighbors[2][0]+neighbors[2][1]+neighbors[2][2];
+
+var drawGrid_flag = true;
+
+function updateNumbers(form){
+    neighbors = [[form.N_rr.value,  form.N_rg.value,	form.N_rb.value],
+				 [form.N_gr.value,  form.N_gg.value,	form.N_gb.value],
+				 [form.N_br.value,  form.N_bg.value,	form.N_bb.value]];
+	drawGrid_flag = form.gridCheck.checked;
+	genGraph();
+}
+//-------------------------------------------------------------------------------------------------------------
+
+
+function randomInt(max) {return Math.floor(Math.random() * max);}
+
+function drawLine(x1,y1,x2,y2) {
+  ctx.moveTo(x1,y1);
+  ctx.lineTo(x2,y2);  
+  ctx.strokeStyle = '#000';
+  ctx.stroke(); 
+}
+
+function drawPoly(vertices,fillColor,lineColor){
+	//take in array of coords. fill polygon
+  ctx.fillStyle = fillColor;
+  ctx.beginPath();
+  for (var i = 0; i < vertices.length; i++) {
+    ctx.lineTo(vertices[i][0],vertices[i][1]);
+  }
+  ctx.closePath();
+  ctx.fill();
+  ctx.strokeStyle = lineColor;
+  ctx.stroke(); 
+}
+
+function drawRectangle(x1, y1,x2,y2,fillColor,lineColor){
+  ctx.beginPath();
+  ctx.rect(x1, y1,x2,y2);
+  ctx.fillStyle = fillColor;
+  ctx.fill();
+  //ctx.strokeStyle = lineColor; //faster?
+  //ctx.stroke(); 
+}
+
+function drawText(x,y,content){
+  //write the actual dang letters
+  ctx.font = "20px serif";
+  ctx.textAlign = "center";
+  ctx.textBaseline = 'middle'; 
+  ctx.fillStyle = '#000';
+  ctx.fillText(content,x,y);
+}
+
+function drawDot(x, y,color){
+  drawRectangle(x, y,1,1,color,color);
+}
+
+function ABCtoXY(a,b,c){
+	//console.log(a+b+c);
+	//Just linearly combines the vectors
+	newX = cornerA[0]*a + cornerB[0]*b + cornerC[0]*c;
+	newY = cornerA[1]*a + cornerB[1]*b + cornerC[1]*c;
+	return [newX,newY];
+}
+
+function ABCtoColor(a,b,c){
+	//a,b,c is meant to represent a point in the space of a 2d simplex gradient whatsit.
+	//Unless things have gone wrong, a+b+c==1
+	//This function scales the decimal values of a,b,c to a rgb code 
+	redValue = Math.floor(255*a);
+	greenValue = Math.floor(255*b);
+	blueValue = Math.floor(255*c);
+	return "rgb("+redValue+","+greenValue+","+blueValue+")";
+}
+
+function drawDotABC(inCoord,outCoord){
+	//This visualizes a point in the gradient space squared
+	//the input ABC coordinate is shown as the color, and the output coord is shown as position on screen
+	XYcoord = ABCtoXY(outCoord[0],outCoord[1],outCoord[2]);
+	color = ABCtoColor(inCoord[0],inCoord[1],inCoord[2]);
+	drawDot(XYcoord[0],XYcoord[1],color);
+}
+
+function iterateInfection(inCoord){
+	//Given the initial distribution of types and the rules for transmission (neighbors)
+	//Calculates the new number of each type infected
+	//then normalizes back to population size 1
+	newACount = neighbors[0][0]*inCoord[0] + neighbors[1][0]*inCoord[1] + neighbors[2][0]*inCoord[2];
+	newBCount = neighbors[0][1]*inCoord[0] + neighbors[1][1]*inCoord[1] + neighbors[2][1]*inCoord[2];
+	newCCount = neighbors[0][2]*inCoord[0] + neighbors[1][2]*inCoord[1] + neighbors[2][2]*inCoord[2];
+	return normalize(newACount,newBCount,newCCount);
+}
+
+function normalize(a,b,c){
+	//just normalizes the values so that a+b+c==1
+	newA = a / (a+b+c);
+	newB = b / (a+b+c);
+	newC = c / (a+b+c);
+	return [newA,newB,newC];
+}
+
+function adjustForNSize(a,b,c){
+	//given a population distribution, it distorts the numbers 
+	//to reflect how things would look if everyone had the same number of neighbors
+	//in other words, gives distribution of "what type are neighbors neighboring?"
+	newA = nTypeA*a / (nTypeA*a + nTypeB*b + nTypeC*c);
+	newB = nTypeB*b / (nTypeA*a + nTypeB*b + nTypeC*c);
+	newC = nTypeC*c / (nTypeA*a + nTypeB*b + nTypeC*c);
+	return [newA,newB,newC];
+}
+
+//-------------------------------------------------------------------------------------------------------------
+
+
+
+//Need to make the grid of points to graph
+var gridOfPointsABC = []; 
+for (var i = 0; i <= numPointsAlongAxis; i++) { 
+    aPosition = i / numPointsAlongAxis;
+	for (var j = 0; j <= (numPointsAlongAxis-i); j++) {
+		bPosition = j / numPointsAlongAxis;
+		cPosition = 1 - aPosition - bPosition;
+		gridOfPointsABC.push([aPosition,bPosition,cPosition]);
+	}
+}
+
+//and this generates just the points which lie along some deciquant for a b or cPosition
+//only works if numPointsAlongAxis is a multiple of 10.whibbledibble
+var gridLinePoints = []; 
+for (var i = 0; i <= numPointsAlongAxis; i++) { 
+    aPosition = i / numPointsAlongAxis;
+	for (var j = 0; j <= (numPointsAlongAxis-i); j++) {
+		bPosition = j / numPointsAlongAxis;
+		k = numPointsAlongAxis - j - i;
+		cPosition = 1 - aPosition - bPosition;
+		whibbledibble = numPointsAlongAxis/10;
+		if ((i%whibbledibble)==0 || (j%whibbledibble)==0 || (k%whibbledibble)==0){
+			gridLinePoints.push([aPosition,bPosition,cPosition]);
+		}
+	}
+}
+
+
+
+
+//-------------------------------------------------------------------------------------------------------------
+
+
+
+function genGraph(){
+	//refresh canvas
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	drawRectangle(0, 0, canvas.width, canvas.height,'#00f3','#0000');
+	drawText(50,35,"100% R");
+	drawText(250,420,"100% G");
+	drawText(450,35,"100% B");
+	//Draw background triangle
+	drawPoly([cornerA,cornerB,cornerC],'#eeef','#0005');
+	//Plot Points
+	for (var i = 0; i < gridOfPointsABC.length; i++) {
+		//ABCposition = adjustForNSize(...gridOfPointsABC[i]);
+		ABCposition = iterateInfection(gridOfPointsABC[i]);
+		drawDotABC(gridOfPointsABC[i],ABCposition);
+	}
+	//Plot gridlines
+	if (drawGrid_flag){
+		for (var i = 0; i < gridLinePoints.length; i++) {
+			ABCposition = iterateInfection(gridLinePoints[i]);
+			drawDotABC([0,0,0],ABCposition);
+		}
+	}
+	
+}
+
+
+
+
+
+
+
+genGraph();
+
+
+
+</script>
+
+
+
+
+<!--//Plot grid lines
+	for (var i = 0; i <= 10; i++) { 
+		aPosition = i / 10;
+		oldABCcoords = [aPosition, 0, 10-aPosition];
+		oldXYcoords = ABCtoXY(aPosition, 0, 1-aPosition);
+		for (var j = 0; j <= (10-i); j++) {
+			bPosition = j / 10;
+			cPosition = 1 - aPosition - bPosition;
+			newABCcoords =  [aPosition, bPosition, cPosition];
+			newXYcoords = ABCtoXY(aPosition,bPosition,cPosition);
+			drawLine(...oldXYcoords,...newXYcoords);
+			oldABCcoords = newABCcoords;
+			oldXYcoords = newXYcoords;
+		}
+	}-->
+</body>
+</html>
