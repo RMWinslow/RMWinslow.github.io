@@ -2,5 +2,4 @@
 
 
 .bg-gray{background-color:#eee8d5 !important} 
-.markdown-body table tr:nth-child(2n){background-color:#eee8d5} 
-.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#eee8d5;border-radius:3px} 
+table tr:nth-child(2n){background-color:#eee8d5} 
