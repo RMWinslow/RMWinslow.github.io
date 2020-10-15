@@ -28,11 +28,15 @@
     <div>\(\alpha\):     <input type="number" id="alpha"  step="0.05" style="width: 4em;">  &nbsp; </div>
 </div>
 <hr class="smallLine">
+<div style="display: none;">
 <b>Endogenous Parameters:</b>
-<div class="flexRow">
+<div class="flexRow"> 
     <div>\(\overline{k}\): <output id='steadyState'>test</output></div>
+    <div>\(\overline{y}\): <output id='steadyState_y'>test</output></div>
+    <div>\(\overline{c}\): <output id='steadyState_c'>test</output></div>
+    <div>\(\overline{i}\): <output id='steadyState_i'>test</output></div>
 </div>
-
+</div>
 
 
 
@@ -65,7 +69,7 @@
     K = 3;
     w = 1;
     α = 0.5;
-    𝛿 = 0.2;
+    δ = 0.2;
     s = 0.5;
     n = 0.2;
 
@@ -74,7 +78,7 @@
     $('#capital').val(K);
     $('#wage').val(w);
     $('#alpha').val(α);
-    $('#depreciation').val(𝛿);
+    $('#depreciation').val(δ);
     $('#savings').val(s);
     $('#populationGrowth').val(n);
 
@@ -85,7 +89,7 @@
         K = Number($('#capital').val());
         w = Number($('#wage').val());
         α = Number($('#alpha').val());
-        𝛿 = Number($('#depreciation').val());
+        δ = Number($('#depreciation').val());
         s = Number($('#savings').val());
         n = Number($('#populationGrowth').val());
     }
@@ -96,12 +100,15 @@
         Y = z * K**α * Nd**(1-α);
         pi = Y - w*Nd;
 
-        ssK = ((s*z)/(n+𝛿))**(1/(1-α));
+        ssK = ((s*z)/(n+δ))**(1/(1-α));
         ssY = z*ssK**α;
         ssI = s*ssY;
         ssC = (1-s)*ssY;
 
         $("#steadyState").text(ssK.toFixed(2));
+        $("#steadyState_y").text(ssY.toFixed(2));
+        $("#steadyState_c").text(ssC.toFixed(2));
+        $("#steadyState_i").text(ssI.toFixed(2));
     }
     updateEndogenous();
    
@@ -126,7 +133,7 @@
         stepsize = (maxx-minx)/steps;
         for (var i = 0; i <= steps; i++){
             x = minx+i*stepsize;
-            y = (n+ 𝛿)*x;
+            y = (n+ δ)*x;
             data.push([x,y]);
         }
         return data;
@@ -237,15 +244,19 @@
         series: [{
             name: "investment",
             data: investmentCurve(minx,maxx,chartSteps),
+            enableMouseTracking: false,
         },{
-            name: "depreciation",
+            name: "effective depr.",
             data: depreciationCurve(minx,maxx,chartSteps),
+            enableMouseTracking: false,
         },{
             name: "output",
             data: output(minx,maxx,chartSteps),
+            enableMouseTracking: false,
         },{
             name:"steady state",
-            data:[{x:ssK,y:ssI,marker: {symbol: 'url(star2.png)'}}]
+            data:[{x:ssK,y:ssI,marker: {symbol: 'url(star2.png)'}}],
+            enableMouseTracking: false,
         },]
     });
 
