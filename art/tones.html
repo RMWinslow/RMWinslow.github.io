@@ -31,6 +31,8 @@
 
 <p>Frequencies are from <a href="https://en.wikipedia.org/wiki/Just_intonation#Five-limit_tuning">5-prime-limit tuning.</a> Shifting over a column multiplies frequency by either 4/3 (perfect fourth) or 3/2 (Perfect fifth), alternating. Shifting two columns goes up an octave. Shifting down a row multiplies frequency by 9/8 (Major Tone) or 10/9 (Minor Tone). Open the dev console if you want to see a log of all the keypresses and notes.</p>
 
+<p>This works best on a keyboard with n-key rollover.</p>
+
  <textarea hidden></textarea>
 
 <script>
@@ -73,6 +75,7 @@ var principle = 110;
 //Shifting over a column increases frequency by either 4/3 (perfect fourth) or 3/2 (Perfect fifth), alternating. (Shifting two cols doubles frequency)
 //Shifting down a row increases frequency by 9/8 (Major Tone) or 10/9 (Minor Tone)
 //C can be found on any odd digit key.
+//As a sidenote, if you delete the first entry from the colMult list, then KeyA will be an A note and KeyB will be a B note. Neat!
 var rowMult = [1, 9/8, 5/4, 45/32];
 var colMult = octaveColumns2 = [1,4/3, 2,2*4/3, 4,4*4/3, 8,8*4/3, 16,16*4/3,  32,32*4/3,];
 
