@@ -15,7 +15,7 @@
 <ol>
 	<li>The sounds are pure tones - sine waves - so I can play around with harmonics.
 	<li>The sounds are sustained as long as the key is held down. 
-	<li>The notes are laid out in a way that feels "right" on a qwerty keyboard, instead of just trying to copy the layout of a piano.
+	<li>The notes are laid out in a way that "feels right" on a qwerty keyboard, instead of just trying to copy the layout of a piano.
 </ol>
 </p>
 
@@ -24,23 +24,45 @@
 
 <p>Frequencies are from <a href="https://en.wikipedia.org/wiki/Just_intonation#Five-limit_tuning">5-prime-limit tuning.</a> Shifting over a column multiplies frequency by either 4/3 (perfect fourth) or 3/2 (Perfect fifth), alternating. Shifting two columns goes up an octave. Shifting down a row multiplies frequency by 9/8 (Major Tone) or 10/9 (Minor Tone). Open the dev console if you want to see a log of all the keypresses and notes.</p>
 
-<p>This works best on a keyboard with n-key rollover.</p>
+<p>This works best in Chrome, using a keyboard with n-key rollover.</p>
 
  <textarea hidden></textarea>
 
-<script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
 //This script tries to build a keyboard that does a few things differently than what you can find online:
 //- Firstly, It's designed directly as a kayboard kayboard, not trying to mimic a piano's layout
 //- Secondly, the sounds are pure tones which are sustained as long as the key is held. Not glitchy midis.
 //- Most keys on top rows (only b on the bottom), assuming you're in C major
-//https://noobnotes.net/browse/browse-songs-in-c-major/
+
+//Here are some songs to play around with: https://noobnotes.net/browse/browse-songs-in-c-major/
 
 //Praise be to http://marcgg.com/blog/2016/11/01/javascript-audio/
-//Current problems:
+//Problems to fix:
 //			[ ] fadeout is broken in firefox
 //			[x] harmonics are clicky in chrome. Need to limit sound to fix that.
 
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //These are used to only start the tone when the key is first pressed.
 //Without these, holding a key will generate multiple osicillators.
@@ -50,14 +72,14 @@ keyflags = {}
 var AudioContext = window.AudioContext || window.webkitAudioContext;
 var ctx = new AudioContext();
 
-//Here's the bucket where we hold onto the sounds.
+//Here's the buckets where we hold onto the sounds.
 oscillators = {};
 gains = {};
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //And here's the stuff that tells us what the frequency for each key is supposed to be.
-//It also, incidentally, implicitly defines which keys to ignore because those keys don't have properties set.
+//It also, incidentally, implicitly defines which keys to ignore.
 //Change the tuning by changing the values of the row and column multipliers
 var principle = 110;
 
@@ -68,7 +90,8 @@ var principle = 110;
 //Shifting over a column increases frequency by either 4/3 (perfect fourth) or 3/2 (Perfect fifth), alternating. (Shifting two cols doubles frequency)
 //Shifting down a row increases frequency by 9/8 (Major Tone) or 10/9 (Minor Tone)
 //C can be found on any odd digit key.
-//As a sidenote, if you delete the first entry from the colMult list, then KeyA will be an A note and KeyB will be a B note. Neat!
+//As a sidenote, if you deleted the first entry from the colMult list, then KeyA would be an A note and KeyB will be a B note. Neat!
+//You cold also flip it upside down and have the KeyC, KeyD, and KeyE be mapped to notes C D and E, respectively. But I've tried that; it's uncomfortable to play.
 var rowMult = [1, 9/8, 5/4, 45/32];
 var colMult = octaveColumns2 = [1,4/3, 2,2*4/3, 4,4*4/3, 8,8*4/3, 16,16*4/3,  32,32*4/3,];
 
