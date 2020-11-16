@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!--<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>-->
     <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
-    <title>Keyboard Keyboard</title>
+    <title>Robert Winslow</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script> 
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
     <link href="../styles/everythingbagel.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -19,10 +26,10 @@
 </ol>
 </p>
 
-<img src="keyboardio.svg">
+<img src="keyboardio_up.svg">
 <p>Keyboard svg modified from <a href="https://commons.wikimedia.org/wiki/File:ANSI_US_QWERTY_(Windows)_Enter_Return.svg">here</a>.</p>
 
-<p>Frequencies are from <a href="https://en.wikipedia.org/wiki/Just_intonation#Five-limit_tuning">5-prime-limit tuning.</a> Shifting over a column multiplies frequency by either 4/3 (perfect fourth) or 3/2 (Perfect fifth), alternating. Shifting two columns goes up an octave. Shifting down a row multiplies frequency by 9/8 (Major Tone) or 10/9 (Minor Tone). Open the dev console if you want to see a log of all the keypresses and notes.</p>
+<p>Frequencies are from <a href="https://en.wikipedia.org/wiki/Just_intonation#Five-limit_tuning">5-prime-limit tuning.</a> Shifting over a column multiplies frequency by either 4/3 (perfect fourth) or 3/2 (Perfect fifth), alternating. Shifting two columns goes up an octave. Shifting up a row multiplies frequency by 9/8 (Major Tone) or 10/9 (Minor Tone). Open the dev console if you want to see a log of all the keypresses and notes.</p>
 
 <p>This works best on a keyboard with n-key rollover.</p>
 
@@ -69,7 +76,7 @@ var principle = 110;
 //Shifting down a row increases frequency by 9/8 (Major Tone) or 10/9 (Minor Tone)
 //C can be found on any odd digit key.
 //As a sidenote, if you delete the first entry from the colMult list, then KeyA will be an A note and KeyB will be a B note. Neat!
-var rowMult = [1, 9/8, 5/4, 45/32];
+var rowMult = [45/32, 5/4, 9/8, 1, ];
 var colMult = octaveColumns2 = [1,4/3, 2,2*4/3, 4,4*4/3, 8,8*4/3, 16,16*4/3,  32,32*4/3,];
 
 //Piano style - 12 tone equal temperment https://en.wikipedia.org/wiki/12_equal_temperament
