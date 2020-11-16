@@ -1,0 +1,177 @@
+Press any Key <textarea></textarea>
+
+
+
+
+<script>
+
+//Praise be to http://marcgg.com/blog/2016/11/01/javascript-audio/
+//Current problems:
+//			[ ] fadeout is broken in firefox
+//			[x] harmonics are clicky in chrome. Need to limit sound to fix that.
+
+//TODO: Make a layout simulating  Isomorphic Keyboard. Offsets keys means it's almost a hex pttern. Or https://en.wikipedia.org/wiki/Harmonic_table_note_layout  https://en.wikipedia.org/wiki/Tonnetz
+
+//These are used to only start the tone when the key is first pressed.
+//Without these, holding a key will generate multiple osicillators.
+keyflags = {}
+
+// create web audio api context
+var AudioContext = window.AudioContext || window.webkitAudioContext;
+var ctx = new AudioContext();
+
+//Here's the bucket where we hold onto the sounds.
+oscillators = {};
+gains = {};
+
+//play around with overtones
+g_ = ctx.createGain();
+g_.gain.value = 0;
+o_ = {}; 
+g2 = ctx.createGain();
+g2.gain.value = 0;
+o2 = {}; 
+g3 = ctx.createGain();
+g3.gain.value = 0;
+o3 = {}; 
+g4 = ctx.createGain();
+g4.gain.value = 0;
+o4 = {}; 
+
+
+//And here's the object that tells us what the frequency for each key is supposed to be.
+//It also, incidentally, implicitly defines which keys to ignore because those keys don't have properties set.
+//Change the tuning by changing the values of adj and principle.
+var principle = 110;
+var octaves = [1,2,4,8]; //ratios between rows. Pretty much won't change to make a scale with tripled rows, just 3 rows would require 18 columns
+octaves = [1, 9/8, 5/4, 45/32]; //For tuning using columns.  DEFAULT:COMMENT OUT. For use with octaveColumns2
+//octaves = [1, 4/3, 3/2, 5/3,]; //For tuning using columns.  DEFAULT:COMMENT OUT. For use with octaveColumns1
+//octaves = [1, (16/15), (16/15)*(16/15)*(16/15), (16/15)*(16/15)*(16/15),]; //For tuning using columns.  DEFAULT:COMMENT OUT. For use with octaveColumns3
+//Need to completely rewrite if I want to include all 12 notes in a 5-limit scale sideways
+//change adj (tone adjustments) to one of these:
+testScale = [0.85,0.9,0.95,1,1.05,1.1,1.15,1.2,1.25,1.3,1.35,1.4,1.45,1.5]; //Discordant Nonsense
+multiples = [1, 9/8, 10/8, 11/8, 12/8, 13/8, 14/8, 15/8, 2, 18/8]; //Makes sure all multiples of the principle show up. Doubles up a bit. 
+fractions = [1, 6/5, 5/4, 4/3, 7/5, 3/2, 8/5, 5/3, 7/4, 9/5, ] //Covers all the fractions with simple denominators.
+fractions2 = [1, 7/6, 6/5, 5/4, 4/3, 7/5, 3/2, 8/5, 5/3, 7/4, 9/5, 11/6 ] //Covers all the fractions with simple denominators, this time up to denom 6.
+exponential12 = [1, 2**(1/12), 2**(2/12), 2**(3/12), 2**(4/12), 2**(5/12), 2**(6/12), 2**(7/12), 2**(8/12), 2**(9/12), 2**(10/12), 2**(11/12),] //piano style - Twelve-tone equal temperament DEFAULT
+exponential10 = [1, 2**(1/12), 2**(2/12), 2**(3/12), 2**(4/12), 2**(5/12), 2**(6/12), 2**(7/12), 2**(8/12), 2**(9/12), 2**(10/12), 2**(11/12),] //Ten-tone equal temperament (ugly)
+octaveColumns2 = [1,4/3, 2,2*4/3, 4,4*4/3, 8,2*8/3, 16,16*4/3,  ] // this is only for when an octave means a horizontal shift of 2 to the right
+octaveColumns1 = [1/8, 1/4, 1/2, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512  ] // this is only for when an octave means a horizontal shift of 1 to the right
+octaveColumns3constant = [1, (5/4), (5/4)**2, (5/4)**3, (5/4)**4, (5/4)**5, (5/4)**6, (5/4)**7, (5/4)**8, (5/4)**9,] // this is only for when an octave means a horizontal shift of 3 to the right
+adj = octaveColumns2;
+tones = {
+	Digit1: principle*octaves[0] * adj[0],
+	Digit2: principle*octaves[0] * adj[1],
+	Digit3: principle*octaves[0] * adj[2],
+	Digit4: principle*octaves[0] * adj[3],
+	Digit5: principle*octaves[0] * adj[4],
+	Digit6: principle*octaves[0] * adj[5],
+	Digit7: principle*octaves[0] * adj[6],
+	Digit8: principle*octaves[0] * adj[7],
+	Digit9: principle*octaves[0] * adj[8],
+	Digit0: principle*octaves[0] * adj[9],
+	
+	KeyQ: principle*octaves[1] * adj[0],
+	KeyW: principle*octaves[1] * adj[1],
+	KeyE: principle*octaves[1] * adj[2],
+	KeyR: principle*octaves[1] * adj[3],
+	KeyT: principle*octaves[1] * adj[4],
+	KeyY: principle*octaves[1] * adj[5],
+	KeyU: principle*octaves[1] * adj[6],
+	KeyI: principle*octaves[1] * adj[7],
+	KeyO: principle*octaves[1] * adj[8],
+	KeyP: principle*octaves[1] * adj[9],
+	
+	KeyA: principle*octaves[2] * adj[0],
+	KeyS: principle*octaves[2] * adj[1],
+	KeyD: principle*octaves[2] * adj[2],
+	KeyF: principle*octaves[2] * adj[3],
+	KeyG: principle*octaves[2] * adj[4],
+	KeyH: principle*octaves[2] * adj[5],
+	KeyJ: principle*octaves[2] * adj[6],
+	KeyK: principle*octaves[2] * adj[7],
+	KeyL: principle*octaves[2] * adj[8],
+	Semicolon: principle*octaves[2] * adj[9],
+	
+	KeyZ: principle*octaves[3] * adj[0],
+	KeyX: principle*octaves[3] * adj[1],
+	KeyC: principle*octaves[3] * adj[2],
+	KeyV: principle*octaves[3] * adj[3],
+	KeyB: principle*octaves[3] * adj[4],
+	KeyN: principle*octaves[3] * adj[5],
+	KeyM: principle*octaves[3] * adj[6],
+	Comma: principle*octaves[3] * adj[7],
+	Period: principle*octaves[3] * adj[8],
+	Slash: principle*octaves[3] * adj[9],
+};
+
+window.onkeydown = function(event){ 								//Whenever a key is pressed:						
+	keycode = event.code;
+	
+	if (keycode == "Tab"){return 0};
+	
+	if (! keyflags[keycode] && tones[keycode]){								//If the key is part of the piano, and isn't just being held down:
+		console.log("DOWN "+keycode+": "+tones[keycode]+" Hz");						//Log which key is pressed
+		keyflags[keycode] = 1;														//Set a flag to indicate this key is being held down.
+		
+		oscillators[keycode] = ctx.createOscillator();								//Create a sine wave
+		oscillators[keycode].frequency.value = tones[keycode];						//Change the tone 
+		gains[keycode] = ctx.createGain();											//Create volume control so we can fade it out.
+		oscillators[keycode].connect(gains[keycode]);								//Plug the sine wave into the volume control
+		gains[keycode].connect(ctx.destination);									//plug the volume control into the speakers
+		
+		//gains[keycode].gain.value = 0.000001;										//start it real quiet-like
+		oscillators[keycode].start(0);												//Start playing the sound.
+		gains[keycode].gain.value = 0.1;
+		//gains[keycode].gain.exponentialRampToValueAtTime(0.2, ctx.currentTime + 0.01);//then increase the volume up to normal
+		
+		
+		//play around with creating a quieter overtone for timbre
+		//o_[keycode] = ctx.createOscillator();								
+		//o_[keycode].frequency.value = tones[keycode] * 0.5;	
+		//o_[keycode].connect(g_);					
+		//g_.connect(gains[keycode]);								
+		//o_[keycode].start(0);	
+		
+		//o2[keycode] = ctx.createOscillator();								
+		//o2[keycode].frequency.value = tones[keycode] * 2;	
+		//o2[keycode].connect(g2);					
+		//g2.connect(gains[keycode]);								
+		//o2[keycode].start(0);	
+		//o2.type = "sawtooth";
+		
+		//o3[keycode] = ctx.createOscillator();								
+		//o3[keycode].frequency.value = tones[keycode] * 3;	
+		//o3[keycode].connect(g3);					
+		//g3.connect(gains[keycode]);								
+		//o3[keycode].start(0);		
+		
+		//o4[keycode] = ctx.createOscillator();								
+		//o4[keycode].frequency.value = tones[keycode] * 4;	
+		//o4[keycode].connect(g4);					
+		//g4.connect(gains[keycode]);								
+		//o4[keycode].start(0);													
+	}
+}; 
+
+window.onkeyup = function(event){ 									//Whenever a key is released:	
+	keycode = event.code;									
+	if (tones[keycode]){													//If the key is part of the piano:
+		console.log("UP " + keycode);												//Log which key is let up.
+		keyflags[keycode] = 0;														//Remove it's flag to indicate that it isn't being held down anymore.
+		
+		gains[keycode].gain.value = 0.1;											//restablish the volume level or else it will make clicky sounds
+		gains[keycode].gain.exponentialRampToValueAtTime(0.000001, ctx.currentTime+0.4);//fade it out
+		oscillators[keycode].stop(ctx.currentTime + 3);								//Stop playing the sound.
+		
+		//timbre experiments
+		//o_[keycode].stop(ctx.currentTime + 3);								//Stop playing the sound.
+		//o2[keycode].stop(ctx.currentTime + 3);								//Stop playing the sound.
+		//o3[keycode].stop(ctx.currentTime + 3);								//Stop playing the sound.
+		//o4[keycode].stop(ctx.currentTime + 3);								//Stop playing the sound.
+	}
+}; 
+	
+
+	
+</script>
