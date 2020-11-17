@@ -8,45 +8,33 @@
 	
 	<meta property="og:title" content="Keyboard Keyboard - Type to Play" />
 	<meta property="og:description" content="I threw together a little music toy which uses your keyboard to trigger pure tones." />
-	<meta property="og:image" content="https://www.robertmwinslow.com/art/keyboardio.png" />
+	<meta property="og:image" content="https://www.robertmwinslow.com/art/keyboardio-wicki.png" />
 	
 </head>
 <body>
 
 
 
-<h1>Type to Play Music.</h1>
+<h1>Type to Play Music</h1>
 
-<p>There are lots of online keyboard pianos out there, but I wanted one where:
-<ol>
-	<li>The sounds are pure tones - sine waves - so I can play around with harmonics.
-	<li>The sounds are sustained as long as the key is held down. 
-	<li>The notes are laid out in a way that "feels right" on a qwerty keyboard, instead of just trying to copy the layout of a piano.
-</ol>
-</p>
+<h2>Wicki-Hayden Layout</h2>
+<h3>Just Intonation</h3>
 
-<img src="keyboardio.svg">
+<p>Tuning based on <a href="https://en.wikipedia.org/wiki/Five-limit_tuning">asymetric 5-limit tuning.</a> Going up one row multiples frequency by 4/3. </p>
+
+
+<img src="keyboardio-wicki.svg">
 <p>Keyboard svg modified from <a href="https://commons.wikimedia.org/wiki/File:ANSI_US_QWERTY_(Windows)_Enter_Return.svg">here</a>.</p>
 
-<p>Frequencies are from <a href="https://en.wikipedia.org/wiki/Just_intonation#Five-limit_tuning">5-prime-limit tuning.</a> Shifting over a column multiplies frequency by either 4/3 (perfect fourth) or 3/2 (Perfect fifth), alternating. Shifting two columns goes up an octave. Shifting down a row multiplies frequency by 9/8 (Major Tone) or 10/9 (Minor Tone). Open the dev console if you want to see a log of all the keypresses and notes.</p>
-
-<p>This works best in Chrome, using a keyboard with n-key rollover.</p>
-
-<p>Also, here are a few other layouts:</p>
-<ol>
-	<li><a href="tones-wicki">Isomorphic layout based on the Wicki-Hayden Musical Note Layout.</a>
-	<li><a href="tones-up">The above layout but flipped upside-down.</a>
-	<li><a href="tones-tonnetz">Euler's Tone Net</a>
-	<li><a href="tones-rows">An arrangement that includes all twelve keys.</a>
-</ol>
 
 
+<p>This works best in Chrome, using a qwerty keyboard with n-key rollover.</p>
 
  <textarea hidden></textarea>
 
 
 
-
+<!--Maybe also tweak it so that the main keys are in the middle and then it branches out by alternating 9/8 and 10/9-->
 
 
 
@@ -108,14 +96,54 @@ var principle = 110;
 //C can be found on any odd digit key.
 //As a sidenote, if you deleted the first entry from the colMult list, then KeyA would be an A note and KeyB will be a B note. Neat!
 //You cold also flip it upside down and have the KeyC, KeyD, and KeyE be mapped to notes C D and E, respectively. But I've tried that; it's uncomfortable to play.
-var rowMult = [1, 9/8, 5/4, 45/32];
-var colMult = octaveColumns2 = [1,4/3, 2,2*4/3, 4,4*4/3, 8,8*4/3, 16,16*4/3,  32,32*4/3,];
+//var rowMult = [1, 9/8, 5/4, 45/32];
+//var colMult = octaveColumns2 = [1,4/3, 2,2*4/3, 4,4*4/3, 8,8*4/3, 16,16*4/3,  32,32*4/3,];
 
 //Piano style - 12 tone equal temperment https://en.wikipedia.org/wiki/12_equal_temperament
 //Shifting over a column to the right increases frequency by 2^(1/12)
 //Shifting down a row doubles frequency.
 //var rowMult = [1,2,4,8];
 //var colMult = [1, 2**(1/12), 2**(2/12), 2**(3/12), 2**(4/12), 2**(5/12), 2**(6/12), 2**(7/12), 2**(8/12), 2**(9/12), 2**(10/12), 2**(11/12),];
+
+//This layout is equal temperment Wicki Hayden https://en.wikipedia.org/wiki/Wicki%E2%80%93Hayden_note_layout
+//var rowMult = [4*2**(5/12)*2**(-2/12), 4*2**(-2/12), 2*2**(5/12), 2];
+//var colMult = octaveColumns2 = [ 2**(-6/12), 2**(-4/12), 2**(-2/12),     1, 2**(2/12), 2**(4/12), 2**(6/12),    2**(8/12), 2**(10/12), 2**(12/12)  , 2**(14/12)  , 2**(16/12),2**(18/12),2**(20/12),  ];
+
+//This layout is equal temperment Wicki Hayden https://en.wikipedia.org/wiki/Wicki%E2%80%93Hayden_note_layout but it starts with c in the bottom left
+//var rowMult = [4*2**(5/12)*2**(-2/12), 4*2**(-2/12), 2*2**(5/12), 2];
+//var colMult = octaveColumns2 = [1, 2**(2/12), 2**(4/12), 2**(6/12),    2**(8/12), 2**(10/12),  2  , 2**(14/12)  , 2**(16/12),2**(18/12),2**(20/12), 2**(22/12), 4 ,2**(26/12),  ];
+
+//This layout is just intonation temperment Wicki Hayden https://en.wikipedia.org/wiki/Wicki%E2%80%93Hayden_note_layout
+var rowMult = [4*(4/3)*(8/9), 4*(8/9), 2*(4/3), 2];
+var colMult = octaveColumns2 = [1, 9/8, 5/4,    45/32, 8/5, 9/5,      2, 2*(9/8), 2*(5/4), 2*(45/32), 2*(8/5), 2*(9/5),        4, 4*(9/8), 4*(5/4), 4*(45/32), 4*(8/5), 4*(9/5), ];
+
+//want to make one where each 12 note octave is 3 columns on keyboard.
+//also want t make one using just intonation where the CDE   FGA   are on the top two rows, 
+//within an octave, colunns change 2 boops, rows 1 and 2 change 5 boops
+//and then on bottom two rows do B=Cb Db Eb    and   Gb  Ab  Bb
+//equiv,  B C# D#  and F# G# A#
+//These bottom two rows shift cols by 2 boops and rows by 7 (flip to make it 5)
+//and since b is last, we need need to offset the b row by 2 so it comes in under the A#
+//maybe put the F# row on top? Yeeah B under the A 
+
+//Or one where those triple dhords are in a row? tonnetz. Row gaps go 435435435
+//Home row is C E G CEG
+//another row is FADFAD
+//B in same col as the G and D
+//bu then left over is B G# D#  and  F# A# C#
+//(not possible just sticking to majors)
+
+//could also just straight up nab the tonnetz and put that on the keyboard,
+//first three cols FAC# CEG# GBD# DF#A#
+// could equivalently use https://en.wikipedia.org/wiki/Harmonic_table_note_layout
+// which is shear mapping of tonnetz
+
+
+//Or home row could jump 435453 CEACEA
+
+//also want t make one       F  G  A  B  C#                                 
+//Go down 5 chunks           C  D  E  F#              
+//Wait I've just reinvented wicki hayden nvm
 
 
 tones = {
@@ -131,6 +159,7 @@ tones = {
 	Digit0: principle * rowMult[0] * colMult[9],
 	Minus: principle * rowMult[0] * colMult[10],
 	Equal: principle * rowMult[0] * colMult[11],
+	Backspace: principle * rowMult[0] * colMult[12],
 	
 	KeyQ: principle * rowMult[1] * colMult[0],
 	KeyW: principle * rowMult[1] * colMult[1],
@@ -144,6 +173,7 @@ tones = {
 	KeyP: principle * rowMult[1] * colMult[9],
 	BracketLeft: principle * rowMult[1] * colMult[10],
 	BracketRight: principle * rowMult[1] * colMult[11],
+	Backslash: principle * rowMult[1] * colMult[12],
 	
 	KeyA: principle * rowMult[2] * colMult[0],
 	KeyS: principle * rowMult[2] * colMult[1],
@@ -168,7 +198,7 @@ tones = {
 	Comma: principle * rowMult[3] * colMult[7],
 	Period: principle * rowMult[3] * colMult[8],
 	Slash: principle * rowMult[3] * colMult[9],
-	ShiftRight: principle * rowMult[3] * colMult[11], //small exception to layout so we can hit B on that last note instead of A#
+	ShiftRight: principle * rowMult[3] * colMult[10], 
 };
 
 
