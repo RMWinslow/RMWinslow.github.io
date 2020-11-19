@@ -8,39 +8,23 @@
 	
 	<meta property="og:title" content="Keyboard Keyboard - Type to Play" />
 	<meta property="og:description" content="I threw together a little music toy which uses your keyboard to trigger pure tones." />
-	<meta property="og:image" content="https://www.robertmwinslow.com/art/keyboardio.png" />
+	<meta property="og:image" content="https://www.robertmwinslow.com/art/keyboardio-rows-iso.png" />
 	
 </head>
 <body>
 
 
 
-<h1>Type to Play Music.</h1>
+<h1>Type to Play Music</h1>
 
-<p>There are lots of online keyboard pianos out there, but I wanted one where:
-<ol>
-	<li>The sounds are pure tones - sine waves - so I can play around with harmonics.
-	<li>The sounds are sustained as long as the key is held down. 
-	<li>The notes are laid out in a way that "feels right" on a qwerty keyboard, instead of just trying to copy the layout of a piano.
-</ol>
-</p>
 
-<img src="keyboardio.svg">
+
+<img src="keyboardio-rows-iso.svg">
 <p>Keyboard svg modified from <a href="https://commons.wikimedia.org/wiki/File:ANSI_US_QWERTY_(Windows)_Enter_Return.svg">here</a>.</p>
 
-<p>Frequencies are from <a href="https://en.wikipedia.org/wiki/Just_intonation#Five-limit_tuning">5-prime-limit tuning.</a> Shifting over a column multiplies frequency by either 4/3 (perfect fourth) or 3/2 (Perfect fifth), alternating. Shifting two columns goes up an octave. Shifting down a row multiplies frequency by 9/8 (Major Tone) or 10/9 (Minor Tone). Open the dev console if you want to see a log of all the keypresses and notes.</p>
-
-<p>This works best in Chrome, using a keyboard with n-key rollover.</p>
-
-<p>Also, here are a few other layouts:</p>
-<ol>
-	<li><a href="tones-rows-flipped2">An arrangement similar to the above but with all twelve notes</a>, <a href="tones-rows">2</a>, <a href="tones-iso">3</a>, <a href="tones-direct">4</a>
-	<li><a href="tones-wicki">Isomorphic layout based on the Wicki-Hayden Musical Note Layout</a>, <a href="tones-wicki2">2.</a>
-	<!--<li><a href="tones-up">The above layout but flipped upside-down.</a>-->
-	<li><a href="tones-tonnetz">Euler's Tone Net</a>
-</ol>
 
 
+<p>This works best in Chrome, using a qwerty keyboard with n-key rollover.</p>
 
  <textarea hidden></textarea>
 
@@ -97,25 +81,12 @@ gains = {};
 //And here's the stuff that tells us what the frequency for each key is supposed to be.
 //It also, incidentally, implicitly defines which keys to ignore.
 //Change the tuning by changing the values of the row and column multipliers
-var principle = 110;
+var principle = 220;
 
-//This setup is based on a 5-limit Just tuning. Which means all the ratios have factors of 3,4, or 5
-//See here for more info https://en.wikipedia.org/wiki/Five-limit_tuning
-//(Really wish I had found that article before working out the fractions by hand)
-//CDEFGAB, and F# are all represented. The F# may seem out of place, but it completes several patterns.
-//Shifting over a column increases frequency by either 4/3 (perfect fourth) or 3/2 (Perfect fifth), alternating. (Shifting two cols doubles frequency)
-//Shifting down a row increases frequency by 9/8 (Major Tone) or 10/9 (Minor Tone)
-//C can be found on any odd digit key.
-//As a sidenote, if you deleted the first entry from the colMult list, then KeyA would be an A note and KeyB will be a B note. Neat!
-//You cold also flip it upside down and have the KeyC, KeyD, and KeyE be mapped to notes C D and E, respectively. But I've tried that; it's uncomfortable to play.
-var rowMult = [1, 9/8, 5/4, 45/32];
-var colMult = octaveColumns2 = [1,4/3, 2,2*4/3, 4,4*4/3, 8,8*4/3, 16,16*4/3,  32,32*4/3,];
-
-//Piano style - 12 tone equal temperment https://en.wikipedia.org/wiki/12_equal_temperament
-//Shifting over a column to the right increases frequency by 2^(1/12)
-//Shifting down a row doubles frequency.
-//var rowMult = [1,2,4,8];
-//var colMult = [1, 2**(1/12), 2**(2/12), 2**(3/12), 2**(4/12), 2**(5/12), 2**(6/12), 2**(7/12), 2**(8/12), 2**(9/12), 2**(10/12), 2**(11/12),];
+//Going right shifts up a semitone
+//going up two shifts up an octave
+var rowMult = [1*2**(-2/12), 2**(-1/12), 2, 2*2**(-1/12)];
+var colMult = [1, 2**(2/12), 2**(4/12), 2**(6/12), 2**(8/12), 2**(10/12), 2**(12/12), 2**(14/12), 2**(16/12), 2**(18/12), 2**(20/12), 2**(22/12), 2**(24/12), 2**(26/12),  ];
 
 
 tones = {
@@ -131,6 +102,7 @@ tones = {
 	Digit0: principle * rowMult[0] * colMult[9],
 	Minus: principle * rowMult[0] * colMult[10],
 	Equal: principle * rowMult[0] * colMult[11],
+	Backspace: principle * rowMult[0] * colMult[12],
 	
 	KeyQ: principle * rowMult[1] * colMult[0],
 	KeyW: principle * rowMult[1] * colMult[1],
@@ -144,6 +116,7 @@ tones = {
 	KeyP: principle * rowMult[1] * colMult[9],
 	BracketLeft: principle * rowMult[1] * colMult[10],
 	BracketRight: principle * rowMult[1] * colMult[11],
+	Backslash: principle * rowMult[1] * colMult[12],
 	
 	KeyA: principle * rowMult[2] * colMult[0],
 	KeyS: principle * rowMult[2] * colMult[1],
@@ -158,17 +131,19 @@ tones = {
 	Quote: principle * rowMult[2] * colMult[10],
 	Enter: principle * rowMult[2] * colMult[11],
 	
-	KeyZ: principle * rowMult[3] * colMult[0],
-	KeyX: principle * rowMult[3] * colMult[1],
-	KeyC: principle * rowMult[3] * colMult[2],
-	KeyV: principle * rowMult[3] * colMult[3],
-	KeyB: principle * rowMult[3] * colMult[4],
-	KeyN: principle * rowMult[3] * colMult[5],
-	KeyM: principle * rowMult[3] * colMult[6],
-	Comma: principle * rowMult[3] * colMult[7],
-	Period: principle * rowMult[3] * colMult[8],
-	Slash: principle * rowMult[3] * colMult[9],
-	ShiftRight: principle * rowMult[3] * colMult[11], //small exception to layout so we can hit B on that last note instead of A#
+	//Last row tweaked to make the B line up properly.
+	ShiftLeft: principle * rowMult[3] * colMult[0],
+	KeyZ: principle * rowMult[3] * colMult[1],
+	KeyX: principle * rowMult[3] * colMult[2],
+	KeyC: principle * rowMult[3] * colMult[3],
+	KeyV: principle * rowMult[3] * colMult[4],
+	KeyB: principle * rowMult[3] * colMult[5],
+	KeyN: principle * rowMult[3] * colMult[6],
+	KeyM: principle * rowMult[3] * colMult[7],
+	Comma: principle * rowMult[3] * colMult[8],
+	Period: principle * rowMult[3] * colMult[9],
+	Slash: principle * rowMult[3] * colMult[10],
+	ShiftRight: principle * rowMult[3] * colMult[11], 
 };
 
 
