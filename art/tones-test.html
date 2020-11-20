@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
     <title>Touch Music Keyboard - Tap to Play</title>
     <link href="../styles/everythingbagel.css" rel="stylesheet" type="text/css">
 	
@@ -16,7 +16,7 @@
 
 
 
-<svg viewBox="0 0 450 600" xmlns="http://www.w3.org/2000/svg" style="-webkit-touch-callout: none !important;">
+<svg viewBox="0 0 450 800" xmlns="http://www.w3.org/2000/svg" style="-webkit-touch-callout: none !important;">
   <rect x="0" y="0" width="98" height="98" rx="15" fill="blue" ontouchstart="start_tone('Digit6')" ontouchend="stop_tone('Digit6')"/>
   <rect x="100" y="0" width="98" height="98" rx="15" fill="blue" ontouchstart="start_tone('KeyY')" ontouchend="stop_tone('KeyY')"/>
   <rect x="200" y="0" width="98" height="98" rx="15" fill="blue" ontouchstart="start_tone('KeyH')" ontouchend="stop_tone('KeyH')"/>
@@ -174,7 +174,9 @@
         g.gain.value = 0.1;											//But keep it quiet so it doesn't blow out the speakers.
         o.start(0);												//Start playing the sound.
         
-        g.gain.exponentialRampToValueAtTime(0.00001, ctx.currentTime+1.5);//fade it out (also to prevent clicky sounds)
+	    
+	fadeArray = [0.1,0.0000001];
+        g.gain.exponentialRampToValueAtTime(fadeArray, ctx.currentTime, 1.5);//fade it out (also to prevent clicky sounds)
         //o.stop(ctx.currentTime + 0.5);							//Stop playing the sound.
     }
 
