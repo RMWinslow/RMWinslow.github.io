@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
-    <title>Keyboard Keyboard</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Touch Music Keyboard - Tap to Play</title>
     <link href="../styles/everythingbagel.css" rel="stylesheet" type="text/css">
 	
 	
-	<meta property="og:title" content="Keyboard Keyboard - Type to Play" />
-	<meta property="og:description" content="I threw together a little music toy which uses your keyboard to trigger pure tones." />
+	<meta property="og:title" content="Touch Music Keyboard - Tap to Play" />
+	<meta property="og:description" content="This is a test of intereactive touchable SVGs." />
 	<meta property="og:image" content="https://www.robertmwinslow.com/art/keyboardio.png" />
 	
 </head>
@@ -15,55 +16,39 @@
 
 
 
-<h1>Type to Play Music.</h1>
-
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="100" r="100" onclick="bloop('Digit4')" />
-  <circle cx="300" cy="100" r="100" onclick="bloop('Digit3')" />
-  <circle cx="500" cy="100" r="100" onclick="bloop('KeyY')" />
-  <circle cx="700" cy="100" r="100" onclick="bloop('KeyY')" />
-  <circle cx="200" cy="250" r="100" onclick="bloop('KeyY')" />
-  <circle cx="400" cy="250" r="100" onclick="bloop('KeyY')" />
-  <circle cx="600" cy="250" r="100" onclick="bloop('KeyY')" ontouchstart="bloop('KeyI')"/>
+<svg viewBox="0 0 450 600" xmlns="http://www.w3.org/2000/svg" style="-webkit-touch-callout: none !important;">
+  <rect x="0" y="0" width="98" height="98" rx="15" fill="blue" ontouchstart="start_tone('Digit6')" ontouchend="stop_tone('Digit6')"/>
+  <rect x="100" y="0" width="98" height="98" rx="15" fill="blue" ontouchstart="start_tone('KeyY')" ontouchend="stop_tone('KeyY')"/>
+  <rect x="200" y="0" width="98" height="98" rx="15" fill="blue" ontouchstart="start_tone('KeyH')" ontouchend="stop_tone('KeyH')"/>
+  <rect x="300" y="0" width="98" height="98" rx="15" fill="blue" ontouchstart="start_tone('KeyN')" ontouchend="stop_tone('KeyN')"/>
+  
+  <rect x="50" y="100" width="98" height="98" rx="15" fill="blue" ontouchstart="start_tone('Digit5')" ontouchend="stop_tone('Digit5')"/>
+  <rect x="150" y="100" width="98" height="98" rx="15" fill="blue" ontouchstart="start_tone('KeyT')" ontouchend="stop_tone('KeyT')"/>
+  <rect x="250" y="100" width="98" height="98" rx="15" fill="blue" ontouchstart="start_tone('KeyG')" ontouchend="stop_tone('KeyG')"/>
+  <rect x="350" y="100" width="98" height="98" rx="15" fill="blue" ontouchstart="start_tone('KeyB')" ontouchend="stop_tone('KeyB')"/>
+  
+  <rect x="0" y="200" width="98" height="98" rx="15" fill="green" ontouchstart="start_tone('Digit4')" ontouchend="stop_tone('Digit4')"/>
+  <rect x="100" y="200" width="98" height="98" rx="15" fill="green" ontouchstart="start_tone('KeyR')" ontouchend="stop_tone('KeyR')"/>
+  <rect x="200" y="200" width="98" height="98" rx="15" fill="green" ontouchstart="start_tone('KeyF')" ontouchend="stop_tone('KeyF')"/>
+  <rect x="300" y="200" width="98" height="98" rx="15" fill="green" ontouchstart="start_tone('KeyV')" ontouchend="stop_tone('KeyV')"/>
+  
+  <rect x="50" y="300" width="98" height="98" rx="15" fill="green" ontouchstart="start_tone('Digit3')" ontouchend="stop_tone('Digit3')"/>
+  <rect x="150" y="300" width="98" height="98" rx="15" fill="green" ontouchstart="start_tone('KeyE')" ontouchend="stop_tone('KeyE')"/>
+  <rect x="250" y="300" width="98" height="98" rx="15" fill="green" ontouchstart="start_tone('KeyD')" ontouchend="stop_tone('KeyD')"/>
+  <rect x="350" y="300" width="98" height="98" rx="15" fill="green" ontouchstart="start_tone('KeyC')" ontouchend="stop_tone('KeyC')"/>
+  
+  <rect x="0" y="400" width="98" height="98" rx="15" fill="red" ontouchstart="start_tone('Digit2')" ontouchend="stop_tone('Digit2')"/>
+  <rect x="100" y="400" width="98" height="98" rx="15" fill="red" ontouchstart="start_tone('KeyW')" ontouchend="stop_tone('KeyW')"/>
+  <rect x="200" y="400" width="98" height="98" rx="15" fill="red" ontouchstart="start_tone('KeyS')" ontouchend="stop_tone('KeyS')"/>
+  <rect x="300" y="400" width="98" height="98" rx="15" fill="red" ontouchstart="start_tone('KeyX')" ontouchend="stop_tone('KeyX')"/>
+  
+  <rect x="50" y="500" width="98" height="98" rx="15" fill="red" ontouchstart="start_tone('Digit1')" ontouchend="stop_tone('Digit1')"/>
+  <rect x="150" y="500" width="98" height="98" rx="15" fill="red" ontouchstart="start_tone('KeyQ')" ontouchend="stop_tone('KeyQ')"/>
+  <rect x="250" y="500" width="98" height="98" rx="15" fill="red" ontouchstart="start_tone('KeyA')" ontouchend="stop_tone('KeyA')"/>
+  <rect x="350" y="500" width="98" height="98" rx="15" fill="red" ontouchstart="start_tone('KeyZ')" ontouchend="stop_tone('KeyZ')"/>
+  
 </svg>
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="100" r="100" ontouchstart="bloop('Digit4')" />
-  <circle cx="300" cy="100" r="100" ontouchstart="bloop('KeyR')" />
-  <circle cx="500" cy="100" r="100" ontouchstart="bloop('KeyF')" />
-  <circle cx="700" cy="100" r="100" ontouchstart="bloop('KeyV')" />
-  <circle cx="200" cy="250" r="100" ontouchstart="bloop('Digit3')" />
-  <circle cx="400" cy="250" r="100" ontouchstart="start_tone('KeyE')" ontouchend="stop_tone('KeyE')" />
-  <circle cx="600" cy="250" r="100" ontouchstart="start_tone('KeyD')" ontouchend="stop_tone('KeyD')"/>
-</svg>
-
-<p>There are lots of online keyboard pianos out there, but I wanted one where:
-<ol>
-	<li>The sounds are pure tones - sine waves - so I can play around with harmonics.
-	<li>The sounds are sustained as long as the key is held down. 
-	<li>The notes are laid out in a way that "feels right" on a qwerty keyboard, instead of just trying to copy the layout of a piano.
-</ol>
-</p>
-
-<img src="keyboardio.svg">
-<p>Keyboard svg modified from <a href="https://commons.wikimedia.org/wiki/File:ANSI_US_QWERTY_(Windows)_Enter_Return.svg">here</a>.</p>
-
-<p>Frequencies are from <a href="https://en.wikipedia.org/wiki/Just_intonation#Five-limit_tuning">5-prime-limit tuning.</a> Shifting over a column multiplies frequency by either 4/3 (perfect fourth) or 3/2 (Perfect fifth), alternating. Shifting two columns goes up an octave. Shifting down a row multiplies frequency by 9/8 (Major Tone) or 10/9 (Minor Tone). Open the dev console if you want to see a log of all the keypresses and notes.</p>
-
-<p>This works best in Chrome, using a keyboard with n-key rollover.</p>
-
-<p>Also, here are a few other layouts:</p>
-<ol>
-	<li>A few different arrangements similar to the above but with all twelve notes: <a href="tones-rows-flipped">1</a>, <a href="tones-rows-flipped2">2</a>, <a href="tones-rows">3</a>
-	<li><a href="tones-wicki">Isomorphic layout based on the Wicki-Hayden Musical Note Layout.</a>
-	<li><a href="tones-wicki2">Wicki-Hayden with different tuning.</a>
-	<!--<li><a href="tones-up">The above layout but flipped upside-down.</a>-->
-	<li><a href="tones-tonnetz">Euler's Tone Net</a>
-</ol>
-
-
-
- <textarea hidden></textarea>
 
 
 
