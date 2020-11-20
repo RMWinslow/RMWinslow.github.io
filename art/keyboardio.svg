@@ -1109,7 +1109,8 @@
        y="109.17198"
        x="281.75287"
        id="tspan5336"
-       sodipodi:role="line">440 Hz</tspan></text><text
+       sodipodi:role="line">264 
+	</tspan></text><text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.55371px;line-height:1;font-family:'CMU Concrete';-inkscape-font-specification:'CMU Concrete';letter-spacing:0px;word-spacing:0px;display:inline;fill:#800000;stroke-width:0.64153"
      x="65.277489"
@@ -1119,7 +1120,7 @@
        id="tspan5336-4"
        x="65.277489"
        y="109.464"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Concrete';-inkscape-font-specification:'CMU Concrete';fill:#800000;stroke-width:0.64153">110 Hz</tspan></text><text
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Concrete';-inkscape-font-specification:'CMU Concrete';fill:#800000;stroke-width:0.64153">66 Hz</tspan></text><text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.55371px;line-height:1;font-family:'CMU Concrete';-inkscape-font-specification:'CMU Concrete';letter-spacing:0px;word-spacing:0px;display:inline;fill:#0000ff;stroke-width:0.64153"
      x="495.20444"
@@ -1129,7 +1130,7 @@
        id="tspan5336-3"
        x="495.20444"
        y="108.96913"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Concrete';-inkscape-font-specification:'CMU Concrete';fill:#0000ff;stroke-width:0.64153">1760 Hz</tspan></text><text
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Concrete';-inkscape-font-specification:'CMU Concrete';fill:#0000ff;stroke-width:0.64153">1056 Hz</tspan></text><text
      id="text5338-71-7"
      y="109.76991"
      x="604.53784"
@@ -1139,7 +1140,7 @@
        y="109.76991"
        x="604.53784"
        id="tspan5336-3-0"
-       sodipodi:role="line">3520 Hz</tspan></text><text
+       sodipodi:role="line">2112 Hz</tspan></text><text
      id="text5338-71-1"
      y="109.75817"
      x="388.35767"
@@ -1149,7 +1150,7 @@
        y="109.75817"
        x="388.35767"
        id="tspan5336-3-8"
-       sodipodi:role="line">880 Hz</tspan></text><text
+       sodipodi:role="line">528 Hz</tspan></text><text
      xml:space="preserve"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.55371px;line-height:1;font-family:'CMU Concrete';-inkscape-font-specification:'CMU Concrete';letter-spacing:0px;word-spacing:0px;display:inline;fill:#808000;stroke-width:0.64153;"
      x="172.91747"
@@ -1159,7 +1160,7 @@
        id="tspan5336-6"
        x="172.91747"
        y="109.80855"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Concrete';-inkscape-font-specification:'CMU Concrete';fill:#808000;stroke-width:0.64153;">220 Hz</tspan></text></g><g
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'CMU Concrete';-inkscape-font-specification:'CMU Concrete';fill:#808000;stroke-width:0.64153;">132 Hz</tspan></text></g><g
    id="g433"
    transform="translate(-93.230179,-528.68011)"><path
      d="m 141.4,29.3 h -3.9 v 2.1 h 2.3 v 1.2 h -2.3 V 36 h -1.2 v -7.9 h 5.1 z"
