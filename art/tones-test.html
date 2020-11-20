@@ -157,8 +157,8 @@
             
             gains[keycode].gain.value = 0.1;											//restablish the volume level or else it will make clicky sounds
             gains[keycode].gain.exponentialRampToValueAtTime(0.000001, ctx.currentTime+0.4);//fade it out (also to prevent clicky sounds)
-			fadeArray = [0.1,0.05, 0.025,0.01, 0.001,0.000.0000001];
-        gains[keycode].gain.setValueCurveAtTime(fadeArray, ctx.currentTime, 1.5);//fade it out (also to prevent clicky sounds)
+			fadeArray = [0.1, 0.05, 0.025, 0.01, 0.001,];
+        gains[keycode].gain.setValueCurveAtTime(fadeArray, ctx.currentTime, 0.5);//fade it out (also to prevent clicky sounds)
             oscillators[keycode].stop(ctx.currentTime + 0.5);							//Stop playing the sound.
 		}
     }
