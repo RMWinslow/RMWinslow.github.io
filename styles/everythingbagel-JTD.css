@@ -59,7 +59,8 @@ aside {
     }
 }
 
-@media (max-width: 100rem) {
+/*I had to make things even hackier to work around the details of JTD css*/
+@media (max-width: 50rem) {
     aside {
         margin-right: 0rem; 
     }
