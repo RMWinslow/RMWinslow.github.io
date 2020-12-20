@@ -46,7 +46,7 @@ aside {
     padding: 1rem;
     max-width: 50%;
     /*In a wide window, this shoves the aside out into the margins. In a narrow window, it makes the aside cling to the right side of the screen.*/
-    margin: -1rem   max(-22rem, -1 * (100vw - 136%) / 2)    0     1rem;
+    margin: -1rem   max(-22rem, -1 * (100vw - - (100% + 18rem)) / 2)    0     1rem;
 }
 
 @media (max-width: 100rem) {
@@ -62,6 +62,6 @@ aside {
 /*I had to make things even hackier to work around the details of JTD css*/
 @media (max-width: 50rem) {
     aside {
-        margin-right: 0rem; 
+        margin-right: -1rem; 
     }
 }
