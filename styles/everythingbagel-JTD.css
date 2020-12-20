@@ -46,10 +46,10 @@ aside {
     padding: 1rem;
     max-width: 50%;
     /*In a wide window, this shoves the aside out into the margins. In a narrow window, it makes the aside cling to the right side of the screen.*/
-    margin: -1rem   max(-22rem, -1 * (100vw - 100%) / 2  + 1rem)    0     1rem;
+    margin: -1rem   max(-22rem, -1 * (100vw - 136%) / 2)    0     1rem;
 }
 
-@media (max-width: 90rem) {
+@media (max-width: 100rem) {
     aside {
         margin-top: 0rem; 
         /*Usually margin-top is set to -1 to cancel out the padding, 
@@ -59,3 +59,8 @@ aside {
     }
 }
 
+@media (max-width: 100rem) {
+    aside {
+        margin-right: 0rem; 
+    }
+}
