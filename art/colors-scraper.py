@@ -177,11 +177,7 @@ for line in colorLines[:-1]:
                 }
         if name in namereplacements:
             name = namereplacements[name]
-        name = name.replace('pinkishgray','lightpinkishgray') #wrong luminosity
-        name = name.replace('yellowishgray','lightyellowishgray') #wrong luminosity
-        name = name.replace('yellowgreen','chartreuse') #wrong luminosity
-        name = name.replace('yellowgreen','chartreuse') #wrong luminosity
-        name = name.replace('yellowgreen','chartreuse') #wrong luminosity
+        name = name.replace('yellowgreen','chartreuse') #easier name distinction
         if name == 'deepyellowishpink':
             b = '97' #typo in source e66761, not e66721
         if name == 'deepgreenishblue':
@@ -198,6 +194,10 @@ for line in colorLines[:-1]:
             modifier = 'pale' #lightgrayish and pale are similar
         colorDict[(category,modifier)] = [name, r,g,b,hexcolor, category, modifier] 
         colorDict[name] = [name, r,g,b,hexcolor, category, modifier]  
+        
+        
+#manually fill out the grays
+colorDict[']
         
 #%%Build the html
 tableordermods = ['brilliant','vivid','strong','deep','verydeep','verylight','light','moderate','dark','verydark','verypale','pale','grayish','darkgrayish','blackish','brownish',]
