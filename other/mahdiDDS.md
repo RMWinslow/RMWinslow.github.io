@@ -1,4 +1,9 @@
-Statement of Research Mahdi Ansari
+# Statement of Research Mahdi Ansari
+
+Mahdi, I have ~~crossed out~~ your original phrasing, and provided suggested additions **in bold**.
+
+Also note that near the end of the `Research Objectives and Timeline` section, I have italicized a couple of sentences that were difficult to understand.
+
 
 # Underlying Forces in the Modern Business World
 
@@ -131,3 +136,19 @@ coming from developing countries, especially the Middle East.
 
 The Doctoral Dissertation Fellowship would enable me to focus on my dissertation
 during my fifth year and to complete it in a timely manner.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
