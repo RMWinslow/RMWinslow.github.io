@@ -4,25 +4,464 @@
 <style>
     table {
         border-collapse:collapse;
+        border-color: black;
         margin-left: auto;
         margin-right: auto;
     }
     td {
-        padding: 0em;
-        width: 6em;
-        height: 3em;
+        padding: 0.25rem;
         text-align: center;
         font-size: small;
+        color: black;
+    }
+    th {
+        padding: 0.25rem;
+        text-align: center;
+    }
+    .colorcol {
+        width: 6rem;
+    }
+    .spacer {
+        width: 0px ;
+    }
+    .dark-mode {
+        background-color: black;
+        color: white;
+    }
+    .dark-text  td {
+        color:white;
+    }
+    .invis-text  td {
+        color: rgba(0, 0, 0, 0);
     }
 </style>
 </head>
 
 
 
-<body>
+<body bgcolor="">
+
+
+<button onclick='nightmode()'>Invert BG color</button>
+<button onclick='nighttext()'>Invert text</button>
+<button onclick='invisitext()'>Hide text</button>
+<script>
+    function nightmode(){
+        document.body.classList.toggle("dark-mode")
+    }
+    function nighttext(){
+        document.body.classList.toggle("dark-text")
+    }
+    function invisitext(){
+        document.body.classList.toggle("invis-text")
+    }
+</script>
+
+<h1>The Universal Color Language</h1>
+
+<p>The <a href="https://en.wikipedia.org/wiki/ISCC%E2%80%93NBS_system">ISCC–NBS System of Color Designation</a> is an attempt to build a dictionary of color names by combining basic color names with adjectives.
+The system is meant to be perceptually uniform and is based on the <a href="https://en.wikipedia.org/wiki/Munsell_color_system">Munsell color system</a>.
+As perceptually uniform color spaces, these systems has been largely superseded by work by the <a href"https://en.wikipedia.org/wiki/International_Commission_on_Illumination">the CIE</a>.
+But I really enjoy the adjective+base color names in the NBS system.</p>
+
+<p>Below, I've reproduced some tables of hexidecimal color codes from various attempts to convert this system to sRGB.</p>
 
 
 
+
+
+
+
+<h2>Paul Centore's RGB Conversion</h2>
+
+<h3>My slightly modified version.</h3>
+
+<table border="1"><col><col class="colorcol"><col class="spacer"><col class="colorcol"><col class="spacer"><col class="colorcol"><col class="colorcol"><col class="colorcol"><col class="colorcol"><col class="spacer"><col class="colorcol"><col class="colorcol"><col class="colorcol"><col class="colorcol"><col class="colorcol"><col class="spacer"><col class="colorcol"><col class="colorcol"><col class="colorcol"><col class="colorcol"><col class="colorcol"><tr><th></th><th> </th><th></th><th>vivid</th><th></th><th>brilliant</th><th>strong</th><th>deep</th><th>very deep</th><th></th><th>very light</th><th>light</th><th>moderate</th><th>dark</th><th>very dark</th><th></th><th>very pale</th><th>pale</th><th>grayish</th><th>dark grayish</th><th>blackish</th></tr><tr><th>red</th><td bgcolor="#b92842">2※<br>#b92842</td><td></td><td bgcolor="#d51c3c">11<br>#d51c3c</td><td></td><td></td><td bgcolor="#bf344b">12<br>#bf344b</td><td bgcolor="#87122d">13<br>#87122d</td><td bgcolor="#5c0625">14<br>#5c0625</td><td></td><td></td><td></td><td bgcolor="#b14955">15<br>#b14955</td><td bgcolor="#742434">16<br>#742434</td><td bgcolor="#481127">17<br>#481127</td><td></td><td></td><td bgcolor="#b4888d">18*<br>#b4888d</td><td bgcolor="#985d62">19<br>#985d62</td><td bgcolor="#53383e">20<br>#53383e</td><td bgcolor="#332127">21<br>#332127</td></tr><tr><th>reddish orange</th><td bgcolor="#d7472a">4※<br>#d7472a</td><td></td><td bgcolor="#e83b1b">34<br>#e83b1b</td><td></td><td></td><td bgcolor="#db5d3b">35<br>#db5d3b</td><td bgcolor="#af3318">36<br>#af3318</td><td></td><td></td><td></td><td></td><td bgcolor="#cd6952">37<br>#cd6952</td><td bgcolor="#a2402b">38<br>#a2402b</td><td></td><td></td><td></td><td></td><td bgcolor="#b97565">39<br>#b97565</td><td></td><td></td></tr><tr><th>orange</th><td bgcolor="#dc7d34">6※<br>#dc7d34</td><td></td><td bgcolor="#f7760b">48<br>#f7760b</td><td></td><td bgcolor="#ff9d50">49†<br>#ff9d50</td><td bgcolor="#ea8127">50<br>#ea8127</td><td bgcolor="#c26012">51<br>#c26012</td><td></td><td></td><td></td><td bgcolor="#fbaf82">52<br>#fbaf82</td><td bgcolor="#de8d5c">53<br>#de8d5c</td><td bgcolor="#b26633">54*<br>#b26633</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>orange yellow</th><td bgcolor="#e3a045">8※<br>#e3a045</td><td></td><td bgcolor="#f39e11">66†<br>#f39e11</td><td></td><td bgcolor="#ffbe50">67<br>#ffbe50</td><td bgcolor="#f0a121">68<br>#f0a121</td><td bgcolor="#d08511">69<br>#d08511</td><td></td><td></td><td></td><td bgcolor="#fcc27c">70<br>#fcc27c</td><td bgcolor="#e7a75d">71<br>#e7a75d</td><td bgcolor="#c38639">72<br>#c38639</td><td></td><td></td><td></td><td bgcolor="#eec6a6">73<br>#eec6a6</td><td></td><td></td><td></td></tr><tr><th>yellow</th><td bgcolor="#d9b451">10※<br>#d9b451</td><td></td><td bgcolor="#f1bf15">82<br>#f1bf15</td><td></td><td bgcolor="#f7ce50">83<br>#f7ce50</td><td bgcolor="#d9ae2f">84<br>#d9ae2f</td><td bgcolor="#b88f16">85<br>#b88f16</td><td></td><td></td><td></td><td bgcolor="#f4d284">86<br>#f4d284</td><td bgcolor="#d2af63">87<br>#d2af63</td><td bgcolor="#b08f42">88<br>#b08f42</td><td></td><td></td><td></td><td bgcolor="#efd7b2">89<br>#efd7b2</td><td bgcolor="#c8b18b">90<br>#c8b18b</td><td bgcolor="#a99066">91<br>#a99066</td><td></td></tr><tr><th>greenish yellow</th><td bgcolor="#d0c445">12※<br>#d0c445</td><td></td><td bgcolor="#ebdd21">97<br>#ebdd21</td><td></td><td bgcolor="#e9dc55">98<br>#e9dc55</td><td bgcolor="#c4b827">99<br>#c4b827</td><td bgcolor="#a29812">100<br>#a29812</td><td></td><td></td><td></td><td bgcolor="#e9dd8a">101<br>#e9dd8a</td><td bgcolor="#c0b55e">102<br>#c0b55e</td><td bgcolor="#9e953c">103<br>#9e953c</td><td></td><td></td><td></td><td bgcolor="#e6dcab">104<br>#e6dcab</td><td bgcolor="#beb584">105<br>#beb584</td><td></td><td></td></tr><tr><th>yellow green</th><td bgcolor="#a0c245">14※<br>#a0c245</td><td></td><td bgcolor="#a7dc26">115<br>#a7dc26</td><td></td><td bgcolor="#c3df69">116<br>#c3df69</td><td bgcolor="#82a12b">117<br>#82a12b</td><td bgcolor="#486c0e">118<br>#486c0e</td><td></td><td></td><td></td><td bgcolor="#cedb9f">119<br>#cedb9f</td><td bgcolor="#8b9a5f">120<br>#8b9a5f</td><td></td><td></td><td></td><td></td><td bgcolor="#d7d7c1">121<br>#d7d7c1</td><td bgcolor="#979a85">122<br>#979a85</td><td></td><td></td></tr><tr><th>yellowish green</th><td bgcolor="#4ac34d">16※<br>#4ac34d</td><td></td><td bgcolor="#3fd740">129<br>#3fd740</td><td></td><td bgcolor="#87d989">130<br>#87d989</td><td bgcolor="#39964a">131<br>#39964a</td><td bgcolor="#176a1e">132<br>#176a1e</td><td bgcolor="#054208">133<br>#054208</td><td></td><td bgcolor="#c5edc4">134<br>#c5edc4</td><td bgcolor="#9cc69c">135<br>#9cc69c</td><td bgcolor="#669069">136<br>#669069</td><td bgcolor="#2f5d3a">137<br>#2f5d3a</td><td bgcolor="#10361a">138<br>#10361a</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>green</th><td bgcolor="#4fbf9a">17※<br>#4fbf9a</td><td></td><td bgcolor="#23eaa5">139<br>#23eaa5</td><td></td><td bgcolor="#49d0a3">140<br>#49d0a3</td><td bgcolor="#158a66">141<br>#158a66</td><td bgcolor="#085e40">142†<br>#085e40</td><td></td><td></td><td bgcolor="#a6e2ca">143<br>#a6e2ca</td><td bgcolor="#6fac95">144<br>#6fac95</td><td bgcolor="#337762">145<br>#337762</td><td bgcolor="#164e3d">146<br>#164e3d</td><td bgcolor="#0c2e24">147<br>#0c2e24</td><td></td><td bgcolor="#c7d9d6">148<br>#c7d9d6</td><td bgcolor="#94a6a3">149<br>#94a6a3</td><td bgcolor="#61716e">150<br>#61716e</td><td bgcolor="#394746">151<br>#394746</td><td bgcolor="#1f2a2a">152<br>#1f2a2a</td></tr><tr><th>bluish green</th><td bgcolor="#43bdb8">18※<br>#43bdb8</td><td></td><td bgcolor="#13fcd5">158<br>#13fcd5</td><td></td><td bgcolor="#35d7ce">159<br>#35d7ce</td><td bgcolor="#0d8f82">160<br>#0d8f82</td><td bgcolor="#0a5043">161†<br>#0a5043</td><td></td><td></td><td bgcolor="#98e1e0">162<br>#98e1e0</td><td bgcolor="#5fabab">163<br>#5fabab</td><td bgcolor="#297a7b">164<br>#297a7b</td><td bgcolor="#154b4d">165<br>#154b4d</td><td bgcolor="#0a2d2e">166<br>#0a2d2e</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>greenish blue</th><td bgcolor="#3ea6c6">19※<br>#3ea6c6</td><td></td><td bgcolor="#00adc5">167†<br>#00adc5</td><td></td><td bgcolor="#2dbce2">168<br>#2dbce2</td><td bgcolor="#1385af">169<br>#1385af</td><td bgcolor="#05424c">170†<br>#05424c</td><td></td><td></td><td bgcolor="#94d6ef">171<br>#94d6ef</td><td bgcolor="#65a8c3">172<br>#65a8c3</td><td bgcolor="#2a7691">173<br>#2a7691</td><td bgcolor="#134a60">174<br>#134a60</td><td bgcolor="#0b2c3b">175<br>#0b2c3b</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>blue</th><td bgcolor="#3b74c0">20※<br>#3b74c0</td><td></td><td bgcolor="#1b5cd7">176<br>#1b5cd7</td><td></td><td bgcolor="#419ded">177<br>#419ded</td><td bgcolor="#276cbd">178<br>#276cbd</td><td bgcolor="#113074">179<br>#113074</td><td></td><td></td><td bgcolor="#99c6f9">180<br>#99c6f9</td><td bgcolor="#73a4dc">181<br>#73a4dc</td><td bgcolor="#34689e">182<br>#34689e</td><td bgcolor="#173459">183<br>#173459</td><td></td><td></td><td bgcolor="#c2d2ec">184<br>#c2d2ec</td><td bgcolor="#91a2bb">185<br>#91a2bb</td><td bgcolor="#54687f">186<br>#54687f</td><td bgcolor="#323f4e">187<br>#323f4e</td><td bgcolor="#1e2531">188<br>#1e2531</td></tr><tr><th>purplish blue</th><td bgcolor="#4f47c6">21※<br>#4f47c6</td><td></td><td bgcolor="#4436d1">194<br>#4436d1</td><td></td><td bgcolor="#8088e2">195<br>#8088e2</td><td bgcolor="#5359b5">196<br>#5359b5</td><td bgcolor="#2a286f">197<br>#2a286f</td><td></td><td></td><td bgcolor="#b7c0f8">198<br>#b7c0f8</td><td bgcolor="#8991cb">199<br>#8991cb</td><td bgcolor="#4d4e87">200<br>#4d4e87</td><td bgcolor="#222248">201<br>#222248</td><td></td><td></td><td bgcolor="#c5c9f0">202<br>#c5c9f0</td><td bgcolor="#8e92b7">203<br>#8e92b7</td><td bgcolor="#494d71">204<br>#494d71</td><td></td><td></td></tr><tr><th>violet</th><td bgcolor="#7842c5">22※<br>#7842c5</td><td></td><td bgcolor="#7931d3">205<br>#7931d3</td><td></td><td bgcolor="#987fdc">206<br>#987fdc</td><td bgcolor="#61419c">207<br>#61419c</td><td bgcolor="#3c1668">208<br>#3c1668</td><td></td><td></td><td bgcolor="#c9baf8">209<br>#c9baf8</td><td bgcolor="#9b8cca">210<br>#9b8cca</td><td bgcolor="#5c4985">211<br>#5c4985</td><td bgcolor="#34254d">212<br>#34254d</td><td></td><td></td><td bgcolor="#d0c6ef">213<br>#d0c6ef</td><td bgcolor="#9a90b5">214<br>#9a90b5</td><td bgcolor="#584e72">215<br>#584e72</td><td></td><td></td></tr><tr><th>purple</th><td bgcolor="#ac4ac3">23※<br>#ac4ac3</td><td></td><td bgcolor="#b935d5">216<br>#b935d5</td><td></td><td bgcolor="#ce8ce3">217<br>#ce8ce3</td><td bgcolor="#9352a8">218<br>#9352a8</td><td bgcolor="#652277">219<br>#652277</td><td bgcolor="#460a55">220<br>#460a55</td><td></td><td bgcolor="#e4b9f3">221<br>#e4b9f3</td><td bgcolor="#bc93cc">222<br>#bc93cc</td><td bgcolor="#875e96">223<br>#875e96</td><td bgcolor="#563762">224<br>#563762</td><td bgcolor="#371b41">225<br>#371b41</td><td></td><td bgcolor="#e0cbeb">226<br>#e0cbeb</td><td bgcolor="#ad97b3">227<br>#ad97b3</td><td bgcolor="#7b667e">228<br>#7b667e</td><td bgcolor="#513f51">229<br>#513f51</td><td bgcolor="#2f2231">230<br>#2f2231</td></tr><tr><th>reddish purple</th><td bgcolor="#bb30a4">24※<br>#bb30a4</td><td></td><td bgcolor="#d429b9">236<br>#d429b9</td><td></td><td></td><td bgcolor="#a74994">237<br>#a74994</td><td bgcolor="#761a6a">238<br>#761a6a</td><td bgcolor="#4f094a">239<br>#4f094a</td><td></td><td></td><td bgcolor="#bd80ae">240<br>#bd80ae</td><td bgcolor="#965888">241<br>#965888</td><td bgcolor="#5f3458">242<br>#5f3458</td><td bgcolor="#3f183c">243<br>#3f183c</td><td></td><td></td><td bgcolor="#ad89a5">244<br>#ad89a5</td><td bgcolor="#86627e">245<br>#86627e</td><td></td><td></td></tr><tr><th>purplish red</th><td bgcolor="#ba2b77">26※<br>#ba2b77</td><td></td><td bgcolor="#dd2388">254<br>#dd2388</td><td></td><td></td><td bgcolor="#b83773">255<br>#b83773</td><td bgcolor="#881055">256<br>#881055</td><td bgcolor="#54063c">257<br>#54063c</td><td></td><td></td><td></td><td bgcolor="#ab4b74">258<br>#ab4b74</td><td bgcolor="#6e294c">259<br>#6e294c</td><td bgcolor="#431432">260<br>#431432</td><td></td><td></td><td bgcolor="#b2879b">261*<br>#b2879b</td><td bgcolor="#945c73">262<br>#945c73</td><td></td><td></td></tr><tr><th></th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>purplish pink</th><td bgcolor="#e589bf">25※<br>#e589bf</td><td></td><td></td><td></td><td bgcolor="#fca1e7">246<br>#fca1e7</td><td bgcolor="#f483cd">247<br>#f483cd</td><td bgcolor="#df6aac">248<br>#df6aac</td><td></td><td></td><td></td><td bgcolor="#f5b2db">249<br>#f5b2db</td><td bgcolor="#de98bf">250<br>#de98bf</td><td bgcolor="#c67d9d">251<br>#c67d9d</td><td></td><td></td><td></td><td bgcolor="#ebc8df">252<br>#ebc8df</td><td bgcolor="#c7a3b9">253<br>#c7a3b9</td><td></td><td></td></tr><tr><th>pink</th><td bgcolor="#e68697">1※<br>#e68697</td><td></td><td bgcolor="#fd7992">1<br>#fd7992</td><td></td><td></td><td bgcolor="#f48fa0">2<br>#f48fa0</td><td bgcolor="#e66980">3<br>#e66980</td><td></td><td></td><td></td><td bgcolor="#f8c3ce">4<br>#f8c3ce</td><td bgcolor="#e2a3ae">5<br>#e2a3ae</td><td bgcolor="#c5808a">6<br>#c5808a</td><td></td><td></td><td></td><td bgcolor="#efd1dc">7<br>#efd1dc</td><td bgcolor="#cbadb7">8<br>#cbadb7</td><td></td><td></td></tr><tr><th>yellowish pink</th><td bgcolor="#ea9a90">3※<br>#ea9a90</td><td></td><td bgcolor="#fd7e5d">25<br>#fd7e5d</td><td></td><td></td><td bgcolor="#f59080">26<br>#f59080</td><td bgcolor="#ef6366">27<br>#ef6366</td><td></td><td></td><td></td><td bgcolor="#f8c4b6">28<br>#f8c4b6</td><td bgcolor="#e2a698">29<br>#e2a698</td><td bgcolor="#c9807e">30<br>#c9807e</td><td></td><td></td><td></td><td bgcolor="#f1d3d1">31<br>#f1d3d1</td><td bgcolor="#cbacac">32<br>#cbacac</td><td bgcolor="#cbafa7">33*<br>#cbafa7</td><td></td></tr><tr><th></th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>reddish brown</th><td bgcolor="#7a2c26">5※<br>#7a2c26</td><td></td><td></td><td></td><td></td><td bgcolor="#8b1c0e">40<br>#8b1c0e</td><td bgcolor="#610f12">41<br>#610f12</td><td></td><td></td><td></td><td bgcolor="#ac7a73">42<br>#ac7a73</td><td bgcolor="#7d423b">43<br>#7d423b</td><td bgcolor="#461d1e">44<br>#461d1e</td><td></td><td></td><td></td><td bgcolor="#9e7f7a">45*<br>#9e7f7a</td><td bgcolor="#6c4d4b">46<br>#6c4d4b</td><td bgcolor="#43292a">47<br>#43292a</td><td></td></tr><tr><th>brown</th><td bgcolor="#7f4829">7※<br>#7f4829</td><td></td><td></td><td></td><td></td><td bgcolor="#8a4416">55<br>#8a4416</td><td bgcolor="#571a07">56<br>#571a07</td><td></td><td></td><td></td><td bgcolor="#ad7c63">57<br>#ad7c63</td><td bgcolor="#724a38">58<br>#724a38</td><td bgcolor="#442112">59<br>#442112</td><td></td><td></td><td></td><td bgcolor="#997f75">60*<br>#997f75</td><td bgcolor="#674f48">61<br>#674f48</td><td bgcolor="#3e2c28">62<br>#3e2c28</td><td></td></tr><tr><th>yellowish brown</th><td bgcolor="#976b39">9※<br>#976b39</td><td></td><td></td><td></td><td></td><td bgcolor="#9e671d">74<br>#9e671d</td><td bgcolor="#673f0b">75<br>#673f0b</td><td></td><td></td><td></td><td bgcolor="#c49a74">76<br>#c49a74</td><td bgcolor="#886648">77<br>#886648</td><td bgcolor="#50341a">78<br>#50341a</td><td></td><td></td><td></td><td bgcolor="#b49b8d">79*<br>#b49b8d</td><td bgcolor="#7e695d">80<br>#7e695d</td><td bgcolor="#4d3d33">81<br>#4d3d33</td><td></td></tr><tr><th>olive brown</th><td bgcolor="#7f6129">11※<br>#7f6129</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td bgcolor="#997736">94<br>#997736</td><td bgcolor="#705420">95<br>#705420</td><td bgcolor="#3f2c10">96<br>#3f2c10</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>olive</th><td bgcolor="#72672c">13※<br>#72672c</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td bgcolor="#8b7d2e">106<br>#8b7d2e</td><td bgcolor="#64591a">107<br>#64591a</td><td bgcolor="#352e0a">108<br>#352e0a</td><td></td><td></td><td></td><td bgcolor="#8e856f">109*<br>#8e856f</td><td bgcolor="#5d553f">110<br>#5d553f</td><td bgcolor="#35301c">111<br>#35301c</td><td></td></tr><tr><th>olive green</th><td bgcolor="#3e501f">15※<br>#3e501f</td><td></td><td></td><td></td><td></td><td bgcolor="#2c5506">123<br>#2c5506</td><td bgcolor="#223604">124†<br>#223604</td><td></td><td></td><td></td><td></td><td bgcolor="#495b22">125<br>#495b22</td><td bgcolor="#20340b">126<br>#20340b</td><td></td><td></td><td></td><td></td><td bgcolor="#545947">127<br>#545947</td><td bgcolor="#2f3326">128<br>#2f3326</td><td></td></tr></table>
+
+
+
+<br>
+
+<table border="1">
+    <col><col class="colorcol"><col class="colorcol"><col class="colorcol"><col class="colorcol"><col class="colorcol">
+    <tr><th></th><th>... white</th><th>light... gray</th><th>... gray</th><th>dark... gray</th><th>... black</th></tr>
+    <tr><th></th>
+        <td bgcolor="#e7e1e9">263<br>#e7e1e9</td>
+        <td bgcolor="#bdb7bf">264<br>#bdb7bf</td>
+        <td bgcolor="#8a8489">265<br>#8a8489</td>
+        <td bgcolor="#585458">266<br>#585458</td>
+        <td bgcolor="#2b292b">267<br>#2b292b</td>
+    </tr>
+    <tr><th>reddish</th>
+        <td bgcolor="#e7e1e9"></td>
+        <td bgcolor="#bdb7bf"></td>
+        <td bgcolor="#928186">22<br>#928186</td>
+        <td bgcolor="#5d4e53">23<br>#5d4e53</td>
+        <td bgcolor="#30262b">24<br>#30262b</td>
+    </tr>
+    <tr><th>brownish</th>
+        <td bgcolor="#e7e1e9"></td>
+        <td bgcolor="#bdb7bf"></td>
+        <td bgcolor="#928281">63<br>#928281</td>
+        <td bgcolor="#605251">64<br>#605251</td>
+        <td bgcolor="#2b211e">65<br>#2b211e</td>
+    </tr>
+    <tr><th>yellowish</th>
+        <td bgcolor="#eedfda">92<br>#eedfda</td>
+        <td bgcolor="#c6b9b1">93<br>#c6b9b1</td>
+        <td bgcolor="#8a8489"></td>
+        <td bgcolor="#585458"></td>
+        <td bgcolor="#2b292b"></td>
+    </tr>
+    <tr><th>olive</th>
+        <td bgcolor="#e7e1e9"></td>
+        <td bgcolor="#bdb7bf"></td>
+        <td bgcolor="#8f877f">112<br>#8f877f</td>
+        <td bgcolor="#58514a">113<br>#58514a</td>
+        <td bgcolor="#23211c">114<br>#23211c</td>
+    </tr>
+    <tr><th>greenish</th>
+        <td bgcolor="#e0e2e5">153<br>#e0e2e5</td>
+        <td bgcolor="#babec1">154<br>#babec1</td>
+        <td bgcolor="#848888">155<br>#848888</td>
+        <td bgcolor="#545858">156<br>#545858</td>
+        <td bgcolor="#212626">157<br>#212626</td>
+    </tr>
+    <tr><th>bluish</th>
+        <td bgcolor="#e1e1f1">189<br>#e1e1f1</td>
+        <td bgcolor="#b7b8c6">190<br>#b7b8c6</td>
+        <td bgcolor="#838793">191<br>#838793</td>
+        <td bgcolor="#50545f">192<br>#50545f</td>
+        <td bgcolor="#24272e">193<br>#24272e</td>
+    </tr>
+    <tr><th>purplish</th>
+        <td bgcolor="#ebdfef">231<br>#ebdfef</td>
+        <td bgcolor="#c3b7c6">232<br>#c3b7c6</td>
+        <td bgcolor="#8f8490">233<br>#8f8490</td>
+        <td bgcolor="#5c525e">234<br>#5c525e</td>
+        <td bgcolor="#2b2630">235<br>#2b2630</td>
+    </tr>
+    <tr><th>pinkish</th>
+        <td bgcolor="#efdde5">9<br>#efdde5</td>
+        <td bgcolor="#c7b6bd">10<br>#c7b6bd</td>
+        <td bgcolor="#8a8489"></td>
+        <td bgcolor="#585458"></td>
+        <td bgcolor="#2b292b"></td>
+    </tr>
+    <tr>
+</table>
+    
+
+
+<p>I made the following changes to the labels.</p>
+<ol>
+    <li>Colors marked with * have been relabelled.
+        <ul>
+            <li>Brownish orange (54) and Brownish Pink (33) have been moved over to other columns.</li>
+            <li>The "light grayish" column has been combined into the "pale" column.</li>
+        </ul>
+    </li>
+    <li>Colors marked with † have had color codes added. Centore's method didn't yield RGB codes for some of these color labels.</li>
+    <li>The nuetral grays have been shuffled around to make each column have consistent luminance.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><hr>
+<h2>Paul Centore's sRGB ISCC-NBS color codes</h2>
+
+The following are the RGB color codes directly from <a href="https://www.munsellcolourscienceforpainters.com/ISCCNBS/ISCCNBSSystem.html">this link</a>.
+The ones labelled "ERROR" fall outside the sRGB gamut using Centore's methodology.
+
+<!--Problem is it doesn't give centroids of NBS blocks. It gives centroids of the intersection between NBS block and sRGB-->
+
+<h3>Level 3 color centroids</h3>
+
+<table border="1"><tr><th></th><th>vivid</th><th></th><th>brilliant</th><th>strong</th><th>deep</th><th>very deep</th><th></th><th>very light</th><th>light</th><th>moderate</th><th>dark</th><th>very dark</th><th></th><th>very pale</th><th>pale</th><th>pale or light grayish</th><th>grayish</th><th>dark grayish</th><th>blackish</th><th>brownish</th></tr><tr><th>red</th><td bgcolor="#d51c3c">11<br>#d51c3c</td><td></td><td></td><td bgcolor="#bf344b">12<br>#bf344b</td><td bgcolor="#87122d">13<br>#87122d</td><td bgcolor="#5c0625">14<br>#5c0625</td><td></td><td></td><td></td><td bgcolor="#b14955">15<br>#b14955</td><td bgcolor="#742434">16<br>#742434</td><td bgcolor="#481127">17<br>#481127</td><td></td><td></td><td></td><td bgcolor="#b4888d">18<br>#b4888d</td><td bgcolor="#985d62">19<br>#985d62</td><td bgcolor="#53383e">20<br>#53383e</td><td bgcolor="#332127">21<br>#332127</td><td></td></tr><tr><th>reddish orange</th><td bgcolor="#e83b1b">34<br>#e83b1b</td><td></td><td></td><td bgcolor="#db5d3b">35<br>#db5d3b</td><td bgcolor="#af3318">36<br>#af3318</td><td></td><td></td><td></td><td></td><td bgcolor="#cd6952">37<br>#cd6952</td><td bgcolor="#a2402b">38<br>#a2402b</td><td></td><td></td><td></td><td></td><td></td><td bgcolor="#b97565">39<br>#b97565</td><td></td><td></td><td></td></tr><tr><th>orange</th><td bgcolor="#f7760b">48<br>#f7760b</td><td></td><td bgcolor="ERROR">49<br>ERROR</td><td bgcolor="#ea8127">50<br>#ea8127</td><td bgcolor="#c26012">51<br>#c26012</td><td></td><td></td><td></td><td bgcolor="#fbaf82">52<br>#fbaf82</td><td bgcolor="#de8d5c">53<br>#de8d5c</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td bgcolor="#b26633">54<br>#b26633</td></tr><tr><th>orange yellow</th><td bgcolor="ERROR">66<br>ERROR</td><td></td><td bgcolor="#ffbe50">67<br>#ffbe50</td><td bgcolor="#f0a121">68<br>#f0a121</td><td bgcolor="#d08511">69<br>#d08511</td><td></td><td></td><td></td><td bgcolor="#fcc27c">70<br>#fcc27c</td><td bgcolor="#e7a75d">71<br>#e7a75d</td><td bgcolor="#c38639">72<br>#c38639</td><td></td><td></td><td></td><td bgcolor="#eec6a6">73<br>#eec6a6</td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>yellow</th><td bgcolor="#f1bf15">82<br>#f1bf15</td><td></td><td bgcolor="#f7ce50">83<br>#f7ce50</td><td bgcolor="#d9ae2f">84<br>#d9ae2f</td><td bgcolor="#b88f16">85<br>#b88f16</td><td></td><td></td><td></td><td bgcolor="#f4d284">86<br>#f4d284</td><td bgcolor="#d2af63">87<br>#d2af63</td><td bgcolor="#b08f42">88<br>#b08f42</td><td></td><td></td><td></td><td bgcolor="#efd7b2">89<br>#efd7b2</td><td></td><td bgcolor="#c8b18b">90<br>#c8b18b</td><td bgcolor="#a99066">91<br>#a99066</td><td></td><td></td></tr><tr><th>greenish yellow</th><td bgcolor="#ebdd21">97<br>#ebdd21</td><td></td><td bgcolor="#e9dc55">98<br>#e9dc55</td><td bgcolor="#c4b827">99<br>#c4b827</td><td bgcolor="#a29812">100<br>#a29812</td><td></td><td></td><td></td><td bgcolor="#e9dd8a">101<br>#e9dd8a</td><td bgcolor="#c0b55e">102<br>#c0b55e</td><td bgcolor="#9e953c">103<br>#9e953c</td><td></td><td></td><td></td><td bgcolor="#e6dcab">104<br>#e6dcab</td><td></td><td bgcolor="#beb584">105<br>#beb584</td><td></td><td></td><td></td></tr><tr><th>yellow green</th><td bgcolor="#a7dc26">115<br>#a7dc26</td><td></td><td bgcolor="#c3df69">116<br>#c3df69</td><td bgcolor="#82a12b">117<br>#82a12b</td><td bgcolor="#486c0e">118<br>#486c0e</td><td></td><td></td><td></td><td bgcolor="#cedb9f">119<br>#cedb9f</td><td bgcolor="#8b9a5f">120<br>#8b9a5f</td><td></td><td></td><td></td><td></td><td bgcolor="#d7d7c1">121<br>#d7d7c1</td><td></td><td bgcolor="#979a85">122<br>#979a85</td><td></td><td></td><td></td></tr><tr><th>yellowish green</th><td bgcolor="#3fd740">129<br>#3fd740</td><td></td><td bgcolor="#87d989">130<br>#87d989</td><td bgcolor="#39964a">131<br>#39964a</td><td bgcolor="#176a1e">132<br>#176a1e</td><td bgcolor="#054208">133<br>#054208</td><td></td><td bgcolor="#c5edc4">134<br>#c5edc4</td><td bgcolor="#9cc69c">135<br>#9cc69c</td><td bgcolor="#669069">136<br>#669069</td><td bgcolor="#2f5d3a">137<br>#2f5d3a</td><td bgcolor="#10361a">138<br>#10361a</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>green</th><td bgcolor="#23eaa5">139<br>#23eaa5</td><td></td><td bgcolor="#49d0a3">140<br>#49d0a3</td><td bgcolor="#158a66">141<br>#158a66</td><td bgcolor="ERROR">142<br>ERROR</td><td></td><td></td><td bgcolor="#a6e2ca">143<br>#a6e2ca</td><td bgcolor="#6fac95">144<br>#6fac95</td><td bgcolor="#337762">145<br>#337762</td><td bgcolor="#164e3d">146<br>#164e3d</td><td bgcolor="#0c2e24">147<br>#0c2e24</td><td></td><td bgcolor="#c7d9d6">148<br>#c7d9d6</td><td bgcolor="#94a6a3">149<br>#94a6a3</td><td></td><td bgcolor="#61716e">150<br>#61716e</td><td bgcolor="#394746">151<br>#394746</td><td bgcolor="#1f2a2a">152<br>#1f2a2a</td><td></td></tr><tr><th>bluish green</th><td bgcolor="#13fcd5">158<br>#13fcd5</td><td></td><td bgcolor="#35d7ce">159<br>#35d7ce</td><td bgcolor="#0d8f82">160<br>#0d8f82</td><td bgcolor="ERROR">161<br>ERROR</td><td></td><td></td><td bgcolor="#98e1e0">162<br>#98e1e0</td><td bgcolor="#5fabab">163<br>#5fabab</td><td bgcolor="#297a7b">164<br>#297a7b</td><td bgcolor="#154b4d">165<br>#154b4d</td><td bgcolor="#0a2d2e">166<br>#0a2d2e</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>greenish blue</th><td bgcolor="ERROR">167<br>ERROR</td><td></td><td bgcolor="#2dbce2">168<br>#2dbce2</td><td bgcolor="#1385af">169<br>#1385af</td><td bgcolor="ERROR">170<br>ERROR</td><td></td><td></td><td bgcolor="#94d6ef">171<br>#94d6ef</td><td bgcolor="#65a8c3">172<br>#65a8c3</td><td bgcolor="#2a7691">173<br>#2a7691</td><td bgcolor="#134a60">174<br>#134a60</td><td bgcolor="#0b2c3b">175<br>#0b2c3b</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>blue</th><td bgcolor="#1b5cd7">176<br>#1b5cd7</td><td></td><td bgcolor="#419ded">177<br>#419ded</td><td bgcolor="#276cbd">178<br>#276cbd</td><td bgcolor="#113074">179<br>#113074</td><td></td><td></td><td bgcolor="#99c6f9">180<br>#99c6f9</td><td bgcolor="#73a4dc">181<br>#73a4dc</td><td bgcolor="#34689e">182<br>#34689e</td><td bgcolor="#173459">183<br>#173459</td><td></td><td></td><td bgcolor="#c2d2ec">184<br>#c2d2ec</td><td bgcolor="#91a2bb">185<br>#91a2bb</td><td></td><td bgcolor="#54687f">186<br>#54687f</td><td bgcolor="#323f4e">187<br>#323f4e</td><td bgcolor="#1e2531">188<br>#1e2531</td><td></td></tr><tr><th>purplish blue</th><td bgcolor="#4436d1">194<br>#4436d1</td><td></td><td bgcolor="#8088e2">195<br>#8088e2</td><td bgcolor="#5359b5">196<br>#5359b5</td><td bgcolor="#2a286f">197<br>#2a286f</td><td></td><td></td><td bgcolor="#b7c0f8">198<br>#b7c0f8</td><td bgcolor="#8991cb">199<br>#8991cb</td><td bgcolor="#4d4e87">200<br>#4d4e87</td><td bgcolor="#222248">201<br>#222248</td><td></td><td></td><td bgcolor="#c5c9f0">202<br>#c5c9f0</td><td bgcolor="#8e92b7">203<br>#8e92b7</td><td></td><td bgcolor="#494d71">204<br>#494d71</td><td></td><td></td><td></td></tr><tr><th>violet</th><td bgcolor="#7931d3">205<br>#7931d3</td><td></td><td bgcolor="#987fdc">206<br>#987fdc</td><td bgcolor="#61419c">207<br>#61419c</td><td bgcolor="#3c1668">208<br>#3c1668</td><td></td><td></td><td bgcolor="#c9baf8">209<br>#c9baf8</td><td bgcolor="#9b8cca">210<br>#9b8cca</td><td bgcolor="#5c4985">211<br>#5c4985</td><td bgcolor="#34254d">212<br>#34254d</td><td></td><td></td><td bgcolor="#d0c6ef">213<br>#d0c6ef</td><td bgcolor="#9a90b5">214<br>#9a90b5</td><td></td><td bgcolor="#584e72">215<br>#584e72</td><td></td><td></td><td></td></tr><tr><th>purple</th><td bgcolor="#b935d5">216<br>#b935d5</td><td></td><td bgcolor="#ce8ce3">217<br>#ce8ce3</td><td bgcolor="#9352a8">218<br>#9352a8</td><td bgcolor="#652277">219<br>#652277</td><td bgcolor="#460a55">220<br>#460a55</td><td></td><td bgcolor="#e4b9f3">221<br>#e4b9f3</td><td bgcolor="#bc93cc">222<br>#bc93cc</td><td bgcolor="#875e96">223<br>#875e96</td><td bgcolor="#563762">224<br>#563762</td><td bgcolor="#371b41">225<br>#371b41</td><td></td><td bgcolor="#e0cbeb">226<br>#e0cbeb</td><td bgcolor="#ad97b3">227<br>#ad97b3</td><td></td><td bgcolor="#7b667e">228<br>#7b667e</td><td bgcolor="#513f51">229<br>#513f51</td><td bgcolor="#2f2231">230<br>#2f2231</td><td></td></tr><tr><th>reddish purple</th><td bgcolor="#d429b9">236<br>#d429b9</td><td></td><td></td><td bgcolor="#a74994">237<br>#a74994</td><td bgcolor="#761a6a">238<br>#761a6a</td><td bgcolor="#4f094a">239<br>#4f094a</td><td></td><td></td><td bgcolor="#bd80ae">240<br>#bd80ae</td><td bgcolor="#965888">241<br>#965888</td><td bgcolor="#5f3458">242<br>#5f3458</td><td bgcolor="#3f183c">243<br>#3f183c</td><td></td><td></td><td bgcolor="#ad89a5">244<br>#ad89a5</td><td></td><td bgcolor="#86627e">245<br>#86627e</td><td></td><td></td><td></td></tr><tr><th>purplish red</th><td bgcolor="#dd2388">254<br>#dd2388</td><td></td><td></td><td bgcolor="#b83773">255<br>#b83773</td><td bgcolor="#881055">256<br>#881055</td><td bgcolor="#54063c">257<br>#54063c</td><td></td><td></td><td></td><td bgcolor="#ab4b74">258<br>#ab4b74</td><td bgcolor="#6e294c">259<br>#6e294c</td><td bgcolor="#431432">260<br>#431432</td><td></td><td></td><td></td><td bgcolor="#b2879b">261<br>#b2879b</td><td bgcolor="#945c73">262<br>#945c73</td><td></td><td></td><td></td></tr><tr><th></th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>purplish pink</th><td></td><td></td><td bgcolor="#fca1e7">246<br>#fca1e7</td><td bgcolor="#f483cd">247<br>#f483cd</td><td bgcolor="#df6aac">248<br>#df6aac</td><td></td><td></td><td></td><td bgcolor="#f5b2db">249<br>#f5b2db</td><td bgcolor="#de98bf">250<br>#de98bf</td><td bgcolor="#c67d9d">251<br>#c67d9d</td><td></td><td></td><td></td><td bgcolor="#ebc8df">252<br>#ebc8df</td><td></td><td bgcolor="#c7a3b9">253<br>#c7a3b9</td><td></td><td></td><td></td></tr><tr><th>pink</th><td bgcolor="#fd7992">1<br>#fd7992</td><td></td><td></td><td bgcolor="#f48fa0">2<br>#f48fa0</td><td bgcolor="#e66980">3<br>#e66980</td><td></td><td></td><td></td><td bgcolor="#f8c3ce">4<br>#f8c3ce</td><td bgcolor="#e2a3ae">5<br>#e2a3ae</td><td bgcolor="#c5808a">6<br>#c5808a</td><td></td><td></td><td></td><td bgcolor="#efd1dc">7<br>#efd1dc</td><td></td><td bgcolor="#cbadb7">8<br>#cbadb7</td><td></td><td></td><td bgcolor="#cbafa7">33<br>#cbafa7</td></tr><tr><th>yellowish pink</th><td bgcolor="#fd7e5d">25<br>#fd7e5d</td><td></td><td></td><td bgcolor="#f59080">26<br>#f59080</td><td bgcolor="#ef6366">27<br>#ef6366</td><td></td><td></td><td></td><td bgcolor="#f8c4b6">28<br>#f8c4b6</td><td bgcolor="#e2a698">29<br>#e2a698</td><td bgcolor="#c9807e">30<br>#c9807e</td><td></td><td></td><td></td><td bgcolor="#f1d3d1">31<br>#f1d3d1</td><td></td><td bgcolor="#cbacac">32<br>#cbacac</td><td></td><td></td><td></td></tr><tr><th></th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>reddish brown</th><td></td><td></td><td></td><td bgcolor="#8b1c0e">40<br>#8b1c0e</td><td bgcolor="#610f12">41<br>#610f12</td><td></td><td></td><td></td><td bgcolor="#ac7a73">42<br>#ac7a73</td><td bgcolor="#7d423b">43<br>#7d423b</td><td bgcolor="#461d1e">44<br>#461d1e</td><td></td><td></td><td></td><td></td><td bgcolor="#9e7f7a">45<br>#9e7f7a</td><td bgcolor="#6c4d4b">46<br>#6c4d4b</td><td bgcolor="#43292a">47<br>#43292a</td><td></td><td></td></tr><tr><th>brown</th><td></td><td></td><td></td><td bgcolor="#8a4416">55<br>#8a4416</td><td bgcolor="#571a07">56<br>#571a07</td><td></td><td></td><td></td><td bgcolor="#ad7c63">57<br>#ad7c63</td><td bgcolor="#724a38">58<br>#724a38</td><td bgcolor="#442112">59<br>#442112</td><td></td><td></td><td></td><td></td><td bgcolor="#997f75">60<br>#997f75</td><td bgcolor="#674f48">61<br>#674f48</td><td bgcolor="#3e2c28">62<br>#3e2c28</td><td></td><td></td></tr><tr><th>yellowish brown</th><td></td><td></td><td></td><td bgcolor="#9e671d">74<br>#9e671d</td><td bgcolor="#673f0b">75<br>#673f0b</td><td></td><td></td><td></td><td bgcolor="#c49a74">76<br>#c49a74</td><td bgcolor="#886648">77<br>#886648</td><td bgcolor="#50341a">78<br>#50341a</td><td></td><td></td><td></td><td></td><td bgcolor="#b49b8d">79<br>#b49b8d</td><td bgcolor="#7e695d">80<br>#7e695d</td><td bgcolor="#4d3d33">81<br>#4d3d33</td><td></td><td></td></tr><tr><th>olive brown</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td bgcolor="#997736">94<br>#997736</td><td bgcolor="#705420">95<br>#705420</td><td bgcolor="#3f2c10">96<br>#3f2c10</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>olive</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td bgcolor="#8b7d2e">106<br>#8b7d2e</td><td bgcolor="#64591a">107<br>#64591a</td><td bgcolor="#352e0a">108<br>#352e0a</td><td></td><td></td><td></td><td></td><td bgcolor="#8e856f">109<br>#8e856f</td><td bgcolor="#5d553f">110<br>#5d553f</td><td bgcolor="#35301c">111<br>#35301c</td><td></td><td></td></tr><tr><th>olive green</th><td></td><td></td><td></td><td bgcolor="#2c5506">123<br>#2c5506</td><td bgcolor="ERROR">124<br>ERROR</td><td></td><td></td><td></td><td></td><td bgcolor="#495b22">125<br>#495b22</td><td bgcolor="#20340b">126<br>#20340b</td><td></td><td></td><td></td><td></td><td></td><td bgcolor="#545947">127<br>#545947</td><td bgcolor="#2f3326">128<br>#2f3326</td><td></td><td></td></tr></table>
+
+
+<br>
+
+<table border="1"><tr><th></th><th>white</th><th>light... gray</th><th>medium... gray</th><th>dark... gray</th><th>black</th></tr><th></th><td bgcolor="#e7e1e9">263<br>#e7e1e9</td><td bgcolor="#bdb7bf">264<br>#bdb7bf</td><td bgcolor="#8a8489">265<br>#8a8489</td><td bgcolor="#585458">266<br>#585458</td><td bgcolor="#2b292b">267<br>#2b292b</td></tr><th>reddish</th><td bgcolor="#e7e1e9">263<br>#e7e1e9</td><td bgcolor="#bdb7bf">264<br>#bdb7bf</td><td bgcolor="#928186">22<br>#928186</td><td bgcolor="#5d4e53">23<br>#5d4e53</td><td bgcolor="#30262b">24<br>#30262b</td></tr><th>yellowish</th><td bgcolor="#eedfda">92<br>#eedfda</td><td bgcolor="#c6b9b1">93<br>#c6b9b1</td><td bgcolor="#585458">266<br>#585458</td><td bgcolor="#2b292b">267<br>#2b292b</td></tr><th>greenish</th><td bgcolor="#e0e2e5">153<br>#e0e2e5</td><td bgcolor="#babec1">154<br>#babec1</td><td bgcolor="#848888">155<br>#848888</td><td bgcolor="#545858">156<br>#545858</td><td bgcolor="#212626">157<br>#212626</td></tr><th>bluish</th><td bgcolor="#e1e1f1">189<br>#e1e1f1</td><td bgcolor="#b7b8c6">190<br>#b7b8c6</td><td bgcolor="#838793">191<br>#838793</td><td bgcolor="#50545f">192<br>#50545f</td><td bgcolor="#24272e">193<br>#24272e</td></tr><th>purplish</th><td bgcolor="#ebdfef">231<br>#ebdfef</td><td bgcolor="#c3b7c6">232<br>#c3b7c6</td><td bgcolor="#8f8490">233<br>#8f8490</td><td bgcolor="#5c525e">234<br>#5c525e</td><td bgcolor="#2b2630">235<br>#2b2630</td></tr><th>brownish</th><td bgcolor="#e7e1e9">263<br>#e7e1e9</td><td bgcolor="#928281">63<br>#928281</td><td bgcolor="#605251">64<br>#605251</td><td bgcolor="#585458">266<br>#585458</td><td bgcolor="#2b211e">65<br>#2b211e</td></tr><th>olive-</th><td bgcolor="#e7e1e9">263<br>#e7e1e9</td><td bgcolor="#8f877f">112<br>#8f877f</td><td bgcolor="#58514a">113<br>#58514a</td><td bgcolor="#585458">266<br>#585458</td><td bgcolor="#23211c">114<br>#23211c</td></tr><th>pinkish</th><td bgcolor="#efdde5">9<br>#efdde5</td><td bgcolor="#bdb7bf">264<br>#bdb7bf</td><td bgcolor="#c7b6bd">10<br>#c7b6bd</td><td bgcolor="#585458">266<br>#585458</td><td bgcolor="#2b292b">267<br>#2b292b</td></tr></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3>Level 1 color centroids</h3>
+<table>
+    <tr>
+        <td bgcolor="#e7e1e9">White<br>#e7e1e9</td>
+        <td></td>
+        <td bgcolor="#e68697">Pink<br>#e68697</td>
+    </tr>
+    <tr>
+        <td bgcolor="#938e93">Gray<br>#938e93</td>
+        <td></td>
+        <td bgcolor="#b92842">Red<br>#b92842</td>
+        <td bgcolor="#dc7d34">Orange<br>#dc7d34</td>
+        <td bgcolor="#d9b451">Yellow<br>#d9b451</td>
+        <td bgcolor="#a0c245">Yellow green<br>#a0c245</td>
+        <td bgcolor="#4fbf9a">Green<br>#4fbf9a</td>
+        <td bgcolor="#3b74c0">Blue<br>#3b74c0</td>
+        <td bgcolor="#ac4ac3">Purple<br>#ac4ac3</td>
+    </tr>
+    <tr>
+        <td bgcolor="#2b292b">Black<br>#2b292b</td>
+        <td></td>
+        <td></td>
+        <td bgcolor="#7f4829">Brown<br>#7f4829</td>
+        <td bgcolor="#72672c">Olive<br>#72672c</td>
+    </tr>
+</table>
+
+
+
+
+
+
+<h3>Level 2 color centroids</h3>
+<table>
+    <tr>
+        
+        <td bgcolor="#e589bf">purplish pink<br>#e589bf</td>
+        <td bgcolor="#e68697">pink<br>#e68697</td>
+        <td bgcolor="#ea9a90">yellowish pink<br>#ea9a90</td>
+    </tr>
+    <tr>
+        <td bgcolor="#ba2b77">purplish red<br>#ba2b77</td>
+        <td bgcolor="#b92842">red<br>#b92842</td>
+        <td bgcolor="#d7472a">reddish orange<br>#d7472a</td>
+        <td bgcolor="#dc7d34">orange<br>#dc7d34</td>
+        <td bgcolor="#e3a045">orange yellow<br>#e3a045</td>
+        <td bgcolor="#d9b451">yellow<br>#d9b451</td>
+        <td bgcolor="#d0c445">greenish yellow<br>#d0c445</td>
+        <td bgcolor="#a0c245">yellow green<br>#a0c245</td>
+        <td bgcolor="#4ac34d">yellowish green<br>#4ac34d</td>
+        <td bgcolor="#4fbf9a">green<br>#4fbf9a</td>
+        <td bgcolor="#43bdb8">bluish green<br>#43bdb8</td>
+        <td bgcolor="#3ea6c6">greenish blue<br>#3ea6c6</td>
+        <td bgcolor="#3b74c0">blue<br>#3b74c0</td>
+        <td bgcolor="#4f47c6">purplish blue<br>#4f47c6</td>
+        <td bgcolor="#7842c5">violet<br>#7842c5</td>
+        <td bgcolor="#ac4ac3">purple<br>#ac4ac3</td>
+        <td bgcolor="#bb30a4">reddish purple<br>#bb30a4</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td bgcolor="#7a2c26">reddish brown<br>#7a2c26</td>
+        <td bgcolor="#7f4829">brown<br>#7f4829</td>
+        <td bgcolor="#976b39">yellowish brown<br>#976b39</td>
+        <td bgcolor="#7f6129">olive brown<br>#7f6129</td>
+        <td bgcolor="#72672c">olive<br>#72672c</td>
+        <td bgcolor="#3e501f">olive green<br>#3e501f</td>
+    </tr>
+    <tr>
+        <td bgcolor="#e7e1e9">white<br>#e7e1e9</td>
+        <td bgcolor="#938e93">gray<br>#938e93</td>
+        <td bgcolor="#2b292b">black<br>#2b292b</td>
+    </tr>
+</table>
+
+<br>
+
+<table>
+    <tr>
+        <td bgcolor="#e7e1e9">white<br>#e7e1e9</td>
+        <td bgcolor="#938e93">gray<br>#938e93</td>
+        <td bgcolor="#2b292b">black<br>#2b292b</td>
+    </tr>
+    <tr>
+        <td></td>
+    </tr>
+        <td bgcolor="#e589bf">purplish pink<br>#e589bf</td>
+        <td bgcolor="#ba2b77">purplish red<br>#ba2b77</td>
+    <tr>
+        <td bgcolor="#e68697">pink<br>#e68697</td>
+        <td bgcolor="#b92842">red<br>#b92842</td>
+    </tr>
+    <tr>
+        <td bgcolor="#ea9a90">yellowish pink<br>#ea9a90</td>
+        <td bgcolor="#d7472a">reddish orange<br>#d7472a</td>
+        <td bgcolor="#7a2c26">reddish brown<br>#7a2c26</td>
+    </tr>
+        <td></td>
+        <td bgcolor="#dc7d34">orange<br>#dc7d34</td>
+        <td bgcolor="#7f4829">brown<br>#7f4829</td>
+    <tr>
+        <td></td>
+        <td bgcolor="#e3a045">orange yellow<br>#e3a045</td>
+        <td bgcolor="#976b39">yellowish brown<br>#976b39</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td bgcolor="#d9b451">yellow<br>#d9b451</td>
+        <td bgcolor="#7f6129">olive brown<br>#7f6129</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td bgcolor="#d0c445">greenish yellow<br>#d0c445</td>
+        <td bgcolor="#72672c">olive<br>#72672c</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td bgcolor="#a0c245">yellow green<br>#a0c245</td>
+        <td bgcolor="#3e501f">olive green<br>#3e501f</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td bgcolor="#4ac34d">yellowish green<br>#4ac34d</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td bgcolor="#4fbf9a">green<br>#4fbf9a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td bgcolor="#43bdb8">bluish green<br>#43bdb8</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td bgcolor="#3ea6c6">greenish blue<br>#3ea6c6</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td bgcolor="#3b74c0">blue<br>#3b74c0</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td bgcolor="#4f47c6">purplish blue<br>#4f47c6</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td bgcolor="#7842c5">violet<br>#7842c5</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td bgcolor="#ac4ac3">purple<br>#ac4ac3</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td bgcolor="#bb30a4">reddish purple<br>#bb30a4</td>
+    </tr>
+</table>
+
+<br>
+
+<h4>MY renaming of these colors.</h4>
+
+<table>
+    <tr>
+        <td bgcolor="#e7e1e9">white<br>#e7e1e9</td>
+        <td bgcolor="#938e93">gray<br>#938e93</td>
+        <td bgcolor="#2b292b">black<br>#2b292b</td>
+    </tr>
+    <tr>
+        <td></td>
+    </tr>
+        <td bgcolor="#e589bf">purplish pink<br>#e589bf</td>
+        <td bgcolor="#ba2b77">cerise<br>#ba2b77</td>
+    <tr>
+        <td bgcolor="#e68697">pink<br>#e68697</td>
+        <td bgcolor="#b92842">red<br>#b92842</td>
+    </tr>
+    <tr>
+        <td bgcolor="#ea9a90">yellowish pink<br>#ea9a90</td>
+        <td bgcolor="#d7472a">vermilion<br>#d7472a</td>
+        <td bgcolor="#7a2c26">reddish brown<br>#7a2c26</td>
+    </tr>
+        <td></td>
+        <td bgcolor="#dc7d34">orange<br>#dc7d34</td>
+        <td bgcolor="#7f4829">brown<br>#7f4829</td>
+    <tr>
+        <td></td>
+        <td bgcolor="#e3a045">amber<br>#e3a045</td>
+        <td bgcolor="#976b39">yellowish brown<br>#976b39</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td bgcolor="#d9b451">gold<br>#d9b451</td>
+        <td bgcolor="#7f6129">olive brown<br>#7f6129</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td bgcolor="#d0c445">yellow<br>#d0c445</td>
+        <td bgcolor="#72672c">olive<br>#72672c</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td bgcolor="#a0c245">chartreuse<br>#a0c245</td>
+        <td bgcolor="#3e501f">olive green<br>#3e501f</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td bgcolor="#4ac34d">green<br>#4ac34d</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td bgcolor="#4fbf9a">teal<br>#4fbf9a</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td bgcolor="#43bdb8">turquoise<br>#43bdb8</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td bgcolor="#3ea6c6">azure<br>#3ea6c6</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td bgcolor="#3b74c0">blue<br>#3b74c0</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td bgcolor="#4f47c6">indigo<br>#4f47c6</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td bgcolor="#7842c5">violet<br>#7842c5</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td bgcolor="#ac4ac3">purple<br>#ac4ac3</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td bgcolor="#bb30a4">fuchsia<br>#bb30a4</td>
+    </tr>
+</table>
+
+
+
+
+
+<br><BR><BR><BR><BR><h2>OLD JANKY SCANS</h2>OLD JANKY SCANS<BR><BR><BR><BR>
 
 <table border="1"><tr><th></th><th>brilliant</th><th>vivid</th><th>strong</th><th>deep</th><th>verydeep</th><th>verylight</th><th>light</th><th>moderate</th><th>dark</th><th>verydark</th><th>verypale</th><th>pale</th><th>grayish</th><th>darkgrayish</th><th>blackish</th><th>brownish</th></tr><tr><th>red</th><td></td><td bgcolor="#be0032">#be0032<br><span style="color:white;">#be0032</span></td><td bgcolor="#bc3f4a">#bc3f4a<br><span style="color:white;">#bc3f4a</span></td><td bgcolor="#841b2d">#841b2d<br><span style="color:white;">#841b2d</span></td><td bgcolor="#5c0923">#5c0923<br><span style="color:white;">#5c0923</span></td><td></td><td></td><td bgcolor="#ab4e52">#ab4e52<br><span style="color:white;">#ab4e52</span></td><td bgcolor="#722f37">#722f37<br><span style="color:white;">#722f37</span></td><td bgcolor="#3f1728">#3f1728<br><span style="color:white;">#3f1728</span></td><td></td><td bgcolor="#ad8884">#ad8884<br><span style="color:white;">#ad8884</span></td><td bgcolor="#905d5d">#905d5d<br><span style="color:white;">#905d5d</span></td><td bgcolor="#543d3f">#543d3f<br><span style="color:white;">#543d3f</span></td><td bgcolor="#2e1d21">#2e1d21<br><span style="color:white;">#2e1d21</span></td><td></td></tr><tr><th>reddishorange</th><td></td><td bgcolor="#e25822">#e25822<br><span style="color:white;">#e25822</span></td><td bgcolor="#d9603b">#d9603b<br><span style="color:white;">#d9603b</span></td><td bgcolor="#aa381e">#aa381e<br><span style="color:white;">#aa381e</span></td><td></td><td></td><td></td><td bgcolor="#cb6d51">#cb6d51<br><span style="color:white;">#cb6d51</span></td><td bgcolor="#9e4732">#9e4732<br><span style="color:white;">#9e4732</span></td><td></td><td></td><td></td><td bgcolor="#b4745e">#b4745e<br><span style="color:white;">#b4745e</span></td><td></td><td></td><td></td></tr><tr><th>orange</th><td bgcolor="#fd943f">#fd943f<br><span style="color:white;">#fd943f</span></td><td bgcolor="#f38400">#f38400<br><span style="color:white;">#f38400</span></td><td bgcolor="#ed872d">#ed872d<br><span style="color:white;">#ed872d</span></td><td bgcolor="#be6516">#be6516<br><span style="color:white;">#be6516</span></td><td></td><td></td><td bgcolor="#fab57f">#fab57f<br><span style="color:white;">#fab57f</span></td><td bgcolor="#d99058">#d99058<br><span style="color:white;">#d99058</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td bgcolor="#ae6938">#ae6938<br><span style="color:white;">#ae6938</span></td></tr><tr><th>orangeyellow</th><td bgcolor="#ffc14f">#ffc14f<br><span style="color:white;">#ffc14f</span></td><td bgcolor="#f6a600">#f6a600<br><span style="color:white;">#f6a600</span></td><td bgcolor="#eaa221">#eaa221<br><span style="color:white;">#eaa221</span></td><td bgcolor="#c98500">#c98500<br><span style="color:white;">#c98500</span></td><td></td><td></td><td bgcolor="#fbc97f">#fbc97f<br><span style="color:white;">#fbc97f</span></td><td bgcolor="#e3a857">#e3a857<br><span style="color:white;">#e3a857</span></td><td bgcolor="#be8a3d">#be8a3d<br><span style="color:white;">#be8a3d</span></td><td></td><td></td><td bgcolor="#fad6a5">#fad6a5<br><span style="color:white;">#fad6a5</span></td><td></td><td></td><td></td><td></td></tr><tr><th>yellow</th><td bgcolor="#fada5e">#fada5e<br><span style="color:white;">#fada5e</span></td><td bgcolor="#f3c300">#f3c300<br><span style="color:white;">#f3c300</span></td><td bgcolor="#d4af37">#d4af37<br><span style="color:white;">#d4af37</span></td><td bgcolor="#af8d13">#af8d13<br><span style="color:white;">#af8d13</span></td><td></td><td></td><td bgcolor="#f8de7e">#f8de7e<br><span style="color:white;">#f8de7e</span></td><td bgcolor="#c9ae5d">#c9ae5d<br><span style="color:white;">#c9ae5d</span></td><td bgcolor="#ab9144">#ab9144<br><span style="color:white;">#ab9144</span></td><td></td><td></td><td bgcolor="#f3e5ab">#f3e5ab<br><span style="color:white;">#f3e5ab</span></td><td bgcolor="#c2b280">#c2b280<br><span style="color:white;">#c2b280</span></td><td bgcolor="#a18f60">#a18f60<br><span style="color:white;">#a18f60</span></td><td></td><td></td></tr><tr><th>greenishyellow</th><td bgcolor="#e9e450">#e9e450<br><span style="color:white;">#e9e450</span></td><td bgcolor="#dcd300">#dcd300<br><span style="color:white;">#dcd300</span></td><td bgcolor="#beb72e">#beb72e<br><span style="color:white;">#beb72e</span></td><td bgcolor="#9b9400">#9b9400<br><span style="color:white;">#9b9400</span></td><td></td><td></td><td bgcolor="#eae679">#eae679<br><span style="color:white;">#eae679</span></td><td bgcolor="#b9b459">#b9b459<br><span style="color:white;">#b9b459</span></td><td bgcolor="#98943e">#98943e<br><span style="color:white;">#98943e</span></td><td></td><td></td><td bgcolor="#ebe8a4">#ebe8a4<br><span style="color:white;">#ebe8a4</span></td><td bgcolor="#b9b57d">#b9b57d<br><span style="color:white;">#b9b57d</span></td><td></td><td></td><td></td></tr><tr><th>chartreuse</th><td bgcolor="#bdda57">#bdda57<br><span style="color:white;">#bdda57</span></td><td bgcolor="#8db600">#8db600<br><span style="color:white;">#8db600</span></td><td bgcolor="#7e9f2e">#7e9f2e<br><span style="color:white;">#7e9f2e</span></td><td bgcolor="#467129">#467129<br><span style="color:white;">#467129</span></td><td></td><td></td><td bgcolor="#c9dc89">#c9dc89<br><span style="color:white;">#c9dc89</span></td><td bgcolor="#8a9a5b">#8a9a5b<br><span style="color:white;">#8a9a5b</span></td><td></td><td></td><td></td><td bgcolor="#dadfb7">#dadfb7<br><span style="color:white;">#dadfb7</span></td><td bgcolor="#8f9779">#8f9779<br><span style="color:white;">#8f9779</span></td><td></td><td></td><td></td></tr><tr><th>yellowishgreen</th><td bgcolor="#83d37d">#83d37d<br><span style="color:white;">#83d37d</span></td><td bgcolor="#27a64c">#27a64c<br><span style="color:white;">#27a64c</span></td><td bgcolor="#44944a">#44944a<br><span style="color:white;">#44944a</span></td><td bgcolor="#00622d">#00622d<br><span style="color:white;">#00622d</span></td><td bgcolor="#003118">#003118<br><span style="color:white;">#003118</span></td><td bgcolor="#b6e5af">#b6e5af<br><span style="color:white;">#b6e5af</span></td><td bgcolor="#93c592">#93c592<br><span style="color:white;">#93c592</span></td><td bgcolor="#679267">#679267<br><span style="color:white;">#679267</span></td><td bgcolor="#355e3b">#355e3b<br><span style="color:white;">#355e3b</span></td><td bgcolor="#173620">#173620<br><span style="color:white;">#173620</span></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>green</th><td bgcolor="#3eb489">#3eb489<br><span style="color:white;">#3eb489</span></td><td bgcolor="#008856">#008856<br><span style="color:white;">#008856</span></td><td bgcolor="#007959">#007959<br><span style="color:white;">#007959</span></td><td bgcolor="#00543d">#00543d<br><span style="color:white;">#00543d</span></td><td></td><td bgcolor="#8ed1b2">#8ed1b2<br><span style="color:white;">#8ed1b2</span></td><td bgcolor="#6aab8e">#6aab8e<br><span style="color:white;">#6aab8e</span></td><td bgcolor="#3b7861">#3b7861<br><span style="color:white;">#3b7861</span></td><td bgcolor="#1b4d3e">#1b4d3e<br><span style="color:white;">#1b4d3e</span></td><td bgcolor="#1c352d">#1c352d<br><span style="color:white;">#1c352d</span></td><td bgcolor="#c7e6d7">#c7e6d7<br><span style="color:white;">#c7e6d7</span></td><td bgcolor="#8da399">#8da399<br><span style="color:white;">#8da399</span></td><td bgcolor="#5e716a">#5e716a<br><span style="color:white;">#5e716a</span></td><td bgcolor="#3a4b47">#3a4b47<br><span style="color:white;">#3a4b47</span></td><td bgcolor="#1a2421">#1a2421<br><span style="color:white;">#1a2421</span></td><td></td></tr><tr><th>bluishgreen</th><td bgcolor="#00a693">#00a693<br><span style="color:white;">#00a693</span></td><td bgcolor="#008882">#008882<br><span style="color:white;">#008882</span></td><td bgcolor="#007a74">#007a74<br><span style="color:white;">#007a74</span></td><td bgcolor="#00443f">#00443f<br><span style="color:white;">#00443f</span></td><td></td><td bgcolor="#96ded1">#96ded1<br><span style="color:white;">#96ded1</span></td><td bgcolor="#66ada4">#66ada4<br><span style="color:white;">#66ada4</span></td><td bgcolor="#317873">#317873<br><span style="color:white;">#317873</span></td><td bgcolor="#004b49">#004b49<br><span style="color:white;">#004b49</span></td><td bgcolor="#002a29">#002a29<br><span style="color:white;">#002a29</span></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>greenishblue</th><td bgcolor="#239eba">#239eba<br><span style="color:white;">#239eba</span></td><td bgcolor="#0085a1">#0085a1<br><span style="color:white;">#0085a1</span></td><td bgcolor="#007791">#007791<br><span style="color:white;">#007791</span></td><td bgcolor="#00444f">#00444f<br><span style="color:white;">#00444f</span></td><td></td><td bgcolor="#9cd1dc">#9cd1dc<br><span style="color:white;">#9cd1dc</span></td><td bgcolor="#66aabc">#66aabc<br><span style="color:white;">#66aabc</span></td><td bgcolor="#367588">#367588<br><span style="color:white;">#367588</span></td><td bgcolor="#004958">#004958<br><span style="color:white;">#004958</span></td><td bgcolor="#002e3b">#002e3b<br><span style="color:white;">#002e3b</span></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>blue</th><td bgcolor="#4997d0">#4997d0<br><span style="color:white;">#4997d0</span></td><td bgcolor="#367cc7">#367cc7<br><span style="color:white;">#367cc7</span></td><td bgcolor="#0067a5">#0067a5<br><span style="color:white;">#0067a5</span></td><td bgcolor="#00416a">#00416a<br><span style="color:white;">#00416a</span></td><td></td><td bgcolor="#a1caf1">#a1caf1<br><span style="color:white;">#a1caf1</span></td><td bgcolor="#70a3cc">#70a3cc<br><span style="color:white;">#70a3cc</span></td><td bgcolor="#436b95">#436b95<br><span style="color:white;">#436b95</span></td><td bgcolor="#00304e">#00304e<br><span style="color:white;">#00304e</span></td><td></td><td bgcolor="#bcd4e6">#bcd4e6<br><span style="color:white;">#bcd4e6</span></td><td bgcolor="#91a3b0">#91a3b0<br><span style="color:white;">#91a3b0</span></td><td bgcolor="#536878">#536878<br><span style="color:white;">#536878</span></td><td bgcolor="#36454f">#36454f<br><span style="color:white;">#36454f</span></td><td bgcolor="#202830">#202830<br><span style="color:white;">#202830</span></td><td></td></tr><tr><th>purplishblue</th><td bgcolor="#6c79b8">#6c79b8<br><span style="color:white;">#6c79b8</span></td><td bgcolor="#736ad0">#736ad0<br><span style="color:white;">#736ad0</span></td><td bgcolor="#545aa7">#545aa7<br><span style="color:white;">#545aa7</span></td><td bgcolor="#272458">#272458<br><span style="color:white;">#272458</span></td><td></td><td bgcolor="#b3bce2">#b3bce2<br><span style="color:white;">#b3bce2</span></td><td bgcolor="#8791bf">#8791bf<br><span style="color:white;">#8791bf</span></td><td bgcolor="#4e5180">#4e5180<br><span style="color:white;">#4e5180</span></td><td bgcolor="#252440">#252440<br><span style="color:white;">#252440</span></td><td></td><td bgcolor="#c0c8e1">#c0c8e1<br><span style="color:white;">#c0c8e1</span></td><td bgcolor="#8c92ac">#8c92ac<br><span style="color:white;">#8c92ac</span></td><td bgcolor="#4c516d">#4c516d<br><span style="color:white;">#4c516d</span></td><td></td><td></td><td></td></tr><tr><th>violet</th><td bgcolor="#7e73b8">#7e73b8<br><span style="color:white;">#7e73b8</span></td><td bgcolor="#9065ca">#9065ca<br><span style="color:white;">#9065ca</span></td><td bgcolor="#604e97">#604e97<br><span style="color:white;">#604e97</span></td><td bgcolor="#32174d">#32174d<br><span style="color:white;">#32174d</span></td><td></td><td bgcolor="#dcd0ff">#dcd0ff<br><span style="color:white;">#dcd0ff</span></td><td bgcolor="#8c82b6">#8c82b6<br><span style="color:white;">#8c82b6</span></td><td bgcolor="#604e81">#604e81<br><span style="color:white;">#604e81</span></td><td bgcolor="#2f2140">#2f2140<br><span style="color:white;">#2f2140</span></td><td></td><td bgcolor="#c4c3dd">#c4c3dd<br><span style="color:white;">#c4c3dd</span></td><td bgcolor="#9690ab">#9690ab<br><span style="color:white;">#9690ab</span></td><td bgcolor="#554c69">#554c69<br><span style="color:white;">#554c69</span></td><td></td><td></td><td></td></tr><tr><th>purple</th><td bgcolor="#d399e6">#d399e6<br><span style="color:white;">#d399e6</span></td><td bgcolor="#9a4eae">#9a4eae<br><span style="color:white;">#9a4eae</span></td><td bgcolor="#875692">#875692<br><span style="color:white;">#875692</span></td><td bgcolor="#602f6b">#602f6b<br><span style="color:white;">#602f6b</span></td><td bgcolor="#401a4c">#401a4c<br><span style="color:white;">#401a4c</span></td><td bgcolor="#d5badb">#d5badb<br><span style="color:white;">#d5badb</span></td><td bgcolor="#b695c0">#b695c0<br><span style="color:white;">#b695c0</span></td><td bgcolor="#86608e">#86608e<br><span style="color:white;">#86608e</span></td><td bgcolor="#563c5c">#563c5c<br><span style="color:white;">#563c5c</span></td><td bgcolor="#301934">#301934<br><span style="color:white;">#301934</span></td><td bgcolor="#d6cadd">#d6cadd<br><span style="color:white;">#d6cadd</span></td><td bgcolor="#aa98a9">#aa98a9<br><span style="color:white;">#aa98a9</span></td><td bgcolor="#796878">#796878<br><span style="color:white;">#796878</span></td><td bgcolor="#50404d">#50404d<br><span style="color:white;">#50404d</span></td><td bgcolor="#291e29">#291e29<br><span style="color:white;">#291e29</span></td><td></td></tr><tr><th>reddishpurple</th><td></td><td bgcolor="#870074">#870074<br><span style="color:white;">#870074</span></td><td bgcolor="#9e4f88">#9e4f88<br><span style="color:white;">#9e4f88</span></td><td bgcolor="#702963">#702963<br><span style="color:white;">#702963</span></td><td bgcolor="#54194e">#54194e<br><span style="color:white;">#54194e</span></td><td></td><td bgcolor="#b784a7">#b784a7<br><span style="color:white;">#b784a7</span></td><td bgcolor="#915c83">#915c83<br><span style="color:white;">#915c83</span></td><td bgcolor="#5d3954">#5d3954<br><span style="color:white;">#5d3954</span></td><td bgcolor="#341731">#341731<br><span style="color:white;">#341731</span></td><td></td><td bgcolor="#aa8a9e">#aa8a9e<br><span style="color:white;">#aa8a9e</span></td><td bgcolor="#836479">#836479<br><span style="color:white;">#836479</span></td><td></td><td></td><td></td></tr><tr><th>purplishred</th><td></td><td bgcolor="#ce4676">#ce4676<br><span style="color:white;">#ce4676</span></td><td bgcolor="#b3446c">#b3446c<br><span style="color:white;">#b3446c</span></td><td bgcolor="#78184a">#78184a<br><span style="color:white;">#78184a</span></td><td bgcolor="#54133b">#54133b<br><span style="color:white;">#54133b</span></td><td></td><td></td><td bgcolor="#a8516e">#a8516e<br><span style="color:white;">#a8516e</span></td><td bgcolor="#673147">#673147<br><span style="color:white;">#673147</span></td><td bgcolor="#38152c">#38152c<br><span style="color:white;">#38152c</span></td><td></td><td bgcolor="#af868e">#af868e<br><span style="color:white;">#af868e</span></td><td bgcolor="#915f6d">#915f6d<br><span style="color:white;">#915f6d</span></td><td></td><td></td><td></td></tr><tr><th></th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>purplishpink</th><td bgcolor="#ffc8d6">#ffc8d6<br><span style="color:white;">#ffc8d6</span></td><td></td><td bgcolor="#e68fac">#e68fac<br><span style="color:white;">#e68fac</span></td><td bgcolor="#de6fa1">#de6fa1<br><span style="color:white;">#de6fa1</span></td><td></td><td></td><td bgcolor="#efbbcc">#efbbcc<br><span style="color:white;">#efbbcc</span></td><td bgcolor="#d597ae">#d597ae<br><span style="color:white;">#d597ae</span></td><td bgcolor="#c17e91">#c17e91<br><span style="color:white;">#c17e91</span></td><td></td><td></td><td bgcolor="#e8ccd7">#e8ccd7<br><span style="color:white;">#e8ccd7</span></td><td bgcolor="#c3a6b1">#c3a6b1<br><span style="color:white;">#c3a6b1</span></td><td></td><td></td><td></td></tr><tr><th>pink</th><td></td><td bgcolor="#ffb5ba">#ffb5ba<br><span style="color:white;">#ffb5ba</span></td><td bgcolor="#ea9399">#ea9399<br><span style="color:white;">#ea9399</span></td><td bgcolor="#e4717a">#e4717a<br><span style="color:white;">#e4717a</span></td><td></td><td></td><td bgcolor="#f9ccca">#f9ccca<br><span style="color:white;">#f9ccca</span></td><td bgcolor="#dea5a4">#dea5a4<br><span style="color:white;">#dea5a4</span></td><td bgcolor="#c08081">#c08081<br><span style="color:white;">#c08081</span></td><td></td><td></td><td bgcolor="#ead8d7">#ead8d7<br><span style="color:white;">#ead8d7</span></td><td bgcolor="#c4aead">#c4aead<br><span style="color:white;">#c4aead</span></td><td></td><td></td><td bgcolor="#c2ac99">#c2ac99<br><span style="color:white;">#c2ac99</span></td></tr><tr><th>yellowishpink</th><td></td><td bgcolor="#ffb7a5">#ffb7a5<br><span style="color:white;">#ffb7a5</span></td><td bgcolor="#f99379">#f99379<br><span style="color:white;">#f99379</span></td><td bgcolor="#e66761">#e66761<br><span style="color:white;">#e66761</span></td><td></td><td></td><td bgcolor="#f4c2c2">#f4c2c2<br><span style="color:white;">#f4c2c2</span></td><td bgcolor="#d9a6a9">#d9a6a9<br><span style="color:white;">#d9a6a9</span></td><td bgcolor="#c48379">#c48379<br><span style="color:white;">#c48379</span></td><td></td><td></td><td bgcolor="#ecd5c5">#ecd5c5<br><span style="color:white;">#ecd5c5</span></td><td bgcolor="#c7ada3">#c7ada3<br><span style="color:white;">#c7ada3</span></td><td></td><td></td><td></td></tr><tr><th></th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>reddishbrown</th><td></td><td></td><td bgcolor="#882d17">#882d17<br><span style="color:white;">#882d17</span></td><td bgcolor="#56070c">#56070c<br><span style="color:white;">#56070c</span></td><td></td><td></td><td bgcolor="#a87c6d">#a87c6d<br><span style="color:white;">#a87c6d</span></td><td bgcolor="#79443b">#79443b<br><span style="color:white;">#79443b</span></td><td bgcolor="#3e1d1e">#3e1d1e<br><span style="color:white;">#3e1d1e</span></td><td></td><td></td><td bgcolor="#977f73">#977f73<br><span style="color:white;">#977f73</span></td><td bgcolor="#674c47">#674c47<br><span style="color:white;">#674c47</span></td><td bgcolor="#43302e">#43302e<br><span style="color:white;">#43302e</span></td><td></td><td></td></tr><tr><th>brown</th><td></td><td></td><td bgcolor="#80461b">#80461b<br><span style="color:white;">#80461b</span></td><td bgcolor="#593319">#593319<br><span style="color:white;">#593319</span></td><td></td><td></td><td bgcolor="#a67b5b">#a67b5b<br><span style="color:white;">#a67b5b</span></td><td bgcolor="#6f4e37">#6f4e37<br><span style="color:white;">#6f4e37</span></td><td bgcolor="#422518">#422518<br><span style="color:white;">#422518</span></td><td></td><td></td><td bgcolor="#958070">#958070<br><span style="color:white;">#958070</span></td><td bgcolor="#635147">#635147<br><span style="color:white;">#635147</span></td><td bgcolor="#3e322c">#3e322c<br><span style="color:white;">#3e322c</span></td><td></td><td></td></tr><tr><th>yellowishbrown</th><td></td><td></td><td bgcolor="#996515">#996515<br><span style="color:white;">#996515</span></td><td bgcolor="#654522">#654522<br><span style="color:white;">#654522</span></td><td></td><td></td><td bgcolor="#c19a6b">#c19a6b<br><span style="color:white;">#c19a6b</span></td><td bgcolor="#826644">#826644<br><span style="color:white;">#826644</span></td><td bgcolor="#4b3621">#4b3621<br><span style="color:white;">#4b3621</span></td><td></td><td></td><td bgcolor="#ae9b82">#ae9b82<br><span style="color:white;">#ae9b82</span></td><td bgcolor="#7e6d5a">#7e6d5a<br><span style="color:white;">#7e6d5a</span></td><td bgcolor="#483c32">#483c32<br><span style="color:white;">#483c32</span></td><td></td><td></td></tr><tr><th>olivebrown</th><td></td><td></td><td></td><td></td><td></td><td></td><td bgcolor="#967117">#967117<br><span style="color:white;">#967117</span></td><td bgcolor="#6c541e">#6c541e<br><span style="color:white;">#6c541e</span></td><td bgcolor="#3b3121">#3b3121<br><span style="color:white;">#3b3121</span></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th>olive</th><td></td><td></td><td></td><td></td><td></td><td></td><td bgcolor="#867e36">#867e36<br><span style="color:white;">#867e36</span></td><td bgcolor="#665d1e">#665d1e<br><span style="color:white;">#665d1e</span></td><td bgcolor="#57554c">#57554c<br><span style="color:white;">#57554c</span></td><td></td><td></td><td bgcolor="#8c8767">#8c8767<br><span style="color:white;">#8c8767</span></td><td bgcolor="#5b5842">#5b5842<br><span style="color:white;">#5b5842</span></td><td bgcolor="#363527">#363527<br><span style="color:white;">#363527</span></td><td></td><td></td></tr><tr><th>olivegreen</th><td></td><td></td><td bgcolor="#404f00">#404f00<br><span style="color:white;">#404f00</span></td><td bgcolor="#232f00">#232f00<br><span style="color:white;">#232f00</span></td><td></td><td></td><td></td><td bgcolor="#4a5d23">#4a5d23<br><span style="color:white;">#4a5d23</span></td><td bgcolor="#2b3d26">#2b3d26<br><span style="color:white;">#2b3d26</span></td><td></td><td></td><td></td><td bgcolor="#515744">#515744<br><span style="color:white;">#515744</span></td><td bgcolor="#31362b">#31362b<br><span style="color:white;">#31362b</span></td><td></td><td></td></tr></table>
 
