@@ -13,6 +13,12 @@ https://munsellcolourscienceforpainters.com/MunsellAndKubelkaMunkToolbox/Munsell
 
 """
 
+
+luminousColors = [
+        
+        ]
+
+
 colorList1 = [
     ['1', 'Pink', '230', '134', '151',],
     ['2', 'Red', '185', '40', '66',],
