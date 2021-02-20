@@ -66,14 +66,20 @@ Display options:
     }
 </script>
 
+
+
+
+
+
 <h1>The Universal Color Language</h1>
 
-<p>The <a href="https://en.wikipedia.org/wiki/ISCC%E2%80%93NBS_system">ISCC–NBS System of Color Designation</a> is an attempt to build a dictionary of color names by combining basic color names with adjectives.
-The system is meant to be perceptually uniform and is based on the <a href="https://en.wikipedia.org/wiki/Munsell_color_system">Munsell color system</a>.
-As perceptually uniform color spaces, these systems has been largely superseded by work by the <a href"https://en.wikipedia.org/wiki/International_Commission_on_Illumination">the CIE</a>.
-But I really enjoy the adjective+base color names in the NBS system.</p>
+<p>The <a href="https://en.wikipedia.org/wiki/ISCC%E2%80%93NBS_system">ISCC–NBS System of Color Designation</a> is an attempt to build a dictionary of surface colors by combining basic color names with adjectives.
+It was described by the National Bureau of Standards in the 1976 publication <a href="https://archive.org/details/coloruniversalla00kell/page/50/mode/2up">Color: Universal Language and Dictionary of Names</a>
+The system is meant to be perceptually uniform and is based on the <a href="https://en.wikipedia.org/wiki/Munsell_color_system">Munsell color system</a>, which describes colors in terms of hue, chroma, and value.
+<!--As perceptually uniform color spaces, these systems has been largely superseded by work by the <a href="https://en.wikipedia.org/wiki/International_Commission_on_Illumination">the CIE</a>.
+But I really enjoy the adjective+base color names in the NBS system.-->
 
-<p>Below, I've reproduced some tables of hexidecimal color codes from various attempts to convert this system to sRGB.</p>
+Below, I've reproduced some tables of hexidecimal color codes from various attempts to convert this system to sRGB.</p>
 
 
 
@@ -81,10 +87,11 @@ But I really enjoy the adjective+base color names in the NBS system.</p>
 <hr>
 
 
-<h2>Paul Centore's sRGB Conversion</h2>
+<h2>Paul Centore's sRGB Conversion (2016)</h2>
 
 Paul Centore constructed a set of representative RGB values for each of the colors in the ISCC-NBS system.
 The details are <a href="https://www.munsellcolourscienceforpainters.com/ISCCNBS/ISCCNBSSystem.html">here</a>, 
+the text file of color codes is <a href="https://www.munsellcolourscienceforpainters.com/MunsellAndKubelkaMunkToolbox/MunsellAndKubelkaMunkToolboxFeb2017/DataFiles/sRGBcentroidsForISCCNBS.txt">here</a>,
 and a set of data files can be found <a href="https://munsellcolourscienceforpainters.com/MunsellAndKubelkaMunkToolbox/MunsellAndKubelkaMunkToolbox.html">here</a>.
 
 <h3>My slightly modified version:</h3>
@@ -289,11 +296,41 @@ The colors marked "ERROR" fall outside the sRGB gamut using Centore's methodolog
 
 
 
+<h4>Level 1 color centroids</h4>
+<table>
+    <col class="colorcol"><col><col class="colorcol">
+    <col class="colorcol"><col class="colorcol"><col class="colorcol">
+    <col class="colorcol"><col class="colorcol"><col class="colorcol">
+    <tr>
+        <td bgcolor="#e7e1e9">White<br>#e7e1e9</td>
+        <td></td>
+        <td bgcolor="#e78daa">Pink<br>#e78daa</td>
+    </tr>
+    <tr>
+        <td bgcolor="#938e93">Gray<br>#938e93</td>
+        <td></td>
+        <td bgcolor="#ba2a5e">Red<br>#ba2a5e</td>
+        <td bgcolor="#d9592d">Orange<br>#d9592d</td>
+        <td bgcolor="#d7b64a">Yellow<br>#d7b64a</td>
+        <td bgcolor="#a0c245">Yellow green<br>#a0c245</td>
+        <td bgcolor="#49c172">Green<br>#49c172</td>
+        <td bgcolor="#4272c3">Blue<br>#4272c3</td>
+        <td bgcolor="#9e42bd">Purple<br>#9e42bd</td>
+    </tr>
+    <tr>
+        <td bgcolor="#2b292b">Black<br>#2b292b</td>
+        <td></td>
+        <td></td>
+        <td bgcolor="#834b2c">Brown<br>#834b2c</td>
+        <td bgcolor="#5e5e09">Olive<br>#5e5e09</td>
+    </tr>
+</table>
 
 
 
 
 
+<!--
 <h4>Level 1 color centroids</h4>
 <table>
     <col class="colorcol"><col><col class="colorcol">
@@ -323,7 +360,7 @@ The colors marked "ERROR" fall outside the sRGB gamut using Centore's methodolog
         <td bgcolor="#72672c">Olive<br>#72672c</td>
     </tr>
 </table>
-
+-->
 
 
 
@@ -557,12 +594,12 @@ The colors marked "ERROR" fall outside the sRGB gamut using Centore's methodolog
 
 <!---->
 Sidenote:
-The choice of color category names in ISCC-NBS seems a bit goofy to me.
+The choice of color category names in ISCC-NBS seems a bit strange to me.
 "Green" seems more like teal.
 It's confusing to have both "yellow green" and "yellowish green".
 Dark yellow is specifically called olive, but other colors like teal, chartreuse, or magenta are not explicitly named.
 
-Color names vary across time and space. So no big deal.
+Color names vary across time and space. So I guess that's to be expected though.
 <hr>
 
 
@@ -594,10 +631,49 @@ Color names vary across time and space. So no big deal.
 
 
 
-<h2>John Foster Scans</h2>
 
-Here's an alternate set of codes for the same color naming system.
 
+<h2>John Foster Scans (2003)</h2>
+
+<!--<p>Here's an alternate set of codes for the same color naming system,
+but based on converting The Munsell system codes to RGB.</p>-->
+
+<p>
+    <a href="http://people.csail.mit.edu/jaffer/Color/Dictionaries#NBS">Here's</a> an older attempt to convert the system to a list of RGB codes.
+    This one takes the list of Munsell values for each color-name from <a href="https://archive.org/details/coloruniversalla00kell/page/50/mode/2up">the NBS source</a>,
+    and then converts those Munsell values to RGB directly.
+    However, that's easier said than done.
+</p>
+
+<ul>
+    <li>David Mundie was the first to try doing this, 
+        but <a href="https://web.archive.org/web/20070922233429/http://www.anthus.com/Colors/NBS.html">his list</a> 
+        has several transcription errors and his 90s-era Mac didn't render RGB correctly.</li>
+    <li>John Foster corrected some of these transcription arrors and then 
+        <a href="https://web.archive.org/web/20070922233429/http://www.anthus.com/Colors/NBS.html">reconverted the Munsell values to RGB</a>.
+        Whenever the Munsell values fell outside of the RGB gamut, he tweaked them to fit them inside.
+        But there are still some issuses with the list.</li>
+    <li></li>
+</ul>
+
+<!--The nbs-iscc RGB-cube shows that the named colors cover less than half of RGB color space. With the RGB primaries being mapped to physically realizable surface colors, this system does not have names for primary illuminants. Adding modifiers such as "luminous" or "bright" would be a way to extend the system to luminance.-->
+
+
+
+You can find the details here
+
+
+<p>The difference between this list and the one above is that 
+Centore's list is based on the centroid of the RGB points which fall within each color-name,
+whereas this list is based on taking the centroids of each color-name in Munsell space (hue, chroma, value), and then converting those points to RGB.
+These means the results might differ significantly for color-names near the edges of the RGB cube.</p>
+
+<p>However, because this list is based on converting values from an old library book, it has some weird little snaggles.</p>
+
+
+An <a href="https://archive.org/details/coloruniversalla00kell/page/50/mode/2up">Color: Universal Language and Dictionary of Names</a>
+
+<!--
 <p>
     Centore's list above is calculated by finding the centroid of a set of RGB points.
     This list is based on a scan of physical color samples in Munsell space, converted into RGB.
@@ -605,10 +681,10 @@ Here's an alternate set of codes for the same color naming system.
     So this color list is somewhat more vivid because it has more colors near the edge of the RGB cube.
     But because it's based on scans, some mistakes are apparent in conversion.
 </p>
+-->
 
 
-
-<p>The following color list comes with this license:</p>
+<p>Also note that list comes with the following license:</p>
 
 <pre>
     Copyright 2003 Voluntocracy.  Permission is granted to copy and
