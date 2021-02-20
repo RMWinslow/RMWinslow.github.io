@@ -15,8 +15,44 @@ https://munsellcolourscienceforpainters.com/MunsellAndKubelkaMunkToolbox/Munsell
 
 
 luminousColors = [
+        ['red', '#ff0039'],
+        ['reddish orange', '#ff5b00'],
+        ['orange', '#ff7f00'],
+        ['orange yellow', '#ffa300'],
+        ['yellow', '#ffdf00'],
+        ['greenish yellow', '#fdff00'],
+        ['yellow green', '#d3ff00'],
+        ['yellowish green', '#59ff00'],
+        ['green', '#00ff83'],
+        ['bluish green', '#00ffc6'],
+        ['greenish blue', '#00ddff'],
+        ['blue', '#0088ff'],
+        ['purplish blue', '#0049ff'], #0058ff or #0049ff or 0025ff
+        ['violet', '#9200ff'],
+        ['purple', '#dd00ff'],
+        ['reddish purple', '#ff00f5'],
+        ['purplish red', '#ff00a7'],
+ ]
         
-        ]
+luminousColorsOld = [
+        ['red', '#ff0039'],
+        ['reddish orange', '#ffa300'],
+        ['orange', '#ffdd00'],
+        ['orange yellow', '#d3ff00'],
+        ['yellow', '#59ff00'],
+        ['greenish yellow', '#00ff86'],
+        ['yellow green', '#00ffc8'],
+        ['yellowish green', '#00fff7'],
+        ['green', '#00eaff'],
+        ['bluish green', '#00ceff'],
+        ['greenish blue', '#00b3ff'],
+        ['blue', '#008eff'],
+        ['purplish blue', '#0057ff'],
+        ['violet', '#9200ff'],
+        ['purple', '#ff00f5'],
+        ['reddish purple', '#ff00a7'],
+        ['purplish red', '#ff0070'],
+ ]
 
 
 colorList1 = [
@@ -694,7 +730,7 @@ for color in list(colordict3):
         print(colordict3[('pale',color[1])])
         
         
-'''        
+        
 #define color codes outside srgb gamut
 colordict3[('vivid','greenish blue')] = ['167', 'vivid greenish blue', 'nan', 'nan', 'nan', '#1badc4', 'vivid', 'greenish blue', '†']   
 colordict3[('vivid','greenish blue')] = ['167', 'vivid greenish blue', 'nan', 'nan', 'nan', '#00adc5', 'vivid', 'greenish blue', '†']   
@@ -707,23 +743,29 @@ colordict3[('deep','greenish blue')] = ['170', 'deep greenish blue', 'nan', 'nan
            
 colordict3[('deep','olive green')] = ['124', 'deep olive green', 'nan', 'nan', 'nan', '#223604', 'deep', 'olive green', '†']
     
-
-           
-           
+   
 #Level 2 centroids include with null mod.    
 for color in colorList2:
     colordict3[(' ',color[1])] = color + [RGBtoHTML(color[2],color[3],color[4]),' ',color[1],'※']
-'''
+
+
+#My luminous extension
+for color in luminousColors:
+    colordict3[('luminous',color[0])] = ['', 'luminous'+color[0], 'nan', 'nan', 'nan', color[1], 'luminous', color[0], '※']
     
+    
+
+
+'''   
 #Note the changed codes from the foster scan. Actual changes in list above.
 colordict3[('deep','yellowish pink')][8] = '†'
-    
+'''
 
     
     
     
 #%%Build the html
-tableordermods = ['vivid','','brilliant','strong','deep','very deep','','very light','light','moderate','dark','very dark','','very pale','pale','grayish','dark grayish','blackish',] #' ','','light grayish','brownish',
+tableordermods = ['luminous','','vivid','','brilliant','strong','deep','very deep','','very light','light','moderate','dark','very dark','','very pale','pale','grayish','dark grayish','blackish',] #' ','','light grayish','brownish',
 
 tableordercats = [
     'red',
@@ -786,10 +828,10 @@ for cat in tableordercats:
     for mod in tableordermods:
         if (mod,cat) in colordict3:
             data = colordict3[(mod,cat)]
-            fostercolor = fosterlist[int(data[0])-1][1]
+            #data[5] = fosterlist[int(data[0])-1][1]
             #print(fosterlist[int(data[0])-1], (mod,cat))
             #print(data)
-            output += '<td bgcolor="'+fostercolor+'">'+str(data[0])+data[8]+'<br>'+fostercolor+'</td>' #data[5] is original
+            output += '<td bgcolor="'+data[5]+'">'+str(data[0])+data[8]+'<br>'+data[5]+'</td>' #data[5] is original
             coveredcolors[(mod,cat)] = 1
         else:
             output += '<td></td>'
