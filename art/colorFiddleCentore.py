@@ -24,7 +24,7 @@ luminousColors = [
         ['yellow green', '#d3ff00'],
         ['yellowish green', '#59ff00'],
         ['green', '#00ff83'],
-        ['bluish green', '#00ffc6'],
+        ['bluish green', '#00ffe9'],
         ['greenish blue', '#00ddff'],
         ['blue', '#0088ff'],
         ['purplish blue', '#0049ff'], #0058ff or #0049ff or 0025ff
@@ -674,6 +674,14 @@ def RGBtoHTML(r,g,b):
     return hexcode
 
 
+        
+def htmlToRGB(html):
+    html = html.lstrip('#')
+    r = str(int(html[0:2],16))
+    g = str(int(html[2:4],16))
+    b = str(int(html[4:],16)  )      
+    return r,g,b 
+
 #%%
     
 colordict2 = dict()
@@ -717,7 +725,7 @@ for color in colorList3:
 #       * relabelled but present in original data
 #       † label originally present but hexcode changed (entries outside rgb gamut)
 #       ‡ 
-#      ※ Level 2 color centroid
+#      ※ A color of my invenstion. Neither the name nor code exists in the original dictionary.
         
 colordict3[('dark','orange')] = ['54', 'brownish orange', '178', '102', '51', '#b26633', 'dark', 'orange','*']
 #colordict3[('grayish','orange')] = ['54', 'brownish orange', '178', '102', '51', '#b26633', 'dark', 'orange','*']
@@ -751,10 +759,13 @@ for color in colorList2:
 
 #My luminous extension
 for color in luminousColors:
-    colordict3[('luminous',color[0])] = ['', 'luminous'+color[0], 'nan', 'nan', 'nan', color[1], 'luminous', color[0], '※']
+    r,g,b = htmlToRGB(color[1])
+    colordict3[('luminous',color[0])] = ['', 'luminous '+color[0], r, g, b, color[1], 'luminous', color[0], '※']
     
     
-
+#Fill out the neutrals. Olive+Yellow combined. Red+Pink. So just need to complete the broownss
+colordict3[('my light brownish', 'gray')] = ['', 'my light brownish gray', '194', '182', '181', '#c2b6b5', 'my light brownish', 'gray', '※']
+colordict3[('my brownish', 'white')] = ['', 'my brownish white', '236', '224', '223', '#ece0df', 'my brownish', 'white', '※']
 
 '''   
 #Note the changed codes from the foster scan. Actual changes in list above.
@@ -808,6 +819,7 @@ tableordercats = [
 coveredcolors = dict()
 
 output = ''
+outputGIMP = ''
 
 output += '<table border="1">'
 output += '<col>'
@@ -832,9 +844,11 @@ for cat in tableordercats:
             #print(fosterlist[int(data[0])-1], (mod,cat))
             #print(data)
             output += '<td bgcolor="'+data[5]+'">'+str(data[0])+data[8]+'<br>'+data[5]+'</td>' #data[5] is original
+            #outputGIMP += data[2]+' '+data[3]+' '+data[4]+' '+data[5]+' - '+data[1]+'※'
             coveredcolors[(mod,cat)] = 1
         else:
             output += '<td></td>'
+            #outputGIMP+='  0   0   0	#000000 - Black※'
     output += '</tr>'
 output += '</table>'
 
@@ -949,9 +963,94 @@ for color in colordict3:
     
     
     
-    
-    
-    
+#%% GIMP Pallette Generator
+       
+        
+        
+placeholder = '\n'
+
+outputGIMP = ''
+
+
+#row for each color category
+for cat in tableordercats:
+    for mod in tableordermods:
+        if True:#mod!='' and cat!='':
+            if (mod,cat) in colordict3:
+                data = colordict3[(mod,cat)]
+                r,g,b = data[2],data[3],data[4]
+                if r=='nan':
+                    r,g,b = htmlToRGB(data[5])
+                outputGIMP += r+' '+g+' '+b+' '+data[0]+data[8]+' '+data[5]+' - '+data[1]+placeholder
+            else:
+                outputGIMP+='  0   0   0 Black'+placeholder
+    output += '</tr>'
+output += '</table>'
+
+
+
+
+GIMPneutrals = [
+        [      
+            ('', 'white'),
+            ('pinkish', 'white'),
+            ('my brownish', 'white'),
+            ('yellowish', 'white'),
+            ('greenish', 'white'),
+            ('bluish', 'white'),
+            ('purplish', 'white'),
+        ],
+        [      
+            ('light', 'gray'),
+            ('pinkish', 'gray'),
+            ('my light brownish', 'gray'),
+            ('yellowish', 'gray'),
+            ('light greenish', 'gray'),
+            ('light bluish', 'gray'),
+            ('light purplish', 'gray'),
+        ],
+        [      
+            ('medium', 'gray'),
+            ('reddish', 'gray'),
+            ('light brownish', 'gray'),
+            ('light olive', 'gray'),
+            ('greenish', 'gray'),
+            ('bluish', 'gray'),
+            ('purplish', 'gray'),
+        ],
+        [      
+            ('dark', 'gray'),
+            ('dark reddish', 'gray'),
+            ('brownish', 'gray'),
+            ('olive', 'gray'),
+            ('dark greenish', 'gray'),
+            ('dark bluish', 'gray'),
+            ('dark purplish', 'gray'),
+        ],
+        [      
+            ('', 'black'),
+            ('reddish', 'black'),
+            ('brownish', 'black'),
+            ('olive', 'black'),
+            ('greenish', 'black'),
+            ('bluish', 'black'),
+            ('purplish', 'black'),
+        ],
+        ]
+
+
+for row in GIMPneutrals:
+    for col in row:
+        data = colordict3[col]
+        r,g,b = data[2],data[3],data[4]
+        if r=='nan':
+            r,g,b = htmlToRGB(data[5])
+        outputGIMP += r+' '+g+' '+b+' '+data[0]+data[8]+' '+data[5]+' - '+data[1]+placeholder
+    outputGIMP += ('  0   0   0 Black'+placeholder)*13
+
+
+
+print(outputGIMP)   
     
     
     
