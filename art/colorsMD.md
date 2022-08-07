@@ -1,6 +1,8 @@
 ---
 title: ISCC-NBS Color Chart
 description: A table showing the structure and html codes of the ISCC-NBS system.
+nav_exclude: true
+search_exclude: true
 ---
 
 TODO: copy over from the colors html
