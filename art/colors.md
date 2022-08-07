@@ -1,5 +1,5 @@
 ---
-title: ISCC-NBS Color Chart
+title: Munsell Test
 description: A table showing the structure and html codes of the ISCC-NBS system.
 ---
 
