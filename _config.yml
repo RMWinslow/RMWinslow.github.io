@@ -1,4 +1,7 @@
 title: Robert Winslow
 author: Robert Winslow
+remote_theme: RMWinslow/just-the-docs-tweaked
+
+
 plugins:
   - jekyll-sitemap
