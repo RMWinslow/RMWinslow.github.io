@@ -2,6 +2,8 @@
 title: Site Index
 description: A list of links to sub-sites on my webzone.
 nav_order: 0
+nav_exclude: true
+search_exclude: true
 ---
 
 <img src="headshot.webp" style="max-width:40%; float:left; margin:1rem;" title="Headshot of Robert Winslow">
