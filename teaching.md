@@ -2,13 +2,12 @@
 title: Teaching
 ---
 
-# Teaching 
+# Teaching Experience
+
+## Econ 3102 - Intermediate Macroeconomics
 
 
 
-
-
-## Courses Taught
 
 
 ## Notes from Students
