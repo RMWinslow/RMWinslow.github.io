@@ -170,3 +170,18 @@ mjx-labels {color: #b58900 !important;}
     .mjx-chtml {color:hsl(193, 14%, 26%) !important; font-size: 1.4em! important;}
   }
 }
+
+
+
+
+/*Description List*/
+dt {
+    font-weight: bold;
+}
+dl,
+dd {
+    font-size: .9rem;
+}
+dd {
+    margin-bottom: 1em;
+}
