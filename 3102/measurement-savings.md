@@ -4,6 +4,21 @@ parent: 3102 Notes
 grand_parent: Teaching
 ---
 
+<style>
+@font-face {
+  font-family: 'Quattrocento';
+  src: url(../../webfonts/serif/Quattrocento-Regular.ttf);
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url(../../webfonts/serif/RobotoSlab-VariableFont_wght.ttf);
+}
+main {
+  font-family: 'Quattrocento';
+}
+</style>
+
+
 In addition to the main national accounts, the BEA also keeps track of stats about savings derived from GDP
 components and the like.
 
