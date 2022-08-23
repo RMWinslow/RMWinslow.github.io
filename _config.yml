@@ -1,6 +1,13 @@
 title: Robert Winslow
 author: Robert Winslow
 remote_theme: RMWinslow/just-the-docs-tweaked
+search_enabled: true
+page_excerpts: true
+gh_edit_link: false
+
+compress_html:
+  ignore:
+    envs: all
 
 
 plugins:
