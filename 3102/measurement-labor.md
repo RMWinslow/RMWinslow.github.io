@@ -9,29 +9,33 @@ layout: post
 
 - Employed: People who have a job.
     - You still count as employed if you are on vacation, sick, on maternity leave, etc.
-- Unemployed: People who are looking for a job (or temporarily layed off)
-- Labor Force = Employed + unemployed 
+- Unemployed: People who are looking for a job but don't have one (and people who are temporarily layed off).
+- Labor Force = Employed + unemployed. You are in the labor force if you are participating in the labor market, either by selling your labor or trying to.
 - All of the above exclude:
     - The very young
     - The institutionalized (prison, nursing homes, etc.)
     - The military
-- Unemployment rate: roughly speaking, rate of people who are actively trying to work but don't currently have a job:
+- Unemployment rate: What portion of the labor force doesn't have a job?
+
 $$\frac{\#\text{unemployed}}{\#\text{Labor Force}}=\frac{\#\text{unemployed}}{\#\text{unemployed}+\#\text{employed}}$$
 
-- Employment rate:
+- Employment rate: What portion of the labor force *does* have a job?
+
 $$\frac{\#\text{employed}}{\#\text{Labor Force}}=\frac{\#\text{employed}}{\#\text{unemployed}+\#\text{employed}}$$
 
-- Labor force participation rate: What portion of the people who could work are working or attempting to work?
+- Labor force participation rate: What portion of the people who *could* work *are* working or attempting to work?
+
 $$\frac{\#\text{Labor Force}}{\text{Working Age Noninstitutionalized Civilian Population}}$$
 
 - employment/population ratio:
+
 $$\frac{\#\text{Employed}}{\text{Working Age Noninstitutionalized Civilian Population}}$$
 
-Note that the unemployment rate is just a single summary statistic about the labor market. The BLS collects a lot more data, and a single statistic doesn't give us a complete picture. For example, the official definition of an “employed person” from the BLS simply requires that you worked for at least 1 hour this week (or 15 hours if it's a family business). If you wanted 20 hours of work this week, and only were able to find 1 hour of work, that still reflects a problem in the labor market, even though it isn't counted in the main statistic of “unemployment rate”. On the flipside, people sometimes misinterpret the labor force participation rate as somehow being the “true employment rate”, but the LFPR also reflects changes in society like women entering the workforce or people being able to retire longer due to increased lifespans.
+<aside>Note that the unemployment rate is just a single summary statistic about the labor market. The BLS collects a lot more data, and a single statistic doesn't give us a complete picture. For example, the official definition of an “employed person” from the BLS simply requires that you worked for at least 1 hour this week (or 15 hours if it's a family business). If you wanted 20 hours of work this week, and only were able to find 1 hour of work, that still reflects a problem in the labor market, even though it isn't counted in the main statistic of “unemployment rate”. On the flipside, people sometimes misinterpret the labor force participation rate as somehow being the “true employment rate”, but the LFPR also reflects changes in society like women entering the workforce or people being able to retire longer due to increased lifespans.
+</aside>
 
 
-
-## BLS Definitions
+## Official BLS Definitions
 
 See the [BLS glossary](https://www.bls.gov/bls/glossary.htm) for more definitions.
 
