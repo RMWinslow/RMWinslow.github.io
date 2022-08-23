@@ -2,12 +2,14 @@
 title: National Savings
 parent: 3102 Notes
 grand_parent: Teaching
+layout: post
+toc: true
 ---
 
 <style>
 @font-face {
   font-family: 'Quattrocento';
-  src: url(../../webfonts/serif/Quattrocento-Regular.ttf);
+  src: url(../../webfonts/serif/Quattrocento-Bold.ttf);
 }
 @font-face {
   font-family: 'Roboto';
