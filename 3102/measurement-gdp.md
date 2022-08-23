@@ -60,21 +60,9 @@ In theory, all three approaches should yield the same total value.
 <figcaption>Three ways to measure GDP. Recreation of figure 2.1 from the BEA's NIPA Handbook. GDP components not to scale.</figcaption>
 </figure>
 
-And the following just uses html
-
-
-<figure markdown="block">
-<img src="img-gdp-three-ways.png" alt="An image using a bar chart to depict the equivalence of the three approaches to measuring GDP">
-<figcaption>Three ways to measure GDP. Recreation of figure 2.1 from the BEA's NIPA Handbook. GDP components not to scale.</figcaption>
-</figure>
-
 
 
 ### Expenditure Approach:
-
-![An image using a bar chart to depict the equivalence of the three approaches to measuring GDP](img-gdp-three-ways.png)
-
-
 
 Measures output by looking at where that output goes.
 
@@ -87,6 +75,42 @@ $$C + I + G + NX$$
 - Net Exports (Exports - Imports)
 
 <!--Government investment is always counted, but where it goes in the formula varies. BEA lumps Gov consumption and invesetment together. OECD seems to seperate them. Need to double check on that before uncommenting this part.-->
+
+#### Components of US Expenditure Approach GDP 
+
+The following table shows the components of expenditure approach GDP for the United States in 2019
+| Component| 2019 | percent | trillions |
+|------------------------------------------------------------|------------|--------|------|
+|     Gross domestic product                                 | 21,372,582 | 100.0% | 21.4 |
+| Personal consumption expenditures                          | 14,428,676 | 67.5%  | 14.4 |
+| &emsp; Goods                                                  | 4,478,918  | 21.0%  | 4.5  |
+| &emsp;&emsp;      Durable goods                                        | 1,513,285  | 7.1%   | 1.5  |
+| &emsp;&emsp;      Nondurable goods                                     | 2,965,633  | 13.9%  | 3.0  |
+|  &emsp;   Services                                               | 9,949,758  | 46.6%  | 9.9  |
+| Gross private domestic investment                          | 3,826,258  | 17.9%  | 3.8  |
+|     Fixed investment                                       | 3,752,632  | 17.6%  | 3.8  |
+|       Nonresidential                                       | 2,938,716  | 13.7%  | 2.9  |
+|         Structures                                         | 672,634    | 3.1%   | 0.7  |
+|         Equipment                                          | 1,231,319  | 5.8%   | 1.2  |
+|         Intellectual property products                     | 1,034,763  | 4.8%   | 1.0  |
+|       Residential                                          | 813,916    | 3.8%   | 0.8  |
+|     Change in private inventories                          | 73,626     | 0.3%   | 0.1  |
+| Net exports of goods and services                          | -596,263   | -2.8%  | -0.6 |
+|     Exports                                                | 2,519,727  | 11.8%  | 2.5  |
+|       Goods                                                | 1,641,729  | 7.7%   | 1.6  |
+|       Services                                             | 877,998    | 4.1%   | 0.9  |
+|     Imports                                                | 3,115,990  | 14.6%  | 3.1  |
+|       Goods                                                | 2,517,913  | 11.8%  | 2.5  |
+|       Services                                             | 598,077    | 2.8%   | 0.6  |
+| Government consumption expenditures and   gross investment | 3,713,912  | 17.4%  | 3.7  |
+|     Federal                                                | 1,414,931  | 6.6%   | 1.4  |
+|       National defense                                     | 847,538    | 4.0%   | 0.8  |
+|       Nondefense                                           | 567,393    | 2.7%   | 0.6  |
+|     State and local                                        | 2,298,981  | 10.8%  | 2.3  |
+
+
+
+
 
 ### Value-added (or Output or Product) Approach:
 
