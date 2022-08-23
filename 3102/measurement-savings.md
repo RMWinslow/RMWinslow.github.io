@@ -3,7 +3,7 @@ title: National Savings
 parent: 3102 Notes
 grand_parent: Teaching
 layout: post
-toc: true
+toc: false
 ---
 
 
@@ -11,8 +11,9 @@ toc: true
 In addition to the main national accounts, the BEA also keeps track of stats about savings derived from GDP
 components and the like.
 
-Private Disposable Income 
-: How much income do households have available to spend?
+## Private Disposable Income 
+
+How much income do households have available to spend?
 
 $$Y_d = \textcolor{#6c71c4}{Y} + \textcolor{#268bd2}{NFP} + \textcolor{#dc322f}{TR} + \textcolor{#859900}{INT} - \textcolor{#b58900}{T}$$
 
@@ -29,9 +30,10 @@ A few notes:
 
 
 
-Private Sector Saving
-: The income that households had available, but which they did not spend.
-: Private Disposable Income, minus Consumption
+## Private Sector Saving
+
+The income that households had available, but which they did not spend.
+Private Disposable Income, minus Consumption
 
 $$S_p = Y_d - C$$
 
@@ -39,8 +41,9 @@ In the equation above, any disposable income not spent on final consumption good
 On an individual level, buying used goods counts as savings by the above definition, but selling used goods counts as "negative savings", and so such transactions cancel out in aggregate.
 
 
-Government Savings 
-: All the money the government collects, minus the money that they spend.
+## Government Savings 
+
+All the money the government collects, minus the money that they spend.
 
 $$S_g = \textcolor{#b58900}{T} - \textcolor{#2aa198}{G} - \textcolor{#dc322f}{TR} - \textcolor{#859900}{INT}$$
 
@@ -50,8 +53,16 @@ $$S_g = \textcolor{#b58900}{T} - \textcolor{#2aa198}{G} - \textcolor{#dc322f}{TR
 <span style="color:#dc322f">Net transfers from the government to private individuals</span> - 
 <span style="color:#859900">Interest on government debt held by individuals </span>.
 
+The government deficit is simply the negative of government savings.
 
-### National Savings
+
+$$\text{Government Deficit} =  \textcolor{#2aa198}{G} + \textcolor{#dc322f}{TR} + \textcolor{#859900}{INT} - \textcolor{#b58900}{T}$$
+
+- If $\textcolor{#b58900}{T} > (\textcolor{#2aa198}{G} + \textcolor{#dc322f}{TR} + \textcolor{#859900}{INT})$, then government savings is positive, and we say the government has a budget surplus.
+- If $\textcolor{#b58900}{T} < (\textcolor{#2aa198}{G} + \textcolor{#dc322f}{TR} + \textcolor{#859900}{INT})$, then government savings is negative, we say the government has a budget deficit, and the value of this deficit is the difference between .
+
+
+## National Savings
 
 
 $$\begin{aligned}
