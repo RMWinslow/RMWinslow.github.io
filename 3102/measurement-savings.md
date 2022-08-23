@@ -12,11 +12,11 @@ toc: true
   src: url(../../webfonts/serif/Quattrocento-Bold.ttf);
 }
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'RobotoSlab';
   src: url(../../webfonts/serif/RobotoSlab-VariableFont_wght.ttf);
 }
 main {
-  font-family: 'Quattrocento';
+  font-family: 'RobotoSlab';
 }
 </style>
 
