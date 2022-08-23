@@ -3,6 +3,7 @@ title: Prices
 subtitle: Prices, Price Indices, and Chain-Weighting
 parent: 3102 Notes
 grand_parent: Teaching
+layout: post
 ---
 
 

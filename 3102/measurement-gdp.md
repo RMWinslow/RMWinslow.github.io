@@ -3,6 +3,7 @@ title: Gross Domestic Product
 subtitle: GDP and Related Measurements in the National Accounts
 parent: 3102 Notes
 grand_parent: Teaching
+layout: post
 ---
 
 
