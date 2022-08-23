@@ -79,34 +79,261 @@ $$C + I + G + NX$$
 #### Components of US Expenditure Approach GDP 
 
 The following table shows the components of expenditure approach GDP for the United States in 2019
-| Component| 2019 | percent | trillions |
-|------------------------------------------------------------|------------|--------|------|
-|     Gross domestic product                                 | 21,372,582 | 100.0% | 21.4 |
-| Personal consumption expenditures                          | 14,428,676 | 67.5%  | 14.4 |
-| &emsp; Goods                                                  | 4,478,918  | 21.0%  | 4.5  |
-| &emsp;&emsp;      Durable goods                                        | 1,513,285  | 7.1%   | 1.5  |
-| &emsp;&emsp;      Nondurable goods                                     | 2,965,633  | 13.9%  | 3.0  |
-|  &emsp;   Services                                               | 9,949,758  | 46.6%  | 9.9  |
-| Gross private domestic investment                          | 3,826,258  | 17.9%  | 3.8  |
-|     Fixed investment                                       | 3,752,632  | 17.6%  | 3.8  |
-|       Nonresidential                                       | 2,938,716  | 13.7%  | 2.9  |
-|         Structures                                         | 672,634    | 3.1%   | 0.7  |
-|         Equipment                                          | 1,231,319  | 5.8%   | 1.2  |
-|         Intellectual property products                     | 1,034,763  | 4.8%   | 1.0  |
-|       Residential                                          | 813,916    | 3.8%   | 0.8  |
-|     Change in private inventories                          | 73,626     | 0.3%   | 0.1  |
-| Net exports of goods and services                          | -596,263   | -2.8%  | -0.6 |
-|     Exports                                                | 2,519,727  | 11.8%  | 2.5  |
-|       Goods                                                | 1,641,729  | 7.7%   | 1.6  |
-|       Services                                             | 877,998    | 4.1%   | 0.9  |
-|     Imports                                                | 3,115,990  | 14.6%  | 3.1  |
-|       Goods                                                | 2,517,913  | 11.8%  | 2.5  |
-|       Services                                             | 598,077    | 2.8%   | 0.6  |
-| Government consumption expenditures and   gross investment | 3,713,912  | 17.4%  | 3.7  |
-|     Federal                                                | 1,414,931  | 6.6%   | 1.4  |
-|       National defense                                     | 847,538    | 4.0%   | 0.8  |
-|       Nondefense                                           | 567,393    | 2.7%   | 0.6  |
-|     State and local                                        | 2,298,981  | 10.8%  | 2.3  |
+
+<table>
+<thead >
+  <tr>
+    <th></th>
+    <th colspan="3"style="text-align: center;">Trillions USD</th>
+    <th colspan="3" style="text-align: center;">Percent</th>
+  </tr>
+  <tr>
+    <th></th>
+    <th>2019</th>
+    <th>2020</th>
+    <th>2021</th>
+    <th>2019</th>
+    <th>2020</th>
+    <th>2021</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Gross domestic product</td>
+    <td>21.4</td>
+    <td>20.9</td>
+    <td>23.0</td>
+    <td>100%</td>
+    <td>100%</td>
+    <td>100%</td>
+  </tr>
+  <tr>
+    <td>Personal consumption expenditures</td>
+    <td>14.4</td>
+    <td>14.0</td>
+    <td>15.7</td>
+    <td>67.5%</td>
+    <td>67.2%</td>
+    <td>68.5%</td>
+  </tr>
+  <tr>
+    <td>&emsp;Goods</td>
+    <td>4.5</td>
+    <td>4.7</td>
+    <td>5.5</td>
+    <td>21.0%</td>
+    <td>22.3%</td>
+    <td>23.8%</td>
+  </tr>
+  <tr>
+    <td>&emsp;&emsp;Durable goods</td>
+    <td>1.5</td>
+    <td>1.6</td>
+    <td>2.0</td>
+    <td>7.1%</td>
+    <td>7.7%</td>
+    <td>8.8%</td>
+  </tr>
+  <tr>
+    <td>&emsp;&emsp;Nondurable goods</td>
+    <td>3.0</td>
+    <td>3.0</td>
+    <td>3.5</td>
+    <td>13.9%</td>
+    <td>14.5%</td>
+    <td>15.0%</td>
+  </tr>
+  <tr>
+    <td>&emsp;Services</td>
+    <td>9.9</td>
+    <td>9.4</td>
+    <td>10.3</td>
+    <td>46.6%</td>
+    <td>45.0%</td>
+    <td>44.6%</td>
+  </tr>
+  <tr>
+    <td>Gross private domestic investment</td>
+    <td>3.8</td>
+    <td>3.6</td>
+    <td>4.1</td>
+    <td>17.9%</td>
+    <td>17.4%</td>
+    <td>17.9%</td>
+  </tr>
+  <tr>
+    <td>&emsp;Fixed investment</td>
+    <td>3.8</td>
+    <td>3.7</td>
+    <td>4.1</td>
+    <td>17.6%</td>
+    <td>17.7%</td>
+    <td>18.0%</td>
+  </tr>
+  <tr>
+    <td>&emsp;&emsp;Nonresidential</td>
+    <td>2.9</td>
+    <td>2.8</td>
+    <td>3.1</td>
+    <td>13.7%</td>
+    <td>13.4%</td>
+    <td>13.3%</td>
+  </tr>
+  <tr>
+    <td>  &emsp;&emsp;Structures</td>
+    <td>0.7</td>
+    <td>0.6</td>
+    <td>0.6</td>
+    <td>3.1%</td>
+    <td>2.9%</td>
+    <td>2.5%</td>
+  </tr>
+  <tr>
+    <td>  &emsp;&emsp;Equipment</td>
+    <td>1.2</td>
+    <td>1.1</td>
+    <td>1.3</td>
+    <td>5.8%</td>
+    <td>5.4%</td>
+    <td>5.5%</td>
+  </tr>
+  <tr>
+    <td>  &emsp;&emsp;Intellectual property products</td>
+    <td>1.0</td>
+    <td>1.1</td>
+    <td>1.2</td>
+    <td>4.8%</td>
+    <td>5.2%</td>
+    <td>5.2%</td>
+  </tr>
+  <tr>
+    <td>&emsp;&emsp;Residential</td>
+    <td>0.8</td>
+    <td>0.9</td>
+    <td>1.1</td>
+    <td>3.8%</td>
+    <td>4.3%</td>
+    <td>4.7%</td>
+  </tr>
+  <tr>
+    <td>&emsp;Change in private inventories</td>
+    <td>0.1</td>
+    <td>-0.1</td>
+    <td>0.0</td>
+    <td>0.3%</td>
+    <td>-0.3%</td>
+    <td>-0.1%</td>
+  </tr>
+  <tr>
+    <td>Net exports of goods and services</td>
+    <td>-0.6</td>
+    <td>-0.7</td>
+    <td>-0.9</td>
+    <td>-2.8%</td>
+    <td>-3.1%</td>
+    <td>-4.0%</td>
+  </tr>
+  <tr>
+    <td>&emsp;Exports</td>
+    <td>2.5</td>
+    <td>2.1</td>
+    <td>2.5</td>
+    <td>11.8%</td>
+    <td>10.2%</td>
+    <td>10.8%</td>
+  </tr>
+  <tr>
+    <td>&emsp;&emsp;Goods</td>
+    <td>1.6</td>
+    <td>1.4</td>
+    <td>1.7</td>
+    <td>7.7%</td>
+    <td>6.8%</td>
+    <td>7.6%</td>
+  </tr>
+  <tr>
+    <td>&emsp;&emsp;Services</td>
+    <td>0.9</td>
+    <td>0.7</td>
+    <td>0.7</td>
+    <td>4.1%</td>
+    <td>3.4%</td>
+    <td>3.2%</td>
+  </tr>
+  <tr>
+    <td>&emsp;Imports</td>
+    <td>3.1</td>
+    <td>2.8</td>
+    <td>3.4</td>
+    <td>14.6%</td>
+    <td>13.3%</td>
+    <td>14.8%</td>
+  </tr>
+  <tr>
+    <td>&emsp;&emsp;Goods</td>
+    <td>2.5</td>
+    <td>2.3</td>
+    <td>2.8</td>
+    <td>11.8%</td>
+    <td>11.1%</td>
+    <td>12.4%</td>
+  </tr>
+  <tr>
+    <td>&emsp;&emsp;Services</td>
+    <td>0.6</td>
+    <td>0.5</td>
+    <td>0.5</td>
+    <td>2.8%</td>
+    <td>2.2%</td>
+    <td>2.4%</td>
+  </tr>
+  <tr>
+    <td>Government consumption expenditures and gross investment</td>
+    <td>3.7</td>
+    <td>3.9</td>
+    <td>4.1</td>
+    <td>17.4%</td>
+    <td>18.5%</td>
+    <td>17.6%</td>
+  </tr>
+  <tr>
+    <td>&emsp;Federal</td>
+    <td>1.4</td>
+    <td>1.5</td>
+    <td>1.6</td>
+    <td>6.6%</td>
+    <td>7.2%</td>
+    <td>6.8%</td>
+  </tr>
+  <tr>
+    <td>&emsp;&emsp;National defense</td>
+    <td>0.8</td>
+    <td>0.9</td>
+    <td>0.9</td>
+    <td>4.0%</td>
+    <td>4.2%</td>
+    <td>3.9%</td>
+  </tr>
+  <tr>
+    <td>&emsp;&emsp;Nondefense</td>
+    <td>0.6</td>
+    <td>0.6</td>
+    <td>0.7</td>
+    <td>2.7%</td>
+    <td>3.0%</td>
+    <td>2.9%</td>
+  </tr>
+  <tr>
+    <td>&emsp;State and local</td>
+    <td>2.3</td>
+    <td>2.4</td>
+    <td>2.5</td>
+    <td>10.8%</td>
+    <td>11.3%</td>
+    <td>10.8%</td>
+  </tr>
+</tbody>
+</table>
 
 
 
