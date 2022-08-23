@@ -53,6 +53,15 @@ $$S_g = \textcolor{#b58900}{T} - \left(  \textcolor{#2aa198}{G} + \textcolor{#dc
 
 ### National Savings
 
+$$
+\begin{aligned}
+   a&=b+c \\
+   d+e&=f
+\end{aligned}
+$$
+
+
+
 $$\begin{align*}
 S &=S_{p}+S_{g} \\
  &=\left(Y+NFP+TR+INT-T-C\right)+\left(T-G-TR-INT\right)\\
