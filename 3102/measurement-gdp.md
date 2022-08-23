@@ -4,23 +4,16 @@ subtitle: GDP and Related Measurements in the National Accounts
 parent: 3102 Notes
 grand_parent: Teaching
 layout: post
+toc: true
 ---
 
 
 <!--
 https://www.bea.gov/system/files/2020-04/GDP-Education-by-BEA.pdf
 https://www.cia.gov/the-world-factbook/field/real-gdp-purchasing-power-parity/country-comparison
+https://apps.bea.gov/iTable/iTable.cfm?reqid=19&step=3&isuri=1&nipa_table_list=289&categories=survey
 -->
 
-<style>
-@font-face {
-  font-family: 'RobotoSlab';
-  src: url(../../webfonts/serif/RobotoSlab-VariableFont_wght.ttf);
-}
-main {
-  font-family: 'RobotoSlab';
-}
-</style>
 
 ## What is GDP?
 

@@ -6,15 +6,6 @@ layout: post
 toc: true
 ---
 
-<style>
-@font-face {
-  font-family: 'RobotoSlab';
-  src: url(../../webfonts/serif/RobotoSlab-VariableFont_wght.ttf);
-}
-main {
-  font-family: 'RobotoSlab';
-}
-</style>
 
 
 In addition to the main national accounts, the BEA also keeps track of stats about savings derived from GDP
