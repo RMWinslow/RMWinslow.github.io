@@ -42,7 +42,7 @@ On an individual level, buying used goods counts as savings by the above definit
 Government Savings 
 : All the money the government collects, minus the money that they spend.
 
-$$S_g = \textcolor{#b58900}{T} - \left(  \textcolor{#2aa198}{G} + \textcolor{#dc322f}{TR} + \textcolor{#859900}{INT}     \right) $$
+$$S_g = \textcolor{#b58900}{T} - \textcolor{#2aa198}{G} - \textcolor{#dc322f}{TR} - \textcolor{#859900}{INT}$$
 
 <span style="color:">Government Savings</span> = 
 <span style="color:#2aa198">Government Expenditures</span> - 
@@ -54,13 +54,11 @@ $$S_g = \textcolor{#b58900}{T} - \left(  \textcolor{#2aa198}{G} + \textcolor{#dc
 ### National Savings
 
 
-
-
 $$\begin{aligned}
 S &=S_{p}+S_{g} \\
-  &=\left(Y+NFP+TR+INT-T-C\right)+\left(T-G-TR-INT\right)\\
-  &=\left(Y-C-G\right)+NFP\\
-  &=I+NX+NFP\\
+  &=\left(\textcolor{#6c71c4}{Y} + \textcolor{#268bd2}{NFP} + \textcolor{#dc322f}{TR} + \textcolor{#859900}{INT} - \textcolor{#b58900}{T}-C\right)+\left( \textcolor{#b58900}{T} - \textcolor{#2aa198}{G} - \textcolor{#dc322f}{TR} - \textcolor{#859900}{INT}\right)\\
+  &=\left(\textcolor{#6c71c4}{Y}-C-\textcolor{#2aa198}{G} \right)+\textcolor{#268bd2}{NFP}\\
+  &=I+NX+\textcolor{#268bd2}{NFP}\\
   &=I+CA\\
 \end{aligned}$$
 
