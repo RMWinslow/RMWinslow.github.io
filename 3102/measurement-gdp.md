@@ -5,6 +5,7 @@ parent: 3102 Notes
 grand_parent: Teaching
 layout: post
 toc: true
+last_modified_date: 2022-08-23
 ---
 
 
@@ -51,8 +52,29 @@ the income the homeowner could have received if the house had been rented to a t
 
 ## Approaches to Measuring GDP
 
+There are three ways to measure GDP.
+In theory, all three approaches should yield the same total value.
+
+<figure markdown="block">
+![An image using a bar chart to depict the equivalence of the three approaches to measuring GDP](img-gdp-three-ways.png)
+<figcaption>Three ways to measure GDP. Recreation of figure 2.1 from the BEA's NIPA Handbook. GDP components not to scale.</figcaption>
+</figure>
+
+And the following just uses html
+
+
+<figure markdown="block">
+<img src="img-gdp-three-ways.png" alt="An image using a bar chart to depict the equivalence of the three approaches to measuring GDP">
+<figcaption>Three ways to measure GDP. Recreation of figure 2.1 from the BEA's NIPA Handbook. GDP components not to scale.</figcaption>
+</figure>
+
+
 
 ### Expenditure Approach:
+
+![An image using a bar chart to depict the equivalence of the three approaches to measuring GDP](img-gdp-three-ways.png)
+
+
 
 Measures output by looking at where that output goes.
 
