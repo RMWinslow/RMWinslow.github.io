@@ -7,6 +7,21 @@ layout: post
 ---
 
 
+<!--
+https://www.bea.gov/system/files/2020-04/GDP-Education-by-BEA.pdf
+https://www.cia.gov/the-world-factbook/field/real-gdp-purchasing-power-parity/country-comparison
+-->
+
+<style>
+@font-face {
+  font-family: 'RobotoSlab';
+  src: url(../../webfonts/serif/RobotoSlab-VariableFont_wght.ttf);
+}
+main {
+  font-family: 'RobotoSlab';
+}
+</style>
+
 ## What is GDP?
 
 **Concept:** How much stuff is being made?

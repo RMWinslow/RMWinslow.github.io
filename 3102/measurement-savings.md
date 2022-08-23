@@ -8,10 +8,6 @@ toc: true
 
 <style>
 @font-face {
-  font-family: 'Quattrocento';
-  src: url(../../webfonts/serif/Quattrocento-Bold.ttf);
-}
-@font-face {
   font-family: 'RobotoSlab';
   src: url(../../webfonts/serif/RobotoSlab-VariableFont_wght.ttf);
 }
