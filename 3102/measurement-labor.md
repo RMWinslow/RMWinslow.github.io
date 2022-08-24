@@ -3,6 +3,8 @@ title: Labor Aggregates
 parent: 3102 Notes
 grand_parent: Teaching
 layout: post
+nav_order: 4
+last_modified_date: 2022-08-23
 ---
 
 ## Main Labor Market Aggregates in Brief

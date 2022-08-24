@@ -4,6 +4,8 @@ subtitle: Prices, Price Indices, and Chain-Weighting
 parent: 3102 Notes
 grand_parent: Teaching
 layout: post
+nav_order: 2
+last_modified_date: 2022-08-23
 ---
 
 
