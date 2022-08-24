@@ -6,25 +6,40 @@ fig, ax = plt.subplots(dpi=200)
 
 labels_1 = ['Employee Compensation', 'Net Taxes', 'Net Operating Surplus', 'Consumption of Fixed Capital', ]
 sizes_1 = [11.4594, 1.4594, 5.0878, 3.4356]
-colors_1 = ['#e00','#dd0','#0c0','#00e',]
+colors_1 = ['#d51c3c','#ebdd21','#3fd740','#1b5cd7',]
 
 labels_2 = ['Wages and salaries', 'Supplements to wages and salaries',
     'Net Taxes', 
-    'Net interest', 'Business current transfer payments', 'Proprietors income', 'Rental income', 'Corporate profits', 
+    'Corporate profits','Net interest', 'Business current transfer payments', 'Proprietors income', 'Rental income',  
     'Private Consumption of Fixed Capital', 'Government Consumption of Fixed Capital']
 sizes_2 = [9.3353, 2.1242,
     1.4594,
-    0.7935,0.1623,1.5989,0.6921,1.8544,
+    1.8544, 0.7935,0.1623,1.5989,0.6921,
     2.8486,0.5869,
     ]
-colors_2 = ['#f00','#d00',
-    '#ff0',
-    '#0f0','#0d0','#0c0','#0a0','#090',
-    '#00d','#00f',
+colors_2 = ['#f48fa0','#fd7992',
+    '#ebdd21',
+    '#a7dc26','#c69cd0','#87d989','#6fac95','#49d0a3',
+    '#419ded','#73a4dc',
+    ]
+
+labels_3 = ['Wages and salaries', 'Supplements to wages and salaries',
+    'Net Taxes', 
+    'Corporate Taxes','Net Dividends','Undistributed Corporate Profits','Net interest', 'Business current transfer payments', 'Proprietors income', 'Rental income',  
+    'Private Consumption of Fixed Capital', 'Government Consumption of Fixed Capital']
+sizes_3 = [9.3353, 2.1242,
+    1.4594,
+    0.3022,0.9201,0.6321, 0.7935,0.1623,1.5989,0.6921,
+    2.8486,0.5869,
+    ]
+colors_3 = ['#f48fa0','#fd7992',
+    '#ebdd21',
+    '#b7dc20','#a7dc36','#c7dc30','#c69cd0','#87d989','#6fac95','#49d0a3',
+    '#419ded','#73a4dc',
     ]
 
 
-size = 0.3
+size = 0.15
 vals = np.array([[60., 32.], [37., 40.], [29., 10.]])
 
 '''
@@ -34,8 +49,9 @@ ax.pie(vals.sum(axis=1), radius=1,
 ax.pie(vals.flatten(), radius=1-size, 
        wedgeprops=dict(width=size, edgecolor='w'))'''
 
-ax.pie(sizes_2, colors=colors_2,  radius=1, )
-ax.pie(sizes_1, colors=colors_1,  radius=1-size, )
+ax.pie(sizes_3, colors=colors_3,  radius=1, startangle=0)
+ax.pie(sizes_2, colors=colors_2,  radius=1-size, startangle=0)
+ax.pie(sizes_1, colors=colors_1,  radius=1-size*2,  startangle=0,)
 #autopct='%1.1f%%'
 
 
