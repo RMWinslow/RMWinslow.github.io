@@ -4,6 +4,7 @@
 .kg-container {
     margin-right: min(-1rem, -1 * (100vw - (100% + 20rem)) );
     max-width: 150%;
+    clear: right;
 }
 
 
