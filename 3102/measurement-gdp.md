@@ -147,7 +147,9 @@ For example, personal income taxes wouldn't be counted because that income is al
 
 ## Tables
 
-The following table shows the components of expenditure approach GDP for the United States in 2019
+
+### US Expenditure Approach GDP with components
+
 
 <table>
 <thead >
@@ -303,7 +305,7 @@ The following table shows the components of expenditure approach GDP for the Uni
     <td>-4.0%</td>
   </tr>
   <tr>
-    <td>┗ Exports</td>
+    <td>&emsp;&emsp; Exports</td>
     <td>2.5</td>
     <td>2.1</td>
     <td>2.5</td>
@@ -312,7 +314,7 @@ The following table shows the components of expenditure approach GDP for the Uni
     <td>10.8%</td>
   </tr>
   <tr>
-    <td>┗┗ Goods</td>
+    <td>&emsp;&emsp; Goods</td>
     <td>1.6</td>
     <td>1.4</td>
     <td>1.7</td>
@@ -405,7 +407,244 @@ The following table shows the components of expenditure approach GDP for the Uni
 </table>
 
 
+### US Income Approach GDP with components
 
+<table>
+<thead>
+  <tr>
+    <th></th>
+    <th colspan="3" style="text-align: center;">Trillions USD</th>
+    <th colspan="3" style="text-align: center;">Percent</th>
+  </tr>
+  <tr>
+    <th></th>
+    <th>2019</th>
+    <th>2020</th>
+    <th>2021</th>
+    <th>2019</th>
+    <th>2020</th>
+    <th>2021</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>&emsp;&emsp;Gross domestic income</td>
+    <td>21.4</td>
+    <td>21.1</td>
+    <td>23.8</td>
+    <td>100%</td>
+    <td>100%</td>
+    <td>100%</td>
+  </tr>
+  <tr>
+    <td>Compensation of employees, paid</td>
+    <td>11.5</td>
+    <td>11.6</td>
+    <td>12.9</td>
+    <td>53.4%</td>
+    <td>55.0%</td>
+    <td>54.2%</td>
+  </tr>
+  <tr>
+    <td>&emsp;Wages and salaries</td>
+    <td>9.3</td>
+    <td>9.5</td>
+    <td>10.6</td>
+    <td>43.5%</td>
+    <td>44.9%</td>
+    <td>44.6%</td>
+  </tr>
+  <tr>
+    <td>&emsp;&emsp;&emsp;To persons</td>
+    <td>9.3</td>
+    <td>9.4</td>
+    <td>10.6</td>
+    <td>43.4%</td>
+    <td>44.8%</td>
+    <td>44.6%</td>
+  </tr>
+  <tr>
+    <td>&emsp;&emsp;&emsp;To the rest of the world</td>
+    <td>0.0</td>
+    <td>0.0</td>
+    <td>0.0</td>
+    <td>0.1%</td>
+    <td>0.1%</td>
+    <td>0.1%</td>
+  </tr>
+  <tr>
+    <td>&emsp;Supplements to wages and salaries</td>
+    <td>2.1</td>
+    <td>2.1</td>
+    <td>2.3</td>
+    <td>9.9%</td>
+    <td>10.1%</td>
+    <td>9.6%</td>
+  </tr>
+  <tr>
+    <td>Taxes on production and imports</td>
+    <td>1.5</td>
+    <td>1.5</td>
+    <td>1.6</td>
+    <td>7.1%</td>
+    <td>7.3%</td>
+    <td>6.9%</td>
+  </tr>
+  <tr>
+    <td>Less: Subsidies\1\</td>
+    <td>0.1</td>
+    <td>0.8</td>
+    <td>0.5</td>
+    <td>0.3%</td>
+    <td>3.6%</td>
+    <td>2.1%</td>
+  </tr>
+  <tr>
+    <td>Taxes less subsidies</td>
+    <td>1.5</td>
+    <td>0.8</td>
+    <td>1.2</td>
+    <td>6.8%</td>
+    <td>3.7%</td>
+    <td>4.8%</td>
+  </tr>
+  <tr>
+    <td>Net operating surplus</td>
+    <td>5.1</td>
+    <td>5.1</td>
+    <td>5.9</td>
+    <td>23.7%</td>
+    <td>24.4%</td>
+    <td>24.8%</td>
+  </tr>
+  <tr>
+    <td>&emsp;Private enterprises</td>
+    <td>5.1</td>
+    <td>5.2</td>
+    <td>5.9</td>
+    <td>23.8%</td>
+    <td>24.5%</td>
+    <td>24.8%</td>
+  </tr>
+  <tr>
+    <td>&emsp;&emsp;Net interest and miscellaneous payments, domestic industries</td>
+    <td>0.8</td>
+    <td>0.8</td>
+    <td>0.9</td>
+    <td>3.7%</td>
+    <td>4.0%</td>
+    <td>3.8%</td>
+  </tr>
+  <tr>
+    <td>&emsp;&emsp;Business current transfer payments (net)</td>
+    <td>0.2</td>
+    <td>0.2</td>
+    <td>0.2</td>
+    <td>0.8%</td>
+    <td>0.8%</td>
+    <td>0.7%</td>
+  </tr>
+  <tr>
+    <td>&emsp;&emsp;Proprietors' income with inventory valuation and capital consumption&nbsp;&nbsp;&nbsp;adjustments</td>
+    <td>1.6</td>
+    <td>1.7</td>
+    <td>1.8</td>
+    <td>7.5%</td>
+    <td>7.8%</td>
+    <td>7.6%</td>
+  </tr>
+  <tr>
+    <td>&emsp;&emsp;Rental income of persons with capital consumption adjustment</td>
+    <td>0.7</td>
+    <td>0.7</td>
+    <td>0.7</td>
+    <td>3.2%</td>
+    <td>3.4%</td>
+    <td>3.1%</td>
+  </tr>
+  <tr>
+    <td>&emsp;&emsp;Corporate profits with inventory valuation and capital consumption&nbsp;&nbsp;&nbsp;adjustments, domestic industries</td>
+    <td>1.9</td>
+    <td>1.8</td>
+    <td>2.3</td>
+    <td>8.6%</td>
+    <td>8.5%</td>
+    <td>9.6%</td>
+  </tr>
+  <tr>
+    <td>&emsp;&emsp;&emsp;Taxes on corporate income</td>
+    <td>0.3</td>
+    <td>0.3</td>
+    <td>0.4</td>
+    <td>1.4%</td>
+    <td>1.3%</td>
+    <td>1.7%</td>
+  </tr>
+  <tr>
+    <td>&emsp;&emsp;&emsp;Profits after tax with inventory valuation and capital consumption&nbsp;&nbsp;&nbsp;adjustments</td>
+    <td>1.6</td>
+    <td>1.5</td>
+    <td>1.9</td>
+    <td>7.2%</td>
+    <td>7.2%</td>
+    <td>7.9%</td>
+  </tr>
+  <tr>
+    <td>&emsp;&emsp;&emsp;&emsp;Net dividends</td>
+    <td>0.9</td>
+    <td>1.1</td>
+    <td>1.2</td>
+    <td>4.3%</td>
+    <td>5.2%</td>
+    <td>4.9%</td>
+  </tr>
+  <tr>
+    <td>&emsp;&emsp;&emsp;&emsp;Undistributed corporate profits with inventory valuation and capital&nbsp;&nbsp;&nbsp;consumption adjustments</td>
+    <td>0.6</td>
+    <td>0.4</td>
+    <td>0.7</td>
+    <td>2.9%</td>
+    <td>2.0%</td>
+    <td>3.0%</td>
+  </tr>
+  <tr>
+    <td>&emsp;Current surplus of government enterprises\1\</td>
+    <td>0.0</td>
+    <td>0.0</td>
+    <td>0.0</td>
+    <td>-0.1%</td>
+    <td>-0.1%</td>
+    <td>-0.1%</td>
+  </tr>
+  <tr>
+    <td>Consumption of fixed capital</td>
+    <td>3.4</td>
+    <td>3.6</td>
+    <td>3.8</td>
+    <td>16.0%</td>
+    <td>17.0%</td>
+    <td>16.2%</td>
+  </tr>
+  <tr>
+    <td>&emsp;Private</td>
+    <td>2.8</td>
+    <td>3.0</td>
+    <td>3.2</td>
+    <td>13.3%</td>
+    <td>14.1%</td>
+    <td>13.5%</td>
+  </tr>
+  <tr>
+    <td>&emsp;Government</td>
+    <td>0.6</td>
+    <td>0.6</td>
+    <td>0.6</td>
+    <td>2.7%</td>
+    <td>2.9%</td>
+    <td>2.7%</td>
+  </tr>
+</tbody>
+</table>
 
 
 ---
