@@ -189,7 +189,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>68.5%</td>
   </tr>
   <tr>
-    <td>&emsp;Goods</td>
+    <td style="padding-left:1em;">Goods</td>
     <td>4.5</td>
     <td>4.7</td>
     <td>5.5</td>
@@ -198,7 +198,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>23.8%</td>
   </tr>
   <tr>
-    <td>&emsp;&emsp;Durable goods</td>
+    <td style="padding-left:2em;">Durable goods</td>
     <td>1.5</td>
     <td>1.6</td>
     <td>2.0</td>
@@ -207,7 +207,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>8.8%</td>
   </tr>
   <tr>
-    <td>&emsp;&emsp;Nondurable goods</td>
+    <td style="padding-left:2em;">Nondurable goods</td>
     <td>3.0</td>
     <td>3.0</td>
     <td>3.5</td>
@@ -216,7 +216,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>15.0%</td>
   </tr>
   <tr>
-    <td>&emsp;Services</td>
+    <td style="padding-left:1em;">Services</td>
     <td>9.9</td>
     <td>9.4</td>
     <td>10.3</td>
@@ -234,7 +234,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>17.9%</td>
   </tr>
   <tr>
-    <td>&emsp;Fixed investment</td>
+    <td style="padding-left:1em;">Fixed investment</td>
     <td>3.8</td>
     <td>3.7</td>
     <td>4.1</td>
@@ -243,7 +243,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>18.0%</td>
   </tr>
   <tr>
-    <td>&emsp;&emsp;Nonresidential</td>
+    <td style="padding-left:2em;">Nonresidential</td>
     <td>2.9</td>
     <td>2.8</td>
     <td>3.1</td>
@@ -252,7 +252,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>13.3%</td>
   </tr>
   <tr>
-    <td>  &emsp;&emsp;&emsp;Structures</td>
+    <td style="padding-left:3em;">Structures</td>
     <td>0.7</td>
     <td>0.6</td>
     <td>0.6</td>
@@ -261,7 +261,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>2.5%</td>
   </tr>
   <tr>
-    <td>  &emsp;&emsp;&emsp;Equipment</td>
+    <td style="padding-left:3em;">Equipment</td>
     <td>1.2</td>
     <td>1.1</td>
     <td>1.3</td>
@@ -270,7 +270,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>5.5%</td>
   </tr>
   <tr>
-    <td>  &emsp;&emsp;&emsp;Intellectual property products</td>
+    <td style="padding-left:3em;">Intellectual property products</td>
     <td>1.0</td>
     <td>1.1</td>
     <td>1.2</td>
@@ -279,7 +279,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>5.2%</td>
   </tr>
   <tr>
-    <td>&emsp;&emsp;Residential</td>
+    <td style="padding-left:3em;">Residential</td>
     <td>0.8</td>
     <td>0.9</td>
     <td>1.1</td>
@@ -288,7 +288,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>4.7%</td>
   </tr>
   <tr>
-    <td>&emsp;Change in private inventories</td>
+    <td style="padding-left:1em;">Change in private inventories</td>
     <td>0.1</td>
     <td>-0.1</td>
     <td>0.0</td>
@@ -306,7 +306,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>-4.0%</td>
   </tr>
   <tr>
-    <td>&emsp; Exports</td>
+    <td style="padding-left:1em;"> Exports</td>
     <td>2.5</td>
     <td>2.1</td>
     <td>2.5</td>
@@ -315,7 +315,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>10.8%</td>
   </tr>
   <tr>
-    <td>&emsp;&emsp; Goods</td>
+    <td style="padding-left:2em;">Goods</td>
     <td>1.6</td>
     <td>1.4</td>
     <td>1.7</td>
@@ -324,7 +324,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>7.6%</td>
   </tr>
   <tr>
-    <td>&emsp;&emsp;Services</td>
+    <td style="padding-left:2em;">Services</td>
     <td>0.9</td>
     <td>0.7</td>
     <td>0.7</td>
@@ -333,7 +333,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>3.2%</td>
   </tr>
   <tr>
-    <td>&emsp;Imports</td>
+    <td style="padding-left:1em;">Imports</td>
     <td>3.1</td>
     <td>2.8</td>
     <td>3.4</td>
@@ -342,7 +342,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>14.8%</td>
   </tr>
   <tr>
-    <td>&emsp;&emsp;Goods</td>
+    <td style="padding-left:2em;">Goods</td>
     <td>2.5</td>
     <td>2.3</td>
     <td>2.8</td>
@@ -351,7 +351,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>12.4%</td>
   </tr>
   <tr>
-    <td>&emsp;&emsp;Services</td>
+    <td style="padding-left:2em;">Services</td>
     <td>0.6</td>
     <td>0.5</td>
     <td>0.5</td>
@@ -369,7 +369,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>17.6%</td>
   </tr>
   <tr>
-    <td>&emsp;Federal</td>
+    <td style="padding-left:1em;">Federal</td>
     <td>1.4</td>
     <td>1.5</td>
     <td>1.6</td>
@@ -378,7 +378,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>6.8%</td>
   </tr>
   <tr>
-    <td>&emsp;&emsp;National defense</td>
+    <td style="padding-left:2em;">National defense</td>
     <td>0.8</td>
     <td>0.9</td>
     <td>0.9</td>
@@ -387,7 +387,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>3.9%</td>
   </tr>
   <tr>
-    <td>&emsp;&emsp;Nondefense</td>
+    <td style="padding-left:2em;">Nondefense</td>
     <td>0.6</td>
     <td>0.6</td>
     <td>0.7</td>
@@ -396,7 +396,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>2.9%</td>
   </tr>
   <tr>
-    <td>&emsp;State and local</td>
+    <td style="padding-left:1em;">State and local</td>
     <td>2.3</td>
     <td>2.4</td>
     <td>2.5</td>
