@@ -1,11 +1,11 @@
 ---
-title: Graph Test
-subtitle: This will be deleted soon
+title: 3102 Graphs
 parent: 3102 Notes
 grand_parent: Teaching
 layout: post
 nav_order: 20
-last_modified_date: 2022-08-23
+date: 2022-08-23
+last_modified_date: 2022-08-24
 ---
 
 
