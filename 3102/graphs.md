@@ -14,9 +14,9 @@ last_modified_date: 2022-08-24
 
 
 
-<div class="kg-container" src="./graphs/twoPeriodEndowment.yml"  clearColor='#fffff8'></div>
+<div class="kg-container" src="./graphs/twoPeriodEndowment.yml" clearColor='#fffff800'></div>
 
-<div class="kg-container" src="./graphs/test.yml"  clearColor='#fffff8'></div>
+<div class="kg-container" src="./graphs/test.yml" clearColor='#fffff800'></div>
 
 
 
