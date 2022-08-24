@@ -37,7 +37,6 @@ last_modified_date: 2022-08-24
 
 <div class="kg-container">
 
-
 schema: EconSchema
 params:
 - {name: a, value: 3, min: 0, max: 10, round: 0.1}
@@ -66,12 +65,7 @@ layout:
         title: "$c'$: Consumption Tomorrow"
 
       objects:
-               
-      - EconIndifferenceMap:
-          utilityFunction:
-            CobbDouglas: {alpha: 1/(1+params.b)}
-          levels: [1,2,3,4,5, calcs.utility]
-      
+
       - EconBudgetLine:
           p1: 1
           p2: 1/(1+params.r)
@@ -116,6 +110,8 @@ layout:
 
 
 </div>
+
+
 
 <!--
 Cobb Douglass preferences are equivalent to log plus beta log preferences when alpha = 1/(1+beta) ???
