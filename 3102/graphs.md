@@ -31,18 +31,29 @@ params:
 - {name: b, value: 0.8, min: 0, max: 1, round: 0.05}
 - {name: r, value: 0.25, min: 0, max: 3, round: 0.05}
 calcs:
-  we1: "params.y1-params.t1+(params.y2-params.t2)/(1+params.r)"
-  we2: "calcs.we1 * (1+params.r)"
-  c1: "calcs.we1 / (1+params.b)"
-  c2: "calcs.c1 * params.b * (1+params.r)"
+  we1: "(params.y1-params.t1+(params.y2-params.t2)/(1+params.r))"
+  we2: "(calcs.we1 * (1+params.r))"
+  c1: "(calcs.we1 / (1+params.b))"
+  c2: "(calcs.c1 * params.b * (1+params.r))"
   s: "(calcs.y1 - calcs.t1 - calcs.c1)"
-  utility: "log(calcs.c1)"
-  MRS: "calcs.c2/(params.b*calcs.c1)"
+  utility: "(log(calcs.c1)+params.b*log(calcs.c2))"
+  MRS: "(calcs.c2/(params.b*calcs.c1))"
 
 layout:
   OneGraphPlusSidebar:
     graph:
+    
+      xAxis: 
+        title: "$c$: Consumption Today"
+      yAxis: 
+        title: "$c'$: Consumption Tomorrow"
+
       objects:
+      
+      
+      - ContourMap:
+          levels: [0,1,1.5,2,2.5,3, params.utility]
+          fn: "log(x)+params.b*log(y)"
       
       - EconBudgetLine:
           p1: 1
@@ -68,9 +79,6 @@ layout:
           color: red
           label:
             text: \text{★}
-          drag: 
-            - horizontal: y1
-            - vertical: y2
 
     sidebar:
       controls:
