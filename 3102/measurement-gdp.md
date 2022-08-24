@@ -447,7 +447,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>54.2%</td>
   </tr>
   <tr>
-    <td>&emsp;Wages and salaries</td>
+    <td style="padding-left:1em;">Wages and salaries</td>
     <td>9.3</td>
     <td>9.5</td>
     <td>10.6</td>
@@ -456,7 +456,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>44.6%</td>
   </tr>
   <tr>
-    <td>&emsp;&emsp;&emsp;To persons</td>
+    <td style="padding-left:2em;">To persons</td>
     <td>9.3</td>
     <td>9.4</td>
     <td>10.6</td>
@@ -465,7 +465,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>44.6%</td>
   </tr>
   <tr>
-    <td>&emsp;&emsp;&emsp;To the rest of the world</td>
+    <td style="padding-left:2em;">To the rest of the world</td>
     <td>0.0</td>
     <td>0.0</td>
     <td>0.0</td>
@@ -474,7 +474,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>0.1%</td>
   </tr>
   <tr>
-    <td>&emsp;Supplements to wages and salaries</td>
+    <td style="padding-left:1em;">Supplements to wages and salaries</td>
     <td>2.1</td>
     <td>2.1</td>
     <td>2.3</td>
@@ -492,7 +492,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>4.8%</td>
   </tr>
   <tr>
-    <td>&emsp;Taxes on production and imports</td>
+    <td style="padding-left:1em;">Taxes on production and imports</td>
     <td>1.5</td>
     <td>1.5</td>
     <td>1.6</td>
@@ -501,7 +501,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>6.9%</td>
   </tr>
   <tr>
-    <td>&emsp;Less: Subsidies</td>
+    <td style="padding-left:1em;">Less: Subsidies</td>
     <td>0.1</td>
     <td>0.8</td>
     <td>0.5</td>
@@ -519,7 +519,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>24.8%</td>
   </tr>
   <tr>
-    <td>&emsp;Private enterprises</td>
+    <td style="padding-left:1em;">Private enterprises</td>
     <td>5.1</td>
     <td>5.2</td>
     <td>5.9</td>
@@ -528,7 +528,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>24.8%</td>
   </tr>
   <tr>
-    <td>&emsp;&emsp;Net interest and miscellaneous payments, domestic industries</td>
+    <td style="padding-left:2em;">Net interest and miscellaneous payments, domestic industries</td>
     <td>0.8</td>
     <td>0.8</td>
     <td>0.9</td>
@@ -537,7 +537,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>3.8%</td>
   </tr>
   <tr>
-    <td>&emsp;&emsp;Business current transfer payments (net)</td>
+    <td style="padding-left:2em;">Business current transfer payments (net)</td>
     <td>0.2</td>
     <td>0.2</td>
     <td>0.2</td>
@@ -546,7 +546,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>0.7%</td>
   </tr>
   <tr>
-    <td>&emsp;&emsp;Proprietors' income with inventory valuation and capital consumption&nbsp;&nbsp;&nbsp;adjustments</td>
+    <td style="padding-left:2em;">Proprietors' income with inventory valuation and capital consumption&nbsp;&nbsp;&nbsp;adjustments</td>
     <td>1.6</td>
     <td>1.7</td>
     <td>1.8</td>
@@ -555,7 +555,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>7.6%</td>
   </tr>
   <tr>
-    <td>&emsp;&emsp;Rental income of persons with capital consumption adjustment</td>
+    <td style="padding-left:2em;">Rental income of persons with capital consumption adjustment</td>
     <td>0.7</td>
     <td>0.7</td>
     <td>0.7</td>
@@ -564,7 +564,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>3.1%</td>
   </tr>
   <tr>
-    <td>&emsp;&emsp;Corporate profits with inventory valuation and capital consumption&nbsp;&nbsp;&nbsp;adjustments, domestic industries</td>
+    <td style="padding-left:2em;" >Corporate profits with inventory valuation and capital consumption adjustments, domestic industries</td>
     <td>1.9</td>
     <td>1.8</td>
     <td>2.3</td>
@@ -573,7 +573,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>9.6%</td>
   </tr>
   <tr>
-    <td>&emsp;&emsp;&emsp;Taxes on corporate income</td>
+    <td style="padding-left:3em;">Taxes on corporate income</td>
     <td>0.3</td>
     <td>0.3</td>
     <td>0.4</td>
@@ -582,7 +582,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>1.7%</td>
   </tr>
   <tr>
-    <td>&emsp;&emsp;&emsp;Profits after tax with inventory valuation and capital consumption&nbsp;&nbsp;&nbsp;adjustments</td>
+    <td style="padding-left:3em;">Profits after tax with inventory valuation and capital consumption adjustments</td>
     <td>1.6</td>
     <td>1.5</td>
     <td>1.9</td>
@@ -591,7 +591,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>7.9%</td>
   </tr>
   <tr>
-    <td>&emsp;&emsp;&emsp;&emsp;Net dividends</td>
+    <td style="padding-left:4em;">Net dividends</td>
     <td>0.9</td>
     <td>1.1</td>
     <td>1.2</td>
@@ -600,7 +600,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>4.9%</td>
   </tr>
   <tr>
-    <td>&emsp;&emsp;&emsp;&emsp;Undistributed corporate profits with inventory valuation and capital&nbsp;&nbsp;&nbsp;consumption adjustments</td>
+    <td style="padding-left:4em;">Undistributed corporate profits with inventory valuation and capital consumption adjustments</td>
     <td>0.6</td>
     <td>0.4</td>
     <td>0.7</td>
@@ -609,7 +609,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>3.0%</td>
   </tr>
   <tr>
-    <td>&emsp;Current surplus of government enterprises\1\</td>
+    <td style="padding-left:1em;">Current surplus of government enterprises</td>
     <td>0.0</td>
     <td>0.0</td>
     <td>0.0</td>
@@ -627,7 +627,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>16.2%</td>
   </tr>
   <tr>
-    <td>&emsp;Private</td>
+    <td style="padding-left:1em;">Private</td>
     <td>2.8</td>
     <td>3.0</td>
     <td>3.2</td>
@@ -636,7 +636,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>13.5%</td>
   </tr>
   <tr>
-    <td>&emsp;Government</td>
+    <td style="padding-left:1em;">Government</td>
     <td>0.6</td>
     <td>0.6</td>
     <td>0.6</td>
