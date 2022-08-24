@@ -10,7 +10,7 @@ last_modified_date: 2022-08-24
 
 
 <link href="https://kineticgraphs.org/css/kg.0.2.6.css" rel="stylesheet" type="text/css">
-<script src="https://kineticgraphs.org/js/kg.0.2.6.js"></script>
+<script src="https://kineticgraphs.org/js/kg3d.0.2.6.js"></script>
 
 
 
