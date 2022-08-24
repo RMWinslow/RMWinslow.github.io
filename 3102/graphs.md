@@ -43,9 +43,9 @@ layout:
   OneGraph:
     graph:
       xAxis: 
-        title: "$c$: Consumption Today"
+        title: "`$c$: Consumption Today`"
       yAxis: 
-        title: "$c'$: Consumption Tomorrow"
+        title: "`$c'$: Consumption Tomorrow`"
 
       objects:
 
@@ -110,6 +110,15 @@ layout:
         title: "c': Consumption Tomorrow"
 
       objects:
+
+        - Label:
+            coordinates: [10, 0]
+            text: x
+            yPixelOffset: -30
+        - Label:
+            coordinates: [0, 10]
+            text: y
+            xPixelOffset: -30
                
       - EconIndifferenceMap:
           utilityFunction:
