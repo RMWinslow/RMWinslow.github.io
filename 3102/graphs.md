@@ -13,6 +13,22 @@ last_modified_date: 2022-08-24
 <script src="https://kineticgraphs.org/js/kg.0.2.6.js"></script>
 
 
+
+
+
+## One Period Competitive Equilibrium
+
+
+### Consumer's Problem
+
+### Producer's Problem
+
+### Consumer and Producer's Problem Combined
+
+### Equilibrium
+
+
+
 ## Two Period Endowment Economy
 
 
@@ -117,6 +133,11 @@ Cobb Douglass preferences are equivalent to log plus beta log preferences when a
 
 
 
+### Interest Rate Spread
+
+
+
+### Collateral Constraints
 
 
 
