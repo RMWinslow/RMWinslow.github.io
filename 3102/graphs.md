@@ -51,15 +51,18 @@ layout:
       objects:
       
       
-      - ContourMap:
-          levels: [0,1,1.5,2,2.5,3, params.utility]
-          fn: "log(x)+params.b*log(y)"
       
       - EconBudgetLine:
           p1: 1
           p2: 1/(1+params.r)
           m: calcs.we1
           label: None
+
+      - EconIndifferenceMap:
+          utilityFunction:
+            CobbDouglas: {alpha: 1/(1+params.b)}
+          levels: [1,2,3,4,5, calcs.utility]
+
 
 
       # Endowment Point
@@ -93,6 +96,19 @@ layout:
         - {param: b, label: \beta}
 
 </div>
+
+<!--
+Cobb Douglass preferences are equivalent to log plus beta log preferences when alpha = 1/(1+beta) ???
+      - ContourMap:
+          levels: [0,1,1.5,2,2.5,3, params.utility]
+          fn: "log(x)+params.b*log(y)"
+
+      - EconIndifferenceMap:
+          utilityFunction:
+            CobbDouglas: {alpha: 1/(1+params.b)}
+          levels: [1,2,3,4,5, calcs.utility]
+      
+-->
 
 
 
