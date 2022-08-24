@@ -18,6 +18,35 @@ last_modified_date: 2022-08-24
 layout:
   OneGraph:
     graph:
+      xAxis: 
+        title: "c: Consumption Today"
+      yAxis: 
+        title: "c': Consumption Tomorrow"
+
+      objects:
+
+      # line defined by two points
+      - Line:
+          point: [3,4]
+          point2: [6,5]
+          
+      # show points for reference
+      - Point:
+          coordinates: [3,4]
+      - Point:
+          coordinates: [6,5]
+</div>
+
+
+<div class="kg-container">
+layout:
+  OneGraph:
+    graph:
+      xAxis: 
+        title: "$c$: Consumption Today"
+      yAxis: 
+        title: "$c'$: Consumption Tomorrow"
+
       objects:
 
       # line defined by two points
@@ -53,6 +82,7 @@ layout:
 
 <div class="kg-container">
 
+schema: EconSchema
 params:
 - {name: a, value: 3, min: 0, max: 10, round: 0.1}
 - {name: y1, value: 5, min: 0, max: 10, round: 0.1}
@@ -75,11 +105,27 @@ layout:
     graph:
     
       xAxis: 
-        title: "$c$: Consumption Today"
+        title: "c: Consumption Today"
       yAxis: 
-        title: "$c'$: Consumption Tomorrow"
+        title: "c': Consumption Tomorrow"
 
       objects:
+               
+      - EconIndifferenceMap:
+          utilityFunction:
+            CobbDouglas: {alpha: 1/(1+params.b)}
+          levels: [1,2,3,4,5, calcs.utility]
+      
+      - EconBudgetLine:
+          p1: 1
+          p2: 1/(1+params.r)
+          m: calcs.we1
+          label: None
+
+	  # Euler Equation Line
+      - Line:
+          yIntercept: 0
+          slope: (1+params.r)*params.b
 
 
       # Endowment Point
@@ -111,7 +157,6 @@ layout:
         - {param: t2, label: t^\prime}
         - {param: r, label: r}
         - {param: b, label: \beta}
-
 
 </div>
 
