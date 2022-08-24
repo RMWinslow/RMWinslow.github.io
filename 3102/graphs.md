@@ -14,28 +14,7 @@ last_modified_date: 2022-08-24
 
 
 
-<div class="kg-container">
-layout:
-  OneGraph:
-    graph:
-      xAxis: 
-        title: "c: Consumption Today"
-      yAxis: 
-        title: "c': Consumption Tomorrow"
-
-      objects:
-
-      # line defined by two points
-      - Line:
-          point: [3,4]
-          point2: [6,5]
-          
-      # show points for reference
-      - Point:
-          coordinates: [3,4]
-      - Point:
-          coordinates: [6,5]
-</div>
+<div class="kg-container" src="./graphs/twoPeriodEndowment.yml"></div>
 
 
 <div class="kg-container">
@@ -103,11 +82,6 @@ calcs:
 layout:
   OneGraphPlusSidebar:
     graph:
-    
-      xAxis: 
-        title: "c: Consumption Today"
-      yAxis: 
-        title: "c': Consumption Tomorrow"
 
       objects:
 
