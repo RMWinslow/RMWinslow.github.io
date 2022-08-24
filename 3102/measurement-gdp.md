@@ -306,7 +306,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>-4.0%</td>
   </tr>
   <tr>
-    <td>&emsp;&emsp; Exports</td>
+    <td>&emsp; Exports</td>
     <td>2.5</td>
     <td>2.1</td>
     <td>2.5</td>
@@ -429,7 +429,7 @@ For example, personal income taxes wouldn't be counted because that income is al
 </thead>
 <tbody>
   <tr>
-    <td>&emsp;&emsp;Gross domestic income</td>
+    <td>Gross domestic income</td>
     <td>21.4</td>
     <td>21.1</td>
     <td>23.8</td>
@@ -437,7 +437,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>100%</td>
     <td>100%</td>
   </tr>
-  <tr>
+  <tr style="font-weight:bold;">
     <td>Compensation of employees, paid</td>
     <td>11.5</td>
     <td>11.6</td>
@@ -482,26 +482,8 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>10.1%</td>
     <td>9.6%</td>
   </tr>
-  <tr>
-    <td>Taxes on production and imports</td>
-    <td>1.5</td>
-    <td>1.5</td>
-    <td>1.6</td>
-    <td>7.1%</td>
-    <td>7.3%</td>
-    <td>6.9%</td>
-  </tr>
-  <tr>
-    <td>Less: Subsidies\1\</td>
-    <td>0.1</td>
-    <td>0.8</td>
-    <td>0.5</td>
-    <td>0.3%</td>
-    <td>3.6%</td>
-    <td>2.1%</td>
-  </tr>
-  <tr>
-    <td>Taxes less subsidies</td>
+  <tr style="font-weight:bold;">
+    <td>Taxes less subsidies on production and imports</td>
     <td>1.5</td>
     <td>0.8</td>
     <td>1.2</td>
@@ -510,6 +492,24 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>4.8%</td>
   </tr>
   <tr>
+    <td>&emsp;Taxes on production and imports</td>
+    <td>1.5</td>
+    <td>1.5</td>
+    <td>1.6</td>
+    <td>7.1%</td>
+    <td>7.3%</td>
+    <td>6.9%</td>
+  </tr>
+  <tr>
+    <td>&emsp;Less: Subsidies</td>
+    <td>0.1</td>
+    <td>0.8</td>
+    <td>0.5</td>
+    <td>0.3%</td>
+    <td>3.6%</td>
+    <td>2.1%</td>
+  </tr>
+  <tr style="font-weight:bold;">
     <td>Net operating surplus</td>
     <td>5.1</td>
     <td>5.1</td>
@@ -617,7 +617,7 @@ For example, personal income taxes wouldn't be counted because that income is al
     <td>-0.1%</td>
     <td>-0.1%</td>
   </tr>
-  <tr>
+  <tr style="font-weight:bold;">
     <td>Consumption of fixed capital</td>
     <td>3.4</td>
     <td>3.6</td>
