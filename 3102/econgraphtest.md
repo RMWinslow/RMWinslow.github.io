@@ -12,6 +12,15 @@ last_modified_date: 2022-08-23
 <link href="https://kineticgraphs.org/css/kg.0.2.6.css" rel="stylesheet" type="text/css">
 <script src="https://kineticgraphs.org/js/kg.0.2.6.js"></script>
 
+<style>
+.kg-container {
+    margin-right: min(-1rem, -1 * (100vw - (100% + 20rem)) );
+    max-width: 150%;
+}
+</style>
+
+Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est Lorem Ipsum Dolor Est 
+
 <div class="kg-container">
 
 params:
