@@ -62,7 +62,7 @@ Coincident
 
 ## Summary of Business Cycle Facts
 
-|   |   |   |   |
+|  | Cyclicality | Lead/Lag | Variation |
 |:-:|:-:|:-:|:-:|
 | Consumption | Procyclical | Coincident | Smaller than GDP's |
 | Investment | Procyclical | Coincident | Larger than GDP's |
