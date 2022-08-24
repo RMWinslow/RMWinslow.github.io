@@ -88,9 +88,18 @@ layout:
 </div>
 
 
+
+
+
+
+
+## Two Period Endowment Economy
+
+
 <div class="kg-container">
 
 params:
+- {name: a, value: 3, min: 0, max: 10, round: 0.1}
 - {name: y1, value: 3, min: 0, max: 10, round: 0.1}
 - {name: y2, value: 3, min: 0, max: 10, round: 0.1}
 - {name: r, value: 0.25, min: 0, max: 3, round: 0.05}
@@ -154,6 +163,20 @@ layout:
         - {param: r, label: r}
 
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div class="kg-container">
 
