@@ -68,15 +68,84 @@ Measures output by looking at where that output goes.
 
 $$C + I + G + NX$$
 
-- Consumption
-- Investment
-    - Includes inventory changes
-- Government Expenditures
-- Net Exports (Exports - Imports)
+- **C**: personal Consumption expenditures, or "Consumption" for short
+    - This is the largest component of GDP, and represents households (like mine or yours) purchasing things to use, and hiring people to perform services.
+- **I**: Investment, including inventory changes
+    - *Fixed Investment*, also called "fixed capital formation", is spending on new equipment, structures, and intellectual property which will help create output in the future.[^InvestmentIntermediateDifference] Fixed Investment adds to the capital stock, and is what we more typically think of as "investment".
+    - New housing is also counted as fixed investment, even if purchased for yourself. 
+    - *Inventory changes* are included in GDP for the sake of making the measurement consistent across time. If a good is added to inventory, it counts towards GDP. And if a good is removed from inventory, it subtracts from GDP. This ensures that goods are counted towards GDP in the year in which they are produced. 
+- **G**: Government consumption expenditures and gross investment
+    - Whenever the government buys something, it adds to this component of GDP.
+    - When the government transfers money (as with social security), it does not add to GDP. (Remember that GDP measures the amount of stuff being made.)
+- **NX**: Net eXports (Exports - Imports) of goods and services.
+    - If I import a good to consume, the purchase of that good adds to GDP via Consumption, even though it wasn't produced in the US. By subtracting imports, that purchase is cancelled out.
+    - For the past several decades, the US has imported more than it has exported, and so the US' net exports have been negative.
 
-<!--Government investment is always counted, but where it goes in the formula varies. BEA lumps Gov consumption and invesetment together. OECD seems to seperate them. Need to double check on that before uncommenting this part.-->
+[^InvestmentIntermediateDifference]: Investments and intermediate inputs are not the same thing. Both are used to create other goods, but an intermediate input goes *into* the final good or is otherwise transformed, whereas fixed investment goods, aka capital, can be used to produce many units of output over several years. The flour that goes into the bread is an intermediate input; the oven that bakes it is an investment.
 
-#### Components of US Expenditure Approach GDP 
+The expenditure approach is considered the fastest and most reliable way to measure GDP.
+
+<!-- 
+If a cheese wheel is produced this year, we want it to count towards GDP this year, even if it I don't buy it to eat until next year. And when I do buy that cheese wheel next year, we w
+(This is done to make measurements more consistent.)
+Government investment is always counted, but where it goes in the formula varies. BEA lumps Gov consumption and invesetment together. OECD seems to seperate them. Need to double check on that before uncommenting this part.-->
+
+
+### Value-added Approach:
+
+The Value-added Approach, also called the Output or Product Approach,[^OutputApproachNames] 
+measures output by looking at where final goods and services are coming from.
+
+[^OutputApproachNames]: Our Textbook (Williamson 6th Edition) calls this the "Product Approach". The BEA's NIPA Handbook calls this the "Value-added Approach" or the "Production Approach". The OECD, at [stats.oecd.org](https://stats.oecd.org/), labels this the "Output Approach"
+
+**Problem:** Firms know their outputs and inputs, but don’t know which outputs are final vs which are intermediate.  
+**Solution:** Inputs to a firm are always intermediate, so we can add up all the output from all firms and subtract out all
+the intermediate inputs. Intermediate goods cancel out, while final goods remain uncancelled.
+
+A firm’s value added is (That firm’s revenue, including inventory changes) minus (That firm’s input costs of intermediate goods and services).
+
+You can also calculate Value-added Approach GDP simply by adding up each firm’s value-added.
+
+
+### Income Approach: 
+
+The Income-expenditure identity says that aggregate income will be equal to aggregate output.
+If a dollar flows into industry because of the purchase of some final good or service,
+that dollar must also flow out of industry into someone's pockets.
+
+Income Approach GDP, also called Gross Domestic Income, measures output by adding up all the income that happens as a result of production.
+
+There are different ways to split up this income, but the main categories are:
+
+- Compensation of Employees
+    - Wages and Salaries, including the value of in-kind payments, are the biggest component of GDI
+    - Supplements to wages and salaries, such as the employer's contribution to Social Security, are also included as employee compensation.
+- Net Taxes on production and imports
+    - sales tax, VAT, for example are included
+    - Personal income tax is *not* included because that money was already measured as part of compensation.
+- Net Operating Surplus. This can be thought of as "profits", but is different than the accounting definition of the term.
+    – Net interest, specifically on debt owed by/to firms.
+    - Proprietor's Income
+    - Rental Income
+    - Corporate Profits
+- Consumption of Fixed Capital, which you can think of as "depreciation". 
+
+<!--To do: more details about net operating surplus, espcially inventory and capital adjustments-->
+
+<!--
+- Taxes less subsidies on production and imports. 
+Note that not *all* tax revenue is counted towards GDI, only revenue from taxes directly related to current output.
+For example, personal income taxes wouldn't be counted because that income is already counted under wages and salaries.-->
+
+
+---
+
+## Links
+
+- [NIPA Handbook: Concepts and Methods of the U.S. National Income and Product Accounts](https://www.bea.gov/resources/methodologies/nipa-handbook) - detailed description of the National Accounts for the US.
+
+
+## Tables
 
 The following table shows the components of expenditure approach GDP for the United States in 2019
 
@@ -84,7 +153,7 @@ The following table shows the components of expenditure approach GDP for the Uni
 <thead >
   <tr>
     <th></th>
-    <th colspan="3"style="text-align: center;">Trillions USD</th>
+    <th colspan="3" style="text-align: center;">Trillions USD</th>
     <th colspan="3" style="text-align: center;">Percent</th>
   </tr>
   <tr>
@@ -107,7 +176,7 @@ The following table shows the components of expenditure approach GDP for the Uni
     <td>100%</td>
     <td>100%</td>
   </tr>
-  <tr>
+  <tr style="font-weight:bold;">
     <td>Personal consumption expenditures</td>
     <td>14.4</td>
     <td>14.0</td>
@@ -152,7 +221,7 @@ The following table shows the components of expenditure approach GDP for the Uni
     <td>45.0%</td>
     <td>44.6%</td>
   </tr>
-  <tr>
+  <tr style="font-weight:bold;">
     <td>Gross private domestic investment</td>
     <td>3.8</td>
     <td>3.6</td>
@@ -180,7 +249,7 @@ The following table shows the components of expenditure approach GDP for the Uni
     <td>13.3%</td>
   </tr>
   <tr>
-    <td>  &emsp;&emsp;Structures</td>
+    <td>  &emsp;&emsp;&emsp;Structures</td>
     <td>0.7</td>
     <td>0.6</td>
     <td>0.6</td>
@@ -189,7 +258,7 @@ The following table shows the components of expenditure approach GDP for the Uni
     <td>2.5%</td>
   </tr>
   <tr>
-    <td>  &emsp;&emsp;Equipment</td>
+    <td>  &emsp;&emsp;&emsp;Equipment</td>
     <td>1.2</td>
     <td>1.1</td>
     <td>1.3</td>
@@ -198,7 +267,7 @@ The following table shows the components of expenditure approach GDP for the Uni
     <td>5.5%</td>
   </tr>
   <tr>
-    <td>  &emsp;&emsp;Intellectual property products</td>
+    <td>  &emsp;&emsp;&emsp;Intellectual property products</td>
     <td>1.0</td>
     <td>1.1</td>
     <td>1.2</td>
@@ -224,7 +293,7 @@ The following table shows the components of expenditure approach GDP for the Uni
     <td>-0.3%</td>
     <td>-0.1%</td>
   </tr>
-  <tr>
+  <tr style="font-weight:bold;">
     <td>Net exports of goods and services</td>
     <td>-0.6</td>
     <td>-0.7</td>
@@ -234,7 +303,7 @@ The following table shows the components of expenditure approach GDP for the Uni
     <td>-4.0%</td>
   </tr>
   <tr>
-    <td>&emsp;Exports</td>
+    <td>┗ Exports</td>
     <td>2.5</td>
     <td>2.1</td>
     <td>2.5</td>
@@ -243,7 +312,7 @@ The following table shows the components of expenditure approach GDP for the Uni
     <td>10.8%</td>
   </tr>
   <tr>
-    <td>&emsp;&emsp;Goods</td>
+    <td>┗┗ Goods</td>
     <td>1.6</td>
     <td>1.4</td>
     <td>1.7</td>
@@ -287,7 +356,7 @@ The following table shows the components of expenditure approach GDP for the Uni
     <td>2.2%</td>
     <td>2.4%</td>
   </tr>
-  <tr>
+  <tr style="font-weight:bold;">
     <td>Government consumption expenditures and gross investment</td>
     <td>3.7</td>
     <td>3.9</td>
@@ -339,35 +408,4 @@ The following table shows the components of expenditure approach GDP for the Uni
 
 
 
-### Value-added (or Output or Product) Approach:
-
-Measures output by looking at where goods are coming from.
-
-Problem: Firms know their outputs and inputs, but don’t know which outputs are final vs which are intermediate.
-
-Solution: Inputs to a firm are always intermediate, so we can add up all the output from all firms and subtract out all
-the intermediate inputs. So intermediate goods cancel out, while final goods remain uncancelled.
-
-A firm’s value added: (That firm’s revenue, including inventory) - (That firm’s input costs of goods and services)
-
-You can also calculate this approach simply by adding up each firm’s value-added.
-
-
-### Income Approach:
-
-Also called Gross Domestic Income
-
-Income-expenditure identity says that aggregate income will be equal to aggregate output.
-
-Income approach measures output by adding up all the income that happens as a result of production.
-
-- Compensation
-- Profits
-- Net Taxes on production and imports
-    - sales tax, VAT, for example are included
-    - Personal income tax is not included because that money was already measured as part of compensation.
-- Depreciation (payments to replace broken down capital)
-- Net interest
-    – Specifically on debt owed by firms.
-- Rental income, etc
-
+---
