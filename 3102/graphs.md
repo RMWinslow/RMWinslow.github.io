@@ -21,10 +21,11 @@ last_modified_date: 2022-08-24
 
 <div class="kg-container">
 
+
 schema: EconSchema
 params:
 - {name: a, value: 3, min: 0, max: 10, round: 0.1}
-- {name: y1, value: 3, min: 0, max: 10, round: 0.1}
+- {name: y1, value: 5, min: 0, max: 10, round: 0.1}
 - {name: y2, value: 3, min: 0, max: 10, round: 0.1}
 - {name: t1, value: 0, min: -10, max: 10, round: 0.1}
 - {name: t2, value: 0, min: -10, max: 10, round: 0.1}
@@ -49,8 +50,11 @@ layout:
         title: "$c'$: Consumption Tomorrow"
 
       objects:
-      
-      
+               
+      - EconIndifferenceMap:
+          utilityFunction:
+            CobbDouglas: {alpha: 1/(1+params.b)}
+          levels: [1,2,3,4,5, calcs.utility]
       
       - EconBudgetLine:
           p1: 1
@@ -58,11 +62,10 @@ layout:
           m: calcs.we1
           label: None
 
-      - EconIndifferenceMap:
-          utilityFunction:
-            CobbDouglas: {alpha: 1/(1+params.b)}
-          levels: [1,2,3,4,5, calcs.utility]
-
+	  # Euler Equation Line
+      - Line:
+          yIntercept: 0
+          slope: (1+params.r)*params.b
 
 
       # Endowment Point
@@ -94,6 +97,7 @@ layout:
         - {param: t2, label: t^\prime}
         - {param: r, label: r}
         - {param: b, label: \beta}
+
 
 </div>
 
