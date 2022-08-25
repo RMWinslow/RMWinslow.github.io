@@ -74,7 +74,7 @@ layout:
           strokeWidth: 2
           lineStyle: dotted
 
-	  # Euler Equation Line
+      # Euler Equation Line
       - Line:
           lineStyle: dotted
           color: blue
@@ -90,8 +90,12 @@ layout:
           label:
             text: \text{E}
           drag: 
-            - horizontal: y1
-            - vertical: y2
+            - directions: x
+              param: t1
+              expression: "params.y1-drag.x"
+            - directions: x
+              param: t2
+              expression: "-(params.y1-drag.x)*(1+params.r)"
 
 
       # Optimum Point
