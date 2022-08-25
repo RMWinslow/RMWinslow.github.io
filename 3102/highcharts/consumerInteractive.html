@@ -6,21 +6,31 @@
     <script src="https://code.highcharts.com/highcharts.js"></script> 
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
     <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
-    <link href="../../../../styles/sakura.css" rel="stylesheet" type="text/css">
+    <!--link href="../../../../styles/sakura.css" rel="stylesheet" type="text/css"-->
 </head>
 <body>
 
+<div class="flex-container" style="display: flex;">
 
-<div id="consumerChart" style="max-width: 75vmin;   ; margin: 0 auto"></div>
-
-<b>Exogenous Parameters:</b>    <button type="button" style="float: right;" >Click to update chart.</button>
-
-<div class="flexRow">
-    <div>\(w\):     <input type="number" id="w"  step="0.1" style="width: 4em;"> </div>
-    <div>\(h\):     <input type="number" id="h"  step="1" style="width: 4em;">   </div>
-    <div>\(\pi\):     <input type="number" id="pi"  step="1" style="width: 4em;">   </div>
-    <div>\(T\):     <input type="number" id="T"  step="1" style="width: 4em;">   </div>
+<div  style="max-width:600px; margin: 0 auto; flex: 2;">
+    <div id="consumerChart" style="" ></div>
 </div>
+
+
+<div style="flex:1;">
+    <b>Exogenous Parameters:</b>    <button type="button" style="float: right;" onclick="updateEverything()" >Click to update chart.</button><hr>
+    <div class="flexRow" style="display: flex;flex-direction: column;">
+        <div>\(w\):     <input type="number" id="w"  step="0.1" style="width: 4em;"> </div>
+        <div>\(h\):     <input type="number" id="h"  step="1" style="width: 4em;">   </div>
+        <div>\(\pi\):     <input type="number" id="pi"  step="1" style="width: 4em;">   </div>
+        <div>\(T\):     <input type="number" id="T"  step="1" style="width: 4em;">   </div>
+    </div>
+</div>
+
+</div>
+
+
+
 <hr class="smallLine">
 <b>Endogenous Parameters:</b>
 <div class="flexRow">
@@ -34,15 +44,11 @@
 
 <script type="text/javascript">
 
-
-    //Jquery gobbledygook to listen to the form and update parameters.
-    $(document).ready(function(){
-        $("button").click(function(){
-            updateExogenous();
-            updateEndogenous();
-            updateChart();
-        });            
-    });
+    function updateEverything(){
+        updateExogenous();
+        updateEndogenous();
+        updateChart();
+    }
     //--------------------------------------------------------------------------------------------
     
 
