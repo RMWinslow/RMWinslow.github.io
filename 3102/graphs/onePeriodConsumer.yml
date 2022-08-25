@@ -8,7 +8,7 @@ params:
 - {name: pi, value: 5, min: 0, max: 10, round: 0.1}
 - {name: t, value: 4, min: 0, max: 10, round: 0.1}
 - {name: showEuler, value: 1}
-- {name: showIndifference, value: 1}
+- {name: showIndifference, value: 0}
 
 calcs:
 

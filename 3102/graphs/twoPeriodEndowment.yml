@@ -9,7 +9,7 @@ params:
 - {name: b, value: 0.8, min: 0, max: 1, round: 0.05}
 - {name: r, value: 0.25, min: 0, max: 3, round: 0.05}
 - {name: showEuler, value: 1}
-- {name: showIndifference, value: 1}
+- {name: showIndifference, value: 0}
 
 calcs:
   we1: "(params.y1-params.t1+(params.y2-params.t2)/(1+params.r))"

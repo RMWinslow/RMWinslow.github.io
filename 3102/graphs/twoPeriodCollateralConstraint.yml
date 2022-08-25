@@ -11,7 +11,7 @@ params:
 - {name: r, value: 0.25, min: 0, max: 3, round: 0.05}
 - {name: pH, value: 2, min: 0, max: 6, round: 0.05}
 - {name: showEuler, value: 1}
-- {name: showIndifference, value: 1}
+- {name: showIndifference, value: 0}
 
 calcs:
   endowment1: (params.y1-params.t1)
