@@ -11,9 +11,9 @@
 }
 
 
-@media (min-width: 50rem) {
-    .site-footer .sidebar-header {
-        display: none !important;
+@media (max-width: 50rem) {
+    .site-footer, .sidebar-header {
+        display: none;
         background-color: aqua;
     }
 }
