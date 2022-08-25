@@ -13,17 +13,6 @@ last_modified_date: 2022-08-24
 <script src="https://kineticgraphs.org/js/kg3d.0.2.6.js"></script>
 
 
-<style>
-    .kg-container .sidebar {
-        background-color: red;
-        overflow-y: visible !important;
-    }
-</style>
-
-<div class="kg-container" src="./graphs/test.yml" clearColor='#fffff800'></div>
-
-
-
 ## One Period Competitive Equilibrium
 
 
@@ -46,7 +35,7 @@ last_modified_date: 2022-08-24
 ### Basic Model without Credit Market Imperfections
 
 
-<div class="kg-container" src="./graphs/twoPeriodEndowment.yml" clearColor='#fffff800'></div>
+<div class="kg-container" src="./graphs/twoPeriodEndowment.yml" clearColor='#fff0'></div>
 
 <!--
 Cobb Douglass preferences are equivalent to log plus beta log preferences when alpha = 1/(1+beta) ???

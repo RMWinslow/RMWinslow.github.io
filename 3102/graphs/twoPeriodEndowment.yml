@@ -1,13 +1,17 @@
----
+
+version: 1
 schema: EconSchema
+
 params:
-- {name: a, value: 3, min: 0, max: 10, round: 0.1}
 - {name: y1, value: 5, min: 0, max: 10, round: 0.1}
 - {name: y2, value: 3, min: 0, max: 10, round: 0.1}
 - {name: t1, value: 0, min: -10, max: 10, round: 0.1}
 - {name: t2, value: 0, min: -10, max: 10, round: 0.1}
 - {name: b, value: 0.8, min: 0, max: 1, round: 0.05}
 - {name: r, value: 0.25, min: 0, max: 3, round: 0.05}
+- {name: showEuler, value: 1}
+- {name: showIndifference, value: 1}
+
 calcs:
   we1: "(params.y1-params.t1+(params.y2-params.t2)/(1+params.r))"
   we2: "(calcs.we1 * (1+params.r))"
@@ -28,10 +32,10 @@ layout:
 
       objects:
                
-      - EconIndifferenceMap:
-          utilityFunction:
-            CobbDouglas: {alpha: 1/(1+params.b)}
-          levels: [1,2,3,4,5, calcs.utility]
+      - ContourMap:
+          levels: [0,1,2,3,4, calcs.utility]
+          fn: "(log(x)+params.b*log(y))"
+          show: params.showIndifference
       
       - EconBudgetLine:
           p1: 1
@@ -41,8 +45,11 @@ layout:
 
 	  # Euler Equation Line
       - Line:
+          lineStyle: dotted
+          color: blue
           yIntercept: 0
           slope: (1+params.r)*params.b
+          show: params.showEuler
 
 
       # Endowment Point
@@ -67,10 +74,16 @@ layout:
       controls:
       - title: Exogenous Variables
         sliders:
-        - {param: a, label: a}
         - {param: y1, label: y}
         - {param: y2, label: y^\prime}
         - {param: t1, label: t}
         - {param: t2, label: t^\prime}
         - {param: r, label: r}
         - {param: b, label: \beta}
+        
+      - title: Display Options
+        checkboxes:
+          - param: showEuler
+            label: "\\text{Show Tangency Condition}"
+          - param: showIndifference
+            label: "\\text{Show Indifference Curves}"
