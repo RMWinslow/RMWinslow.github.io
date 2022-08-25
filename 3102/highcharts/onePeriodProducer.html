@@ -6,6 +6,23 @@
     <script src="https://code.highcharts.com/highcharts.js"></script> 
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
     <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+    <style>
+        /* ensures the increment/decrement arrows always display */
+        /*https://davidwalsh.name/always-show-arrows-for-number-input*/
+            input[type=number]::-webkit-inner-spin-button, 
+            input[type=number]::-webkit-outer-spin-button {
+              opacity: 1;
+            }
+            .flexRow div{
+                padding: 2px;
+            }
+            .flexRow div input{
+                width: 4em;
+            }
+            body {
+                max-width: 60em;
+            }
+    </style>
 </head>
 <body>
 
