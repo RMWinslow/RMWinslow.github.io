@@ -8,9 +8,6 @@ date: 2022-08-25
 last_modified_date: 2022-08-25
 ---
 
-<div class="wide-figure">
-<iframe height="500px" width="100%" src="./highcharts/consumerInteractive.html"></iframe>
-</div>
 
 
 
@@ -19,7 +16,15 @@ last_modified_date: 2022-08-25
 
 ### Consumer's Problem
 
+<div class="wide-figure">
+<iframe height="550px" width="100%" src="./highcharts/onePeriodConsumer.html"></iframe>
+</div>
+
 ### Producer's Problem
+
+<div class="wide-figure">
+<iframe height="550px" width="100%" src="./highcharts/onePeriodProducer.html"></iframe>
+</div>
 
 
 ### Consumer and Producer's Problem Combined

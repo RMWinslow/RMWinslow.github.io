@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script> 
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+    <link href="../../../../styles/sakura.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+<h1>Producer's Problem</h1>
+
+<p>The following is an intereactive example of a producer's problem with Cobb-Douglass production and exogenous capital.</p>
+
+<div id="graphHolder" style="width: 75vmin; margin: 0 auto"></div>
+
+
+<b>Exogenous Parameters:</b>    <button type="button" style="float: right;" >Click to update chart.</button>
+
+<div class="flexRow">
+    <div>\(K\):     <input type="number" id="capital"  step="1" style="width: 4em;">  &nbsp; </div>
+    <div>\(z\):     <input type="number" id="tfp"  step="0.1" style="width: 4em;">  &nbsp; </div>
+    <div>\(w\):     <input type="number" id="wage"  step="0.1" style="width: 4em;">  &nbsp; </div>
+    <div>\(\alpha\):     <input type="number" id="alpha"  step="0.05" style="width: 4em;">  &nbsp; </div>
+</div>
+<hr class="smallLine">
+<b>Endogenous Parameters:</b>
+<div class="flexRow">
+    <div>\(N_d\): <output id='laborDemand'>test</output></div>
+    <div>\(Y\): <output id='output'>test</output></div>
+    <div>\(\pi\): <output id='profit'>test</output></div>
+</div>
+
+
+
+
+
+<br><br><br><br><br>
+
+In this example,capital stock is given exogenously, and output is determined by the production function:
+\[Y = zF(K,N_d)=zK^\alpha N_d^{1-\alpha}\]
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+    //Jquery gobbledygook to listen to the form and update parameters.
+    $(document).ready(function(){
+        $("button").click(function(){
+            updateExogenous();
+            updateEndogenous();
+            updateChart();
+        });            
+    });
+    //
+    
+
+    //--------------------------------------------------------------------------------------------
+    
+
+    //default values for exogenous variables
+    z = 5;
+    K = 3;
+    w = 1;
+    α = 0.5;
+
+    //populate the input forms with the default values
+    $('#tfp').val(z);
+    $('#capital').val(K);
+    $('#wage').val(w);
+    $('#alpha').val(α);
+
+
+    //Pull data from the forms and update the exogenous variables
+    function updateExogenous(){
+        z = Number($('#tfp').val());
+        K = Number($('#capital').val());
+        w = Number($('#wage').val());
+        α = Number($('#alpha').val());
+    }
+
+    //calculate and update values for endogenous variables
+    function updateEndogenous(){
+        Nd = (((1-α)*z)/w)**(1/α) * K;
+        Y = z * K**α * Nd**(1-α);
+        pi = Y - w*Nd;
+
+        $("#laborDemand").text(Nd.toFixed(2));
+        $("#output").text(Y.toFixed(2));
+        $("#profit").text(pi.toFixed(2));
+    }
+    updateEndogenous();
+   
+//----------------------------------------------------------------
+
+    //Functions for drawing lines.
+
+    function output(minx,maxx,steps){
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y = z * K**α * x**(1-α);
+            data.push([x,y]);
+        }
+        return data;
+    }
+
+    function cost(minx,maxx,steps){
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y = x*w
+            data.push([x,y]);
+        }
+        return data;
+    }
+
+    function tangentline(minx,maxx,steps){
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y = x*w+pi
+            if(x<Nd+10 && x>Nd-10){data.push([x,y]);}
+        }
+        return data;
+    }
+
+//---------------------------------------------------------------------------
+    //Code for rendering the graphs.
+
+    
+    //chart parameters
+    minx = 0;
+    maxx = 100;
+    axissize = '100%'; 
+    chartSteps = 400; // The number of data points to sample when drawing a chart.
+
+
+    var endowChart = Highcharts.chart('graphHolder', {
+        chart: {type: 'line',  backgroundColor: null,  height: '100%', },
+        title: {text: "" },
+        legend:{ enabled:true,  align: 'right', verticalAlign: 'top', floating: true, itemDistance:10,},
+
+        xAxis: {
+            title: {
+                text: 'Labor Demand'
+            },           
+            height: axissize, width: axissize,  min: minx, max: maxx,
+            gridLineWidth: 1,
+            tickInterval: 20
+        },
+        yAxis: {
+            title: {
+                text: "Units of Real Output"
+            },
+            height: axissize, width: axissize,  min: minx, max: maxx,
+            tickInterval: 20
+        },
+        tooltip: {
+            headerFormat: '<b>{series.name}</b><br>',
+            pointFormat: "{point.x:.2f}, {point.y:.2f} "
+        },
+
+        plotOptions: {
+            spline: {
+                marker: {
+                    enabled: true
+                }
+            },
+            series: {
+                states: {
+                    hover: {
+                        enabled: true,
+                    },
+                    inactive: {
+                        opacity: 1
+                    }
+                }
+            }
+        },
+
+        colors: [,'#000','#7cb5ec', '#00F'],
+
+        series: [{
+            name: "Cost",
+            data: cost(minx,maxx,chartSteps),
+            enableMouseTracking: false
+        },{
+            name: "MPN = w",
+            data: tangentline(minx,maxx,chartSteps),
+            enableMouseTracking: false
+        },{
+            name: "Output",
+            data: output(minx,maxx,chartSteps),
+        },{
+            name:"Profit-Maximizing Point",
+            data:[{x:Nd,y:Y,marker: {symbol: 'url(star2.png)'}}]
+        },]
+    });
+
+//------------------------------------------------------------------------
+
+
+
+//Functions to update the graph's  data. redraw=false makes everything update at once
+function updateChart(){
+    endowChart.series[2].setData(output(minx,maxx,chartSteps), redraw=false);
+    endowChart.series[0].setData(cost(minx,maxx,chartSteps), redraw=false);
+    endowChart.series[1].setData(tangentline(minx,maxx,chartSteps), redraw=false);
+    endowChart.series[3].data[0].update([Nd,Y], redraw=false);
+    endowChart.redraw();
+}
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
