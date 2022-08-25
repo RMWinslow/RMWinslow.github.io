@@ -9,7 +9,11 @@
 .kg-container .sidebar {
     overflow-y: visible !important;
 }
-
+@media (max-width: 50rem) {
+    .site-footer .sidebar-header {
+        display: none;
+    }
+}
 
 
 
