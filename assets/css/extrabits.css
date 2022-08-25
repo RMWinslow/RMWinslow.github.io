@@ -1,7 +1,7 @@
 /*This file is used to load repo-specific css into JTD-Tweaked*/
 
 /*The following snippet allows econgraph kinetic graphs to have their sidebar placed over in the page's margin*/
-.kg-container {
+.kg-container, .wide-figure {
     margin-right: min(-1rem, -1 * (100vw - (100% + 20rem)) );
     max-width: 150%;
     clear: right;
