@@ -1,0 +1,50 @@
+
+
+schema: EconSchema
+
+params:
+- {name: K, value: 2, min: 0, max: 3, round: 0.1}
+- {name: z, value: 1.5, min: 0, max: 3, round: 0.1}
+- {name: w, value: 1, min: 0, max: 3, round: 0.1}
+- {name: a, value: 0.5, min: 0, max: 1, round: 0.05}
+
+calcs:
+
+  Nd: "((((1-params.a)*params.z)/params.w)^(1/params.a) * params.K)"
+  Y: "(params.z * params.K^params.a * (calcs.Nd)^(1-params.a))"
+  
+        #Y = z * K**α * Nd**(1-α);
+        #pi = Y - w*Nd;
+  
+layout:
+  OneGraphPlusSidebar:
+    graph:
+    
+      xAxis: 
+        title: "$N_d$: Labor Input"
+      yAxis: 
+        title: "$Y$: Output"
+
+      objects:
+
+#           y = z * K**α * x**(1-α);
+      - Curve:
+          univariateFunction:
+            fn: params.z * params.K^params.a * (x)^(1-params.a)
+            ind: x
+          color: red
+      - Point:
+          coordinates: [calcs.Nd,calcs.Y]
+          droplines:
+            vertical: N_d
+            horizontal: Y
+
+    sidebar:
+      controls:
+      - title: Exogenous Variables / Settings
+        sliders:
+        - {param: K, label: K}
+        - {param: z, label: z}
+        - {param: w, label: w}
+        - {param: a, label: \alpha}
+	    

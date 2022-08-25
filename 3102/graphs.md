@@ -23,6 +23,8 @@ last_modified_date: 2022-08-24
 
 ### Producer's Problem
 
+<div class="kg-container" src="./graphs/onePeriodProducer.yml" clearColor='#fff0'></div>
+
 ### Consumer and Producer's Problem Combined
 
 ### Equilibrium
