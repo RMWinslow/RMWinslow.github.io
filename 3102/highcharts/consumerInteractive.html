@@ -13,17 +13,26 @@
 <div class="flex-container" style="display: flex;">
 
 <div  style="max-width:500px; margin: 0 auto; flex: 2;">
-    <div id="consumerChart" style="" ></div>
+    <div id="consumerChart"></div>
 </div>
 
 
-<div style="flex:1;">
-    <b>Exogenous Parameters:</b>    <button type="button" style="float: right;" onclick="updateEverything()" >Click to update chart.</button><hr>
+<div style="flex:1; max-width:300px;">
+    <b>Exogenous Parameters:</b>   <hr>
     <div class="flexRow" style="display: flex;flex-direction: column;">
-        <div>\(w\):     <input type="number" id="w"  step="0.1" style="width: 4em;"> </div>
-        <div>\(h\):     <input type="number" id="h"  step="1" style="width: 4em;">   </div>
-        <div>\(\pi\):     <input type="number" id="pi"  step="1" style="width: 4em;">   </div>
-        <div>\(T\):     <input type="number" id="T"  step="1" style="width: 4em;">   </div>
+        <div style="padding:2px;">\(w\):     <input type="number" id="w"  step="0.1" style="width: 4em;"></div>
+        <div style="padding:2px;">\(h\):     <input type="number" id="h"  step="1" style="width: 4em;">   </div>
+        <div style="padding:2px;">\(\pi\):     <input type="number" id="pi"  step="1" style="width: 4em;">   </div>
+        <div style="padding:2px;">\(T\):     <input type="number" id="T"  step="1" style="width: 4em;">   </div> 
+        <button type="button" style="float: right;" onclick="updateEverything()" >Click to update chart.</button>
+    </div>
+    <br>
+    <b>Endogenous Parameters:</b><hr>
+    <div class="flexRow" style="display: flex;flex-direction: column;">
+        <div>\(C\): <output id='consumption'>test</output></div>
+        <div>\(l\): <output id='leisure'>test</output></div>
+        <div>\(N_s\): <output id='labor'>test</output></div>
+        <div>\(U\): <output id='utility'>test</output></div>
     </div>
 </div>
 
@@ -31,14 +40,6 @@
 
 
 
-<hr class="smallLine">
-<b>Endogenous Parameters:</b>
-<div class="flexRow">
-    <div>\(C\): <output id='consumption'>test</output></div>
-    <div>\(l\): <output id='leisure'>test</output></div>
-    <div>\(N_s\): <output id='labor'>test</output></div>
-    <div>\(U\): <output id='utility'>test</output></div>
-</div>
 
 
 
