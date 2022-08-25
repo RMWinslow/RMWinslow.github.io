@@ -20,10 +20,10 @@
 <div style="flex:1; max-width:300px;">
     <b>Exogenous Parameters:</b>   <hr>
     <div class="flexRow" style="display: flex;flex-direction: column;">
-        <div style="padding:2px;">\(w\):     <input type="number" id="w"  step="0.1" style="width: 4em;"></div>
-        <div style="padding:2px;">\(h\):     <input type="number" id="h"  step="1" style="width: 4em;">   </div>
-        <div style="padding:2px;">\(\pi\):     <input type="number" id="pi"  step="1" style="width: 4em;">   </div>
-        <div style="padding:2px;">\(T\):     <input type="number" id="T"  step="1" style="width: 4em;">   </div> 
+        <div style="padding:2px;">\(w\):     <input type="number" id="w"  step="0.1" style="width: 4em;" onclick="updateEverything()"> </div>
+        <div style="padding:2px;">\(h\):     <input type="number" id="h"  step="1" style="width: 4em;" onclick="updateEverything()">   </div>
+        <div style="padding:2px;">\(\pi\):     <input type="number" id="pi"  step="1" style="width: 4em;" onclick="updateEverything()">   </div>
+        <div style="padding:2px;">\(T\):     <input type="number" id="T"  step="1" style="width: 4em;" onclick="updateEverything()">   </div> 
         <button type="button" style="float: right;" onclick="updateEverything()" >Click to update chart.</button>
     </div>
     <br>
