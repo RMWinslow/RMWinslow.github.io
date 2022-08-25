@@ -19,6 +19,7 @@ last_modified_date: 2022-08-25
 <div class="wide-figure">
 <iframe height="550px" width="100%" src="./highcharts/onePeriodConsumer.html"></iframe>
 </div>
+<a href="./highcharts/onePeriodConsumer.html">Standalone link.</a>
 
 ### Producer's Problem
 
@@ -26,12 +27,14 @@ last_modified_date: 2022-08-25
 <iframe height="550px" width="100%" src="./highcharts/onePeriodProducer.html"></iframe>
 </div>
 
+<a href="./highcharts/onePeriodProducer.html">Standalone link.</a>
 
 ### Consumer and Producer's Problem Combined
 
 <div class="wide-figure">
 <iframe height="550px" width="100%" src="./highcharts/onePeriodBothAgents.html"></iframe>
 </div>
+<a href="./highcharts/onePeriodBothAgents.html">Standalone link.</a>
 
 ### Equilibrium
 
@@ -39,6 +42,7 @@ last_modified_date: 2022-08-25
 <iframe height="550px" width="100%" src="./highcharts/onePeriodEquilibrium.html"></iframe>
 </div>
 
+<a href="./highcharts/onePeriodEquilibrium.html">Standalone link.</a>
 
 ## Solow
 
@@ -47,6 +51,8 @@ last_modified_date: 2022-08-25
 <div class="wide-figure">
 <iframe height="550px" width="100%" src="./highcharts/solowSteadyState.html"></iframe>
 </div>
+
+<a href="./highcharts/solowSteadyState.html">Standalone link.</a>
 
 
 
