@@ -5,8 +5,8 @@ schema: EconSchema
 params:
 - {name: y1, value: 5, min: 0, max: 10, round: 0.1}
 - {name: y2, value: 3, min: 0, max: 10, round: 0.1}
-- {name: t1, value: 0, min: -10, max: 10, round: 0.1}
-- {name: t2, value: 0, min: -10, max: 10, round: 0.1}
+- {name: t1, value: 0, min: -10, max: 10, round: 0.001}
+- {name: t2, value: 0, min: -10, max: 10, round: 0.001}
 - {name: b, value: 0.8, min: 0, max: 1, round: 0.05}
 - {name: r, value: 0.25, min: 0, max: 3, round: 0.05}
 - {name: pH, value: 2, min: 0, max: 6, round: 0.05}
