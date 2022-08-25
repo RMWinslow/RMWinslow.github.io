@@ -18,6 +18,9 @@ last_modified_date: 2022-08-24
 
 ### Consumer's Problem
 
+<div class="kg-container" src="./graphs/onePeriodConsumer.yml" clearColor='#fff0'></div>
+
+
 ### Producer's Problem
 
 ### Consumer and Producer's Problem Combined
