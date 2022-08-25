@@ -114,7 +114,7 @@ layout:
 
     sidebar:
       controls:
-      - title: Exogenous Variables
+      - title: Exogenous Variables / Settings
         sliders:
         - {param: y1, label: y}
         - {param: y2, label: y^\prime}
@@ -124,8 +124,6 @@ layout:
         - {param: b, label: \beta}
         - {param: pH, label: pH}
         
-        
-      - title: Display Options
         checkboxes:
           - param: showEuler
             label: "\\text{Show Tangency Condition}"
