@@ -56,6 +56,8 @@ Cobb Douglass preferences are equivalent to log plus beta log preferences when a
 ### Interest Rate Spread
 
 
+<div class="kg-container" src="./graphs/twoPeriodInterestRateSpread.yml" clearColor='#fff0'></div>
+
 
 ### Collateral Constraints
 
