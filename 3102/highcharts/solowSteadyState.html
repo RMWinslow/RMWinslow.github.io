@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script> 
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+    <link href="../../../../styles/sakura.css" rel="stylesheet" type="text/css">
+    <style>
+        /* ensures the increment/decrement arrows always display */
+        /*https://davidwalsh.name/always-show-arrows-for-number-input*/
+            input[type=number]::-webkit-inner-spin-button, 
+            input[type=number]::-webkit-outer-spin-button {
+              opacity: 1;
+            }
+            .flexRow div{
+                padding: 2px;
+            }
+            .flexRow div input{
+                width: 4em;
+            }
+    </style>
+</head>
+<body>
+
+
+<div class="flex-container" style="display: flex;">
+
+    <div  style="max-width:500px; margin: 0 auto; flex: 2;">
+        <div id="graphHolder"></div>
+    </div>
+    
+    
+    <div style="flex:1; max-width:300px;">
+        <b>Exogenous Parameters:</b>   <hr>
+        <div class="flexRow" style="display: flex;flex-direction: column;" onclick="updateEverything()">
+            <div>\(z\):     <input type="number" id="tfp"  step="0.1">  &nbsp; </div>
+            <div>\(s\):     <input type="number" id="savings"  step="0.1">  &nbsp; </div>
+            <div>\(\delta\):     <input type="number" id="depreciation"  step="0.1">  &nbsp; </div>
+            <div>\(n\):     <input type="number" id="populationGrowth"  step="0.1">  &nbsp; </div>
+            <div>\(\alpha\):     <input type="number" id="alpha"  step="0.05">  &nbsp; </div>
+            <button type="button" style="float: right;" onclick="updateEverything()" >Click to update chart.</button>
+        </div>
+        <br>
+        <b>Steady-State Values:</b><hr>
+        <div class="flexRow" style="display: flex;flex-direction: column;">
+            <div>\(\overline{k}\): <output id='steadyState'>test</output></div>
+            <div>\(\overline{y}\): <output id='steadyState_y'>test</output></div>
+            <div>\(\overline{c}\): <output id='steadyState_c'>test</output></div>
+            <div>\(\overline{i}\): <output id='steadyState_i'>test</output></div>
+        </div>
+    </div>
+    
+</div>
+
+
+
+<script type="text/javascript">
+
+
+    function updateEverything(){
+        updateExogenous();
+        updateEndogenous();
+        updateChart();
+    }
+    
+
+    //--------------------------------------------------------------------------------------------
+    
+
+    //default values for exogenous variables
+    z = 3;
+    K = 3;
+    w = 1;
+    α = 0.5;
+    δ = 0.2;
+    s = 0.5;
+    n = 0.2;
+
+    //populate the input forms with the default values
+    $('#tfp').val(z);
+    $('#capital').val(K);
+    $('#wage').val(w);
+    $('#alpha').val(α);
+    $('#depreciation').val(δ);
+    $('#savings').val(s);
+    $('#populationGrowth').val(n);
+
+
+    //Pull data from the forms and update the exogenous variables
+    function updateExogenous(){
+        z = Number($('#tfp').val());
+        K = Number($('#capital').val());
+        w = Number($('#wage').val());
+        α = Number($('#alpha').val());
+        δ = Number($('#depreciation').val());
+        s = Number($('#savings').val());
+        n = Number($('#populationGrowth').val());
+    }
+
+    //calculate and update values for endogenous variables
+    function updateEndogenous(){
+        Nd = (((1-α)*z)/w)**(1/α) * K;
+        Y = z * K**α * Nd**(1-α);
+        pi = Y - w*Nd;
+
+        ssK = ((s*z)/(n+δ))**(1/(1-α));
+        ssY = z*ssK**α;
+        ssI = s*ssY;
+        ssC = (1-s)*ssY;
+
+        $("#steadyState").text(ssK.toFixed(2));
+        $("#steadyState_y").text(ssY.toFixed(2));
+        $("#steadyState_c").text(ssC.toFixed(2));
+        $("#steadyState_i").text(ssI.toFixed(2));
+    }
+    updateEndogenous();
+   
+//----------------------------------------------------------------
+
+    //Functions for drawing lines.
+
+
+    function investmentCurve(minx,maxx,steps){
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y = s*z*x**α;
+            data.push([x,y]);
+        }
+        return data;
+    }
+
+    function depreciationCurve(minx,maxx,steps){
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y = (n+ δ)*x;
+            data.push([x,y]);
+        }
+        return data;
+    }
+
+
+    function equalLine(minx,maxx,steps){
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y = x;
+            data.push([x,y]);
+        }
+        return data;
+    }
+
+
+    function output(minx,maxx,steps){
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y = z * x**α ;
+            data.push([x,y]);
+        }
+        return data;
+    }
+
+    function cost(minx,maxx,steps){
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y = x*w
+            data.push([x,y]);
+        }
+        return data;
+    }
+
+    function tangentline(minx,maxx,steps){
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y = x*w+pi
+            if(x<Nd+10 && x>Nd-10){data.push([x,y]);}
+        }
+        return data;
+    }
+
+//---------------------------------------------------------------------------
+    //Code for rendering the graphs.
+
+    
+    //chart parameters
+    minx = 0;
+    maxx = 20;
+    axissize = '100%'; 
+    chartSteps = 400; // The number of data points to sample when drawing a chart.
+
+
+    var endowChart = Highcharts.chart('graphHolder', {
+        chart: {type: 'line',  backgroundColor: null,  height: '100%', },
+        title: {text: "" },
+        legend:{ enabled:true,  align: 'right', verticalAlign: 'top', floating: true, itemDistance:10,},
+
+        xAxis: {
+            title: {
+                text: 'k'
+            },           
+            height: axissize, width: axissize,  min: minx, max: maxx,
+            gridLineWidth: 1,
+            tickInterval: 1
+        },
+        yAxis: {
+            title: {
+                text: ""
+            },
+            height: axissize, width: axissize,  min: minx, max: maxx,
+            tickInterval: 1
+        },
+        tooltip: {
+            headerFormat: '<b>{series.name}</b><br>',
+            pointFormat: "{point.x:.2f}, {point.y:.2f} "
+        },
+
+        plotOptions: {
+            spline: {
+                marker: {
+                    enabled: true
+                }
+            },
+            series: {
+                states: {
+                    hover: {
+                        enabled: true,
+                    },
+                    inactive: {
+                        opacity: 1
+                    }
+                }
+            }
+        },
+
+        colors: [,'#000','#7cb5ec', '#00F'],
+
+        series: [{
+            name: "investment",
+            data: investmentCurve(minx,maxx,chartSteps),
+            enableMouseTracking: false,
+        },{
+            name: "effective depr.",
+            data: depreciationCurve(minx,maxx,chartSteps),
+            enableMouseTracking: false,
+        },{
+            name: "output",
+            data: output(minx,maxx,chartSteps),
+            enableMouseTracking: false,
+        },{
+            name:"steady state",
+            data:[{x:ssK,y:ssI,marker: {symbol: 'url(star2.png)'}}],
+            enableMouseTracking: false,
+        },]
+    });
+
+//------------------------------------------------------------------------
+
+
+
+//Functions to update the graph's  data. redraw=false makes everything update at once
+function updateChart(){
+    //endowChart.series[0].setData(equalLine(minx,maxx,chartSteps), redraw=false);
+    endowChart.series[0].setData(investmentCurve(minx,maxx,chartSteps), redraw=false);
+    endowChart.series[1].setData(depreciationCurve(minx,maxx,chartSteps), redraw=false);
+    endowChart.series[2].setData(output(minx,maxx,chartSteps), redraw=false);
+    endowChart.series[3].data[0].update([ssK,ssI], redraw=false);
+    endowChart.redraw();
+}
+
+
+</script>
+
+
+</body>
+</html>
+
+
+

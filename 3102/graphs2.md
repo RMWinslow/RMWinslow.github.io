@@ -40,6 +40,14 @@ last_modified_date: 2022-08-25
 </div>
 
 
+## Solow
+
+### Per-capita Solow Steady State
+
+<div class="wide-figure">
+<iframe height="550px" width="100%" src="./highcharts/solowSteadyState.html"></iframe>
+</div>
+
 
 
 
