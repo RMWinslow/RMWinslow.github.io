@@ -6,6 +6,9 @@
     max-width: 150%;
     clear: right;
 }
+.kg-container .sidebar {
+    overflow-y: visible !important;
+}
 
 
 
