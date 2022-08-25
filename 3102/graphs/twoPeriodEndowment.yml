@@ -32,9 +32,16 @@ layout:
       objects:
                
       - ContourMap:
-          levels: [0,1,2,3,4, calcs.utility]
+          levels: [0,1,2,3,4]
           fn: "(log(x)+params.b*log(y))"
           show: params.showIndifference
+          strokeWidth: 0.2
+      - Contour:
+          level: "(log(calcs.c1)+params.b*log(calcs.c2))"
+          show: params.showIndifference
+          fn: "(log(x)+params.b*log(y))"
+          color: purple
+          strokeWidth: 2
       
       - EconBudgetLine:
           p1: 1
