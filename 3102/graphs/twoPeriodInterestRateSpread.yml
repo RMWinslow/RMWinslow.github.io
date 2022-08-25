@@ -53,21 +53,25 @@ layout:
           levels: [0,1,2,3,4,]
           fn: "(log(x)+params.b*log(y))"
           show: params.showIndifference
+          strokeWidth: 0.2
       - Contour:
           level: "(log(calcs.c1S)+params.b*log(calcs.c2S))"
           show: calcs.saverSolution*params.showIndifference
           fn: "(log(x)+params.b*log(y))"
           color: purple
+          strokeWidth: 2
       - Contour:
           level: "(log(calcs.c1B)+params.b*log(calcs.c2B))"
           show: calcs.borrowerSolution*params.showIndifference
           fn: "(log(x)+params.b*log(y))"
           color: purple
+          strokeWidth: 2
       - Contour:
           level: "(log(calcs.endowment1)+params.b*log(calcs.endowment2))"
           show: calcs.cornerSolution*params.showIndifference
           fn: "(log(x)+params.b*log(y))"
           color: purple
+          strokeWidth: 2
       
       # Budgets
       - Line:
