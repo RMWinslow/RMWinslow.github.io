@@ -1,0 +1,110 @@
+# Incomplete
+# Doesn't Really Work Well
+# 
+
+schema: EconSchema
+
+params:
+- {name: w, value: 1, min: 0, max: 3, round: 0.1}
+- {name: h, value: 7, min: 0, max: 10, round: 0.1}
+- {name: K, value: 4, min: 0, max: 3, round: 0.1}
+- {name: z, value: 2, min: 0, max: 3, round: 0.1}
+- {name: a, value: 0.5, min: 0, max: 1, round: 0.05}
+- {name: G, value: 2, min: 0, max: 10, round: 0.05}
+
+- {name: showGrid, value: 1}
+- {name: showEuler, value: 1}
+- {name: showIndifference, value: 0}
+- {name: showBudget, value: 1}
+
+calcs:
+
+  T: (params.G)
+
+  Nd: "((((1-params.a)*params.z)/params.w)^(1/params.a) * params.K)"
+  Y: "(params.z * params.K^params.a * (calcs.Nd)^(1-params.a))"
+  pi: "(calcs.Y - params.w * calcs.Nd)"
+
+  exogenousIncome: (calcs.pi-calcs.T)
+  
+  we: "(params.w*params.h + calcs.exogenousIncome)"
+  l: "min((calcs.we / (2*params.w)), params.h)"
+  c: "max((calcs.we / 2), calcs.exogenousIncome)"
+  Ns: "(params.h - calcs.l)"
+  
+  # stand-in for a condtional. Not needed for this example.
+  interiorSolution: max(calcs.Ns+0, 0)
+
+layout:
+  OneGraphPlusSidebar:
+    graph:
+    
+      xAxis: 
+        title: "$N$"
+        max: 4
+      yAxis: 
+        title: "$w$"
+        max: 4
+
+      objects:
+      
+      # Labor Supply Curve
+      - Curve:
+          univariateFunction:
+            fn: (params.h-(y*params.h + calcs.exogenousIncome)/(2*y))
+            ind: y
+          color: purple
+          strokeWidth: 2
+
+      # Labor Demand Curve
+      - Curve:
+          univariateFunction:
+            fn: (((((1-params.a)*params.z)/(y))^(1/params.a) * params.K))
+            ind: y
+          color: red
+          strokeWidth: 2
+
+
+      #Grid 
+      #"- Grid:" is only semi functional in 0.2.6
+      # args (xStep/yStep/show) break it
+      - ContourMap:
+          levels: [0,2,4,6,8,10]
+          fn: "(y)"
+          show: params.showGrid
+          strokeWidth: 0.1
+      - ContourMap:
+          levels: [0,2,4,6,8,10]
+          fn: "(x)"
+          show: params.showGrid
+          strokeWidth: 0.1
+      
+          
+          
+          
+
+
+    sidebar:
+      controls:
+      - title: Consumer and Producer on Same Axes
+        sliders:
+        - {param: w, label: w}
+      - title: Exogenous Variables
+        sliders:
+        - {param: h, label: h}
+        - {param: K, label: K}
+        - {param: z, label: z}
+        - {param: a, label: \alpha}
+        - {param: G, label: G}
+        divs:
+        - html: "``"
+        checkboxes:
+          - param: showGrid
+            label: "\\text{Show Grid}"
+          - param: showEuler
+            label: "\\text{Show Tangency Condition}"
+          - param: showIndifference
+            label: "\\text{Show Indifference Curves}"
+          - param: showBudget
+            label: "\\text{Show Budget Constraint}"
+	    
