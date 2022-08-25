@@ -28,6 +28,11 @@ last_modified_date: 2022-08-25
 
 
 ### Consumer and Producer's Problem Combined
+
+<div class="wide-figure">
+<iframe height="550px" width="100%" src="./highcharts/onePeriodBothAgents.html"></iframe>
+</div>
+
 ### Equilibrium
 
 
