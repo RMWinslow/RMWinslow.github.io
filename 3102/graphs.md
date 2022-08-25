@@ -63,5 +63,7 @@ Cobb Douglass preferences are equivalent to log plus beta log preferences when a
 
 
 
+<div class="kg-container" src="./graphs/twoPeriodCollateralConstraint.yml" clearColor='#fff0'></div>
+
 
 
