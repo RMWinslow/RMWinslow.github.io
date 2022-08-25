@@ -4,9 +4,11 @@ schema: EconSchema
 
 params:
 - {name: w, value: 1, min: 0, max: 3, round: 0.1}
-- {name: h, value: 6, min: 0, max: 10, round: 0.1}
+- {name: h, value: 7, min: 0, max: 10, round: 0.1}
 - {name: pi, value: 5, min: 0, max: 10, round: 0.1}
 - {name: t, value: 4, min: 0, max: 10, round: 0.1}
+
+- {name: showGrid, value: 1}
 - {name: showEuler, value: 1}
 - {name: showIndifference, value: 0}
 
@@ -32,6 +34,20 @@ layout:
         title: "$c$: Consumption"
 
       objects:
+
+      #Grid 
+      #"- Grid:" is only semi functional in 0.2.6
+      # args (xStep/yStep/show) break it
+      - ContourMap:
+          levels: [0,2,4,6,8,10]
+          fn: "(y)"
+          show: params.showGrid
+          strokeWidth: 0.1
+      - ContourMap:
+          levels: [0,2,4,6,8,10]
+          fn: "(x)"
+          show: params.showGrid
+          strokeWidth: 0.1
 
       # Indifference Curves. 
       - ContourMap:
@@ -87,6 +103,8 @@ layout:
         divs:
         - html: "``"
         checkboxes:
+          - param: showGrid
+            label: "\\text{Show Grid}"
           - param: showEuler
             label: "\\text{Show Tangency Condition}"
           - param: showIndifference
