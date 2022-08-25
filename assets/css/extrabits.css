@@ -9,9 +9,12 @@
 .kg-container .sidebar {
     overflow-y: visible !important;
 }
-@media (max-width: 50rem) {
+
+
+@media (min-width: 50rem) {
     .site-footer .sidebar-header {
-        display: none;
+        display: none !important;
+        background-color: aqua;
     }
 }
 
