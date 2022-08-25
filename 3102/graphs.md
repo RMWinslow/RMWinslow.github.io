@@ -27,6 +27,8 @@ last_modified_date: 2022-08-24
 
 ### Consumer and Producer's Problem Combined
 
+<div class="kg-container" src="./graphs/onePeriodBoth Agents.yml" clearColor='#fff0'></div>
+
 ### Equilibrium
 
 

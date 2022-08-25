@@ -1,0 +1,139 @@
+
+
+schema: EconSchema
+
+params:
+- {name: w, value: 1, min: 0, max: 3, round: 0.1}
+- {name: h, value: 7, min: 0, max: 10, round: 0.1}
+- {name: t, value: 4, min: 0, max: 10, round: 0.1}
+- {name: K, value: 4, min: 0, max: 3, round: 0.1}
+- {name: z, value: 2, min: 0, max: 3, round: 0.1}
+- {name: a, value: 0.5, min: 0, max: 1, round: 0.05}
+- {name: G, value: 2, min: 0, max: 10, round: 0.05}
+
+- {name: showGrid, value: 1}
+- {name: showEuler, value: 1}
+- {name: showIndifference, value: 0}
+- {name: showBudget, value: 1}
+
+calcs:
+
+  T: (params.G)
+
+  Nd: "((((1-params.a)*params.z)/params.w)^(1/params.a) * params.K)"
+  Y: "(params.z * params.K^params.a * (calcs.Nd)^(1-params.a))"
+  pi: "(calcs.Y - params.w * calcs.Nd)"
+
+  exogenousIncome: (calcs.pi-calcs.T)
+  
+  we: "(params.w*params.h + calcs.exogenousIncome)"
+  l: "min((calcs.we / (2*params.w)), params.h)"
+  c: "max((calcs.we / 2), calcs.exogenousIncome)"
+  Ns: "(params.h - calcs.l)"
+  
+  # stand-in for a condtional. Not needed for this example.
+  interiorSolution: max(calcs.Ns+0, 0)
+
+layout:
+  OneGraphPlusSidebar:
+    graph:
+    
+      xAxis: 
+        title: "$l=h-N_d$"
+      yAxis: 
+        title: "c\ =\ Y-G"
+
+      objects:
+
+      #Grid 
+      #"- Grid:" is only semi functional in 0.2.6
+      # args (xStep/yStep/show) break it
+      - ContourMap:
+          levels: [0,2,4,6,8,10]
+          fn: "(y)"
+          show: params.showGrid
+          strokeWidth: 0.1
+      - ContourMap:
+          levels: [0,2,4,6,8,10]
+          fn: "(x)"
+          show: params.showGrid
+          strokeWidth: 0.1
+               
+      # Budget Constraint for Consumer
+      - Line:
+          point: [params.h, calcs.exogenousIncome]
+          slope: (-params.w)
+          max: params.h
+          color: green
+          strokeWidth: 4
+          show: params.showBudget
+      - Segment:
+          a: [params.h, 0]
+          b: [params.h, calcs.exogenousIncome]
+          color: green
+          strokeWidth: 4
+          lineStyle: solid
+          show: params.showBudget
+      # Optimum Point for Consumer
+      - Point:
+          coordinates: [calcs.l,calcs.c]
+          color: red
+          label:
+            text: \text{★}
+      # Indifference Curves. 
+      - ContourMap:
+          levels: [0,1,2,3,4,]
+          fn: "(log(x)+log(y))"
+          show: params.showIndifference
+          strokeWidth: 0.2
+      - Contour:
+          level: "(log(calcs.c)+log(calcs.l))"
+          show: params.showIndifference
+          fn: "(log(x)+log(y))"
+          color: purple
+          strokeWidth: 4
+
+          
+          
+      # Production Function
+      - Curve:
+          univariateFunction:
+            fn: params.z * params.K^params.a * (params.h-x+0.00001)^(1-params.a) - params.G
+            ind: x
+          color: colors.production
+          strokeWidth: 4
+      # Optimum for Producer
+      - Point:
+          coordinates: [params.h-calcs.Nd, calcs.Y-params.G]
+          droplines:
+            vertical: "`N_d=${calcs.Nd.toFixed(1)}`"
+            horizontal: "`Y=${calcs.Y.toFixed(1)}`"
+
+
+
+
+    sidebar:
+      controls:
+      - title: Consumer and Producer on Same Axes
+        sliders:
+        - {param: w, label: w}
+      - title: Exogenous Variables
+        sliders:
+        - {param: h, label: h}
+        - {param: t, label: t}
+        - {param: K, label: K}
+        - {param: z, label: z}
+        - {param: a, label: \alpha}
+        - {param: G, label: G}
+        divs:
+        - html: "``"
+        checkboxes:
+          - param: showGrid
+            label: "\\text{Show Grid}"
+          - param: showEuler
+            label: "\\text{Show Tangency Condition}"
+          - param: showIndifference
+            label: "\\text{Show Indifference Curves}"
+          - param: showBudget
+            label: "\\text{Show Budget Constraint}"
+	    
