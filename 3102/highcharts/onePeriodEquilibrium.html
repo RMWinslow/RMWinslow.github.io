@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script> 
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+    <style>
+        /* ensures the increment/decrement arrows always display */
+        /*https://davidwalsh.name/always-show-arrows-for-number-input*/
+            input[type=number]::-webkit-inner-spin-button, 
+            input[type=number]::-webkit-outer-spin-button {
+              opacity: 1;
+            }
+            .flexRow div{
+                padding: 2px;
+            }
+            .flexRow div input{
+                width: 4em;
+            }
+    </style>
+</head>
+<body>
+
+
+
+
+<div class="flex-container" style="display: flex;">
+
+    <div  style="max-width:500px; margin: 0 auto; flex: 2;">
+        <div id="graphHolder"></div>
+    </div>
+    
+    
+    <div style="flex:1; max-width:300px;">
+        <b>Exogenous Parameters:</b>   <hr>
+        <div class="flexRow" style="display: flex;flex-direction: column;" onclick="updateEverything()">
+            <div>\(K\):     <input type="number" id="capital"  step="1" style="width: 4em;">   </div>
+            <div>\(z\):     <input type="number" id="tfp"  step="0.1" style="width: 4em;">   </div>
+            <div>\(\alpha\):     <input type="number" id="alpha"  step="0.05" style="width: 4em;">   </div>
+            <div>\(h\):     <input type="number" id="h"  step="1" style="width: 4em;">   </div>
+            <div>\(G\):     <input type="number" id="T"  step="1" style="width: 4em;">   </div>
+            <button type="button" style="float: right;" onclick="updateEverything()" >Click to update chart.</button>
+        </div>
+        <br>
+        <b>Endogenous Parameters:</b><hr>
+        <div class="flexRow" style="display: flex;flex-direction: column;">
+            <div>\(C\): <output id='consumption'>test</output></div>
+            <div>\(l\): <output id='leisure'>test</output></div>
+            <div>\(N_d=N_s\): <output id='labor'>test</output></div>
+            <div>\(U\): <output id='utility'>test</output></div>
+        </div>
+    </div>
+    
+</div>
+
+
+
+<script type="text/javascript">
+
+    function updateEverything(){
+        updateExogenous();
+        updateEndogenous();
+        updateChart();
+    }
+    
+    
+    //--------------------------------------------------------------------------------------------
+    
+
+    //default values for exogenous variables
+    z = 5;
+    K = 4;
+    w = 1;
+    α = 0.5;
+    h = 80;
+    T = 10;
+
+
+    //populate the input forms with the default values
+    $('#tfp').val(z);
+    $('#capital').val(K);
+    $('#wage').val(w);
+    $('#alpha').val(α);
+    $('#h').val(h);
+    $('#T').val(T);
+
+
+    //Pull data from the forms and update the exogenous variables
+    function updateExogenous(){
+        z = Number($('#tfp').val());
+        K = Number($('#capital').val());
+        w = Number($('#wage').val());
+        α = Number($('#alpha').val());
+        h = Number($('#h').val());
+        T = Number($('#T').val());
+    }
+
+    //calculate and update values for endogenous variables
+    function updateEndogenous(){
+
+        //Because  I'm too lazy to actually solve for w, I'll just iterate through a set of candidate values and choose the one which puts us closest to equilibrium.
+
+        var bestLaborGap = 999999;
+        var bestWage = 0;
+
+        for (var i = 0; i <= 5; i = i + 0.001){
+            w=i;
+
+            console.log(i);
+
+            Nd = (((1-α)*z)/w)**(1/α) * K;
+            Y = z * K**α * Nd**(1-α);
+            pi = Y - w*Nd;
+
+            wealth = w*h + pi - T;
+            l = wealth / (2*w);
+            c = wealth / (2);
+            utility = Math.log(l)+Math.log(c);
+            MRS = c/l
+
+            if(l>h){
+                l=h
+                c=pi-T
+            }
+
+
+            currentLaborGap = Math.abs(Nd - (h-l));
+            if (currentLaborGap < bestLaborGap){
+                bestLaborGap = currentLaborGap;
+                bestWage = w;
+            }
+
+        }
+
+        w = bestWage;
+
+        Nd = (((1-α)*z)/w)**(1/α) * K;
+        Y = z * K**α * Nd**(1-α);
+        pi = Y - w*Nd;
+
+        wealth = w*h + pi - T;
+        l = wealth / (2*w);
+        c = wealth / (2);
+        utility = Math.log(l)+Math.log(c);
+        MRS = c/l
+
+        if(l>h){
+            l=h
+            c=pi-T
+        }
+
+
+
+        $("#labor").text(Nd.toFixed(1));
+        $("#output").text(Y.toFixed(1));
+        $("#profit").text(pi.toFixed(1));
+        $("#wealth").text(wealth.toFixed(1));
+        $("#leisure").text(l.toFixed(1));
+        $("#consumption").text(c.toFixed(1));
+        $("#utility").text(utility.toFixed(1));
+        $("#wage").text(w.toFixed(1));
+    }
+    updateEndogenous();
+   
+//----------------------------------------------------------------
+
+    //Functions for drawing lines.
+
+    function output(minx,maxx,steps){
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y = z * K**α * (h-x)**(1-α) - T;
+            data.push([x,y]);
+        }
+        return data;
+    }
+
+    function cost(minx,maxx,steps){
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y = (h-x)*w
+            data.push([x,y]);
+        }
+        return data;
+    }
+
+    function isoquant(minx,maxx,steps){
+        //returns an array of points to draw an isoquant through this point
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        utility = Math.log(l) + Math.log(c);
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y = Math.exp((utility-Math.log(x))) ;   
+            data.push([x,y]);
+        }
+        return data;
+    }
+
+    function genBC(minx,maxx,steps){
+        //TODO: split into two loops around the number of steps needed to get to h.
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y = w*h + pi - T - w*x;
+            if (x > h){
+                data.push([h, pi-T]);
+            }
+            else{
+                data.push([x,y]);}
+        }
+        data.push([h,0]); //manually add x intercept
+
+        return data;
+    }
+
+//---------------------------------------------------------------------------
+    //Code for rendering the graphs.
+
+    //chart parameters
+    minx = 0;
+    maxx = 100;
+    axissize = '100%'; //unused currently. Had weird side effects
+    chartSteps = 400; // The number of data points to sample when drawing a chart.
+
+
+    var endowChart = Highcharts.chart('graphHolder', {
+        
+        chart: {type: 'line',  backgroundColor: null,  height: '100%', },
+        title: {text: "" },
+        legend:{ enabled:true,  align: 'right', verticalAlign: 'top', floating: true, itemDistance:10,},
+
+        xAxis: {
+            title: { text: 'l = h - N' },           
+            height: axissize, width: axissize, min: minx,  max: maxx,
+            gridLineWidth: 1,
+            tickInterval: 20
+        },
+
+        yAxis: {
+            title: {  text: "C=Y-G" },
+            height: axissize, width: axissize, min:minx, max: maxx,
+            tickInterval: 20
+        },
+
+        tooltip: {
+            headerFormat: '<b>{series.name}</b><br>',
+            pointFormat: "{point.x:.2f}, {point.y:.2f} "
+        },
+
+        plotOptions: {
+            spline: {
+                marker: {
+                    enabled: true
+                }
+            },
+            series: {
+                states: {
+                    hover: {
+                        enabled: true,
+                    },
+                    inactive: {
+                        opacity: 1
+                    }
+                }
+            }
+        },
+
+        //colors: ['#6CF', '#39F', '#06C', '#036', '#000'],
+
+        series: [{
+            name: "Isoquant",
+            color: "#ada",
+            data: isoquant(minx,maxx,chartSteps),
+            enableMouseTracking: false
+        },{
+            name: "Output",
+            data: output(minx,maxx,chartSteps),
+            tooltip: {  pointFormat: "{point.x:.2f}, {point.y:.2f} " },
+        },{
+            name: "Budget",
+            color: "#000",
+            data: genBC(minx,maxx,chartSteps),
+        },{
+            name:"Equilibrium",
+            color: '#ffff00',
+            data:[{x:h-Nd,y:Y-T,marker: {symbol: 'url(star.png)'}}]
+        },]
+    });
+
+//------------------------------------------------------------------------
+
+
+
+//Functions to update the graph's  data. redraw=false makes everything update at once
+function updateChart(){
+    endowChart.series[0].setData(isoquant(minx,maxx,chartSteps), redraw=false);
+    endowChart.series[1].setData(output(minx,maxx,chartSteps), redraw=false);
+    endowChart.series[2].setData(genBC(minx,maxx,chartSteps), redraw=false);
+    endowChart.series[3].data[0].update([h-Nd,Y-T], redraw=false);
+    endowChart.redraw();
+}
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
