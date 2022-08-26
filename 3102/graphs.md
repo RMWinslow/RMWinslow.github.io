@@ -3,7 +3,7 @@ title: 3102 Graphs
 parent: 3102 Notes
 grand_parent: Teaching
 layout: post
-toc: trye
+toc: false
 nav_order: 20
 date: 2022-08-23
 last_modified_date: 2022-08-25
@@ -87,5 +87,5 @@ Cobb Douglass preferences are equivalent to log plus beta log preferences when a
 
 ## Two Period Economy with Labor
 
-<div class="kg-container" src="./graphs/twoPeriodEquilibrium.yml" clearColor='#fff0'></div>
+<div class="kg-container" src="./graphs/twoPeriodEquilibrium.yml" clearColor='#fdf6e3'></div>
 
