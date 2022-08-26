@@ -3,9 +3,10 @@ title: 3102 Graphs
 parent: 3102 Notes
 grand_parent: Teaching
 layout: post
+toc: trye
 nav_order: 20
 date: 2022-08-23
-last_modified_date: 2022-08-24
+last_modified_date: 2022-08-25
 ---
 
 <!--
@@ -33,7 +34,7 @@ https://www.econgraphs.org/textbook
 
 ### Consumer and Producer's Problem Combined
 
-<div class="kg-container" src="./graphs/onePeriodBoth Agents.yml" clearColor='#fff0'></div>
+<div class="kg-container" src="./graphs/onePeriodBothAgents.yml" clearColor='#fff0'></div>
 
 ### Equilibrium
 
@@ -76,9 +77,15 @@ Cobb Douglass preferences are equivalent to log plus beta log preferences when a
 
 ### Collateral Constraints
 
-
-
 <div class="kg-container" src="./graphs/twoPeriodCollateralConstraint.yml" clearColor='#fff0'></div>
 
 
+
+
+
+
+
+## Two Period Economy with Labor
+
+<div class="kg-container" src="./graphs/twoPeriodEquilibrium.yml" clearColor='#fff0'></div>
 
