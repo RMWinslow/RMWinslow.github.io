@@ -47,6 +47,7 @@ In the simplest version (as in ch 4,5) the representative consumer decides how m
 - Non-negativity: can't consume or work negative amounts 
    
     $$c\geq0 \\ l\geq0 \\ N_{s}\geq0$$
+
     - Note that $N_{s}+l=h$, so   
     
       $$l\geq0\implies N_{s}\leq h \\ N_{s}\geq0\implies l\leq h$$
