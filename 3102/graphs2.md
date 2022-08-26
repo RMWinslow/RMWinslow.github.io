@@ -17,14 +17,14 @@ last_modified_date: 2022-08-25
 
 ### Consumer's Problem
 
-<div class="wide-figure">
+<div>
 <iframe height="550px" width="100%" src="./highcharts/onePeriodConsumer.html"></iframe>
 </div>
 <a href="./highcharts/onePeriodConsumer.html">Standalone link.</a>
 
 ### Producer's Problem
 
-<div class="wide-figure">
+<div>
 <iframe height="550px" width="100%" src="./highcharts/onePeriodProducer.html"></iframe>
 </div>
 
@@ -32,14 +32,14 @@ last_modified_date: 2022-08-25
 
 ### Consumer and Producer's Problem Combined
 
-<div class="wide-figure">
+<div>
 <iframe height="550px" width="100%" src="./highcharts/onePeriodBothAgents.html"></iframe>
 </div>
 <a href="./highcharts/onePeriodBothAgents.html">Standalone link.</a>
 
 ### Equilibrium
 
-<div class="wide-figure">
+<div>
 <iframe height="550px" width="100%" src="./highcharts/onePeriodEquilibrium.html"></iframe>
 </div>
 
@@ -49,7 +49,7 @@ last_modified_date: 2022-08-25
 
 ### Per-capita Solow Steady State
 
-<div class="wide-figure">
+<div>
 <iframe height="550px" width="100%" src="./highcharts/solowSteadyState.html"></iframe>
 </div>
 
@@ -64,7 +64,7 @@ last_modified_date: 2022-08-25
 ### Basic Model without Credit Market Imperfections
 
 
-<div class="wide-figure">
+<div>
 <iframe height="550px" width="100%" src="./highcharts/twoPeriodEndowment.html"></iframe>
 </div>
 
@@ -73,7 +73,7 @@ last_modified_date: 2022-08-25
 
 ### Interest Rate Spread
 
-<div class="wide-figure">
+<div>
 <iframe height="550px" width="100%" src="./highcharts/twoPeriodEndowmentWithBorrowingLimits.html"></iframe>
 </div>
 
@@ -82,7 +82,7 @@ last_modified_date: 2022-08-25
 
 ### Collateral Constraints
 
-<div class="wide-figure">
+<div>
 <iframe height="550px" width="100%" src="./highcharts/twoPeriodEndowmentWithDifferentRates.html"></iframe>
 </div>
 
