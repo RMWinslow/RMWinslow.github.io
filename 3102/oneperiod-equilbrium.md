@@ -45,8 +45,10 @@ In the simplest version (as in ch 4,5) the representative consumer decides how m
       $$c\leq w(h-l)\cdot\underbrace{(1-\tau)}_{laborTax}+\pi-T$$
 
 - Non-negativity: can't consume or work negative amounts 
+   
     $$c\geq0 \\ l\geq0 \\ N_{s}\geq0$$
     - Note that $N_{s}+l=h$, so   
+    
       $$l\geq0\implies N_{s}\leq h \\ N_{s}\geq0\implies l\leq h$$
 
 ### Utility
@@ -62,8 +64,10 @@ $$U(c,l)$$
     - Consumption and leisure are normal goods. (The optimal $c$ and $l$ both increase when we increase income $(\pi-T+wN_{s})$)
 - Another nice property: “Inada condition”
     - Marginal utility of a good is infinite if you don't have that good:
+
       $$\lim_{c\to0}\frac{\partial U}{\partial c}=+\infty$$
       $$\lim_{l\to0}\frac{\partial U}{\partial l}=+\infty$$
+
     - This isn't needed to have a representative consumer, but it makes the math easier because it makes it so the non-negativity conditions will always be non-binding.
 
 
