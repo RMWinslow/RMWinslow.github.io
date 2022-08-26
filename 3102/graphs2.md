@@ -73,6 +73,12 @@ last_modified_date: 2022-08-25
 
 ### Interest Rate Spread
 
+<div class="wide-figure">
+<iframe height="550px" width="100%" src="./highcharts/twoPeriodEndowmentWithBorrowingLimits.html"></iframe>
+</div>
+
+<a href="./highcharts/twoPeriodEndowmentWithBorrowingLimits.html">Standalone link.</a>
+
 
 ### Collateral Constraints
 
