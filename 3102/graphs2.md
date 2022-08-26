@@ -82,6 +82,13 @@ last_modified_date: 2022-08-25
 
 ### Collateral Constraints
 
+<div class="wide-figure">
+<iframe height="550px" width="100%" src="./highcharts/twoPeriodEndowmentWithDifferentRates.html"></iframe>
+</div>
+
+<a href="./highcharts/twoPeriodEndowmentWithDifferentRates.html">Standalone link.</a>
+
+
 
 
 

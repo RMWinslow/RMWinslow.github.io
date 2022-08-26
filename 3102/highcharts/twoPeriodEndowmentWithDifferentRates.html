@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script> 
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+    <style>
+        /* ensures the increment/decrement arrows always display */
+        /*https://davidwalsh.name/always-show-arrows-for-number-input*/
+            input[type=number]::-webkit-inner-spin-button, 
+            input[type=number]::-webkit-outer-spin-button {
+              opacity: 1;
+            }
+            .flexRow div{
+                padding: 2px;
+            }
+            .flexRow div input{
+                width: 4em;
+            }
+            body {
+                max-width: 60em;
+            }
+    </style>
+</head>
+<body>
+
+
+
+
+<div class="flex-container" style="display: flex;">
+
+    <div  style="max-width:500px; margin: 0 auto; flex: 2;">
+        <div id="graphHolder"></div>
+    </div>
+    
+    
+    <div style="flex:1; max-width:300px;">
+        <b>Exogenous Parameters:</b>   <hr>
+        <div class="flexRow" style="display: flex;flex-direction: column;" onclick="updateEverything()">
+            <div>\(y\):     <input type="number" id="income1"  step="1">  &nbsp; </div>
+            <div>\(y^\prime\):     <input type="number" id="income2"  step="1">  &nbsp; </div>
+            <div>\(t\):     <input type="number" id="tax1"  step="1">  &nbsp; </div>
+            <div>\(t^\prime\):     <input type="number" id="tax2"  step="1">  &nbsp; </div>
+            <div>\(r_b\):     <input type="number" id="rateBorrow"  step="0.01">  &nbsp; </div>
+            <div>\(r_s\):     <input type="number" id="rateSave"  step="0.01">  &nbsp; </div>
+            <div>\(\beta \):     <input type="number" id="beta"  step="0.01">  &nbsp; </div>
+            <button type="button" style="float: right;" onclick="updateEverything()" >Click to update chart.</button>
+        </div>
+        <br>
+        <b>Steady-State Values:</b><hr>
+        <div class="flexRow" style="display: flex;flex-direction: column;">
+            <div>\(c\): <output id='consumption1'>test</output></div>
+            <div>\(c'\): <output id='consumption2'>test</output></div>
+            <div>\(s\): <output id='savings'>test</output></div>
+            <div>\(U\): <output id='utility'>test</output></div>
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+    
+    function updateEverything(){
+        updateExogenous();
+        updateEndogenous();
+        updateChart();
+    }
+    
+    //chart parameters
+    minx = 0;
+    maxx = 100;
+    axissize = 600; //unused currently. Had weird side effects
+    chartSteps = 400; // The number of data points to sample when drawing a chart.
+
+    //--------------------------------------------------------------------------------------------
+    
+
+    //default values for exogenous variables
+    Y1 = 40;
+    Y2 = 40;
+    T1 = 0;
+    T2 = 0;
+    rb = 0.75;
+    rs = 0.05;
+    beta = 0.8;
+
+
+    //populate the input forms with the default values
+    $('#income1').val(Y1);
+    $('#income2').val(Y2);
+    $('#tax1').val(T1);
+    $('#tax2').val(T2);
+    $('#rateBorrow').val(rb);
+    $('#rateSave').val(rs);
+    $('#beta').val(beta);
+
+
+    //Pull data from the forms and update the exogenous variables
+    function updateExogenous(){
+        Y1 = Number($('#income1').val());
+        Y2 = Number($('#income2').val());
+        T1 = Number($('#tax1').val());
+        T2 = Number($('#tax2').val());
+        rb = Number($('#rateBorrow').val());
+        rs = Number($('#rateSave').val());
+        beta = Number($('#beta').val());
+    }
+
+
+
+
+
+    //calculate and update values for endogenous variables
+    function updateEndogenous(){
+
+        wb = ((Y1-T1) + (Y2-T2)/(1+rb))//wealth for a borrower
+        ws = ((Y1-T1) + (Y2-T2)/(1+rs))//wealth for a lender
+
+        //calculate the optimum for the lending interest rate
+        c1S = ws / (1+beta);
+        c2S = (1+rs)*beta*c1S;
+        utilityS = Math.log(c1S)+beta*Math.log(c2S);
+
+        //calculate the optimum for the borrowing interest rate
+        c1B = wb / (1+beta);
+        c2B = (1+rb)*beta*c1B;
+       utilityB = Math.log(c1B)+beta*Math.log(c2B);
+
+       //If one of the conditional optima is feasible, then that point must be strictly preferred to the endowment.
+       //Therefore endowment is optimal only if neither conditional optima is feasible.
+       //Prepare for if-statment speghetti:
+       if ((c1S >= Y1 - T1) && (c1B <= Y1 - T1)){ 
+            //Neither saving optimum nor borrowing optimum are feasible. endowment is optimal
+            c1 = Y1 - T1;
+            c2 = Y2 - T2;
+       } else if (c1S >= Y1 - T1){
+           //Only Borrowing is feasible.
+            c1 = c1B;
+            c2 = c2B;
+       } else if (c1B <= Y1 - T1){
+           //Only saving is feasible.
+            c1 = c1S;
+            c2 = c2S;
+       } else{
+           //Both conditional optima are feasible. Choose the best.
+           if (utilityB>utilityS){
+                c1 = c1B;
+                c2 = c2B;
+           } else {
+                c1 = c1S;
+                c2 = c2S;
+           }
+       }
+       utility = Math.log(c1)+beta*Math.log(c2);
+
+       s = (Y1-T1) - c1
+
+        $("#consumption1").text(c1.toFixed(2));
+        $("#consumption2").text(c2.toFixed(2));
+        $("#savings").text(s.toFixed(2));
+        $("#utility").text(utility.toFixed(2));
+
+    }
+    updateEndogenous();
+   
+
+
+
+
+//----------------------------------------------------------------
+
+    //Functions for drawing lines.
+
+
+    function borrowerBudget(minx,maxx,steps){
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y = (1+rb)*(wb-x);
+            data.push([x,y]);
+        }
+        data.push([(Y1 + Y2/(1+rb)),0]);
+        return data;
+    }
+
+    function lenderBudget(minx,maxx,steps){
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y = (1+rs)*(ws-x);
+            data.push([x,y]);
+        }
+        data.push([(Y1 + Y2/(1+rs)),0]);
+        return data;
+    }
+
+
+    function savingMRSline(minx,maxx,steps){
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y =(1+rs)*beta*x;       
+            data.push([x,y]);
+        }
+        return data;
+    }
+
+    function borrowingMRSline(minx,maxx,steps){
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y =(1+rb)*beta*x;       
+            data.push([x,y]);
+        }
+        return data;
+    }
+
+
+    function genIsoquant(minx,maxx,steps){
+        //returns an array of points to draw an isoquant through this point
+        data = [];
+        stepsize = (maxx-minx)/steps;
+        utility = Math.log(c1)+beta*Math.log(c2);
+        for (var i = 0; i <= steps; i++){
+            x = minx+i*stepsize;
+            y = Math.exp((utility-Math.log(x))/beta) ;   
+            data.push([x,y]);
+        }
+        
+        return data;
+    }
+
+
+//---------------------------------------------------------------------------
+    //Code for rendering the graphs.
+
+    var endowChart = Highcharts.chart('graphHolder', {
+        chart: {type: 'line',  backgroundColor: null,  height: '100%', },
+        title: {text: "" },
+        legend:{ enabled:true,  align: 'right', verticalAlign: 'top', floating: true, itemDistance:200,},
+        xAxis: {
+            title: {
+                text: 'c      consumption today'
+            },           
+            //height: axissize,            
+            //width: axissize,
+            min: minx,
+            max: maxx,
+            gridLineWidth: 1,
+            tickInterval: 20
+        },
+        yAxis: {
+            title: {
+                text: "c'      consumption tomorrow"
+            },
+            //height: axissize,            
+            //width: axissize,
+            min:minx,
+            max: maxx,
+            tickInterval: 20
+        },
+        tooltip: {
+            headerFormat: '<b>{series.name}</b><br>',
+            pointFormat: "x={point.x:.2f}, y={point.y:.2f} ,"
+        },
+
+        plotOptions: {
+            spline: {
+                marker: {
+                    enabled: true
+                }
+            },
+            series: {
+                states: {
+                    hover: {
+                        enabled: true,
+                    },
+                    inactive: {
+                        opacity: 1
+                    }
+                }
+            }
+        },
+
+        //colors: ['#6CF', '#39F', '#06C', '#036', '#000'],
+
+        series: [{
+            name: "MRS = (1 + r_s)",
+            color: '#aaf',
+            data: savingMRSline(minx,maxx,chartSteps),
+        },{
+            name: "MRS = (1 + r_b)",
+            color: '#aaf',
+            data: borrowingMRSline(minx,maxx,chartSteps),
+        },{
+            name: "Utility Iso",
+            color: '#ada',
+            data: genIsoquant(minx,maxx,chartSteps),
+        },{
+            name: "Borrower BC",
+            color : '#151',
+            data: borrowerBudget(minx,maxx,chartSteps),
+            zones: [{value: Y2-T2}, {color: '#1512'}],
+        },{
+            name: "Saver BC",
+            color: '#115',
+            data: lenderBudget(minx,maxx,chartSteps),
+            zoneAxis: 'x', zones: [{value: Y1-T1}, {color:'#1152'}],
+        },{
+            name:"Endowment Point",
+            color: '#C00',
+            data:[{x:(Y1-T1),y:(Y2-T2),marker: {symbol: 'url(bigE.png)'}}]
+        },{
+            name:"Optimum",
+            color: '#FF0',
+            data:[{x:c1,y:c2,marker: {symbol: 'url(star.png)'}}]
+        },]
+    });
+
+//------------------------------------------------------------------------
+
+
+
+//Functions to update the graph's  data. redraw=false makes everything update at once
+function updateChart(){
+
+    //Update the dashed line zones first so they don't interfere with the rest of the animation.
+    endowChart.series[3].update({zones: [{value: Y2-T2}, {color:'#1152'}]}, );
+    endowChart.series[4].update({zoneAxis: 'x', zones: [{value: Y1-T1}, {color:'#1512'}]}, );
+
+
+    endowChart.series[0].setData(savingMRSline(minx,maxx,chartSteps));
+    endowChart.series[1].setData(borrowingMRSline(minx,maxx,chartSteps));
+    endowChart.series[2].setData(genIsoquant(minx,maxx,chartSteps));
+    endowChart.series[3].setData(borrowerBudget(minx,maxx,chartSteps));
+    endowChart.series[4].setData(lenderBudget(minx,maxx,chartSteps));
+    endowChart.series[5].data[0].update([(Y1-T1),(Y2-T2)]);
+    endowChart.series[6].data[0].update([c1,c2]);
+    endowChart.redraw();
+
+}
+
+
+</script>
+
+
+</body>
+</html>
+
+
+
