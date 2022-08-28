@@ -5,15 +5,20 @@ parent: 3102 Notes
 grand_parent: Teaching
 layout: post
 toc: true
-nav_order: 6
+nav_order: 201
 last_modified_date: 2022-08-23
 ---
 
 
 <!--(Representative Household)-->
 
+In a competitive equilibrium model, the representative consumer (also called the "representative household")
+is a single agent which represents the collective behavior of of a large number of small individual households or consumers.
+This representative consumer takes prices as given (because each individual consumer can't affect the price level), and chooses a level of consumption and leisure that maximizes their utility.
+
+
 <details markdown="block" open>
-<summary> Representative Consumer's Problem
+<summary> Definition of the representative consumer's problem with lump-sum taxes
 </summary>
 
 Taking prices, profits, taxes, and time available as given $\lbrace w,\pi,T,h\rbrace$, 
@@ -69,18 +74,18 @@ In the simplest version (as in ch 4,5) the representative consumer decides how m
 
 ### Constraints:
 
-- time constraint - you only have so many hours in the day to allocate to labor or leisure
+- The **time constraint** - You only have so many hours in the day to allocate to labor or leisure
     - We have some variable h, representing the amount of time in the day
     - That time can be split between labor $N_{s}$ and leisure $$
     
         $$N_{s}+l=h \\ N_{s}=h-l$$
     
-- Budget - Consumption is limited by disposable income
+- The **Budget Constraint** - Consumption is limited by disposable income.
     - Most basic version: 
      
       $$\underbrace{c}_{consumption}\leq w\cdot N_{s}=\underbrace{w}_{realWage}\cdot\underbrace{(h-l)}_{laborSupplied}$$
 
-    - More complicated version that includes government and divedends 
+    - A more complicated version that includes government and dividends 
 
       $$c\leq w(h-l)+\underbrace{\pi}_{profit}-\underbrace{T}_{lumpSumTax}$$
     
@@ -88,7 +93,7 @@ In the simplest version (as in ch 4,5) the representative consumer decides how m
       
       $$c\leq w(h-l)\cdot\underbrace{(1-\tau)}_{laborTax}+\pi-T$$
 
-- Non-negativity: can't consume or work negative amounts 
+- The **Non-negativity Constraints**: You can't consume or work negative amounts.
    
     $$c\geq0 \\ l\geq0 \\ N_{s}\geq0$$
 
@@ -96,9 +101,10 @@ In the simplest version (as in ch 4,5) the representative consumer decides how m
     
       $$l\geq0\implies N_{s}\leq h \\ N_{s}\geq0\implies l\leq h$$
 
-### Utility
 
-Consumer's utility which they are trying to maximize.
+### The Optimand (Utility)
+
+The consumer is trying to maximize a utility function which represents their preferences.
 
 $$U(c,l)$$
 
@@ -107,16 +113,15 @@ $$U(c,l)$$
     - More (consumption and leisure) is preferred to less (U is strictly increasing). Need this to ensure budget constraint always binds.
     - The Rep. Cons. likes diversity (U is concave). This ensures a unique solution.
     - Consumption and leisure are normal goods. (The optimal $c$ and $l$ both increase when we increase income $(\pi-T+wN_{s})$)
-- Another nice property: “Inada condition”
-    - Marginal utility of a good is infinite if you don't have that good:
+- Another nice property to have: Marginal utility of a good is infinite if you don't have that good:
 
-      $$\lim_{c\to0}\frac{\partial U}{\partial c}=+\infty$$
+    $$\lim_{c\to0}\frac{\partial U}{\partial c}=+\infty$$
 
-      $$\lim_{l\to0}\frac{\partial U}{\partial l}=+\infty$$
+    $$\lim_{l\to0}\frac{\partial U}{\partial l}=+\infty$$
 
     - This isn't needed to have a representative consumer, but it makes the math easier because it makes it so the non-negativity conditions will always be non-binding.
 
-
+<!-- “Inada condition”-->
 
 
 
@@ -178,33 +183,46 @@ In this particular case, the actual solution is found at the "corner" where the 
 
 Exogenous outcome $\pi-T$ goes down, then because $l$ and $c$ are normal goods, the solution will have less of each 
 
-$$\frac{\partial}{\partial T}l^{*}=\frac{\partial}{\partial T}\frac{wh+\pi-T}{2w}=\frac{\partial}{\partial T}\frac{-T}{2w}=\frac{-1}{2w}$$
+$$\frac{\partial}{\partial T}l^{*}=\frac{\partial}{\partial T}\frac{wh+\pi-T}{2w}=\frac{\partial}{\partial T}\frac{-T}{2w}=\frac{-1}{2w} < 0$$
 
-$$\frac{\partial}{\partial T}c^{*}=\frac{\partial}{\partial T}\frac{wh+\pi-T}{2}=-\frac{1}{2}$$
+$$\frac{\partial}{\partial T}c^{*}=\frac{\partial}{\partial T}\frac{wh+\pi-T}{2}=-\frac{1}{2} < 0$$
 
 #### Time endowment goes up:
 
-Because $c+wl\leq wh+\pi-T$, the time endowment is like an endowment of potential income, then because $$ and $c$ are normal goods, the optimum have more of each
+Because $c+wl\leq wh+\pi-T$, the time endowment is like an endowment of potential income, then because $l$ and $c$ are normal goods, the optimum have more of each
 
-<!--
-Profits goes up:
 
-Exogenous outcome \pi-T goes up, then because l and c are normal goods, the optimum have more of each\frac{\partial}{\partial\pi}l^{*}=\frac{\partial}{\partial\pi}\frac{wh+\pi-T}{2w}=\frac{1}{2w}
+#### Profits goes up:
 
-\frac{\partial}{\partial\pi}c^{*}=\frac{\partial}{\partial\pi}\frac{wh+\pi-T}{2}=\frac{1}{2}
+Exogenous outcome $\pi-T$ goes up, then because l and c are normal goods, the optimum have more of each
 
-Real wage goes up:
+$$\frac{\partial}{\partial\pi}l^{*}=\frac{\partial}{\partial\pi}\frac{wh+\pi-T}{2w}=\frac{1}{2w} > 0$$
 
-Because c+wl\leq wh+\pi-T, real wage has two effects:
+$$\frac{\partial}{\partial\pi}c^{*}=\frac{\partial}{\partial\pi}\frac{wh+\pi-T}{2}=\frac{1}{2} > 0$$
 
-• Income effect: wh goes up, increases potential labor income, which increases l^{*} and c^{*}
+#### Real wage goes up:
 
-• Substitution effect: wl goes up, increasing opportunity cost of l is higher, causing susbstitution with l going down and c going up
+Because the consumer's decisions are bound by the budget constraint $c+wl\leq wh+\pi-T$, an increase in the real wage has two effects:
 
-For c, both effects move in the same direction, so c goes up when w goes up
+- Income effect: $wh$ goes up, increases potential labor income, which increases $l^{*}$ and $c^{*}$
 
-For leisure, when w goes up, l could go up or down, depending on which effect is stronger.
+- Substitution effect: $wl$ goes up, increasing opportunity cost of $l$ is higher, causing substitution with $l$ going down and $c$ going up
 
-\frac{\partial}{\partial w}l^{*}=\frac{\partial}{\partial w}\frac{wh+\pi-T}{2w}
+For consumption, both effects move in the same direction, so $c$ goes up when $w$ goes up.
 
-\frac{\partial}{\partial w}c^{*}=\frac{\partial}{\partial w}\frac{wh+\pi-T}{2}=\frac{h}{2}-->
+$$\frac{\partial}{\partial w}c^{*}=\frac{\partial}{\partial w}\frac{wh+\pi-T}{2}=\frac{h}{2}$$
+
+For leisure, when $w$ goes up, $l$ could go up or down, depending on which effect is stronger.
+
+$$\frac{\partial}{\partial w}l^{*}=\frac{\partial}{\partial w}\frac{wh+\pi-T}{2w}$$
+
+
+
+
+## A Graphical Example
+
+
+<iframe height="510px" width="100%" src="./highcharts/onePeriodConsumer.html"></iframe>
+
+[Standalone Link](https://www.rmwinslow.com/3102/highcharts/onePeriodConsumer.html)
+
