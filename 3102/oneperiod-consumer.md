@@ -14,8 +14,8 @@ last_modified_date: 2022-08-23
 <summary> Representative Consumer's Problem
 </summary>
 
-Taking prices, profits, taxes, and time available as given $\left\{ w,\pi,T,h\right\}$ , 
-the consumer chooses labor supplied, leisure and consumption $\left\{ N_{s},l,c\right\}$  to solve:
+Taking prices, profits, taxes, and time available as given \(\left\{ w,\pi,T,h\right\}\) , 
+the consumer chooses labor supplied, leisure and consumption $$\left\{ N_{s},l,c\right\}$$  to solve:
 
 $$\begin{aligned}
 \max_{\left\{ N_{s},l,c\right\} } & U(c,l) \\
@@ -26,8 +26,8 @@ $$\begin{aligned}
 
 </details>
 
-- (Note that $\left\{ w,\pi,T,h\right\}$  
-    are “exogenous” and $\left\{ N_{s},l,c\right\}$  are “endogenous”)
+- (Note that $$\left\{ w,\pi,T,h\right\}$$  
+    are “exogenous” and $$\left\{ N_{s},l,c\right\}$$ are “endogenous”)
 
 Let's simplify the consumer's problem to just have $c,l$ as our endogenous variables: 
 
