@@ -1,195 +1,141 @@
 ---
 title: One Period Equilibrium
+subtitle: Combining the consumer's and producer's problems into a one-period competitive equilibrium model.
 parent: 3102 Notes
 grand_parent: Teaching
 layout: post
 toc: true
-nav_order: 6
+nav_order: 203
 last_modified_date: 2022-08-23
 ---
 
+<!--TODO: note about prices and allocations in this model-->
+<!--TODO: note about how the model is real, so price of consumption is just 1-->
 
-## The Representative Consumer
 
-Representative Consumer (Representative Household)
+## The Basic Recipe for a Competitive Equilibrium Model
 
-Any constrained optimization problem has a set of choice variables, constraints which limit what values those choices can take, and an optimand (the thing which is optimized).
 
-### Choices
+Given `{exogenousParameters}` a competitive equilibrium is any set of endogenous `{prices}` and endogenous `{allocations}` which satisfies the following conditions:
+- Price-taking agents are optimizing. <!--(We talked about these in ch 4.) -->
+- Markets clear.
+- (sometimes other constraints, typically just something like a government's budget balance)
 
-In the simplest version (as in ch 4,5) the representative consumer decides how much to consume $c$ and how much to work $N_{s}$ (or equivalently how much time to spend on leisure $l$)
 
-- Consumption represents some aggregate of goods and services which are purchased
-- Labor is equivalent to the total amount of time worked
-- leisure is meant to represent both relaxing but also home production (any time not spent working)
+### Price-Taking Agents
 
-### Constraints:
+This is the aspect that gives the "competitive" aspect to a "competitive equilibrium".
 
-- time constraint - you only have so many hours in the day to allocate to labor or leisure
-    - We have some variable h, representing the amount of time in the day
-    - That time can be split between labor $N_{s}$ and leisure $$
-    
-        $$N_{s}+l=h \\ N_{s}=h-l$$
-    
-- Budget - Consumption is limited by disposable income
-    - Most basic version: 
-     
-      $$\underbrace{c}_{consumption}\leq w\cdot N_{s}=\underbrace{w}_{realWage}\cdot\underbrace{(h-l)}_{laborSupplied}$$
+Price-taking agents takes prices as given when they optimize.
+Even though the equilibrium price may depend on the decisions that these agents make,
+they treat those prices *as if* they were exogenously fixed when making those decisions.
 
-    - More complicated version that includes government and divedends 
+Examples:
+    - Firms who act as profit-maximizers, taking the price of inputs and outputs as given.
+    - Consumers who maximize their utility function subject to some budget constraint, taking the price of goods and real wage as given.
 
-      $$c\leq w(h-l)+\underbrace{\pi}_{profit}-\underbrace{T}_{lumpSumTax}$$
-    
-    - Could also have, for example, a tax on labor: 
-      
-      $$c\leq w(h-l)\cdot\underbrace{(1-\tau)}_{laborTax}+\pi-T$$
 
-- Non-negativity: can't consume or work negative amounts 
-   
-    $$c\geq0 \\ l\geq0 \\ N_{s}\geq0$$
+### Market Clearing Conditions
 
-    - Note that $N_{s}+l=h$, so   
-    
-      $$l\geq0\implies N_{s}\leq h \\ N_{s}\geq0\implies l\leq h$$
+This is the "equilibrium" in "competitive equilibrium".
 
-### Utility
+For markets to clear, it means that Supply = Demand for anything that is split up or traded between agents.
+All our quantities need to be balanced, with nothing disappearing or appearing out of thin air.
 
-Consumer's utility which they are trying to maximize.
-
-$$U(c,l)$$
-
-- For these simple models, we want a “representative consumer”, which is represented as a single agent but is meant to represent a large number of small agents. Rep Cons. is meant to represent aggregate decisions.
-- To have a “representative consumer”, we need the utility function to have certain properties:
-    - More (consumption and leisure) is preferred to less (U is strictly increasing). Need this to ensure budget constraint always binds.
-    - The Rep. Cons. likes diversity (U is concave). This ensures a unique solution.
-    - Consumption and leisure are normal goods. (The optimal $c$ and $l$ both increase when we increase income $(\pi-T+wN_{s})$)
-- Another nice property: “Inada condition”
-    - Marginal utility of a good is infinite if you don't have that good:
-
-      $$\lim_{c\to0}\frac{\partial U}{\partial c}=+\infty$$
-
-      $$\lim_{l\to0}\frac{\partial U}{\partial l}=+\infty$$
-
-    - This isn't needed to have a representative consumer, but it makes the math easier because it makes it so the non-negativity conditions will always be non-binding.
+Examples:
+    - Amount of goods consumed = amount of goods produced.
+    - Amount of labor supplied = amount of labor demanded.
 
 
 
 
 
+## The Competitive Equilibrium Model from Chapter 5
+
+### The Full Definition
 
 
 
+Given the exogenous parameters $\lbrace K,h,z,G\rbrace$,
+a competitive equilibrium is any set of endogenous prices $\lbrace w\rbrace$ and allocations $\lbrace c,l,N_{s},N_{d},Y,T,\pi\rbrace$ that satisfy the following conditions:
 
-
-
-
-
-
-### Representative Consumer's Problem
-
-Taking prices, profits, taxes, and time available as given $\left\{ w,\pi,T,h\right\}$ , 
-the consumer chooses labor supplied, leisure and consumption $\left\{ N_{s},l,c\right\}$  to solve:
+- Representative Consumer optimizes: Treating prices $\lbrace w\rbrace$ and $\lbrace T,\pi\rbrace$ as given, the consumer chooses $\lbrace c,l,N_{s}\rbrace$ to solve
 
 $$\begin{aligned}
-\max_{\left\{ N_{s},l,c\right\} } & U(c,l) \\
+\max_{\lbrace  N_{s},l,c\rbrace} & U(c,l) \\
 \text{s.t. } & c\geq0,\ \ \ l\geq0,\ \ \ N_{s}\geq0 \\
-& c\leq w\cdot(h-l)+\pi-T \\ 
-& N_{s}=(h-l)
-\end{aligned}$$
+ & c\leq w\cdot(h-l)+\pi-T \\
+ & N_{s}=(h-l) 
+\end{aligned} 
+$$
 
-
-- (Note that $\left\{ w,\pi,T,h\right\}$  
-    are “exogenous” and $\left\{ N_{s},l,c\right\}$  are “endogenous”)
-
-Let's simplify the consumer's problem to just have $c,l$ as our endogenous variables: 
-
-$$\begin{aligned}\max_{\left\{ l,c\right\} } & U(c,l) \\
-\text{s.t. } & c\geq0,\ \ \ 0\leq l\leq h \\
-& c\leq w\cdot(h-l)+\pi-T \\
-\end{aligned}$$
-
-
-Assuming an interior solution, the characterizing equations are:
-
-$$c=w\cdot(h-l)+\pi-T \\ MRS=\frac{MU_{l}}{MU_{c}}=w$$
-
-
-### Example 
-
-Example: Let $U(c,l)=\ln c+\ln l$
-
-This utility function satisfies all all requirements for a rep. consumer problem:
+- Representative Firm optimizes: Treating prices $\lbrace w\rbrace$ as given, the firm chooses $\lbrace N_{d},Y\rbrace$ to solve:
 
 $$\begin{aligned}
-\max_{\left\{ l,c\right\} } & (\ln c+\ln l) \\
-\text{s.t. } & c\geq0,\ \ \ l\geq0,\ \ \ h\geq l \\
-& c\leq w\cdot(h-l)+\pi-T \\
-\end{aligned}$$
+\max_{Y,N_{d}} & \ \pi \\
+\text{s.t. } & N_{d}\geq0,\ Y\geq0 \\
+ & \pi = Y-wN_{d} \\
+ & Y=zF(K,N_{d}) 
+\end{aligned} \\
+$$
 
-Assuming an interior solution, this consumer's optimum is characterized by the following:
+- Markets Clear:
+  
+  $$Y=C+G$$
+  
+  $$h-l=N_{s}=N_{d}$$
 
-$$MRS=\frac{MU_{l}}{MU_{c}}=\frac{\left(\frac{1}{l}\right)}{\left(\frac{1}{c}\right)}=w=MRT$$
+<!--- Profit is $\pi=Y-wN_{d}$-->
 
-$$c=w(h-l)+\pi-T$$
-
-Solving this example for optimal $c$ and $l$
-
-$$l^{*}=\frac{wh+\pi-T}{2w}$$
-
-$$c^{*}=\frac{wh+\pi-T}{2}$$
-
-
-#### Examples of testing the interior solutions assumption
-
-If $w=1$, $h=60$, $\pi=30$, $T=10$, then we have an interior solution 
-
-$$l^{*}=\frac{60+20}{2}=40$$
-
-$$c^{*}=\frac{60+20}{2}=40$$
-
-If $w=0.5,h=30,\pi=30,T=10,$ if we try to plug in the above
-
-$$l^{*}=\frac{15+20}{1}=35$$
-
-$$c^{*}=\frac{15+20}{2}=35/2$$
-
-So for these parameters, the assumption of an interior solution cannot be correct. 
-In this particular case, the actual solution is found at the "corner" where the consumer doesn't work and only consumes their exogenous income.
+- Government Budget is balanced:$T=G$
 
 
-#### Shocks to exogenous variables
+### The Price-taking agents.
 
-##### Lump-sum taxes goes up:
+For this model, we have two price-taking agents:
+- The representative consumer.
+- The representative firm.
 
-Exogenous outcome $\pi-T$ goes down, then because $l$ and $c$ are normal goods, the solution will have less of each 
 
-$$\frac{\partial}{\partial T}l^{*}=\frac{\partial}{\partial T}\frac{wh+\pi-T}{2w}=\frac{\partial}{\partial T}\frac{-T}{2w}=\frac{-1}{2w}$$
 
-$$\frac{\partial}{\partial T}c^{*}=\frac{\partial}{\partial T}\frac{wh+\pi-T}{2}=-\frac{1}{2}$$
+### The Market Clearing Conditions
 
-##### Time endowment goes up:
+In this model, there are two things which are traded between agents: labor, and goods.
 
-Because $c+wl\leq wh+\pi-T$, the time endowment is like an endowment of potential income, then because $$ and $c$ are normal goods, the optimum have more of each
+So the two market clearing conditions are that:
 
-<!--
-Profits goes up:
+- Labor supplied must equal labor demanded. $h-l=N_{s}=N_{d}$
+- The amount of amount produced must equal the amount of output used $zF(K,N_{d})=Y=c+G$
 
-Exogenous outcome \pi-T goes up, then because l and c are normal goods, the optimum have more of each\frac{\partial}{\partial\pi}l^{*}=\frac{\partial}{\partial\pi}\frac{wh+\pi-T}{2w}=\frac{1}{2w}
+<!--Technically only one of these is needed.-->
 
-\frac{\partial}{\partial\pi}c^{*}=\frac{\partial}{\partial\pi}\frac{wh+\pi-T}{2}=\frac{1}{2}
+### Other Constraints (government budget)
 
-Real wage goes up:
+The only other constraint in this version of the model is that the government's budget must be balanced.
 
-Because c+wl\leq wh+\pi-T, real wage has two effects:
+To keep things simple in this model, we represent the government with the following assumptions:
 
-• Income effect: wh goes up, increases potential labor income, which increases l^{*} and c^{*}
+- Government spending $G$ is exogenously specified, and must be funded.
+- The government raises funds through a lump-sum tax on consumers, $T$.
+- The government's budget must be balanced, meaning that the following equality holds:
+    
+  $$T=G$$
 
-• Substitution effect: wl goes up, increasing opportunity cost of l is higher, causing susbstitution with l going down and c going up
+Not that the government isn't an agent in this version of the model.
+They don't *choose* how much to spend. 
+There is just some exogenous amount of government expenditures that must be satisfied (you might imagine this as national defense).
 
-For c, both effects move in the same direction, so c goes up when w goes up
+You can set up a equilibrium model where the government is an optimizing agent, but that would make the algebra more complicated.
 
-For leisure, when w goes up, l could go up or down, depending on which effect is stronger.
 
-\frac{\partial}{\partial w}l^{*}=\frac{\partial}{\partial w}\frac{wh+\pi-T}{2w}
+<!--TODO: Characterizing equations.-->
 
-\frac{\partial}{\partial w}c^{*}=\frac{\partial}{\partial w}\frac{wh+\pi-T}{2}=\frac{h}{2}-->
+
+
+## A note about Endogeneity
+
+While the prices are endogenous to the competitive equilibrium, they are exogenous to each individual agent's problem.
+
+A visual analogy might help. Each bubble below represents a set of constraints. Any parameters inside a bubble are endogenous to that problem; any parameters outside it are exogenous to that problem.
+
+![A doodle using nested bubbles to illustrate how prices are endogenous to the competitive equilibrium but exogenous to each competitive agent's optimization problem.](img-CE-endogenous-doodle.png)
