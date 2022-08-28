@@ -10,14 +10,14 @@ last_modified_date: 2022-08-23
 ---
 
 
+<!--(Representative Household)-->
+
 <details markdown="block" open>
 <summary> Representative Consumer's Problem
 </summary>
 
-$$\Big\lbrace \frac{2}{3} \rbrace$$
-
 Taking prices, profits, taxes, and time available as given $\lbrace w,\pi,T,h\rbrace$, 
-the consumer chooses labor supplied, leisure and consumption $$\lbrace N_{s},l,c\rbrace$$  to solve:
+the consumer chooses labor supplied, leisure and consumption $\lbrace N_{s},l,c\rbrace$  to solve:
 
 $$\begin{aligned}
 \max_{\lbrace N_{s},l,c\rbrace } & U(c,l) \\
@@ -32,10 +32,10 @@ $$\begin{aligned}
 
 
 
-- (Note that $$\lbrace w,\pi,T,h\rbrace$$ 
-    are “exogenous” and $$\lbrace N_{s},l,c\rbrace$$ are “endogenous”)
+(Note that $\lbrace w,\pi,T,h\rbrace$
+are “exogenous” and $\lbrace N_{s},l,c\rbrace$ are “endogenous”)
 
-Let's simplify the consumer's problem to just have $c,l$ as our endogenous variables: 
+We can simplify the consumer's problem to just have $c,l$ as our endogenous variables:
 
 $$\begin{aligned}\max_{\lbrace l,c\rbrace } & U(c,l) \\
 \text{s.t. } & c\geq0,\ \ \ 0\leq l\leq h \\
@@ -56,8 +56,6 @@ $$c=w\cdot(h-l)+\pi-T \\ MRS=\frac{MU_{l}}{MU_{c}}=w$$
 
 
 ## Details about the problem.
-
-Representative Consumer (Representative Household)
 
 Any constrained optimization problem has a set of choice variables, constraints which limit what values those choices can take, and an optimand (the thing which is optimized).
 
