@@ -14,27 +14,13 @@ last_modified_date: 2022-08-23
 <summary> Representative Consumer's Problem
 </summary>
 
-Test one  $$\left\{ w,\pi,T,h\right\}$$
-
-Test two  $\left\{ w,\pi,T,h\right\}$
-
-Test Three  $\lbrace w,\pi,T,h \rbrace$
-
-Test four $\lbrace \frac{2}{3} \rbrace$
-
-Test four $\lbrack w,\pi,T,h \rbrack$
-
-Test four $[w,\pi,T,h]$
-
-Test four $\big[w,\pi,T,h\big]$
-
-$$\big\lbrace \frac{2}{3} \rbrace$$
+$$\Big\lbrace \frac{2}{3} \rbrace$$
 
 Taking prices, profits, taxes, and time available as given $\lbrace w,\pi,T,h\rbrace$, 
-the consumer chooses labor supplied, leisure and consumption $$\left\{ N_{s},l,c\right\}$$  to solve:
+the consumer chooses labor supplied, leisure and consumption $$\lbrace N_{s},l,c\rbrace$$  to solve:
 
 $$\begin{aligned}
-\max_{\left\{ N_{s},l,c\right\} } & U(c,l) \\
+\max_{\lbrace N_{s},l,c\rbrace } & U(c,l) \\
 \text{s.t. } & c\geq0,\ \ \ l\geq0,\ \ \ N_{s}\geq0 \\
 & c\leq w\cdot(h-l)+\pi-T \\ 
 & N_{s}=(h-l)
@@ -42,12 +28,16 @@ $$\begin{aligned}
 
 </details>
 
-- (Note that $$\left\{ w,\pi,T,h\right\}$$ 
-    are “exogenous” and $$\left\{ N_{s},l,c\right\}$$ are “endogenous”)
+
+
+
+
+- (Note that $$\lbrace w,\pi,T,h\rbrace$$ 
+    are “exogenous” and $$\lbrace N_{s},l,c\rbrace$$ are “endogenous”)
 
 Let's simplify the consumer's problem to just have $c,l$ as our endogenous variables: 
 
-$$\begin{aligned}\max_{\left\{ l,c\right\} } & U(c,l) \\
+$$\begin{aligned}\max_{\lbrace l,c\rbrace } & U(c,l) \\
 \text{s.t. } & c\geq0,\ \ \ 0\leq l\leq h \\
 & c\leq w\cdot(h-l)+\pi-T \\
 \end{aligned}$$
@@ -148,7 +138,7 @@ Example: Let $U(c,l)=\ln c+\ln l$
 This utility function satisfies all all requirements for a rep. consumer problem:
 
 $$\begin{aligned}
-\max_{\left\{ l,c\right\} } & (\ln c+\ln l) \\
+\max_{\lbrace l,c\rbrace } & (\ln c+\ln l) \\
 \text{s.t. } & c\geq0,\ \ \ l\geq0,\ \ \ h\geq l \\
 & c\leq w\cdot(h-l)+\pi-T \\
 \end{aligned}$$
