@@ -1,5 +1,6 @@
 ---
 title: Research
+has_children: true
 ---
 
 # Research 
