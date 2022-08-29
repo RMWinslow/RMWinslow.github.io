@@ -55,6 +55,8 @@ Examples:
 ### The Full Definition
 
 
+<details markdown="block" open>
+<summary>Definition of the Closed Economy 1-Period Competitive Equilibrium</summary>
 
 Given the exogenous parameters $\lbrace K,h,z,G\rbrace$,
 a competitive equilibrium is any set of endogenous prices $\lbrace w\rbrace$ and allocations $\lbrace c,l,N_{s},N_{d},Y,T,\pi\rbrace$ that satisfy the following conditions:
@@ -88,6 +90,8 @@ $$
 <!--- Profit is $\pi=Y-wN_{d}$-->
 
 - Government Budget is balanced:$T=G$
+
+</details>
 
 
 ### The Price-taking agents.
