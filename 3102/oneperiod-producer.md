@@ -117,20 +117,41 @@ $$N^{*}=\left(\frac{(1-\alpha)zK^{\alpha}}{w}\right)^{\frac{1}{\alpha}}$$
 
 
 
-### Shocks to our exogenous parameters:
+
+
+
+
+
+
+## A Graphical Example
+
+<link href="https://kineticgraphs.org/css/kg.0.2.6.css" rel="stylesheet" type="text/css" />
+<script src="https://kineticgraphs.org/js/kg3d.0.2.6.js"></script>
+<div class="kg-container" src="./graphs/twoPeriodCollateralConstraint.yml" clearcolor="#fff0"></div>
+
+
+
+
+
+
+
+
+
+
+## Shocks to our exogenous parameters:
 
 How does the Firm's decisions change in response to changes in exogenous parameters?
 
 Exogenous parameters: $w,K,z,\alpha$
 
-#### Increase in real wage $w$
+### Increase in real wage $w$
 
 $N_{d}^{*}$ decreases and so $Y^{*}$ decreases. 
 For example, with Cobb-douglass, this can be shown by:
 
 $$\frac{\partial}{\partial w}N_{d}^{*}=\frac{\partial}{\partial w}\left(\frac{(1-\alpha)zK^{\alpha}}{w}\right)^{\frac{1}{\alpha}} < 0$$
 
-#### Increase in the exogenous capital stock $K$
+### Increase in the exogenous capital stock $K$
 
 $N_{d}^{*}$ increases and so $Y^{*}$ increases.
 
@@ -138,7 +159,7 @@ In Cobb-Douglas:
 
 $$\frac{\partial}{\partial K}N_{d}^{*}=\frac{\partial}{\partial K}\left(\frac{(1-\alpha)z}{w}\right)^{\frac{1}{\alpha}}K=\left(\frac{(1-\alpha)z}{w}\right)^{\frac{1}{\alpha}} > 0$$
 
-#### Increase in total factor productivity $z$
+### Increase in total factor productivity $z$
 
 In this model, without investment, this has the same effect as increase in K. 
 $N_{d}^{*}$ increases and so $Y^{*}$ increases.
@@ -147,7 +168,7 @@ In Cobb-Douglas:
 
 $$\frac{\partial}{\partial z}N_{d}^{*}=\frac{\partial}{\partial z}\left(\frac{(1-\alpha)K^{\alpha}}{w}\right)^{\frac{1}{\alpha}}z^{\frac{1}{\alpha}}=\left(\frac{(1-\alpha)K^{\alpha}}{w}\right)^{\frac{1}{\alpha}}\frac{1}{\alpha}z^{\frac{1}{\alpha}-1} > 0$$
 
-####  Increase in $\alpha$: 
+###  Increase in `$\alpha$`: 
 
 (This one only applies for Cobb-Douglas)
 
@@ -178,11 +199,5 @@ So if we want a "real-world" estimate of $1-\alpha$, we can use the [labor compe
 
 </aside>
 
-
-## A Graphical Example
-
-<link href="https://kineticgraphs.org/css/kg.0.2.6.css" rel="stylesheet" type="text/css" />
-<script src="https://kineticgraphs.org/js/kg3d.0.2.6.js"></script>
-<div class="kg-container" src="./graphs/twoPeriodCollateralConstraint.yml" clearcolor="#fff0"></div>
 
 
