@@ -168,7 +168,7 @@ In Cobb-Douglas:
 
 $$\frac{\partial}{\partial z}N_{d}^{*}=\frac{\partial}{\partial z}\left(\frac{(1-\alpha)K^{\alpha}}{w}\right)^{\frac{1}{\alpha}}z^{\frac{1}{\alpha}}=\left(\frac{(1-\alpha)K^{\alpha}}{w}\right)^{\frac{1}{\alpha}}\frac{1}{\alpha}z^{\frac{1}{\alpha}-1} > 0$$
 
-###  Increase in `$\alpha$`: 
+###  Increase in $\alpha$: 
 
 (This one only applies for Cobb-Douglas)
 
