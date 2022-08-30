@@ -1,8 +1,8 @@
 ---
 title: Prices
 subtitle: Prices, Price Indices, and Chain-Weighting
-parent: 3102 Notes
-grand_parent: Teaching
+parent: Macroeconomic Measurement
+grand_parent: Notes
 layout: post
 nav_order: 2
 last_modified_date: 2022-08-23

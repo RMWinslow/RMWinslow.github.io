@@ -1,8 +1,8 @@
 ---
 title: Gross Domestic Product
 subtitle: GDP and Related Measurements in the National Accounts
-parent: 3102 Notes
-grand_parent: Teaching
+parent: Macroeconomic Measurement
+grand_parent: Notes
 layout: post
 toc: true
 last_modified_date: 2022-08-23

@@ -1,7 +1,7 @@
 ---
 title: National Savings
-parent: 3102 Notes
-grand_parent: Teaching
+parent: Macroeconomic Measurement
+grand_parent: Notes
 layout: post
 toc: false
 nav_order: 3
