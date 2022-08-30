@@ -1,7 +1,7 @@
 ---
-title: Research
+title: Notes
 has_children: true
-nav_order: 10
+nav_order: 30
 ---
 
 # Research 

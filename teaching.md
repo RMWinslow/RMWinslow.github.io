@@ -1,6 +1,7 @@
 ---
 title: Teaching
 has_children: true
+nav_order: 20
 ---
 
 # Teaching Experience
