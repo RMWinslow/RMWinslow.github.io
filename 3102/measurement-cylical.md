@@ -1,6 +1,6 @@
 ---
 title: Business Cycles
-parent: Macroeconomic Measurement
+parent: Aggregate Measurement
 grand_parent: Notes
 layout: post
 toc: false

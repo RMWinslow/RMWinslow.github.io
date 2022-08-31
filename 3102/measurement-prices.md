@@ -1,7 +1,7 @@
 ---
 title: Prices
 subtitle: Prices, Price Indices, and Chain-Weighting
-parent: Macroeconomic Measurement
+parent: Aggregate Measurement
 grand_parent: Notes
 layout: post
 nav_order: 2

@@ -1,7 +1,7 @@
 ---
 title: Gross Domestic Product
 subtitle: GDP and Related Measurements in the National Accounts
-parent: Macroeconomic Measurement
+parent: Aggregate Measurement
 grand_parent: Notes
 layout: post
 toc: true
