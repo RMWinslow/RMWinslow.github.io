@@ -154,6 +154,9 @@ For example, personal income taxes wouldn't be counted because that income is al
 - [NIPA Handbook: Concepts and Methods of the U.S. National Income and Product Accounts](https://www.bea.gov/resources/methodologies/nipa-handbook) - detailed description of the National Accounts for the US.
 
 
+<div class="newpage"></div>
+
+
 ## Tables
 
 <div class="embed-container"><iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=TbEe&width=670&height=475" scrolling="no" frameborder="0" style="overflow:hidden;" allowTransparency="true" loading="lazy"></iframe></div><script src="https://fred.stlouisfed.org/graph/js/embed.js" type="text/javascript"></script>
