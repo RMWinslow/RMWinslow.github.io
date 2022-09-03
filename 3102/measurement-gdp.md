@@ -66,7 +66,9 @@ In theory, all three approaches should yield the same total value.
 <figcaption>Three ways to measure GDP. Recreation of figure 2.1 from the BEA's NIPA Handbook. GDP components not to scale.</figcaption>
 </figure>
 
-\newpage{}
+
+---
+
 
 ### Expenditure Approach:
 
@@ -91,8 +93,7 @@ $$C + I + G + NX$$
 
 The expenditure approach is considered the fastest and most reliable way to measure GDP.
 
-
-\newpage{}
+---
 
 <!-- 
 If a cheese wheel is produced this year, we want it to count towards GDP this year, even if it I don't buy it to eat until next year. And when I do buy that cheese wheel next year, we w
@@ -114,6 +115,8 @@ the intermediate inputs. Intermediate goods cancel out, while final goods remain
 A firm’s value added is (That firm’s revenue, including inventory changes) minus (That firm’s input costs of intermediate goods and services).
 
 You can also calculate Value-added Approach GDP simply by adding up each firm’s value-added.
+
+<hr class="pagebreak">
 
 
 ### Income Approach: 
@@ -147,14 +150,13 @@ Note that not *all* tax revenue is counted towards GDI, only revenue from taxes 
 For example, personal income taxes wouldn't be counted because that income is already counted under wages and salaries.-->
 
 
----
+<hr class="pagebreak">
 
 ## Links
 
 - [NIPA Handbook: Concepts and Methods of the U.S. National Income and Product Accounts](https://www.bea.gov/resources/methodologies/nipa-handbook) - detailed description of the National Accounts for the US.
 
-
-<div class="newpage"></div>
+<hr class="pagebreak">
 
 
 ## Tables
