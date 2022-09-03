@@ -7,6 +7,11 @@ layout: post
 toc: true
 last_modified_date: 2022-08-23
 nav_order: 1
+papersize: letter
+linkcolor: blue
+geometry:
+- margin=20mm
+- headsep=0.5cm
 ---
 
 
@@ -61,7 +66,7 @@ In theory, all three approaches should yield the same total value.
 <figcaption>Three ways to measure GDP. Recreation of figure 2.1 from the BEA's NIPA Handbook. GDP components not to scale.</figcaption>
 </figure>
 
-
+\newpage{}
 
 ### Expenditure Approach:
 
@@ -85,6 +90,9 @@ $$C + I + G + NX$$
 [^InvestmentIntermediateDifference]: Investments and intermediate inputs are not the same thing. Both are used to create other goods, but an intermediate input goes *into* the final good or is otherwise transformed, whereas fixed investment goods, aka capital, can be used to produce many units of output over several years. The flour that goes into the bread is an intermediate input; the oven that bakes it is an investment.
 
 The expenditure approach is considered the fastest and most reliable way to measure GDP.
+
+
+\newpage{}
 
 <!-- 
 If a cheese wheel is produced this year, we want it to count towards GDP this year, even if it I don't buy it to eat until next year. And when I do buy that cheese wheel next year, we w
@@ -147,6 +155,8 @@ For example, personal income taxes wouldn't be counted because that income is al
 
 
 ## Tables
+
+<div class="embed-container"><iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=TbEe&width=670&height=475" scrolling="no" frameborder="0" style="overflow:hidden;" allowTransparency="true" loading="lazy"></iframe></div><script src="https://fred.stlouisfed.org/graph/js/embed.js" type="text/javascript"></script>
 
 
 ### US Expenditure Approach GDP with components
@@ -407,6 +417,7 @@ For example, personal income taxes wouldn't be counted because that income is al
 </tbody>
 </table>
 
+------------------------
 
 ### US Income Approach GDP with components
 
