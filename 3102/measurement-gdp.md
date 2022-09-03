@@ -159,8 +159,7 @@ For example, personal income taxes wouldn't be counted because that income is al
 
 ## Tables
 
-<a href="https://fred.stlouisfed.org/series/gdp"><img src="https://fred.stlouisfed.org/graph/fredgraph.png?g=TbEe"></a>
-
+[![Graph from FRED showing Real GDP](https://fred.stlouisfed.org/graph/fredgraph.png?g=TbEe)](https://fred.stlouisfed.org/series/gdp)
 
 ### US Expenditure Approach GDP with components
 
