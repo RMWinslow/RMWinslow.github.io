@@ -1,6 +1,6 @@
 ---
 title: Labor Aggregates
-parent: Macroeconomic Measurement
+parent: Aggregate Measurement
 grand_parent: Notes
 layout: post
 nav_order: 4
