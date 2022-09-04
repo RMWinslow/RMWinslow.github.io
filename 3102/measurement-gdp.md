@@ -558,16 +558,7 @@ https://fredaccount.stlouisfed.org/public/dashboard/17831
     <td>24.8%</td>
   </tr>
   <tr>
-    <td style="padding-left:1em;">Private enterprises</td>
-    <td>5.1</td>
-    <td>5.2</td>
-    <td>5.9</td>
-    <td>23.8%</td>
-    <td>24.5%</td>
-    <td>24.8%</td>
-  </tr>
-  <tr>
-    <td style="padding-left:2em;">Net interest and miscellaneous payments, domestic industries</td>
+    <td style="padding-left:1em;">Net interest and miscellaneous payments, domestic industries</td>
     <td>0.8</td>
     <td>0.8</td>
     <td>0.9</td>
@@ -576,7 +567,7 @@ https://fredaccount.stlouisfed.org/public/dashboard/17831
     <td>3.8%</td>
   </tr>
   <tr>
-    <td style="padding-left:2em;">Business current transfer payments (net)</td>
+    <td style="padding-left:1em;">Business current transfer payments (net)</td>
     <td>0.2</td>
     <td>0.2</td>
     <td>0.2</td>
@@ -585,7 +576,7 @@ https://fredaccount.stlouisfed.org/public/dashboard/17831
     <td>0.7%</td>
   </tr>
   <tr>
-    <td style="padding-left:2em;">Proprietors' income with inventory valuation and capital consumption&nbsp;&nbsp;&nbsp;adjustments</td>
+    <td style="padding-left:1em;">Proprietors' income with inventory valuation and capital consumption&nbsp;&nbsp;&nbsp;adjustments</td>
     <td>1.6</td>
     <td>1.7</td>
     <td>1.8</td>
@@ -594,7 +585,7 @@ https://fredaccount.stlouisfed.org/public/dashboard/17831
     <td>7.6%</td>
   </tr>
   <tr>
-    <td style="padding-left:2em;">Rental income of persons with capital consumption adjustment</td>
+    <td style="padding-left:1em;">Rental income of persons with capital consumption adjustment</td>
     <td>0.7</td>
     <td>0.7</td>
     <td>0.7</td>
@@ -603,7 +594,7 @@ https://fredaccount.stlouisfed.org/public/dashboard/17831
     <td>3.1%</td>
   </tr>
   <tr>
-    <td style="padding-left:2em;" >Corporate profits with inventory valuation and capital consumption adjustments, domestic industries</td>
+    <td style="padding-left:1em;" >Corporate profits with inventory valuation and capital consumption adjustments, domestic industries</td>
     <td>1.9</td>
     <td>1.8</td>
     <td>2.3</td>
@@ -612,7 +603,7 @@ https://fredaccount.stlouisfed.org/public/dashboard/17831
     <td>9.6%</td>
   </tr>
   <tr>
-    <td style="padding-left:3em;">Taxes on corporate income</td>
+    <td style="padding-left:2em;">Taxes on corporate income</td>
     <td>0.3</td>
     <td>0.3</td>
     <td>0.4</td>
@@ -621,7 +612,7 @@ https://fredaccount.stlouisfed.org/public/dashboard/17831
     <td>1.7%</td>
   </tr>
   <tr>
-    <td style="padding-left:3em;">Profits after tax with inventory valuation and capital consumption adjustments</td>
+    <td style="padding-left:2em;">Profits after tax with inventory valuation and capital consumption adjustments</td>
     <td>1.6</td>
     <td>1.5</td>
     <td>1.9</td>
@@ -630,7 +621,7 @@ https://fredaccount.stlouisfed.org/public/dashboard/17831
     <td>7.9%</td>
   </tr>
   <tr>
-    <td style="padding-left:4em;">Net dividends</td>
+    <td style="padding-left:3em;">Net dividends</td>
     <td>0.9</td>
     <td>1.1</td>
     <td>1.2</td>
@@ -639,7 +630,7 @@ https://fredaccount.stlouisfed.org/public/dashboard/17831
     <td>4.9%</td>
   </tr>
   <tr>
-    <td style="padding-left:4em;">Undistributed corporate profits with inventory valuation and capital consumption adjustments</td>
+    <td style="padding-left:3em;">Undistributed corporate profits with inventory valuation and capital consumption adjustments</td>
     <td>0.6</td>
     <td>0.4</td>
     <td>0.7</td>
