@@ -171,12 +171,16 @@ For example, personal income taxes wouldn't be counted because that income is al
 - Graphs from FRED
     - [Graph of US GDP (nominal, per-quarter at annual rate, seasonally adjusted)](https://fred.stlouisfed.org/series/gdp)
     - [Expenditure Approach GDP Components as share of total.](https://fred.stlouisfed.org/graph/?g=TnqK)
+    - [Income Approach GDP Components as share of total.](https://fred.stlouisfed.org/graph/?g=Tnty)
 
 
 <!--There are links to some interesting blog posts under this FRED graph
     - [GDP Expenditure Approach Components Table](https://fred.stlouisfed.org/release/tables?rid=53&eid=12998)
 [![Graph from FRED showing Nominal GDP Components](https://fred.stlouisfed.org/graph/fredgraph.png?g=Tnqh)](https://fred.stlouisfed.org/graph/?id=PCEC,NETEXP,GCE,GPDI,)
+[![Graph from FRED showing Nominal GDI Components](IMAGEURLHERE)](https://fred.stlouisfed.org/graph/?id=GDICOMP,COFC,GDITAXES,GDINOS,)
 https://fredaccount.stlouisfed.org/public/dashboard/17831
+https://fredblog.stlouisfed.org/2016/06/2393/
+- [Same Graph as above, but with "Taxes on corporate income" lumped in with Taxes on production and imports](https://fred.stlouisfed.org/graph/?g=TntI)
 -->
 
 
@@ -576,7 +580,7 @@ https://fredaccount.stlouisfed.org/public/dashboard/17831
     <td>0.7%</td>
   </tr>
   <tr>
-    <td style="padding-left:1em;">Proprietors' income with inventory valuation and capital consumption&nbsp;&nbsp;&nbsp;adjustments</td>
+    <td style="padding-left:1em;">Proprietors' income†</td>
     <td>1.6</td>
     <td>1.7</td>
     <td>1.8</td>
@@ -594,7 +598,7 @@ https://fredaccount.stlouisfed.org/public/dashboard/17831
     <td>3.1%</td>
   </tr>
   <tr>
-    <td style="padding-left:1em;" >Corporate profits with inventory valuation and capital consumption adjustments, domestic industries</td>
+    <td style="padding-left:1em;" >Corporate profits†, domestic industries</td>
     <td>1.9</td>
     <td>1.8</td>
     <td>2.3</td>
@@ -612,7 +616,7 @@ https://fredaccount.stlouisfed.org/public/dashboard/17831
     <td>1.7%</td>
   </tr>
   <tr>
-    <td style="padding-left:2em;">Profits after tax with inventory valuation and capital consumption adjustments</td>
+    <td style="padding-left:2em;">Profits after tax†</td>
     <td>1.6</td>
     <td>1.5</td>
     <td>1.9</td>
@@ -630,7 +634,7 @@ https://fredaccount.stlouisfed.org/public/dashboard/17831
     <td>4.9%</td>
   </tr>
   <tr>
-    <td style="padding-left:3em;">Undistributed corporate profits with inventory valuation and capital consumption adjustments</td>
+    <td style="padding-left:3em;">Undistributed corporate profits†</td>
     <td>0.6</td>
     <td>0.4</td>
     <td>0.7</td>
@@ -677,8 +681,10 @@ https://fredaccount.stlouisfed.org/public/dashboard/17831
 </tbody>
 </table>
 
+<small>†: with inventory valuation and capital consumption adjustments. These adjustments make the numbers differ from "book profits". This is done to make the resulting numbers better reflect income from current production.</small>
 
 
+<!--TODO: Imputations-->
 
 <!--
 https://www.nber.org/digest/may17/global-rise-corporate-saving
