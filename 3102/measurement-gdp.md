@@ -5,6 +5,7 @@ parent: Aggregate Measurement
 grand_parent: Notes
 layout: post
 toc: true
+date: 2022-08-22
 last_modified_date: 2022-08-23
 nav_order: 1
 ---
@@ -19,19 +20,23 @@ https://apps.bea.gov/iTable/iTable.cfm?reqid=19&step=3&isuri=1&nipa_table_list=2
 
 ## What is GDP?
 
-**Concept:** How much stuff is being made?
+**Basic Concept:** How much stuff is being made?
 
-**Definition:** The dollar value of all final goods and services produced during a given period of time within a region’s borders.
+**Definition:** GDP is the the total dollar value of all final goods and services produced during a given period of time within a region’s borders.
+
+Each part of this definition is important.
 
 - Dollar value: The only way we can compare and add up many thousands of different types of goods is using using the value for which they sell
     - For most goods and services, it's their market value which is counted towards the National Accounts. 
     - The BEA and other agencies have some notable exceptions, such as including the "market value" of in-kind payments. When workers are paid with a portion of the output (as is common in agriculture), these in-kind payments are never sold, but are counted towards GDP *as if* they had been sold at the same price that similar goods sell for.
-    - Inventories are counted as final goods in the form of investment, and are likewise counted towards gdp at the average price at which they could sell.
+    - Inventories are counted as final goods in the form of investment, and are likewise counted towards gdp at the average price at which they *could* sell.
 - **Final** goods and services
     - We don’t include intermediate goods. (ex: We don’t count a tomato if its used in a can of tomato sauce). This avoids double counting.
 - Produced within a region: GDP defines a country or region by its geographical borders. Any production that occurs physically within a country counts towards GDP.
     - By contrast, GNP (Gross National Product) defines a country or region by its people. GNP is the same as GDP except GNP that looks at goods produced by the *residents* of a region.
-- within a time period
+- Within a time period.
+    - GDP data is typically quarterly or annual. Quarterly data is typically seasonally adjusted.
+    - Inventory changes are counted towards GDP so that goods add to GDP in the time period in which they are produced.
 
 
 <!--
@@ -55,7 +60,14 @@ the income the homeowner could have received if the house had been rented to a t
 ## Approaches to Measuring GDP
 
 There are three ways to measure GDP.
-In theory, all three approaches should yield the same total value.
+These are the Expenditure Approach, the Value-Added Approach (aka Product Approach), and the Income Approach.
+In theory, all three approaches should yield the same total value. 
+(In practice, there are small discrepancies.) 
+They answer the same question by looking at different sets of paperwork.
+
+The Expenditure Approach measures the amount of stuff produced by looking at where that stuff ends up, and is considered the fastest and most reliable way to measure GDP.
+The Value-Added Approach measures output by adding up the amount being produced from each unit in the economy and subtracting inputs to avoid double-counting.
+The income approach measures output indirectly by looking at the income which people earn as a result of producing that output.
 
 <figure markdown="block">
 ![An image using a bar chart to depict the equivalence of the three approaches to measuring GDP](img-gdp-three-ways.png)
@@ -81,13 +93,13 @@ $$C + I + G + NX$$
 - **G**: Government consumption expenditures and gross investment
     - Whenever the government buys something, it adds to this component of GDP.
     - When the government transfers money (as with social security), it does not add to GDP. (Remember that GDP measures the amount of stuff being made.)
-- **NX**: Net eXports (Exports - Imports) of goods and services.
+- **NX**: Net eXports (eXports minus iMports) of goods and services.
     - If I import a good to consume, the purchase of that good adds to GDP via Consumption, even though it wasn't produced in the US. By subtracting imports, that purchase is cancelled out.
     - For the past several decades, the US has imported more than it has exported, and so the US' net exports have been negative.
 
 [^InvestmentIntermediateDifference]: Investments and intermediate inputs are not the same thing. Both are used to create other goods, but an intermediate input goes *into* the final good or is otherwise transformed, whereas fixed investment goods, aka capital, can be used to produce many units of output over several years. The flour that goes into the bread is an intermediate input; the oven that bakes it is an investment.
 
-The expenditure approach is considered the fastest and most reliable way to measure GDP.
+
 
 <hr class="pagebreak">
 
@@ -118,6 +130,7 @@ You can also calculate Value-added Approach GDP simply by adding up each firm’
 ### Income Approach: 
 
 The Income-expenditure identity says that aggregate income will be equal to aggregate output.
+To simpligy a bit: 
 If a dollar flows into industry because of the purchase of some final good or service,
 that dollar must also flow out of industry into someone's pockets.
 
@@ -132,7 +145,7 @@ There are different ways to split up this income, but the main categories are:
     - sales tax, VAT, for example are included
     - Personal income tax is *not* included because that money was already measured as part of compensation.
 - Net Operating Surplus. This can be thought of as "profits", but is different than the accounting definition of the term.
-    – Net interest, specifically on debt owed by/to firms.
+    - Net interest, specifically on debt owed by/to firms.
     - Proprietor's Income
     - Rental Income
     - Corporate Profits
@@ -151,10 +164,20 @@ For example, personal income taxes wouldn't be counted because that income is al
 ## Links
 
 - [NIPA Handbook: Concepts and Methods of the U.S. National Income and Product Accounts](https://www.bea.gov/resources/methodologies/nipa-handbook) - detailed description of the National Accounts for the US.
-- [Graph of US GDP (nominal, per-quarter at annual rate, seasonally adjusted) from FRED](https://fred.stlouisfed.org/series/gdp)
-
+- [OECD stats website](https://stats.oecd.org/). You can find real-world GDP data in the menu under "National Accounts > Annual National Accounts > Main Aggregates > GDP"
 
 [![Graph from FRED showing Nominal GDP](https://fred.stlouisfed.org/graph/fredgraph.png?g=TbEe)](https://fred.stlouisfed.org/series/gdp)
+
+- Graphs from FRED
+    - [Graph of US GDP (nominal, per-quarter at annual rate, seasonally adjusted)](https://fred.stlouisfed.org/series/gdp)
+    - [Expenditure Approach GDP Components as share of total.](https://fred.stlouisfed.org/graph/?g=TnqK)
+
+
+<!--There are links to some interesting blog posts under this FRED graph
+    - [GDP Expenditure Approach Components Table](https://fred.stlouisfed.org/release/tables?rid=53&eid=12998)
+[![Graph from FRED showing Nominal GDP Components](https://fred.stlouisfed.org/graph/fredgraph.png?g=Tnqh)](https://fred.stlouisfed.org/graph/?id=PCEC,NETEXP,GCE,GPDI,)
+https://fredaccount.stlouisfed.org/public/dashboard/17831
+-->
 
 
 
