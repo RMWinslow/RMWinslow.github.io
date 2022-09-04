@@ -61,13 +61,15 @@ the income the homeowner could have received if the house had been rented to a t
 
 There are three ways to measure GDP.
 These are the Expenditure Approach, the Value-Added Approach (aka Product Approach), and the Income Approach.
+
+- The Expenditure Approach measures the amount of stuff produced by looking at where that stuff ends up, and is considered the fastest and most reliable way to measure GDP.
+- The Value-Added Approach measures output by adding up the amount being produced from each unit in the economy and subtracting inputs to avoid double-counting.
+- The income approach measures output indirectly by looking at the income which people earn as a result of producing that output.
+
 In theory, all three approaches should yield the same total value. 
 (In practice, there are small discrepancies.) 
-They answer the same question by looking at different sets of paperwork.
+Essentially, they answer the same question by looking at different sets of paperwork.
 
-The Expenditure Approach measures the amount of stuff produced by looking at where that stuff ends up, and is considered the fastest and most reliable way to measure GDP.
-The Value-Added Approach measures output by adding up the amount being produced from each unit in the economy and subtracting inputs to avoid double-counting.
-The income approach measures output indirectly by looking at the income which people earn as a result of producing that output.
 
 <figure markdown="block">
 ![An image using a bar chart to depict the equivalence of the three approaches to measuring GDP](img-gdp-three-ways.png)
