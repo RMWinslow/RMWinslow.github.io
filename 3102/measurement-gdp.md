@@ -103,6 +103,35 @@ $$C + I + G + NX$$
 
 
 
+<!--
+Table 5.1 shows the kinds of transactions that are included in and excluded from
+PCE. Most of PCE consists of purchases of new goods and of services by households
+from private business. In addition, PCE includes purchases of new goods and of services
+by households from government and government enterprises, the costs incurred by
+NPISHs in providing services on behalf of households, net purchases of used goods by
+households, and purchases abroad of goods and services by U.S. residents traveling,
+working, or attending school in foreign countries. PCE also includes expenditures
+financed by third-party payers on behalf of households, such as employer-paid health
+insurance and medical care financed through government programs, and it includes
+expenses associated with life insurance and with private and government employee
+pension plans. Finally, PCE includes imputed purchases that keep PCE invariant to
+changes in the way that certain activities are carried out—for example, whether housing
+is rented or owned or whether employees are paid in cash or in kind. PCE transactions are
+valued in market prices, including sales and excise taxes.
+In the NIPAs, final consumption expenditures by NPISHs is the portion of PCE
+that represents the services that are provided to households by NPISHs without explicit
+charge (such as the value of the education services provided by a nonprofit college or
+university that is over and above the tuition and other costs paid by or for the student’s
+household). It is equal to their gross output, which is measured as their current operating
+expenses (not including purchases of buildings and equipment, which are treated as
+private fixed investment), less their sales to households and to other sectors of the
+economy (such as sales of education services to employers) and less the value of any
+investment goods (such as software) that are produced directly by the NPISH. Services
+that are provided by NPISHs and are paid by or on behalf of households (such as the 
+-->
+
+
+
 <hr class="pagebreak">
 
 <!-- 
@@ -161,7 +190,51 @@ Note that not *all* tax revenue is counted towards GDI, only revenue from taxes 
 For example, personal income taxes wouldn't be counted because that income is already counted under wages and salaries.-->
 
 
+<!--TODO: List of imputations on GDP-->
+
+
 <hr class="pagebreak">
+
+
+## Related Measurements
+
+- **Gross National Product** adds up the production from factors of production owned by residents[^residentsDefinition] of a region.
+    - The main difference between GNP and GDP has to do with income from foreign-owned investments. 
+    - The difference between GDP and GNP is called " net income payments from the rest of the world" or "net factor payments from abroad" (NFP). GNP = GDP + NFP
+    - In general "domestic" statistics define a region by its physical borders, "national" statistics define a region by its residents.
+- **Gross Output** is the dollar value of all transactions, without subtracting intermediate inputs. (This results in double counting.)
+- **Net Domestic Product** is GDP minus the consumption of fixed capital (depreciation). NDP represents the total amount of output that can be potentially be consumed or used to expand the capital stock.
+
+[^residentsDefinition]: If you are a "resident" of a region, this means that you are living there long-term. In the BEA's definition, someone is a US resident if they "reside or expect to reside in the United States for 1 year or more", with exceptions for students, soldiers, diplomats, etc. The residents of a region also include that regions governments, and firms established under that region's laws. 
+
+
+<!--
+Gross National Product
+: Whereas "domestic" statistics define a region by its physical borders, "national" statistics define a region by its residents.
+: Gross National Product adds up the production from factors of production owned by residents of a country.
+: 
+If a US resident owns part of a factory in Japan, then none of that factory's output counts towards US GDP. But if the factory pays profits to the American, those profits *are* counted towards -->
+
+
+<!--
+Thus, for an assembly plant that is owned by a Japanese auto company and located in the
+United States, all of its output is included in GDP, but only the portion of the value that
+reflects U.S. residents’ labor and property is included in GNP. And, for an assembly plant
+that is owned by a U.S. auto company and located in Great Britain, none of its output is
+included in GDP, but the portion of the value that reflects U.S. residents’ labor or
+property is included in GNP.
+
+International organizations
+such as the United Nations, the International Monetary Fund, and the International Bank
+for Reconstruction and Development are considered residents of an international area
+beyond national boundaries, rather than residents of the country in which they are located
+or in which they operate
+-->
+
+
+<hr class="">
+
+
 
 ## Links
 
