@@ -7,11 +7,6 @@ layout: post
 toc: true
 last_modified_date: 2022-08-23
 nav_order: 1
-papersize: letter
-linkcolor: blue
-geometry:
-- margin=20mm
-- headsep=0.5cm
 ---
 
 
@@ -55,6 +50,7 @@ the income the homeowner could have received if the house had been rented to a t
 
 <!--https://www.cia.gov/the-world-factbook/field/real-gdp-purchasing-power-parity/country-comparison-->
 
+<hr class="pagebreak">
 
 ## Approaches to Measuring GDP
 
@@ -67,7 +63,7 @@ In theory, all three approaches should yield the same total value.
 </figure>
 
 
----
+<hr class="pagebreak">
 
 
 ### Expenditure Approach:
@@ -93,7 +89,7 @@ $$C + I + G + NX$$
 
 The expenditure approach is considered the fastest and most reliable way to measure GDP.
 
----
+<hr class="pagebreak">
 
 <!-- 
 If a cheese wheel is produced this year, we want it to count towards GDP this year, even if it I don't buy it to eat until next year. And when I do buy that cheese wheel next year, we w
@@ -116,7 +112,7 @@ A firm’s value added is (That firm’s revenue, including inventory changes) m
 
 You can also calculate Value-added Approach GDP simply by adding up each firm’s value-added.
 
-<hr class="pagebreak">
+<hr class="">
 
 
 ### Income Approach: 
@@ -155,13 +151,18 @@ For example, personal income taxes wouldn't be counted because that income is al
 ## Links
 
 - [NIPA Handbook: Concepts and Methods of the U.S. National Income and Product Accounts](https://www.bea.gov/resources/methodologies/nipa-handbook) - detailed description of the National Accounts for the US.
+- [Graph of US GDP (nominal, per-quarter at annual rate, seasonally adjusted) from FRED](https://fred.stlouisfed.org/series/gdp)
+
+
+[![Graph from FRED showing Nominal GDP](https://fred.stlouisfed.org/graph/fredgraph.png?g=TbEe)](https://fred.stlouisfed.org/series/gdp)
+
+
+
 
 <hr class="pagebreak">
 
 
 ## Tables
-
-[![Graph from FRED showing Real GDP](https://fred.stlouisfed.org/graph/fredgraph.png?g=TbEe)](https://fred.stlouisfed.org/series/gdp)
 
 ### US Expenditure Approach GDP with components
 
@@ -421,7 +422,7 @@ For example, personal income taxes wouldn't be counted because that income is al
 </tbody>
 </table>
 
-------------------------
+<hr class="pagebreak">
 
 ### US Income Approach GDP with components
 
@@ -673,4 +674,4 @@ https://fred.stlouisfed.org/series/A446RC1Q027SBEA
 -->
 
 
----
+<hr class="pagebreak">
