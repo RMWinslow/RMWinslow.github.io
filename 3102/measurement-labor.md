@@ -4,7 +4,7 @@ parent: Aggregate Measurement
 grand_parent: Notes
 layout: post
 nav_order: 4
-last_modified_date: 2022-08-23
+last_modified_date: 2022-09-04
 ---
 
 ## Main Labor Market Aggregates in Brief
@@ -35,6 +35,8 @@ $$\frac{\#\text{Employed}}{\text{Working Age Noninstitutionalized Civilian Popul
 
 <aside>Note that the unemployment rate is just a single summary statistic about the labor market. The BLS collects a lot more data, and a single statistic doesn't give us a complete picture. For example, the official definition of an “employed person” from the BLS simply requires that you worked for at least 1 hour this week (or 15 hours if it's a family business). If you wanted 20 hours of work this week, and only were able to find 1 hour of work, that still reflects a problem in the labor market, even though it isn't counted in the main statistic of “unemployment rate”. On the flipside, people sometimes misinterpret the labor force participation rate as somehow being the “true employment rate”, but the LFPR also reflects changes in society like women entering the workforce or people being able to retire longer due to increased lifespans.
 </aside>
+
+<hr class="pagebreak">
 
 
 ## Official BLS Definitions
