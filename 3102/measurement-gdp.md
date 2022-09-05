@@ -238,6 +238,8 @@ or in which they operate
 ## Links
 
 - [NIPA Handbook: Concepts and Methods of the U.S. National Income and Product Accounts](https://www.bea.gov/resources/methodologies/nipa-handbook) - detailed description of the National Accounts for the US.
+- [National Accounts releases from the BEA](https://apps.bea.gov/histdata/histChildLevels.cfm?HMI=7)
+- [News Release for 2022Q2](https://apps.bea.gov/scb/2022/08-august/0822-gdp-economy.htm)
 - [OECD stats website](https://stats.oecd.org/). You can find real-world GDP data in the menu under "National Accounts > Annual National Accounts > Main Aggregates > GDP"
 
 [![Graph from FRED showing Nominal GDP](https://fred.stlouisfed.org/graph/fredgraph.png?g=TbEe)](https://fred.stlouisfed.org/series/gdp)
@@ -246,7 +248,8 @@ or in which they operate
     - [Graph of US GDP (nominal, per-quarter at annual rate, seasonally adjusted)](https://fred.stlouisfed.org/series/gdp)
     - [Expenditure Approach GDP Components as share of total.](https://fred.stlouisfed.org/graph/?g=TnqK)
     - [Income Approach GDP Components as share of total.](https://fred.stlouisfed.org/graph/?g=Tnty)
-
+- BEA Tables and Graphs
+    - [Expenditure Approach GDP and components](https://apps.bea.gov/iTable/iTable.cfm?reqid=19&step=3&isuri=1&select_all_years=0&nipa_table_list=5&series=a&first_year=1929&last_year=2022&scale=-9&categories=5&thetable=), ([quarterly GDP, not seasonally adjusted](https://apps.bea.gov/iTable/iTable.cfm?reqid=19&step=3&isuri=1&select_all_years=0&nipa_table_list=404&series=q&first_year=2000&last_year=2022&scale=-9&categories=survey&thetable=))
 
 <!--There are links to some interesting blog posts under this FRED graph
     - [GDP Expenditure Approach Components Table](https://fred.stlouisfed.org/release/tables?rid=53&eid=12998)
@@ -766,6 +769,7 @@ https://www.nber.org/digest/may17/global-rise-corporate-saving
 https://news.research.stlouisfed.org/2022/06/fred-maps-rise-as-geofred-sets/
 https://fred.stlouisfed.org/series/CPATAX
 https://fred.stlouisfed.org/series/A446RC1Q027SBEA
+https://apps.bea.gov/scb/2022/08-august/0822-gdp-economy.htm
 -->
 
 

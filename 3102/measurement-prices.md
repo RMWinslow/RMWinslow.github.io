@@ -18,6 +18,17 @@ To measure aggregates, our unit is dollars.
 
 A price index is some way of averaging out prices.
 
+
+- Implicit GDP Price Deflator
+    - GDP price index (differs from deflator how?)
+- Gross Domestic Purchases Price Index
+- Personal Consumption Expenditures Price Index
+- Core PCE
+- CPI
+- CPI Core
+
+
+
 Examples:
 - CPI - Consumer Price Index - Build a basket of goods that reflects the “average” consumption patterns of a
 household, and measure how the price of that basket changes.
@@ -50,6 +61,19 @@ Multiply by 100 to put in % terms, and you get the implicit GDP deflator
 This is not the only way to do things.
 
 
+## Deflation
+
+Basic formula:
+
+$$\text{Real}=\frac{\text{Nominal}}{\text{Deflator}}=\frac{p_{t}q_{t}}{(\frac{p_{t}}{p_{0}})}=p_{0}q_{t}$$
+
+Likewise,
+
+$$\text{Deflator}=\frac{\text{Nominal}}{\text{Real}}$$
+
+
+
+
 ## Chain Weighting
 
 This is how Real GDP is calculated in most data nowadays.
@@ -69,3 +93,63 @@ The recipe for for chain weighting:
 2. We average those gross growth rates to get our chain-weighted gross growth, called the “Fisher index”
 3. Starting with the base year, we multiply or divide by our chain-weighted growth rates to get the real gdp for
 other years.
+
+
+
+
+
+
+<hr class="pagebreak">
+
+## Links
+
+- [Article from 1995 explaining the introduction of chain-weighting](https://www.newyorkfed.org/medialibrary/media/research/current_issues/ci1-9.pdf). This article is a short, easy read, and is the best explanation of the how and why of chain-weighting that I have found.
+- Graphs of US data from FRED
+    - [TODO: broken graph. depicts rgdp vs cpi?](https://fred.stlouisfed.org/graph/?g=8aK#0)
+    - [CPI and core CPI](https://fred.stlouisfed.org/graph/?g=8dGq)
+    - [CPI GDP Deflator](https://fred.stlouisfed.org/graph/?g=TpUi)
+    - [same](https://fred.stlouisfed.org/graph/?g=LcqN)
+- [BLS Handbook on CPI](https://www.bls.gov/opub/hom/pdf/cpihom.pdf), and [BLS FAQ about CPI](https://www.bls.gov/cpi/questions-and-answers.htm)
+- BEA Tables and Graphs
+    - [Price Indexes for Gross Domestic Product](https://apps.bea.gov/iTable/iTable.cfm?reqid=19&step=3&isuri=1&select_all_years=0&nipa_table_list=4&series=q&first_year=2000&last_year=2022&scale=-99&categories=survey&thetable=)
+    - [Price Indexes for Personal Consumption Expenditures by Type of Product](https://apps.bea.gov/iTable/iTable.cfm?reqid=19&step=3&isuri=1&select_all_years=0&nipa_table_list=69&series=q&first_year=2000&last_year=2020&scale=-99&categories=survey&thetable=)
+    - [Price Indexes for Personal Consumption Expenditures by Function](https://apps.bea.gov/iTable/iTable.cfm?reqid=19&step=3&isuri=1&select_all_years=0&nipa_table_list=73&series=q&first_year=2000&last_year=2020&scale=-99&thetable=)
+- BLS Tables and Graphs
+    - [12-month percentage change, Consumer Price Index, selected categories](https://www.bls.gov/charts/consumer-price-index/consumer-price-index-by-category-line-chart.htm)
+    
+
+<!--
+https://www.bls.gov/news.release/pdf/ecopro.pdf
+https://www.bls.gov/cpi/home.htm
+https://www.bls.gov/opub/hom/cpi/
+https://www.bea.gov/data/prices-inflation
+https://www.bls.gov/mxp/
+https://www.bls.gov/pPI/
+https://apps.bea.gov/scb/account_articles/national/0597od/maintext.htm
+https://observablehq.com/@observablehq/plot
+https://github.com/observablehq/plot
+https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/demo/spline-irregular-time
+https://fred.stlouisfed.org/series/WPU1173
+https://fred.stlouisfed.org/graph/?id=CPIFABSL,CPIHOSSL,CPIAPPSL,CPITRNSL,CPIMEDSL,CPIRECSL,CPIEDUSL,CPIOGSSL,
+
+https://apps.bea.gov/scb/2022/08-august/0822-gdp-economy.htm
+
+https://research.stlouisfed.org/publications/page1-econ/2015/10/01/whats-in-your-market-basket-why-your-inflation-rate-might-differ-from-the-average/?
+
+https://quant.stackexchange.com/questions/141/what-data-sources-are-available-online?rq=1
+
+-->
+
+
+
+<!--
+TODO: Graphs it would be nice to have.
+Multiple price indices with adjustable base year.
+Price indices for specific goods.
+-->
+
+<!--
+TODO: write a script to update data by pulling from BLS api
+https://www.bls.gov/bls/api_features.htm
+https://apps.bea.gov/API/signup/index.cfms  
+-->
