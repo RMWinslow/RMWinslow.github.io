@@ -5,17 +5,16 @@ parent: Aggregate Measurement
 grand_parent: Notes
 layout: post
 nav_order: 2
-last_modified_date: 2022-08-23
+last_modified_date: 2022-09-04
 ---
 
 
 ## Price Indices
 
-Our unit is dollars.
+To measure aggregates, our unit is dollars.
 
-Problem: Dollars themselves change in value.
-
-Solution: We need to adjust for this by using price indices. (Singular: price index)
+**Problem:** Dollars themselves change in value.  
+**Solution:** We need to adjust for this by using price indices. (Singular: price index)
 
 A price index is some way of averaging out prices.
 

@@ -160,7 +160,7 @@ You can also calculate Value-added Approach GDP simply by adding up each firm’
 ### Income Approach: 
 
 The Income-expenditure identity says that aggregate income will be equal to aggregate output.
-To simpligy a bit: 
+To simplify a bit: 
 If a dollar flows into industry because of the purchase of some final good or service,
 that dollar must also flow out of industry into someone's pockets.
 
