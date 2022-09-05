@@ -5,8 +5,7 @@ parent: Aggregate Measurement
 grand_parent: Notes
 layout: post
 toc: true
-date: 2022-08-22
-last_modified_date: 2022-08-23
+last_modified_date: 2022-09-04
 nav_order: 1
 ---
 
