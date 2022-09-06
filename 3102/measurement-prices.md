@@ -77,11 +77,6 @@ One minor downside of chain-weighting: components don't add up to the whole.
 So if you want to calculate, eg, consumption as a percentage of GDP, 
 then you need to use nominal data or data deflated with some fixed base year.
 
-<hr class="pagebreak">
-
-
-
-<hr class="pagebreak">
 
 
 ## Implicit GDP Deflator 
@@ -104,6 +99,11 @@ $$\text{Real}=\frac{\text{Nominal}}{\text{Deflator}} \times 100$$
 This is not the only way to get aggregate prices.
 
 <!--$$\frac{p_{t}q_{t}}{(\frac{p_{t}}{p_{0}})}=p_{0}q_{t}$$-->
+
+
+
+
+<hr class="pagebreak">
 
 
 ## Price Indexes
@@ -157,7 +157,7 @@ But this is simply the nature of aggregate statistics.
 
 
 <div>
-<iframe height="400px" width="100%" src="./highcharts/data_CCPIU.html"></iframe>
+<iframe height="420px" width="100%" src="./highcharts/data_CCPIU.html"></iframe>
 </div>
 <a href="./highcharts/data_CCPIU.html" hidden>Standalone link.</a>
 
