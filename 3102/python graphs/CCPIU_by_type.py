@@ -1,15 +1,36 @@
 #%% Construct Time Labels for Highcharts Series
 INITIALYEAR = 2000
 FINALYEAR = 2021
-INITIALMONTH = 1
-FINALMONTH = 9
+INITIALMONTH = 1-1
+FINALMONTH = 9-1
 
 periods = []
 for year in range(INITIALYEAR,FINALYEAR+1):
-    for month in  range(1,12+1):
+    for month in  range(0,12):
+        print(f"{year}-{month}")
         periods.append(f"Date.UTC({year}, {month}, 15)")
-periods = periods[INITIALMONTH-1:FINALMONTH-12]
+periods = periods[INITIALMONTH:FINALMONTH-11]
 dataLength = len(periods)
+
+
+#%% Colors for lines
+
+colormap = {"All Items": "#f00", 
+    "All items less food and energy": "#f00", 
+    "Durables": "#f00", 
+    "Nondurables": "#f00", 
+    "Services": "#f00", 
+    "Food and beverages": "#f00", 
+    "Energy": "#f00", 
+    "Apparel": "#f00", 
+    "Commodities": "#f00", 
+    "Education": "#f00", 
+    "Communication": "#f00", 
+    "Housing": "#f00", 
+    "Medical care": "#f00", 
+    "Recreation": "#f00", 
+    "Transportation": "#f00", 
+    "Other goods and services": "#f00",}
 
 # %% Pull data from CPI download
 SOURCE = "C-CPI-U.csv"
@@ -25,14 +46,13 @@ with open(SOURCE,'r') as f:
             data[title] = series
 
 #%%Format data for highcharts
-#for title, series in data.items():
-series = data["Communication"]
-title = "Communication"
-print(" "*12+"{ name: "+f'"{title}",')
-print("            data: [")
-for date, datum in zip(periods, series):
-    print(" "*16+f"[{date}, {datum}],")
-print("            ]},")
+for title in colormap:
+    series = data[title]
+    print(" "*12+"{ name: "+f'"{title}",')
+    print("            data: [")
+    for date, datum in zip(periods, series):
+        print(" "*16+f"[{date}, {datum}],")
+    print("            ]},")
 
 
 
