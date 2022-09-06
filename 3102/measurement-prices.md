@@ -39,6 +39,10 @@ But it can lead to problems when making comparisons over long time periods.
 Most "Real" aggregate data nowadays uses *chain-weighting* (as opposed to the simpler "fixed-weighting" described above).
 
 
+<hr class="pagebreak">
+
+
+
 ### The Chain Weighting Method
 
 **Problem**: Price ratios change, which means the choice of base year matters.  
@@ -77,6 +81,8 @@ then you need to use nominal data or data deflated with some fixed base year.
 
 
 
+<hr class="pagebreak">
+
 
 ## Implicit GDP Deflator 
 
@@ -105,10 +111,6 @@ This is not the only way to get aggregate prices.
 In reality, there isn't one single price in the economy.
 There are many thousands of different prices which are changing at different rates.
 
-<div>
-<iframe height="400px" width="100%" src="./highcharts/data_CCPIU.html"></iframe>
-</div>
-<a href="./highcharts/data_CCPIU.html" hidden>Standalone link.</a>
 
 To talk about prices in the aggregate, we need some way of averaging out many different prices.
 We need a "Price Index".
@@ -152,6 +154,14 @@ But this is simply the nature of aggregate statistics.
 
 
 <hr class="pagebreak">
+
+
+<div>
+<iframe height="400px" width="100%" src="./highcharts/data_CCPIU.html"></iframe>
+</div>
+<a href="./highcharts/data_CCPIU.html" hidden>Standalone link.</a>
+
+
 
 ## Links
 
