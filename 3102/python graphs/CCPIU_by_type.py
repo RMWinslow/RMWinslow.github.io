@@ -15,22 +15,22 @@ dataLength = len(periods)
 
 #%% Colors for lines
 
-colormap = {"All Items": "#f00", 
+colormap = {"All Items": "#000", 
     "All items less food and energy": "#f00", 
-    "Durables": "#f00", 
-    "Nondurables": "#f00", 
-    "Services": "#f00", 
-    "Food and beverages": "#f00", 
-    "Energy": "#f00", 
-    "Apparel": "#f00", 
-    "Commodities": "#f00", 
-    "Education": "#f00", 
-    "Communication": "#f00", 
-    "Housing": "#f00", 
-    "Medical care": "#f00", 
-    "Recreation": "#f00", 
-    "Transportation": "#f00", 
-    "Other goods and services": "#f00",}
+    "Durables": "#742434", 
+    "Nondurables": "#a2402b", 
+    "Services": "#134a60", 
+    "Food and beverages": "#ffbe50", 
+    "Energy": "#fbaf82", 
+    "Apparel": "#d9ae2f", 
+    "Commodities": "#82a12b", 
+    "Education": "#49d0a3", 
+    "Communication": "#65a8c3", 
+    "Housing": "#987fdc", 
+    "Medical care": "#bd80ae", 
+    "Recreation": "#f483cd", 
+    "Transportation": "#f59080", 
+    "Other goods and services": "#bdb7bf",}
 
 # %% Pull data from CPI download
 SOURCE = "C-CPI-U.csv"
@@ -48,11 +48,12 @@ with open(SOURCE,'r') as f:
 #%%Format data for highcharts
 for title in colormap:
     series = data[title]
-    print(" "*12+"{ name: "+f'"{title}",')
-    print("            data: [")
+    print(" "*8+"{name: "+f'"{title}",')
+    print(" "*8+"color: "+f'"{colormap[title]}",')
+    print("        data: [")
     for date, datum in zip(periods, series):
-        print(" "*16+f"[{date}, {datum}],")
-    print("            ]},")
+        print(" "*12+f"[{date}, {datum}],")
+    print("        ]},")
 
 
 
