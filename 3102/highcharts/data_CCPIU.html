@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
     <script src="https://code.highcharts.com/highcharts.js"></script> 
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
     <style>
         /* ensures the increment/decrement arrows always display */
@@ -86,7 +89,7 @@ Highcharts.chart('graphHolder', {
         verticalAlign: 'top',
         layout: 'vertical',
         floating: false,
-        x: 50,
+        x: 10,
         y: 50,
     },
 
@@ -106,8 +109,9 @@ Highcharts.chart('graphHolder', {
 
 
     
-        {name: "All items less food and energy",
+        {name: "Core (no food/energy)",
         color: "#f00",
+           visible: false,
         data: [
             [Date.UTC(2000, 0, 15), 100.3],
             [Date.UTC(2000, 1, 15), 100.7],
@@ -373,6 +377,7 @@ Highcharts.chart('graphHolder', {
         ]},
         {name: "Durables",
         color: "#742434",
+           visible: false,
         data: [
             [Date.UTC(2000, 0, 15), 99.8],
             [Date.UTC(2000, 1, 15), 99.4],
@@ -638,6 +643,7 @@ Highcharts.chart('graphHolder', {
         ]},
         {name: "Nondurables",
         color: "#a2402b",
+           visible: false,
         data: [
             [Date.UTC(2000, 0, 15), 100.2],
             [Date.UTC(2000, 1, 15), 101.4],
@@ -903,6 +909,7 @@ Highcharts.chart('graphHolder', {
         ]},
         {name: "Services",
         color: "#134a60",
+           visible: false,
         data: [
             [Date.UTC(2000, 0, 15), 100.6],
             [Date.UTC(2000, 1, 15), 100.9],
@@ -1168,6 +1175,7 @@ Highcharts.chart('graphHolder', {
         ]},
         {name: "Food and beverages",
         color: "#ffbe50",
+           visible: false,
         data: [
             [Date.UTC(2000, 0, 15), 100.4],
             [Date.UTC(2000, 1, 15), 100.6],
@@ -1963,6 +1971,7 @@ Highcharts.chart('graphHolder', {
         ]},
         {name: "Commodities",
         color: "#82a12b",
+           visible: false,
         data: [
             [Date.UTC(2000, 0, 15), 100.1],
             [Date.UTC(2000, 1, 15), 100.8],
@@ -2758,6 +2767,7 @@ Highcharts.chart('graphHolder', {
         ]},
         {name: "Housing",
         color: "#987fdc",
+           visible: false,
         data: [
             [Date.UTC(2000, 0, 15), 100.7],
             [Date.UTC(2000, 1, 15), 101.4],
@@ -3023,6 +3033,7 @@ Highcharts.chart('graphHolder', {
         ]},
         {name: "Medical care",
         color: "#bd80ae",
+           visible: false,
         data: [
             [Date.UTC(2000, 0, 15), 100.5],
             [Date.UTC(2000, 1, 15), 101.1],
@@ -3288,6 +3299,7 @@ Highcharts.chart('graphHolder', {
         ]},
         {name: "Recreation",
         color: "#f483cd",
+           visible: false,
         data: [
             [Date.UTC(2000, 0, 15), 100.2],
             [Date.UTC(2000, 1, 15), 100.3],
@@ -3553,6 +3565,7 @@ Highcharts.chart('graphHolder', {
         ]},
         {name: "Transportation",
         color: "#f59080",
+           visible: false,
         data: [
             [Date.UTC(2000, 0, 15), 99.9],
             [Date.UTC(2000, 1, 15), 100.8],
@@ -3816,8 +3829,9 @@ Highcharts.chart('graphHolder', {
             [Date.UTC(2021, 7, 15), 156.237],
             [Date.UTC(2021, 8, 15), 155.107],
         ]},
-        {name: "Other goods and services",
+        {name: "Other goods / services",
         color: "#bdb7bf",
+           visible: false,
         data: [
             [Date.UTC(2000, 0, 15), 100.7],
             [Date.UTC(2000, 1, 15), 101.3],

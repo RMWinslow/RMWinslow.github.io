@@ -1,6 +1,6 @@
 ---
 title: Prices
-subtitle: Prices, Price Indices, and Chain-Weighting
+subtitle: Prices, Price Indices, Price Adjustment, and Chain-Weighting
 parent: Aggregate Measurement
 grand_parent: Notes
 layout: post
@@ -38,6 +38,7 @@ household, and measure how the price of that basket changes.
 
 
 ## Real GDP
+
 Conceptually:
 
 $$\text{Nominal GDP} \approx \text{Quantity} \times \text{Price}$$
@@ -114,7 +115,7 @@ other years.
     
 
 <div>
-<iframe height="510px" width="100%" src="./highcharts/data_CCPIU.html"></iframe>
+<iframe height="400px" width="100%" src="./highcharts/data_CCPIU.html"></iframe>
 </div>
 <a href="./highcharts/data_CCPIU.html">Standalone link.</a>
 
