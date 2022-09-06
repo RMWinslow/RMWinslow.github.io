@@ -104,11 +104,6 @@ other years.
 ## Links
 
 - [Article from 1995 explaining the introduction of chain-weighting](https://www.newyorkfed.org/medialibrary/media/research/current_issues/ci1-9.pdf). This article is a short, easy read, and is the best explanation of the how and why of chain-weighting that I have found.
-- Graphs of US data from FRED
-    - [TODO: broken graph. depicts rgdp vs cpi?](https://fred.stlouisfed.org/graph/?g=8aK#0)
-    - [CPI and core CPI](https://fred.stlouisfed.org/graph/?g=8dGq)
-    - [CPI GDP Deflator](https://fred.stlouisfed.org/graph/?g=TpUi)
-    - [same](https://fred.stlouisfed.org/graph/?g=LcqN)
 - [BLS Handbook on CPI](https://www.bls.gov/opub/hom/pdf/cpihom.pdf), and [BLS FAQ about CPI](https://www.bls.gov/cpi/questions-and-answers.htm)
 - BEA Tables and Graphs
     - [Price Indexes for Gross Domestic Product](https://apps.bea.gov/iTable/iTable.cfm?reqid=19&step=3&isuri=1&select_all_years=0&nipa_table_list=4&series=q&first_year=2000&last_year=2022&scale=-99&categories=survey&thetable=)
@@ -117,6 +112,21 @@ other years.
 - BLS Tables and Graphs
     - [12-month percentage change, Consumer Price Index, selected categories](https://www.bls.gov/charts/consumer-price-index/consumer-price-index-by-category-line-chart.htm)
     
+
+<div>
+<iframe height="510px" width="100%" src="./highcharts/data_CCPIU.html"></iframe>
+</div>
+<a href="./highcharts/data_CCPIU.html">Standalone link.</a>
+
+
+<!--
+- Graphs of US data from FRED
+    - [TODO: broken graph. depicts rgdp vs cpi?](https://fred.stlouisfed.org/graph/?g=8aK#0)
+    - [CPI and core CPI](https://fred.stlouisfed.org/graph/?g=8dGq)
+    - [CPI GDP Deflator](https://fred.stlouisfed.org/graph/?g=TpUi)
+    - [same](https://fred.stlouisfed.org/graph/?g=LcqN)
+-->
+
 
 <!--
 https://www.bls.gov/news.release/pdf/ecopro.pdf
