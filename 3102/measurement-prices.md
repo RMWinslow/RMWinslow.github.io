@@ -4,8 +4,9 @@ subtitle: Price Adjustment, Price Indices, and Chain-Weighting
 parent: Aggregate Measurement
 grand_parent: Notes
 layout: post
+toc: true
 nav_order: 2
-last_modified_date: 2022-09-04
+last_modified_date: 2022-09-06
 ---
 
 
@@ -107,7 +108,7 @@ There are many thousands of different prices which are changing at different rat
 <div>
 <iframe height="400px" width="100%" src="./highcharts/data_CCPIU.html"></iframe>
 </div>
-<a href="./highcharts/data_CCPIU.html">Standalone link.</a>
+<a href="./highcharts/data_CCPIU.html" hidden>Standalone link.</a>
 
 To talk about prices in the aggregate, we need some way of averaging out many different prices.
 We need a "Price Index".
