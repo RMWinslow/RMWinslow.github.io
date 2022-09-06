@@ -1,6 +1,6 @@
 ---
 title: Prices
-subtitle: Prices, Price Indices, Price Adjustment, and Chain-Weighting
+subtitle: Price Adjustment, Price Indices, and Chain-Weighting
 parent: Aggregate Measurement
 grand_parent: Notes
 layout: post
@@ -9,92 +9,142 @@ last_modified_date: 2022-09-04
 ---
 
 
-## Price Indices
-
-To measure aggregates, our unit is dollars.
-
-**Problem:** Dollars themselves change in value.  
-**Solution:** We need to adjust for this by using price indices. (Singular: price index)
-
-A price index is some way of averaging out prices.
-
-
-- Implicit GDP Price Deflator
-    - GDP price index (differs from deflator how?)
-- Gross Domestic Purchases Price Index
-- Personal Consumption Expenditures Price Index
-- Core PCE
-- CPI
-- CPI Core
-
-
-
-Examples:
-- CPI - Consumer Price Index - Build a basket of goods that reflects the “average” consumption patterns of a
-household, and measure how the price of that basket changes.
-- PPI - Producer Price Index - reflect the prices that producers face
-- Industry specific price indexes
-- Implicit GDP Deflator - Derived from cross-time GDP comparisons, and implicitly averages out all the goods produced.
-
 
 ## Real GDP
 
+To measure aggregates, our unit is dollars.
+
+**Problem:** Dollars themselves change in value. 
+**Solution:** We need to adjust for this by using a **price index**.
+
 Conceptually:
 
-$$\text{Nominal GDP} \approx \text{Quantity} \times \text{Price}$$
+$$\text{Nominal GDP} = \text{The Actual Data} \approx \text{Quantities} \cdot \text{Prices}$$
 
-$$\text{Real GDP} \approx \text{Quantity}$$
+$$\text{Real GDP} \approx \text{Quantities}$$
 
-We want to cancel out the prices so we are left just looking at quantities.
+We want to find some way to cancel out the prices so we are left with just the quantities.
 
-Simplest way to do this:
+### The Simple Method
 
-- Choose a base year.
-    – Only use prices from this specific year
-- Use those prices for every other year.
-    – (Current Quantity) x (Base Year Price) = “real GDP”
+The simplest way to do this:
 
-$$\text{Price} = \frac{\text{Quantity} \times \text{Price}}{\text{Quantity}} \approx \frac{\text{Nominal GDP}}{\text{Real GDP}}$$
+1. Choose a base year. Only use prices from this specific year
+2. Use those prices for every other year. (Current Quantity) x (Base Year Price) = “Real GDP”
 
-Multiply by 100 to put in % terms, and you get the implicit GDP deflator
+This method is simple, and easy to understand. 
+But it can lead to problems when making comparisons over long time periods.
 
-
-This is not the only way to do things.
+Most "Real" aggregate data nowadays uses *chain-weighting* (as opposed to the simpler "fixed-weighting" described above).
 
 
-## Deflation
-
-Basic formula:
-
-$$\text{Real}=\frac{\text{Nominal}}{\text{Deflator}}=\frac{p_{t}q_{t}}{(\frac{p_{t}}{p_{0}})}=p_{0}q_{t}$$
-
-Likewise,
-
-$$\text{Deflator}=\frac{\text{Nominal}}{\text{Real}}$$
-
-
-
-
-## Chain Weighting
-
-This is how Real GDP is calculated in most data nowadays.
-
-Most "Real" aggregate data *chain-weights* the measures of price and quantity.
+### The Chain Weighting Method
 
 **Problem**: Price ratios change, which means the choice of base year matters.  
 **Solution**:  Use all the base years!
 
-The Fisher index used for calculating chain-weighted real GDP is
+This is how Real GDP is calculated in most data nowadays.
 
-$$Q_{t}^{F}=\sqrt{\frac{\sum p_{t-1}q_{t}}{\sum p_{t-1}q_{t-1}}\times\frac{\sum p_{t}q_{t}}{\sum p_{t}q_{t-1}}}$$
+The recipe for chain weighting:
+1. For each pair of years, calculate gross real gdp growth using two different 'base years'.
+2. Average those growth rates to get our chain-weighted growth rate between the two years, called the “Fisher index”.
+3. Choose some actual base year. Multiply or divide by our chain-weighted growth rates to get the real gdp for other years.
+
+The Fisher index formula used for calculating chain-weighted GDP growth is
+
+$$Q_{t}^{F}=\color{#a00}\sqrt{ 
+\textcolor{#080}{
+    \frac{\sum p_{t-1}q_{t}}{\sum p_{t-1}q_{t-1}}
+    }
+\times
+\textcolor{#00d}{
+    \frac{\sum p_{t}q_{t}}{\sum p_{t}q_{t-1}}}
+    }$$
 
 (Our textbook labels this $g_{c}$, while the BEA NIPA handbook labels this $Q_{t}^{F}$)
-The recipe for for chain weighting:
-1. Calculate gross real gdp growth in each year using two different base years
-2. We average those gross growth rates to get our chain-weighted gross growth, called the “Fisher index”
-3. Starting with the base year, we multiply or divide by our chain-weighted growth rates to get the real gdp for
-other years.
 
+This formula says that to find the growth in real GDP between years $t-1$ and $t$, 
+take the <span style="color: #a00">geometric mean</span>
+of <span style="color: #080">real GDP growth calculated with year $t-1$ prices</span>
+and <span style="color: #00d">real GDP growth calculated with year $t$ prices</span>.
+
+One minor downside of chain-weighting: components don't add up to the whole. 
+So if you want to calculate, eg, consumption as a percentage of GDP, 
+then you need to use nominal data or data deflated with some fixed base year.
+
+<hr class="pagebreak">
+
+
+
+
+## Implicit GDP Deflator 
+
+Once we have a time series for "Real" quantities, we can extract prices as well.
+
+The basic idea looks like this:
+
+$$\text{Prices} \approx \frac{\text{Quantities} \cdot \text{Prices}}{\text{Quantity}} \approx \frac{\text{Nominal GDP}}{\text{Real GDP}}$$
+
+Multiply by 100 to put in % terms, 
+and you get the price index called the implicit GDP deflator.
+
+$$\text{Deflator}=\frac{\text{Nominal}}{\text{Real}} \times 100$$
+
+Then to use a deflator to adjust nominal data into real data, we just rearrange the formula:
+
+$$\text{Real}=\frac{\text{Nominal}}{\text{Deflator}} \times 100$$
+
+This is not the only way to get aggregate prices.
+
+<!--$$\frac{p_{t}q_{t}}{(\frac{p_{t}}{p_{0}})}=p_{0}q_{t}$$-->
+
+
+## Price Indexes
+
+In reality, there isn't one single price in the economy.
+There are many thousands of different prices which are changing at different rates.
+
+<div>
+<iframe height="400px" width="100%" src="./highcharts/data_CCPIU.html"></iframe>
+</div>
+<a href="./highcharts/data_CCPIU.html">Standalone link.</a>
+
+To talk about prices in the aggregate, we need some way of averaging out many different prices.
+We need a "Price Index".
+Because there are many different ways to average prices, there are many different price indexes in use.
+
+- The **Implicit GDP Deflator** or **GDP Price Index** is implicitly the price index we get by averaging prices over all goods produced in the country.
+- The **Personal Consumption Expenditures Price Index** averages prices only over Household purchases. <!--It can likewise be calculated as the deflator for real consumption-->
+- The **Gross Domestic *Purchases* Price Index** likewise averages prices over C, I, and G, but ignores the prices of exported goods.
+- The **Consumer Price Index** is a survey-based price index compiled by the BLS. Goods are weighted based on a basket of goods that reflects the consumption patterns of a "typical" household. <!--The BLS also has started compiling a chain-weighted price index since 2002-->
+- The **Producer Price Index** is another BLS price index, reflecting the prices that producers face when they sell things.
+- "Core" price indexes (Core PCE, Core CPI) are calculated by excluding the prices of food and energy. 
+    - This is done to try to get a grasp on longer term patterns in price changes because those two types of goods have relatively volatile prices (energy especially).
+
+
+### The Price Level and Inflation
+
+When a price index represents all or most of the goods in the economy, we might call it the "Price Level".
+
+The "Inflation Rate" is the percentage change in the price level. 
+In other words, positive inflation represents an average increase in prices across the economy,
+or equivalently a decrease in the average amount of goods or services that a dollar can buy.
+
+(Change in the CPI is the measure of inflation most commonly seen in headlines.)
+
+<!--When we talk about the "Price Level", we are talking about some average of the prices in the economy, 
+based on some index of prices.-->
+
+### Other Price Indices
+
+While the above price indices are useful for thinking about aggregate macroeconomic phenomena,
+there are also many smaller price indices that are in use.
+Price indices for specific industries, specific commodities, locations, etc.
+
+At the extreme, every household has their own consumption patterns, 
+and so experiences price changes in different ways.
+Measures of the overall price level in the economy won't be a perfect reflection of any individual households experiences.
+But this is simply the nature of aggregate statistics.
 
 
 
@@ -105,7 +155,10 @@ other years.
 ## Links
 
 - [Article from 1995 explaining the introduction of chain-weighting](https://www.newyorkfed.org/medialibrary/media/research/current_issues/ci1-9.pdf). This article is a short, easy read, and is the best explanation of the how and why of chain-weighting that I have found.
-- [BLS Handbook on CPI](https://www.bls.gov/opub/hom/pdf/cpihom.pdf), and [BLS FAQ about CPI](https://www.bls.gov/cpi/questions-and-answers.htm)
+- [Overview of CPI](https://www.bls.gov/cpi/overview.htm), [BLS Handbook on CPI](https://www.bls.gov/opub/hom/pdf/cpihom.pdf), and [BLS FAQ about CPI](https://www.bls.gov/cpi/questions-and-answers.htm)
+- FRED graphs 
+    - [Major price indices, base year 2012](https://fred.stlouisfed.org/graph/?g=TqIl)
+    - [Major price indices, base year 1970](https://fred.stlouisfed.org/graph/?g=TqIv)
 - BEA Tables and Graphs
     - [Price Indexes for Gross Domestic Product](https://apps.bea.gov/iTable/iTable.cfm?reqid=19&step=3&isuri=1&select_all_years=0&nipa_table_list=4&series=q&first_year=2000&last_year=2022&scale=-99&categories=survey&thetable=)
     - [Price Indexes for Personal Consumption Expenditures by Type of Product](https://apps.bea.gov/iTable/iTable.cfm?reqid=19&step=3&isuri=1&select_all_years=0&nipa_table_list=69&series=q&first_year=2000&last_year=2020&scale=-99&categories=survey&thetable=)
@@ -114,10 +167,6 @@ other years.
     - [12-month percentage change, Consumer Price Index, selected categories](https://www.bls.gov/charts/consumer-price-index/consumer-price-index-by-category-line-chart.htm)
     
 
-<div>
-<iframe height="400px" width="100%" src="./highcharts/data_CCPIU.html"></iframe>
-</div>
-<a href="./highcharts/data_CCPIU.html">Standalone link.</a>
 
 
 <!--
@@ -130,6 +179,14 @@ other years.
 
 
 <!--
+https://www.bls.gov/PPI/
+https://www.bls.gov/ppi/overview.htm
+
+water price index
+https://www.nasdaq.com/solutions/nasdaq-veles-water-index
+
+https://www.bea.gov/resources/learning-center/what-to-know-prices-inflation
+
 https://www.bls.gov/news.release/pdf/ecopro.pdf
 https://www.bls.gov/cpi/home.htm
 https://www.bls.gov/opub/hom/cpi/
@@ -149,6 +206,7 @@ https://research.stlouisfed.org/publications/page1-econ/2015/10/01/whats-in-your
 
 https://quant.stackexchange.com/questions/141/what-data-sources-are-available-online?rq=1
 
+https://www.bls.gov/cpi/additional-resources/chained-cpi-covid19-impact.htm
 -->
 
 
