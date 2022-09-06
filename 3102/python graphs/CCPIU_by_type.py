@@ -15,7 +15,7 @@ dataLength = len(periods)
 
 #%% Colors for lines
 
-colormap = {"All Items": "#000", 
+colormap = {
     "All items less food and energy": "#f00", 
     "Durables": "#742434", 
     "Nondurables": "#a2402b", 
@@ -30,7 +30,8 @@ colormap = {"All Items": "#000",
     "Medical care": "#bd80ae", 
     "Recreation": "#f483cd", 
     "Transportation": "#f59080", 
-    "Other goods and services": "#bdb7bf",}
+    "Other goods and services": "#bdb7bf",
+    "All Items": "#000", }
 
 # %% Pull data from CPI download
 SOURCE = "C-CPI-U.csv"
