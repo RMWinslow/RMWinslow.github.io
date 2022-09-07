@@ -156,6 +156,12 @@ But this is simply the nature of aggregate statistics.
 <hr class="pagebreak">
 
 
+<div>
+<iframe height="420px" width="100%" src="./highcharts/data_CCPIU.html" style="border-style:hidden;"></iframe>
+</div>
+<a href="./highcharts/data_CCPIU.html" hidden>Standalone link.</a>
+
+
 
 ## Links
 
@@ -174,12 +180,6 @@ But this is simply the nature of aggregate statistics.
 
 
 
-
-
-<div>
-<iframe height="420px" width="100%" src="./highcharts/data_CCPIU.html" style="border-style:hidden;"></iframe>
-</div>
-<a href="./highcharts/data_CCPIU.html" hidden>Standalone link.</a>
 
 
 
