@@ -12,3 +12,14 @@ compress_html:
 
 plugins:
   - jekyll-sitemap
+
+
+collections:
+  tests:
+    permalink: "/:collection/:path/"
+    output: true
+
+just_the_docs:
+  collections:
+    tests:
+      name: Tests
