@@ -189,6 +189,23 @@ But this is simply the nature of aggregate statistics.
     - [CPI and core CPI](https://fred.stlouisfed.org/graph/?g=8dGq)
     - [CPI GDP Deflator](https://fred.stlouisfed.org/graph/?g=TpUi)
     - [same](https://fred.stlouisfed.org/graph/?g=LcqN)
+
+Purchasing Power of US dollar
+https://fred.stlouisfed.org/series/CUUR0000SA0R#0
+
+PCE price index inflation 
+https://fred.stlouisfed.org/graph/?g=NDby
+
+https://www.federalreservehistory.org/essays/monetary-policy
+
+Federal Funds rates and targets
+https://fred.stlouisfed.org/graph/?g=vvkN
+https://www.stlouisfed.org/in-plain-english/the-fomc-conducts-monetary-policy
+https://research.stlouisfed.org/publications/economic-synopses/2022/08/23/liquidity-dries-up
+
+
+https://files.stlouisfed.org/files/htdocs/publications/page1-econ/2021/12/01/a-dollars-worth-inflation-is-real_TE.pdf
+https://www.econlowdown.org/resource-gallery
 -->
 
 

@@ -63,3 +63,9 @@ Not in the labor force (Current Population Survey)
 
 Civilian noninstitutional population (Current Population Survey)
 : Included are persons 16 years of age and older residing in the 50 states and the District of Columbia who do not live in institutions (for example, correctional facilities, long-term care hospitals, and nursing homes) and who are not on active duty in the Armed Forces.
+
+
+
+<!--
+https://fred.stlouisfed.org/series/UNEMPLOY
+-->

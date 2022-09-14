@@ -72,3 +72,14 @@ Coincident
 
 
 
+<!--
+FRED Recession Dashboard
+https://fredaccount.stlouisfed.org/public/dashboard/84408
+https://fredblog.stlouisfed.org/2022/08/the-data-and-determinations-behind-dating-business-cycle-peaks-and-troughs/
+https://fredblog.stlouisfed.org/2021/08/discrepancies-in-dating-recessions/
+
+https://news.research.stlouisfed.org/2022/09/teaching-the-economics-of-recessions-bring-fred-into-the-classroom-september-2022/
+https://en.wikipedia.org/wiki/Sahm_Rule
+
+
+-->

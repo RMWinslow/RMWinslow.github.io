@@ -14,6 +14,9 @@ nav_order: 1
 https://www.bea.gov/system/files/2020-04/GDP-Education-by-BEA.pdf
 https://www.cia.gov/the-world-factbook/field/real-gdp-purchasing-power-parity/country-comparison
 https://apps.bea.gov/iTable/iTable.cfm?reqid=19&step=3&isuri=1&nipa_table_list=289&categories=survey
+
+https://www.federalreserve.gov/releases/g17/About.htm
+https://fred.stlouisfed.org/release?rid=13
 -->
 
 
