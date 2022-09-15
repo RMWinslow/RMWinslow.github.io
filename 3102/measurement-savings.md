@@ -15,7 +15,7 @@ components and the like.
 
 ## Private Disposable Income 
 
-How much income do households have available to spend?
+How much income does the private sector have available to spend?
 
 $$Y_d = \textcolor{#6c71c4}{Y} + \textcolor{#268bd2}{NFP} + \textcolor{#dc322f}{TR} + \textcolor{#859900}{INT} - \textcolor{#b58900}{T}$$
 
@@ -74,6 +74,10 @@ S &=S_{p}+S_{g} \\
   &=I+NX+\textcolor{#268bd2}{NFP}\\
   &=I+CA\\
 \end{aligned}$$
+
+where the current account (CA) is Net Exports plus Net Factor Payments.
+
+
 
 
 <!---
