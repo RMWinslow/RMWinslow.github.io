@@ -82,6 +82,10 @@ where the current account (CA) is Net Exports plus Net Factor Payments.
 
 <!---
 
+https://fred.stlouisfed.org/series/NETFI
+https://fred.stlouisfed.org/release/tables?rid=53&eid=5405#snid=5453
+
+
 (Personal Income?)What is Disposable Personal Income?
 After-tax income. The amount that U.S. residents have left to spend or save after paying taxes is important not just to individuals but to the whole economy. The formula is simple: personal income minus personal current taxes.
 
