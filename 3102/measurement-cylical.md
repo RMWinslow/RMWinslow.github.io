@@ -74,10 +74,26 @@ Coincident
 
 ## Links
 
-- [NBER Business Cycle Dating](https://www.nber.org/research/business-cycle-dating), and [table of dates](https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions).
+- [NBER Business Cycle Dating](https://www.nber.org/research/business-cycle-dating)
+    - [table of dates](https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions)
+    - [Direct link to their graph of unemployment](https://datawrapper.dwcdn.net/7lRs9/22/).
 - FRED Dashboard: [Data Considered for the NBER Turning Points](https://fredaccount.stlouisfed.org/public/dashboard/84408)
+- Recession Heuristics (graph from FRED):
+    - [Sahm Rule](https://fred.stlouisfed.org/series/SAHMREALTIME)
+    - [Real GDP Growth](https://fred.stlouisfed.org/graph/?g=T4L8)
+- Some examples of data series with clear seasonality:
+    - [GDP](https://fred.stlouisfed.org/graph/?g=TU8i)
+    - [Unemployment Rate](https://fred.stlouisfed.org/graph/?id=UNRATE,UNRATENSA,)
+    - [CPI Prices for Apparel](https://fred.stlouisfed.org/graph/?id=CPIAPPSL,CPIAPPNS,)
+    - [PPI Television Advertising Prices](https://fred.stlouisfed.org/series/WPU362)
 
-https://fred.stlouisfed.org/series/SAHMREALTIME
+<!--
+https://fred.stlouisfed.org/graph/?id=GDI,GDP,
+
+http://econbrowser.com/recession-index
+https://fred.stlouisfed.org/series/JHGDPBRINDX
+-->
+
 
 <!--
 FRED Recession Dashboard
