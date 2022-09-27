@@ -1,11 +1,11 @@
 ---
 title: One Period Equilibrium
 subtitle: Combining the consumer's and producer's problems into a one-period competitive equilibrium model.
-parent: 3102 Notes
-grand_parent: Teaching
+parent: Competitive Equilibrium
+grand_parent: Notes
 layout: post
 toc: true
-nav_order: 203
+nav_order: 103
 last_modified_date: 2022-08-23
 ---
 

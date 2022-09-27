@@ -1,12 +1,12 @@
 ---
 title: Representative Producer
 subtitle: The Producer in a one-period competitive equilibrium.
-parent: 3102 Notes
-grand_parent: Teaching
+parent: Competitive Equilibrium
+grand_parent: Notes
 layout: post
 toc: true
-nav_order: 202
-last_modified_date: 2022-08-23
+nav_order: 102
+last_modified_date: 2022-09-27
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-title: One Period Equilibrium
+title: Competitive Equilibrium
 parent: Notes
 layout: post
 ---
