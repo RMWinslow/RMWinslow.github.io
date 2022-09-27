@@ -146,14 +146,16 @@ Exogenous parameters: $w,K,z,\alpha$
 
 ### Increase in real wage $w$
 
-$N_{d}^{*}$ decreases and so $Y^{*}$ decreases. 
+$N_{d}^{*}$ decreases
+and so $Y^{*}$ decreases. 
 For example, with Cobb-douglass, this can be shown by:
 
 $$\frac{\partial}{\partial w}N_{d}^{*}=\frac{\partial}{\partial w}\left(\frac{(1-\alpha)zK^{\alpha}}{w}\right)^{\frac{1}{\alpha}} < 0$$
 
 ### Increase in the exogenous capital stock $K$
 
-$N_{d}^{*}$ increases and so $Y^{*}$ increases.
+$N_{d}^{*}$ increases 
+and so $Y^{*}$ increases.
 
 In Cobb-Douglas:
 
@@ -162,7 +164,8 @@ $$\frac{\partial}{\partial K}N_{d}^{*}=\frac{\partial}{\partial K}\left(\frac{(1
 ### Increase in total factor productivity $z$
 
 In this model, without investment, this has the same effect as increase in K. 
-$N_{d}^{*}$ increases and so $Y^{*}$ increases.
+$N_{d}^{*}$ increases 
+and so $Y^{*}$ increases.
 
 In Cobb-Douglas:
 
