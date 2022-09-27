@@ -146,36 +146,36 @@ Exogenous parameters: $w,K,z,\alpha$
 
 ### Increase in real wage $w$
 
-$N_{d}^{*}$ decreases
-and so $Y^{*}$ decreases. 
+$N_{d}^{\ast}$ decreases
+and so $Y^{\ast}$ decreases. 
 For example, with Cobb-douglass, this can be shown by:
 
-$$\frac{\partial}{\partial w}N_{d}^{*}=\frac{\partial}{\partial w}\left(\frac{(1-\alpha)zK^{\alpha}}{w}\right)^{\frac{1}{\alpha}} < 0$$
+$$\frac{\partial}{\partial w}N_{d}^{\ast}=\frac{\partial}{\partial w}\left(\frac{(1-\alpha)zK^{\alpha}}{w}\right)^{\frac{1}{\alpha}} < 0$$
 
 ### Increase in the exogenous capital stock $K$
 
-$N_{d}^{*}$ increases 
-and so $Y^{*}$ increases.
+$N_{d}^{\ast}$ increases 
+and so $Y^{\ast}$ increases.
 
 In Cobb-Douglas:
 
-$$\frac{\partial}{\partial K}N_{d}^{*}=\frac{\partial}{\partial K}\left(\frac{(1-\alpha)z}{w}\right)^{\frac{1}{\alpha}}K=\left(\frac{(1-\alpha)z}{w}\right)^{\frac{1}{\alpha}} > 0$$
+$$\frac{\partial}{\partial K}N_{d}^{\ast}=\frac{\partial}{\partial K}\left(\frac{(1-\alpha)z}{w}\right)^{\frac{1}{\alpha}}K=\left(\frac{(1-\alpha)z}{w}\right)^{\frac{1}{\alpha}} > 0$$
 
 ### Increase in total factor productivity $z$
 
 In this model, without investment, this has the same effect as increase in K. 
-$N_{d}^{*}$ increases 
-and so $Y^{*}$ increases.
+$N_{d}^{\ast}$ increases 
+and so $Y^{\ast}$ increases.
 
 In Cobb-Douglas:
 
-$$\frac{\partial}{\partial z}N_{d}^{*}=\frac{\partial}{\partial z}\left(\frac{(1-\alpha)K^{\alpha}}{w}\right)^{\frac{1}{\alpha}}z^{\frac{1}{\alpha}}=\left(\frac{(1-\alpha)K^{\alpha}}{w}\right)^{\frac{1}{\alpha}}\frac{1}{\alpha}z^{\frac{1}{\alpha}-1} > 0$$
+$$\frac{\partial}{\partial z}N_{d}^{\ast}=\frac{\partial}{\partial z}\left(\frac{(1-\alpha)K^{\alpha}}{w}\right)^{\frac{1}{\alpha}}z^{\frac{1}{\alpha}}=\left(\frac{(1-\alpha)K^{\alpha}}{w}\right)^{\frac{1}{\alpha}}\frac{1}{\alpha}z^{\frac{1}{\alpha}-1} > 0$$
 
 ###  Increase in $\alpha$: 
 
 (This one only applies for Cobb-Douglas)
 
-It becomes optimal to hire less labor because labor has less impact on output. $N_{d}^{*}$ decreases.
+It becomes optimal to hire less labor because labor has less impact on output. $N_{d}^{\ast}$ decreases.
 
 
 
@@ -185,18 +185,18 @@ It becomes optimal to hire less labor because labor has less impact on output. $
 
 Interesting note about Cobb-Douglas:
 
-$$Y^{*}=zK^{\alpha}\left(\frac{(1-\alpha)zK^{\alpha}}{w}\right)^{\frac{1-\alpha}{\alpha}}$$
+$$Y^{\ast}=zK^{\alpha}\left(\frac{(1-\alpha)zK^{\alpha}}{w}\right)^{\frac{1-\alpha}{\alpha}}$$
 
-$$N_{d}^{*}=\left(\frac{(1-\alpha)zK^{\alpha}}{w}\right)^{\frac{1}{\alpha}}$$
+$$N_{d}^{\ast}=\left(\frac{(1-\alpha)zK^{\alpha}}{w}\right)^{\frac{1}{\alpha}}$$
 
 $$\begin{aligned}
-\frac{wN_{d}^{*}}{Y^{*}} & =\frac{w\left(\frac{(1-\alpha)zK^{\alpha}}{w}\right)^{\frac{1}{\alpha}}}{zK^{\alpha}\left(\frac{(1-\alpha)zK^{\alpha}}{w}\right)^{\frac{1-\alpha}{\alpha}}} \\
+\frac{wN_{d}^{\ast}}{Y^{\ast}} & =\frac{w\left(\frac{(1-\alpha)zK^{\alpha}}{w}\right)^{\frac{1}{\alpha}}}{zK^{\alpha}\left(\frac{(1-\alpha)zK^{\alpha}}{w}\right)^{\frac{1-\alpha}{\alpha}}} \\
  & =\frac{w}{zK^{\alpha}}\left(\frac{(1-\alpha)zK^{\alpha}}{w}\right)^{\frac{1}{\alpha}-\frac{1-\alpha}{\alpha}} \\
  & =\frac{w}{zK^{\alpha}}\frac{(1-\alpha)zK^{\alpha}}{w} \\
  & =(1-\alpha)
 \end{aligned}$$
 
-$$\frac{\pi^{*}}{Y^{*}}=\frac{Y^{*}-wN_{d}^{*}}{Y^{*}}=\alpha$$
+$$\frac{\pi^{\ast}}{Y^{\ast}}=\frac{Y^{\ast}-wN_{d}^{\ast}}{Y^{\ast}}=\alpha$$
 
 So if we want a "real-world" estimate of $1-\alpha$, we can use the [labor compensation as a share of GDP](https://fred.stlouisfed.org/series/LABSHPUSA156NRUG), which gives us $\alpha\approx30-40\%$
 
