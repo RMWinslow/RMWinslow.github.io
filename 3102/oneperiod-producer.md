@@ -36,6 +36,8 @@ The firms chooses:
 
 In general, we might also have the firm make investment decisions related to capital. But in this model (ch 4, 5), capital is exogenously given.
 
+<div class="pagebreak"></div>
+
 ### What constraints do they operate under?
 
 First of all, output and labor demand are **non-negative**:
@@ -127,7 +129,7 @@ $$N^{*}=\left(\frac{(1-\alpha)zK^{\alpha}}{w}\right)^{\frac{1}{\alpha}}$$
 
 <link href="https://kineticgraphs.org/css/kg.0.2.6.css" rel="stylesheet" type="text/css" />
 <script src="https://kineticgraphs.org/js/kg3d.0.2.6.js"></script>
-<div class="kg-container" src="./graphs/twoPeriodCollateralConstraint.yml" clearcolor="#fff0"></div>
+<div class="kg-container" src="./graphs/onePeriodProducer.yml" clearcolor="#fff0"></div>
 
 
 
