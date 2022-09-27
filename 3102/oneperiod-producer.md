@@ -82,6 +82,8 @@ $$zF(K,N)=zK^{\alpha}N^{1-\alpha}$$
 for some $\alpha\in(0,1)$. Let's verify the properties above:
 ...-->
 
+<div class="pagebreak"></div>
+
 ### What is the firm's goal?
 
 Maximize Profit. 
@@ -99,7 +101,7 @@ Maximize Profit.
 
 Putting it together, we get the rep firm's constrained optimization problem.
 
-
+<div class="pagebreak"></div>
 
 ### First Order Conditions
 
@@ -138,7 +140,7 @@ $$N^{*}=\left(\frac{(1-\alpha)zK^{\alpha}}{w}\right)^{\frac{1}{\alpha}}$$
 
 
 
-
+<div class="pagebreak"></div>
 
 ## Shocks to our exogenous parameters:
 
@@ -172,6 +174,9 @@ and so $Y^{\ast}$ increases.
 In Cobb-Douglas:
 
 $$\frac{\partial}{\partial z}N_{d}^{\ast}=\frac{\partial}{\partial z}\left(\frac{(1-\alpha)K^{\alpha}}{w}\right)^{\frac{1}{\alpha}}z^{\frac{1}{\alpha}}=\left(\frac{(1-\alpha)K^{\alpha}}{w}\right)^{\frac{1}{\alpha}}\frac{1}{\alpha}z^{\frac{1}{\alpha}-1} > 0$$
+
+
+<div class="pagebreak"></div>
 
 ###  Increase in $\alpha$: 
 
