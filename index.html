@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link href="styles/basic.css" rel="stylesheet" type="text/css">
+    <style>
+        .navlink-flex-container {
+            padding: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .navlink-flex-items {
+            padding: 0.1rem 0.75rem;
+        }
+    </style>
 </head>
 <body>
 
@@ -30,6 +41,15 @@
 </dl>
 
 <hr>
+
+<nav class="navlink-flex-container" style="clear:both">
+    <a href="./teaching"  class="navlink-flex-items">Teaching</a>-
+    <a href="./research"  class="navlink-flex-items">Research</a>-
+    <a href="./notes"  class="navlink-flex-items">Notes</a>
+    <a href=""  class="navlink-flex-items" hidden>Other Links</a>
+</nav>
+
+
 
 
 
