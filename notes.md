@@ -1,12 +1,12 @@
 ---
 title: Notes
+layout: post
 has_children: true
 nav_order: 30
 ---
 
-# Research 
 
-This website is still under construction.
+This website is under construction.
 
 
 

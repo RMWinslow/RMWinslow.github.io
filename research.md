@@ -1,10 +1,10 @@
 ---
 title: Research
+layout: post
 has_children: true
 nav_order: 10
 ---
 
-# Research 
 
 This website is under construction.
 
