@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="462.63" height="105.24" content='&lt;mxfile host="app.diagrams.net" modified="2022-10-13T04:27:00.597Z" agent="5.0 (Windows)" etag="qBctNUG4OXjmX5-OWwmQ" version="20.4.0"&gt;&lt;diagram id="D1u3EaXJxldw_V0BccJy" name="Page-1"&gt;7Vpbc5s4FP41nmkfkgGELzzm4nZ30mbTZHeaPMqgGKWAqJCD3V9fyQgDAhP5FtxZ9yFFR0fX830fR8I9cBXOP1MY+1+Jh4KeZXjzHrjuWZZpAsD/E5ZFZhk4dmaYUuxJp8LwgH8haTSkdYY9lFQcGSEBw3HV6JIoQi6r2CClJK26PZOgOmoMp6hmeHBhULd+xx7zM+uobxT2vxCe+vnIpiFrQpg7S0PiQ4+kJRMY98AVJYRlT+H8CgVi8/J9ydp9WlO7mhhFEdNpEI3Tx+T+5eER3YT+Dfz20/n195ns5RUGM7ngnjUIeH+XHn7lj1PxmJueCR+J7yF0M9/Bz5mY/OW/OOQhsoxblPK/9ySEUVGpdjLJDf/djr/effnnaXydV/G5T1R3bsuGrZkbJrh+zglbBNVJi4qzZIm3C+4wiudZq9W0d1wnzg0fxpByP4MvzUDQ9UXQEMXE+1haDNZc935DsDLQhuG3DYVV2W6LklnkIYFBk1enPmboIc6mn3LJ4DafhYGslmhElKH5WpibK/Jw1UEkRIwuuItsMJJ0k3qzKqcFe82ckn6JuQNpg1IwpqueC07xB0mrDShmdUcxlWBFnFPMBBBToX5iNxTMpm3Q3Cta/gDipifivgdxgd0/MuaCBuYqm+TO6Otqj1DkXYiUgxfdACYJdqubVOyoIRHxCYY4EOttgkHmIlOikeh/jtmjaH0+dGTxaVl0RrYsX89l78vColS449Dl24KotGVLQV4t/VHixZdLZlSitkXh6nEtxa3fELbcRlEAGX6tTqMplnKEO4KXVJKwse2q4IO+Aods+rJVOT9SOxoqHZlKRwzSKWK1jnjI4aLkFguHZIMJD432eTmb+ffN5g1Z6280r7tgTrbCgkerGG9Prb7OS/EGoZg7vZCJ9tvDPEtatbFN8Lh0sSphE0bJD3RFAiJYE5EICVLiIFBMMMDTSLCeU0cQ7FIIIeaHiAtZEWLPE8M0yuiusrAH7V2HyTKHBw0cBoeS3uHRSi/POKra6wz/t9prqdIx3FJ7zf4bIr4n7QWqxo/atdEctfofRhtHOtr4hSRoQ208KeM2WSk4MmV0dNDxGQkQwxwgBnl+RlQ//LX+4hN0NoeOqo5NB5p3hU6eGLZj55bsDTbm2Qk4WwBHfRl2LTlm0y3xcWRj73gQ7irJMk3j3HTK/6roAM65AUq1g+1SsKFzXhnEro5yoMOwabQP+9ZZd6fWoL31G+dmW2vDDpopmlp3y9cUptqSvYer4NZLRZ+Ek1myRntLEtHNG1s5HlhOXXntBqbbB1NejSvIdxPbktKarSqrq6gax1unS+UF6k2aetOsq60qrnTVdG86YTfpBAwF56JJEmf8VcrGheuimJ0SsxZ96Dwz07pHbYjtPXoRv5Y4peIbRhxYXUd88PYboaNcvF9OxdvT8IhvRdbIsK3c8FSuLRouS5WWB7xOzTOqTJBbHDu9d129iHa9dwX9NYK25zTfcprHWTsv0Op/oGz6eD866FNLlwudfTJQv2aqSqn9yUDt6ECfDGoTHrRDt/ZNZLATdHmx+Ilg5l780BKMfwM=&lt;/diagram&gt;&lt;/mxfile&gt;' resource="https://app.diagrams.net/" version="1.1" viewBox="-.5 -.5 462.63 105.24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g transform="translate(-1.8948 .098724)">
+    <path d="m396.8 69.04c.13333 20.64-1.4104 29.579 15.256 29.579s37.656 1.7766 44.322-4.89c6.6667-6.6667 8.9548-20.396 5.6215-33.729s-12.877-20-28.63-20" fill="none" pointer-events="stroke" stroke="#000000" stroke-miterlimit="10"/>
+    <path d="m67.2 69.04c-.13333 20.64 2.6533 31.098-14.013 31.098-16.667 0-38.829 2.1909-45.496-4.4757-6.6667-6.6667-7.0904-25.506-3.757-38.839 3.3333-13.333 10.943-16.824 26.697-16.824" fill="none" pointer-events="stroke" stroke="#000000" stroke-miterlimit="10"/>
+    <rect x="37" y="10" width="120" height="60" rx="9" ry="9" fill="#87d989" pointer-events="all" stroke="#000000"/>
+    <text x="96.5" y="43.5" fill="#000000" font-family="'Times New Roman'" text-anchor="middle"><tspan x="96.5" y="43.5" font-size="16px">UNEMPLOYED</tspan><tspan x="96.5" y="60.107121" font-size="10.667px" font-style="italic"/></text>
+    <text x="96.23568" y="38.587818" fill="#000000" font-family="'Times New Roman'" text-anchor="middle"><tspan x="96.23568" y="38.587818" font-size="16px"/><tspan x="96.23568" y="55.194939" font-size="10.667px" font-style="italic">(earn <tspan font-family="'CMU Classical Serif'" font-style="normal">b</tspan> each period)</tspan></text>
+    <rect x="302" y="10" width="120" height="60" rx="9" ry="9" fill="#87d989" pointer-events="all" stroke="#000000"/>
+    <text x="361.23569" y="43.665943" fill="#000000" font-family="'Times New Roman'" text-anchor="middle"><tspan x="361.23569" y="43.665943" font-size="16px"/><tspan x="361.23569" y="60.273064" font-size="10.667px" font-style="italic">(earn <tspan font-family="'CMU Classical Serif'" font-style="normal">w</tspan> each period)</tspan></text>
+    <path d="m428.12 40 7-3.5-1.75 3.5 1.75 3.5z" fill="#000000" pointer-events="all" stroke="#000000" stroke-miterlimit="10"/>
+    <text x="414.76093" y="77.346718" fill="#000000" font-family="'Times New Roman'" font-size="8px" text-anchor="middle">Keep job.</text>
+    <path d="m326.96 69.82c.0115 11.552 7.0452 34.321-56.288 34.321-63.333 0-121.66-4.7813-138.66-21.781" fill="none" pointer-events="stroke" stroke="#000000" stroke-miterlimit="10"/>
+    <path d="m128.3 78.649 7.43 2.48-3.72 1.23-1.23 3.72z" fill="#000000" pointer-events="all" stroke="#000000" stroke-miterlimit="10"/>
+    <text x="343.36926" y="78.572792" fill="#000000" font-family="'Times New Roman'" font-size="8px" text-anchor="middle">Lose job.</text>
+    <rect x="157" y="10" width="60" height="30" fill="none" pointer-events="all"/>
+    <text x="185.32812" y="37.144531" fill="#000000" font-family="'Times New Roman'" font-size="8px" text-anchor="middle">Get a job offer.</text>
+    <text x="172.42061" y="46.918922" fill="#000000" font-family="'Times New Roman'" font-size="8px" text-anchor="middle">Prob <tspan font-family="'CMU Classical Serif'">p</tspan></text>
+    <text x="338.2186" y="86.338684" fill="#000000" font-family="'Times New Roman'" font-size="8px" text-anchor="middle">Prob <tspan font-family="'CMU Classical Serif'">s</tspan></text>
+    <text x="413.58408" y="85.117393" fill="#000000" font-family="'Times New Roman'" font-size="8px" text-anchor="middle">Prob <tspan font-family="'CMU Classical Serif'">1-s</tspan></text>
+    <text x="83.137337" y="84.968666" fill="#000000" font-family="'Times New Roman'" font-size="8px" text-anchor="middle">Prob <tspan font-family="'CMU Classical Serif'">1-p</tspan></text>
+    <text x="89.187744" y="76.86335" fill="#000000" font-family="'Times New Roman'" font-size="8px" text-anchor="middle">No job offer.</text>
+    <path d="m34.269 39.902-7 3.5 1.75-3.5-1.75-3.5z" fill="#000000" pointer-events="all" stroke="#000000" stroke-miterlimit="10"/>
+    <path d="m264.68 20 20 20-20 20-20-20z" fill="#e9dc55" pointer-events="all" stroke="#000000" stroke-miterlimit="10"/>
+    <path d="m157 40h58.641" fill="none" pointer-events="stroke" stroke="#000000" stroke-miterlimit="10"/>
+    <path d="m221.04 40-7 3.5 1.75-3.5-1.75-3.5z" fill="#000000" pointer-events="all" stroke="#000000" stroke-miterlimit="10"/>
+    <rect x="227" width="60" height="30" fill="none" pointer-events="all"/>
+    <text x="278" y="17.96435" fill="#000000" font-family="'Times New Roman'" font-size="8px" text-anchor="middle">Accept</text>
+    <rect x="227" y="50" width="60" height="30" fill="none" pointer-events="all"/>
+    <text x="278" y="66.903458" fill="#000000" font-family="'Times New Roman'" font-size="8px" text-anchor="middle">Reject</text>
+    <path d="m264.68 20q0-20 20-20t34.34 7.16" fill="none" pointer-events="stroke" stroke="#000000" stroke-miterlimit="10"/>
+    <path d="m319.02 7.16-7.83.01 3.13-2.35v-3.92z" fill="#000000" pointer-events="all" stroke="#000000" stroke-miterlimit="10"/>
+    <path d="m264.68 60c0 20-15 30-45 30s-61.093-6.2528-64.76-9.9194" fill="none" pointer-events="stroke" stroke="#000000" stroke-miterlimit="10"/>
+    <path d="m151.21 76.371 7.43 2.48-3.72 1.23-1.23 3.72z" fill="#000000" pointer-events="all" stroke="#000000" stroke-miterlimit="10"/>
+    <g transform="translate(0 2.1445)" fill="#000000" font-size="12px" text-anchor="middle">
+      <text x="361.5" y="35.296875" font-family="'Times New Roman'"><tspan x="361.5" y="35.296875" font-size="16px">EMPLOYED</tspan><tspan x="361.5" y="51.903996" font-size="10.667px" font-style="italic"/></text>
+      <text x="361.04459" y="47.796875" font-family="Helvetica"><tspan x="361.04459" y="47.796875" font-family="'Times New Roman'" font-size="16px">with wage <tspan font-family="'CMU Classical Serif'">w</tspan></tspan></text>
+    </g>
+    <g transform="translate(1.1719 .87891)">
+      <rect x="221" y="29.355" width="21.855" height="19.575" fill="#94d6ef" pointer-events="all" stroke="#000000"/>
+      <text x="231.65619" y="37.482895" fill="#000000" font-family="'Times New Roman'" font-size="8px" text-anchor="middle">Draw</text>
+      <text x="230.64301" y="46.497787" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle"><tspan x="230.64301" y="46.497787" font-family="'Times New Roman'" font-size="16px"><tspan font-family="'CMU Classical Serif'">w</tspan></tspan></text>
+    </g>
+    <text x="264.89331" y="38.929489" font-family="'Times New Roman'" font-size="8px" letter-spacing="0px" text-anchor="middle" word-spacing="0px" style="line-height:1" xml:space="preserve"><tspan x="264.89331" y="38.929489" text-align="center">Accept </tspan><tspan x="264.89331" y="46.929489" text-align="center">offer?</tspan></text>
+  </g>
+</svg>
