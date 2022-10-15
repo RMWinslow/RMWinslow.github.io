@@ -1,16 +1,18 @@
 ---
-title: Job Search
-subtitle: Matching Models of Employment
-parent: Aggregate Measurement
-grand_parent: Notes
+title: McCall Job Search
+subtitle: A One-sided Search Model of Employment
+parent: Notes
 layout: post
 nav_order: 100
 date: 2022-10-12
-last_modified_date: 2022-10-12
+last_modified_date: 2022-10-15
 toc: true
 ---
 
 <!--
+
+grand_parent: Notes
+
 ## Definitions
 
 Amply Covered in https://www.rmwinslow.com/3102/measurement-labor.html
@@ -24,7 +26,7 @@ tion ratio.
 
 
 
-
+<!--
 
 ## Motivating Facts
 
@@ -42,7 +44,7 @@ FROM BOOK
 ## Simple Model of Job Search
 
 
-<!--
+
 In Adv Labor (ECON 4538), Textbook is ars Ljungqvist and Thomas Sargent, Recursive Macroeconomic Theory (3rd edition)
 
 Week 2
@@ -64,7 +66,7 @@ Week 14
 
 
 
-## One-Sided Job Search Model
+
 
 Here, we model a person looking for a job. 
 This person gets random job offers which they can choose to accept or reject. 
@@ -74,6 +76,10 @@ This kind of model is often called a "McCall Search Model", so named because a s
 <a href="https://educnet.enpc.fr/pluginfile.php/29349/mod_resource/content/1/Mc%20Call_1970.pdf">Economics of information and job search</a>.
 Though the model from this paper isn't quite the same as that depicted below.
 </aside>
+
+
+## Details of the Model
+
 
 In this model, a person is either employed or unemployed.
 - If they are unemployed, then:
@@ -103,12 +109,12 @@ Then:
 
 $$V_e(w^\ast) = V_u$$
 
-The person will accept a job offer iff $w \geq w^\ast$,
+The person will accept a job offer only if $w \geq w^\ast$,
 and the probability that they accept a random offer $w$
 is therefore $\Pr(w \geq w^\ast)$
 
 
-### Steady Unemployment Rate
+### Steady-state Unemployment Rate
 
 Let's simplify the above picture by noting the transition probabilities:
 
@@ -126,23 +132,33 @@ Then for the flows between these two categories to be equal, it must be that:
 
 $$\textcolor{#6c71c4}{(1-U)} \cdot \textcolor{#268bd2}{s} = \textcolor{#dc322f}{U} \cdot \textcolor{#b58900}{p \cdot \Pr(w \geq w^\ast)}$$
 
-The number of  <span style="color:#6c71c4">employed people</span> 
+The amount of  <span style="color:#6c71c4">employed people</span> 
 <span style="color:#268bd2">who lose their job</span> equals 
-the number of <span style="color:#dc322f">unemployed people</span> + 
+the amount of <span style="color:#dc322f">unemployed people</span> + 
 <span style="color:#b58900">who start a new job</span>.
 
 <!--TODO: Needs citation or graph/-->
 
+<!--TODO: calculate equilibrium U-->
+
+Solving for $U$, we find the steady-state unemployment rate is
+
+$$U = \frac{s}{s+p\cdot\Pr(w \geq w^\ast)}$$
 
 
 
----
+<aside>
+In practice, the actual unemployment rate closely matches the steady-state unemployment calculated from job loss and gain probabilities. This suggests that in aggregate, labor markets are quick to adjust.
+</aside>
 
-(Higher wages mean the value from employment is higher.)
+<!--TODO: notes about transitions-->
 
-The value of being unemployed u
 
-Details about what goes into being unemployed?
+
+
+<!--TODO: Beveridge curve went all wonky during covid. Focus discussion of 2-sided model on explaining how that may be because of ???.-->
+
+
 
 
 <!--
@@ -160,25 +176,7 @@ Details about what goes into being unemployed?
 
 
 
-
-
-TODO: Footnote about difference between a utility function and a value function.
-
-
-long run unemployment
-
-note that we get to that long-run very quickly. (Lise Slides)
-
-
-
-
-- cost of search, 
-- searching on the job, 
-- etc
-
-
-
-
+<!-->
 
 One sided and two sided?
 
@@ -189,9 +187,21 @@ Nobel Prize in Economics in 2010.
 
 Job Openings and Labor Turnover Survey (JOLTS) conducted by the Bureau of
 Labor Statistics
+-->
 
 
 
+## Other Search Models
+
+Many other variants of search and matching models exist.
+
+For example, one can build a *Two-sided* model of search, 
+where unemployed workers are looking for jobs,
+and where firms are looking for workers to fill vacant positions.
+
+These kinds of two-sided search models are concerned not just with the unemployment rate, 
+but also the **vacancy rate**, which is the portion of job positions which currently lack a worker filling them.
+(The BLS also uses the term "job openings rate". This is synonymous with "vacancy rate".)
 
 
 
@@ -199,12 +209,16 @@ Labor Statistics
 
 ## Links
 
+- Some Graphs from the BLS' Job Openings and Labor Turnover Survey:
+    - [Hires and Seperations rates](https://www.bls.gov/charts/job-openings-and-labor-turnover/hire-seps-rates.htm)
+    - [A curve plotting Unemployment Rates vs Vacancy Rates](https://www.bls.gov/charts/job-openings-and-labor-turnover/job-openings-unemployment-beveridge-curve.htm) (aka "The Beveridge Curve")
+
+
+<!--
 https://www.bls.gov/charts/job-openings-and-labor-turnover/opening-industry.htm
-https://www.bls.gov/charts/job-openings-and-labor-turnover/hire-seps-rates.htm
-https://www.bls.gov/charts/job-openings-and-labor-turnover/job-openings-unemployment-beveridge-curve.htm
 https://www.bls.gov/charts/job-openings-and-labor-turnover/unemp-per-job-opening.htm
 https://julia.quantecon.org/dynamic_programming/mccall_model.html
-
+-->
 
 
 
