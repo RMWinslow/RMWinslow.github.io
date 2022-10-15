@@ -94,6 +94,8 @@ In this model, a person is either employed or unemployed.
 
 ![A flowchart diagram depicting how a person in this McCall model moves from state to state.](img-jobsearch-McCall-flowchart.png)
 
+<div class="pagebreak"></div>
+
 ### The Reservation Wage
 
 When should the person accept an offer with wage $w$? 
@@ -134,7 +136,7 @@ $$\textcolor{#6c71c4}{(1-U)} \cdot \textcolor{#268bd2}{s} = \textcolor{#dc322f}{
 
 The amount of  <span style="color:#6c71c4">employed people</span> 
 <span style="color:#268bd2">who lose their job</span> equals 
-the amount of <span style="color:#dc322f">unemployed people</span> + 
+the amount of <span style="color:#dc322f">unemployed people</span> 
 <span style="color:#b58900">who start a new job</span>.
 
 <!--TODO: Needs citation or graph/-->
@@ -153,7 +155,7 @@ In practice, the actual unemployment rate closely matches the steady-state unemp
 
 <!--TODO: notes about transitions-->
 
-
+<!--TODO: mean preserving spread-->
 
 
 <!--TODO: Beveridge curve went all wonky during covid. Focus discussion of 2-sided model on explaining how that may be because of ???.-->
@@ -176,8 +178,7 @@ In practice, the actual unemployment rate closely matches the steady-state unemp
 
 
 
-<!-->
-
+<!--
 One sided and two sided?
 
 The two-sided search model of unemployment is based on the work of Peter
@@ -189,7 +190,7 @@ Job Openings and Labor Turnover Survey (JOLTS) conducted by the Bureau of
 Labor Statistics
 -->
 
-
+<div class="pagebreak"></div>
 
 ## Other Search Models
 
