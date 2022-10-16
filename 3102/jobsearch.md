@@ -219,6 +219,8 @@ but also the **vacancy rate**, which is the portion of job positions which curre
 https://www.bls.gov/charts/job-openings-and-labor-turnover/opening-industry.htm
 https://www.bls.gov/charts/job-openings-and-labor-turnover/unemp-per-job-opening.htm
 https://julia.quantecon.org/dynamic_programming/mccall_model.html
+https://www.kansascityfed.org/research/economic-review/1q18-tuzemen-why-prime-age-men-vanishing/
+https://www.bls.gov/opub/mlr/2018/beyond-bls/mens-declining-labor-force-participation.htm
 -->
 
 
