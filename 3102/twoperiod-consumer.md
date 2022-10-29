@@ -150,22 +150,22 @@ If $\beta$ is very low, close to zero, then the person makes decisions in the fi
 ## Effects of Shocks
 
 An increase in $y$:
-    - First period consumption $c$ increases. The consumer has more income, and so spends more.
-    - Second period consumption $c'$ also increases because we assume the consumer prefers to smooth their consumption over time.
-    - Savings $s$ increases. This is how the consumer shifts some of that extra income into the future.
+- First period consumption $c$ increases. The consumer has more income, and so spends more.
+- Second period consumption $c'$ also increases because we assume the consumer prefers to smooth their consumption over time.
+- Savings $s$ increases. This is how the consumer shifts some of that extra income into the future.
 
 An increase in $y'$:
-    - Both $c$ and $c'$ increase, as above.
-        - From the inter-temporal perspective, either shock is an increase to the exogenous present-value income: $y+\frac{y'}{1+r}$
-    - On the other hand, savings $s$ decreases. If savings is negative, then borrowing increases. When future income goes up, the consumer doesn't need to save as much for the future. Or you can think of this as the consumer shifting some of their future income into the present by borrowing money. 
+- Both $c$ and $c'$ increase, as above.
+    - From the inter-temporal perspective, either shock is an increase to the exogenous present-value income: $y+\frac{y'}{1+r}$
+- On the other hand, savings $s$ decreases. If savings is negative, then borrowing increases. When future income goes up, the consumer doesn't need to save as much for the future. Or you can think of this as the consumer shifting some of their future income into the present by borrowing money. 
 
 
 
 The effects of an increase in the real interest rate are more complicated. 
     
-    - A higher $r$ decreases the present value of lifetime income $y+\frac{y'}{1+r}$, because that future income is more difficult to bring into the present.
-    - On the other hand, it increases the *future* value of lifetime income $(1+r)y+y'$ because any income saved results in higher returns tomorrow.
-    - Thirdly, there is a substitution effect. In terms of present-value, the cost of one unit of future consumption is $\frac{1}{1+r}$ units of current consumption. An increase in the interest rate makes future consumption relatively 'cheaper' in some sense.
+- A higher $r$ decreases the present value of lifetime income $y+\frac{y'}{1+r}$, because that future income is more difficult to bring into the present.
+- On the other hand, it increases the *future* value of lifetime income $(1+r)y+y'$ because any income saved results in higher returns tomorrow.
+- Thirdly, there is a substitution effect. In terms of present-value, the cost of one unit of future consumption is $\frac{1}{1+r}$ units of current consumption. An increase in the interest rate makes future consumption relatively 'cheaper' in some sense.
 
 In general, an increase in the real interest rate will make the consumer want to shift their consumption from the present into the future. 
 But in some cases, it is possible for the above income and substitution effects to cancel each other out.
