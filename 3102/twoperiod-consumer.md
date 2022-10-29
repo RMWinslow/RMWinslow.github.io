@@ -273,7 +273,10 @@ In chapter 10, we discuss how *credit-market imperfections* can break this impli
 
 
 
-
+<!--
+twitter link discussing people burning through this chunk of savings.
+Inflation is essentially a tax 
+https://nitter.net/bencasselman/status/1586008363590197248#m-->
 
 <!--## Adding lesiure back into the mix-->
 
