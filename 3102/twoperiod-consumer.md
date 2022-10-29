@@ -82,17 +82,17 @@ In this endowment economy, the consumer chooses how much to consume each period,
 
 - The **Non-negativity Constraints**: You can't consume negative amounts.
    
-      $$c\geq0 \\ c'\geq0$$
+    $$c\geq0 \\ c'\geq0$$
 
     - Note that savings $s$ is allowed to be negative. Negative savings means the consumer is borrowing money in the first period. 
 
 - The **First Period Budget Constraint** - Income can be split between consumption and savings.
       
-      $$c + s\leq y$$
+    $$c + s\leq y$$
 
 - The **Second Period Budget Constraint** - Consumption in the second period is limited by second period income, plus the returns from first-period savings.
       
-      $$c'\leq y' + (1+r)\cdot s$$
+    $$c'\leq y' + (1+r)\cdot s$$
 
     - If the consumer saves $1$ unit of goods in the first period, then their second-period income is increased by $1+r$ units.
     - If the consumer borrows $1$ unit of goods in the first period (which means $s=-1$), then they must pay back $1+r$ units in the second period.
