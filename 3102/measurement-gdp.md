@@ -244,6 +244,7 @@ or in which they operate
 - [National Accounts releases from the BEA](https://apps.bea.gov/histdata/histChildLevels.cfm?HMI=7)
 - [News Release for 2022Q2](https://apps.bea.gov/scb/2022/08-august/0822-gdp-economy.htm)
 - [OECD stats website](https://stats.oecd.org/). You can find real-world GDP data in the menu under "National Accounts > Annual National Accounts > Main Aggregates > GDP"
+- [Understanding National Accounts](https://www.oecd.org/sdd/understanding-national-accounts-9789264214637-en.htm) - A textbook published by the OECD.
 
 [![Graph from FRED showing Nominal GDP](https://fred.stlouisfed.org/graph/fredgraph.png?g=TbEe)](https://fred.stlouisfed.org/series/gdp)
 
