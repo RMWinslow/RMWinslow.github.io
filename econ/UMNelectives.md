@@ -35,21 +35,227 @@ The underlying concepts are vital for discussing uncertainty and inequality. -->
 
 
 
-## Elective Courses Offered this Spring
+<!--## Elective Courses Offered this Spring-->
+
+<!--## Electives Related to Topics Covered in 3102-->
+
+## Some Notes Elective Offerings
 
 
+
+
+
+
+
+
+### ECON 4531 - Labor Economics (4538 - Advanced)
+
+Course Catalog Description
+: Economic analysis of domestic and global labor markets; population and labor force; labor market institutions; wage and employment theories; unions and collective bargaining; public policy including immigration, outsourcing, living wages, earnings mobility, downsizing; special topics.
+
+
+Connection to Topics in 3102
+: Labor search models from chapter 6; intertemporal decisions and credit constraints with uncertainty; much more detail about consumption inequality
+
+<!-- NOT OFFERED IN SPRING 2023?
+
+
+> Economic analysis of labor markets and their operations; population and labor force; labor market institutions; wage and employment theories; unions and collective bargaining; public policy.
+	
+> For B.S. Econ majors only. Economic analysis of domestic and global labor markets; population and labor force; labor market institutions; wage and employment theories; unions and collective bargaining; public policy including immigration, outsourcing, living wages, earnings mobility, downsizing; special topics.
+
+Course catalog just requires 3102, Calc 1,
+
+But Lise's syllabus states
+
+> I will assume that you are comfortable with micro concepts at the level of Econ 3101, 3102, such as the utility maximization problem and its related topics. I will also assume that you are comfortable with basic econometrics such as multivariate regression techniques as well as statistics at the level of Stat 3011. With regards to your math background, I will take as granted that you know how to work with calculus (derivatives). Students should be be willing to invest time in learning a computer programming language such as Matlab, R or Julia.
+-->
+
+
+
+### ECON 4431W - International Trade (4438W - Advanced), and ECON 4432W - International Finance
+
+Course Catalog Description
+: International trade flows. Commercial policy and welfare implications, protection. Global trade organizations. International factor mobility. Balance of payments analysis and open-economy macroeconomics. Foreign exchange markets and exchange rate determination. International monetary system. Regional integration. Case studies.
+
+<!--PreReqs
+: Writing, Calculus II
+-->
+
+Connection to Topics in 3102
+: similar concepts to chapters 16 and 17 but with much more detail
+
+### ECON 4432W - International Finance
+
+Course Catalog Description
+:  Balance of payments; international financial markets; exchange rate determination; international monetary system; international investment and capital flows; financial management of the multinational firm; open economy macroeconomic policy.
+
+Connection to Topics in 3102
+: similar concepts to chapters 16 and 17 but with much more detail
+
+
+
+
+
+
+
+
+### ECON 4751 - Financial Economics (4758 - Advanced)
+
+Course Catalog Description
+: Financial decisions of firms/investors. Determination of interest rates and asset prices. Role of risk/uncertainty. Emphasizes economic models.
+: Efficiency/role of financial markets. Theoretical concepts, empirical evidence. Price of financial assets, value of investment projects, risk management trading strategies.
+
+Connection to Topics in 3102
+: decision making under uncertainty and the value of assets was briefly touched upon in HW 9
+
+<!--
+PreReqs
+: One semester of Statistics
+
+### ECON 4758 - Advanced Financial Economics
+
+> 
+
+PreReqs
+: Calculus II, Statistics
+
+The objective of this course is to give the student an understanding of the operation
+of financial markets and pricing of financial assets. In the first part of the course basic
+principles of decision making under uncertainty will be developed. These principles will
+then be applied to portfolio selection problem in financial asset markets. Models of financial
+asset markets and their implications for valuation of stocks, bonds, options and derivative
+assets will be discussed. The role of information in financial markets and issues of market
+efficiency will be explored as well.
+Current events in financial markets will be regularly discussed in class.-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### ECON 4331W -- Economic Development
+
+Course Catalog Description
+: Economic growth in low income countries. Theory of aggregate and per capita income growth. Population growth, productivity increases, and capital formation. Allocation of resources between consumption and investment and among sectors. International assistance/trade.
+
+
+Connection to Topics in 3102
+: chapters 7 and 8
+
+<!--PreReqs
+: Writing-->
+
+### ECON 4341 -- Poverty and Income Inequality
+
+Course Catalog Description
+: This course focuses on the economic aspects of poverty and inequality in the United States. The course utilizes economic theory and empirical research to analyze the determinants of, and potential strategies to overcome poverty and inequality. Topics include measurement and trends of poverty and income inequality, labor markets, education, discrimination, residential segregation,  immigration,  hunger and nutrition, US farm policy, food distribution, food security, food aid, the connection between food production and health outcomes, as well as other related themes.
+
+
+
+<!--PreReqs
+: intermediate courses-->
+
+
+
+
+
+
+
+
+
+
+### ECON 4631 - Industrial Organization and Antitrust Policy
+
+Course Catalog Description
+: Relations between market structure, economic efficiency and welfare. Economic origins of monopoly and other restraints on competition. Purposes and effects of antitrust and related legislation. Industrial policy.
+
+Connection to Topics in 3102
+: In the models in 3102, all our agents were competitive price takers. We had a single "representative firm" which could be thought of as many very small firms, so small that their individual actions have no effect on the market. But what if a single firm *is* big enough to affect prices?
+
+
+
+
+### ECON 4721 - Money and Banking
+ 
+Course Catalog Description
+:  Theories of money demand and money supply. Financial intermediation and banking, banking practices and regulation, role of the Federal Reserve system. Monetary theory and policy.
+
+Connection to Topics in 3102
+: Self explanatory
+
+
+
+
+### ECON 4821 - Public Economics
+
+Course Catalog Description
+: Competing views on proper role of government in economy. Effects of tax/spending policies, taking into account private agents' response to government actions/ways government officials may use powers. Optimal policies. Applications primarily to U.S. government.
+
+Connection to Topics in 3102
+: In 3102, government policy was incredibly simple, to make the models easy to understand. Government spending was just exogenous. This class will handle the question of government policy in a less simplified way.
+
+
+
+
+
+
+
+
+
+-------------
+
+
+
+### ECON 4831 - Cost-Benefit Analysis
+
+Course Catalog Description
+:  Evaluation of benefits and costs of public projects and programs. Issues connected with definition and measurement of benefits and costs. Rate of return and discount. Market imperfections, risk, uncertainty. Case studies.
+
+
+### ECON 4311 -- Economy of Latin America
+
+Course Catalog Description
+: Economic evolution in Latin America since 1950. Trade liberalization, poverty, inflation, development strategies in selected Latin American countries. Theory/applications of important issues.
+
+### ECON 4317 -- The Chinese Economy
+
+Course Catalog Description
+: Overview of the Chinese Economy; transition from command economy to a market-based one and effects on economic indicators; current economic issues and concerns of the Chinese economy; role of China in today's world economy.
+
+
+<!--
 ### ECON 4118 -- Advanced Mathematical Econ
 
-> Development of selected models of economic behavior in mathematical terms. Topics selected to illustrate advantages of mathematical formulation.
-
+Course Catalog Description
+: > Development of selected models of economic behavior in mathematical terms. Topics selected to illustrate advantages of mathematical formulation.
 
 PreReqs
 : Calc II, Linear Algebra
+-->
 
 
 
-
-
+<!--
 ### ECON 4211 -- Principles of Econometrics
 > Data analysis/quantitative methods in economics. Violation of classical regression model assumptions, modified estimation procedures that retain desirable properties. Multi-equation models. Computer applications/interpretation of empirical results. 
 
@@ -64,136 +270,19 @@ PreReqs
 PreReqs
 : Calculus II, Linear Algebra, Multivariable Calculus, Statistics
 
-<!--Math 4242 Applied Linear Algebra Recommended.-->
+Math 4242 Applied Linear Algebra Recommended.
 
 
-
-
-
-### ECON 4311 -- Economy of Latin America
-
-> Economic evolution in Latin America since 1950. Trade liberalization, poverty, inflation, development strategies in selected Latin American countries. Theory/applications of important issues.
-
-
-PreReqs
-: Intro level courses
-
-
-### ECON 4317 -- The Chinese Economy
-
-> Overview of the Chinese Economy; transition from command economy to a market-based one and effects on economic indicators; current economic issues and concerns of the Chinese economy; role of China in today's world economy.
-
-
-PreReqs
-: intro level courses
-
-
-
-
-
-### ECON 4331W -- Economic Development
-> 	Economic growth in low income countries. Theory of aggregate and per capita income growth. Population growth, productivity increases, and capital formation. Allocation of resources between consumption and investment and among sectors. International assistance/trade.
-
-
-PreReqs
-: Writing
-
-### ECON 4341 -- Poverty and Income Inequality
-> This course focuses on the economic aspects of poverty and inequality in the United States. The course utilizes economic theory and empirical research to analyze the determinants of, and potential strategies to overcome poverty and inequality. Topics include measurement and trends of poverty and income inequality, labor markets, education, discrimination, residential segregation,  immigration,  hunger and nutrition, US farm policy, food distribution, food security, food aid, the connection between food production and health outcomes, as well as other related themes.
-
-
-PreReqs
-: intermediate courses
-
-
-### ECON 4401 - International Economics
-
-> International trade flows. Commercial policy and welfare implications, protection. Global trade organizations. International factor mobility. Balance of payments analysis and open-economy macroeconomics. Foreign exchange markets and exchange rate determination. International monetary system. Regional integration. Case studies.
-
-Requires Intro courses
-
-
-### ECON 4431W -- International Trade
-> International trade flows. Commercial policy and welfare implications, protection. Global trade organizations. International factor mobility. Balance of payments analysis and open-economy macroeconomics. Foreign exchange markets and exchange rate determination. International monetary system. Regional integration. Case studies.
-
-PreReqs
-: Writing
-
-
-### ECON 4432W - International Finance
-
-> Balance of payments; international financial markets; exchange rate determination; international monetary system; international investment and capital flows; financial management of the multinational firm; open economy macroeconomic policy.
-
-
-
-
-### ECON 4531 - Labor Economics
-> Economic analysis of labor markets and their operations; population and labor force; labor market institutions; wage and employment theories; unions and collective bargaining; public policy.
-
-
-
-
-<!-- NOT OFFERED IN SPRING 2023?
-
-
-### ECON 4538 - Advanced Labor Economics
-	
-> For B.S. Econ majors only. Economic analysis of domestic and global labor markets; population and labor force; labor market institutions; wage and employment theories; unions and collective bargaining; public policy including immigration, outsourcing, living wages, earnings mobility, downsizing; special topics.
-
-Course catalog just requires 3102, Calc 1,
-
-But Lise's syllabus states
-
-> I will assume that you are comfortable with micro concepts at the level of Econ 3101, 3102, such as the utility maximization problem and its related topics. I will also assume that you are comfortable with basic econometrics such as multivariate regression techniques as well as statistics at the level of Stat 3011. With regards to your math background, I will take as granted that you know how to work with calculus (derivatives). Students should be be willing to invest time in learning a computer programming language such as Matlab, R or Julia.
+Connection to measurement stuff?
 
 -->
-
-
-### ECON 4631 - Industrial Organization and Antitrust Policy
-
-> Relations between market structure, economic efficiency and welfare. Economic origins of monopoly and other restraints on competition. Purposes and effects of antitrust and related legislation. Industrial policy.
-
-### ECON 4721 - Money and Banking
- 
-> Theories of money demand and money supply. Financial intermediation and banking, banking practices and regulation, role of the Federal Reserve system. Monetary theory and policy.
-
-### ECON 4751 - Financial Economics
-	
-> Financial decisions of firms/investors. Determination of interest rates and asset prices. Role of risk/uncertainty. Emphasizes economic models.
-
-PreReqs
-: One semester of Statistics
-
-### ECON 4758 - Advanced Financial Economics
-
-> Efficiency/role of financial markets. Theoretical concepts, empirical evidence. Price of financial assets, value of investment projects, risk management trading strategies.
-
-PreReqs
-: Calculus II, Statistics
-
-
-### ECON 4821 - Public Economics
-> Competing views on proper role of government in economy. Effects of tax/spending policies, taking into account private agents' response to government actions/ways government officials may use powers. Optimal policies. Applications primarily to U.S. government.
-
-### ECON 4831 - Cost-Benefit Analysis
-	
-> Evaluation of benefits and costs of public projects and programs. Issues connected with definition and measurement of benefits and costs. Rate of return and discount. Market imperfections, risk, uncertainty. Case studies.
-
-
-
-
-
-
-
-
-
 
 
 
 --------------------------------------------------------------------
 
 
-
+<!--
 ## Graduate-level courses?
 
 "Instructor Consent Required"
@@ -227,7 +316,7 @@ PreReqs
 : Calc II, Linear Algebra, Multivariable Calculus, Statistics
 
 
-
+-->
 
 --------------------------------------------------------------------
 
