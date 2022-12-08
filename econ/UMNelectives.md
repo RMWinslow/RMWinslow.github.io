@@ -33,41 +33,9 @@ Integration is an important tool for understanding topics like uncertainty and i
 The underlying concepts are vital for discussing uncertainty and inequality. -->
 
 
-## 4000-level Economics Electives
-
-## Graduate-level courses?
-
-"Instructor Consent Required"
 
 
-
-
-
-
-### ECON 4108 - Advanced Game Theory and Applications
-
-> 	For Econ B.S. students only. Games. Normal form, extensive form. Wars of attrition. Games of timing. Bargaining applications in industrial organization, macroeconomics, international economics.
-
-PreReqs
-: Calc II
-
-
-### ECON 4113 - Introduction to Mathematical Economics
-> 	Development of selected models of economic behavior in mathematical terms. Topics selected to illustrate advantages of mathematical formulation.
-
-PreReqs
-: Calc II, Linear Algebra
-
-
-
-### ECON 4115 -- Uncertainty and Information
-
-> This Microeconomic theory course focuses on economies under uncertainty with possibly asymmetric information. Individual behavior of consumers and that of markets are studied under uncertainty with incomplete information. Related topics in technology and innovation. the information economy, and networks will be examined.
-
-
-PreReqs
-: Calc II, Linear Algebra, (Statistics recommended)
-
+## Elective Courses Offered this Spring
 
 
 ### ECON 4118 -- Advanced Mathematical Econ
@@ -78,6 +46,157 @@ PreReqs
 PreReqs
 : Calc II, Linear Algebra
 
+
+
+
+
+### ECON 4211 -- Principles of Econometrics
+> Data analysis/quantitative methods in economics. Violation of classical regression model assumptions, modified estimation procedures that retain desirable properties. Multi-equation models. Computer applications/interpretation of empirical results. 
+
+
+PreReqs
+: Statistics
+
+### ECON 4261 -- Introduction to Econometrics
+> For Econ B.S. majors only. Review of basic linear regression model, its variants. Time series/simultaneous equation models. Material may include panel data, censored/truncated regressions, discrete choice models.
+
+
+PreReqs
+: Calculus II, Linear Algebra, Multivariable Calculus, Statistics
+
+<!--Math 4242 Applied Linear Algebra Recommended.-->
+
+
+
+
+
+### ECON 4311 -- Economy of Latin America
+
+> Economic evolution in Latin America since 1950. Trade liberalization, poverty, inflation, development strategies in selected Latin American countries. Theory/applications of important issues.
+
+
+PreReqs
+: Intro level courses
+
+
+### ECON 4317 -- The Chinese Economy
+
+> Overview of the Chinese Economy; transition from command economy to a market-based one and effects on economic indicators; current economic issues and concerns of the Chinese economy; role of China in today's world economy.
+
+
+PreReqs
+: intro level courses
+
+
+
+
+
+### ECON 4331W -- Economic Development
+> 	Economic growth in low income countries. Theory of aggregate and per capita income growth. Population growth, productivity increases, and capital formation. Allocation of resources between consumption and investment and among sectors. International assistance/trade.
+
+
+PreReqs
+: Writing
+
+### ECON 4341 -- Poverty and Income Inequality
+> This course focuses on the economic aspects of poverty and inequality in the United States. The course utilizes economic theory and empirical research to analyze the determinants of, and potential strategies to overcome poverty and inequality. Topics include measurement and trends of poverty and income inequality, labor markets, education, discrimination, residential segregation,  immigration,  hunger and nutrition, US farm policy, food distribution, food security, food aid, the connection between food production and health outcomes, as well as other related themes.
+
+
+PreReqs
+: intermediate courses
+
+
+### ECON 4401 - International Economics
+
+> International trade flows. Commercial policy and welfare implications, protection. Global trade organizations. International factor mobility. Balance of payments analysis and open-economy macroeconomics. Foreign exchange markets and exchange rate determination. International monetary system. Regional integration. Case studies.
+
+Requires Intro courses
+
+
+### ECON 4431W -- International Trade
+> International trade flows. Commercial policy and welfare implications, protection. Global trade organizations. International factor mobility. Balance of payments analysis and open-economy macroeconomics. Foreign exchange markets and exchange rate determination. International monetary system. Regional integration. Case studies.
+
+PreReqs
+: Writing
+
+
+### ECON 4432W - International Finance
+
+> Balance of payments; international financial markets; exchange rate determination; international monetary system; international investment and capital flows; financial management of the multinational firm; open economy macroeconomic policy.
+
+
+
+
+### ECON 4531 - Labor Economics
+> Economic analysis of labor markets and their operations; population and labor force; labor market institutions; wage and employment theories; unions and collective bargaining; public policy.
+
+
+
+
+<!-- NOT OFFERED IN SPRING 2023?
+
+
+### ECON 4538 - Advanced Labor Economics
+	
+> For B.S. Econ majors only. Economic analysis of domestic and global labor markets; population and labor force; labor market institutions; wage and employment theories; unions and collective bargaining; public policy including immigration, outsourcing, living wages, earnings mobility, downsizing; special topics.
+
+Course catalog just requires 3102, Calc 1,
+
+But Lise's syllabus states
+
+> I will assume that you are comfortable with micro concepts at the level of Econ 3101, 3102, such as the utility maximization problem and its related topics. I will also assume that you are comfortable with basic econometrics such as multivariate regression techniques as well as statistics at the level of Stat 3011. With regards to your math background, I will take as granted that you know how to work with calculus (derivatives). Students should be be willing to invest time in learning a computer programming language such as Matlab, R or Julia.
+
+-->
+
+
+### ECON 4631 - Industrial Organization and Antitrust Policy
+
+> Relations between market structure, economic efficiency and welfare. Economic origins of monopoly and other restraints on competition. Purposes and effects of antitrust and related legislation. Industrial policy.
+
+### ECON 4721 - Money and Banking
+ 
+> Theories of money demand and money supply. Financial intermediation and banking, banking practices and regulation, role of the Federal Reserve system. Monetary theory and policy.
+
+### ECON 4751 - Financial Economics
+	
+> Financial decisions of firms/investors. Determination of interest rates and asset prices. Role of risk/uncertainty. Emphasizes economic models.
+
+PreReqs
+: One semester of Statistics
+
+### ECON 4758 - Advanced Financial Economics
+
+> Efficiency/role of financial markets. Theoretical concepts, empirical evidence. Price of financial assets, value of investment projects, risk management trading strategies.
+
+PreReqs
+: Calculus II, Statistics
+
+
+### ECON 4821 - Public Economics
+> Competing views on proper role of government in economy. Effects of tax/spending policies, taking into account private agents' response to government actions/ways government officials may use powers. Optimal policies. Applications primarily to U.S. government.
+
+### ECON 4831 - Cost-Benefit Analysis
+	
+> Evaluation of benefits and costs of public projects and programs. Issues connected with definition and measurement of benefits and costs. Rate of return and discount. Market imperfections, risk, uncertainty. Case studies.
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------
+
+
+
+## Graduate-level courses?
+
+"Instructor Consent Required"
 
 
 
@@ -110,22 +229,37 @@ PreReqs
 
 
 
+--------------------------------------------------------------------
+
+
+<!--
+
+## Other 4000-level Economics Electives
+
+
+### ECON 4108 - Advanced Game Theory and Applications
+
+> 	For Econ B.S. students only. Games. Normal form, extensive form. Wars of attrition. Games of timing. Bargaining applications in industrial organization, macroeconomics, international economics.
+
+PreReqs
+: Calc II
+
+
+### ECON 4113 - Introduction to Mathematical Economics
+> 	Development of selected models of economic behavior in mathematical terms. Topics selected to illustrate advantages of mathematical formulation.
+
+PreReqs
+: Calc II, Linear Algebra
 
 
 
-### ECON 4211 -- Principles of Econometrics
-> Data analysis/quantitative methods in economics. Violation of classical regression model assumptions, modified estimation procedures that retain desirable properties. Multi-equation models. Computer applications/interpretation of empirical results. 
+### ECON 4115 -- Uncertainty and Information
+
+> This Microeconomic theory course focuses on economies under uncertainty with possibly asymmetric information. Individual behavior of consumers and that of markets are studied under uncertainty with incomplete information. Related topics in technology and innovation. the information economy, and networks will be examined.
 
 
 PreReqs
-: Statistics
-
-### ECON 4261 -- Introduction to Econometrics
-> For Econ B.S. majors only. Review of basic linear regression model, its variants. Time series/simultaneous equation models. Material may include panel data, censored/truncated regressions, discrete choice models.
-
-
-PreReqs
-: Statistics
+: Calc II, Linear Algebra, (Statistics recommended)
 
 
 
@@ -134,31 +268,32 @@ PreReqs
 
 
 
-### ECON 4311 -- Economy of Latin America
-
-> Economic evolution in Latin America since 1950. Trade liberalization, poverty, inflation, development strategies in selected Latin American countries. Theory/applications of important issues.
 
 
-PreReqs
-: Intro level courses
 
 
-### ECON 4317 -- The Chinese Economy
 
-> Overview of the Chinese Economy; transition from command economy to a market-based one and effects on economic indicators; current economic issues and concerns of the Chinese economy; role of China in today's world economy.
 
+
+
+
+
+
+
+
+
+
+
+### ECON 4438W - Advanced International Trade
+> Theories of trade/explanations of trade patterns. Trade restrictions. Commercial policy. International factor movements. Economic growth/development. Multinational corporations. Regional integration.
 
 PreReqs
-: intro level courses
+: Calculus II, Writing
 
 
 
-### ECON 4331W -- Economic Development
-> 	Economic growth in low income countries. Theory of aggregate and per capita income growth. Population growth, productivity increases, and capital formation. Allocation of resources between consumption and investment and among sectors. International assistance/trade.
 
 
-PreReqs
-: Writing
 
 
 
@@ -171,20 +306,6 @@ PreReqs
 : intermediate courses
 
 
-
-### ECON 4341 -- Poverty and Income Inequality
-> This course focuses on the economic aspects of poverty and inequality in the United States. The course utilizes economic theory and empirical research to analyze the determinants of, and potential strategies to overcome poverty and inequality. Topics include measurement and trends of poverty and income inequality, labor markets, education, discrimination, residential segregation,  immigration,  hunger and nutrition, US farm policy, food distribution, food security, food aid, the connection between food production and health outcomes, as well as other related themes.
-
-
-PreReqs
-: intermediate courses
-
-
-### ECON 4401 - International Economics
-
-> International trade flows. Commercial policy and welfare implications, protection. Global trade organizations. International factor mobility. Balance of payments analysis and open-economy macroeconomics. Foreign exchange markets and exchange rate determination. International monetary system. Regional integration. Case studies.
-
-Requires Intro courses
 
 
 
@@ -199,81 +320,15 @@ Requires Intro courses
 
 
 
-### ECON 4431W -- International Trade
-> International trade flows. Commercial policy and welfare implications, protection. Global trade organizations. International factor mobility. Balance of payments analysis and open-economy macroeconomics. Foreign exchange markets and exchange rate determination. International monetary system. Regional integration. Case studies.
-
-PreReqs
-: Writing
-
-
-### ECON 4432W - International Finance
-
-> Balance of payments; international financial markets; exchange rate determination; international monetary system; international investment and capital flows; financial management of the multinational firm; open economy macroeconomic policy.
 
 
 
-
-
-### ECON 4438W - Advanced International Trade
-> Theories of trade/explanations of trade patterns. Trade restrictions. Commercial policy. International factor movements. Economic growth/development. Multinational corporations. Regional integration.
-
-PreReqs
-: Calculus II, Writing
-
-
-### ECON 4531 - Labor Economics
-> Economic analysis of labor markets and their operations; population and labor force; labor market institutions; wage and employment theories; unions and collective bargaining; public policy.
-
-
-### ECON 4538 - Advanced Labor Economics
-	
-> For B.S. Econ majors only. Economic analysis of domestic and global labor markets; population and labor force; labor market institutions; wage and employment theories; unions and collective bargaining; public policy including immigration, outsourcing, living wages, earnings mobility, downsizing; special topics.
-
-Course catalog just requires 3102, Calc 1,
-
-But Lise's syllabus states
-
-> I will assume that you are comfortable with micro concepts at the level of Econ 3101, 3102, such as the utility maximization problem and its related topics. I will also assume that you are comfortable with basic econometrics such as multivariate regression techniques as well as statistics at the level of Stat 3011. With regards to your math background, I will take as granted that you know how to work with calculus (derivatives). Students should be be willing to invest time in learning a computer programming language such as Matlab, R or Julia.
-
-
-
-
-### ECON 4631 - Industrial Organization and Antitrust Policy
-
-> Relations between market structure, economic efficiency and welfare. Economic origins of monopoly and other restraints on competition. Purposes and effects of antitrust and related legislation. Industrial policy.
-
-### ECON 4721 - Money and Banking
- 
-> Theories of money demand and money supply. Financial intermediation and banking, banking practices and regulation, role of the Federal Reserve system. Monetary theory and policy.
 
 ### ECON 4731 - Macroeconomic Policy
 > Monetary vs. fiscal policy debate in the context of the underlying macroeconomic theory controversy. Comparison of Keynesian, Monetarist, and Classical theories; rational expectations; policy ineffectiveness; time inconsistency; rules vs. discretion; budget deficits; unemployment and inflation.
 
-### ECON 4751 - Financial Economics
-	
-> Financial decisions of firms/investors. Determination of interest rates and asset prices. Role of risk/uncertainty. Emphasizes economic models.
-
-PreReqs
-: One semester of Statistics
 
 
-
-### ECON 4758 - Advanced Financial Economics
-
-> Efficiency/role of financial markets. Theoretical concepts, empirical evidence. Price of financial assets, value of investment projects, risk management trading strategies.
-
-
-PreReqs
-: Calculus II, Statistics
-
-
-
-### ECON 4821 - Public Economics
-> Competing views on proper role of government in economy. Effects of tax/spending policies, taking into account private agents' response to government actions/ways government officials may use powers. Optimal policies. Applications primarily to U.S. government.
-
-### ECON 4831 - Cost-Benefit Analysis
-	
-> Evaluation of benefits and costs of public projects and programs. Issues connected with definition and measurement of benefits and costs. Rate of return and discount. Market imperfections, risk, uncertainty. Case studies.
 
 
 ### ECON 5890 - Economics of the Health-Care System
@@ -282,7 +337,7 @@ PreReqs
 
 
 
-
+-->
 
 
 
