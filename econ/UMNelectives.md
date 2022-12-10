@@ -1,13 +1,22 @@
 ---
 title: Econ Electives
+subtitle: Subject-matter connections between Econ 3102 and some of the 4000-level econ electives.
 nav_order: 99
 parent: _Notes
 layout: post
 has_children: false
 ---
 
-These are my notes on the undergraduate economics electives at UMN.
+These are my notes on some of the undergraduate economics electives at UMN
+and how they relate to topics discussed in Econ 3102. 
 
+A few caveats:
+- This isn't the full course list, and course offerings vary by semester. Please consult the course catalog or talk to the [undergrad econ advisors](https://cla.umn.edu/economics/undergraduate/advising) for more information.
+- Many of these courses cover a broader set of subjects than what is described here. I'm focusing on the connections to 3102's material.
+- Another important thing to consider when choosing electives are the pre-requisites. Some of the courses require additional math classes, and are more numerically intense as a result. Other courses are writing intensive. It's a good idea to choose courses which match your preferred style of learning.
+
+
+<!--
 Students typically 
 My goal is to help students find the electives that appeal to them by
 
@@ -18,7 +27,7 @@ My goal is to help students find the electives that appeal to them by
 - **Multivariable Calculus** (Math 2263) takes the concepts and techniques from Calc I and II, and extends them to multiple dimensions. You've already seen a bit of this in your econ classes, whenever you take the partial derivative of a function.
 - **Statistics** (Stat 4101 and 4102) teaches you about random distributions, and how to measure and summarize data. 
 - Freshman Writing Practice
-
+-->
 
 <!--
 TODO: What is freshman writing practice?
@@ -39,59 +48,93 @@ The underlying concepts are vital for discussing uncertainty and inequality. -->
 
 <!--## Electives Related to Topics Covered in 3102-->
 
-## Some Notes Elective Offerings
+<!--## Some Notes Elective Offerings-->
+
+
+First, some of the obvious connections.
+
+We briefly discussed a Small Open Economy using chapters 16 and 17 of Williamson.
+As you might expect, 
+a course on International Trade (*4431W or 4438W for the advanced version*) will go into much more detail about related topics.
+A course on International Finance (*4432W*) will have a lot of overlap with a course on international trade, but will focus more on the kinds of money-related concepts we talked about in chapter 17.
+
+Likewise, a course on Money and Banking (*4721*) will go into much more detail about money and monetary policy.
+
+In chapter 7 of our textbook, we contrasted the Solow Growth Model with a "Malthusian" model of the economy,
+and used this comparison to discuss how the economy changed after 1800. 
+Economic Development (*4331W*) goes into more detail about this very important bit of history
+(arguably the *most* important bit of history)
+and also touches on some of the barriers to development that were mentioned in chapter 8.
+
+<!-- relates to the inequality *between* countries.-->
+<!--I attach the syllabus. My guess would be very little overlap. We’re doing more econ history stuff and fewer models.-->
+
+
+
+<!--
+TODO: Blurb about inequality.
+Inequality is an important subject in economics, but is difficult to rigorously discuss without an understanding of integral calculus and statistics.
+As such, we only very briefly discussed such topics in 3102.
+There are several course offerings that explore inequality in more detail.
+The main goal of 3102 is to introduce you to the tools of economics. 
+-->
+
+
+<!--Poverty and Income Inequality (*4341*) qualitatively looks at inequality *within* a country, focusing on the United States.
+If you want to know more about the inequalities *between* countries, as we touched upon in chapters 7 and 8 of Williamson,
+then consider taking a course on Economic Development (*4331W*).
+
+Many other courses touch on the subject of inequality as well.-->
 
 
 
 
+<!--
+http://classinfo.umn.edu/?term=1209&subject=ECON&catalog_nbr=4341
 
-
-
-
-### ECON 4531 - Labor Economics (4538 - Advanced)
+### ECON 4341 -- Poverty and Income Inequality
 
 Course Catalog Description
-: Economic analysis of domestic and global labor markets; population and labor force; labor market institutions; wage and employment theories; unions and collective bargaining; public policy including immigration, outsourcing, living wages, earnings mobility, downsizing; special topics.
+: This course focuses on the economic aspects of poverty and inequality in the United States. The course utilizes economic theory and empirical research to analyze the determinants of, and potential strategies to overcome poverty and inequality. Topics include measurement and trends of poverty and income inequality, labor markets, education, discrimination, residential segregation,  immigration,  hunger and nutrition, US farm policy, food distribution, food security, food aid, the connection between food production and health outcomes, as well as other related themes.
 
 
-Connection to Topics in 3102
-: Labor search models from chapter 6; intertemporal decisions and credit constraints with uncertainty; much more detail about consumption inequality
 
-<!-- NOT OFFERED IN SPRING 2023?
+PreReqs
+: intermediate courses-->
 
 
-> Economic analysis of labor markets and their operations; population and labor force; labor market institutions; wage and employment theories; unions and collective bargaining; public policy.
-	
-> For B.S. Econ majors only. Economic analysis of domestic and global labor markets; population and labor force; labor market institutions; wage and employment theories; unions and collective bargaining; public policy including immigration, outsourcing, living wages, earnings mobility, downsizing; special topics.
+A course on Labor Economics (*4531 or 4538 for the advanced version*) looks at the job search models we discussed with chapter 6 of Williamson, 
+and also expounds upon the kind of intertemporal decisions we discussed with chapters 9 and 10.<!--, adding uncertainty into the mix.-->
+In 3102, we discussed how households make decisions to prepare for their future, which they knew with certainty.
+But in reality, households must make decisions to prepare for uncertain futures.
+Will I lose my job? Will I get a raise? Etc.
+These common concerns<!--Such shocks--> shape the decisions people make, 
+and <!--such shocks--> are important for understanding the patterns of work, savings, and income inequality.
 
-Course catalog just requires 3102, Calc 1,
 
-But Lise's syllabus states
+<!--
+If I had a lot of time, I could go through Lise's models one by one.
+For example, 
+https://digifesto.com/2019/11/09/notes-on-krussell-smith-1998-and-macroeconomic-theory/
+ Krusell and Smith, 1998 “Income and wealth heterogeneity in the macroeconomy.”
+has a model of inequality with different preference parameters. That's pretty easy to design a HW problem around.
 
-> I will assume that you are comfortable with micro concepts at the level of Econ 3101, 3102, such as the utility maximization problem and its related topics. I will also assume that you are comfortable with basic econometrics such as multivariate regression techniques as well as statistics at the level of Stat 3011. With regards to your math background, I will take as granted that you know how to work with calculus (derivatives). Students should be be willing to invest time in learning a computer programming language such as Matlab, R or Julia.
 -->
 
 
 
-### ECON 4431W - International Trade (4438W - Advanced), and ECON 4432W - International Finance
+<!--
+Financial Economics (*4751 or 4758 for the advanced version*) 
 
-Course Catalog Description
-: International trade flows. Commercial policy and welfare implications, protection. Global trade organizations. International factor mobility. Balance of payments analysis and open-economy macroeconomics. Foreign exchange markets and exchange rate determination. International monetary system. Regional integration. Case studies.
+Regular reading of the business press (Wall Street Journal, Financial Times, The
+Economist, New York Times) is strongly recommended.
+• Articles: Each chapter in Bailey’s textbook has a list of references. Other references
+will be announced in class.
+• Nobel Prize Committee 2013, “Understanding Asset Prices”.
 
-<!--PreReqs
-: Writing, Calculus II
--->
+• Hull, John Options, Futures and Other Derivatives Pearson Education, 10th (or ear-
+lier) Edition, (useful for the 2nd part of the course).
 
-Connection to Topics in 3102
-: similar concepts to chapters 16 and 17 but with much more detail
-
-### ECON 4432W - International Finance
-
-Course Catalog Description
-:  Balance of payments; international financial markets; exchange rate determination; international monetary system; international investment and capital flows; financial management of the multinational firm; open economy macroeconomic policy.
-
-Connection to Topics in 3102
-: similar concepts to chapters 16 and 17 but with much more detail
 
 
 
@@ -109,7 +152,7 @@ Course Catalog Description
 Connection to Topics in 3102
 : decision making under uncertainty and the value of assets was briefly touched upon in HW 9
 
-<!--
+
 PreReqs
 : One semester of Statistics
 
@@ -153,66 +196,27 @@ Current events in financial markets will be regularly discussed in class.-->
 
 
 
-### ECON 4331W -- Economic Development
 
-Course Catalog Description
-: Economic growth in low income countries. Theory of aggregate and per capita income growth. Population growth, productivity increases, and capital formation. Allocation of resources between consumption and investment and among sectors. International assistance/trade.
+We made many simplifying assumptions in our models in 3102.
+These simplifications made it easier to learn the models and work through the algebra,
+but led us to gloss over some very important economic questions.
 
+One of our simplifying assumptions in 3102 was that all our agents were competitive price takers.
+We had a single "representative firm" which could be thought of as many very small firms, so small that their individual actions have no effect on the market. 
+But what happens when a single firm or a group of firms *is* big enough to affect prices?
+This often happens the real-world, and Industrial Organization (*4631*) explores the implications this has for the economy.
 
-Connection to Topics in 3102
-: chapters 7 and 8
-
-<!--PreReqs
-: Writing-->
-
-### ECON 4341 -- Poverty and Income Inequality
-
-Course Catalog Description
-: This course focuses on the economic aspects of poverty and inequality in the United States. The course utilizes economic theory and empirical research to analyze the determinants of, and potential strategies to overcome poverty and inequality. Topics include measurement and trends of poverty and income inequality, labor markets, education, discrimination, residential segregation,  immigration,  hunger and nutrition, US farm policy, food distribution, food security, food aid, the connection between food production and health outcomes, as well as other related themes.
-
-
-
-<!--PreReqs
-: intermediate courses-->
+Another very important economic question is the role of government policy. 
+Sure, we talked about the government quite a bit in 3102, but government spending and taxes were, for the most part, exogenous in our models. 
+The government itself wasn't an agent. 
+But what if we do think of the government as having goals. 
+What should those goals be? How can it accomplish them?
+Public Economics (*4821*) explores these questions.
 
 
 
 
 
-
-
-
-
-
-### ECON 4631 - Industrial Organization and Antitrust Policy
-
-Course Catalog Description
-: Relations between market structure, economic efficiency and welfare. Economic origins of monopoly and other restraints on competition. Purposes and effects of antitrust and related legislation. Industrial policy.
-
-Connection to Topics in 3102
-: In the models in 3102, all our agents were competitive price takers. We had a single "representative firm" which could be thought of as many very small firms, so small that their individual actions have no effect on the market. But what if a single firm *is* big enough to affect prices?
-
-
-
-
-### ECON 4721 - Money and Banking
- 
-Course Catalog Description
-:  Theories of money demand and money supply. Financial intermediation and banking, banking practices and regulation, role of the Federal Reserve system. Monetary theory and policy.
-
-Connection to Topics in 3102
-: Self explanatory
-
-
-
-
-### ECON 4821 - Public Economics
-
-Course Catalog Description
-: Competing views on proper role of government in economy. Effects of tax/spending policies, taking into account private agents' response to government actions/ways government officials may use powers. Optimal policies. Applications primarily to U.S. government.
-
-Connection to Topics in 3102
-: In 3102, government policy was incredibly simple, to make the models easy to understand. Government spending was just exogenous. This class will handle the question of government policy in a less simplified way.
 
 
 
@@ -226,6 +230,7 @@ Connection to Topics in 3102
 
 
 
+<!--
 ### ECON 4831 - Cost-Benefit Analysis
 
 Course Catalog Description
@@ -243,7 +248,6 @@ Course Catalog Description
 : Overview of the Chinese Economy; transition from command economy to a market-based one and effects on economic indicators; current economic issues and concerns of the Chinese economy; role of China in today's world economy.
 
 
-<!--
 ### ECON 4118 -- Advanced Mathematical Econ
 
 Course Catalog Description
