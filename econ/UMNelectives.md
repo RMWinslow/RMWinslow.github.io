@@ -1,6 +1,7 @@
 ---
 title: Econ Electives
 subtitle: Subject-matter connections between Econ 3102 and some of the 4000-level econ electives.
+date: 2022-12-10
 nav_order: 99
 parent: Notes
 layout: post
@@ -234,25 +235,6 @@ PreReqs
 
 <!--
 
-## Other 4000-level Economics Electives
-
-
-### ECON 4108 - Advanced Game Theory and Applications
-
-> 	For Econ B.S. students only. Games. Normal form, extensive form. Wars of attrition. Games of timing. Bargaining applications in industrial organization, macroeconomics, international economics.
-
-PreReqs
-: Calc II
-
-
-### ECON 4113 - Introduction to Mathematical Economics
-> 	Development of selected models of economic behavior in mathematical terms. Topics selected to illustrate advantages of mathematical formulation.
-
-PreReqs
-: Calc II, Linear Algebra
-
-
-
 ### ECON 4115 -- Uncertainty and Information
 
 > This Microeconomic theory course focuses on economies under uncertainty with possibly asymmetric information. Individual behavior of consumers and that of markets are studied under uncertainty with incomplete information. Related topics in technology and innovation. the information economy, and networks will be examined.
@@ -260,26 +242,6 @@ PreReqs
 
 PreReqs
 : Calc II, Linear Algebra, (Statistics recommended)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
