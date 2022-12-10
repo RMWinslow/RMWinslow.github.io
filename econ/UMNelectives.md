@@ -55,14 +55,14 @@ First, some of the obvious connections.
 
 We briefly discussed a Small Open Economy using chapters 16 and 17 of Williamson.
 As you might expect, 
-a course on International Trade (*4431W or 4438W for the advanced version*) will go into much more detail about related topics.
-A course on International Finance (*4432W*) will have a lot of overlap with a course on international trade, but will focus more on the kinds of money-related concepts we talked about in chapter 17.
+a course on **International Trade** (*4431W or 4438W for the advanced version*) will go into much more detail about related topics.
+A course on **International Finance** (*4432W*) will have a lot of overlap with a course on international trade, but will focus more on the kinds of money-related concepts we talked about in chapter 17.
 
-Likewise, a course on Money and Banking (*4721*) will go into much more detail about money and monetary policy.
+Likewise, a course on **Money and Banking** (*4721*) will go into much more detail about money and monetary policy.
 
 In chapter 7 of our textbook, we contrasted the Solow Growth Model with a "Malthusian" model of the economy,
 and used this comparison to discuss how the economy changed after 1800. 
-Economic Development (*4331W*) goes into more detail about this very important bit of history
+**Economic Development** (*4331W*) goes into more detail about this very important bit of history
 (arguably the *most* important bit of history)
 and also touches on some of the barriers to development that were mentioned in chapter 8.
 
@@ -103,7 +103,7 @@ PreReqs
 : intermediate courses-->
 
 
-A course on Labor Economics (*4531 or 4538 for the advanced version*) looks at the job search models we discussed with chapter 6 of Williamson, 
+A course on **Labor Economics** (*4531 or 4538 for the advanced version*) looks at the job search models we discussed with chapter 6 of Williamson, 
 and also expounds upon the kind of intertemporal decisions we discussed with chapters 9 and 10.<!--, adding uncertainty into the mix.-->
 In 3102, we discussed how households make decisions to prepare for their future, which they knew with certainty.
 But in reality, households must make decisions to prepare for uncertain futures.
@@ -204,14 +204,14 @@ but led us to gloss over some very important economic questions.
 One of our simplifying assumptions in 3102 was that all our agents were competitive price takers.
 We had a single "representative firm" which could be thought of as many very small firms, so small that their individual actions have no effect on the market. 
 But what happens when a single firm or a group of firms *is* big enough to affect prices?
-This often happens the real-world, and Industrial Organization (*4631*) explores the implications this has for the economy.
+This often happens the real-world, and **Industrial Organization** (*4631*) explores the implications this has for the economy.
 
 Another very important economic question is the role of government policy. 
 Sure, we talked about the government quite a bit in 3102, but government spending and taxes were, for the most part, exogenous in our models. 
 The government itself wasn't an agent. 
 But what if we do think of the government as having goals. 
 What should those goals be? How can it accomplish them?
-Public Economics (*4821*) explores these questions.
+**Public Economics** (*4821*) explores these questions.
 
 
 
