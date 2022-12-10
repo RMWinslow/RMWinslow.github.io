@@ -1,7 +1,7 @@
 ---
 title: Econ Electives
 nav_order: 99
-parent: Notes
+parent: _Notes
 layout: post
 has_children: false
 ---
