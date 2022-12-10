@@ -1,6 +1,7 @@
 ---
 title: Econ Electives
 subtitle: Subject-matter connections between Econ 3102 and some of the 4000-level econ electives.
+author: Robert Winslow
 date: 2022-12-10
 nav_order: 99
 parent: Notes
@@ -13,9 +14,6 @@ and how they relate to topics discussed in Econ 3102.
 
 
 <!--
-Students typically 
-My goal is to help students find the electives that appeal to them by
-
 ## Brief Description on Common Prerequisites
 
 - **Calculus II** (Math 1272 or equivalent) teaches you integral calculus. Integration is an important tool for understanding many different topics.
@@ -25,34 +23,15 @@ My goal is to help students find the electives that appeal to them by
 - Freshman Writing Practice
 -->
 
-<!--
-TODO: What is freshman writing practice?
-I will list it as "writing" in the prereqs
-
-
-Intro to stats is Stat 3011 3022
-5101 and 5102 are mentioned, but only required for 8000 level courses. So I can ignore those here.
-
-Maybe a note about the brief dicsussion of coorelations in class?
-Integration is an important tool for understanding topics like uncertainty and inequality.
-The underlying concepts are vital for discussing uncertainty and inequality. -->
-
-
-
-
-<!--## Elective Courses Offered this Spring-->
-
-<!--## Electives Related to Topics Covered in 3102-->
-
-<!--## Some Notes Elective Offerings-->
 
 
 First, some of the obvious connections:
 
-We briefly discussed a Small Open Economy using chapters 16 and 17 of Williamson.
 As you might expect, 
-a course on **International Trade** (*4431W or 4438W for the advanced version*) will go into much more detail about related topics.
-A course on **International Finance** (*4432W*) will have a lot of overlap with a course on international trade, but will focus more on the kinds of money-related concepts we talked about in chapter 17.
+a course on **International Trade** (*4431W or 4438W for the advanced version*) will go into much more detail about some of the topics which we discussed in chapters 16 and 17 of our textbook.[^textbookcite]
+A course on **International Finance** (*4432W*) has a lot of overlap with a course on international trade, but with more focus on the kinds of money-related concepts we talked about in chapter 17.
+
+[^textbookcite]: Williamson, Stephen D. "Macroeconomics, 6th." (2018).
 
 Likewise, a course on **Money and Banking** (*4721*) will go into much more detail about money and monetary policy.
 
@@ -71,17 +50,17 @@ and one which we weren't able to discuss in detail in 3102,
 is the inequality found *within* a country.
 **Poverty and Income Inequality** (*4341*) is a class which qualitatively explores inequality within the US, and the efforts to redress it.
 
-While 4341 has the most focus on inequality,
+While 4341 has the largest focus on inequality,
 there are many other upper level courses in which the topic of inequality heavily features.
 
-**Labor Economics** (*4531 or 4538 for the advanced version*), for example, discusses wealth inequality and income inequality that can be found between households.
-Labor Economics looks at the job search models we discussed with chapter 6 of Williamson, 
+**Labor Economics** (*4531 or 4538 for the advanced version*), for example, discusses the wealth inequality and income inequality that can be found between households.
+The course looks at the job search models we discussed with chapter 6 of Williamson, 
 and also expounds upon the kind of intertemporal decisions we discussed with chapters 9 and 10.<!--, adding uncertainty into the mix.-->
 In 3102, we discussed how households make decisions to prepare for their future, which they knew with certainty.
-But in reality, households must make decisions to prepare for uncertain futures.
-Will I lose my job? Will I get a raise? Etc.
+But in reality, households must make decisions to prepare for *uncertain* futures.
+Will I lose my job? Will I get a raise? 
 These common concerns<!--Such shocks--> shape the decisions people make, 
-and <!--such shocks--> are important for understanding the patterns of work, savings, and inequality.
+and <!--such shocks--> are important for understanding patterns of work, savings, and inequality.
 
 <!--
 If I had a lot of time, I could go through Lise's models one by one.
@@ -94,9 +73,9 @@ has a model of inequality with different preference parameters. That's pretty ea
 
 **Financial Economics** (*4751 or 4758 for the advanced version*) also heavily deals with decision making under uncertainty,
 but with a focus on investment decisions and asset prices (as opposed to Labor Economics which deals with labor prices -- wages, that is).
-We talked a lot about prices in 3102, but how were prices determined? Well, they were typically just whatever value allowed the market to clear.
+When we talked about prices in 3102, where did those prices come from? They were typically just whatever value allowed the markets to clear.
 But in financial contexts, its important to understand the details of the processes by which prices are determined.
-Investment risk is another very important topic -- one which we only briefly saw in a simplified form in one our HW assignments in 3102 --
+Investment risk is another very important topic -- one which we only briefly saw in the homework assignment about the two-period firm --
 which is discussed in more detail in a Financial Economics course.
 
 <!--
@@ -110,9 +89,9 @@ lier) Edition, (useful for the 2nd part of the course).
 (Bailey's Economics of Financial Markets textbook is very readable from what I've seen.)
 -->
 
-In fact, we made many simplifying assumptions in our models in 3102.
+<!--In fact, we made many simplifying assumptions in our models in 3102.
 These simplifications made it easier to learn the models and work through the algebra,
-but led us to gloss over some very important economic questions.
+but led us to gloss over some very important economic questions.-->
 
 One of our simplifying assumptions in 3102 was that all our agents were competitive price takers.
 We had a single "representative firm" which could be thought of as many very small firms, so small that their individual actions have no effect on the market. 
@@ -122,7 +101,7 @@ This often happens in the real-world, and **Industrial Organization** (*4631*) e
 Another very important economic question is the role of government policy. 
 Sure, we talked about the government quite a bit in 3102, but government spending and taxes were, for the most part, exogenous in our models. 
 The government itself wasn't an agent. 
-But what if we do think of the government as having goals. 
+But what if we do think of the government as having goals?
 What should those goals be? How can it accomplish them?
 **Public Economics** (*4821*) explores these questions.
 
@@ -146,17 +125,6 @@ A few final caveats:
 
 Course Catalog Description
 :  Evaluation of benefits and costs of public projects and programs. Issues connected with definition and measurement of benefits and costs. Rate of return and discount. Market imperfections, risk, uncertainty. Case studies.
-
-
-### ECON 4311 -- Economy of Latin America
-
-Course Catalog Description
-: Economic evolution in Latin America since 1950. Trade liberalization, poverty, inflation, development strategies in selected Latin American countries. Theory/applications of important issues.
-
-### ECON 4317 -- The Chinese Economy
-
-Course Catalog Description
-: Overview of the Chinese Economy; transition from command economy to a market-based one and effects on economic indicators; current economic issues and concerns of the Chinese economy; role of China in today's world economy.
 
 
 ### ECON 4118 -- Advanced Mathematical Econ
@@ -245,30 +213,12 @@ PreReqs
 
 
 
-
-### ECON 4438W - Advanced International Trade
-> Theories of trade/explanations of trade patterns. Trade restrictions. Commercial policy. International factor movements. Economic growth/development. Multinational corporations. Regional integration.
-
-PreReqs
-: Calculus II, Writing
-
-
-
-
-
-
-
-
-
 ### ECON 4337 - Comparative Economic Systems
 > 	Functions of economic systems; market economy versus centrally planned economy. Comparison of different economic systems. Post socialist transitions in Eastern Europe, Russia, and China. Initial conditions and strategies for reforms; results of reforms in terms of key economic indicators.
 
 
 PreReqs
 : intermediate courses
-
-
-
 
 
 
@@ -281,15 +231,8 @@ PreReqs
 > London is a “global city”- and has evolved from being a city of merchandise trade to being one of the premier financial services centers and cultural melting-pot in the world. The course explores the role of financial services, merchandise trade, trade policy, immigrant populations and cultures, and current race relations in the evolution of modern London. Globalization, the interactions and interdependencies between the city of London and the rest of the world, are researched and explored through class work and daily site visits to major economic and cultural locales.
 
 
-
-
-
-
-
 ### ECON 4731 - Macroeconomic Policy
 > Monetary vs. fiscal policy debate in the context of the underlying macroeconomic theory controversy. Comparison of Keynesian, Monetarist, and Classical theories; rational expectations; policy ineffectiveness; time inconsistency; rules vs. discretion; budget deficits; unemployment and inflation.
-
-
 
 
 
