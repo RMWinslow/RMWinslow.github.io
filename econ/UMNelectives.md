@@ -10,11 +10,6 @@ has_children: false
 These are my notes on some of the undergraduate economics electives at UMN
 and how they relate to topics discussed in Econ 3102. 
 
-A few caveats:
-- This isn't the full course list, and course offerings vary by semester. Please consult the course catalog or talk to the [undergrad econ advisors](https://cla.umn.edu/economics/undergraduate/advising) for more information.
-- Many of these courses cover a broader set of subjects than what is described here. I'm focusing on the connections to 3102's material.
-- Another important thing to consider when choosing electives are the pre-requisites. Some of the courses require additional math classes, and are more numerically intense as a result. Other courses are writing intensive. It's a good idea to choose courses which match your preferred style of learning.
-
 
 <!--
 Students typically 
@@ -51,7 +46,7 @@ The underlying concepts are vital for discussing uncertainty and inequality. -->
 <!--## Some Notes Elective Offerings-->
 
 
-First, some of the obvious connections.
+First, some of the obvious connections:
 
 We briefly discussed a Small Open Economy using chapters 16 and 17 of Williamson.
 As you might expect, 
@@ -66,51 +61,26 @@ and used this comparison to discuss how the economy changed after 1800.
 (arguably the *most* important bit of history)
 and also touches on some of the barriers to development that were mentioned in chapter 8.
 
-<!-- relates to the inequality *between* countries.-->
 <!--I attach the syllabus. My guess would be very little overlap. We’re doing more econ history stuff and fewer models.-->
 
 
+In 3102, we talked a little bit about inequalities *between* countries.
+But another very important topic in economics,
+and one which we weren't able to discuss in detail in 3102,
+is the inequality found *within* a country.
+**Poverty and Income Inequality** (*4341*) is a class which qualitatively explores inequality within the US, and the efforts to redress it.
 
-<!--
-TODO: Blurb about inequality.
-Inequality is an important subject in economics, but is difficult to rigorously discuss without an understanding of integral calculus and statistics.
-As such, we only very briefly discussed such topics in 3102.
-There are several course offerings that explore inequality in more detail.
-The main goal of 3102 is to introduce you to the tools of economics. 
--->
+While 4341 has the most focus on inequality,
+there are many other upper level courses in which the topic of inequality heavily features.
 
-
-<!--Poverty and Income Inequality (*4341*) qualitatively looks at inequality *within* a country, focusing on the United States.
-If you want to know more about the inequalities *between* countries, as we touched upon in chapters 7 and 8 of Williamson,
-then consider taking a course on Economic Development (*4331W*).
-
-Many other courses touch on the subject of inequality as well.-->
-
-
-
-
-<!--
-http://classinfo.umn.edu/?term=1209&subject=ECON&catalog_nbr=4341
-
-### ECON 4341 -- Poverty and Income Inequality
-
-Course Catalog Description
-: This course focuses on the economic aspects of poverty and inequality in the United States. The course utilizes economic theory and empirical research to analyze the determinants of, and potential strategies to overcome poverty and inequality. Topics include measurement and trends of poverty and income inequality, labor markets, education, discrimination, residential segregation,  immigration,  hunger and nutrition, US farm policy, food distribution, food security, food aid, the connection between food production and health outcomes, as well as other related themes.
-
-
-
-PreReqs
-: intermediate courses-->
-
-
-A course on **Labor Economics** (*4531 or 4538 for the advanced version*) looks at the job search models we discussed with chapter 6 of Williamson, 
+**Labor Economics** (*4531 or 4538 for the advanced version*), for example, discusses wealth inequality and income inequality that can be found between households.
+Labor Economics looks at the job search models we discussed with chapter 6 of Williamson, 
 and also expounds upon the kind of intertemporal decisions we discussed with chapters 9 and 10.<!--, adding uncertainty into the mix.-->
 In 3102, we discussed how households make decisions to prepare for their future, which they knew with certainty.
 But in reality, households must make decisions to prepare for uncertain futures.
 Will I lose my job? Will I get a raise? Etc.
 These common concerns<!--Such shocks--> shape the decisions people make, 
-and <!--such shocks--> are important for understanding the patterns of work, savings, and income inequality.
-
+and <!--such shocks--> are important for understanding the patterns of work, savings, and inequality.
 
 <!--
 If I had a lot of time, I could go through Lise's models one by one.
@@ -118,93 +88,35 @@ For example,
 https://digifesto.com/2019/11/09/notes-on-krussell-smith-1998-and-macroeconomic-theory/
  Krusell and Smith, 1998 “Income and wealth heterogeneity in the macroeconomy.”
 has a model of inequality with different preference parameters. That's pretty easy to design a HW problem around.
-
 -->
 
 
+**Financial Economics** (*4751 or 4758 for the advanced version*) also heavily deals with decision making under uncertainty,
+but with a focus on investment decisions and asset prices (as opposed to Labor Economics which deals with labor prices -- wages, that is).
+We talked a lot about prices in 3102, but how were prices determined? Well, they were typically just whatever value allowed the market to clear.
+But in financial contexts, its important to understand the details of the processes by which prices are determined.
+Investment risk is another very important topic -- one which we only briefly saw in a simplified form in one our HW assignments in 3102 --
+which is discussed in more detail in a Financial Economics course.
 
 <!--
-Financial Economics (*4751 or 4758 for the advanced version*) 
-
 Regular reading of the business press (Wall Street Journal, Financial Times, The
 Economist, New York Times) is strongly recommended.
 • Articles: Each chapter in Bailey’s textbook has a list of references. Other references
 will be announced in class.
 • Nobel Prize Committee 2013, “Understanding Asset Prices”.
-
 • Hull, John Options, Futures and Other Derivatives Pearson Education, 10th (or ear-
 lier) Edition, (useful for the 2nd part of the course).
+(Bailey's Economics of Financial Markets textbook is very readable from what I've seen.)
+-->
 
-
-
-
-
-
-
-
-
-### ECON 4751 - Financial Economics (4758 - Advanced)
-
-Course Catalog Description
-: Financial decisions of firms/investors. Determination of interest rates and asset prices. Role of risk/uncertainty. Emphasizes economic models.
-: Efficiency/role of financial markets. Theoretical concepts, empirical evidence. Price of financial assets, value of investment projects, risk management trading strategies.
-
-Connection to Topics in 3102
-: decision making under uncertainty and the value of assets was briefly touched upon in HW 9
-
-
-PreReqs
-: One semester of Statistics
-
-### ECON 4758 - Advanced Financial Economics
-
-> 
-
-PreReqs
-: Calculus II, Statistics
-
-The objective of this course is to give the student an understanding of the operation
-of financial markets and pricing of financial assets. In the first part of the course basic
-principles of decision making under uncertainty will be developed. These principles will
-then be applied to portfolio selection problem in financial asset markets. Models of financial
-asset markets and their implications for valuation of stocks, bonds, options and derivative
-assets will be discussed. The role of information in financial markets and issues of market
-efficiency will be explored as well.
-Current events in financial markets will be regularly discussed in class.-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-We made many simplifying assumptions in our models in 3102.
+In fact, we made many simplifying assumptions in our models in 3102.
 These simplifications made it easier to learn the models and work through the algebra,
 but led us to gloss over some very important economic questions.
 
 One of our simplifying assumptions in 3102 was that all our agents were competitive price takers.
 We had a single "representative firm" which could be thought of as many very small firms, so small that their individual actions have no effect on the market. 
 But what happens when a single firm or a group of firms *is* big enough to affect prices?
-This often happens the real-world, and **Industrial Organization** (*4631*) explores the implications this has for the economy.
+This often happens in the real-world, and **Industrial Organization** (*4631*) explores the implications this has for the economy.
 
 Another very important economic question is the role of government policy. 
 Sure, we talked about the government quite a bit in 3102, but government spending and taxes were, for the most part, exogenous in our models. 
@@ -214,19 +126,17 @@ What should those goals be? How can it accomplish them?
 **Public Economics** (*4821*) explores these questions.
 
 
+Finally, courses like **Economy of Latin America** (*4311*) or **The Chinese Economy** (*4317*)
+discuss a broad array of topics which we talked about in 3102, with a focus on one particular region of the world.
+If your favorite part of 3102 was the occasional tangent about some random bit of history, then consider taking one of these courses. 
 
+-----
 
-
-
-
-
-
-
-
-
-
-
--------------
+A few final caveats:
+- Many of these courses cover a broader set of subjects than what is described here. I focused on the connections to 3102's material. 
+- There are also some courses I didn't touch on in this list, such as Econometrics (which is like statistics with a focus on economic applications) or Game Theory (which is one of the most fascinating fields of economics, but has more connections to micro than to macro). 
+- Another important thing to consider when choosing electives are the pre-requisites. Some of the courses require additional math classes, and are more numerically intense as a result. Other courses are writing intensive. It's a good idea to choose courses which match your preferred style of learning.
+- This isn't the full course list, and course offerings vary by semester. Please consult the course catalog or talk to the [undergrad econ advisors](https://cla.umn.edu/economics/undergraduate/advising) for more information.
 
 
 
@@ -283,7 +193,6 @@ Connection to measurement stuff?
 
 
 
---------------------------------------------------------------------
 
 
 <!--
@@ -321,8 +230,6 @@ PreReqs
 
 
 -->
-
---------------------------------------------------------------------
 
 
 <!--
