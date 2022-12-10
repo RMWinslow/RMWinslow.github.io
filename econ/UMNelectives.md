@@ -2,7 +2,7 @@
 title: Econ Electives
 subtitle: Subject-matter connections between Econ 3102 and some of the 4000-level econ electives.
 nav_order: 99
-parent: _Notes
+parent: Notes
 layout: post
 has_children: false
 ---
