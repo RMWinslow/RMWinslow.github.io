@@ -108,14 +108,14 @@ What should those goals be? How can it accomplish them?
 
 Finally, courses like **Economy of Latin America** (*4311*) or **The Chinese Economy** (*4317*)
 discuss a broad array of topics which we talked about in 3102, with a focus on one particular region of the world.
-If your favorite part of 3102 was the occasional tangent about some random bit of history, then consider taking one of these courses. 
+If your favorite parts of 3102 were the occasional tangents about some random bit of history, then consider taking one of these courses. 
 
 -----
 
-A few final caveats:
-- Many of these courses cover a broader set of subjects than what is described here. I focused on the connections to 3102's material. 
+A few additional caveats:
+- Some of these courses cover a broader set of subjects than what is described here. I focused on the connections to 3102's material. 
 - There are also some courses I didn't touch on in this list, such as Econometrics (which is like statistics with a focus on economic applications) or Game Theory (which is one of the most fascinating fields of economics, but has more connections to micro than to macro). 
-- Another important thing to consider when choosing electives are the pre-requisites. Some of the courses require additional math classes, and are more numerically intense as a result. Other courses are writing intensive. It's a good idea to choose courses which match your preferred style of learning.
+- Another important thing to consider when choosing electives are the pre-requisites. Some of the courses require additional math classes, and are more mathematically intense as a result. Other courses are writing intensive. It's a good idea to choose courses which match your preferred style of learning.
 - This isn't the full course list, and course offerings vary by semester. Please consult the course catalog or talk to the [undergrad econ advisors](https://cla.umn.edu/economics/undergraduate/advising) for more information.
 
 
