@@ -1,7 +1,7 @@
 ---
 title: Two-Period Endowment Economy
 subtitle: The consumer's problem in a simple two-period closed economy.
-parent: Competitive Equilibrium
+parent: Intermediate Macro Notes
 grand_parent: Notes
 layout: post
 toc: true

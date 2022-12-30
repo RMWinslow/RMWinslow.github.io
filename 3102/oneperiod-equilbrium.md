@@ -1,7 +1,7 @@
 ---
 title: One Period Equilibrium
 subtitle: Combining the consumer's and producer's problems into a one-period competitive equilibrium model.
-parent: Competitive Equilibrium
+parent: Intermediate Macro Notes
 grand_parent: Notes
 layout: post
 toc: true

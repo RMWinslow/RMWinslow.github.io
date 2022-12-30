@@ -1,7 +1,7 @@
 ---
 title: McCall Job Search
 subtitle: A One-sided Search Model of Employment
-parent: Competitive Equilibrium
+parent: Intermediate Macro Notes
 grand_parent: Notes
 layout: post
 nav_order: 300

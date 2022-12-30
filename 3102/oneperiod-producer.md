@@ -1,7 +1,7 @@
 ---
 title: Representative Producer
 subtitle: The Producer in a one-period competitive equilibrium.
-parent: Competitive Equilibrium
+parent: Intermediate Macro Notes
 grand_parent: Notes
 layout: post
 toc: true
