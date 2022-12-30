@@ -1,9 +1,10 @@
 ---
 title: Intermediate Macro Notes
-subtitle: Notes on the Course Material for Econ 3102, Intermediate Macroeconomics.
+subtitle: Notes on the Topics Covered in Econ 3102, Intermediate Macroeconomics.
 parent: Notes
 layout: post
 has_children: true
+has_toc: false
 ---
 
 Below are some of my teaching notes for Econ 3102, Intermediate Macroeconomics.
@@ -17,6 +18,57 @@ I've prepared these notes for several reasons:
 
 If you are one of my students and have come across this page,
 please be aware that all material here is also posted on Canvas.
+
+
+## Topics Covered
+
+### Measurement
+
+The course begins with a discussion of Macroeconomic Measurement.
+
+Whenever we talk about the *macro*economy, 
+we're essentially taking the vast array of decisions that people make,
+the total of all human activity,
+and distilling these complex interactions down into a few summary statistics.
+
+Each of these statistics is a carefully designed human invention.
+And so despite their necessarily simplified nature,
+macroeconomic aggregates are incredibly valuable tools for understanding the world.
+
+These concepts should be familiar to students who have taken an Introductory Macro course,
+although we do go into more detail in some some cases.
+
+- [GDP and Other Measures of Production](measurement-gdp) 
+- [Prices, Price Indices, and Chain-weighting](measurement-prices)
+- [National Savings](measurement-savings)
+- [Labor Aggregates](measurement-labor)
+- [Business Cycle Definitions](measurement-cylical)
+- Money Concepts and History
+
+### A Simple One-Period Competitive Equilibrium Model
+
+- [The Consumer's Optimization Problem](oneperiod-consumer)
+- [The Firm's Profit Maximization Problem](oneperiod-producer)
+- [Combining the Agents into a Competitive Equilbrium Model](oneperiod-equilibrium)
+
+
+### Other Simple Macro Models
+
+- Solow and Malthus
+- [McCall Job Search Model](jobsearch)
+
+
+### A Two Period Competitive Equilibrium
+
+- [Two-Period Endowment Economy](twoperiod-consumer)
+- Credit Market Imperfections
+- Social Security
+- Two Period Firm
+- Two Period Shocks
+- Adding Money into the Model
+- Sticky Prices and other alternate models of business cycles
+- Small Open Economy
+- Exchange Rates
 
 
 <!--
