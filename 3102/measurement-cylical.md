@@ -1,10 +1,10 @@
 ---
 title: Business Cycles
-parent: Aggregate Measurement
+parent: Intermediate Macro Notes
 grand_parent: Notes
 layout: post
 toc: false
-nav_order: 5
+nav_order: 105
 last_modified_date: 2022-09-20
 ---
 

@@ -1,9 +1,10 @@
 ---
 title: McCall Job Search
 subtitle: A One-sided Search Model of Employment
-parent: Notes
+parent: Competitive Equilibrium
+grand_parent: Notes
 layout: post
-nav_order: 100
+nav_order: 300
 date: 2022-10-12
 last_modified_date: 2022-10-15
 toc: true

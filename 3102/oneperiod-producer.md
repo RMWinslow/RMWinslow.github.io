@@ -5,7 +5,7 @@ parent: Competitive Equilibrium
 grand_parent: Notes
 layout: post
 toc: true
-nav_order: 102
+nav_order: 202
 last_modified_date: 2022-09-27
 ---
 

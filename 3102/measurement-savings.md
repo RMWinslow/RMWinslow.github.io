@@ -1,10 +1,10 @@
 ---
 title: National Savings
-parent: Aggregate Measurement
+parent: Intermediate Macro Notes
 grand_parent: Notes
 layout: post
 toc: false
-nav_order: 3
+nav_order: 103
 last_modified_date: 2022-08-23
 ---
 

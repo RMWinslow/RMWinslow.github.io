@@ -1,12 +1,12 @@
 ---
 title: Gross Domestic Product
 subtitle: GDP and Related Measurements in the National Accounts
-parent: Aggregate Measurement
+parent: Intermediate Macro Notes
 grand_parent: Notes
 layout: post
 toc: true
 last_modified_date: 2022-09-04
-nav_order: 1
+nav_order: 101
 ---
 
 

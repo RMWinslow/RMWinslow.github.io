@@ -1,11 +1,11 @@
 ---
 title: Prices
 subtitle: Price Adjustment, Price Indices, and Chain-Weighting
-parent: Aggregate Measurement
+parent: Intermediate Macro Notes
 grand_parent: Notes
 layout: post
 toc: true
-nav_order: 2
+nav_order: 102
 last_modified_date: 2022-09-06
 ---
 
