@@ -1,5 +1,5 @@
 ---
-title: Shocks in Our Two Period Economy
+title: Two Period Equilibrium
 parent: Intermediate Macro Notes
 grand_parent: Notes
 layout: post
