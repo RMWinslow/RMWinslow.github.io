@@ -43,19 +43,16 @@ Putting money in our model:
 An increase in total factor productivity shifts the $N_d$ curve to the right, which shifts $Y_s$ to the right. Then the
 decrease in equilibrium $r$ causes the $N_s$ curve to shift left. Equilibrium output increases and interest rate falls,
 so liquidity demand increases, meaning that $M_d$ curve tilts right. It is ambiguous whether employment increases or decreases.
-
 ![](img-twoperiod_shifter_rbc_z.png)
 
 #### Increase in $z'$:
 An increase in future total factor productivity $z'$ increases investment demand, shifting the $Y_d$ curve to the right.
 Then the increase in equilibrium $r$ causes the $N_s$ curve to shift right. Output increases but so does the interest rate,
 so the change in liquidity demand is ambiguous.
-
 ![](img-twoperiod_shifter_rbc_zprime.png)
 
 #### "Persistent" Increase in Total Factor Productivity:
 An increase in $z$, combined with a smaller increase in $z'$:
-
 ![](img-twoperiod_shifter_rbc_zboth.png)
 
 
