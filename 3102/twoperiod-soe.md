@@ -9,6 +9,10 @@ nav_order: 508
 last_modified_date: 2022-01-01
 ---
 
+
+
+## Changes to The Model
+
 There are two changes we make to switch from a closed economy model to a small open economy model.
 And the name of this kind of model hints at the changes we must make.
 
@@ -71,6 +75,9 @@ Note that the real wage $w$ is not exogenously fixed. The market clearing condit
 
 
 <details markdown="block" open>
+
+### Full Definition of SOE Model from Chapter 16
+
 <summary>Definition of the Small Open Economy 2-Period Model</summary>
 
 Given the exogenous parameters $\lbrace K,h,h',z,z',G,G', \textcolor{#f00}{r_w}\rbrace$,
