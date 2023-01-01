@@ -47,7 +47,7 @@ Note that the real wage $w$ is not exogenously fixed. The market clearing condit
 <aside hidden>In many models of international trade, it's the fact that labor markets are separate that makes countries distinct.</aside>
 
 
-<div class="pagebreak"/>
+<div class="pagebreak"></div>
 
 
 
@@ -115,7 +115,7 @@ $$G+\frac{G^{\prime}}{1+r}=T+\frac{T^{\prime}}{1+r}$$
 
 Changes from the closed economy version of the model are highlighted in red.
 
-<div class="pagebreak"/>
+<div class="pagebreak"></div>
 
 
 

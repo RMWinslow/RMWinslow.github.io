@@ -67,7 +67,7 @@ Putting money in our model:
 
 
 
-<div class="pagebreak"/>
+<div class="pagebreak"></div>
 
 
 ## Basic Model with the "Classic Dichotomy"
@@ -124,7 +124,7 @@ money is added to the model.
 
 
 
-<div class="pagebreak"/>
+<div class="pagebreak"></div>
 
 ## Coordination Failure Model
 
@@ -158,7 +158,7 @@ Notice that in this version of the model:
 
 
 
-<div class="pagebreak"/>
+<div class="pagebreak"></div>
 
 ## Sticky Prices Model
 
