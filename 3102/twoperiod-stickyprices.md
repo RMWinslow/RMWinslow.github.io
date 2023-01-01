@@ -39,16 +39,14 @@ How does the government actually change the money supply?
 -->
 
 
-## Basic Model with the "Classic Dichotomy"
-
 
 Putting money in our model:
 
 - Money Demand: $M_{d}=P\cdot L(Y,R)$
-    - L: Liquidity demand, amount of stuff people want to buy with money
+    - $L$ is  Liquidity demand, the amount of stuff people want to buy with money
     - L goes up when $Y$ (which is equal to GDP and income) goes up.
     - L goes down when $R$ goes up. A higher nominal interest rate is associated with a higher opportunity cost for holding money.
-    - L is generally chaotic, fluctuating based on time of day, day of week, new apps, whatever.
+    - L is also generally chaotic, fluctuating based on time of day, day of week, new apps, whatever.
 - Money supply: By fiat.
     - The government decides how much money there is.
 - If liquidity demand increases, dollars become more valuable, and prices fall.
@@ -64,8 +62,12 @@ Putting money in our model:
         - But nominal interest is determined via contract, while real is the after-the-fact result.
         - So unexpectedly high inflation will lead to real returns being lower than expected (low inflation means real returns higher than expected)
 
+![](img-twoperiod_shifter_blank.png)
 
-<hr class="pagebreak">
+<div class="pagebreak">
+
+
+## Basic Model with the "Classic Dichotomy"
 
 ### Shocks to Exogenous Variables
 
@@ -92,14 +94,12 @@ An increase in $z$, combined with a smaller increase in $z'$:
 An increase in Government Expenditures $G$ requires an increase in taxes to pay for these expenditures. The consumer
 responds to this increase in taxes, in part by working more, making the $N_s$ curve shift right and thus the $Y_s$ curve to
 also shift right. $G$ also directly shifts $Y_d$ to the right (consumption demand decreases but by less than the increase in $G$). Then the change (probably an increase) in equilibrium $r$ causes the $N_s$ curve to shift again (probably to the right).
-
 ![](img-twoperiod_shifter_rbc_G.png)
 
 #### Increase in $M_S$ :
 
 Prices increase. By assumption, that is the only thing that changes. This is the "classic dichotomy". No effect on
 real economy.
-
 ![](img-twoperiod_shifter_rbc_M.png)
 
 
@@ -121,7 +121,7 @@ money is added to the model.
 
 
 
-<hr class="pagebreak">
+<div class="pagebreak">
 
 ## Coordination Failure Model
 
@@ -155,7 +155,7 @@ Notice that in this version of the model:
 
 
 
-<hr class="pagebreak">
+<div class="pagebreak">
 
 ## Sticky Prices Model
 
