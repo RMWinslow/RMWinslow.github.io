@@ -64,7 +64,10 @@ Putting money in our model:
 
 ![](img-twoperiod_shifter_blank.png)
 
-<div class="pagebreak">
+
+
+
+<div class="pagebreak"/>
 
 
 ## Basic Model with the "Classic Dichotomy"
@@ -121,7 +124,7 @@ money is added to the model.
 
 
 
-<div class="pagebreak">
+<div class="pagebreak"/>
 
 ## Coordination Failure Model
 
@@ -155,7 +158,7 @@ Notice that in this version of the model:
 
 
 
-<div class="pagebreak">
+<div class="pagebreak"/>
 
 ## Sticky Prices Model
 
