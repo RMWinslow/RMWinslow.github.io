@@ -44,7 +44,7 @@ $$\begin{aligned}
 N_d &= N_s = h-l\\
 N_d' &= N_s' = h'-l'\\
 zF(K,N_d) &= c + G + I\\
-z'F(K',N_d') K' &= c'+ G' - (1-\delta)\\
+z'F(K',N_d') &= c'+ G' - (1-\delta) K'\\
 \end{aligned}$$
 
 <!--- Profit is $\pi=Y-wN_{d}$-->
