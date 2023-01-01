@@ -36,6 +36,7 @@ Putting money in our model:
         - So unexpectedly high inflation will lead to real returns being lower than expected (low inflation means real returns higher than expected)
 
 
+<hr class="pagebreak">
 
 ### Shocks to Exogenous Variables
 
@@ -91,6 +92,7 @@ money is added to the model.
 
 
 
+<hr class="pagebreak">
 
 ## Coordination Failure Model
 
@@ -124,6 +126,7 @@ Notice that in this version of the model:
 
 
 
+<hr class="pagebreak">
 
 ## Sticky Prices Model
 
