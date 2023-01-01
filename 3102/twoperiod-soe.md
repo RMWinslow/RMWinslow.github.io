@@ -123,7 +123,7 @@ Changes from the closed economy version of the model are highlighted in red.
 
 
 
-## How does this change the effects of shocks in the model:
+## How does this change the effects of shocks in the model?
 
 The labor market works pretty much the same as before.
 Our agents are price-takers, which means they were already behaving as if the interest rate were exogenous.
@@ -154,5 +154,43 @@ But now shocks which would change the interest rate will instead just cause a ch
 
 
 
+<!--
 
 
+## Other Notes about Open Economies
+
+### Current Account and Savings:
+
+2 period endowment economy budget constraints:c+\frac{c'}{1+r}\leq(y-T)+\frac{y'-T'}{1+r}
+
+G+\frac{G'}{1+r}=T+\frac{T'}{1+r}
+
+In first period:s_{p}=(y-T)-c
+
+• s_{g}=T-G
+
+\text{national savings}	=s_{p}+s_{g}
+	=(y-T)-c+T-G
+	=y-c-G
+
+In the closed economy, where the market clearing condition is y=c+G
+
+In the open economy, the market clearing condition is y=c+G+NX\text{national savings}	=s_{p}+s_{g}
+	=y-c-G
+	=NX
+
+
+
+### Additional Vocab Terms:
+
+Current Account +capital account = balance of payments
+
+Current Account: Net exports, and also transfers. 
+
+Capital Account:
+
+– portfolio investment: investment in a company that already exists
+– foreign direct investment: creating a new business
+
+
+-->
