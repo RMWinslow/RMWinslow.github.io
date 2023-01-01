@@ -14,6 +14,7 @@ And the name of this kind of model hints at the changes we must make.
 
 Small
 : The interest rate is exogenously equal to the world interest rate.
+
 Open
 : There is now a term for net exports in output demand.
 
@@ -43,10 +44,31 @@ The asset market now clears because of trade instead of price changes.
 
 Note that the real wage $w$ is not exogenously fixed. The market clearing condition for labor doesn't change. 
 
-<aside hidden>In many models of international trade, it's the fact that labor markets are seperate that makes countries distinct.</aside>
+<aside hidden>In many models of international trade, it's the fact that labor markets are separate that makes countries distinct.</aside>
 
 
 <div class="pagebreak"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <details markdown="block" open>
 <summary>Definition of the Small Open Economy 2-Period Model</summary>
@@ -91,6 +113,13 @@ $$G+\frac{G^{\prime}}{1+r}=T+\frac{T^{\prime}}{1+r}$$
 
 </details>
 
+Changes from the closed economy version of the model are highlighted in red.
+
+<div class="pagebreak"/>
+
+
+
+
 
 
 
@@ -118,3 +147,12 @@ But now shocks which would change the interest rate will instead just cause a ch
     - Increase in $r$ makes the $N_{s}$ curve shift right as we move up along the $Y_{s}$ curve.
     -  And the $Y_{d}$ curve shifts to bring this into equilibrium as this extra output is exported.
     -  Note that the firm is investing less and consumer is consuming less because of the higher interest rate. So some of the preexisting output is being exported as well.
+
+
+
+
+
+
+
+
+
