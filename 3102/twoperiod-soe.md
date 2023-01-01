@@ -9,16 +9,32 @@ nav_order: 508
 last_modified_date: 2022-01-01
 ---
 
-There are two changes we make to swtich from a closed economy model to a small open economy model.
+There are two changes we make to switch from a closed economy model to a small open economy model.
 And the name of this kind of model hints at the changes we must make.
 
-- **Small:** Assume that when individuals make intertemporal decisions, they have access to a large international market. This market is so big that the domestic economy can't affect the global $r_{w}$. Thus the real interest rate is now exogenous. (“small”) 
-
+Small
+: The interest rate is exogenously equal to the world interest rate.
 Open
-: We add a term for net exports to the market clearing conditions and equations for output Demand.
-: Domestic output supply can now be different from domestic output demand.
+: There is now a term for net exports in output demand.
 
-$Y_{d}=C(r)+I(r)+G+NX$
+For the economy to be **Open** means that there is international trade in goods/assets.
+We represent this by adding **a term for net exports** to the equation for output demand.
+
+
+$$Y_{d}=C(r)+I(r)+G+NX$$
+
+$$Y_{d}'=c' - (1-\delta)K' + G' + NX'$$
+
+In the model, Net exports are free floating, and can attain any value which allows output supply to equal output demand.
+This also means that *domestic* output demand, defined as $C+I+G$ isn't necessarily equal to output supply in equilibrium. The difference is made up for by importing or exporting.
+
+
+The economy is **Small:** in the sense that the country as a whole is a price-taker in the international market for goods and assets.
+Assume that when individuals make intertemporal decisions, they have access to a large international market. 
+This market is so big that the domestic economy can't affect the global interest rate $r_{w}$. 
+Thus **the real interest rate is now exogenous**. 
+
+$$r=r_{w}$$
 
 
 In other words, we are adding one constraint (fixed $r$) and simultaneously removing another (that $NX=0$).
@@ -30,8 +46,7 @@ Note that the real wage $w$ is not exogenously fixed. The market clearing condit
 <aside hidden>In many models of international trade, it's the fact that labor markets are seperate that makes countries distinct.</aside>
 
 
-
-## A Summary of the model from Chapter 11
+<div class="pagebreak"/>
 
 <details markdown="block" open>
 <summary>Definition of the Small Open Economy 2-Period Model</summary>
@@ -76,3 +91,30 @@ $$G+\frac{G^{\prime}}{1+r}=T+\frac{T^{\prime}}{1+r}$$
 
 </details>
 
+
+
+
+## How does this change the effects of shocks in the model:
+
+The labor market works pretty much the same as before.
+Our agents are price-takers, which means they were already behaving as if the interest rate were exogenous.
+
+But now shocks which would change the interest rate will instead just cause a change in $NX$, shifting the $Y_{d}$ curve to cancel out that change in interest rates.
+
+- Increase in $z$:
+    -  Like in closed economy (ch 11), this causes the $N_{d}$ and $Y_{s}$ curves to shift right.
+    -  But, unlike in a closed economy, the $r$ is fixed, so the $Y_{d}$ must now shift to bring the economy back into equilibrium.
+    - So equilibrium $NX$ will increase. Much of the extra production will thus be shipped overseas.
+- Increase in $z'$:
+    - The firm wants to invest more, which causes $Y_{d}$ to shift right.
+    - Then NX decreases to cancel out this shift and keep the economy in its original equilibrium for $Y,r,N,w$.
+    - Essentially, all that's happened is that net exports have been turned into investment.
+- Increase in $G$:
+    - In the closed economy, the direct effects are a shift rightwards in the $Y_d$ curve, as well as a shift rightwards in the $N_s$ curve because of higher taxes.
+    - The latter effect still happens. Higher $T$ causes $N_{s}$ and $Y_{s}$ curves to shift right.
+    - But the shift in the Y_{d} curve is counteracted by a decrease in $NX$.
+    - So output goes up, but not as much as in the closed economy. 
+- Increase in $r_w$:
+    - Increase in $r$ makes the $N_{s}$ curve shift right as we move up along the $Y_{s}$ curve.
+    -  And the $Y_{d}$ curve shifts to bring this into equilibrium as this extra output is exported.
+    -  Note that the firm is investing less and consumer is consuming less because of the higher interest rate. So some of the preexisting output is being exported as well.
