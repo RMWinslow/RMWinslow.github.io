@@ -1,13 +1,42 @@
 ---
 title: Money and Business Cycles
-subtitle: Neutral Money or Sticky Prices - Different Ways of Changing the Model to Include Monetary Policy
+subtitle: Neutral Money or Sticky Prices - Different Ways of Adding Money to the Model
 parent: Intermediate Macro Notes
 grand_parent: Notes
 layout: post
 toc: true
-nav_order: 507
+nav_order: 506
 last_modified_date: 2023-01-01
 ---
+
+
+<!--
+
+Defining characteristics of money:
+
+- Medium of exchange
+
+- Store of value
+
+- Unit of account
+
+Definitions of money supply
+
+- M0 (Monetary Base) - Currency in circulation and in reserve.
+
+- M1 - Liquid money: Currency in circulation, transactions accounts like debit, checking
+
+- M2 - Less liquid money: All of M1, plus less liquid accounts like savings accounts.
+
+How does the government actually change the money supply?
+
+- Helicopter money: Increase the money money supply by decreasing taxes or equivalently increasing transfers.
+
+- Seignorage: Government prints money to buy stuff.
+
+- Open market operations: Increase money supply by decreasing government debt.
+
+-->
 
 
 ## Basic Model with the "Classic Dichotomy"
