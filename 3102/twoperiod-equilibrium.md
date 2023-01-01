@@ -94,7 +94,6 @@ For the Labor market (N,w):
     - For simplicity, we assume leisure goes down when w goes up (substitution effect is stronger), which makes the labor demand curve slope upward.
     - Note that the position of the labor supply curve is determined by the interest rate $r$. An increase in $r$ means saving is more attractive, borrowing less attractive, so the labor supply curve shifts right.
 - Given any particular $r$, we get a particular labor supply curve, which gives us a particular equilibrium $w$ such that $N_d = N_s$.
-- Given any particular $r$, we get a particular labor supply curve, which gives us a particular equilibrium $w$ such that $N_{d} = N_{s}$. <!--Testing a markdown rendering quirk. Are the brackets needed to prevent italics?-->
 
 For the output market (Y,r):
 
