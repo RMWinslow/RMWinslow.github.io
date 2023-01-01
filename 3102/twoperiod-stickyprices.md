@@ -180,7 +180,6 @@ output. Firms must hire however much labor is needed to meet this quantity of ou
 In the following graphs, government policy is such that the resulting real interest rate is above the "natural" rate of
 interest. So output, consumption, investment, employment, and real wages are all lower than the levels which would
 be efficient.
-
 ![](img-twoperiod_shifter_keynes_lowr.png)
 
 So this model suggests that a recession occurs when markets are in disequilibrium because of poorly targeted
@@ -192,8 +191,6 @@ monetary policy.
 When the real interest rate is too high, the government can expand the money supply. Because Prices are assumed
 to be fixed, this instead results in an increase in liquidity demand by lowering interest rates and increasing output.
 If targeted optimally, this monetary expansion sets the equilibrium interest rate equal to the natural rate.
-
-
 ![](img-twoperiod_shifter_keynes_fix.png)
 
 
