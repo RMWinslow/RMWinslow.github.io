@@ -115,19 +115,19 @@ $$RER = e\cdot\frac{P^{*}}{P} = \frac{1\ USD}{6.449\ CNY}\cdot\frac{4.187\ CNY}{
 
 ## Exchange Rate Regimes
 
-In our model, if PPP holds, $M_{d}=PL=eP^{*}L$
+In our model, if PPP holds, $M_{d}=PL=eP^{\star}L$
 
 - Floating/Flexible Exchange Rate: Don't worry about it. Let the exchange rate move up and down in response to market forces.
-    - Use monetary policy to adjust the M_{s} to keep P stable (and to counteract business cycle shocks).
+    - Use monetary policy to adjust the $M_{s}$ to keep $P$ stable (and to counteract business cycle shocks).
         - If a shock increase $P$, (by decrease liquidity demand), decrease the money supply
         - If a shock decreases $P$, (by increasing liquidity demand), increase the money supply
     - Don't use monetary policy to influence the exchange rate:
-        - If a shock increases $P^{*}$, then don't respond. Keep $$ stable, which means (assuming PPP holds, so $P=eP^{*}$), the exchange rate must fall.
-        - If a shock decreases $P^{*}$, then don't respond. Keep $P$ stable, which means (assuming PPP holds, so $P=eP^{*}$), the exchange rate must rise.
+        - If a shock increases $P^{\star}$, then don't respond. Keep $P$ stable, which means (assuming PPP holds, so $P=eP^{\star}$), the exchange rate must fall.
+        - If a shock decreases $P^{\star}$, then don't respond. Keep $P$ stable, which means (assuming PPP holds, so $P=eP^{\star}$), the exchange rate must rise.
 - Fixed Exchange Rate: 
     - Use monetary policy to keep the nominal exchange rate e stable
-        - If $P$ changes but $P^{*}$ does not, we can't stabilize $P$ because that would change $e$.
+        - If $P$ changes but $P^{\star}$ does not, we can't stabilize $P$ because that would change $e$.
     - But this means that your domestic price level is now exposed to shocks to the foreign price level.
-        - If a shock increases $P^{*}$, then (assuming PPP holds, so $P=eP^{*}$), the domestic price level $P$ must also increase.
-        - If a shock decreases $P^{*}$, then (assuming PPP holds, so $P=eP^{*}$), the domestic price level $P$ must also decrease.
+        - If a shock increases $P^{\star}$, then (assuming PPP holds, so $P=eP^{\star}$), the domestic price level $P$ must also increase.
+        - If a shock decreases $P^{\star}$, then (assuming PPP holds, so $P=eP^{\star}$), the domestic price level $P$ must also decrease.
 - Dollarization: Use another country's currency.
