@@ -4,7 +4,7 @@ subtitle: Transfers from the young to the old.
 parent: Intermediate Macro Notes
 grand_parent: Notes
 layout: post
-toc: false
+toc: true
 nav_order: 503
 last_modified_date: 2022-12-30
 ---
@@ -105,3 +105,9 @@ Iff $n > r$, then this program makes them better off, in intertemporal terms, th
 Or in other words, if the population growth rate is higher than the real interest rate,
 inter-generational transfers can have a higher "return" than savings.
 This allows for this kind of social security program to potentially be a pareto improvement in our model.
+
+
+
+
+
+<hr class="pagebreak">
