@@ -12,8 +12,6 @@ last_modified_date: 2022-01-01
 
 ## Exchange Rate Definitions
 
-Exchange Rates
-
 Nominal Exchange Rate
 : The price of a unit of currency, measured in terms of another currency.
 
@@ -97,6 +95,21 @@ Some people genuinely do make money from arbitrage, but there are costs in trans
 <aside>Incidentally, a man named Charles Ponzi once came up with a similar idea when he noticed that stamps were cheaper in Europe. He soon realized that his arbitrage plan wasn't logistically feasible, and decided to just scam his investors instead.</aside>
 
 
+## Example 2: More realistic numbers
+
+Using [data from the OECD](https://data.oecd.org/conversion/purchasing-power-parities-ppp.htm#indicator-chart), we know that in 2021, 
+
+$$\frac{P^\star}{P} = 4.187 \frac{CNY}{USD}$$
+
+On the same page, there’s a tab for (Nominal) Exchange Rates. The number given is $6.449 \frac{CNY}{USD}$,
+but remember,
+we need the units to cancel, so we flip it to get
+
+$$e = \frac{1}{6.449} \frac{CNY}{USD}$$
+
+The the Real Exchange Rate is
+
+$$RER = e\cdot\frac{P^{*}}{P} = \frac{1\ USD}{6.449\ CNY}\cdot\frac{4.187\ CNY}{1\ USD} = 0.649$$
 
 
 
