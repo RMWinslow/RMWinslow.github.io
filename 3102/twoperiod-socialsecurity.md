@@ -18,7 +18,7 @@ We want to give money to the elderly. In order to fund this, we need to take mon
 ## Overlapping Generations (OLG) Model 
 
 
-![](img-socialsecurity_olg.png)
+![](img-socialsecurity_olg_v2.webp)
 
 
 
