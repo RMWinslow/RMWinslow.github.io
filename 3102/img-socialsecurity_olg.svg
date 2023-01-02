@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200.25935mm"
+   height="222.19083mm"
+   viewBox="0 0 200.25935 222.19083"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="olg doodle.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.70199214"
+     inkscape:cx="314.10608"
+     inkscape:cy="422.3694"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-8.2745066,15.383231)">
+    <rect
+       style="fill:none;stroke:#dcdcdc;stroke-width:1;stroke-linecap:round;stroke-miterlimit:8;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="rect290-6-0"
+       width="199.25935"
+       height="39.259365"
+       x="8.7745104"
+       y="174.23091" />
+    <rect
+       style="fill:none;stroke:#dcdcdc;stroke-width:1;stroke-linecap:round;stroke-miterlimit:8;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="rect290-6-8"
+       width="199.25935"
+       height="39.259365"
+       x="8.7745209"
+       y="-22.06592" />
+    <rect
+       style="fill:none;stroke:#dcdcdc;stroke-width:1;stroke-linecap:round;stroke-miterlimit:8;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="rect290"
+       width="199.25935"
+       height="39.259365"
+       x="8.7745104"
+       y="56.452808" />
+    <rect
+       style="fill:none;stroke:#dcdcdc;stroke-width:1;stroke-linecap:round;stroke-miterlimit:8;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="rect290-8"
+       width="199.25935"
+       height="39.259365"
+       x="8.7745104"
+       y="95.712173" />
+    <rect
+       style="fill:none;stroke:#dcdcdc;stroke-width:1;stroke-linecap:round;stroke-miterlimit:8;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="rect290-6"
+       width="199.25935"
+       height="39.259365"
+       x="8.7745066"
+       y="134.97154" />
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:8;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="rect1406"
+       width="59.153366"
+       height="64.153366"
+       x="61.220856"
+       y="63.63549"
+       rx="5" />
+    <text
+       xml:space="preserve"
+       style="font-size:6px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+       x="90.680542"
+       y="69.686958"
+       id="text2136"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="90.680542"
+         y="69.686958"
+         id="tspan3465">Generation t</tspan></text>
+    <g
+       id="g3623"
+       transform="translate(0,-0.13476443)">
+      <text
+         xml:space="preserve"
+         style="font-size:6px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+         x="90.675438"
+         y="85.115585"
+         id="text2136-2"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="90.675438"
+           y="85.115585"
+           id="tspan3465-4">c<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan3556">t,t</tspan> + s<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan3558">t </tspan>⩽ y<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan3560">t,t</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:6px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;baseline-shift:baseline;text-anchor:middle;stroke-width:0.264583"
+         x="90.863892"
+         y="108.44519"
+         id="text2136-2-6"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;baseline-shift:baseline;text-anchor:middle;stroke-width:0.264583"
+           x="90.863892"
+           y="108.44519"
+           id="tspan3465-4-7">c<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan3611">t,t+1</tspan>⩽ y<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan3609">t,t+1</tspan>+(1+r)s<tspan
+   style="font-size:65%;baseline-shift:sub"
+   id="tspan3606">t</tspan></tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+       x="90.506538"
+       y="73.243713"
+       id="text2136-4"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="91.026535"
+         y="73.243713"
+         id="tspan3465-1">Born at t </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+       x="90.660042"
+       y="126.14951"
+       id="text2136-8"><tspan
+         sodipodi:role="line"
+         id="tspan2134-5"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="91.180038"
+         y="126.14951">dies at time t+1 </tspan></text>
+    <path
+       style="fill:#ffffff;stroke:#dcdcdc;stroke-width:1;stroke-linecap:round;stroke-miterlimit:8;stroke-dasharray:none;paint-order:markers fill stroke"
+       d="M 65.012592,95.712173 H 116.58249"
+       id="path2251" />
+    <g
+       id="g3897-7"
+       transform="translate(-78.055252,39.259367)">
+      <rect
+         style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:8;stroke-dasharray:none;paint-order:markers fill stroke"
+         id="rect1406-1-5"
+         width="59.153366"
+         height="64.153366"
+         x="139.27611"
+         y="102.89486"
+         rx="5" />
+      <text
+         xml:space="preserve"
+         style="font-size:6px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+         x="168.73579"
+         y="108.94633"
+         id="text2136-48-7"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="168.73579"
+           y="108.94633"
+           id="tspan3465-6-9">Generation t+2</tspan></text>
+      <g
+         id="g3623-0-5"
+         transform="translate(78.055254,39.124608)">
+        <text
+           xml:space="preserve"
+           style="font-size:6px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+           x="90.675438"
+           y="85.115585"
+           id="text2136-2-8-2"><tspan
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+             x="90.675438"
+             y="85.115585"
+             id="tspan3465-4-2-6">c<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3556-6-0">t+2,t+2</tspan> + s<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan4162">t+2</tspan> ⩽ y<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3560-4-7">t+2,t+2</tspan></tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:6px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;baseline-shift:baseline;text-anchor:middle;stroke-width:0.264583"
+           x="90.863892"
+           y="108.44519"
+           id="text2136-2-6-3-8"><tspan
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;baseline-shift:baseline;text-anchor:middle;stroke-width:0.264583"
+             x="90.863892"
+             y="108.44519"
+             id="tspan3465-4-7-0-4">c<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3611-3-3">t+2,t+3</tspan>⩽ y<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3609-8-9">t+2,t+3</tspan>+(1+r)s<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3606-2-3">t+2</tspan></tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:4px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+         x="168.56178"
+         y="112.50308"
+         id="text2136-4-6-3"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="169.08179"
+           y="112.50308"
+           id="tspan3465-1-0-4">Born at t </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+         x="168.71529"
+         y="165.40889"
+         id="text2136-8-2-1"><tspan
+           sodipodi:role="line"
+           id="tspan2134-5-1-2"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="169.23529"
+           y="165.40889">dies at time t+1 </tspan></text>
+      <path
+         style="fill:#ffffff;stroke:#dcdcdc;stroke-width:1;stroke-linecap:round;stroke-miterlimit:8;stroke-dasharray:none;paint-order:markers fill stroke"
+         d="m 143.06785,134.97154 h 51.56989"
+         id="path2251-6-9" />
+    </g>
+    <rect
+       style="fill:none;stroke:#dcdcdc;stroke-width:1;stroke-linecap:round;stroke-miterlimit:8;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="rect290-4"
+       width="199.25935"
+       height="39.259365"
+       x="8.7745113"
+       y="17.193445" />
+    <text
+       xml:space="preserve"
+       style="font-size:6px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="35.489864"
+       y="73.715378"
+       id="text236"><tspan
+         sodipodi:role="line"
+         id="tspan234"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="35.489864"
+         y="73.715378">Time Period</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="35.489864"
+         y="82.909599"
+         id="tspan3342">t</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="35.489864"
+       y="34.456017"
+       id="text236-2"><tspan
+         sodipodi:role="line"
+         id="tspan234-5"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="35.489864"
+         y="34.456017">Time Period</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="35.489864"
+         y="43.650242"
+         id="tspan3342-2">t-1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="35.489864"
+       y="112.97475"
+       id="text3348"><tspan
+         sodipodi:role="line"
+         id="tspan3344"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="35.489864"
+         y="112.97475">Time Period</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="35.489864"
+         y="122.16897"
+         id="tspan3346">t+1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:6px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="35.489864"
+       y="152.23412"
+       id="text3354"><tspan
+         sodipodi:role="line"
+         id="tspan3350"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="35.489864"
+         y="152.23412">Time Period</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="35.489864"
+         y="161.42834"
+         id="tspan3352">t+2</tspan></text>
+    <g
+       id="g3897-7-5"
+       transform="translate(-78.055252,-117.77809)">
+      <rect
+         style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:8;stroke-dasharray:none;paint-order:markers fill stroke"
+         id="rect1406-1-5-0"
+         width="59.153366"
+         height="64.153366"
+         x="139.27611"
+         y="102.89486"
+         rx="5" />
+      <text
+         xml:space="preserve"
+         style="font-size:6px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+         x="168.73579"
+         y="108.94633"
+         id="text2136-48-7-8"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="168.73579"
+           y="108.94633"
+           id="tspan3465-6-9-2">Generation t-2</tspan></text>
+      <g
+         id="g3623-0-5-7"
+         transform="translate(78.055254,39.124608)">
+        <text
+           xml:space="preserve"
+           style="font-size:6px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+           x="90.675438"
+           y="85.115585"
+           id="text2136-2-8-2-0"><tspan
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+             x="90.675438"
+             y="85.115585"
+             id="tspan3465-4-2-6-1">c<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3556-6-0-9">t-2,t-2</tspan> + s<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan4162-9">t-2</tspan> ⩽ y<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3560-4-7-4">t-2,t-2</tspan></tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:6px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;baseline-shift:baseline;text-anchor:middle;stroke-width:0.264583"
+           x="90.863892"
+           y="108.44519"
+           id="text2136-2-6-3-8-3"><tspan
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;baseline-shift:baseline;text-anchor:middle;stroke-width:0.264583"
+             x="90.863892"
+             y="108.44519"
+             id="tspan3465-4-7-0-4-9">c<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3611-3-3-2">t-2,t-1</tspan>⩽ y<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3609-8-9-2">t-2,t-1</tspan>+(1+r)s<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3606-2-3-0">t-2</tspan></tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:4px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+         x="168.56178"
+         y="112.50308"
+         id="text2136-4-6-3-9"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="169.08179"
+           y="112.50308"
+           id="tspan3465-1-0-4-3">Born at t-2 </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+         x="168.71529"
+         y="165.40889"
+         id="text2136-8-2-1-1"><tspan
+           sodipodi:role="line"
+           id="tspan2134-5-1-2-3"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="169.23529"
+           y="165.40889">dies at time t-2 </tspan></text>
+      <path
+         style="fill:#ffffff;stroke:#dcdcdc;stroke-width:1;stroke-linecap:round;stroke-miterlimit:8;stroke-dasharray:none;paint-order:markers fill stroke"
+         d="m 143.06785,134.97154 h 51.56989"
+         id="path2251-6-9-2" />
+    </g>
+    <g
+       id="g3897-7-4"
+       transform="translate(2.7252186)">
+      <rect
+         style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:8;stroke-dasharray:none;paint-order:markers fill stroke"
+         id="rect1406-1-5-7"
+         width="59.153366"
+         height="64.153366"
+         x="139.27611"
+         y="102.89486"
+         rx="5" />
+      <text
+         xml:space="preserve"
+         style="font-size:6px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+         x="168.73579"
+         y="108.94633"
+         id="text2136-48-7-3"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="168.73579"
+           y="108.94633"
+           id="tspan3465-6-9-9">Generation t+1</tspan></text>
+      <g
+         id="g3623-0-5-2"
+         transform="translate(78.055254,39.124608)">
+        <text
+           xml:space="preserve"
+           style="font-size:6px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+           x="90.675438"
+           y="85.115585"
+           id="text2136-2-8-2-4"><tspan
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+             x="90.675438"
+             y="85.115585"
+             id="tspan3465-4-2-6-2">c<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3556-6-0-1">t+1,t+1</tspan> + s<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan4162-6">t+1</tspan> ⩽ y<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3560-4-7-6">t+1,t+1</tspan></tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:6px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;baseline-shift:baseline;text-anchor:middle;stroke-width:0.264583"
+           x="90.863892"
+           y="108.44519"
+           id="text2136-2-6-3-8-7"><tspan
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;baseline-shift:baseline;text-anchor:middle;stroke-width:0.264583"
+             x="90.863892"
+             y="108.44519"
+             id="tspan3465-4-7-0-4-3">c<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3611-3-3-7">t+1,t+2</tspan>⩽ y<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3609-8-9-9">t+1,t+2</tspan>+(1+r)s<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3606-2-3-2">t+1</tspan></tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:4px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+         x="168.56178"
+         y="112.50308"
+         id="text2136-4-6-3-0"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="169.08179"
+           y="112.50308"
+           id="tspan3465-1-0-4-0">Born at t+1 </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+         x="168.71529"
+         y="165.40889"
+         id="text2136-8-2-1-8"><tspan
+           sodipodi:role="line"
+           id="tspan2134-5-1-2-8"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="169.23529"
+           y="165.40889">dies at time t+2 </tspan></text>
+      <path
+         style="fill:#ffffff;stroke:#dcdcdc;stroke-width:1;stroke-linecap:round;stroke-miterlimit:8;stroke-dasharray:none;paint-order:markers fill stroke"
+         d="m 143.06785,134.97154 h 51.56989"
+         id="path2251-6-9-7" />
+    </g>
+    <g
+       id="g3897-7-4-5"
+       transform="translate(2.7252186,78.518736)">
+      <rect
+         style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:8;stroke-dasharray:none;paint-order:markers fill stroke"
+         id="rect1406-1-5-7-1"
+         width="59.153366"
+         height="64.153366"
+         x="139.27611"
+         y="102.89486"
+         rx="5" />
+      <text
+         xml:space="preserve"
+         style="font-size:6px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+         x="168.73579"
+         y="108.94633"
+         id="text2136-48-7-3-1"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="168.73579"
+           y="108.94633"
+           id="tspan3465-6-9-9-9">Generation t+3</tspan></text>
+      <g
+         id="g3623-0-5-2-7"
+         transform="translate(78.055254,39.124608)">
+        <text
+           xml:space="preserve"
+           style="font-size:6px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+           x="90.675438"
+           y="85.115585"
+           id="text2136-2-8-2-4-9"><tspan
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+             x="90.675438"
+             y="85.115585"
+             id="tspan3465-4-2-6-2-0">c<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3556-6-0-1-0">t+3,t+3</tspan> + s<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan4162-6-7">t+3</tspan> ⩽ y<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3560-4-7-6-3">t+3,t+3</tspan></tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:6px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;baseline-shift:baseline;text-anchor:middle;stroke-width:0.264583"
+           x="90.863892"
+           y="108.44519"
+           id="text2136-2-6-3-8-7-2"><tspan
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;baseline-shift:baseline;text-anchor:middle;stroke-width:0.264583"
+             x="90.863892"
+             y="108.44519"
+             id="tspan3465-4-7-0-4-3-9">c<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3611-3-3-7-1">t+1,t+2</tspan>⩽ y<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3609-8-9-9-31">t+1,t+2</tspan>+(1+r)s<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3606-2-3-2-0">t+1</tspan></tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:4px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+         x="168.56178"
+         y="112.50308"
+         id="text2136-4-6-3-0-8"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="169.08179"
+           y="112.50308"
+           id="tspan3465-1-0-4-0-7">Born at t+3 </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+         x="168.71529"
+         y="165.40889"
+         id="text2136-8-2-1-8-6"><tspan
+           sodipodi:role="line"
+           id="tspan2134-5-1-2-8-6"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="169.23529"
+           y="165.40889">dies at time t+2 </tspan></text>
+      <path
+         style="fill:#ffffff;stroke:#dcdcdc;stroke-width:1;stroke-linecap:round;stroke-miterlimit:8;stroke-dasharray:none;paint-order:markers fill stroke"
+         d="m 143.06785,134.97154 h 51.56989"
+         id="path2251-6-9-7-0" />
+    </g>
+    <g
+       id="g3897-7-4-4"
+       transform="translate(2.7252186,-157.03746)">
+      <rect
+         style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:8;stroke-dasharray:none;paint-order:markers fill stroke"
+         id="rect1406-1-5-7-8"
+         width="59.153366"
+         height="64.153366"
+         x="139.27611"
+         y="102.89486"
+         rx="5" />
+      <text
+         xml:space="preserve"
+         style="font-size:6px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+         x="168.73579"
+         y="108.94633"
+         id="text2136-48-7-3-10"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="168.73579"
+           y="108.94633"
+           id="tspan3465-6-9-9-0">Generation t+1</tspan></text>
+      <g
+         id="g3623-0-5-2-9"
+         transform="translate(78.055254,39.124608)">
+        <text
+           xml:space="preserve"
+           style="font-size:6px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+           x="90.675438"
+           y="85.115585"
+           id="text2136-2-8-2-4-7"><tspan
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+             x="90.675438"
+             y="85.115585"
+             id="tspan3465-4-2-6-2-2">c<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3556-6-0-1-2">t+1,t+1</tspan> + s<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan4162-6-2">t+1</tspan> ⩽ y<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3560-4-7-6-7">t+1,t+1</tspan></tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:6px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;baseline-shift:baseline;text-anchor:middle;stroke-width:0.264583"
+           x="90.863892"
+           y="108.44519"
+           id="text2136-2-6-3-8-7-7"><tspan
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;baseline-shift:baseline;text-anchor:middle;stroke-width:0.264583"
+             x="90.863892"
+             y="108.44519"
+             id="tspan3465-4-7-0-4-3-0">c<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3611-3-3-7-18">t-3,t-2</tspan>⩽ y<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3609-8-9-9-8">t-3,t-2</tspan>+(1+r)s<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3606-2-3-2-25">t-2</tspan></tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:4px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+         x="168.56178"
+         y="112.50308"
+         id="text2136-4-6-3-0-5"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="169.08179"
+           y="112.50308"
+           id="tspan3465-1-0-4-0-5">Born at t+1 </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+         x="168.71529"
+         y="165.40889"
+         id="text2136-8-2-1-8-69"><tspan
+           sodipodi:role="line"
+           id="tspan2134-5-1-2-8-1"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="169.23529"
+           y="165.40889">dies at time t-3 </tspan></text>
+      <path
+         style="fill:#ffffff;stroke:#dcdcdc;stroke-width:1;stroke-linecap:round;stroke-miterlimit:8;stroke-dasharray:none;paint-order:markers fill stroke"
+         d="m 143.06785,134.97154 h 51.56989"
+         id="path2251-6-9-7-03" />
+    </g>
+    <g
+       id="g3897-7-4-0"
+       transform="translate(2.7252186,-78.51873)">
+      <rect
+         style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:8;stroke-dasharray:none;paint-order:markers fill stroke"
+         id="rect1406-1-5-7-4"
+         width="59.153366"
+         height="64.153366"
+         x="139.27611"
+         y="102.89486"
+         rx="5" />
+      <text
+         xml:space="preserve"
+         style="font-size:6px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+         x="168.73579"
+         y="108.94633"
+         id="text2136-48-7-3-3"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="168.73579"
+           y="108.94633"
+           id="tspan3465-6-9-9-4">Generation t-1</tspan></text>
+      <g
+         id="g3623-0-5-2-4"
+         transform="translate(78.055254,39.124608)">
+        <text
+           xml:space="preserve"
+           style="font-size:6px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+           x="90.675438"
+           y="85.115585"
+           id="text2136-2-8-2-4-5"><tspan
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+             x="90.675438"
+             y="85.115585"
+             id="tspan3465-4-2-6-2-3">c<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3556-6-0-1-3">t-1,t-1</tspan> + s<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan4162-6-1">t-1</tspan> ⩽ y<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3560-4-7-6-1">t-1,t-1</tspan></tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:6px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;baseline-shift:baseline;text-anchor:middle;stroke-width:0.264583"
+           x="90.863892"
+           y="108.44519"
+           id="text2136-2-6-3-8-7-9"><tspan
+             sodipodi:role="line"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;baseline-shift:baseline;text-anchor:middle;stroke-width:0.264583"
+             x="90.863892"
+             y="108.44519"
+             id="tspan3465-4-7-0-4-3-8">c<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3611-3-3-7-0">t-1,t</tspan>⩽ y<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3609-8-9-9-3">t-1,t</tspan>+(1+r)s<tspan
+   style="font-size:3px;baseline-shift:sub"
+   id="tspan3606-2-3-2-2">t-1</tspan></tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:4px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+         x="168.56178"
+         y="112.50308"
+         id="text2136-4-6-3-0-3"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="169.08179"
+           y="112.50308"
+           id="tspan3465-1-0-4-0-2">Born at t-1 </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:4px;line-height:1;font-family:'Noto Emoji';-inkscape-font-specification:'Noto Emoji';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.264583"
+         x="168.71529"
+         y="165.40889"
+         id="text2136-8-2-1-8-4"><tspan
+           sodipodi:role="line"
+           id="tspan2134-5-1-2-8-7"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4px;font-family:'Noto Sans';-inkscape-font-specification:'Noto Sans';text-align:center;text-anchor:middle;stroke-width:0.264583"
+           x="169.23529"
+           y="165.40889">dies at time t </tspan></text>
+      <path
+         style="fill:#ffffff;stroke:#dcdcdc;stroke-width:1;stroke-linecap:round;stroke-miterlimit:8;stroke-dasharray:none;paint-order:markers fill stroke"
+         d="m 143.06785,134.97154 h 51.56989"
+         id="path2251-6-9-7-6" />
+    </g>
+  </g>
+</svg>

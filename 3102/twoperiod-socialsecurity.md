@@ -1,5 +1,6 @@
 ---
 title: Social Security
+subtitle: Transfers from the young to the old.
 parent: Intermediate Macro Notes
 grand_parent: Notes
 layout: post
@@ -8,7 +9,18 @@ nav_order: 503
 last_modified_date: 2022-12-30
 ---
 
+Social security at its core is a transfer from the young to the old.[^otherssprograms]
 We want to give money to the elderly. In order to fund this, we need to take money from young people at some point.
+
+[^otherssprograms]: "Social security" can be used in a broad sense to refer to all sorts of welfare and social insurance programs. For example, in the United States, the official name of social security is actually "Old-Age, Survivors, and Disability Insurance". But given that nearly everyone grows old, this makes up the largest part of any such program, and is what we focus on here.
+
+
+## Overlapping Generations (OLG) Model 
+
+
+![](img-socialsecurity_olg.png)
+
+
 
 
 ## Fully Funded (Privatized):
