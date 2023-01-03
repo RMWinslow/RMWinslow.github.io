@@ -51,40 +51,26 @@ Note that this is “exponential” time preferences, experimentally, it seems p
 -->
 
 
-Firms in the one period economy
+## Firms in the one period economy
 
-- Firm own exogenous capital at the start of the only period, $K$.
+- Firms own exogenous capital $K$ at the start of the only period.
 - The firm's profit maximization problem is:
 
 $$\max_{N_{d}}\left[zF(K,N_{d})-wN_{d}\right]$$
 
 subject to $N_{d}\geq0$
 
-Firms in an intertemporal economy
+## Firms in an intertemporal economy
 
-- Firms own exogenous capital at the start of the first period, $K$
+- Firms own exogenous capital $K$ at the start of the first period.
+- Second period capital is determined by $K^{\prime}=K\cdot(1-\delta)+I$, where $I$ is the firm's investment in the first period.
+- The firm also chooses the amount of labor to hire in each period $N_d, N_d'$
+- The firm's goal is to maximize present-value profits $\pi + \frac{\pi'}{1+r}$
+- In the first period, profits are output minus the cost of labor and investment.
+- In the second period, the firm must still hire workers, but is no need to invest because there is no third period. 
+- Any capital left over after period two, $(1-\delta)K'$ will be sold as units of output.
 
-- First period, they choose $N_{d}$ and they choose 
-
-$$I\pi=zF(K,N_{d})-wN_{d}-I$$
-
-- Second period capital is determined by $K^{\prime}=K\cdot(1-\delta)+I$
-
-- Second period profits:
-
-- Sell output
-
-- hire workers
-
-- Any capital left over after period 2: $K^{\prime}\cdot(1-\delta)$ will be sold as consumption goods
-
-- Equivalent to saying that $I^{\prime}=-K^{\prime}\cdot(1-\delta)$
-
-- put it together to get $\pi^{\prime}=z^{\prime}F(K^{\prime},N_{d}^{\prime})-w^{\prime}N_{d}^{\prime}+K^{\prime}\cdot(1-\delta)$
-
-- Goal is to maximize present value profits: $\pi+\frac{\pi^{\prime}}{1+r}$
-
-- Firm's problem: 
+The firm's problem is thus:
 
 $$\max_{N_{d},N_{d}^{\prime},I,K^{\prime}}\pi+\frac{\pi^{\prime}}{1+r}$$
 
@@ -98,16 +84,13 @@ $$
 \end{aligned}
 $$
 
+Solve for $I$ and plug into profit equations:
 
+$$I = K^{\prime}-(1-\delta)K$$
 
-- Solve for I and plug into profit equations:
+$$\pi = zF(K,N_{d})-wN_{d}-K^{\prime}+(1-\delta)K$$
 
-$$K^{\prime}=(1-\delta)K+I\\
-K^{\prime}-(1-\delta)K=I\\
-\pi=zF(K,N_{d})-wN_{d}-K^{\prime}+(1-\delta)K\\
-\pi^{\prime}=z^{\prime}F(K^{\prime},N_{d}^{\prime})-w^{\prime}N_{d}^{\prime}-0+K^{\prime}\cdot(1-\delta)$$
-
-- Simplified firm's problem
+If we set up the firm's problem with these substitutions:
 
 $$\max_{N_{d},N_{d}^{\prime},I,K^{\prime}}\pi+\frac{\pi^{\prime}}{1+r}$$
 
@@ -140,17 +123,15 @@ Simplify/rearrange:
 $$w=MP_{N}\\
 w^{\prime}=MP_{N^{\prime}}$$
 
-$$1=\frac{MP_{K^{\prime}}+1-\delta}{1+r}1+r=MP_{K^{\prime}}+1-\delta\\
-r+\delta=MP_{K^{\prime}}$$
+$$r+\delta=MP_{K^{\prime}}$$
 
 Characterizing Equations for two period firm
 
 - First period optimal hiring rule: $MP_{N}=\frac{\partial}{\partial N_{d}}zF(K,N_{d})=w$
-
 - Second period optimal hiring rule: $MP_{N^{\prime}}=\frac{\partial}{\partial N_{d}^{\prime}}z'F(K',N_{d}^{\prime})=w'$
-
 - Optimal Investment rule: $r+\delta=\frac{\partial}{\partial K'}z'F(K',N_{d}^{\prime})=MP_{K^{\prime}}$
 
+<!--
 Combine the two period consumer and two period firm
 
 Market clearing conditions are 
@@ -159,5 +140,5 @@ $$\begin{aligned}
 N_{s}=h-l=N_{d} &  & c+I+G=Y=zF(K,N_{d})\\
 N_{s}'=h'-l'=N_{d}' &\;\;\;\;  & c'+G'=Y=z'F(K',N_{d}')+(1-\delta)K'\\
 \end{aligned}$$
-
+-->
 
