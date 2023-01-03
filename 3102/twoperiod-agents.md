@@ -1,5 +1,6 @@
 ---
-title: Two Period Firm
+title: Two Period Agents with Production
+subtitle: A firm which makes investment decisions, and a consumer with both savings and leisure.
 parent: Intermediate Macro Notes
 grand_parent: Notes
 layout: post
