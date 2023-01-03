@@ -6,7 +6,7 @@ grand_parent: Notes
 layout: post
 toc: true
 nav_order: 501
-date: 2022-10-28
+date: 2023-01-02
 ---
 
 <!--last_modified_date: 2022-08-23-->
@@ -148,6 +148,12 @@ If $\beta$ is very low, close to zero, then the person makes decisions in the fi
 
 
 ## Effects of Shocks
+
+
+<link href="https://kineticgraphs.org/css/kg.0.2.6.css" rel="stylesheet" type="text/css" />
+<script src="https://kineticgraphs.org/js/kg3d.0.2.6.js"></script>
+<div class="kg-container" src="./graphs/twoPeriodEndowment.yml" clearcolor="#fff0"></div>
+
 
 An increase in $y$:
 - First period consumption $c$ increases. The consumer has more income, and so spends more.
