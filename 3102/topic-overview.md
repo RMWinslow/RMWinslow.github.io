@@ -61,14 +61,13 @@ although we do go into more detail in some some cases.
 ### A Two Period Competitive Equilibrium
 
 - [Two-Period Endowment Economy](twoperiod-consumer)
-- Credit Market Imperfections
-- Social Security
-- Two Period Firm
-- Two Period Shocks
-- Adding Money into the Model
-- Sticky Prices and other alternate models of business cycles
-- Small Open Economy
-- Exchange Rates
+- [Credit Market Imperfections](twoperiod-creditfrictions)
+- [Social Security](twoperiod-socialsecurity)
+- [Two Period Firm](twoperiod-agents)
+- [Two Period Equilibrium and Shocks](twoperiod-equilibrium)
+- [MOney and Business cycles](twoperiod-stickyprices)
+- [Small Open Economy](twoperiod-soe)
+- [Exchange Rates](twoperiod-exchangerates)
 
 
 <!--
