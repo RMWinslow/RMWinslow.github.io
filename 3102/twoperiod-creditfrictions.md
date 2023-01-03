@@ -96,10 +96,10 @@ c+\frac{c^{\prime}}{(1+r_{s})}&=\left(y-T+\Delta\right)+\frac{\left(y^{\prime}-T
 \end{aligned}$$
     
 
-- If the consumer is a borrower, then this program increases the present value of lifetime income, and expands the set of options for the consumerc
+- If the consumer is a borrower, then this program increases the present value of lifetime income, and expands the set of options for the consumer
   
 $$\begin{aligned}
-\frac{c^{\prime}}{(1+r_{b})}& =\left(y-T+\Delta\right)+\frac{\left(y^{\prime}-T^{\prime}-(1+r_{s})\Delta\right)}{(1+r_{b})} \\
+c + \frac{c^{\prime}}{(1+r_{b})}& =\left(y-T+\Delta\right)+\frac{\left(y^{\prime}-T^{\prime}-(1+r_{s})\Delta\right)}{(1+r_{b})} \\
 &=\left(y-T\right)+\frac{\left(y^{\prime}-T^{\prime}\right)}{(1+r_{b})}+\Delta-\frac{1+r_{s}}{1+r_{b}}\Delta \\
 & > \left(y-T\right)+\frac{\left(y^{\prime}-T^{\prime}\right)}{(1+r_{b})} \\
 \end{aligned}$$
@@ -167,6 +167,13 @@ Conceptually similar in some ways to insurance markets. (Read about flood insura
 
 
 ## Borrowing Limits - Collateral Constraints
+
+
+<link href="https://kineticgraphs.org/css/kg.0.2.6.css" rel="stylesheet" type="text/css" />
+<script src="https://kineticgraphs.org/js/kg3d.0.2.6.js"></script>
+<div class="kg-container" src="./graphs/twoPeriodCollateralConstraint.yml" clearcolor="#fff0"></div>
+
+
 
 Another solution to information asymmetries.
 
