@@ -9,6 +9,7 @@ last_modified_date: 2022-12-30
 ---
 
 
+## Consumers in a Two Period Economy with Production
 <!--
 Consumers in an intertemporal endowment economy
 
@@ -24,34 +25,59 @@ Characterizing equations:
 Intertemporal Euler condition $$MRS_{cc'}=(1+r)$$
 
 Consumers in an intertemporal economy, with labor leisure
+-->
 
-\max_{c,c',l,l'}u(c,l)+\beta u(c',l')c\geq0,c'\geq0,h\geq l\geq0,h\geq l'\geq0c+\frac{c'}{1+r}\leq w(h-l)+\frac{w^{\prime}(h^{\prime}-l^{\prime})}{1+r}+\left(-T-\frac{T^{\prime}}{1+r}\right)
 
-Or if we include labor explicitly\max_{c,c',l,l',N_{s},N_{s}^{\prime}}u(c,l)+\beta u(c',l')c\geq0,c'\geq0,l\geq0,l'\geq0,N_{s}\geq0,N_{s}^{\prime}\geq0c+\frac{c'}{1+r}\leq w(h-l)+\frac{w^{\prime}(h^{\prime}-l^{\prime})}{1+r}+\left(-T-\frac{T^{\prime}}{1+r}\right)N_{s}=h-lN_{s}^{\prime}=h-l^{\prime}
+$$\max_{c,c',l,l'}u(c,l)+\beta u(c',l')$$
+
+$$
+\begin{aligned}
+\text{s.t. }\ \ \ \ &c\geq0,\ \ c'\geq0,\ \ \ \ h\geq l \geq0, \ \ h\geq l'\geq0 \\
+& c+\frac{c'}{1+r}\leq w(h-l) - T +\frac{w^{\prime}(h^{\prime}-l^{\prime}) - T'}{1+r}
+\end{aligned}
+$$
+
+<!--
+Or if we include labor explicitly
+
+$$\max_{c,c',l,l',N_{s},N_{s}^{\prime}}u(c,l)+\beta u(c',l')\\
+c\geq0,c'\geq0,l\geq0,l'\geq0,N_{s}\geq0,N_{s}^{\prime}\geq0\\
+c+\frac{c'}{1+r}\leq w(h-l)+\frac{w^{\prime}(h^{\prime}-l^{\prime})}{1+r}+\left(-T-\frac{T^{\prime}}{1+r}\right)\\
+N_{s}=h-l\\
+N_{s}^{\prime}=h-l^{\prime}$$
+-->
+
 
 Characterizing equations
 
-- Intertemporal Euler conditionMRS_{cc'}=(1+r)
+- Intertemporal Euler condition
+    $$MRS_{cc'}=(1+r)$$
+- Intratemporal Euler conditions 
+    $$MRS_{lc}=w \\ MRS_{l'c'}=w$$
+- Budget
+    $$c+\frac{c'}{1+r}=w(h-l)-T+\frac{w^{\prime}(h^{\prime}-l^{\prime}) - T'}{1+r}$$
 
-- Intratemporal Euler conditionsMRS_{lc}=wMRS_{l'c'}=w
+### Quick Note about utility across time:
 
-- Budgetc+\frac{c'}{1+r}=w(h-l)+\frac{w^{\prime}(h^{\prime}-l^{\prime})}{1+r}+\left(-T-\frac{T^{\prime}}{1+r}\right)
+2 period version is
 
-Quick Note about utility across time:
-
-2 period version isU(c,c',l,l')=u(c,l)+\beta u(c',l')
+$$U(c,c',l,l')=u(c,l)+\beta u(c',l')$$
 
 Infinite period version is typically written
 
-U(c_{0},c_{1},...,l_{0},l_{1},...)=\sum_{t=0}^{\infty}\beta^{t}u(c_{t},l_{t})
+$$U(c_{0},c_{1},...,l_{0},l_{1},...)=\sum_{t=0}^{\infty}\beta^{t}u(c_{t},l_{t})$$
 
 Note that this is “exponential” time preferences, experimentally, it seems people have “hyperbolic” time preferences.
 
 (You don't need to worry about this for this class. We're sticking to 2 time periods.)
--->
 
 
-## Firms in the one period economy
+
+
+
+## The Two Period Firm
+
+### Refresher: Firms in the one period economy
 
 - Firms own exogenous capital $K$ at the start of the only period.
 - The firm's profit maximization problem is:
@@ -60,7 +86,7 @@ $$\max_{N_{d}}\left[zF(K,N_{d})-wN_{d}\right]$$
 
 subject to $N_{d}\geq0$
 
-## Firms in an intertemporal economy
+### Firms in an intertemporal economy
 
 - Firms own exogenous capital $K$ at the start of the first period.
 - Second period capital is determined by $K^{\prime}=K\cdot(1-\delta)+I$, where $I$ is the firm's investment in the first period.
