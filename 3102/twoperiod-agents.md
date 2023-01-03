@@ -129,21 +129,17 @@ $$
 \end{aligned}
 $$
 
-On one line: 
+On even more compact on one line: 
 
 $$\max_{N_{d},N_{d}^{\prime},K^{\prime}}zF(K,N_{d})-wN_{d}-K^{\prime}+(1-\delta)K+\frac{z^{\prime}F(K^{\prime},N_{d}^{\prime})-w^{\prime}N_{d}^{\prime}+K^{\prime}\cdot(1-\delta)}{1+r}$$
 
 $$\text{s.t. }\ \ \ \ N_{d}\geq0,\ \ N_{d}^{\prime}\geq0,\ \ K^{\prime}\geq0$$
 
-If we have an interior solution, then 
+Assuming an interior solution, then the first-order-conditions are: 
 
-$$\mathcal{L}=zF(K,N_{d})-wN_{d}-K^{\prime}+(1-\delta)K+\frac{z^{\prime}F(K^{\prime},N_{d}^{\prime})-w^{\prime}N_{d}^{\prime}+K^{\prime}\cdot(1-\delta)}{1+r}$$
+<!--$$\mathcal{L}=zF(K,N_{d})-wN_{d}-K^{\prime}+(1-\delta)K+\frac{z^{\prime}F(K^{\prime},N_{d}^{\prime})-w^{\prime}N_{d}^{\prime}+K^{\prime}\cdot(1-\delta)}{1+r}$$
 
 First order conditions:
-
-$$0=\frac{\partial}{\partial N_{d}}\mathcal{L}=MP_{N}-w\\
-0=\frac{\partial}{\partial N_{d}^{\prime}}\mathcal{L}=\frac{MP_{N^{\prime}}-w^{\prime}}{1+r}\\
-0=\frac{\partial}{\partial K^{\prime}}\mathcal{L}=-1+\frac{MP_{K^{\prime}}+1-\delta}{1+r}$$
 
 Simplify/rearrange:
 
@@ -152,13 +148,36 @@ w^{\prime}=MP_{N^{\prime}}$$
 
 $$r+\delta=MP_{K^{\prime}}$$
 
-Characterizing Equations for two period firm
+\frac{\partial}{\partial N_{d}}zF(K,N_{d})=
+\frac{\partial}{\partial N_{d}^{\prime}}z'F(K',N_{d}^{\prime})=
+\frac{\partial}{\partial K'}z'F(K',N_{d}^{\prime})=
+-->
 
-- First period optimal hiring rule: $MP_{N}=\frac{\partial}{\partial N_{d}}zF(K,N_{d})=w$
-- Second period optimal hiring rule: $MP_{N^{\prime}}=\frac{\partial}{\partial N_{d}^{\prime}}z'F(K',N_{d}^{\prime})=w'$
-- Optimal Investment rule: $r+\delta=\frac{\partial}{\partial K'}z'F(K',N_{d}^{\prime})=MP_{K^{\prime}}$
+$$0=\frac{\partial}{\partial N_{d}}\mathcal{L}=MP_{N}-w\\
+0=\frac{\partial}{\partial N_{d}^{\prime}}\mathcal{L}=\frac{MP_{N^{\prime}}-w^{\prime}}{1+r}\\
+0=\frac{\partial}{\partial K^{\prime}}\mathcal{L}=-1+\frac{MP_{K^{\prime}}+1-\delta}{1+r}$$
+
+
+Simplify and rearrange to get the characterizing equations for this firm:
+- First period optimal hiring rule: 
+    $$MP_{N}=w$$
+- Second period optimal hiring rule: 
+    $$MP_{N^{\prime}}=w'$$
+- Optimal Investment rule: 
+    $$r+\delta=MP_{K^{\prime}}$$
+
+How does the firm respond to changes in exogenous variables?
+- If $w$ increases, the firm hires a smaller amount of labor in the first period, and so output decreases as well.
+- If $z$ increases, then $MP_N$ increases for any given quantity of labor. And so for any given $w$, the firm will want to hire more labor.
+- If $K$ increases, then $MP_N$ increases for any given quantity of labor. And so for any given $w$, the firm will want to hire more labor. But also, the firm will want a lower amount of investment because they need less investment to reach any target amount of $K'$.
+
 
 <!--
+An increase in z 0 would increase MP N 0 nad so increase N 0
+d ,but also increase I and K
+0
+
+
 Combine the two period consumer and two period firm
 
 Market clearing conditions are 
