@@ -97,7 +97,7 @@ Incidentally, a man named Charles Ponzi once came up with a similar idea when he
 </aside>
 
 
-## Example 2: More realistic numbers
+### Example 2: More realistic numbers
 
 Using [data from the OECD](https://data.oecd.org/conversion/purchasing-power-parities-ppp.htm#indicator-chart), we know that in 2021, 
 
