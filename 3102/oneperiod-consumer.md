@@ -6,7 +6,7 @@ grand_parent: Notes
 layout: post
 toc: true
 nav_order: 201
-last_modified_date: 2022-08-23
+last_modified_date: 2023-01-02
 ---
 
 
@@ -222,7 +222,13 @@ $$\frac{\partial}{\partial w}l^{*}=\frac{\partial}{\partial w}\frac{wh+\pi-T}{2w
 ## A Graphical Example
 
 
-<iframe height="510px" width="100%" src="./highcharts/onePeriodConsumer.html"></iframe>
 
-[Standalone Link](https://www.rmwinslow.com/3102/highcharts/onePeriodConsumer.html)
+<link href="https://kineticgraphs.org/css/kg.0.2.6.css" rel="stylesheet" type="text/css" />
+<script src="https://kineticgraphs.org/js/kg3d.0.2.6.js"></script>
+<div class="kg-container" src="./graphs/onePeriodConsumer.yml" clearcolor="#fff0"></div>
+
+
+<!--<iframe height="510px" width="100%" src="./highcharts/onePeriodConsumer.html"></iframe>
+
+[Standalone Link](https://www.rmwinslow.com/3102/highcharts/onePeriodConsumer.html)-->
 
