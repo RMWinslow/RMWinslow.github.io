@@ -1,14 +1,15 @@
 ---
-title: 3102 Graphs (Highcharts)
+title: 3102 Graphs (Highcharts, old)
 parent: 3102 Notes
 grand_parent: Teaching
 layout: post
 toc: true
 nav_order: 20
-date: 2022-08-25
 last_modified_date: 2022-08-25
 ---
 
+<!--
+date: 2022-08-25-->
 
 
 
