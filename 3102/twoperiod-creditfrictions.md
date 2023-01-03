@@ -5,7 +5,7 @@ grand_parent: Notes
 layout: post
 toc: true
 nav_order: 502
-last_modified_date: 2022-12-30
+last_modified_date: 2022-01-02
 ---
 
 The model we looked at in Chapter 9 predicts that it's increases in permanent income that increase consumption patterns, and a temporary increase in income will instead mostly just increase savings.
@@ -27,6 +27,13 @@ And why might these kinds of imperfections exist?
 - There is asymmetric information between borrowers and lenders.
 
 ## Different Rates for Borrowing and Lending
+
+
+<link href="https://kineticgraphs.org/css/kg.0.2.6.css" rel="stylesheet" type="text/css" />
+<script src="https://kineticgraphs.org/js/kg3d.0.2.6.js"></script>
+<div class="kg-container" src="./graphs/twoPeriodInterestRateSpread.yml" clearcolor="#fff0"></div>
+
+
 
 Say that $r_{s}$ is the interest rate if you save money and $r_{b}$ is interest rate if you borrow. 
 
