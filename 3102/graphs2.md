@@ -1,5 +1,5 @@
 ---
-title: 3102 Graphs 2
+title: 3102 Graphs (Highcharts)
 parent: 3102 Notes
 grand_parent: Teaching
 layout: post
