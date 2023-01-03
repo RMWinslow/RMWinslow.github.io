@@ -111,3 +111,12 @@ This allows for this kind of social security program to potentially be a pareto 
 
 
 <hr class="pagebreak">
+
+
+
+
+
+
+
+
+<!--Vocab term: Moral Hazard - If you are protected from risk, you might behave in a more risky fashion.-->
