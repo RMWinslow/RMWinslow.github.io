@@ -9,6 +9,31 @@ last_modified_date: 2022-12-30
 ---
 
 
+Now that we've discussed the agents in this two-period economy (the competitive part of our competitive equilibrium),
+there are only a few missing pieces to our definition.
+
+Those are the government's budget constraint,
+
+$$G + \frac{G'}{1+r} = T + \frac{T'}{1+r}$$
+
+and the market clearing conditions:
+
+$$\begin{aligned}
+N_d &= N_s = h-l\\
+N_d' &= N_s' = h'-l'\\
+zF(K,N_d) &= c + G + I\\
+z'F(K',N_d') &= c'+ G' - (1-\delta) K'\\
+\end{aligned}$$
+
+<aside>
+Note that in chapters 4 and 5, our market clearing conditions for output only had C and G. Now that we've added time into the mix, we can include I as well.
+And as soon as we talk about international trade, we'll be able to add NX. Then we'll have the familiar equation that Y=C+I+G+NX.
+</aside>
+
+Once we have all these pieces, we can put them together into a competitive equilibrium model.
+
+
+
 
 ## A Summary of the model from Chapter 11
 
