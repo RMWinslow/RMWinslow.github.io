@@ -160,10 +160,13 @@ $$0=\frac{\partial}{\partial N_{d}}\mathcal{L}=MP_{N}-w\\
 
 Simplify and rearrange to get the characterizing equations for this firm:
 - First period optimal hiring rule: 
+    
     $$MP_{N}=w$$
 - Second period optimal hiring rule: 
+    
     $$MP_{N^{\prime}}=w'$$
 - Optimal Investment rule: 
+    
     $$r+\delta=MP_{K^{\prime}}$$
 
 How does the firm respond to changes in exogenous variables?

@@ -26,6 +26,12 @@ And why might these kinds of imperfections exist?
 - Financial institutions have monopoly power which allows them to set the price of loans.
 - There is asymmetric information between borrowers and lenders.
 
+
+
+
+<div class="pagebreak"></div>
+
+
 ## Different Rates for Borrowing and Lending
 
 
@@ -114,6 +120,12 @@ c + \frac{c^{\prime}}{(1+r_{b})}& =\left(y-T+\Delta\right)+\frac{\left(y^{\prime
 
 Essentially whats happening is that the government doesn't face the same frictions as the consumer, and so can improve welfare by effectively 'borrowing for them'.
 
+
+
+
+
+<div class="pagebreak"></div>
+
 ## Asymmetric Information
 
 Why might borrowing and lending rates differ for consumers?
@@ -140,6 +152,7 @@ If the bank wants to break even, what should the relationship be between $r_{s}$
     - Revenue now comes from the borrowers who pay back their loans. Each borrower who pays back their loans pays $(1+r_{b})$ but only $\alpha$ actually pay them back, so on average the bank gets $(1+r_{b})\alpha+0(1-\alpha)=(1+r_{b})\alpha$ per borrower
     - Costs from paying back the savers. Each saver gets paid back $1+r_{s}$
     - If bank breaks even, costs=revenue and so: 
+        
         $$(1+r_{b})\alpha=(1+r_{s})\\r_{b}=\frac{(1+r_{s})}{\alpha}-1$$
 
 The higher portion of borrowers who repay, the lower $r_{b}$ has to be compared to $r_{s}$ for the bank to break even.
@@ -172,6 +185,9 @@ Conceptually similar in some ways to insurance markets. (Read about flood insura
 “Market for Lemons” - Very famous paper about bad cars driving good off the market.
 -->
 
+
+
+<div class="pagebreak"></div>
 
 ## Borrowing Limits - Collateral Constraints
 
