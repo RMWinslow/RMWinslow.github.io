@@ -92,7 +92,7 @@ Genius, right? Well, no, not really.
 You can probably think of several reasons why this scheme wouldn't actually work.
 Some people genuinely do make money from arbitrage, but there are costs in transporting goods from one place to another that prevent prices from completely equalizing, even after accounting for exchange rates.
 
-<aside>Incidentally, a man named Charles Ponzi once came up with a similar idea when he noticed that stamps were cheaper in Europe. He soon realized that his arbitrage plan wasn't logistically feasible, and decided to just scam his investors instead.</aside>
+<aside markdown="block">Incidentally, a man named Charles Ponzi once came up with a similar idea when he noticed that stamps were cheaper in Europe. He quickly realized that his arbitrage plan wasn't logistically feasible, [and decided to just scam his investors instead](http://users.econ.umn.edu/~tkehoe/classes/Ponzi.pdf).</aside>
 
 
 ## Example 2: More realistic numbers
