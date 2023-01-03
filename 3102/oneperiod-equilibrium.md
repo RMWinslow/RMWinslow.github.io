@@ -6,7 +6,7 @@ grand_parent: Notes
 layout: post
 toc: true
 nav_order: 203
-last_modified_date: 2022-08-23
+last_modified_date: 2022-01-02
 ---
 
 <!--TODO: note about prices and allocations in this model-->
@@ -143,3 +143,20 @@ While the prices are endogenous to the competitive equilibrium, they are exogeno
 A visual analogy might help. Each bubble below represents a set of constraints. Any parameters inside a bubble are endogenous to that problem; any parameters outside it are exogenous to that problem.
 
 ![A doodle using nested bubbles to illustrate how prices are endogenous to the competitive equilibrium but exogenous to each competitive agent's optimization problem.](img-CE-endogenous-doodle.png)
+
+
+
+
+
+## A Graphical Illustration
+
+The consumer's problem can be represented on a graph with axes of $l$ and $c$.
+The producer's problem can be represented on a graph with axes of $N$ and $Y$.
+The market clearing conditions show the connections between these variables, 
+and we can flip around the graph of the producer's problem to overlay it onto the graph of the consumer's problem.
+
+<!--TODO: Static image showing the transformation to make this work.-->
+
+<link href="https://kineticgraphs.org/css/kg.0.2.6.css" rel="stylesheet" type="text/css" />
+<script src="https://kineticgraphs.org/js/kg3d.0.2.6.js"></script>
+<div class="kg-container" src="./graphs/onePeriodBothAgents.yml" clearcolor="#fff0"></div>
