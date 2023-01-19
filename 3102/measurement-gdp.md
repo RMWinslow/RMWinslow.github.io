@@ -254,6 +254,8 @@ or in which they operate
     - [Income Approach GDP Components as share of total.](https://fred.stlouisfed.org/graph/?g=Tnty)
 - BEA Tables and Graphs
     - [Expenditure Approach GDP and components](https://apps.bea.gov/iTable/iTable.cfm?reqid=19&step=3&isuri=1&select_all_years=0&nipa_table_list=5&series=a&first_year=1929&last_year=2022&scale=-9&categories=5&thetable=), ([quarterly GDP, not seasonally adjusted](https://apps.bea.gov/iTable/iTable.cfm?reqid=19&step=3&isuri=1&select_all_years=0&nipa_table_list=404&series=q&first_year=2000&last_year=2022&scale=-9&categories=survey&thetable=))
+- [GDP: One of the Great Inventions
+of the 20th Century](https://apps.bea.gov/scb/pdf/BEAWIDE/2000/0100od.pdf) - An article from the BEA about the history of the National Accounts.
 
 <!--There are links to some interesting blog posts under this FRED graph
     - [GDP Expenditure Approach Components Table](https://fred.stlouisfed.org/release/tables?rid=53&eid=12998)
