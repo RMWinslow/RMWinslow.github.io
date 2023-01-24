@@ -252,6 +252,7 @@ or in which they operate
     - [Graph of US GDP (nominal, per-quarter at annual rate, seasonally adjusted)](https://fred.stlouisfed.org/series/gdp)
     - [Expenditure Approach GDP Components as share of total.](https://fred.stlouisfed.org/graph/?g=TnqK)
     - [Income Approach GDP Components as share of total.](https://fred.stlouisfed.org/graph/?g=Tnty)
+    - [Expenditure and Income Approach plotted on the same graph.](https://fred.stlouisfed.org/graph/?g=Z7rZ)
 - BEA Tables and Graphs
     - [Expenditure Approach GDP and components](https://apps.bea.gov/iTable/iTable.cfm?reqid=19&step=3&isuri=1&select_all_years=0&nipa_table_list=5&series=a&first_year=1929&last_year=2022&scale=-9&categories=5&thetable=), ([quarterly GDP, not seasonally adjusted](https://apps.bea.gov/iTable/iTable.cfm?reqid=19&step=3&isuri=1&select_all_years=0&nipa_table_list=404&series=q&first_year=2000&last_year=2022&scale=-9&categories=survey&thetable=))
 - [GDP: One of the Great Inventions
