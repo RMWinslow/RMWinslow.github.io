@@ -5,9 +5,10 @@ grand_parent: Notes
 layout: post
 toc: false
 nav_order: 105
-last_modified_date: 2022-09-20
+last_modified_date: 2023-01-31
 ---
 
+<!--TODO: add section on seasonal adjustment and annualization of rates-->
 
 
 The Assumption is that the data can be decomposed like so:
@@ -87,6 +88,11 @@ Coincident
     - [CPI Prices for Apparel](https://fred.stlouisfed.org/graph/?id=CPIAPPSL,CPIAPPNS,)
     - [PPI Television Advertising Prices](https://fred.stlouisfed.org/series/WPU362)
     - [Initial Claims for Unemployment Insurance](https://fred.stlouisfed.org/graph/?id=ICSA,ICNSA,)
+
+
+
+
+
 
 <!--
 https://fred.stlouisfed.org/graph/?id=GDI,GDP,
