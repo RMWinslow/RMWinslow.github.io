@@ -86,6 +86,7 @@ Coincident
     - [Unemployment Rate](https://fred.stlouisfed.org/graph/?id=UNRATE,UNRATENSA,)
     - [CPI Prices for Apparel](https://fred.stlouisfed.org/graph/?id=CPIAPPSL,CPIAPPNS,)
     - [PPI Television Advertising Prices](https://fred.stlouisfed.org/series/WPU362)
+    - [Initial Claims for Unemployment Insurance](https://fred.stlouisfed.org/graph/?id=ICSA,ICNSA,)
 
 <!--
 https://fred.stlouisfed.org/graph/?id=GDI,GDP,
