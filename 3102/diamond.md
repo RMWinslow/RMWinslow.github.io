@@ -130,6 +130,9 @@ but *only if* the depositors *believe* that the bank will be unable to give the 
 This is the reason why bank deposits are insured in the US by the Federal Deposit Insurance Corporation (FDIC).  
 The idea is that even if a bank run does happen, your money will be safe,
 and that knowledge itself vastly decreases the chance of a bank run happening in the first place.
+(The main downside of this kind of deposit insurance is moral hazard.
+Moral hazard is when the act of making a risk less dangerous
+makes people more inclined to engage in risky behavior.)
 
 <!--
 All the member banks pay money to the FDIC, and when a bank fails because of a bank run, the FDIC steps in to take over [add more details here]
