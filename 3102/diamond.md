@@ -123,18 +123,33 @@ This means there are two possible equilibria:
 
 The latter equilibrium is called a bank run.
 It's a kind of self-fulfilling prophecy.
-A bank can be in a situation where they'll be unable to give money back to depositors,
-but *only if* the depositors *believe* that the bank will be unable to give the money back.
+A bank may unable to give money back to depositors
+because the depositors *believe* that the bank will be unable to give the money back.
 
 
-This is the reason why bank deposits are insured in the US by the Federal Deposit Insurance Corporation (FDIC).  
+This is the reason why bank deposits are insured in the US by the Federal Deposit Insurance Corporation (FDIC).
 The idea is that even if a bank run does happen, your money will be safe,
 and that knowledge itself vastly decreases the chance of a bank run happening in the first place.
-(The main downside of this kind of deposit insurance is moral hazard.
+
+The main downside of this kind of deposit insurance is moral hazard.
 Moral hazard is when the act of making a risk less dangerous
-makes people more inclined to engage in risky behavior.)
+makes people more inclined to engage in risky behavior.
+Several examples are described at the end of chapter 18.
+
+
 
 <!--
+Comparison to risk compensation?
+
+Examples of moral hazard / risk compensation:
+- Riskier investments when losses are insured.
+- safer cars leads to riskier driving
+- parachutes lead to people skydiving
+- bike helmets cause cyclists to drive less cautiously
+- flood insurance causes people to build in floodplains
+
+refer to tullock spike
+
 All the member banks pay money to the FDIC, and when a bank fails because of a bank run, the FDIC steps in to take over [add more details here]
 -->
 
