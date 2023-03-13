@@ -65,9 +65,14 @@ although we do go into more detail in some some cases.
 - [Social Security](twoperiod-socialsecurity)
 - [Two Period Firm](twoperiod-agents)
 - [Two Period Equilibrium and Shocks](twoperiod-equilibrium)
-- [MOney and Business cycles](twoperiod-stickyprices)
+- [Money and Business cycles](twoperiod-stickyprices)
 - [Small Open Economy](twoperiod-soe)
 - [Exchange Rates](twoperiod-exchangerates)
+
+Other:
+
+- [Bank Runs](diamond)
+
 
 
 <!--
