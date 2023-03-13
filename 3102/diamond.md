@@ -97,11 +97,12 @@ $$t\cdot(1+r_1) + (1-t)\cdot\frac{(1+r_2)}{(1+r)} = 1$$
 
 If the bank offers a contract that satisfies this equation, 
 then how does this contract compare to individual investment?
-The consumer receives the same amount of money *in expectation*,
+The consumer receives less money *in expectation*,
 but there is less variance in how much they receive.
 
-If the utility function is concave down (which is the case if consumers dislike risk),
-then the consumer is better off, in expectation, with this contract:
+If the utility function is concave down, meaning that consumers dislike risk,
+then it might be possible for the consumer to be better off, in expectation, with this contract.
+That is, it's possible for:
 
 $$t \cdot u(1+r_1) + (1-t) \cdot u(1+r_2) \geq t \cdot u(1) + (1-t) \cdot u(1+r)$$
 
