@@ -99,7 +99,7 @@ $$t d_1 + (1-t)\cdot\frac{d_2}{(1+r)} = 1$$
 
 $$d_2 = \frac{(1 - t d_1)(1+r)}{(1-t)}$$
 
-<aside>
+<aside markdown="block">
 The way that Diamond and Dybvig describe the process,
 the contract sets $d_1$, 
 and then everyone who doesn't withdraw early gets a share of the banks assets in period 2.
@@ -113,7 +113,7 @@ but there is less variance in how much they receive.
 If the consumers really dislike liquidity risk, 
 then it might be possible for the consumer to be better off, in expectation, with this contract.
 
-<aside>
+<aside markdown="block">
 Specifically, Diamond and Dybvig's paper requires the utility function to have relative risk aversion $\frac{-c u''(c)}{u'(c)} > 1$
 </aside>
 
