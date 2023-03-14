@@ -135,6 +135,17 @@ $$t \cdot u(1+r_1) + (1-t) \cdot u(1+r_2) \geq t \cdot u(1) + (1-t) \cdot u(1+r)
 
 
 
+With expected utility of the form $t u(c_1)+\beta (t-1) u(c_2)$
+The marginal rate of substitution is $MRS_{c_1 c_2} = \frac{t}{t-1}\frac{u'(c_1)}{\beta u'(c_2)}$.
+The slope of the utility isoquant at $(c_1,c_2)=(1,1+r)$ is $-\frac{t}{t-1}\frac{u'(1)}{\beta u'(1+r)}$
+The slope of the bank's resource constraint is $-\frac{t}{t-1}(1+r)$.
+So if $u$ satisfies all the nice properties we want it to have, 
+then the relevant condition indicating that the bank contract can improve welfare is $\frac{u'(1)}{\beta u'(1+r)} > (1+r)$.
+Example: with $\beta=1$, log utility $u(c)=\ln(c)$ doesn't satisfy that inequality;
+The individual investment already has the optimal amount of risk sharing. 
+
+
+
 
 ### Bank Runs
 
