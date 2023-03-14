@@ -5,7 +5,7 @@ grand_parent: Notes
 layout: post
 toc: true
 nav_order: 502
-last_modified_date: 2022-01-02
+last_modified_date: 2023-03-13
 ---
 
 The model we looked at in Chapter 9 predicts that it's increases in permanent income that increase consumption patterns, and a temporary increase in income will instead mostly just increase savings.
@@ -134,7 +134,7 @@ One explanation is that lending is risky. It's hard to tell who won't pay back t
 
 - There is an equal population of savers and borrowers, and each person is saving or borrowing 1 dollar.
 - There is a bank which takes deposits and issues loans over the course of two time periods
-    - The bank lends at a rate r_{b} to borrowers. So each borrower receives 1 unit from the bank in the first period and promises to pay back $(1+r_{b})$ in the second period
+    - The bank lends at a rate $r_b$ to borrowers. So each borrower receives 1 unit from the bank in the first period and promises to pay back $(1+r_{b})$ in the second period
     - The bank takes deposits from savers and promises to pay out interest rate $r_{s}$. A saver pays 1 unit to the bank in period 1, and the bank promises to pay back $(1+r_{s})$ in the second period.
 - But some of the borrowers won't pay back their loans.
     - Some fraction $\alpha$ of borrowers are good, and will actually pay back $(1+r_{b})$ in the second period.
@@ -218,6 +218,7 @@ $$
 $$
 
 Intertemporal version:
+
 $$\max_{c,c'} \left[u(c)+\beta u(c')\right]$$
 
 $$

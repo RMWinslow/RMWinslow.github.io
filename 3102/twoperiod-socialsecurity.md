@@ -6,7 +6,7 @@ grand_parent: Notes
 layout: post
 toc: true
 nav_order: 503
-last_modified_date: 2022-01-02
+last_modified_date: 2023-03-13
 ---
 
 Social security at its core is a transfer from the young to the old.[^otherssprograms]
@@ -25,7 +25,7 @@ The simplest version of an overlapping generations model looks something like th
 - Generation $t$ is young during time period $t$, old during time period $t+1$ and doesn't exist during any other time period.
 - There is a generation born every time period. And so the lifespan of a generation "overlaps" with the generations which come before and after.
 - Generation $t$ is young at the same time that generation $t-1$ is old. Generation $t$ is old at the same time generation $t+1$ is young. 
-- There are infinite time periods. Often they start with generation $0$, who has no older generation to overlap with.
+- There are infinite time periods. Often these models start with generation $0$, who has no older generation to overlap with.
 
 <div class="pagebreak"></div>
 
