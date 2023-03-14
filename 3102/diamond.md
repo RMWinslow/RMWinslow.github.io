@@ -10,9 +10,9 @@ date: 2023-03-13
 ---
 
 
-This is a simplified description of some of the concepts from the Diamond-Dybvig model[^ddcite] of bank runs.
+This is a simplified description of some of the concepts from the [Diamond-Dybvig model](https://www.minneapolisfed.org/research/quarterly-review/bank-runs-deposit-insurance-and-liquidity) of bank runs.
 
-[^ddcite]: If you'd like to read the paper by Diamond and Dybvig, a pdf can be accessed from the [Minneapolis Fed](https://www.minneapolisfed.org/research/quarterly-review/bank-runs-deposit-insurance-and-liquidity)
+<!--[^ddcite]: If you'd like to read the paper by Diamond and Dybvig, a pdf can be accessed from the [Minneapolis Fed](https://www.minneapolisfed.org/research/quarterly-review/bank-runs-deposit-insurance-and-liquidity)-->
 
 
 
@@ -27,6 +27,8 @@ And you don't know which ahead of time.
 A-priori expected utility (expected utility before you know whether you'll need liquidity) is
 
 $$\mathbb E [U] = t \cdot u(c_1) + (1-t) \cdot u(c_2)$$
+
+<!--DD have a time preference term. Here, that's just set to 1.-->
 
 where $c_1$ is the consumption you have in period 1 if you are an early consumer,
 and $c_2$ is the consumption you have in period 2 if you are a late consumer.
@@ -70,41 +72,68 @@ Can we do better?
 
 Now suppose the bank offers the following contract to depositors:
 
-- If you withdraw early, in period 1, you get $1+r_1 > 1$
-- If you withdraw late, in period 2, you get $1+r_2 < 1+r$
+- If you withdraw early, in period 1, you get $d_1 > 1$
+- If you withdraw late, in period 2, you get $d_2 < 1+r$
 
 In other words, this contract increases your payout if you need liquidity,
 but decreases your payout when you don't.
 This kind of banking service can be thought of as a kind of "liquidity insurance".
 
-Note that $0 < r_1 < r_2 < r$.
+Note that $1 < d_1 < d_2 < 1+r$.
 
 Further suppose the bank doesn't make a profit or have any transactions costs.
 The bank just breaks even.
-What is the budget constraint which determines the rates they can set?
+What is the resource constraint which determines the rates they can set?
 Well, if some fraction $t$ withdraw early, 
 then for every dollar that was deposited in period 0:
 
-- An average of $\textcolor{#87122d}{(1+r_1)t}$ is paid out per person in period 1
-- This means that only $1-\textcolor{#87122d}{(1+r_1)t}$ per person is left to invest.
-- An average of $\textcolor{#113074}{(1+r_2)(1-t)}$ is paid out per person in period 2.
+- An average of $\textcolor{#87122d}{t d_1}$ is paid out per person in period 1
+- This means that only $1-\textcolor{#87122d}{t d_1}$ per person is left to invest.
+- An average of $\textcolor{#113074}{(1-t)d_2}$ is paid out per person in period 2. ($d_2$ paid to each person who still has their money in the bank.)
 
-For the bank to break even, it must be that:
+For the bank to break even, the following resource constraint must be satisfied:
 
-$$(1+r)\cdot(1-\textcolor{#87122d}{(1+r_1)t}) = \textcolor{#113074}{(1+r_2)(1-t)}$$
+$$(1+r)\cdot(1-\textcolor{#87122d}{t d_1}) = \textcolor{#113074}{(1-t)d_2}$$
 
-$$t\cdot(1+r_1) + (1-t)\cdot\frac{(1+r_2)}{(1+r)} = 1$$
+$$t d_1 + (1-t)\cdot\frac{d_2}{(1+r)} = 1$$
+
+$$d_2 = \frac{(1 - t d_1)(1+r)}{(1-t)}$$
+
+<aside>
+The way that Diamond and Dybvig describe the process,
+the contract sets $d_1$, 
+and then everyone who doesn't withdraw early gets a share of the banks assets in period 2.
+From that perspective, the resource constraint describes the value of each person's share.
+</aside>
 
 If the bank offers a contract that satisfies this equation, 
 then how does this contract compare to individual investment?
 The consumer receives less money *in expectation*,
 but there is less variance in how much they receive.
+If the consumers really dislike liquidity risk, 
+then it might be possible for the consumer to be better off, in expectation, with this contract.
+
+<aside>
+Specifically, Diamond and Dybvig's paper requires the utility function to have relative risk aversion $\frac{-c u''(c)}{u'(c)} > 1$
+</aside>
+
+Earlier, we called this contract "liquidity insurance".
+This trade-off -- lowering the average outcome but increasing average utility across outcomes -- 
+is the core idea behind all forms of insurance.
+
+<!--
+https://quant.stackexchange.com/questions/8623/what-is-the-significance-of-relative-risk-aversion
+RRA from second-order taylor expansion
+
 
 If the utility function is concave down, meaning that consumers dislike risk,
 then it might be possible for the consumer to be better off, in expectation, with this contract.
 That is, it's possible for:
 
 $$t \cdot u(1+r_1) + (1-t) \cdot u(1+r_2) \geq t \cdot u(1) + (1-t) \cdot u(1+r)$$
+-->
+
+
 
 
 ### Bank Runs
