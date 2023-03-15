@@ -48,3 +48,4 @@ To Read:
 - https://research.stlouisfed.org/publications/economic-synopses/2022/08/03/the-allocation-of-immigrant-talent-in-the-united-states
 
 
+https://news.research.stlouisfed.org/2023/03/teaching-about-inflation-expectations-bring-fred-into-the-classroom-march-2023/#Focus-on-Survey-Based-Inflation-Expectations
