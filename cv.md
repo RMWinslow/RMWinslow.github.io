@@ -7,4 +7,4 @@ nav_exclude: true
 
 # Curriculum Vitae
 
-This website is under construction.
+[Click here to view my CV](/files/CV_RobertWinslow_spr2023.pdf)
