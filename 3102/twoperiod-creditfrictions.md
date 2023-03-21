@@ -63,7 +63,7 @@ $$\max_{c,c^{\prime}}u(c)+\beta u(c^{\prime})$$
 $$\begin{aligned}
 \text{s.t.}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  & c\geq0,\ \ \ c'\geq0\\
 c+\frac{c^{\prime}}{(1+r_{s})}&=y+\frac{y^{\prime}}{(1+r_{s})} \text{ if }y-c\geq0 \\
-c+\frac{c^{\prime}}{(1+r_{s})}&=y+\frac{y^{\prime}}{(1+r_{b})} \text{ if }y-c\leq0 \\
+c+\frac{c^{\prime}}{(1+r_{b})}&=y+\frac{y^{\prime}}{(1+r_{b})} \text{ if }y-c\leq0 \\
 \end{aligned}$$
 
 Assume that $r_{b}>r_{s}$. Then 
