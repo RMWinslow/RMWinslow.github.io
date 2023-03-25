@@ -61,3 +61,60 @@ https://news.research.stlouisfed.org/2023/03/teaching-about-inflation-expectatio
 - https://fred.stlouisfed.org/releases/calendar
 - FRED Senior Loan Officer Opinion Surveys: https://fred.stlouisfed.org/release?rid=191
 
+
+https://econlowdown.instructure.com/courses/44/pages/the-final-tool-open-market-operations?module_item_id=1950
+
+> Note: Prior to 2008, when there were limited reserves in the banking system, the Fed used open market operations to move the federal funds rate higher and lower, but now the Fed has chosen to operate with ample reserves and so uses its administered rates (interest rate on reserve balances rate, ON RRP offering rate, and discount rate) to steer the federal funds rate into the target range.
+
+https://fred.stlouisfed.org/graph/?g=11Koy
+
+Why is IORB slightly higher than FFR? 
+Don't have the intuition there.
+
+https://www.stlouisfed.org/education/teaching-new-tools-of-monetary-policy
+https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3730608
+
+https://www.federalreserve.gov/monetarypolicy/iorb-faqs.htm
+
+https://www.stlouisfed.org/education/monetary-policy-lecture-guide
+https://research.stlouisfed.org/publications/page1-econ/2022/05/02/how-does-the-fed-use-its-monetary-policy-tools-to-influence-the-economy
+
+
+History of money links:
+http://icm.clsbe.lisboa.ucp.pt/docentes/url/jcn/ie2/0POWCamp.pdf
+https://web.archive.org/web/20220525014911/https://socialsciences.mcmaster.ca/econ/ugcm/3ll3/menger/money.txt
+https://worthwhile.typepad.com/worthwhile_canadian_initi/2010/02/creation-myths-and-economic-history.html
+https://worthwhile.typepad.com/worthwhile_canadian_initi/2013/12/stability-and-counterfactual-conditionals.html
+
+https://old.reddit.com/r/badeconomics/comments/38y2wx/some_myths_about_barter/
+
+
+https://mises.org/library/halloween-and-its-candy-economy
+https://mises.org/wire/murphy-replies-david-graeber-menger-and-money
+https://web.archive.org/web/20080831191206/http://www.albany.edu/~mirer/eco110/pow.html
+https://mises.org/library/have-anthropologists-overturned-menger
+
+
+To read: history of Sicilian Mafia 
+https://mpra.ub.uni-muenchen.de/37009/1/MPRA_paper_37009.pdf
+
+
+
+IMF primer on health care:
+https://www.imf.org/external/pubs/ft/wp/2007/wp0713.pdf
+
+To Read:
+https://www.uvm.edu/~jfarley/61/TellingOtherStories.pdf
+
+
+https://old.reddit.com/r/badeconomics/comments/e07wnx/graebers_against_economics/
+> Graeber is the best demonstration of the axiom "innovation requires understanding," or, put more crudely, "you cannot claim to be thinking outside the box unless you understand what 'the box' is." And I've encountered too many sociologists with a chip on their shoulder about it to believe he's an isolated case...
+
+https://www.alt-m.org/2016/03/24/graeber-once-more/
+https://old.reddit.com/r/neoliberal/comments/8yv4uz/a_history_of_money/
+
+
+
+
+
+
