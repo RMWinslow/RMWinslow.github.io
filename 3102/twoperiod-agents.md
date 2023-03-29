@@ -34,7 +34,7 @@ $$\max_{c,c',l,l'}u(c,l)+\beta u(c',l')$$
 $$
 \begin{aligned}
 \text{s.t. }\ \ \ \ &c\geq0,\ \ c'\geq0,\ \ \ \ h\geq l \geq0, \ \ h\geq l'\geq0 \\
-& c+\frac{c'}{1+r}\leq w(h-l) - T +\frac{w^{\prime}(h^{\prime}-l^{\prime}) - T'}{1+r}
+& c+\frac{c'}{1+r}\leq w(h-l) + \pi - T +\frac{w^{\prime}(h^{\prime}-l^{\prime}) + \pi' - T'}{1+r}
 \end{aligned}
 $$
 
@@ -54,7 +54,7 @@ Characterizing equations
 - Intertemporal Euler condition
     $$MRS_{cc'}=(1+r)$$
 - Intratemporal Euler conditions 
-    $$MRS_{lc}=w \\ MRS_{l'c'}=w$$
+    $$MRS_{lc}=w \\ MRS_{l'c'}=w'$$
 - Budget
     $$c+\frac{c'}{1+r}=w(h-l)-T+\frac{w^{\prime}(h^{\prime}-l^{\prime}) - T'}{1+r}$$
 
