@@ -9,6 +9,7 @@ nav_order: 501
 date: 2023-01-02
 redirect_from:
   - /twoperiod-consumer/
+  - /3102/twoperiod-consumer/
   - /twoperiod-consumer
 ---
 
