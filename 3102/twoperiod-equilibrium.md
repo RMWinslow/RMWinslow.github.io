@@ -54,7 +54,7 @@ $$\begin{aligned}
 
 - Representative Firm, taking prices as given, solves:
 
-$$\max_{c,c',l,'l} \left[u(c,l)+\beta u(c',l')\right]$$
+$$\max_{N_s, N_s', I, K'} \left[\pi + \frac{\pi'}{1+r}\right]$$
 
 $$\begin{aligned}
 \text{s.t. }\ \ \ \ & N_d\geq0, \ \ \ \ N_d'\geq0, \ \ \ \ K'\geq 0\\
