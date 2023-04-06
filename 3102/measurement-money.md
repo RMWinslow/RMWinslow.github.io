@@ -62,12 +62,13 @@ but [decided that it wasn't worth the effort](https://www.federalreserve.gov/rel
 (But note that the Federal Reserve doesn't use the Money Supply as their main policy target.
 Rather than using OMO to set the money supply to some specific amount,
 the Fed has interest rate targets, and uses money-supply affecting policy 
-as a tool to achieve those interest-rate targets.) 
+as a tool to achieve those interest-rate targets.
+[You can read about the details of how the Fed implements monetary policy here.](https://www.federalreserve.gov/econres/feds/the-feds-ample-reserves-approach-to-implementing-monetary-policy.htm)) 
 
 
 
 
 
-<!--## Various Examples->
+<!--## Various Examples-->
 
 
