@@ -113,7 +113,9 @@ https://old.reddit.com/r/badeconomics/comments/e07wnx/graebers_against_economics
 https://www.alt-m.org/2016/03/24/graeber-once-more/
 https://old.reddit.com/r/neoliberal/comments/8yv4uz/a_history_of_money/
 
-
+Taylor rule and potential GDP:
+- https://fredblog.stlouisfed.org/2014/04/the-taylor-rule/
+- https://www.cbo.gov/sites/default/files/108th-congress-2003-2004/reports/03-16-gdp.pdf
 
 
 
