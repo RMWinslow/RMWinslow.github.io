@@ -9,6 +9,24 @@ last_modified_date: 2022-09-14
 
 This is a draft file
 
+## Rough Outline of a potential lecture.
+
+- money defs again
+- note about ancient societies being diverse. not pure barter or pure anything. Economics concepts like property, trades, etc. still can be found in some form.
+- Commodity money. Interesting historical examples, digital economies and cigarrettes in pow camp
+- Anthropological perspectives (unathorized autobiography, C Humphrey and Cambist Lord Iron here)
+- accounting technologies (tokens, origin of writing, checks etc.)
+- paper money, history, great depression scrip
+- transactions accounts (lump in with accounting?)
+- future of money. borrow from that lecture down below and mention central reserve digital currencies, things like venmo, etc.
+
+- where to slot in hyperinflation stuff?
+
+Put this aside in the section about the connection between writing and money
+
+<aside>Please note that I have no particular training in anthropology. Speculation about ancient civilizations is always going to be very fuzzy, and the theories I presented in this section are the ones that feel most compelling to me rather than the ones that have the strongest evidence behind them. (As I don't have the training to evaluate said evidence.)</aside>
+<!--Then again, neither do most anthropologists /snark-->
+
 
 ## Unsorted Links
 
