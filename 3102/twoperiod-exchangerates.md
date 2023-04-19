@@ -133,3 +133,29 @@ In our model, if PPP holds, $M_{d}=PL=eP^{\star}L$
         - If a shock increases $P^{\star}$, then (assuming PPP holds, so $P=eP^{\star}$), the domestic price level $P$ must also increase.
         - If a shock decreases $P^{\star}$, then (assuming PPP holds, so $P=eP^{\star}$), the domestic price level $P$ must also decrease.
 - Dollarization: Use another country's currency.
+
+A fixed exchange rate exposes your economy to nominal shocks from other countries.
+(The book also shows how with the sticky prices assumption instead of money neutrality assumption, a fixed
+exchange rate policy can insulate from certain shocks)
+
+
+### “What’s the connection between inflation and Exchange Rate”
+
+For simplicity, assume PPP. Now what happens if P goes up?
+
+$$1 = \frac{e P^\star}{P}$$
+
+With PPP, when P goes up, either e goes up, or $P^\star$ goes up. If the other country has a flexible exchange rate
+with yours, your currency becomes comparatively less valuable. If they have a fixed exchange rate, then they will
+use monetary policy to make their prices go up as well.
+
+
+
+
+
+## Links
+
+- [IMF Reports on Exchange Arrangements](https://www.elibrary.imf.org/subject/012)
+- [The Economist Magazine's Big Mac Index](https://www.economist.com/big-mac-index)
+- [OECD Table of Exchange Rates and PPPs](https://data.oecd.org/conversion/exchange-rates.htm) 
+
