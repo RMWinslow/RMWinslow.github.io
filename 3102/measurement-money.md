@@ -96,8 +96,8 @@ But we can speculate about money's evolution from things that are *moneyish*.
 ### Examples of Commodity Currencies
 
 <figure markdown="block">
-![](img-money-snails.png)
-<figcaption>Monetaria Moneta, the Money Cowrie. The shells of these snails were widely used as money.
+![](img-money-snails.webp)
+<figcaption  markdown="block">Monetaria Moneta, the Money Cowrie. The shells of these snails were widely used as money.
 <br>
 Left: [Live money snail. CC-BY-SA-5 Philippe Bourjon.](https://commons.wikimedia.org/wiki/File:Monetaria_moneta_-_2.jpg)
 Center: [Ancient Chinese Shell Money. CC-BY-SA-3 PHGCOM.](https://commons.wikimedia.org/wiki/File:Chinese_shell_money_16th_8th_century_BCE.jpg)
@@ -113,7 +113,7 @@ Right: [Lithograph of traders using shells. 1845](https://commons.wikimedia.org/
 
 <figure markdown="block">
 ![](img-money-lydia.webp)
-<figcaption>Lydian Coinage from 2600 years ago.
+<figcaption markdown="block">Lydian Coinage from 2600 years ago.
 <br>
 Left: [Ancient Chinese Shell Money. CC-BY-SA-3 Classical Numismatic Group, Inc.](https://commons.wikimedia.org/wiki/File:Chinese_shell_money_16th_8th_century_BCE.jpg) Right: own photo.
 Right: Own photo
@@ -151,7 +151,7 @@ https://commons.wikimedia.org/wiki/Commodity_money
 
 <figure markdown="block">
 ![](img-money-scrip.webp)
-<figcaption>Early 1900s scrip issued in Minnesota.
+<figcaption markdown="block">Early 1900s scrip issued in Minnesota.
 <br>
 From [the collection of Shawn Hewitt](https://shawnhewitt.com/). Own photo.
 Right: Own photo
