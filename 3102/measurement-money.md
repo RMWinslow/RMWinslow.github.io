@@ -170,11 +170,17 @@ Hyperinflation. Examples:
 
 ### Transactions Accounts and the Future
 
+Nowadays, most money is in the form of checking or savings accounts, where the thing being traded is just entries in a ledger.
+
 [![](https://fraser.stlouisfed.org/files/docs/historical/frbsl_history/media/flow_of_checks_200_merged.jpg?)](https://fraser.stlouisfed.org/blog/2020/09/check-processing-and-the-fed/)
 
+Over the last decade, cryptocurrencies like Bitcoin have made quite a buzz.
+The underlying technology, the blockchain, is a way of maintaining a ledger without a trusted authority.
 
+And now there are talks about countries creating central bank digital currencies.
+(Which wouldn't necessarily need to use a blockchain because they'd be administered by a central authority.)
 
-[The Future of Money and Its Implications for Society, Central Banks, and the International Monetary System](https://research.stlouisfed.org/publications/review/2022/12/23/the-future-of-money-and-its-implications-for-society-central-banks-and-the-international-monetary-system)
+Further reading: [The Future of Money and Its Implications for Society, Central Banks, and the International Monetary System](https://research.stlouisfed.org/publications/review/2022/12/23/the-future-of-money-and-its-implications-for-society-central-banks-and-the-international-monetary-system)
 
 
 
