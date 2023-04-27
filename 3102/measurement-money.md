@@ -124,7 +124,10 @@ Right: Own photo
 - Rai Stones
 - Cacao. (Ek Chuaj)
 
-<!--mention difficulties caused by gold thread-->
+<!--
+mention difficulties caused by gold thread
+https://fraser.stlouisfed.org/blog/2023/04/historic-coin-production-us-mint/
+-->
 
 
 

@@ -238,6 +238,11 @@ https://research.stlouisfed.org/publications/page1-econ/2015/10/01/whats-in-your
 https://quant.stackexchange.com/questions/141/what-data-sources-are-available-online?rq=1
 
 https://www.bls.gov/cpi/additional-resources/chained-cpi-covid19-impact.htm
+
+https://fredblog.stlouisfed.org/2023/03/the-sticky-price-consumer-price-index/
+https://fredblog.stlouisfed.org/2023/03/the-differences-among-price-indexes/
+https://fredblog.stlouisfed.org/2023/03/when-comparing-wages-and-worker-productivity-the-price-measure-matters/
+
 -->
 
 
