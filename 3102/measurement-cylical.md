@@ -99,6 +99,8 @@ https://fred.stlouisfed.org/graph/?id=GDI,GDP,
 
 http://econbrowser.com/recession-index
 https://fred.stlouisfed.org/series/JHGDPBRINDX
+
+- [Dallas Fed article on seasonal adjustment](https://www.dallasfed.org/research/basics/seasonally)
 -->
 
 
