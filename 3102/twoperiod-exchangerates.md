@@ -159,3 +159,11 @@ use monetary policy to make their prices go up as well.
 - [The Economist Magazine's Big Mac Index](https://www.economist.com/big-mac-index)
 - [OECD Table of Exchange Rates and PPPs](https://data.oecd.org/conversion/exchange-rates.htm) 
 - [What are PPP adjustments and why do we need them?](https://ourworldindata.org/what-are-ppps), an article from *Our World in Data*
+
+<!--
+World bank program to calculate PPPs
+https://www.worldbank.org/en/programs/icp
+-->
+
+
+
