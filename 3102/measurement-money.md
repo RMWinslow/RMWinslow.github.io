@@ -115,8 +115,10 @@ Right: [Lithograph of traders using shells. 1845](https://commons.wikimedia.org/
 <img src="img-money-lydia.webp">
 <figcaption markdown="block">Lydian Coinage from 2600 years ago.
 <br>
+<small>
 Left: [Ancient Chinese Shell Money. CC-BY-SA-3 Classical Numismatic Group, Inc.](https://commons.wikimedia.org/wiki/File:Chinese_shell_money_16th_8th_century_BCE.jpg) Right: own photo.
 Right: Own photo
+</small>
 </figcaption>
 </figure>
 
@@ -136,6 +138,10 @@ https://fraser.stlouisfed.org/blog/2023/04/historic-coin-production-us-mint/
 - [Accounting Tokens](https://sites.utexas.edu/dsb/tokens/tokens/)
 - Tally Sticks
 
+<!--
+https://en.wikipedia.org/wiki/File:SAM_PC_1_-_Tally_sticks_1_-_Overview.jpg
+-->
+
 
 ### Paper Money
 
@@ -146,20 +152,27 @@ https://fraser.stlouisfed.org/blog/2023/04/historic-coin-production-us-mint/
 <!-- 
 财富 財富 
 https://commons.wikimedia.org/wiki/Commodity_money
+https://commons.wikimedia.org/wiki/Commodity_money#/media/File:Cacao-moneda.jpg
+https://archive.org/details/ancientmaya0006shar/page/736/mode/2up
+https://en.wikipedia.org/wiki/Card_money
 -->
 
 
 #### What happens when there isn't enough paper money?
 
 
-<figure markdown="block">
+<figure>
 <img src="img-money-scrip.webp">
-<figcaption markdown="block">Early 1900s scrip issued in Minnesota.
+<figcaption>Early 1900s scrip issued in Minnesota.
 <br>
-From [the collection of Shawn Hewitt](https://shawnhewitt.com/). Own photo.
+<small>
+From <a href="https://shawnhewitt.com/">the collection of Shawn Hewitt</a>. Own photo.
 Right: Own photo
+</small>
 </figcaption>
 </figure>
+
+
 
 #### What happens when there's too much paper money?
 
@@ -190,7 +203,14 @@ And now there are talks about countries creating central bank digital currencies
 
 Further reading: [The Future of Money and Its Implications for Society, Central Banks, and the International Monetary System](https://research.stlouisfed.org/publications/review/2022/12/23/the-future-of-money-and-its-implications-for-society-central-banks-and-the-international-monetary-system)
 
+<!--
+https://fraser.stlouisfed.org/blog/2020/09/check-processing-and-the-fed/
+https://www.centralbankbahamas.com/news/public-notices/public-update-on-the-bahamas-digital-currency-rollout
+https://www.sanddollar.bs/
+https://fred.stlouisfed.org/series/CBBTCUSD
+https://fredblog.stlouisfed.org/2021/09/whats-common-among-cryptocurrencies/?utm_source=series_page&utm_medium=related_content&utm_term=related_resources&utm_campaign=fredblog
 
+-->
 
 
 
@@ -199,8 +219,8 @@ Further reading: [The Future of Money and Its Implications for Society, Central 
 
 - [*A Survey Of Primitive Money*](https://archive.org/details/surveyofprimitiv033390mbp),
 by Alison Hingston Quiggin, 1949. An anthropological description of many forms of money and money-adjacent phenomena.
-- *Money: The Unauthorised Biography*, by Felix Martin, 2013. A popular modern account about the history of money. Martin argues that money in its modern form arose when Mesopotamian accounting technology collided with Greek social notions of universal value. A poetic take, if one a bit too tidy for my taste.
-- [*The Cambist and Lord Iron: A Fairy Tale of Economics*](https://www.lightspeedmagazine.com/fiction/the-cambist-and-lord-iron-a-fairy-tale-of-economics/), by Daniel Abraham. In this short story, the titular cambist is tasked with calculating three very strange exchange rates. The first is solid economics. The second is a bit of a stretch. The third is pure fantasy.
+- *Money: The Unauthorised Biography*, by Felix Martin, 2013. A popular modern account about the history of money. Martin tells the story that money in its modern form arose when Mesopotamian accounting technology collided with Greek social notions of universal value. A poetic take, if one a bit too tidy for my taste.
+- [*The Cambist and Lord Iron: A Fairy Tale of Economics*](https://www.lightspeedmagazine.com/fiction/the-cambist-and-lord-iron-a-fairy-tale-of-economics/), by Daniel Abraham. In this short story, the titular cambist is tasked with calculating three very strange exchange rates. (The first is solid economics. The second is a bit of a stretch. The third is pure fantasy.)
 
 
 

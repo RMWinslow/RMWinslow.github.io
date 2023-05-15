@@ -1,6 +1,6 @@
 ---
 title: Money
-parent: "???????????????"
+parent: Intermediate Macro Notes
 grand_parent: Notes
 layout: post
 nav_order: 6
@@ -97,6 +97,7 @@ https://www.federalreserve.gov/monetarypolicy/iorb-faqs.htm
 https://www.stlouisfed.org/education/monetary-policy-lecture-guide
 https://research.stlouisfed.org/publications/page1-econ/2022/05/02/how-does-the-fed-use-its-monetary-policy-tools-to-influence-the-economy
 
+https://fred.stlouisfed.org/series/CBBTCUSD
 
 History of money links:
 http://icm.clsbe.lisboa.ucp.pt/docentes/url/jcn/ie2/0POWCamp.pdf
@@ -126,7 +127,10 @@ https://www.uvm.edu/~jfarley/61/TellingOtherStories.pdf
 
 
 https://old.reddit.com/r/badeconomics/comments/e07wnx/graebers_against_economics/
-> Graeber is the best demonstration of the axiom "innovation requires understanding," or, put more crudely, "you cannot claim to be thinking outside the box unless you understand what 'the box' is." And I've encountered too many sociologists with a chip on their shoulder about it to believe he's an isolated case...
+> Graeber is the best demonstration of the axiom "innovation requires understanding," or, put more crudely, "you cannot claim to be thinking outside the box unless you understand what 'the box' is." 
+
+The above post also has some good links to other things to read.
+
 
 https://www.alt-m.org/2016/03/24/graeber-once-more/
 https://old.reddit.com/r/neoliberal/comments/8yv4uz/a_history_of_money/
@@ -135,6 +139,7 @@ Taylor rule and potential GDP:
 - https://fredblog.stlouisfed.org/2014/04/the-taylor-rule/
 - https://www.cbo.gov/sites/default/files/108th-congress-2003-2004/reports/03-16-gdp.pdf
 
-
+https://nakamotoinstitute.org/shelling-out/
+Questionable source.
 
 
