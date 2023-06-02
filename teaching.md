@@ -15,7 +15,7 @@ nav_order: 20
 
 I've taught Intermediate Macroeconomics Summer 2019 - Spring 2023, Twelve semesters in total.
 
-I was awarded *Distinguished Instructor* in 2021 and 2022.
+I was awarded *Distinguished Instructor* by the department in 2021, 2022, and 2023.
 
 Since Fall of 2021, the course has switched to a large-lecture format.
 In addition to delivering the main lectures to classes of 100+ students, 
