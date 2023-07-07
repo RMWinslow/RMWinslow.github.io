@@ -780,4 +780,18 @@ https://apps.bea.gov/scb/2022/08-august/0822-gdp-economy.htm
 -->
 
 
+
+<!--
+Graphs from FRED showing how corporate profits aren't to blame for inflation
+https://fred.stlouisfed.org/series/CP
+https://fred.stlouisfed.org/series/CProfit
+https://fred.stlouisfed.org/series/CPATAX
+https://fred.stlouisfed.org/graph/?g=16QWV (With tax adjustment)
+https://fred.stlouisfed.org/graph/?g=16QX3 (Without tax adjustment)
+https://fred.stlouisfed.org/graph/?g=16R1B (Without IVA and CCAdj)
+Apparent spike in Corpo profits comes from CCAdj and IVA
+https://fred.stlouisfed.org/graph/?g=16R2r (Comparison of with/without adjustments)
+-->
+
+
 <hr class="pagebreak">
