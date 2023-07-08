@@ -786,11 +786,15 @@ Graphs from FRED showing how corporate profits aren't to blame for inflation
 https://fred.stlouisfed.org/series/CP
 https://fred.stlouisfed.org/series/CProfit
 https://fred.stlouisfed.org/series/CPATAX
+https://fred.stlouisfed.org/graph/?g=16Rf0
 https://fred.stlouisfed.org/graph/?g=16QWV (With tax adjustment)
 https://fred.stlouisfed.org/graph/?g=16QX3 (Without tax adjustment)
 https://fred.stlouisfed.org/graph/?g=16R1B (Without IVA and CCAdj)
 Apparent spike in Corpo profits comes from CCAdj and IVA
 https://fred.stlouisfed.org/graph/?g=16R2r (Comparison of with/without adjustments)
+https://fred.stlouisfed.org/graph/?g=16R37 (annual, technically hits a record in 2021)
+https://fred.stlouisfed.org/graph/?g=16RfP
+https://fred.stlouisfed.org/graph/?g=16RfV (comparison of the different measures)
 -->
 
 
