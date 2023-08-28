@@ -7,4 +7,4 @@ nav_exclude: true
 
 # Curriculum Vitae
 
-[Click here to view my CV](/files/CV_RobertWinslow_spr2023.pdf)
+[Click here to view my CV](/files/CV_RobertWinslow_fal2023.pdf)
