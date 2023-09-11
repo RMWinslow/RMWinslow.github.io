@@ -56,16 +56,9 @@ $$\frac{\partial\mathcal{L}}{\partial x}=\alpha x^{\alpha-1}y^{1-\alpha}-\lambda
 
 $$\frac{\partial\mathcal{L}}{\partial y}=\left(1-\alpha\right)x^{\alpha}y^{-\alpha}-\lambda=0\tag{y}$$
 
-$$\frac{\partial\mathcal{L}}{\partial\lambda}=10-x-y=0\tag{\ensuremath{\lambda}}$$
+$$\frac{\partial\mathcal{L}}{\partial\lambda}=10-x-y=0\tag{λ}$$
 
 
-$$
-\begin{align*}
-\frac{\partial\mathcal{L}}{\partial x}&=\alpha x^{\alpha-1}y^{1-\alpha}-\lambda&=0\tag{x}\\
-\frac{\partial\mathcal{L}}{\partial y}&=\left(1-\alpha\right)x^{\alpha}y^{-\alpha}-\lambda&=0\tag{y}\\
-\frac{\partial\mathcal{L}}{\partial\lambda}&=10-x-y&=0\tag{\ensuremath{\lambda}}\\
-\end{align*}
-$$
 
 <aside>A “First Order Condition”, or FOC, is an equation you get by setting a derivative equal to zero. The name comes from the fact that a derivative is sometimes called a “first-order derivative” to be more precise.</aside>
 
@@ -75,7 +68,7 @@ $$\alpha x^{\alpha-1}y^{1-\alpha}=\lambda\tag{x}$$
 
 $$\left(1-\alpha\right)x^{\alpha}y^{-\alpha}=\lambda\tag{y}$$
 
-$$x+y=10\tag{\ensuremath{\lambda}}$$
+$$x+y=10\tag{\lambda}$$
 
 The solution to this system of equations gives us the critical points for $\mathcal{L}$, and thus potential solutions to the original problem.
 
