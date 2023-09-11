@@ -68,7 +68,7 @@ $$\alpha x^{\alpha-1}y^{1-\alpha}=\lambda\tag{x}$$
 
 $$\left(1-\alpha\right)x^{\alpha}y^{-\alpha}=\lambda\tag{y}$$
 
-$$x+y=10\tag{\lambda}$$
+$$x+y=10\tag{λ}$$
 
 The solution to this system of equations gives us the critical points for $\mathcal{L}$, and thus potential solutions to the original problem.
 
