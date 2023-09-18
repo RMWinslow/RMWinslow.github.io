@@ -72,7 +72,7 @@ date: 2022-08-25-->
 <a href="./highcharts/twoPeriodEndowment.html">Standalone link.</a>
 
 
-### Interest Rate Spread
+### Collateral Constraints
 
 <div>
 <iframe height="510px" width="100%" src="./highcharts/twoPeriodEndowmentWithBorrowingLimits.html"></iframe>
@@ -81,7 +81,7 @@ date: 2022-08-25-->
 <a href="./highcharts/twoPeriodEndowmentWithBorrowingLimits.html">Standalone link.</a>
 
 
-### Collateral Constraints
+### Interest Rate Spread
 
 <div>
 <iframe height="510px" width="100%" src="./highcharts/twoPeriodEndowmentWithDifferentRates.html"></iframe>
