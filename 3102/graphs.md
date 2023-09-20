@@ -1,12 +1,12 @@
 ---
 title: 3102 Graphs
-parent: 3102 Notes
-grand_parent: Teaching
+parent: Intermediate Macro Notes
+grand_parent: Notes
 layout: post
 toc: false
-nav_order: 20
+nav_exclude: true
 date: 2022-08-23
-last_modified_date: 2022-08-25
+last_modified_date: 2023-09-20
 ---
 
 <!--

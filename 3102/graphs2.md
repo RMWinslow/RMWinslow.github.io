@@ -1,11 +1,11 @@
 ---
 title: 3102 Graphs (Highcharts, old)
-parent: 3102 Notes
-grand_parent: Teaching
+parent: Intermediate Macro Notes
+grand_parent: Notes
 layout: post
 toc: true
-nav_order: 20
-last_modified_date: 2022-08-25
+nav_exclude: true
+last_modified_date: 2023-09-20
 ---
 
 <!--
