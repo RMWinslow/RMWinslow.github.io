@@ -89,3 +89,13 @@ Cobb Douglass preferences are equivalent to log plus beta log preferences when a
 
 <div class="kg-container" src="./graphs/twoPeriodEquilibrium.yml" clearColor='#fdf6e3'></div>
 
+
+
+---
+
+The above graphs are made using Chris Makler's open source [KineticGraphs JavaScript Engine](https://github.com/cmakler/kgjs)
+
+See also [the previous versions of these graphs](graphs2).
+
+
+

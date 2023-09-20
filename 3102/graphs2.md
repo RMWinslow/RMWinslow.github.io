@@ -91,5 +91,15 @@ date: 2022-08-25-->
 
 
 
+---
 
+This batch of graphs is made using [Highcharts](https://www.highcharts.com/).
+(I don't have a license, 
+but do have confirmation from the company that this kind of personal/educational use-case doesn't need one.)
+
+I've since migrated mostly to using [a new batch of graphs made with KineticGraphs](graphs).
+
+Compared to the KG versions, these Highcharts-based graphs are more performant in some ways, 
+but they're uglier (mostly my fault as the coder),
+and are unable to pull off the click-and-drag trick that some of the graphs use.
 
