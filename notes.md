@@ -6,7 +6,7 @@ nav_order: 30
 ---
 
 
-This website is under construction.
+Here you can find my notes on teaching or other economic subjects.
 
 
 
