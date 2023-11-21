@@ -6,6 +6,19 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link href="styles/basic.css" rel="stylesheet" type="text/css">
     <style>
+        body {
+            max-width: 100%;
+            background-color: var(--c2);
+            color: var(--c4);
+            padding: 0;
+        }
+        .contentBlock {
+            margin: auto;
+            max-width: 45em;
+            background-color: var(--c3);
+            color: var(--c4);
+            padding: 1em;
+        }
         .navlink-flex-container {
             padding: 1rem;
             display: flex;
@@ -19,11 +32,16 @@
         .profile-picture {
             height: 17em;
             float:left;
-            margin:0 0.8em  0 0;
+            margin:0 1.0em  0 0;
+            border-radius: 0;
         }
         h2 {
             margin:0;
             font-size: 1.5em;
+        }
+        h3 {
+            font-size: 1.2em;
+            margin-top: 2em;
         }
         @media (max-width: 700px) {
             .profile-picture {
@@ -33,40 +51,81 @@
                 clear: both;
             }
         }
+        /*body {background-color: white;}*/
     </style>
 </head>
 <body>
 
+<div class="contentBlock" style="padding-bottom: 2em;">
+    <h1>Robert Martin Winslow</h1>
 
-<h1>Robert Martin Winslow</h1>
-
-<img src="headshot_bee_cropped3.webp" class="profile-picture" title="Headshot of Robert Winslow">
+    <img src="headshot_bee_cropped.webp" class="profile-picture" title="Headshot of Robert Winslow">
 
 
-<p>I am a PhD candidate in economics at the University of Minnesota. </p>
+    <p>I am a PhD candidate in economics at the University of Minnesota. </p>
 
-<p>If you are one of my students, all of our course content can be found on <a href="https://canvas.umn.edu/">the course Canvas site</a>.
+    <p>If you are one of my students, all of our course content can be found on <a href="https://canvas.umn.edu/">the course Canvas site</a>.
 
-<hr>
+    <hr>
 
-<h2>Contact Information</h2>
+    <h2>Contact Information</h2>
 
-<dl>
-    <dt>Email</dt>
-        <dd>winsl055 at umn dot edu</dd>
-    <dt>Mailing Address</dt>
-        <dd>4-101 Hanson Hall, 1925 Fourth Street South, Minneapolis, MN 55455</dd>
-</dl>
+    <dl>
+        <dt>Email</dt>
+            <dd>winsl055 at umn dot edu</dd>
+        <dt>Mailing Address</dt>
+            <dd>4-101 Hanson Hall, 1925 Fourth Street South, Minneapolis, MN 55455</dd>
+    </dl>
 
-<hr>
+    <hr>
 
-<nav class="navlink-flex-container" style="clear:both">
-    <a href="./files/CV Robert Winslow.pdf"  class="navlink-flex-items">CV</a>-
-    <a href="./teaching"  class="navlink-flex-items">Teaching</a>-
-    <a href="./research"  class="navlink-flex-items">Research</a>-
-    <a href="./notes"  class="navlink-flex-items">Notes</a>
-    <a href=""  class="navlink-flex-items" hidden>Other Links</a>
-</nav>
+    <nav class="navlink-flex-container" style="clear:both">
+        <a href="./files/CV Robert Winslow.pdf"  class="navlink-flex-items">CV</a>-
+        <a href="./teaching"  class="navlink-flex-items">Teaching</a>-
+        <a href="./research"  class="navlink-flex-items">Research</a>-
+        <a href="./notes"  class="navlink-flex-items">Notes</a>
+        <a href=""  class="navlink-flex-items" hidden>Other Links</a>
+    </nav>
+
+</div>
+
+
+
+<div style="background-color: #eee;">
+<div class="contentBlock" style="padding-bottom: 5em; padding-top: 3em; background-color: #fafafa;">
+
+
+
+    <center><h2>Research Updates</h2></center>
+
+
+
+    <h3>2022 MEBDI ML Competition</h3>
+
+    <p>
+        I won first prize in the 2022 Minnesota Economics Big Data Institute (MEBDI) Machine Learning Competition. 
+        The task was to develop a machine learning algorithm that provides the best out-of-sample prediction for the unemployment status of workers one year ahead.
+        <a href="https://mebdi.squarespace.com/competitions/2022-ml-competition-winner">You can read more about the competition and about my winning submission at this link.</a>
+    </p>
+
+
+
+
+
+    <h3>Job Market Paper</h3>
+
+    <p>
+        <a href="./research/pdf/jmp.pdf">Read the current draft of my job market paper here.</a>
+    </p>
+
+
+
+</div>
+</div>
+
+
+
+
 
 
 
