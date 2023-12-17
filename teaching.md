@@ -24,7 +24,7 @@ nav_order: 20
 - Fall 2017: Econ 1101, Principles of Microeconomics (TA for Professor Thomas Holmes)
 - Spring 2018: Econ 1101, Principles of Microeconomics (TA for Aradhya Sood)
 - Fall 2018: Econ 1101, Principles of Microeconomics (TA for Professor Thomas Holmes)
-- Spring 2019: Econ 1102, Principles of Microeconomics (TA for Professor Christopher Phelan)
+- Spring 2019: Econ 1102, Principles of Macroeconomics (TA for Professor Christopher Phelan)
 
 
 
