@@ -4,8 +4,8 @@ subtitle: Where supply meets demand.
 parent: Principles of Micro
 grand_parent: Notes
 layout: post
-toc: true
-last_modified_date: 2024-02-01
+toc: false
+last_modified_date: 2024-02-04
 date: 2024-02-01
 ---
 
@@ -19,4 +19,5 @@ This page is under construction.
 <div class="kg-container" src="./graphs/onePeriodConsumer.yml" clearcolor="#fff0"></div>
 
 
-
+<div class="kg-container" src="./graphs/equilibriumShocks.yml" clearcolor="#fff0"></div>
+<!--This one is taken directly from here: https://kineticgraphs.org/econ/linear-supply-demand.html (scroll down)-->
