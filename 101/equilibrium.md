@@ -22,7 +22,7 @@ This page is under construction.
 
 ---
 
-![Link to graph demonstrating price pressure.](https://www.econgraphs.org/graphs/competition/equilibrium/shortage_surplus)
+[Link to graph demonstrating price pressure.](https://www.econgraphs.org/graphs/competition/equilibrium/shortage_surplus)
 
 ---
 
