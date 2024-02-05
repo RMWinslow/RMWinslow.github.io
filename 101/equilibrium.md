@@ -16,8 +16,15 @@ This page is under construction.
 <script src="https://kineticgraphs.org/js/kg3d.0.2.6.js"></script>
 
 
-<div class="kg-container" src="./graphs/onePeriodConsumer.yml" clearcolor="#fff0"></div>
-
 
 <div class="kg-container" src="./graphs/equilibriumShocks.yml" clearcolor="#fff0"></div>
 <!--This one is taken directly from here: https://kineticgraphs.org/econ/linear-supply-demand.html (scroll down)-->
+
+---
+
+![Link to graph demonstrating price pressure.](https://www.econgraphs.org/graphs/competition/equilibrium/shortage_surplus)
+
+---
+
+
+

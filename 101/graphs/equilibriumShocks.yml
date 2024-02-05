@@ -50,7 +50,7 @@ layout:
               - horizontal: demandShift
           supply:
             name: newSupply
-            yIntercept: 2 - params.supplyShift
+            yIntercept: 0 - params.supplyShift
             slope: 1
             pts:
             - name: a
@@ -59,6 +59,7 @@ layout:
               - horizontal: supplyShift
           equilibrium:
             show: (calcs.demandChanged || calcs.supplyChanged)
+            color: red
             droplines:
               vertical: Q_1
               horizontal: P_1
