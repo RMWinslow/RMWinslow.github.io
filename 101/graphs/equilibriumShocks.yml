@@ -27,7 +27,7 @@ layout:
             - name: a
               y: 4
           supply:
-            yIntercept: 2
+            yIntercept: 0
             slope: 1
             lineStyle: dotted
             pts:
@@ -59,7 +59,7 @@ layout:
               - horizontal: supplyShift
           equilibrium:
             show: (calcs.demandChanged || calcs.supplyChanged)
-            color: red
+            color: #008800
             droplines:
               vertical: Q_1
               horizontal: P_1
