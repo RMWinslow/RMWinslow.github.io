@@ -59,7 +59,7 @@ layout:
               - horizontal: supplyShift
           equilibrium:
             show: (calcs.demandChanged || calcs.supplyChanged)
-            color: #008800
+            color: green
             droplines:
               vertical: Q_1
               horizontal: P_1
