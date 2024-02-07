@@ -5,7 +5,7 @@ grand_parent: Notes
 layout: post
 toc: false
 nav_order: 103
-last_modified_date: 2022-08-23
+last_modified_date: 2024-02-07
 ---
 
 
@@ -50,8 +50,8 @@ All the money the government collects, minus the money that they spend.
 $$S_g = \textcolor{#b58900}{T} - \textcolor{#2aa198}{G} - \textcolor{#dc322f}{TR} - \textcolor{#859900}{INT}$$
 
 <span style="color:">Government Savings</span> = 
-<span style="color:#2aa198">Government Expenditures</span> - 
 <span style="color:#b58900">Taxes</span> - 
+<span style="color:#2aa198">Government Expenditures</span> - 
 <span style="color:#dc322f">Net transfers from the government to private individuals</span> - 
 <span style="color:#859900">Interest on government debt held by individuals </span>.
 
