@@ -18,9 +18,7 @@ whitelist:
   - jekyll-redirect-from
   
 nav_external_links:
-  - title: Just the Docs on GitHub
-    url: https://github.com/just-the-docs/just-the-docs
   - title: CV
-    url: rmwinslow.com/files/CV Robert Winslow.pdf
+    url: https://rmwinslow.com/files/CV Robert Winslow.pdf
   - title: Blog
-    url: blog.rmwinslow.com
+    url: https://blog.rmwinslow.com
