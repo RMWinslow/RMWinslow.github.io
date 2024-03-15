@@ -12,7 +12,7 @@ nav_order: 20
 
 
 [Intermediate Macroeconomics (Econ 3102)](./teaching/3102)
-: Summer 2019 - Fall 2023. 9 regular semesters, and 5 summer semesters.
+: Summer 2019 - Spring 2024. 10 regular semesters, and 5 summer semesters.
 
 
 
