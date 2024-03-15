@@ -18,7 +18,5 @@ whitelist:
   - jekyll-redirect-from
   
 nav_external_links:
-  - title: CV
-    url: https://rmwinslow.com/files/CV Robert Winslow.pdf
   - title: Blog
     url: https://blog.rmwinslow.com
