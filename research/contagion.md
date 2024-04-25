@@ -8,6 +8,9 @@ parent: Research
 
 This was my third-year paper. [The current draft can be seen here](pdf/contagion_draft_2021-09-26.pdf).
 
+This paper was presented on April 20th, 2024 at the Ninth Annual Conference on Network Science and Economics.
+[Here are the slides from this presentation.](pdf/networks_conference_2024.pdf)
+
 
 ## Paper Information
 
