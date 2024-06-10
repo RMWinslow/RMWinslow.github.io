@@ -11,13 +11,16 @@ nav_order: 20
 ## Current Teaching
 
 
-[Intermediate Macroeconomics (Econ 3102)](./teaching/3102)
-: Summer 2019 - Spring 2024. 10 regular semesters, and 5 summer semesters.
+
 
 
 
 
 ## Past Teaching
+
+[Intermediate Macroeconomics (Econ 3102)](./teaching/3102)
+: Summer 2019 - Spring 2024. 10 regular semesters, and 5 summer semesters.
+
 
 ### Teaching Assistant
 
