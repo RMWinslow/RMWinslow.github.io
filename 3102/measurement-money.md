@@ -52,7 +52,6 @@ but [decided that it wasn't worth the effort](https://www.federalreserve.gov/rel
 [![FRED Graph of Money Stock measures.](https://fred.stlouisfed.org/graph/fredgraph.png?g=1vzEU)](https://fred.stlouisfed.org/graph/?g=1vzEU) 
 <!--
 https://fred.stlouisfed.org/graph/?g=12ew3
-<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1vzE3&width=670&height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowTransparency="true" loading="lazy"></iframe>
 https://fred.stlouisfed.org/graph/?g=1vzE3
 https://fred.stlouisfed.org/graph/fredgraph.png?g=1vzEU
 -->
