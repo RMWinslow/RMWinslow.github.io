@@ -5,6 +5,8 @@ grand_parent: Notes
 layout: post
 nav_order: 106
 date: 2023-04-25
+last_modified_date: 2022-09-14
+
 ---
 
 <!--last_modified_date: 2022-09-14-->
@@ -47,8 +49,13 @@ For more details, take a look at this page from the Federal Reserve:
 The Federal Reserve also use to publish a measure called M3,
 but [decided that it wasn't worth the effort](https://www.federalreserve.gov/releases/h6/discm3.htm).
 
-[![FRED Graph of Money Stock measures.](https://fred.stlouisfed.org/graph/fredgraph.png?g=12ewg)](https://fred.stlouisfed.org/graph/?g=12ew3) 
-<!--https://fred.stlouisfed.org/graph/?g=12ew3-->
+[![FRED Graph of Money Stock measures.](https://fred.stlouisfed.org/graph/fredgraph.png?g=1vzEU)](https://fred.stlouisfed.org/graph/?g=1vzEU) 
+<!--
+https://fred.stlouisfed.org/graph/?g=12ew3
+<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1vzE3&width=670&height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowTransparency="true" loading="lazy"></iframe>
+https://fred.stlouisfed.org/graph/?g=1vzE3
+https://fred.stlouisfed.org/graph/fredgraph.png?g=1vzEU
+-->
 
 
 
@@ -117,7 +124,6 @@ Right: [Lithograph of traders using shells. 1845](https://commons.wikimedia.org/
 <br>
 <small>
 Left: [Ancient Chinese Shell Money. CC-BY-SA-3 Classical Numismatic Group, Inc.](https://commons.wikimedia.org/wiki/File:Chinese_shell_money_16th_8th_century_BCE.jpg) Right: own photo.
-Right: Own photo
 </small>
 </figcaption>
 </figure>
@@ -166,8 +172,7 @@ https://en.wikipedia.org/wiki/Card_money
 <figcaption>Early 1900s scrip issued in Minnesota.
 <br>
 <small>
-From <a href="https://shawnhewitt.com/">the collection of Shawn Hewitt</a>. Own photo.
-Right: Own photo
+From <a href="https://shawnhewitt.com/">the collection of Shawn Hewitt</a>. Own photos.
 </small>
 </figcaption>
 </figure>
