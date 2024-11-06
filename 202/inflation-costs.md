@@ -1,7 +1,7 @@
 ---
 title: The Costs of Inflation
 subtitle: It's more complicated than "things getting more expensive".
-parent: ECON 202 - Principles of Macroeconomics
+parent: Principles of Macro
 layout: post
 has_children: false
 has_toc: true
