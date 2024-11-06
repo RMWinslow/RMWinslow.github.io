@@ -52,7 +52,7 @@ In the real world, inflation can be harmful for the following reasons:
 
 -->
 
-## Inflation and the Real Interest Rate
+## Inflation and Savings
 
 
 
@@ -86,7 +86,33 @@ If inflation is stable and predictable, we get the same numbers either way. But 
 This may all sound rather technical, [but this was *the* hot-button political issue of the 1890s.](https://en.wikipedia.org/wiki/Cross_of_Gold_speech)
 </aside>
 
-<!--TODO: Add colors, make equations more readable.-->
+
+### Inflation Taxes Savers
+
+Even when inflation is predictable, high inflation rates still penalizes people who save their money, regardless of whether it's in the form of cash, stocks, or bonds.
+
+
+When you earn interest from a savings account or a bond, the *nominal* interest counts as income for the sake of taxes ([with some exceptions](https://www.irs.gov/taxtopics/tc403)). The decreases the after-tax real returns.
+
+<iframe src="https://instacalc.com/58036/embed" width="450" height="350" frameborder="0"></iframe>
+
+
+<!--
+Actual version with proper Fisher relation: https://instacalc.com/58035
+Simplified version with approximation: https://instacalc.com/58036
+TODO: This has an interesting connection to Fatih's wealth paper Use It or Lose It
+
+Maybe not too interesting albiet.
+https://taxfoundation.org/research/all/federal/inflation-can-cause-infinite-effective-tax-rate-capital-gains/
+"the effective tax rate on the real (inflation indexed) capital gain has exceeded the statutory rate every year since 1950 and has averaged around 42 percent."
+-->
+
+Likewise, with a nominal capital gains tax, if you buy a stock and its value goes up when you sell it, then you'll be taxed even though your real wealth didn't increase.
+
+(And of course, if you save your money by keeping it as cash, you'll be hit by inflation worst of all.)
+
+
+
 
 
 
