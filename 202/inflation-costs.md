@@ -32,7 +32,7 @@ In the real world, inflation can be harmful for the following reasons:
     - **Shoe-leather Costs** are the resources wasted when people try to avoid holding onto money. As in, "you'll wear out your shoes going to the bank." These are typically small nowadays, especially with modern payment technology, but in periods of hyperinflation, shoe-leather costs can be rather dramatic.
 - Agreements about future payments are often expressed in nominal terms. So unexpectedly high inflation can result in:
     - Unintentionally higher taxes on savings and capital gains.
-    - Higher-than-expected real interest rates, which results in a transfer of wealth from lendors to borrowers.
+    - Higher-than-expected real interest rates, which results in a transfer of wealth from lenders to borrowers.
 
 
 
@@ -44,51 +44,51 @@ In the real world, inflation can be harmful for the following reasons:
 ## The Direct Costs of Dealing With Inflation
 
 
-## Relative Price Changes
+## Relative Price Changes and Real Wages
 
 
 
-Inflation can do real harm to the economy, especially when it's large and unexpected.
-
-Suppose that we all spontaneously agreed to start using pennies instead of dollars as our unit of account.
-We could just erase the decimal point from price tags, 
-add a couple zeros onto the end of everybody's paycheck,
-and do some hasty Sharpie work with the bills in your wallet.
-Would that really change anything?
 
 
-
-- confusion
-- relative price changes
-- menu costs and shoeleather costs
-- making it more difficult to save
-
-
-First, some definitions from Mankiw:
-
-Inflation Tax
-: the revenue the government raises by creating money
-
-Fisher Effect
-: the one-for-one adjustment of the nominal interest rate to the inflation rate
-
-The Inflation Fallacy
-: Inflation does not in itself reduce people's real purchasing power.
-
-Shoelether costs
-: the resources wasted when inflation encourages people to reduce their money holdings
-
-menu costs
-: the costs of changing prices
-
-relative-price variability
-
-inflation induced tax distortions on capital gains, interest on savings
-
-confusion
-
-redistribution of wealth (from fisher effect)
 -->
+
+## Inflation and the Real Interest Rate
+
+
+
+<!--
+SDRS caps COLA at https://www.sd.gov/cs?id=kb_article_view&sys_kb_id=7ba126331b4bb1102df610ad9c4bcb5d
+-->
+
+### Unexpected Inflation Transfers Wealth
+
+The Fisher equation says that 
+
+$$\mathinner{\color{purple}{\text{nominal interest}\atop \text{rate}}}\approx\mathinner{\color{blue}{\text{real interest}\atop \text{rate}}}+\mathinner{\color{red}{\text{inflation}\atop \text{rate}}}$$
+
+We can interpret this "ex-ante" as saying that the <span style="color:purple">nominal interest rate</span> is a combination of *expected* $\color{blue}\text{real interest rate}$ and the *expected* <span style="color:red">inflation rate</span>. If I borrow money from you, the <span style="color:purple">extra I promise to pay back</span> reflects compensation for two things: <span style="color:blue">you want to be rewarded with increased purchasing power</span>, and by the time I pay you back, <span style="color:red">the money will be worth less</span>.
+
+$$\mathinner{\color{blue}{\text{real interest}\atop \text{rate}}}\approx\mathinner{\color{purple}{\text{nominal interest}\atop \text{rate}}}-\mathinner{\color{red}{\text{inflation}\atop \text{rate}}}$$
+
+But we can also flip things around and interpret the "ex-post" real interest rate as telling us the interest left over after accounting for inflation.
+
+If inflation is stable and predictable, we get the same numbers either way. But if actual inflation is higher than expected inflation, then real interest rates will be lower than expected as well. This means:
+
+- If inflation is **higher** than expected:
+    - Borrowers will pay back **less** than they expected, in real terms.
+    - They'll pay back the expected amount of *dollars*, but those dollars will represent fewer resources.
+    - This effectively results in a transfer from lenders to borrowers.
+- If inflation is **lower** than expected:
+    - Borrowers will pay back **more** than they expected, in real terms.
+    - This effectively results in a transfer from borrowers to lenders.
+
+<aside markdown="block">
+This may all sound rather technical, [but this was *the* hot-button political issue of the 1890s.](https://en.wikipedia.org/wiki/Cross_of_Gold_speech)
+</aside>
+
+<!--TODO: Add colors, make equations more readable.-->
+
+
 
 
 <!--I like the flow of the lecture I gave on this topic but it was a bit too much for 50 minutes.-->
