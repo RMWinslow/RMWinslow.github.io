@@ -2,10 +2,10 @@
 title: The Costs of Inflation
 subtitle: It's more complicated than "things getting more expensive".
 parent: Principles of Macro
+grand_parent: Notes
 layout: post
-has_children: false
-has_toc: true
-nav_exclude: false
+date: 2024-11-06
+last_modified_date: 2024-11-06
 ---
 
 Suppose we multiplied all dollar amounts in the economy by 100.

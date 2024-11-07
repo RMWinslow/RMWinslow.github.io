@@ -4,7 +4,7 @@ subtitle: ECON 202 - Principles of Macroeconomics
 parent: Notes
 layout: post
 has_children: true
-has_toc: false
+has_toc: true
 nav_exclude: false
 ---
 
