@@ -1,0 +1,521 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\end_preamble
+\use_default_options true
+\begin_modules
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding auto-legacy
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\branch Solutions
+\selected 0
+\filename_suffix 0
+\color background background
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Left Header
+Chapter 17
+\end_layout
+
+\begin_layout Center Header
+The Classical Theory of the Money Supply
+\end_layout
+
+\begin_layout Right Header
+ECON 202
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Thanks to Reed Muehler for providing the idea,
+ examples,
+ and some of the content of this handout.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Quantity Theory of Money
+\end_layout
+
+\begin_layout Standard
+Quantity Equation:
+\begin_inset Formula 
+\[
+M\cdot V=P\cdot Y
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Definition of the 
+\series bold
+velocity of money
+\series default
+:
+\begin_inset Branch Solutions
+inverted 1
+status open
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+V=\frac{\;\;\;\;\;\;\;\;\;\;\;\;\;}{}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Solutions
+inverted 0
+status open
+
+\begin_layout Standard
+
+\color blue
+\begin_inset Formula 
+\[
+V=\frac{P\cdot Y}{M}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Examples
+\end_layout
+
+\begin_layout Standard
+Assume there is only one good in the economy,
+ pizza.
+ This year,
+ money supply is $10,000,
+ output is 3,000 pizzas,
+ and the price of a pizza is $10.
+ 
+\end_layout
+
+\begin_layout Enumerate
+What is the velocity of money?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Branch Solutions
+inverted 1
+status open
+
+\begin_layout Standard
+
+\color blue
+\begin_inset Formula 
+\[
+{\atop }
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Solutions
+inverted 0
+status open
+
+\begin_layout Standard
+
+\color blue
+\begin_inset Formula 
+\[
+V=\frac{P\cdot Y}{M}=\frac{10\cdot3000}{10000}=3
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+What is nominal GDP?
+ (assuming all of the pizzas are final goods)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Branch Solutions
+inverted 1
+status open
+
+\begin_layout Standard
+
+\color blue
+\begin_inset Formula 
+\[
+{\atop }
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Solutions
+inverted 0
+status open
+
+\begin_layout Standard
+
+\color blue
+\begin_inset Formula 
+\[
+P\cdot Y=10\cdot3000=30,000
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+\series bold
+Assume the velocity of money remains constant.
+ 
+\series default
+Next year,
+ the government increases the money supply by 10%.
+ Calculate nominal GDP for the next year.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Branch Solutions
+inverted 1
+status open
+
+\begin_layout Standard
+
+\color blue
+\begin_inset Formula 
+\[
+{\atop }
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Solutions
+inverted 0
+status open
+
+\begin_layout Standard
+
+\color blue
+\begin_inset Formula 
+\[
+PY=MV=3\cdot10000\cdot110\%=33000
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Now consider two different cases:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+First,
+ suppose that output remains the same,
+ find the price of pizza next year,
+ and calculate the inflation rate.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Branch Solutions
+inverted 1
+status open
+
+\begin_layout Standard
+
+\color blue
+\begin_inset Formula 
+\[
+{\atop }
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Solutions
+inverted 0
+status open
+
+\begin_layout Standard
+
+\color blue
+\begin_inset Formula 
+\[
+P=\frac{MV}{Y}=\frac{33000}{3000}=11,\;\pi=\frac{11-10}{10}=10\%
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Next,
+ suppose that pizza output increases to 3300.
+ Again,
+ find the price of pizza next year,
+ and calculate the inflation rate.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Branch Solutions
+inverted 1
+status open
+
+\begin_layout Standard
+
+\color blue
+\begin_inset Formula 
+\[
+{\atop }
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Solutions
+inverted 0
+status open
+
+\begin_layout Standard
+
+\color blue
+\begin_inset Formula 
+\[
+P=\frac{MV}{Y}=\frac{33000}{3300}=10\;\pi=\frac{10-10}{10}=0\%
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Illustrate the effects of an increase in the supply of money:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img_blank_supply_and_demand.png
+	lyxscale 10
+	height 4cm
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
