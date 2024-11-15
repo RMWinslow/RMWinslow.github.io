@@ -153,6 +153,18 @@ depreciation
 \end_layout
 
 \begin_layout Plain Layout
+real exchange rate
+\end_layout
+
+\begin_layout Plain Layout
+purchasing power parity
+\end_layout
+
+\begin_layout Plain Layout
+fixed vs flexible?
+\end_layout
+
+\begin_layout Plain Layout
 –
 \end_layout
 
@@ -160,12 +172,921 @@ depreciation
 Ideally I'd like an actual table CPI inflation indices to use alongside the Big Mac index.
 \end_layout
 
+\begin_layout Plain Layout
+—
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Read Later:
+\end_layout
+
+\begin_layout Plain Layout
+https://www.sciencedirect.com/science/article/abs/pii/S1573440405800127 (cited by mankiw in intermediate macro texbook)
+\end_layout
+
+\begin_layout Plain Layout
+https://muse.jhu.edu/article/261232 (highly cited paper where RER is explicitly ratio of exchange rates (XRAT) and purchasing power parity conversion factors (PPP);
+ really nice web design here,
+ by the way.)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Links:
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Links:
+\end_layout
+
+\begin_layout Itemize
+https://github.com/TheEconomist/big-mac-data
+\end_layout
+
+\begin_layout Itemize
+https://oecdstatistics.blog/2017/07/10/purchasing-power-parities-not-only-about-big-macs/
+\end_layout
+
+\begin_layout Itemize
+https://www.oecd.org/en/data/datasets/purchasing-power-parities.html
+\end_layout
+
+\begin_layout Itemize
+Each page on the new OECD website is fine,
+ but the datasets are no longer discoverable without the direct link.
+ The search widget is five different kinds of stupid.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+https://www.oecd.org/en/data/datasets/gdp-and-non-financial-accounts.html
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+PP and exchange rates sourced from IMF:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+https://data-explorer.oecd.org/vis?lc=en&tm=exchange%20rate&pg=0&snb=52&df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_NAMAIN10%40DF_TABLE4&df[ag]=OECD.SDD.NAD&df[vs]=2.0&dq=A.AUS%2BAUT%2BBEL%2BCAN%2BCHL%2BCOL%2BCRI%2BCZE%2BDNK%2BEST%2BFIN%2BFRA%2BDEU%2BGRC%2BHUN%2BISL%2BIRL%2BISR%2BITA%2BJPN%2BKOR%2BLVA%2BLTU%2BLUX%2BMEX%2BNLD%2BNZL%2BNOR%2BPOL%2BPRT%2BSVK%2BSVN%2BESP%2BSWE%2BCHE%2BTUR%2BGBR%2BUSA...PPP_B1GQ.......&lom=LASTNPERIODS&lo=10&to[TIME_PERIOD]=false
+\end_layout
+
+\begin_layout Itemize
+https://data-explorer.oecd.org/vis?df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_NAMAIN10%40DF_TABLE4&df[ag]=OECD.SDD.NAD&df[vs]=2.0&dq=A.AUS%2BAUT%2BBEL%2BCAN%2BCHL%2BCOL%2BCRI%2BCZE%2BDNK%2BEST%2BFIN%2BFRA%2BDEU%2BGRC%2BHUN%2BISL%2BIRL%2BISR%2BITA%2BJPN%2BKOR%2BLVA%2BLTU%2BLUX%2BMEX%2BNLD%2BNZL%2BNOR%2BPOL%2BPRT%2BSVK%2BSVN%2BESP%2BSWE%2BCHE%2BTUR%2BGBR%2BUSA...PPP_B1GQ.......&lom=LASTNPERIODS&lo=10&to[TIME_PERIOD]=false
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+sourced from the International Monetary Fund's database on International Financial Statistics.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+There's a CPI 2018 but only 4 countries in there???
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+https://data-explorer.oecd.org/vis?lc=en&fs[0]=Topic%2C1%7CEconomy%23ECO%23%7CPrices%23ECO_PRI%23&pg=0&fc=Topic&bp=true&snb=30&df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_PRICES_COICOP2018%40DF_PRICES_C2018_ALL&df[ag]=OECD.SDD.TPS&df[vs]=1.0&dq=.M.N.CPI.IX._T.N.&lom=LASTNPERIODS&lo=13&to[TIME_PERIOD]=false
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Here's CPI 1999 system,
+ lots of countries,
+ but only indexed to particular years,
+ no way to put in cross-currency terms (which is what the PPPs are for,
+ I suppose.)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+https://data-explorer.oecd.org/vis?tm=cpi&pg=0&snb=20&vw=tb&df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_PRICES%40DF_PRICES_ALL&df[ag]=OECD.SDD.TPS&df[vs]=1.0&dq=USA%2BCHN.A.N.CPI.IX._T.N.GY%2B_Z&lom=LASTNPERIODS&lo=13&to[TIME_PERIOD]=false
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The balance of payments in OECd ain't great either:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+https://data-explorer.oecd.org/vis?lc=en&tm=exchange%20rate&pg=0&snb=52&df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_BOP%40DF_BOP&df[ag]=OECD.SDD.TPS&df[vs]=1.0&dq=USA..CA%2BKA%2BFA.N%2BB..A.XDC.&lom=LASTNPERIODS&lo=5&to[TIME_PERIOD]=false&vw=tb
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Here's 
+\begin_inset Quotes eld
+\end_inset
+
+Price level Index
+\begin_inset Quotes erd
+\end_inset
+
+,
+ from OECD,
+ nice big table showing how expensive things are to the global average (becomes RER if we normalize to some particular country.)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+https://data-explorer.oecd.org/vis?lc=en&df[ds]=DisseminateArchiveDMZ&df[id]=DF_DP_LIVE&df[ag]=OECD&df[vs]=&av=true&pd=1997%2C2022&dq=BRICS%2BDAC%2BDAE%2BOIL%2BAUS%2BAUT%2BBEL%2BCAN%2BCHL%2BCOL%2BCRI%2BCZE%2BDNK%2BEST%2BFIN%2BFRA%2BDEU%2BGRC%2BHUN%2BISL%2BIRL%2BISR%2BITA%2BJPN%2BKOR%2BLVA%2BLTU%2BLUX%2BMEX%2BNLD%2BNZL%2BNOR%2BPOL%2BPRT%2BSVK%2BSVN%2BESP%2BSWE%2BCHE%2BTUR%2BGBR%2BUSA%2BOAVG%2BEA%2BEU%2BEU27%2BEA17%2BEU28%2BEA18%2BEU27_2020%2BEA19%2BG7M%2BG-7%2BOEU%2BG20%2BOECDE%2BG-20%2BWLD%2BNMEC%2BA
+FG%2BALB%2BDZA%2BAGO%2BARG%2BARM%2BAZE%2BBHR%2BBGD%2BBLR%2BBEN%2BBTN%2BBOL%2BBIH%2BBWA%2BBRA%2BBRN%2BBGR%2BBFA%2BBDI%2BKHM%2BCMR%2BCAF%2BTCD%2BCHN%2BCOG%2BCOD%2BCIV%2BHRV%2BCUB%2BCYP%2BDOM%2BECU%2BEGY%2BSLV%2BGNQ%2BERI%2BETH%2BFJI%2BGAB%2BGMB%2BGEO%2BGHA%2BGTM%2BGIN%2BGNB%2BHTI%2BHND%2BHKG%2BIND%2BIDN%2BIRN%2BIRQ%2BJAM%2BJOR%2BKAZ%2BKEN%2BPRK%2BKWT%2BKGZ%2BLAO%2BLBN%2BLSO%2BLBR%2BLBY%2BLIE%2BMAC%2BMDG%2BMWI%2BMYS%2BMLI%2BMLT%2BMRT%2BMUS%2BMDA%2BMNG%2BMNE%2BMAR%2BMOZ%2BMMR%2BNAM%2BNPL%2BNIC%2BNER%
+2BMKD%2BNGA%2BPSE%2BOMN%2BPAK%2BPAN%2BPNG%2BPRY%2BPER%2BPHL%2BQAT%2BROU%2BRUS%2BRWA%2BSAU%2BSEN%2BSRB%2BSLE%2BSGP%2BSOM%2BZAF%2BLKA%2BSDN%2BSWZ%2BSYR%2BTWN%2BTJK%2BTZA%2BTHA%2BTLS%2BTGO%2BTTO%2BTUN%2BTKM%2BUGA%2BUKR%2BARE%2BURY%2BUZB%2BVEN%2BVNM%2BYEM%2BZMB%2BZWE%2BFRME%2BDEW%2BOECD.PLI...A&to[TIME_PERIOD]=false&vw=tb&lb=id
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Note that 
+\begin_inset Quotes eld
+\end_inset
+
+Real Effective Exchange Rate
+\begin_inset Quotes erd
+\end_inset
+
+ is not the same thing,
+ I don't think.
+\end_layout
+
+\begin_layout Itemize
+Some data from WorldBank:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Price level ratio of PPP conversion factor (GDP) to market exchange rate:
+ https://data.worldbank.org/indicator/PA.NUS.PPPC.RF?view=chart
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+I THINK THIS IS WHAT MANKIW CALLS REAL EXCHANGE RATE,
+ or its inverse at least
+\end_layout
+
+\begin_layout Itemize
+But at the same time,
+ it isn't just a Mankiw thing.
+ Here's an educational resource on imf which uses the phrase RER:
+ https://www.imf.org/en/Publications/fandd/issues/Series/Back-to-Basics/Real-Exchange-Rates
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Official Exchange rate - no euro?:
+ https://data.worldbank.org/indicator/PA.NUS.FCRF?view=chart
+\end_layout
+
+\begin_layout Itemize
+PPP conversion factors:
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+https://data.worldbank.org/indicator/PA.NUS.PPP?view=chart
+\end_layout
+
+\begin_layout Itemize
+https://data.worldbank.org/indicator/PA.NUS.PRVT.PP?view=chart
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+TODO:
+ Something about special drawing rights???
+\end_layout
+
+\begin_layout Itemize
+https://webapps.ilo.org/CPI/CPI_Manual.html 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+See chapter 19 for example using aritifical dataset
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+data.imf.org/cpi
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+This has 
+\begin_inset Quotes eld
+\end_inset
+
+cross-country
+\begin_inset Quotes erd
+\end_inset
+
+ indexes but I don't actually know what that means.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+https://data.imf.org/ifs
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+I THINK the exchange rates here have what I'm looking for.
+ Will check at home.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+https://www.imf.org/en/Publications/fandd/issues/Series/Back-to-Basics/Purchasing-Power-Parity-PPP
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+the International Comparisons Program (ICP) was established by the United Nations and the University of Pennsylvania in 1968.
+ PPPs generated by the ICP are based on a global survey of prices.
+ For the 2003–06 round,
+ each of the participating countries (about 147) provided national average prices for 1,000 closely specified products.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Lots of useful data in world economic outlook - output gap,
+ implied ppp,
+ etc.
+ - but the spreadsheet mentions IMF is NOT the primary soure for PPP data.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+https://www.imf.org/en/Publications/SPROLLS/world-economic-outlook-databases
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+For primary source information,
+ please refer to one of the following sources:
+ the Organization for Economic Cooperation and Development,
+ the World Bank,
+ or the Penn World Tables.
+ For further information see Box A2 in the Statistical Appendix of the October 2024 WEO,
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+https://www.imf.org/en/Publications/WEO/Issues/2024/10/22/world-economic-outlook-october-2024
+\end_layout
+
+\end_deeper
+\begin_layout Plain Layout
+PPs are sourced from the International Comparison Program (ICP),
+ maintained and published 
+\end_layout
+
+\begin_layout Plain Layout
+by the World Bank in coordination with other 
+\end_layout
+
+\begin_layout Plain Layout
+international institutions,
+ including the International Monetary Fund.
+ In May 2024,
+ new PPPs 
+\end_layout
+
+\begin_layout Plain Layout
+were released for the 2021 reference year.
+ Revised 
+\end_layout
+
+\begin_layout Plain Layout
+results for the preceding reference year,
+ 2017,
+ and 
+\end_layout
+
+\begin_layout Plain Layout
+estimates of annual PPPs for 2018–20 were also 
+\end_layout
+
+\begin_layout Plain Layout
+released.
+ In the October 2024 World Economic 
+\end_layout
+
+\begin_layout Plain Layout
+Outlook,
+ following the standard methodology,
+ PPPs 
+\end_layout
+
+\begin_layout Plain Layout
+are derived by taking the new 2017–21 data and 
+\end_layout
+
+\begin_layout Plain Layout
+extrapolating it to all preceding and subsequent 
+\end_layout
+
+\begin_layout Plain Layout
+years using growth rates in relative GDP deflators 
+\end_layout
+
+\begin_layout Plain Layout
+(the GDP deflator of a country divided by the 
+\end_layout
+
+\begin_layout Plain Layout
+GDP deflator of the United States).
+\end_layout
+
+\begin_layout Plain Layout
+PPPGDP=NGDP/PPPEX
+\end_layout
+
+\begin_layout Itemize
+World Bank's international comparison program is the primary source for PPP exchange rates.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+https://www.worldbank.org/en/programs/icp/data
+\end_layout
+
+\begin_layout Itemize
+https://www.worldbank.org/en/programs/icp
+\end_layout
+
+\begin_layout Itemize
+https://databank.worldbank.org/source/icp-2021
+\end_layout
+
+\begin_layout Itemize
+https://www.worldbank.org/en/programs/icp/brief/PPPs-for-Policy
+\end_layout
+
+\begin_layout Itemize
+The link above is hard to get the data pulled up but has nice maps and so forth.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Oh,
+ this lets you view price levels compared to world average.
+ Only for 2017 and 2021 though.
+\end_layout
+
+\begin_layout Itemize
+See also the following PRICE LEVEL INDEX,
+ which might actually be real exchange rates???:
+ https://www.oecd.org/en/data/indicators/price-level-indices.html
+\end_layout
+
+\begin_layout Itemize
+DF_DP_LIVE
+\end_layout
+
+\begin_layout Itemize
+INDICATOR:
+ PLI
+\end_layout
+
+\begin_layout Itemize
+SUBJECT:
+ TOT
+\end_layout
+
+\begin_layout Itemize
+MEASURE:
+ OECDIDX
+\end_layout
+
+\begin_layout Itemize
+FREQUENCY:
+ A
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Another issue is that the 2021 release only has data for 2017-2023.
+ There are other data sets on there but the earliest is 2005,
+ when I guess WorldBank started doing it?
+\end_layout
+
+\begin_layout Itemize
+https://www.worldbank.org/en/programs/icp/history
+\end_layout
+
+\begin_layout Itemize
+Before that,
+ might have been Penn World Tables?
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+2023 PWT (https://www.rug.nl/ggdc/productivity/pwt/?lang=en) 
+\end_layout
+
+\begin_layout Itemize
+Doesn't have PPPex directly,
+ but does have data flags for ppp oddly enough.
+ Earliest benchmark year was 1970,
+ by the way.
+ All the PPP info before that is extrapolated.
+ (and afterwards is interpolated between benchmarks)
+\end_layout
+
+\begin_layout Itemize
+It also has international price levels,
+ which I think are actually just what Mankiw calls RER??
+\end_layout
+
+\begin_layout Itemize
+Also the documentation describes the PPP exchange rates in detail.
+\end_layout
+
+\begin_layout Itemize
+Query tool is a bit janky and also lacks PPP exchange rates in detail.
+ https://pwt-data-tool.streamlit.app/
+\end_layout
+
+\begin_layout Itemize
+not really sure how to properly use the PWT,
+ tbh
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The World Bank page lets you go back to 1990 (nice) but no ability to look at subcomponents in this case:
+ https://data.worldbank.org/indicator/PA.NUS.PPP (but according to the history page,
+ coverage was pretty spotty until the 90s anyways)
+\end_layout
+
+\begin_layout Itemize
+https://github.com/purchasing-power-parity/purchasing-power-parity
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+https://www.worldbank.org/en/programs/icp/data
+\end_layout
+
+\begin_layout Itemize
+NASDAQ defines it in terms of the theory like Mankiw does
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+https://www.nasdaq.com/glossary/p/purchasing-power-parity
+\end_layout
+
+\end_deeper
 \end_inset
 
 
 \end_layout
 
 \begin_layout Section*
+Exchange Rates
+\end_layout
+
+\begin_layout Subsection*
+Definitions
+\end_layout
+
+\begin_layout Standard
+The 
+\series bold
+nominal exchange rate
+\series default
+ is the price of money as measured in another currency.
+ For example,
+ if I can buy 7 Chinese Yuan for one US Dollar,
+ then the nominal exchange rate is 
+\begin_inset Formula 
+\[
+\,\,\,\,\,\frac{CNY}{USD}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And equivalently,
+ from China's perspective,
+ the nominal exchange rate is 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\,\,\,\,\,\frac{USD}{CNY}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $e$
+\end_inset
+
+ is the nominal exchange rate,
+ 
+\begin_inset Formula $P$
+\end_inset
+
+ is the domestic price level,
+ and 
+\begin_inset Formula $P^{*}$
+\end_inset
+
+ is the foreign price level,
+ then the 
+\series bold
+real exchange rate
+\series default
+ is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\text{Real Exchange Rate }=\frac{\qquad\qquad\qquad}{}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The dollar is said to 
+\series bold
+
+\begin_inset Quotes eld
+\end_inset
+
+appreciate
+\begin_inset Quotes erd
+\end_inset
+
+
+\series default
+ when each dollar can buy 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rule[-2mm]{3cm}{0.15mm}
+\backslash
+vspace{8mm}
+\end_layout
+
+\end_inset
+
+ foreign currency,
+ and the dollar is said to 
+\series bold
+
+\begin_inset Quotes eld
+\end_inset
+
+depreciate
+\begin_inset Quotes erd
+\end_inset
+
+
+\series default
+ when each dollar can buy 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rule[-2mm]{3cm}{0.15mm}
+\end_layout
+
+\end_inset
+
+ foreign currency.
+\end_layout
+
+\begin_layout Subsection*
+Example 1
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Suppose that last year,
+ I was able to buy 6 Chinese Yuan for 1 US Dollar.
+ This year,
+ I was able to buy 7 Chinese Yuan for 1 US Dollar.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+The dollar has 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rule[-2mm]{3cm}{0.15mm}
+\backslash
+vspace{8mm}
+\end_layout
+
+\end_inset
+
+ relative to the yuan,
+\begin_inset Newline newline
+\end_inset
+
+and the yuan has 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rule[-2mm]{3cm}{0.15mm}
+\end_layout
+
+\end_inset
+
+ relative to the dollar.
+\end_layout
+
+\end_inset
+
+Suppose that last year,
+ I was able to buy 130 Japanese Yen for 1 US Dollar.
+ This year,
+ I was able to buy 150 Japanese Yen for 1 US Dollar.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+From the US's perspective,
+ the exchange rate has changed from 
+\begin_inset Formula $\qquad\frac{JPY}{USD}$
+\end_inset
+
+ to 
+\begin_inset Formula $\qquad\frac{JPY}{USD}$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{8mm}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+The dollar has 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rule[-2mm]{3cm}{0.15mm}
+\backslash
+vspace{8mm}
+\end_layout
+
+\end_inset
+
+ relative to the yuan,
+\begin_inset Newline newline
+\end_inset
+
+and the yuan has 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+rule[-2mm]{3cm}{0.15mm}
+\end_layout
+
+\end_inset
+
+ relative to the dollar.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Now suppose price levels in Japan haven't changed.
+ If I've saved up some US dollars for a vacation in Japan,
+ how do you think I'll feel about the change in the exchange rates?
+ Why?
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+What about a US company which sells products to Japanese consumers?
+ How do you think they'll feel about the change in exchange rates?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Example 2:
+ Big Mac Index
+\end_layout
+
+\begin_layout Standard
+Suppose that:
+\end_layout
+
+\begin_layout Itemize
+The nominal exchange rate is 7 CNY/USD
+\end_layout
+
+\begin_layout Itemize
+The price of a Big Mac in the US is 6 USD per sandwich
+\end_layout
+
+\begin_layout Itemize
+The price of a Big Mac in China is 24 CNY per sandwich
+\end_layout
+
+\begin_layout Standard
+What is the price of a Big Mac in the US,
+ as measured in Chinese Yuan?
+ 
+\begin_inset Formula $\left(e\cdot P\right)$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{20mm}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+What is the price of a Big Mac in China,
+ as measured in US Dollars?
+ 
+\begin_inset Formula $\left(\frac{1}{e}\cdot P^{\star}\right)$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{20mm}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+What is the price of a Big Mac in China,
+ as measured in US Big Macs?
+ 
+\begin_inset Formula $\left(e\frac{P}{P^{\star}}\right)$
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{20mm}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
 
 \end_layout
 
