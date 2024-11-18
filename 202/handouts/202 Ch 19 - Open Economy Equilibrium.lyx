@@ -117,7 +117,7 @@ Markets for Dollars
 ECON 202
 \end_layout
 
-\begin_layout Section*
+\begin_layout Subsection*
 The Market for Loanable Funds
 \end_layout
 
@@ -151,9 +151,9 @@ vspace{12mm}
 \end_inset
 
 
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
 What two things contribute to the demand for loanable funds?
  
 \begin_inset ERT
@@ -169,9 +169,9 @@ vspace{12mm}
 \end_inset
 
 
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
 If the real interest rate goes up,
  what happens to the quantity of net capital outflows?
  What happens to the quantity of domestic Investment?
@@ -182,7 +182,7 @@ status open
 
 
 \backslash
-vspace{12mm}
+vspace{10mm}
 \end_layout
 
 \end_inset
@@ -190,7 +190,7 @@ vspace{12mm}
 
 \end_layout
 
-\begin_layout Section*
+\begin_layout Subsection*
 The Market for Dollars on the Foreign-Currency Exchange
 \end_layout
 
@@ -210,9 +210,9 @@ vspace{12mm}
 \end_inset
 
 
-\end_layout
+\begin_inset Newline newline
+\end_inset
 
-\begin_layout Standard
 In Mankiw's model,
  where does the demand of dollars come from in the market for foreign-currency exchange?
 \begin_inset ERT
@@ -222,7 +222,7 @@ status open
 
 
 \backslash
-vspace{12mm}
+vspace{10mm}
 \end_layout
 
 \end_inset
@@ -230,7 +230,7 @@ vspace{12mm}
 
 \end_layout
 
-\begin_layout Section*
+\begin_layout Subsection*
 Putting The Two Markets Together
 \end_layout
 
@@ -241,9 +241,9 @@ Follow along to label the graph below and illustrate the effects of a decrease i
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename img_blank_ch19_model.png
+	filename img_blank_ch19_model_more_whitespace.png
 	lyxscale 10
-	height 8cm
+	height 3.75in
 
 \end_inset
 
@@ -274,7 +274,7 @@ import quota
 \begin_inset Graphics
 	filename img_blank_ch19_model_more_whitespace.png
 	lyxscale 10
-	height 3.5in
+	height 3.75in
 
 \end_inset
 
@@ -296,7 +296,7 @@ capital flight
 \begin_inset Graphics
 	filename img_blank_ch19_model_more_whitespace.png
 	lyxscale 10
-	height 3.5in
+	height 3.75in
 
 \end_inset
 
