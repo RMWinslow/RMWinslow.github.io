@@ -1,0 +1,362 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\renewcommand{\arraystretch}{2}
+
+
+\let\oldenumerate=\enumerate
+\def\enumerate{
+\oldenumerate
+\setlength{\itemsep}{0pt}
+}
+\let\olditemize=\itemize
+\def\itemize{
+\olditemize
+\setlength{\itemsep}{0pt}
+}
+\end_preamble
+\use_default_options true
+\begin_modules
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children no
+\language english
+\language_package default
+\inputencoding auto-legacy
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\branch Solutions
+\selected 0
+\filename_suffix 0
+\color background background
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Left Header
+Chapter 18/19
+\end_layout
+
+\begin_layout Center Header
+Practice Multiple Choice
+\end_layout
+
+\begin_layout Right Header
+ECON 202
+\end_layout
+
+\begin_layout Enumerate
+Net capital outflow equals the difference between a country's
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+income and expenditure.
+\end_layout
+
+\begin_layout Enumerate
+investment and saving.
+\end_layout
+
+\begin_layout Enumerate
+buying of foreign goods and services and sales of goods and services abroad.
+\end_layout
+
+\begin_layout Enumerate
+purchases of foreign assets and sales of domestic assets abroad.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If U.S.
+ residents purchase $500 billion of foreign assets and foreigners purchase $1300 billion of U.S.
+ assets,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+U.S.
+ net capital outflow is $800 billion;
+ capital is flowing into the U.S.
+\end_layout
+
+\begin_layout Enumerate
+U.S.
+ net capital outflow is $800 billion;
+ capital is flowing out of the U.S.
+\end_layout
+
+\begin_layout Enumerate
+U.S.
+ net capital outflow is -$800 billion;
+ capital is flowing into the U.S.
+\end_layout
+
+\begin_layout Enumerate
+U.S.
+ net capital outflow is -$800 billion;
+ capital is flowing out of the U.S.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If a country has negative net capital outflows,
+ then its net exports are
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+positive and its saving is larger than its domestic investment.
+\end_layout
+
+\begin_layout Enumerate
+positive and its saving is smaller than its domestic investment.
+\end_layout
+
+\begin_layout Enumerate
+negative and its saving is larger than its domestic investment.
+\end_layout
+
+\begin_layout Enumerate
+negative and its saving is smaller than its domestic investment.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Bolivia buys railroad engines from a U.S.
+ firm and pays for them with Bolivianos (Bolivian currency).
+ By itself,
+ this exchange
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+increases both U.S.
+ net exports and U.S.
+ net capital outflow.
+\end_layout
+
+\begin_layout Enumerate
+decreases both U.S.
+ net exports and U.S.
+ net capital outflow.
+\end_layout
+
+\begin_layout Enumerate
+increases U.S.
+ net exports and does not affect U.S.
+ net capital outflow.
+\end_layout
+
+\begin_layout Enumerate
+None of the above is correct.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+In the United States,
+ a three-pound can of coffee costs about $5.
+ If the exchange rate is about 0.8 euros per dollar and a three-pound can of coffee in Belgium costs about 7 euros.
+ What is the real exchange rate?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+7/4 cans of Belgian coffee per can of U.S.
+ coffee
+\end_layout
+
+\begin_layout Enumerate
+5.6/5 cans of Belgian coffee per can of U.S.
+ coffee
+\end_layout
+
+\begin_layout Enumerate
+5/5.6 cans of Belgian coffee per can of U.S.
+ coffee
+\end_layout
+
+\begin_layout Enumerate
+4/7 cans of Belgian coffee per can of U.S.
+ coffee
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If a U.S.
+ dollar purchases 4 Argentinean pesos,
+ and a gallon of milk costs $2 in the U.S.
+ and 6 pesos in Argentina what is the real exchange rate?
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+3
+\end_layout
+
+\begin_layout Enumerate
+4/3
+\end_layout
+
+\begin_layout Enumerate
+3/4
+\end_layout
+
+\begin_layout Enumerate
+1/3
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Figure 32-3.png
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Refer to the Figure above.
+ National saving is represented by the
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+demand curve in panel a.
+\end_layout
+
+\begin_layout Enumerate
+demand curve in panel c.
+\end_layout
+
+\begin_layout Enumerate
+supply curve in panel a.
+\end_layout
+
+\begin_layout Enumerate
+supply curve in panel c.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Figure 32-5.png
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Refer to the Figure above.
+ Starting from r2 and E3,
+ an increase in the budget surplus can be illustrated as a move to
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+r3 and E4.
+\end_layout
+
+\begin_layout Enumerate
+r3 and E2.
+\end_layout
+
+\begin_layout Enumerate
+r1 and E4.
+\end_layout
+
+\begin_layout Enumerate
+r1 and E2.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
