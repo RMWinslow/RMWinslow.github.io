@@ -123,7 +123,7 @@ Chapter 20
 \end_layout
 
 \begin_layout Center Header
-Aggregate Demand and Aggregate Supply
+Shocks in the AD-AS Model
 \end_layout
 
 \begin_layout Right Header
@@ -145,6 +145,19 @@ Thanks to Reed Muehler for providing the idea,
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+https://www.federalreserve.gov/aboutthefed/cls-timeline/timeline/timeline_video.htm?01-03-5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection*
 Shocks to the Economy
 \begin_inset Newline newline
@@ -155,7 +168,7 @@ Shocks to the Economy
 
 \begin_layout Standard
 1.
- Suppose households become worried about the future and exogenously save more.
+ Suppose people become uncertain about the future and so buy less today.
  The demand for consumption decreases.
  Illustrate the short-run and long-run effects:
 \end_layout
@@ -165,7 +178,7 @@ Shocks to the Economy
 \begin_inset Graphics
 	filename img_blank_ch20_ASAD.png
 	lyxscale 10
-	width 3.5in
+	width 3.9in
 
 \end_inset
 
@@ -183,7 +196,7 @@ Shocks to the Economy
 \begin_inset Graphics
 	filename img_blank_ch20_ASAD.png
 	lyxscale 10
-	width 3.5in
+	width 3.9in
 
 \end_inset
 
@@ -202,7 +215,7 @@ Shocks to the Economy
 \begin_inset Graphics
 	filename img_blank_ch20_ASAD.png
 	lyxscale 10
-	width 3.5in
+	width 3.9in
 
 \end_inset
 
@@ -218,25 +231,7 @@ Shocks to the Economy
 
 \begin_layout Standard
 3.
- Suppose a new technology permanently increases total factor productivity.
- Illustrate the short-run and long-run effects:
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename img_blank_ch20_ASAD.png
-	lyxscale 10
-	width 3.5in
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-4.
- Suppose a particularly bad harvest 
+ Suppose an oil shortage 
 \emph on
 temporarily
 \emph default
@@ -249,7 +244,7 @@ temporarily
 \begin_inset Graphics
 	filename img_blank_ch20_ASAD.png
 	lyxscale 10
-	width 3.5in
+	width 3.9in
 
 \end_inset
 
@@ -257,8 +252,8 @@ temporarily
 \end_layout
 
 \begin_layout Standard
-4b.
- Suppose there's a bad harvest AND the government increases the money supply to stimulate consumer spending.
+3b.
+ Suppose there's an oil shortage AND the government increases the money supply to stimulate consumer spending.
  Illustrate the short-run and long-run effects:
 \end_layout
 
@@ -267,7 +262,25 @@ temporarily
 \begin_inset Graphics
 	filename img_blank_ch20_ASAD.png
 	lyxscale 10
-	width 3.5in
+	width 3.9in
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+4.
+ Suppose a new technology permanently increases total factor productivity.
+ Illustrate the short-run and long-run effects:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename img_blank_ch20_ASAD.png
+	lyxscale 10
+	width 3.9in
 
 \end_inset
 
