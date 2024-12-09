@@ -1,0 +1,422 @@
+
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<!--
+  Hullo! This webzone uses Patrick Marsceill's "Just the Docs" theme for Jekyll 
+  https://pmarsceill.github.io/just-the-docs/
+-->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="/assets/css/compiled-jtd-style.css">
+
+
+<title>3102 Graphs - Robert Winslow</title>
+
+
+
+
+<!--renders latex-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css" integrity="sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js" integrity="sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/copy-tex.min.js" integrity="sha384-ww/583aHhxWkz5DEVn6OKtNiIaLi2iBRNZXfJRiY1Ai7tnJ9UXpEsyvOITVpTl4A" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+              {left: "$$", right: "$$", display: true},
+              {left: "$", right: "$", display: false},
+              {left: "\\(", right: "\\)", display: false},
+              {left: "\\[", right: "\\]", display: true}
+            ], trust: true,
+            throwOnError: false,
+            globalGroup: true,
+        });
+    });
+</script>
+  
+<!--Makes website searchable with lunr, and makes the navigation bar collapsible on mobile.-->
+
+    <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
+
+<script type="text/javascript" src="/assets/js/just-the-docs.js"></script>
+
+
+<!-- Begin SEO tag -->
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="Robert Winslow" />
+<meta property="og:type" content="website" />
+  
+<meta property="og:title" content="3102 Graphs - Robert Winslow" />
+
+<meta property="author" content="Robert Winslow" />
+
+
+
+<link rel="canonical" href="https://www.rmwinslow.com/3102/graphs.html" />
+<meta property="og:url" content="https://www.rmwinslow.com/3102/graphs.html" />
+<!-- End SEO tag -->
+
+
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="svg-link" viewBox="0 0 24 24">
+      <title>Link</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+      </svg>
+    </symbol>
+    <symbol id="svg-search" viewBox="0 0 24 24">
+      <title>Search</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-menu" viewBox="0 0 24 24">
+      <title>Menu</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </symbol>
+    <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+      <title>Expand</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </symbol>
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+      <title>Document</title>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+      </svg>
+    </symbol>
+  </svg>
+
+  <div class="side-bar">
+    <div class="site-header">
+      <a href="https://www.rmwinslow.com/" class="site-title lh-tight">
+  Robert Winslow
+
+</a>
+      <a href="#" id="menu-button" class="site-button">
+        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+      </a>
+    </div>
+    <header class="sidebar-header">
+      
+
+    </header>
+    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+        <ul class="nav-list"><li class="nav-list-item">
+            <a href="https://www.rmwinslow.com/cv.html" class="nav-list-link">CV</a>
+        </li><li class="nav-list-item"><details >
+            <summary class="">
+                <a href="https://www.rmwinslow.com/research.html" class="nav-list-link">Research</a>
+            </summary>
+            <ul class="nav-list "><li class="nav-list-item ">
+                    <a href="https://www.rmwinslow.com/research/contagion.html" class="nav-list-link">Branching Processes and Behavioral Choice</a>
+                </li><li class="nav-list-item ">
+                    <a href="https://www.rmwinslow.com/research/reu.html" class="nav-list-link">Graph Two-Rankings</a>
+                </li><li class="nav-list-item ">
+                    <a href="https://www.rmwinslow.com/research/jmp.html" class="nav-list-link">Job Market Paper</a>
+                </li><li class="nav-list-item ">
+                    <a href="https://www.rmwinslow.com/research/mebdi22.html" class="nav-list-link">Predicting Unemployment Status</a>
+                </li></ul>
+        </details></li><li class="nav-list-item"><details >
+            <summary class="">
+                <a href="https://www.rmwinslow.com/teaching.html" class="nav-list-link">Teaching</a>
+            </summary>
+            <ul class="nav-list "><li class="nav-list-item ">
+                    <a href="https://www.rmwinslow.com/teaching/3102.html" class="nav-list-link">Econ 3102 (UMN)</a>
+                </li></ul>
+        </details></li><li class="nav-list-item"><details open>
+            <summary class="">
+                <a href="https://www.rmwinslow.com/notes.html" class="nav-list-link">Notes</a>
+            </summary>
+            <ul class="nav-list "><li class="nav-list-item ">
+                    <a href="https://www.rmwinslow.com/econ/UMNelectives.html" class="nav-list-link">Econ Electives</a>
+                </li><li class="nav-list-item"><details open>
+                    <summary class="">
+                        <a href="https://www.rmwinslow.com/3102/topic-overview.html" class="nav-list-link ">Intermediate Macro Notes</a>
+                    </summary>
+                    <ul class="nav-list"><li class="nav-list-item ">
+                            <a href="https://www.rmwinslow.com/3102/math-lagrangian.html" class="nav-list-link">Constrained Optimization</a>
+                        </li><li class="nav-list-item ">
+                            <a href="https://www.rmwinslow.com/3102/measurement-gdp.html" class="nav-list-link">Gross Domestic Product</a>
+                        </li><li class="nav-list-item ">
+                            <a href="https://www.rmwinslow.com/3102/measurement-prices.html" class="nav-list-link">Prices</a>
+                        </li><li class="nav-list-item ">
+                            <a href="https://www.rmwinslow.com/3102/measurement-savings.html" class="nav-list-link">National Savings</a>
+                        </li><li class="nav-list-item ">
+                            <a href="https://www.rmwinslow.com/3102/measurement-labor.html" class="nav-list-link">Labor Aggregates</a>
+                        </li><li class="nav-list-item ">
+                            <a href="https://www.rmwinslow.com/3102/measurement-cylical.html" class="nav-list-link">Business Cycles</a>
+                        </li><li class="nav-list-item ">
+                            <a href="https://www.rmwinslow.com/3102/measurement-money.html" class="nav-list-link">Money Concepts</a>
+                        </li><li class="nav-list-item ">
+                            <a href="https://www.rmwinslow.com/3102/oneperiod-consumer.html" class="nav-list-link">Representative Consumer</a>
+                        </li><li class="nav-list-item ">
+                            <a href="https://www.rmwinslow.com/3102/oneperiod-producer.html" class="nav-list-link">Representative Producer</a>
+                        </li><li class="nav-list-item ">
+                            <a href="https://www.rmwinslow.com/3102/oneperiod-equilibrium.html" class="nav-list-link">One Period Equilibrium</a>
+                        </li><li class="nav-list-item ">
+                            <a href="https://www.rmwinslow.com/3102/jobsearch.html" class="nav-list-link">McCall Job Search</a>
+                        </li><li class="nav-list-item ">
+                            <a href="https://www.rmwinslow.com/3102/twoperiod-endowment.html" class="nav-list-link">Two-Period Endowment Economy</a>
+                        </li><li class="nav-list-item ">
+                            <a href="https://www.rmwinslow.com/3102/twoperiod-creditfrictions.html" class="nav-list-link">Credit Market Imperfections</a>
+                        </li><li class="nav-list-item ">
+                            <a href="https://www.rmwinslow.com/3102/twoperiod-socialsecurity.html" class="nav-list-link">Social Security</a>
+                        </li><li class="nav-list-item ">
+                            <a href="https://www.rmwinslow.com/3102/twoperiod-agents.html" class="nav-list-link">Two Period Agents with Production</a>
+                        </li><li class="nav-list-item ">
+                            <a href="https://www.rmwinslow.com/3102/twoperiod-equilibrium.html" class="nav-list-link">Two Period Equilibrium</a>
+                        </li><li class="nav-list-item ">
+                            <a href="https://www.rmwinslow.com/3102/twoperiod-stickyprices.html" class="nav-list-link">Money and Business Cycles</a>
+                        </li><li class="nav-list-item ">
+                            <a href="https://www.rmwinslow.com/3102/twoperiod-soe.html" class="nav-list-link">Small Open Economy</a>
+                        </li><li class="nav-list-item ">
+                            <a href="https://www.rmwinslow.com/3102/twoperiod-exchangerates.html" class="nav-list-link">Exchange Rates</a>
+                        </li><li class="nav-list-item ">
+                            <a href="https://www.rmwinslow.com/3102/diamond.html" class="nav-list-link">Bank Runs</a>
+                        </li></ul>
+                </details></li><li class="nav-list-item"><details >
+                    <summary class="">
+                        <a href="https://www.rmwinslow.com/202/topic-overview.html" class="nav-list-link ">Principles of Macro</a>
+                    </summary>
+                    <ul class="nav-list"><li class="nav-list-item ">
+                            <a href="https://www.rmwinslow.com/202/trade-accounts.html" class="nav-list-link">Balance of Payments</a>
+                        </li><li class="nav-list-item ">
+                            <a href="https://www.rmwinslow.com/202/inflation-costs.html" class="nav-list-link">The Costs of Inflation</a>
+                        </li></ul>
+                </details></li></ul>
+        </details></li></ul><ul class="nav-list"><li class="nav-list-item external">
+      <a href="https://blog.rmwinslow.com" class="nav-list-link external">
+        Blog
+      </a>
+    </li></ul>
+    </nav>
+    <footer class="site-footer">
+      
+
+    </footer>
+  </div>
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+      
+        <div class="search">
+          <div class="search-input-wrap">
+            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Robert Winslow" aria-label="Search Robert Winslow" autocomplete="off">
+            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      
+      
+    </div>
+    
+    
+    
+    <div id="main-content-wrap" class="main-content-wrap">
+      
+        <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb-nav-list">
+              
+                <li class="breadcrumb-nav-list-item"><a href="https://www.rmwinslow.com/notes.html">Notes</a></li>
+                <li class="breadcrumb-nav-list-item"><a href="https://www.rmwinslow.com/3102/topic-overview.html">Intermediate Macro Notes</a></li>
+              
+              <li class="breadcrumb-nav-list-item"><span>3102 Graphs</span></li>
+            </ol>
+          </nav>
+        
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <main id="main-content" class="main-content" role="main">
+        
+          <hgroup>
+      <h1>
+        
+        
+          3102 Graphs
+        
+        
+      </h1>
+    
+    
+  </hgroup>
+
+
+  <div class="date-header">
+    
+    Posted: Aug 23rd, 2022
+    
+    
+    - Modified: Sep 20th, 2023
+    
+    
+  </div>
+
+
+
+
+<!--
+https://www.econgraphs.org/
+https://kineticgraphs.org/
+https://github.com/cmakler/kgjs
+https://www.econgraphs.org/textbook
+-->
+
+<link href="https://kineticgraphs.org/css/kg.0.2.6.css" rel="stylesheet" type="text/css" />
+
+<script src="https://kineticgraphs.org/js/kg3d.0.2.6.js"></script>
+      <h2 id="one-period-competitive-equilibrium">
+        
+        
+          <a href="#one-period-competitive-equilibrium" class="anchor-heading" aria-labelledby="one-period-competitive-equilibrium"><span aria-hidden="true">¶</span></a> One Period Competitive Equilibrium
+        
+        
+      </h2>
+    
+      <h3 id="consumers-problem">
+        
+        
+          <a href="#consumers-problem" class="anchor-heading" aria-labelledby="consumers-problem"><span aria-hidden="true">¶</span></a> Consumer’s Problem
+        
+        
+      </h3>
+    
+
+<div class="kg-container" src="./graphs/onePeriodConsumer.yml" clearcolor="#fff0"></div>
+      <h3 id="producers-problem">
+        
+        
+          <a href="#producers-problem" class="anchor-heading" aria-labelledby="producers-problem"><span aria-hidden="true">¶</span></a> Producer’s Problem
+        
+        
+      </h3>
+    
+
+<div class="kg-container" src="./graphs/onePeriodProducer.yml" clearcolor="#fff0"></div>
+      <h3 id="consumer-and-producers-problem-combined">
+        
+        
+          <a href="#consumer-and-producers-problem-combined" class="anchor-heading" aria-labelledby="consumer-and-producers-problem-combined"><span aria-hidden="true">¶</span></a> Consumer and Producer’s Problem Combined
+        
+        
+      </h3>
+    
+
+<div class="kg-container" src="./graphs/onePeriodBothAgents.yml" clearcolor="#fff0"></div>
+      <h3 id="equilibrium">
+        
+        
+          <a href="#equilibrium" class="anchor-heading" aria-labelledby="equilibrium"><span aria-hidden="true">¶</span></a> Equilibrium
+        
+        
+      </h3>
+    
+      <h2 id="two-period-endowment-economy">
+        
+        
+          <a href="#two-period-endowment-economy" class="anchor-heading" aria-labelledby="two-period-endowment-economy"><span aria-hidden="true">¶</span></a> Two Period Endowment Economy
+        
+        
+      </h2>
+    
+      <h3 id="basic-model-without-credit-market-imperfections">
+        
+        
+          <a href="#basic-model-without-credit-market-imperfections" class="anchor-heading" aria-labelledby="basic-model-without-credit-market-imperfections"><span aria-hidden="true">¶</span></a> Basic Model without Credit Market Imperfections
+        
+        
+      </h3>
+    
+
+<div class="kg-container" src="./graphs/twoPeriodEndowment.yml" clearcolor="#fff0"></div>
+
+<!--
+Cobb Douglass preferences are equivalent to log plus beta log preferences when alpha = 1/(1+beta) ???
+      - ContourMap:
+          levels: [0,1,1.5,2,2.5,3, params.utility]
+          fn: "log(x)+params.b*log(y)"
+
+      - EconIndifferenceMap:
+          utilityFunction:
+            CobbDouglas: {alpha: 1/(1+params.b)}
+          levels: [1,2,3,4,5, calcs.utility]
+      
+-->
+      <h3 id="interest-rate-spread">
+        
+        
+          <a href="#interest-rate-spread" class="anchor-heading" aria-labelledby="interest-rate-spread"><span aria-hidden="true">¶</span></a> Interest Rate Spread
+        
+        
+      </h3>
+    
+
+<div class="kg-container" src="./graphs/twoPeriodInterestRateSpread.yml" clearcolor="#fff0"></div>
+
+<!--See also here: https://www.econgraphs.org/graphs/micro/exchange/intertemporal_choice/different_rates-->
+      <h3 id="collateral-constraints">
+        
+        
+          <a href="#collateral-constraints" class="anchor-heading" aria-labelledby="collateral-constraints"><span aria-hidden="true">¶</span></a> Collateral Constraints
+        
+        
+      </h3>
+    
+
+<div class="kg-container" src="./graphs/twoPeriodCollateralConstraint.yml" clearcolor="#fff0"></div>
+      <h2 id="two-period-economy-with-labor">
+        
+        
+          <a href="#two-period-economy-with-labor" class="anchor-heading" aria-labelledby="two-period-economy-with-labor"><span aria-hidden="true">¶</span></a> Two Period Economy with Labor
+        
+        
+      </h2>
+    
+
+<div class="kg-container" src="./graphs/twoPeriodEquilibrium.yml" clearcolor="#fdf6e3"></div><hr />
+
+<p>The above graphs are made using Chris Makler’s open source <a href="https://github.com/cmakler/kgjs">KineticGraphs JavaScript Engine</a></p>
+
+<p>See also <a href="graphs2">the previous versions of these graphs</a>.</p>
+
+        
+
+        
+
+        
+        
+
+      </main>
+    </div>
+
+    
+      
+
+      <div class="search-overlay"></div>
+    
+  </div>
+</body>
+</html>
+
+
+
