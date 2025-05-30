@@ -20,3 +20,5 @@ whitelist:
 nav_external_links:
   - title: Blog
     url: https://blog.rmwinslow.com
+
+math: katex
