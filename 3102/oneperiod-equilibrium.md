@@ -157,6 +157,5 @@ and we can flip around the graph of the producer's problem to overlay it onto th
 
 <!--TODO: Static image showing the transformation to make this work.-->
 
-<link href="https://kineticgraphs.org/css/kg.0.2.6.css" rel="stylesheet" type="text/css" />
 <script src="https://kineticgraphs.org/js/kg3d.0.2.6.js"></script>
 <div class="kg-container" src="./graphs/onePeriodBothAgents.yml" clearcolor="#fff0"></div>

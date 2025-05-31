@@ -16,7 +16,6 @@ https://github.com/cmakler/kgjs
 https://www.econgraphs.org/textbook
 -->
 
-<link href="https://kineticgraphs.org/css/kg.0.2.6.css" rel="stylesheet" type="text/css">
 <script src="https://kineticgraphs.org/js/kg3d.0.2.6.js"></script>
 
 
