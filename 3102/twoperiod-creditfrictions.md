@@ -34,7 +34,7 @@ And why might these kinds of imperfections exist?
 
 ## Different Rates for Borrowing and Lending
 
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
 <script src="https://kineticgraphs.org/js/kg3d.0.3.3.js"></script>
 <div class="kg-container" src="./graphs/twoPeriodInterestRateSpread.yml" clearcolor="#fff0"></div>
 
