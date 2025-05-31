@@ -4,7 +4,7 @@ remote_theme: RMWinslow/JTD-RMW
 search_enabled: true
 page_excerpts: true
 gh_edit_link: false
-math: mathjax
+math: katex
 
 compress_html:
   ignore:
