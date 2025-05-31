@@ -129,7 +129,7 @@ $$N^{*}=\left(\frac{(1-\alpha)zK^{\alpha}}{w}\right)^{\frac{1}{\alpha}}$$
 
 ## A Graphical Example
 
-<link href="https://kineticgraphs.org/css/kg.0.2.6.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
 <script src="https://kineticgraphs.org/js/kg3d.0.2.6.js"></script>
 <div class="kg-container" src="./graphs/onePeriodProducer.yml" clearcolor="#fff0"></div>
 
