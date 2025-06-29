@@ -1,357 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Calendar Creator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f5f5f5;
-        }
-        
-        .calendar-container {
-            max-width: 8.5in;
-            margin: 0 auto;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .calendar-title {
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #2c3e50;
-        }
-        
-        .controls-section {
-            background: #ecf0f1;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .control-group {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        
-        .control-group label {
-            font-weight: bold;
-            color: #2c3e50;
-        }
-        
-        .days-selector {
-            display: flex;
-            gap: 15px;
-        }
-        
-        .day-checkbox {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        .day-checkbox input[type="checkbox"] {
-            transform: scale(1.2);
-        }
-        
-        .date-input {
-            padding: 8px;
-            border: 2px solid #bdc3c7;
-            border-radius: 4px;
-            font-size: 14px;
-        }
-        
-        .generate-btn {
-            padding: 12px 24px;
-            background: #3498db;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 16px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        
-        .generate-btn:hover {
-            background: #2980b9;
-        }
-        
-        .calendar-grid {
-            display: grid;
-            gap: 5px;
-            /* margin-top: 20px; */
-        }
-        
-        .week-header {
-            font-weight: bold;
-            font-size: 16px;
-            color: #2c3e50;
-            text-align: center;
-            background: #ecf0f1;
-            padding: 8px;
-            border-radius: 6px;
-            border: 1px solid #bdc3c7;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Calendar Creator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f5f5f5;
+    }
+    
+    .calendar-container {
+        max-width: 8.5in;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .calendar-title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #2c3e50;
+    }
+    
+    .controls-section {
+        background: #ecf0f1;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .control-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .control-group label {
+        font-weight: bold;
+        color: #2c3e50;
+    }
+    
+    .days-selector {
+        display: flex;
+        gap: 15px;
+    }
+    
+    .day-checkbox {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .day-checkbox input[type="checkbox"] {
+        transform: scale(1.2);
+    }
+    
+    .date-input {
+        padding: 8px;
+        border: 2px solid #bdc3c7;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+    
+    .generate-btn {
+        padding: 12px 24px;
+        background: #3498db;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    
+    .generate-btn:hover {
+        background: #2980b9;
+    }
+    
+    .calendar-grid {
+        display: grid;
+        gap: 5px;
+        /* margin-top: 20px; */
+    }
+    
+    .week-header {
+        font-weight: bold;
+        font-size: 16px;
+        color: #2c3e50;
+        text-align: center;
+        background: #ecf0f1;
+        padding: 8px;
+        border-radius: 6px;
+        border: 1px solid #bdc3c7;
 
-            display: none;
-        }
-        
-        .week-cell {
-            border: 5px solid #34495e;
-            border-radius: 8px;
-            padding: 0px;
-            background: #ffffff;
-            display: flex;
-            flex-direction: column;
-            gap: 0px;
-            height: 2.25in;
-            flex-grow: 1;
-        }
-        
-        .day-cell {
-            /* border: 1px solid #bdc3c7; */
-            flex: 1;
-            border-radius: 4px;
-            padding: 4px;
-            background: #fefefe;
-            display: flex;
-            flex-direction: column;
-            /* min-height: 120px; */
-        }
-        
-        .day-header {
-            font-weight: bold;
-            font-size: 9px;
-            color: #e74c3c;
-            /* margin-bottom: 8px; */
-            /* padding-bottom: 4px; */
-            border-bottom: 1px solid #ecf0f1;
-        }
-        
-        .day-notes {
-            flex-grow: 1;
-            border: none;
-            outline: none;
-            resize: none;
-            font-size: 11px;
-            line-height: 1.4;
-            color: #2c3e50;
-            background: transparent;
-            padding: 0;
-        }
-        
-        .day-notes:focus {
-            background: #f8f9fa;
-        }
-        
-        .no-calendar {
-            text-align: center;
-            color: #7f8c8d;
-            font-style: italic;
-            margin: 40px 0;
-        }
-        
-        @media print {
-            body { margin: 0; background: white; }
-            .controls-section { display: none; }
-            .calendar-container { box-shadow: none; margin: 0; padding: 15px; }
-            .day-notes { background: white !important; }
-        }
-        
-        .print-btn {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            padding: 10px 20px;
-            background: #27ae60;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: bold;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        }
-        
-        .print-btn:hover {
-            background: #219a52;
-        }
-        
-        @media print {
-            .print-btn { display: none; }
-        }
-    </style>
+        display: none;
+    }
+    
+    .week-cell {
+        border: 5px solid #34495e;
+        border-radius: 8px;
+        padding: 0px;
+        background: #ffffff;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        height: 2.25in;
+        flex-grow: 1;
+    }
+    
+    .day-cell {
+        /* border: 1px solid #bdc3c7; */
+        flex: 1;
+        border-radius: 4px;
+        padding: 4px;
+        background: #fefefe;
+        display: flex;
+        flex-direction: column;
+        /* min-height: 120px; */
+    }
+    
+    .day-header {
+        font-weight: bold;
+        font-size: 9px;
+        color: #e74c3c;
+        /* margin-bottom: 8px; */
+        /* padding-bottom: 4px; */
+        border-bottom: 1px solid #ecf0f1;
+    }
+    
+    .day-notes {
+        flex-grow: 1;
+        border: none;
+        outline: none;
+        resize: none;
+        font-size: 11px;
+        line-height: 1.4;
+        color: #2c3e50;
+        background: transparent;
+        padding: 0;
+    }
+    
+    .day-notes:focus {
+        background: #f8f9fa;
+    }
+    
+    .no-calendar {
+        text-align: center;
+        color: #7f8c8d;
+        font-style: italic;
+        margin: 40px 0;
+    }
+    
+    @media print {
+        body { margin: 0; background: white; }
+        .controls-section { display: none; }
+        .calendar-container { box-shadow: none; margin: 0; padding: 15px; }
+        .day-notes { background: white !important; }
+    }
+    
+    .print-btn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background: #27ae60;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    
+    .print-btn:hover {
+        background: #219a52;
+    }
+    
+    @media print {
+        .print-btn { display: none; }
+    }
+</style>
 </head>
 <body>
-    <button class="print-btn" onclick="window.print()">🖨️ Print Calendar</button>
-    
-    <div class="calendar-container">
-        <div class="calendar-title">Interactive Calendar Creator</div>
-        
-        <div class="controls-section">
-            <div class="control-group">
-                <label>Days of Week:</label>
-                <div class="days-selector">
-                    <div class="day-checkbox">
-                        <input type="checkbox" id="monday" value="1" checked>
-                        <label for="monday">M</label>
-                    </div>
-                    <div class="day-checkbox">
-                        <input type="checkbox" id="tuesday" value="2" checked>
-                        <label for="tuesday">Tu</label>
-                    </div>
-                    <div class="day-checkbox">
-                        <input type="checkbox" id="wednesday" value="3" checked>
-                        <label for="wednesday">W</label>
-                    </div>
-                    <div class="day-checkbox">
-                        <input type="checkbox" id="thursday" value="4" checked>
-                        <label for="thursday">Th</label>
-                    </div>
-                    <div class="day-checkbox">
-                        <input type="checkbox" id="friday" value="5" checked>
-                        <label for="friday">F</label>
-                    </div>
-                </div>
+<!-- <button class="print-btn" onclick="window.print()">🖨️ Print Calendar</button> -->
+
+
+<div class="controls-section">
+    <div class="control-group">
+        <label>Days of Week:</label>
+        <div class="days-selector">
+            <div class="day-checkbox">
+                <input type="checkbox" id="monday" value="1" checked>
+                <label for="monday">M</label>
             </div>
-            
-            <div class="control-group">
-                <label for="start-date">First Day of Class:</label>
-                <input type="date" id="start-date" class="date-input" value="2025-08-25">
+            <div class="day-checkbox">
+                <input type="checkbox" id="tuesday" value="2" checked>
+                <label for="tuesday">Tu</label>
             </div>
-            
-            <div class="control-group">
-                <label for="end-date">Last Day of Class:</label>
-                <input type="date" id="end-date" class="date-input" value="2025-12-09">
+            <div class="day-checkbox">
+                <input type="checkbox" id="wednesday" value="3" checked>
+                <label for="wednesday">W</label>
             </div>
-            
-            <div class="control-group">
-                <button class="generate-btn" onclick="generateCalendar()">Generate Calendar</button>
+            <div class="day-checkbox">
+                <input type="checkbox" id="thursday" value="4" checked>
+                <label for="thursday">Th</label>
             </div>
-        </div>
-        
-        <div id="calendar-output">
-            <div class="no-calendar">
-                Click "Generate Calendar" to create your custom calendar
+            <div class="day-checkbox">
+                <input type="checkbox" id="friday" value="5" checked>
+                <label for="friday">F</label>
             </div>
         </div>
     </div>
+    
+    <div class="control-group">
+        <label for="start-date">First Day of Class:</label>
+        <input type="date" id="start-date" class="date-input" value="2025-08-25">
+    </div>
+    
+    <div class="control-group">
+        <label for="end-date">Last Day of Class:</label>
+        <input type="date" id="end-date" class="date-input" value="2025-12-09">
+    </div>
+    
+    <div class="control-group">
+        <button class="generate-btn" onclick="generateCalendar()">Generate Calendar</button>
+    </div>
+</div>
 
-    <script>
-        function generateCalendar() {
-            // Get selected days
-            const selectedDays = [];
-            const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-            const dayAbbrevs = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+<div class="calendar-container">
+    <h1 class="calendar-title" contenteditable="true">Interactive Calendar Creator</h1>
+    
+    <div id="calendar-output">
+        <div class="no-calendar">
+            Click "Generate Calendar" to create your custom calendar
+        </div>
+    </div>
+</div>
+
+<script>
+function generateCalendar() {
+    // Get selected days
+    const selectedDays = [];
+    const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const dayAbbrevs = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    
+    document.querySelectorAll('.days-selector input[type="checkbox"]:checked').forEach(checkbox => {
+        selectedDays.push(parseInt(checkbox.value));
+    });
+    
+    if (selectedDays.length === 0) {
+        alert('Please select at least one day of the week');
+        return;
+    }
+    
+    // Get date range
+    // Javascript is godamn insane, so I need to reformat the date inputs from "2025-12-09" to "2025/12/09"
+    // or the Date will be interpretted as midnight UTC and all my dates will be off by one.
+    const startDate = new Date(document.getElementById('start-date').value.replace(/-/g, '\/'));
+    const endDate = new Date(document.getElementById('end-date').value.replace(/-/g, '\/'));
+    
+    if (startDate >= endDate) {
+        alert('End date must be after start date');
+        return;
+    }
+    
+    // Generate weeks
+    const calendarOutput = document.getElementById('calendar-output');
+    calendarOutput.innerHTML = '';
+    
+    const calendarGrid = document.createElement('div');
+    calendarGrid.className = 'calendar-grid';
+    calendarGrid.style.gridTemplateColumns = `repeat(4, 1fr)`;
+    
+    // Find the start of the week for the First Day of Class
+    let currentDate = new Date(startDate);
+    currentDate.setDate(currentDate.getDate() - currentDate.getDay());
+    
+    let weekCount = 0;
+    
+    while (currentDate <= endDate) {
+        weekCount++;
+        
+        // Create week cell
+        const weekCell = document.createElement('div');
+        weekCell.className = 'week-cell';
+        
+        // Calculate days in this week
+        const weekDays = [];
+        const weekStart = new Date(currentDate);
+        console.assert(weekStart.getDay() == 0);
+        
+        for (let day of selectedDays) {
+            const dayDate = new Date(weekStart);
+            dayDate.setDate(weekStart.getDate() + day);
+            weekDays.push(dayDate);
             
-            document.querySelectorAll('.days-selector input[type="checkbox"]:checked').forEach(checkbox => {
-                selectedDays.push(parseInt(checkbox.value));
-            });
-            
-            if (selectedDays.length === 0) {
-                alert('Please select at least one day of the week');
-                return;
-            }
-            
-            // Get date range
-            // Javascript is godamn insane, so I need to reformat the date inputs from "2025-12-09" to "2025/12/09"
-            // or the Date will be interpretted as midnight UTC and all my dates will be off by one.
-            const startDate = new Date(document.getElementById('start-date').value.replace(/-/g, '\/'));
-            const endDate = new Date(document.getElementById('end-date').value.replace(/-/g, '\/'));
-            
-            if (startDate >= endDate) {
-                alert('End date must be after start date');
-                return;
-            }
-            
-            // Generate weeks
-            const calendarOutput = document.getElementById('calendar-output');
-            calendarOutput.innerHTML = '';
-            
-            const calendarGrid = document.createElement('div');
-            calendarGrid.className = 'calendar-grid';
-            calendarGrid.style.gridTemplateColumns = `repeat(4, 1fr)`;
-            
-            // Find the start of the week for the First Day of Class
-            let currentDate = new Date(startDate);
-            currentDate.setDate(currentDate.getDate() - currentDate.getDay());
-            
-            let weekCount = 0;
-            
-            while (currentDate <= endDate) {
-                weekCount++;
-                
-                // Create week cell
-                const weekCell = document.createElement('div');
-                weekCell.className = 'week-cell';
-                
-                // Calculate days in this week
-                const weekDays = [];
-                const weekStart = new Date(currentDate);
-                console.assert(weekStart.getDay() == 0);
-                
-                for (let day of selectedDays) {
-                    const dayDate = new Date(weekStart);
-                    dayDate.setDate(weekStart.getDate() + day);
-                    weekDays.push(dayDate);
-                    
-                    // if (dayDate <= endDate) {
-                    //     weekDays.push(dayDate);
-                    // }
-                }
-                
-                if (weekDays.length === 0) break;
-                
-                // Week header
-                const weekHeader = document.createElement('div');
-                weekHeader.className = 'week-header';
-                const weekStartFormatted = weekDays[0].toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-                const weekEndFormatted = weekDays[weekDays.length - 1].toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-                weekHeader.textContent = `Week ${weekCount}: ${weekStartFormatted} - ${weekEndFormatted}`;
-                weekCell.appendChild(weekHeader);
-                
-                // Set up grid for days within week
-                weekCell.style.gridTemplateColumns = `repeat(${Math.min(weekDays.length, 3)}, 1fr)`;
-                weekCell.style.gridTemplateRows = `auto repeat(${Math.ceil(weekDays.length / 3)}, 1fr)`;
-                
-                // Add day cells
-                weekDays.forEach(dayDate => {
-                    const dayCell = document.createElement('div');
-                    dayCell.className = 'day-cell';
-                    
-                    const dayHeader = document.createElement('div');
-                    dayHeader.className = 'day-header';
-                    dayHeader.textContent = `${dayAbbrevs[dayDate.getDay()]}, ${dayDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}`;
-                    
-                    const dayNotes = document.createElement('textarea');
-                    dayNotes.className = 'day-notes';
-                    // dayNotes.placeholder = 'Add notes here...';
-                    
-                    dayCell.appendChild(dayHeader);
-                    dayCell.appendChild(dayNotes);
-                    weekCell.appendChild(dayCell);
-                });
-                
-                calendarGrid.appendChild(weekCell);
-                
-                // Move to next week
-                currentDate.setDate(currentDate.getDate() + 7);
-            }
-            
-            calendarOutput.appendChild(calendarGrid);
+            // if (dayDate <= endDate) {
+            //     weekDays.push(dayDate);
+            // }
         }
+        
+        if (weekDays.length === 0) break;
+        
+        // Week header
+        const weekHeader = document.createElement('div');
+        weekHeader.className = 'week-header';
+        const weekStartFormatted = weekDays[0].toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        const weekEndFormatted = weekDays[weekDays.length - 1].toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        weekHeader.textContent = `Week ${weekCount}: ${weekStartFormatted} - ${weekEndFormatted}`;
+        weekCell.appendChild(weekHeader);
+        
+        // Set up grid for days within week
+        weekCell.style.gridTemplateColumns = `repeat(${Math.min(weekDays.length, 3)}, 1fr)`;
+        weekCell.style.gridTemplateRows = `auto repeat(${Math.ceil(weekDays.length / 3)}, 1fr)`;
+        
+        // Add day cells
+        weekDays.forEach(dayDate => {
+            const dayCell = document.createElement('div');
+            dayCell.className = 'day-cell';
+            
+            const dayHeader = document.createElement('div');
+            dayHeader.className = 'day-header';
+            dayHeader.textContent = `${dayAbbrevs[dayDate.getDay()]}, ${dayDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}`;
+            
+            const dayNotes = document.createElement('textarea');
+            dayNotes.className = 'day-notes';
+            // dayNotes.placeholder = 'Add notes here...';
+            
+            dayCell.appendChild(dayHeader);
+            dayCell.appendChild(dayNotes);
+            weekCell.appendChild(dayCell);
+        });
+        
+        calendarGrid.appendChild(weekCell);
+        
+        // Move to next week
+        currentDate.setDate(currentDate.getDate() + 7);
+    }
+    
+    calendarOutput.appendChild(calendarGrid);
+}
 
-    // Generate initial calendar
-    generateCalendar();
-    </script>
+// Generate initial calendar
+generateCalendar();
+</script>
 </body>
 </html>
