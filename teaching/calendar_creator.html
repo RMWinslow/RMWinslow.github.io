@@ -266,8 +266,10 @@
             }
             
             // Get date range
-            const startDate = new Date(document.getElementById('start-date').value);
-            const endDate = new Date(document.getElementById('end-date').value);
+            // Javascript is godamn insane, so I need to reformat the date inputs from "2025-12-09" to "2025/12/09"
+            // or the Date will be interpretted as midnight UTC and all my dates will be off by one.
+            const startDate = new Date(document.getElementById('start-date').value.replace(/-/g, '\/'));
+            const endDate = new Date(document.getElementById('end-date').value.replace(/-/g, '\/'));
             
             if (startDate >= endDate) {
                 alert('End date must be after start date');
@@ -285,11 +287,9 @@
             calendarGrid.className = 'calendar-grid';
             calendarGrid.style.gridTemplateColumns = `repeat(${numCols}, 1fr)`;
             
-            // Find the first selected day of the week on or after start date
+            // Find the start of the week for the First Day of Class
             let currentDate = new Date(startDate);
-            while (!selectedDays.includes(currentDate.getDay())) {
-                currentDate.setDate(currentDate.getDate() + 1);
-            }
+            currentDate.setDate(currentDate.getDate() - currentDate.getDay());
             
             let weekCount = 0;
             
@@ -303,13 +303,11 @@
                 // Calculate days in this week
                 const weekDays = [];
                 const weekStart = new Date(currentDate);
+                console.assert(weekStart.getDay() == 0);
                 
                 for (let day of selectedDays) {
                     const dayDate = new Date(weekStart);
-                    
-                    // Find the date for this day of week in current week
-                    const daysToAdd = (day - weekStart.getDay() + 7) % 7;
-                    dayDate.setDate(weekStart.getDate() + daysToAdd);
+                    dayDate.setDate(weekStart.getDate() + day);
                     
                     if (dayDate <= endDate) {
                         weekDays.push(dayDate);
@@ -341,7 +339,7 @@
                     
                     const dayNotes = document.createElement('textarea');
                     dayNotes.className = 'day-notes';
-                    dayNotes.placeholder = 'Add notes here...';
+                    // dayNotes.placeholder = 'Add notes here...';
                     
                     dayCell.appendChild(dayHeader);
                     dayCell.appendChild(dayNotes);
@@ -356,9 +354,9 @@
             
             calendarOutput.appendChild(calendarGrid);
         }
-        
-        // Generate initial calendar
-        generateCalendar();
+
+    // Generate initial calendar
+    generateCalendar();
     </script>
 </body>
 </html>
