@@ -90,32 +90,34 @@
     
     .calendar-grid {
         display: grid;
-        gap: 5px;
+        gap: 2px 10px;
         /* margin-top: 20px; */
+        grid-template-rows: repeat(4, 1fr); /* 4 rows */
+        grid-auto-flow: column; /* Fill columns first, then move to next column */
     }
     
     .week-header {
         font-weight: bold;
-        font-size: 16px;
+        font-size: 10px;
         color: #2c3e50;
         text-align: center;
         background: #ecf0f1;
-        padding: 8px;
-        border-radius: 6px;
+        padding: 2px;
+        /* border-radius: 6px; */
         border: 1px solid #bdc3c7;
 
-        display: none;
+        /* display: none; */
     }
     
     .week-cell {
-        border: 5px solid #34495e;
-        border-radius: 8px;
+        border: 3px solid #000;
+        /* border-radius: 8px; */
         padding: 0px;
         background: #ffffff;
         display: flex;
         flex-direction: column;
         gap: 0px;
-        height: 2.25in;
+        min-height: 2.25in;
         flex-grow: 1;
     }
     
@@ -128,6 +130,7 @@
         display: flex;
         flex-direction: column;
         /* min-height: 120px; */
+        border-top: 1px solid #ecf0f1;
     }
     
     .day-header {
@@ -136,7 +139,7 @@
         color: #e74c3c;
         /* margin-bottom: 8px; */
         /* padding-bottom: 4px; */
-        border-bottom: 1px solid #ecf0f1;
+        /* border-bottom: 1px solid #ecf0f1; */
     }
     
     .day-notes {
@@ -169,8 +172,8 @@
     @media print {
         body { margin: 0; background: white; }
         .controls-section { display: none; }
-        .calendar-container { box-shadow: none; margin: 0; padding: 15px; }
-        .day-notes { background: white !important; }
+        .calendar-container { box-shadow: none; margin: 0; padding: 0; }
+        /* .day-notes { background: white !important; } */
     }
     
     .print-btn {
@@ -197,7 +200,7 @@
 </style>
 </head>
 <body>
-<!-- <button class="print-btn" onclick="window.print()">🖨️ Print Calendar</button> -->
+<button class="print-btn" onclick="window.print()">🖨️ Print Calendar</button>
 
 
 <div class="controls-section">
@@ -243,7 +246,7 @@
 </div>
 
 <div class="calendar-container">
-    <h1 class="calendar-title" contenteditable="true">Interactive Calendar Creator</h1>
+    <div class="calendar-title" contenteditable="true">Interactive Calendar Creator</div>
     
     <div id="calendar-output">
         <div class="no-calendar">
