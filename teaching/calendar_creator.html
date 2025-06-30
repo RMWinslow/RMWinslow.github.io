@@ -13,7 +13,7 @@
     
     .calendar-container {
         max-width: 8.5in;
-        height: 11in;
+        height: 10.5in;
         margin: 0 auto;
         background: white;
         /* padding: 20px; */
@@ -26,6 +26,7 @@
         font-weight: bold;
         /* margin-bottom: 20px; */
         color: #2c3e50;
+        height: 0.5in;
     }
     
     .controls-section {
@@ -90,10 +91,11 @@
     
     .calendar-grid {
         display: grid;
-        gap: 2px 10px;
+        gap: 0px 10px;
         /* margin-top: 20px; */
         grid-template-rows: repeat(4, 1fr); /* 4 rows */
         grid-auto-flow: column; /* Fill columns first, then move to next column */
+        height: 10in;
     }
     
     .week-header {
@@ -103,7 +105,7 @@
         text-align: center;
         background: #ecf0f1;
         padding: 2px;
-        /* border-radius: 6px; */
+        border-radius: 6px;
         border: 1px solid #bdc3c7;
 
         /* display: none; */
@@ -111,26 +113,26 @@
     
     .week-cell {
         border: 3px solid #000;
-        /* border-radius: 8px; */
+        border-radius: 8px;
         padding: 0px;
         background: #ffffff;
         display: flex;
         flex-direction: column;
         gap: 0px;
-        min-height: 2.25in;
+        /* min-height: 2.5in; */
         flex-grow: 1;
     }
     
     .day-cell {
         /* border: 1px solid #bdc3c7; */
         flex: 1;
-        border-radius: 4px;
+        /* border-radius: 4px; */
         padding: 4px;
         background: #fefefe;
         display: flex;
         flex-direction: column;
         /* min-height: 120px; */
-        border-top: 1px solid #ecf0f1;
+        border-bottom: 1px solid #bdc3c7;
     }
     
     .day-header {
@@ -212,7 +214,7 @@
                 <label for="monday">M</label>
             </div>
             <div class="day-checkbox">
-                <input type="checkbox" id="tuesday" value="2" checked>
+                <input type="checkbox" id="tuesday" value="2" >
                 <label for="tuesday">Tu</label>
             </div>
             <div class="day-checkbox">
@@ -220,7 +222,7 @@
                 <label for="wednesday">W</label>
             </div>
             <div class="day-checkbox">
-                <input type="checkbox" id="thursday" value="4" checked>
+                <input type="checkbox" id="thursday" value="4" >
                 <label for="thursday">Th</label>
             </div>
             <div class="day-checkbox">
