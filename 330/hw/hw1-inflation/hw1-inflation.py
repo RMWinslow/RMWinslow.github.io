@@ -5,6 +5,19 @@ import csv
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+#%% Recession shading Function
+import os
+from fredapi import Fred
+fred = Fred(api_key = os.getenv('FRED_API_KEY'))
+def shade_recessions(ax):
+    xlims = ax.get_xlim()
+    recessions = fred.get_series('USREC')
+    ax.fill_between(recessions.index, 
+                    0, 1, where=recessions==1, 
+                    alpha=0.1, color='gray', 
+                    transform=ax.get_xaxis_transform())
+    ax.set_xlim(xlims)
+
 
 #%% READ BEA 2.8.4 CSV (weird format)
 with open('BEA2.8.4.csv', newline='', encoding='utf-8') as csvfile:
@@ -27,30 +40,26 @@ for row in rows[5:]:
     label = row[1].strip()
     series = [float(x) if x else np.nan for x in row[2:]]
     df[label] = series
-df
+
+
 
 #%% PROBLEM 1: Plot PCE and PCE excluding food and energy
 
-df['Headline PCE'] = df['Personal consumption expenditures (PCE)'].pct_change(periods=12) * 100
-df['Core PCE, excl. food and energy'] = df['PCE excluding food and energy4'].pct_change(periods=12) * 100
+df['π_pce'] = df['Personal consumption expenditures (PCE)'].pct_change(periods=12) * 100
+df['π_pce_core'] = df['PCE excluding food and energy4'].pct_change(periods=12) * 100
 
-df[['Headline PCE','Core PCE, excl. food and energy']].plot(
-    title='12-Month Inflation Rate, based on PCE Price Index', 
-    figsize=(10,5)
-    )
-plt.ylabel('% Change in Prices')
-plt.grid(True)
-plt.savefig('HW1_Q1_PCE_pct_change.png')
-
-## %% Seaborn Equivalent.
 sns.set_style("whitegrid")
 plt.figure(figsize=(10, 5))
-sns.lineplot(data=df[['Headline PCE', 'Core PCE, excl. food and energy']])
+
+sns.lineplot(data=df, x=df.index, y='π_pce', label='Headline PCE')
+sns.lineplot(data=df, x=df.index, y='π_pce_core', label='Core PCE, excl. food and energy', linestyle='--')
 
 plt.title('12-Month Inflation Rate, based on PCE Price Index')
-plt.ylabel('% Change')
-plt.tight_layout()
+plt.ylabel('% Change in Prices')
+shade_recessions(plt.gca())
 
+plt.grid(True)
+plt.tight_layout()
 plt.savefig('HW1_Q1_PCE_pct_change.png')
 
 
@@ -58,4 +67,4 @@ plt.savefig('HW1_Q1_PCE_pct_change.png')
 
 
 
-# %%
+#%%
