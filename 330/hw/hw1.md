@@ -97,6 +97,15 @@ and $π_{t+1}^h$ is the headline inflation for the following year.
 
 
 
+### Problem 3: 3-month and 6-month Inflation
+
+
+<!-- 
+This isn't quite right.
+I couldn't figure out how to calculate 3-month inflation for each month in FRED
+https://fred.stlouisfed.org/graph/?g=1LK9C
+This is instead the percent change or core PCE inflation at different frequencies.
+ -->
 
 
 

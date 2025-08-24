@@ -80,4 +80,17 @@ print("Mean Squared Error of Naive Forecasts:")
 print("Using Headline PCE: ", MSE(df2['π_pce_next'], df2['π_pce']))
 print("Using Core PCE:     ", MSE(df2['π_pce_next'], df2['π_pce_core']))
 
-#%%
+
+
+
+
+
+#%% PROBLEM 3: 3-month and 6-month core PCE Inflation, annualized
+def annualized_pct_change(col, M):
+    pc_change = df[col].pct_change(periods=M)
+    annualized = (1 + pc_change) ** (12 / M) - 1
+    return annualized * 100
+df['π_pce_core_6m'] = annualized_pct_change('PCE excluding food and energy4', 6)
+df['π_pce_core_3m'] = annualized_pct_change('PCE excluding food and energy4', 3)
+df.plot(y=['π_pce_core','π_pce_core_6m', 'π_pce_core_3m'], figsize=(10,5))
+plt.xlim(pd.Timestamp('2022-01-01'),)
