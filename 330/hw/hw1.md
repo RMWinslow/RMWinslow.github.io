@@ -12,13 +12,13 @@ modified: 2025-08-20
 
 ## Instructions
 
-Each problem in this assignment asks you to plot a chart and answer one or more reflection questions about the data.
-Each chart *must* be clearly labeled, self-contained, and easy to read. 
+Each problem in this assignment asks you to work with data and answer one or more reflection questions about the data.
+Each chart you produce *must* be clearly labeled, self-contained, and easy to read. 
 Your answers to the reflection questions should be succint and insightful. 
 When writing your answers, imagine that you are preparing a report for your very busy, non-economist, manager.
 
 You must submit one report (preferable in PDF format) to D2L, 
-which contains all of your charts and your answers to the reflection questions.
+which contains all of your charts and your answers to the questions.
 Once again, your analysis and charts must be self-contained and clearly labeled. 
 
 You are allowed to work with others on this assignment, but:
@@ -40,18 +40,23 @@ You are allowed to work with others on this assignment, but:
 
 ### Problem 1: Plot PCE Inflation from FRED
 
-#### Chart
+For many basic questions about economic data, FRED is an excellent resource. 
+For later questions, we'll need to download data and work with it in a spreadsheet,
+but for this first question, we'll use FRED's built-in graphing tools. 
 
-Plot a graph of [PCEPI](https://fred.stlouisfed.org/series/PCEPI) and [PCEPILFE](https://fred.stlouisfed.org/series/PCEPILFE) in FRED
-
-#### Reflection Questions: 
+#### Questions: 
+- Plot a graph of [PCEPI](https://fred.stlouisfed.org/series/PCEPI) and [PCEPILFE](https://fred.stlouisfed.org/series/PCEPILFE) in FRED
 - Why is headline PCE inflation more variable than core PCE inflation? [Max: 12 words]
 
 
+The resulting graph should look similar to this one:
+
+![Plot of 12-month PCE inflation, headline and core](./hw1-inflation/HW1_Q1_PCE_pct_change.png)
 
 
 
 
+<!-- 
 
 ### Problem 2: Plot PCE Inflation from FRED
 
@@ -70,7 +75,7 @@ where π_t^f if your forecast variable (either core PCE π_t^c or headline PCE �
 Shreyas – I have not done this, but it should be that … Core is a better predictor.  It has a lower RMSE (x vs y).  
 
 
-
+ -->
 
 
 
