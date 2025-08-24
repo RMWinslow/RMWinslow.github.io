@@ -51,7 +51,7 @@ I will show you in class how to create a chart in FRED showing the inflation rat
 
 #### Questions: 
 - Create a chart in FRED plotting 12-month inflation as calculated from the "Headline" PCE Price Index and the "Core" PCE Price Index, from 1995 to the most current date available.
-- Why is headline PCE inflation more variable than core PCE inflation? [Max: 12 words]
+- Why is headline PCE inflation more variable than core PCE inflation? [Max: 20 words]
 
 <!-- 
 The resulting graph should look similar to this one:
@@ -70,26 +70,31 @@ but with different time periods and perhaps with different styling:
 
 
 
-<!-- 
 
-### Problem 2: Plot PCE Inflation from FRED
+### Problem 2: Naive Inflation Forecasts
 
-Inflation is very difficult to predict.  It turns out a “naïve” forecast that inflation over the next 12 months will be the same as inflation over the last 12 months is surprisingly good.  Using this “naïve” forecast, is the current core PCE inflation or the current headline PCE inflation a better predictor of headline PCE inflation over the next 12 months?
+Inflation is very difficult to predict.  It turns out a "naive" forecast that inflation over the next 12 months will be the same as inflation over the last 12 months is surprisingly good. 
+Using this "naive" forecast, let's check whether current *core* PCE inflation or the current *headline* PCE inflation is a better predictor of headline PCE inflation over the next 12 months.
 
-Download monthly data from FRED for the headline and core PCE price indices – PCEPI and PCEPILFE from July 1994 thru July 2025.  
+For this we'll need to download monthly data from FRED for the headline and core PCE price indices – PCEPI and PCEPILFE from June 1994 thru June 2025. After the data is downloaded, filter it to only observations from the month of June (this will keep our time periods from overlapping). 
+<!-- and calculate the 12-month inflation for each price index, as we did in Problem 1. -->
 
-Compare the forecast properties of the two predictors over the last 30 years using a root mean square error statistic:
-RMSE=  1/30 ∑_(t=1995:7)^(2024:7)▒(π_t^f-π_(t=12)^h )^2 
-where π_t^f if your forecast variable (either core PCE π_t^c or headline PCE π_t^h).  Use only July data for each year so that the periods do not overlap (and thus are closer to independent).  
+Then we'll compare the forecasting quality of the two predictors using using a mean square error (MSE) statistic:
 
-	Give the RMSE for headline and core inflation.
+$$RMSE=  \frac{1}{30} ∑_{t=1995}^{2024}(π_t^f-π_{t+1}^h)^2 $$
 
-	Is core or headline a better forecast of headline inflation?  Explain your reasoning using the RMSE of each predictor.  [Max: 10 words]
+where $π_t^f$ is your forecast variable 
+(either core PCE $π_t^c$ 
+or headline PCE $π_t^h$)
+and $π_{t+1}^h$ is the headline inflation for the following year.
 
-Shreyas – I have not done this, but it should be that … Core is a better predictor.  It has a lower RMSE (x vs y).  
+#### Questions: 
+
+- Give the RMSE for headline and core inflation as predictors of headline inflation.
+- Is core or headline a better forecast of headline inflation?  Explain your reasoning using the MSE of each predictor.  [Max: 20 words]
 
 
- -->
+
 
 
 

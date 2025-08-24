@@ -28,7 +28,7 @@ with open('BEA2.8.4.csv', newline='', encoding='utf-8') as csvfile:
 df = pd.DataFrame(rows[3][2:], columns=['year',])
 df['month'] = rows[4][2:]
 # df['date'] = pd.to_datetime(df['year'].astype(str) + '-' + df['month']+'-1', format='%Y-%b-%d')
-df['date'] = pd.to_datetime(df['year'].astype(str) + '-' + df['month']+'-2', format='%Y-%b-%d')
+df['date'] = pd.to_datetime(df['year'].astype(str) + '-' + df['month'], format='%Y-%b')
 df = df.set_index('date')
 
 # extract_series_from_rows
@@ -66,5 +66,18 @@ plt.savefig('HW1_Q1_PCE_pct_change.png')
 
 
 
+
+# %% PROBLEM 2: Predict Headline PCE using Headline and Core PCE
+# Restrict data to June 1995-2024 during the month of June
+df2 = df[(df.index.month == 6) & (df.index.year >= 1995)].copy()
+df2 = df2[['π_pce', 'π_pce_core']].dropna()
+df2['π_pce_next'] = df2['π_pce'].shift(-1)
+
+def MSE(y_true, y_pred):
+    return ((y_true - y_pred)**2).mean()
+
+print("Mean Squared Error of Naive Forecasts:")
+print("Using Headline PCE: ", MSE(df2['π_pce_next'], df2['π_pce']))
+print("Using Core PCE:     ", MSE(df2['π_pce_next'], df2['π_pce_core']))
 
 #%%
