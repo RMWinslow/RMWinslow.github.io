@@ -27,12 +27,12 @@ You are allowed to work with others on this assignment, but:
 
 
 
-## Data Links:
+## Data Sources:
 
 - [BEA table 2.8.4 - PCE PI by Type of Product, Monthly, Seasonally Adjusted](https://apps.bea.gov/iTable/?reqid=19&step=2&isuri=1&categories=survey#eyJhcHBpZCI6MTksInN0ZXBzIjpbMSwyLDMsM10sImRhdGEiOltbImNhdGVnb3JpZXMiLCJTdXJ2ZXkiXSxbIk5JUEFfVGFibGVfTGlzdCIsIjgxIl0sWyJGaXJzdF9ZZWFyIiwiMTk5NSJdLFsiTGFzdF9ZZWFyIiwiMjAyNSJdLFsiU2NhbGUiLCIwIl0sWyJTZXJpZXMiLCJNIl1dfQ==)
 - [Fred version of Table 2.8.4](https://fred.stlouisfed.org/release/tables?rid=54&eid=3208#snid=3199) - Only some of the rows are included in FRED, unfortunately.
-    - [PCEPI](https://fred.stlouisfed.org/series/PCEPI) - "Headline" PCE Price Index.
-    - [PCEPILFE](https://fred.stlouisfed.org/series/PCEPILFE) - "Core" PCE Price Index, which excludes food and energy.
+    <!-- - [PCEPI](https://fred.stlouisfed.org/series/PCEPI) - "Headline" PCE Price Index.
+    - [PCEPILFE](https://fred.stlouisfed.org/series/PCEPILFE) - "Core" PCE Price Index, which excludes food and energy. -->
 
 
 ## PROBLEMS: 
@@ -44,14 +44,28 @@ For many basic questions about economic data, FRED is an excellent resource.
 For later questions, we'll need to download data and work with it in a spreadsheet,
 but for this first question, we'll use FRED's built-in graphing tools. 
 
+I will show you in class how to create a chart in FRED showing the inflation rate as calculated using monthly data for two different chain-type price indices based on Personal Consumption Expenditures:
+- [PCEPI](https://fred.stlouisfed.org/series/PCEPI) - "Headline" PCE Price Index.
+- [PCEPILFE](https://fred.stlouisfed.org/series/PCEPILFE) - "Core" PCE Price Index, which excludes food and energy.
+
+
 #### Questions: 
-- Plot a graph of [PCEPI](https://fred.stlouisfed.org/series/PCEPI) and [PCEPILFE](https://fred.stlouisfed.org/series/PCEPILFE) in FRED
+- Create a chart in FRED plotting 12-month inflation as calculated from the "Headline" PCE Price Index and the "Core" PCE Price Index, from 1995 to the most current date available.
 - Why is headline PCE inflation more variable than core PCE inflation? [Max: 12 words]
 
-
+<!-- 
 The resulting graph should look similar to this one:
 
 ![Plot of 12-month PCE inflation, headline and core](./hw1-inflation/HW1_Q1_PCE_pct_change.png)
+-->
+
+Your chart will look similar to this one, 
+but with different time periods and perhaps with different styling:
+
+![Plot of 12-month PCE inflation, headline and core](https://fred.stlouisfed.org/graph/fredgraph.png?g=1LK9C&height=490)
+
+<!-- https://fred.stlouisfed.org/graph/?g=1LK9C -->
+
 
 
 
