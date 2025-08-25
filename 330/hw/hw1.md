@@ -1,5 +1,5 @@
 ---
-title: M&B HW1
+title: Econ 330 HW1
 subtitle: The first homework for Money and Banking is about PCE inflation. This assignment is adapted in-part from material by Terry J. Fitzgerald.
 parent: M&B HW
 layout: post
@@ -35,10 +35,10 @@ You are allowed to work with others on this assignment, but:
     - [PCEPILFE](https://fred.stlouisfed.org/series/PCEPILFE) - "Core" PCE Price Index, which excludes food and energy. -->
 
 
-## PROBLEMS: 
+<!-- ## PROBLEMS:  -->
 
 
-### Problem 1: Plot PCE Inflation from FRED
+## Problem 1: Plot PCE Inflation from FRED
 
 For many basic questions about economic data, FRED is an excellent resource. 
 For later questions, we'll need to download data and work with it in a spreadsheet,
@@ -49,7 +49,7 @@ I will show you in class how to create a chart in FRED showing the inflation rat
 - [PCEPILFE](https://fred.stlouisfed.org/series/PCEPILFE) - "Core" PCE Price Index, which excludes food and energy.
 
 
-#### Questions: 
+### Problem 1 Questions: 
 - Create a chart in FRED plotting 12-month inflation as calculated from the "Headline" PCE Price Index and the "Core" PCE Price Index, from 1995 to the most current date available.
 - Why is headline PCE inflation more variable than core PCE inflation? [Max: 20 words]
 
@@ -71,7 +71,7 @@ but with different time periods and perhaps with different styling:
 
 
 
-### Problem 2: Naive Inflation Forecasts
+## Problem 2: Naive Inflation Forecasts
 
 Inflation is very difficult to predict.  It turns out a "naive" forecast that inflation over the next 12 months will be the same as inflation over the last 12 months is surprisingly good. 
 Using this "naive" forecast, let's check whether current *core* PCE inflation or the current *headline* PCE inflation is a better predictor of headline PCE inflation over the next 12 months.
@@ -81,14 +81,14 @@ For this we'll need to download monthly data from FRED for the headline and core
 
 Then we'll compare the forecasting quality of the two predictors using using a mean square error (MSE) statistic:
 
-$$RMSE=  \frac{1}{30} ∑_{t=1995}^{2024}(π_t^f-π_{t+1}^h)^2 $$
+$$MSE=  \frac{1}{30} ∑_{t=1995}^{2024}(π_t^f-π_{t+1}^h)^2 $$
 
 where $π_t^f$ is your forecast variable 
 (either core PCE $π_t^c$ 
 or headline PCE $π_t^h$)
 and $π_{t+1}^h$ is the headline inflation for the following year.
 
-#### Questions: 
+### Problem 2 Questions: 
 
 - Give the RMSE for headline and core inflation as predictors of headline inflation.
 - Is core or headline a better forecast of headline inflation?  Explain your reasoning using the MSE of each predictor.  [Max: 20 words]
@@ -97,7 +97,7 @@ and $π_{t+1}^h$ is the headline inflation for the following year.
 
 
 
-### Problem 3: 3-month and 6-month Inflation
+## Problem 3: 3-month and 6-month Inflation
 
 
 In assessing the outlook for (12-month) inflation, it is informative to look at how inflation has behaved in the last 6-months and the last 3-months. 
@@ -105,12 +105,12 @@ Annualized inflation for monthly data is computed as:
 
 $$π_t=\left[\left(\frac{P_t}{P_{t-m}} \right)^{(12/m)}-1\right]\times 100$$
 
-where $P_t$ is the price index and $$m$ is the number of months we are looking at the change over.
+where $P_t$ is the price index and $m$ is the number of months we are looking at the change over.
 
 Download a series for the core PCE price index (PCEPILFE) from FRED and use it to calculate 
 the 3, 6, and 12 month annualized rates of core inflation (e.g. use m = 3, 6, 12 in the formula above).
 
-#### Questions: 
+### Problem 3 Questions: 
 - Plot the 3, 6, and 12 month annualized rates of core inflation from 2020 to the most current date available.
 
 - How do the latest 3 and 6 months rates influence your thinking on whether core PCE inflation is returning to 2% in the coming several months? [use bullets: 3 bullets max; 15-words max per bullet].
