@@ -92,5 +92,32 @@ def annualized_pct_change(col, M):
     return annualized * 100
 df['π_pce_core_6m'] = annualized_pct_change('PCE excluding food and energy4', 6)
 df['π_pce_core_3m'] = annualized_pct_change('PCE excluding food and energy4', 3)
-df.plot(y=['π_pce_core','π_pce_core_6m', 'π_pce_core_3m'], figsize=(10,5))
-plt.xlim(pd.Timestamp('2022-01-01'),)
+# df.plot(y=['π_pce_core','π_pce_core_6m', 'π_pce_core_3m'], figsize=(10,5))
+# df['PCE excluding food and energy4'].plot(secondary_y=True, linestyle='--', color='gray', alpha=0.5)
+# df['Personal consumption expenditures (PCE)'].plot(secondary_y=True, linestyle='--', color='gray', alpha=0.5)
+
+
+
+plt.figure(figsize=(10, 5))
+
+# plt.plot(df.index, df['π_pce'], label='Headline PCE')
+sns.lineplot(data=df, x=df.index, y='π_pce_core', label='12 Month change',)
+sns.lineplot(data=df, x=df.index, y='π_pce_core_6m', label='6 Month change, annualized rate', linestyle='--', marker='o')
+sns.lineplot(data=df, x=df.index, y='π_pce_core_3m', label='3 Month change, annualized rate', linestyle='-.', marker='s')
+
+plt.title('Core PCE Inflation',)
+# plt.suptitle('Core PCE Inflation at Different Frequencies',
+#              fontsize=16, fontweight='bold', y=0.98)
+# plt.title('Annualized Rates', 
+#           fontsize=12, color='gray', pad=20)
+plt.ylabel('% Change in Prices')
+shade_recessions(plt.gca())
+
+plt.grid(True)
+plt.tight_layout()
+
+
+plt.xlim(pd.Timestamp('2020-01-01'),pd.Timestamp('2025-07-01'),)
+plt.savefig('HW1_Q1_annualized_core_inflation.png')
+
+# %%
