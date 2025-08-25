@@ -100,17 +100,33 @@ and $π_{t+1}^h$ is the headline inflation for the following year.
 ### Problem 3: 3-month and 6-month Inflation
 
 
+In assessing the outlook for (12-month) inflation, it is informative to look at how inflation has behaved in the last 6-months and the last 3-months. 
+Annualized inflation for monthly data is computed as:  
+
+$$π_t=\left[\left(\frac{P_t}{P_{t-m}} \right)^{(12/m)}-1\right]\times 100$$
+
+where $P_t$ is the price index and $$m$ is the number of months we are looking at the change over.
+
+Download a series for the core PCE price index (PCEPILFE) from FRED and use it to calculate 
+the 3, 6, and 12 month annualized rates of core inflation (e.g. use m = 3, 6, 12 in the formula above).
+
+#### Questions: 
+- Plot the 3, 6, and 12 month annualized rates of core inflation from 2020 to the most current date available.
+
+- How do the latest 3 and 6 months rates influence your thinking on whether core PCE inflation is returning to 2% in the coming several months? [use bullets: 3 bullets max; 15-words max per bullet].
+
+Your chart will look similar to this one:
+
+![3month and 6month annualized core inflation](./hw1-inflation/HW1_Q1_annualized_core_inflation.png)
+
+
+
 <!-- 
-This isn't quite right.
+This was a failed attempt to answer this question entirely in FRED.
 I couldn't figure out how to calculate 3-month inflation for each month in FRED
 https://fred.stlouisfed.org/graph/?g=1LK9C
 This is instead the percent change or core PCE inflation at different frequencies.
  -->
-
-
-
-
-
 
 
 
