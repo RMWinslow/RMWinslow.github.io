@@ -96,14 +96,18 @@ df['π_pce_core_3m'] = annualized_pct_change('PCE excluding food and energy4', 3
 # df['PCE excluding food and energy4'].plot(secondary_y=True, linestyle='--', color='gray', alpha=0.5)
 # df['Personal consumption expenditures (PCE)'].plot(secondary_y=True, linestyle='--', color='gray', alpha=0.5)
 
+# df3 = df.copy()
+df3 = df[(df.index.month.isin([3,6,9,12])) & (df.index.year >= 1995)].copy()
 
 
 plt.figure(figsize=(10, 5))
 
 # plt.plot(df.index, df['π_pce'], label='Headline PCE')
-sns.lineplot(data=df, x=df.index, y='π_pce_core', label='12 Month change',)
-sns.lineplot(data=df, x=df.index, y='π_pce_core_6m', label='6 Month change, annualized rate', linestyle='--', marker='o')
-sns.lineplot(data=df, x=df.index, y='π_pce_core_3m', label='3 Month change, annualized rate', linestyle='-.', marker='s')
+sns.lineplot(data=df3, x=df3.index, y='π_pce_core', label='12 Month change',)
+sns.lineplot(data=df3, x=df3.index, y='π_pce_core_6m', 
+             label='6 Month change, annualized rate', marker='.')
+sns.lineplot(data=df3, x=df3.index, y='π_pce_core_3m', 
+             label='3 Month change, annualized rate',  marker='d')
 
 plt.title('Core PCE Inflation',)
 # plt.suptitle('Core PCE Inflation at Different Frequencies',
