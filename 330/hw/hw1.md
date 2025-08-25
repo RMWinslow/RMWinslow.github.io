@@ -1,7 +1,7 @@
 ---
 title: M&B HW1
 subtitle: The first homework for Money and Banking is about PCE inflation. This assignment is adapted in-part from material by Terry J. Fitzgerald.
-parent: Money and Banking
+parent: M&B HW
 layout: post
 has_children: false
 has_toc: false
