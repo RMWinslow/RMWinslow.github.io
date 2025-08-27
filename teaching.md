@@ -39,7 +39,7 @@ if you would like to meet on those days (or just drop by my office in Beacom 232
 
 
 
-## Past Teaching Experience
+## Teaching Experience
 
 
 ### USD
@@ -48,11 +48,13 @@ Principles of Micro (Econ 201)
 : Spring 2025
 
 Principles of Macro (Econ 202)
-: Fall 2024
+: Fall 2024/2025
 
 Intermediate Macro (Econ 302)
 : Spring 2025
 
+[Money and Banking (Econ 330)](./teaching/330)
+: Fall 2025
 
 ### UMN
 

@@ -1,9 +1,9 @@
 ---
 title: Econ 330 HW1
-subtitle: The first homework for Money and Banking is about PCE inflation. This assignment is adapted in-part from material by Terry J. Fitzgerald.
-parent: M&B HW
-grand_parent: Money and Banking
-great_grand_parent: Notes
+subtitle: PCE inflation
+# parent: M&B HW
+# grand_parent: Money and Banking
+# great_grand_parent: Notes
 layout: post
 has_children: false
 has_toc: false
