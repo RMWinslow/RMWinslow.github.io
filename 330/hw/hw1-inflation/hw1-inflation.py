@@ -1,9 +1,17 @@
 #%%
 import pandas as pd
+#%%
 import numpy as np
+#%%
 import csv
+#%%
 import matplotlib.pyplot as plt
+#%%
 import seaborn as sns
+
+# On work laptop, libraries are taking a ludicrous amount of time to import.
+# seems semi-random which ones are slow.
+
 
 #%% Recession shading Function
 import os
@@ -17,6 +25,14 @@ def shade_recessions(ax):
                     alpha=0.1, color='gray', 
                     transform=ax.get_xaxis_transform())
     ax.set_xlim(xlims)
+
+#%%
+# import beaapi
+# beakey = os.getenv('BEA_API_KEY')
+# beaapi.get_data_set_list(beakey)
+# list(beaapi.get_parameter_values(beakey, 'NIUnderlyingDetail', 'TableID')['Description'])
+
+
 
 
 #%% READ BEA 2.8.4 CSV (weird format)
@@ -127,5 +143,122 @@ plt.tight_layout()
 
 plt.xlim(pd.Timestamp('2020-01-01'),pd.Timestamp('2025-07-01'),)
 plt.savefig('HW1_Q1_annualized_core_inflation.png')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# %% Problem 4: Plot components of PCE inflation
+# Bizarrely, the FRED table has FOOD, but the BEA table does not.
+# actually, looks like the FRED table rowis just food purchased at home.
+
+# EHHHHH, I'm very unhappy with this, but I'm just going to plot durable, nondurable, and services.
+# TODO: Try to reverse engineer how the "contributions" tables are calculated.
+
+df['π_dgoods'] = df['Durable goods'].pct_change(periods=12) * 100
+df['π_ndgoods'] = df['Nondurable goods'].pct_change(periods=12) * 100
+df['π_services'] = df['Services'].pct_change(periods=12) * 100
+
+# df['π_food'] = df['Food and beverages purchased for off-premises consumption'].pct_change(periods=12) * 100
+# df['π_energy'] = df['Energy goods and services5'].pct_change(periods=12) * 100
+# df['π_housing'] = df['Housing'].pct_change(periods=12) * 100
+
+sns.set_style("whitegrid")
+plt.figure(figsize=(10, 5))
+
+sns.lineplot(data=df, x=df.index, y='π_dgoods', label='Durable Goods')
+sns.lineplot(data=df, x=df.index, y='π_ndgoods', label='Nondurable Goods', linestyle='--')
+sns.lineplot(data=df, x=df.index, y='π_services', label='Services', linestyle='-.')
+
+# sns.lineplot(data=df, x=df.index, y='π_pce_core', label='Core PCE, excl. food and energy',)
+# sns.lineplot(data=df, x=df.index, y='π_pce', label='Headline PCE')
+# sns.lineplot(data=df, x=df.index, y='π_food', label='Food',)
+# sns.lineplot(data=df, x=df.index, y='π_energy', label='Energy',)
+# sns.lineplot(data=df, x=df.index, y='π_housing', label='Housing',)
+
+plt.title('12-Month Inflation Rate, based on PCE Price Indices')
+plt.ylabel('% Change in Prices')
+shade_recessions(plt.gca())
+
+plt.xlim(pd.Timestamp('2010-01-01'),pd.Timestamp('2025-07-01'),)
+
+
+plt.grid(True)
+plt.tight_layout()
+plt.savefig('HW1_Q4_PCE_components_pct_change.png')
+
+# Also calculate geometric averages from January 2010 to January 2020.
+df_2010_2020 = df[(df.index >= '2010-01-01') & (df.index <= '2020-01-01')]
+for col in ['π_pce','π_pce_core','π_dgoods', 'π_ndgoods', 'π_services']:
+    geo_avg = (1 + df_2010_2020[col]/100).prod()**(1/len(df_2010_2020)) - 1
+    print(f"Geometric average of {col} from Jan 2010 to Jan 2020: {geo_avg*100:.2f}%")
+
+
+
+
+
+
+
+# Terry wants to plot cores goods, housing services, and core non-housing services
+# but those categories aren't readily available in FRED nor in the BEA data download.
+
+# Personal consumption expenditures (PCE)	126.555	126.201	123.369
+# 	line2Goods	115.312	114.861	114.587
+# 	line3Durable goods	106.614	106.120	105.631
+# 	line4Nondurable goods	120.199	119.775	119.633
+# 	line5Services	132.096	131.792	127.646
+# Addenda			
+# 	line6PCE excluding food and energy	125.932	125.610	122.510
+# 	line7Food	129.377	129.039	126.612
+# 	line8Energy goods and services	133.751	132.527	135.875
+# 	line9Market-based PCE	124.435	124.041	121.587
+# 	line10Market-based PCE excluding food and energy	123.394	123.031	120.318
+
+
+# And the BEA table has 
+#         Personal consumption expenditures (PCE)
+# Goods
+#     Durable goods
+#         Motor vehicles and parts
+#         Furnishings and durable household equipment
+#         Recreational goods and vehicles
+#         Other durable goods
+#     Nondurable goods
+#         Food and beverages purchased for off-premises consumption
+#         Clothing and footwear
+#         Gasoline and other energy goods
+#         Other nondurable goods
+# Services
+#     Household consumption expenditures (for services)
+#         Housing and utilities
+#         Health care
+#         Transportation services
+#         Recreation services
+#         Food services and accommodations
+#         Financial services and insurance
+#         Other services
+#     Final consumption expenditures of nonprofit institutions serving households (NPISHs)1
+#         Gross output of nonprofit institutions2
+#         Less: Receipts from sales of goods and services by nonprofit institutions3
+# Addenda:
+#     PCE excluding food and energy4
+#     PCE excluding food, energy, and housing4
+#     Energy goods and services5
+#     PCE services excluding energy and housing
+#     Housing
+#     Market-based PCE6
+#     Market-based PCE excluding food and energy6
+
+
+
 
 # %%

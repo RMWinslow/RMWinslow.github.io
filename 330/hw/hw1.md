@@ -2,13 +2,18 @@
 title: Econ 330 HW1
 subtitle: The first homework for Money and Banking is about PCE inflation. This assignment is adapted in-part from material by Terry J. Fitzgerald.
 parent: M&B HW
+grand_parent: Money and Banking
+great_grand_parent: Notes
 layout: post
 has_children: false
 has_toc: false
 toc: true
 date: 2025-08-20
-modified: 2025-08-20
+modified: 2025-08-26
 ---
+
+This assignment is adapted in-part from material by Terry J. Fitzgerald.
+
 
 ## Instructions
 
@@ -31,8 +36,31 @@ You are allowed to work with others on this assignment, but:
 
 - [BEA table 2.8.4 - PCE PI by Type of Product, Monthly, Seasonally Adjusted](https://apps.bea.gov/iTable/?reqid=19&step=2&isuri=1&categories=survey#eyJhcHBpZCI6MTksInN0ZXBzIjpbMSwyLDMsM10sImRhdGEiOltbImNhdGVnb3JpZXMiLCJTdXJ2ZXkiXSxbIk5JUEFfVGFibGVfTGlzdCIsIjgxIl0sWyJGaXJzdF9ZZWFyIiwiMTk5NSJdLFsiTGFzdF9ZZWFyIiwiMjAyNSJdLFsiU2NhbGUiLCIwIl0sWyJTZXJpZXMiLCJNIl1dfQ==)
 - [Fred version of Table 2.8.4](https://fred.stlouisfed.org/release/tables?rid=54&eid=3208#snid=3199) - Only some of the rows are included in FRED, unfortunately.
-    <!-- - [PCEPI](https://fred.stlouisfed.org/series/PCEPI) - "Headline" PCE Price Index.
-    - [PCEPILFE](https://fred.stlouisfed.org/series/PCEPILFE) - "Core" PCE Price Index, which excludes food and energy. -->
+
+<!-- 
+- [PCEPI](https://fred.stlouisfed.org/series/PCEPI) - "Headline" PCE Price Index.
+- [PCEPILFE](https://fred.stlouisfed.org/series/PCEPILFE) - "Core" PCE Price Index, which excludes food and energy. 
+-->
+
+<!-- 
+There IS a way to access the BEA tables with legible urls.
+
+Example: 
+https://apps.bea.gov/iTable/?reqid=19&step=3&isuri=1&select_all_years=0&nipa_table_list=2015&series=m&first_year=2010&last_year=2020&scale=-99&categories=underlying&thetable=
+
+But the nipa_table_list parameter is what determines which table you're looking at
+and I can't figure out what the correspondence is supposed to be.
+Trial and error found table 2.8.4 at 81
+
+https://apps.bea.gov/iTable/?reqid=19&step=3&isuri=1&series=m&first_year=2010&last_year=2020&categories=foo&nipa_table_list=81
+
+The categories parameter has to be present, but the value doesn't seem to matter.
+
+
+Can't find 2.8.8 nor 2.3.8 (contributions to change in pce)
+-->
+
+
 
 
 <!-- ## PROBLEMS:  -->
@@ -81,12 +109,12 @@ For this we'll need to download monthly data from FRED for the headline and core
 
 Then we'll compare the forecasting quality of the two predictors using using a mean square error (MSE) statistic:
 
-$$MSE=  \frac{1}{30} ∑_{t=1995}^{2024}(π_t^f-π_{t+1}^h)^2 $$
+$$MSE=  \frac{1}{30} ∑_{t=1995}^{2024}(π_t^f-π_{t+1}^h)^2\\($
 
-where $π_t^f$ is your forecast variable 
-(either core PCE $π_t^c$ 
-or headline PCE $π_t^h$)
-and $π_{t+1}^h$ is the headline inflation for the following year.
+where\\(π_t^f\\)is your forecast variable 
+(either core PCE\\(π_t^c\\)
+or headline PCE\\(π_t^h$)
+and\\(π_{t+1}^h\\)is the headline inflation for the following year.
 
 ### Problem 2 Questions: 
 
@@ -105,7 +133,7 @@ Annualized inflation for monthly data is computed as:
 
 $$π_t=\left[\left(\frac{P_t}{P_{t-m}} \right)^{(12/m)}-1\right]\times 100$$
 
-where $P_t$ is the price index and $m$ is the number of months we are looking at the change over.
+where\\(P_t\\)is the price index and\\(m\\)is the number of months we are looking at the change over.
 
 Download a series for the core PCE price index (PCEPILFE) from FRED and use it to calculate 
 the 3, 6, and 12 month annualized rates of core inflation (e.g. use m = 3, 6, 12 in the formula above).
@@ -127,6 +155,63 @@ I couldn't figure out how to calculate 3-month inflation for each month in FRED
 https://fred.stlouisfed.org/graph/?g=1LK9C
 This is instead the percent change or core PCE inflation at different frequencies.
  -->
+
+
+
+
+## Problem 4: Other PCE Components
+
+<!-- 
+TODO: Really not satisfied with the version of this I was able to make.
+I stuck to stuff in FRED, but that's diverging from what Terry was trying to say.
+-->
+
+In assessing the outlook for inflation, it is also helpful to consider the separate components of prices.
+For this problem, we'll plot inflation for durable goods, nondurable goods, and services.
+There aren't helpful FRED abbreviations for these, so the easiest way to build the chart will be 
+from the [Release Table 2.8.4](https://fred.stlouisfed.org/release/tables?rid=54&eid=3208#snid=3199)
+
+
+<!-- 
+4.	In assessing the outlook for inflation, it is also helpful to consider the separate components of core prices: core goods, housing services, and core non-housing services.
+
+a.	Provide a chart showing 12-month inflation for each of these components from 2010 to 2025
+b.	Should we expect each of these series to return to 2 percent as overall core inflation returns to 2 percent?  Why or why not?  [max: 10 words]
+c.	Compute the average inflation rate for core PCE and each of the 3 components from January 2011 to January 2020.  [Use geometric averages.]  What are the averages?
+d.	Create a chart showing the inflation rate for each component relative to its 2011-2019 average.  Chart data from Jan 2019 to the latest. 
+e.	Which component(s) were most responsible for the rise in core inflation during 2021? [Max 6 words}
+f.	Which component(s) are the most responsible for core inflation continuing to be above 2 percent in the latest data? [Max 6 words] -->
+
+<!-- 
+For this question, we'll need to download some data that isn't in FRED.
+Navigate to the following table on the BEA website,
+click the "Modify" button to change the years to 2014-2025,
+and then download the table as an XLSX or CSV file.
+
+[BEA table 2.8.4 - PCE PI by Type of Product, Monthly, Seasonally Adjusted](https://apps.bea.gov/iTable/?reqid=19&step=3&isuri=1&series=m&first_year=2010&last_year=2020&categories=foo&nipa_table_list=81)
+
+Tables 2.3.8 and 2.8.8 both seem to answer this question directly.
+
+Can't find the table_list param value for 2.8.8. Iterating seems to skip right over it.
+ -->
+
+### Problem 4 Questions: 
+
+- Create a plot showing 12-month inflation from 2015 to 2025 for the following components of the PCE Price index:
+    - Durable Goods
+    - Nondurable Goods
+    - Services
+- Compute the average inflation for each component from  January 2010 to January 2020.
+- Likewise compute the average core and headline pce inflation for the same time period.
+- Should we expect each of these series to return to 2 percent as overall core inflation returns to 2 percent?  Why or why not?  [max: 20 words]
+
+
+
+Your chart will look similar to this one:
+
+![chart of pce components inflation](./hw1-inflation/HW1_Q4_PCE_components_pct_change.png)
+
+
 
 
 
