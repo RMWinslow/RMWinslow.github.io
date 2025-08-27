@@ -111,10 +111,10 @@ Then we'll compare the forecasting quality of the two predictors using using a m
 
 $$MSE=  \frac{1}{30} ∑_{t=1995}^{2024}(π_t^f-π_{t+1}^h)^2$$
 
-where\\(π_t^f\\)is your forecast variable 
-(either core PCE\\(π_t^c\\)
-or headline PCE\\(π_t^h\\))
-and\\(π_{t+1}^h\\)is the headline inflation for the following year.
+where \\(π_t^f\\) is your forecast variable 
+(either core PCE \\(π_t^c\\) 
+or headline PCE \\(π_t^h\\) )
+and \\(π_{t+1}^h\\) is the headline inflation for the following year.
 
 ### Problem 2 Questions: 
 
@@ -133,7 +133,7 @@ Annualized inflation for monthly data is computed as:
 
 $$π_t=\left[\left(\frac{P_t}{P_{t-m}} \right)^{(12/m)}-1\right]\times 100$$
 
-where\\(P_t\\)is the price index and\\(m\\)is the number of months we are looking at the change over.
+where \\(P_t\\) is the price index and  \\(m\\)  is the number of months we are looking at the change over.
 
 Download a series for the core PCE price index (PCEPILFE) from FRED and use it to calculate 
 the 3, 6, and 12 month annualized rates of core inflation (e.g. use m = 3, 6, 12 in the formula above).
