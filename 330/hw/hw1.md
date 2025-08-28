@@ -10,6 +10,7 @@ has_toc: false
 toc: true
 date: 2025-08-20
 modified: 2025-08-26
+nav_exclude: true
 ---
 
 This assignment is adapted in-part from material by Terry J. Fitzgerald.
