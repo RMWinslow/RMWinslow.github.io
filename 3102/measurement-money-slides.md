@@ -215,6 +215,9 @@ class: caption-slide
 <!-- skipp bank strike -->
 
 
+---
+
+
 ## Transaction Accounts
 
 ![](https://fraser.stlouisfed.org/files/docs/historical/frbsl_history/media/flow_of_checks_200_merged.jpg?)
