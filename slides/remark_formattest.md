@@ -5,8 +5,6 @@ date: 2023-05-12
 nav_exclude: true
 ---
 
-
-
 class:center,middle
 
 # Remark Formatting Test
