@@ -290,11 +290,57 @@ I want images to autofit to page.
 ![test image, ignore the content](https://www.rmwinslow.com/3102/img-money-snails.webp)
 
 
+
+
+
+
+
 ---
-class:caption-slide
+
+<figure markdown="block">
+<img src="img-money-snails.webp">
+<figcaption  markdown="block">Monetaria Moneta, the Money Cowrie. The shells of these snails were widely used as money.
+<br>
+Left: [Live money snail. CC-BY-SA-5 Philippe Bourjon.](https://commons.wikimedia.org/wiki/File:Monetaria_moneta_-_2.jpg)
+Center: [Ancient Chinese Shell Money. CC-BY-SA-3 PHGCOM.](https://commons.wikimedia.org/wiki/File:Chinese_shell_money_16th_8th_century_BCE.jpg)
+Right: [Lithograph of traders using shells. 1845](https://commons.wikimedia.org/wiki/File:A_print_from_1845_shows_cowry_shells_being_used_as_money_by_an_Arab_trader.jpg)
+</figcaption>
+</figure>
 
 
-![Mizaru](https://upload.wikimedia.org/wikipedia/commons/6/6e/Emoji_u1f648.svg)
+---
+
+class:center,middle
+
+
+![test image, ignore the content](https://www.rmwinslow.com/3102/img-money-snails.webp)
+
+
+
+
+
+
+
+---
+
+class:center,middle
+
+
+<figure markdown="block">
+<img src="img-money-snails.webp">
+<figcaption  markdown="block">Monetaria Moneta, the Money Cowrie. The shells of these snails were widely used as money.
+<br>
+Left: [Live money snail. CC-BY-SA-5 Philippe Bourjon.](https://commons.wikimedia.org/wiki/File:Monetaria_moneta_-_2.jpg)
+Center: [Ancient Chinese Shell Money. CC-BY-SA-3 PHGCOM.](https://commons.wikimedia.org/wiki/File:Chinese_shell_money_16th_8th_century_BCE.jpg)
+Right: [Lithograph of traders using shells. 1845](https://commons.wikimedia.org/wiki/File:A_print_from_1845_shows_cowry_shells_being_used_as_money_by_an_Arab_trader.jpg)
+</figcaption>
+</figure>
+
+
+
+
+
+
 
 ---
 
