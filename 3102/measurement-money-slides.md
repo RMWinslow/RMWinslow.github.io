@@ -5,8 +5,11 @@ date: 2025-09-08
 modified: 2025-09-08
 nav_exclude: true
 ---
-class:center,middle
+
 # Money
+
+class:center,middle
+
 
 Robert Winslow
 
