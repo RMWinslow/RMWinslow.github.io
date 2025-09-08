@@ -2,6 +2,7 @@
 title: Remark Formatting Test
 layout: remark_slides
 date: 2023-05-12
+nav_exclude: true
 ---
 
 class:center,middle
@@ -282,11 +283,11 @@ class:caption-slide
 
 I want images to autofit to page.
 
-![test image, ignore the content]([./unl/lectureoutline.png](https://www.rmwinslow.com/3102/img-money-snails.webp))
+![test image, ignore the content](https://www.rmwinslow.com/3102/img-money-snails.webp)
 
 ---
 
-![test image, ignore the content]([./unl/lectureoutline.png](https://www.rmwinslow.com/3102/img-money-snails.webp))
+![test image, ignore the content](https://www.rmwinslow.com/3102/img-money-snails.webp)
 
 
 ---
@@ -301,4 +302,4 @@ class:caption-slide
 
 ![Mizaru](https://upload.wikimedia.org/wikipedia/commons/6/6e/Emoji_u1f648.svg)
 
-
+(This won't work because the `remark_slides` template will break the underscore in the file name.)
