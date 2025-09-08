@@ -112,6 +112,7 @@ Same thing but different delimiters
 
 \\[\int_{-\infty}^\infty e^{-i \omega \tau} R_{zz}(\tau) \, d\tau=  S_{zz}(\omega)\\]
 
+---
 
 
 And here's the same thing but with slashes before the underscore
@@ -125,6 +126,12 @@ Same thing but wrapped in a div
 $$\int_{-\infty}^\infty e^{-i \omega \tau} R_{zz}(\tau) \, d\tau=  S_{zz}(\omega)$$
 </div>
 
+
+---
+
+and a span for the inline: 
+
+inline <span>$\int_{-\infty}^\infty e^{-i \omega \tau} R_{zz}(\tau) \, d\tau=  S_{zz}(\omega)$</span>
 
 ---
 
@@ -298,7 +305,7 @@ I want images to autofit to page.
 ---
 
 <figure markdown="block">
-<img src="img-money-snails.webp">
+<img src="https://www.rmwinslow.com/3102/img-money-snails.webp">
 <figcaption  markdown="block">Monetaria Moneta, the Money Cowrie. The shells of these snails were widely used as money.
 <br>
 Left: [Live money snail. CC-BY-SA-5 Philippe Bourjon.](https://commons.wikimedia.org/wiki/File:Monetaria_moneta_-_2.jpg)
@@ -327,7 +334,7 @@ class:center,middle
 
 
 <figure markdown="block">
-<img src="img-money-snails.webp">
+<img src="https://www.rmwinslow.com/3102/img-money-snails.webp">
 <figcaption  markdown="block">Monetaria Moneta, the Money Cowrie. The shells of these snails were widely used as money.
 <br>
 Left: [Live money snail. CC-BY-SA-5 Philippe Bourjon.](https://commons.wikimedia.org/wiki/File:Monetaria_moneta_-_2.jpg)
