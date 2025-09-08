@@ -1,4 +1,5 @@
 ---
+title: Slide Deck Index
 nav_exclude: true
 ---
 
