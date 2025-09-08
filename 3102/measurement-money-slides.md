@@ -6,41 +6,66 @@ modified: 2025-09-08
 nav_exclude: true
 ---
 
-# Money
-
-class:center,middle
-
-
-Robert Winslow
-
-2023-05-09
-
-
----
-
 class:center,middle
 
 # Money
 
-2
-
----
-class:center,middle
-
-# Money
-
-3
-
 
 ---
 
-class:center,middle
-# Money
+## Defining Characteristics of Money
 
-4
+- Medium of exchange
+- Store of value
+- Unit of account
 
 ---
 
+## Forms of Money 
+
+- Commodity money
+- Representations of that commodity:
+    - Circulating private notes
+    - commodity-backed paper currency
+- Fiat currency
+- Transactions Deposits
+    - Checks, savings, digital currency...
+
+
+---
+
+## Measures of the Money Supply
+
+| | MB | M1 | M2 |
+|:--|:-:|:-:|:-:|
+| Reserve Balances         | ✅ |  |  |
+| Currency in a bank vault | ✅ |  |  |
+| Currency in my pocket    | ✅ | ✅ | ✅ |
+| Checking accounts |  | ✅ | ✅ |
+| Savings accounts |  | [Since May, 2020](https://fredblog.stlouisfed.org/2021/01/whats-behind-the-recent-surge-in-the-m1-money-supply/) | ✅ |
+| Time deposits |  |  | ✅ |
+
+For more details, take a look at this page from the Federal Reserve: 
+[Money Stock Measures - H.6 Release](https://www.federalreserve.gov/releases/h6/current/default.htm)
+
+
+
+## Measures of the Money Supply
+
+
+<iframe src="https://fred.stlouisfed.org/graph/graph-landing.php?g=1Maf9&width=670&height=475" scrolling="no" frameborder="0" style="overflow:hidden; width:670px; height:525px;" allowTransparency="true" loading="lazy"></iframe>
+
+---
+
+
+---
+
+class:header
+format:true
+
+## History
+
+---
 
 class: caption-slide
 
