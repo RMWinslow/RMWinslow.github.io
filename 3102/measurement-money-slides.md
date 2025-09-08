@@ -1,19 +1,40 @@
 ---
 title: Money Slides
-layout: null_preformatted
+layout: remark_slides
 date: 2025-09-08
 modified: 2025-09-08
 nav_exclude: true
 ---
-
 class:center,middle
-
 # Money
 
 Robert Winslow
 
 2023-05-09
 
+
+---
+
+class:center,middle
+
+# Money
+
+2
+
+---
+class:center,middle
+
+# Money
+
+3
+
+
+---
+
+class:center,middle
+# Money
+
+4
 
 ---
 
