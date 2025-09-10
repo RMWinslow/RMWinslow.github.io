@@ -62,7 +62,7 @@ class: caption-slide
 
 ## Barter tokens
 
-![alt text](barter-1.png)
+![ancient barter tokens](./img-money/barter.png)
 
 
 ---
@@ -71,7 +71,7 @@ class: caption-slide
 
 ## Double Coincide of Wants
 
-![alt text](diagram-1.png)
+![diagram illustrating that three people might not have any pairwise trades to make](./img-money/diagram.png)
 
 
 ---
@@ -80,7 +80,7 @@ class: caption-slide
 
 ## Double Coincide of Wants
 
-![alt text](diagram2-1.png)
+![diagram illustrating that one person might trade in goods they neither want nor produce](./img-money/diagram2.png)
 
 ---
 
@@ -88,7 +88,9 @@ class: caption-slide
 
 ## Hammurabi’s Code
 
-![alt text](ham-1.png)
+![image of a clay tablet with caption: 1754 B.C. Babylonian Legal Code. Listed prices in shekels, which was a certain amount of barley.](./img-money/ham.png)
+
+
 
 ---
 
@@ -115,7 +117,7 @@ class: caption-slide
 
 ## Knives and Spades
 
-![alt text](spade-1.png)
+![ancient chinese spade and knife money, 650-400 BC, 400-300 BC](./img-money/spade.png)
 
 
 ---
@@ -124,7 +126,7 @@ class: caption-slide
 
 ## Coins!
 
-![alt text](coins-1.png)
+![Three kinds of coins](./img-money/coins.png)
 
 
 ---
@@ -133,7 +135,7 @@ class: caption-slide
 
 ## Coins
 
-![alt text](img-money-lydia.webp)
+![ancient lydian currency](img-money-lydia.webp)
 
 
 
@@ -144,7 +146,7 @@ class: caption-slide
 
 ## Rai Stones
 
-![alt text](rai-1.png)
+![alttext](./img-money/rai.png)
 
 
 ---
@@ -153,7 +155,7 @@ class: caption-slide
 
 ## Other Commodity Money
 
-![alt text](beaver-1.png)
+![alttext](./img-money/beaver.png)
 
 
 ---
@@ -162,7 +164,7 @@ class: caption-slide
 
 ## Fiat Money
 
-![alt text](diagram3-1.png)
+![alttext](./img-money/diagram3.png)
 
 
 ---
@@ -171,7 +173,7 @@ class: caption-slide
 
 ## Paper
 
-![alt text](paper-1.png)
+![alttext](./img-money/paper.png)
 
 
 
@@ -181,7 +183,7 @@ class: caption-slide
 
 ## Paper
 
-![alt text](paper2-1.png)
+![alttext](./img-money/paper2.png)
 
 <!-- skip over playing cards for now -->
 
@@ -191,7 +193,7 @@ class: caption-slide
 
 ## Paper
 
-![alt text](paper3-1.png)
+![alttext](./img-money/paper3.png)
 
 
 ---
@@ -200,7 +202,7 @@ class: caption-slide
 
 ## Paper
 
-![alt text](paper4-1.png)
+![alttext](./img-money/paper4.png)
 
 <!-- skip tally sticks -->
 
@@ -210,7 +212,7 @@ class: caption-slide
 
 ## Transaction Accounts
 
-![alt text](checks-1.png)
+![alttext](./img-money/checks.png)
 
 <!-- skipp bank strike -->
 
