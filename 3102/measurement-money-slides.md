@@ -146,7 +146,7 @@ class: caption-slide
 
 ## Rai Stones
 
-![alttext](./img-money/rai.png)
+![micronesian rai stones](./img-money/rai.png)
 
 
 ---
@@ -155,7 +155,7 @@ class: caption-slide
 
 ## Other Commodity Money
 
-![alttext](./img-money/beaver.png)
+![cigarettes, salt blocks, and beaver belts](./img-money/beaver.png)
 
 
 ---
@@ -164,7 +164,7 @@ class: caption-slide
 
 ## Fiat Money
 
-![alttext](./img-money/diagram3.png)
+![diagram showing trade with fiat money](./img-money/diagram3.png)
 
 
 ---
@@ -173,7 +173,7 @@ class: caption-slide
 
 ## Paper
 
-![alttext](./img-money/paper.png)
+![jiao zi with label: The world's first paper money. Around 1000 AD. Started as privately issued notes.](./img-money/paper.png)
 
 
 
@@ -183,7 +183,7 @@ class: caption-slide
 
 ## Paper
 
-![alttext](./img-money/paper2.png)
+![Chinese paper money. In the 13th century, Marco Polo wrote about Chinese Fiat Currency. "How the Great Kaan Causeth the Bark of Trees, Made into something Like Paper, to Pass for Money All Over His Country](./img-money/paper2.png)
 
 <!-- skip over playing cards for now -->
 
@@ -193,7 +193,7 @@ class: caption-slide
 
 ## Paper
 
-![alttext](./img-money/paper3.png)
+![image of privately issued notes from sydney and delaware](./img-money/paper3.png)
 
 
 ---
@@ -202,7 +202,7 @@ class: caption-slide
 
 ## Paper
 
-![alttext](./img-money/paper4.png)
+![comparison of US fifty dollar bill backed by gold to a fiat 50 dollar bill](./img-money/paper4.png)
 
 <!-- skip tally sticks -->
 
@@ -212,7 +212,7 @@ class: caption-slide
 
 ## Transaction Accounts
 
-![alttext](./img-money/checks.png)
+![stock image of a check and a debit card](./img-money/checks.png)
 
 <!-- skipp bank strike -->
 
@@ -222,6 +222,6 @@ class: caption-slide
 
 ## Transaction Accounts
 
-![](https://fraser.stlouisfed.org/files/docs/historical/frbsl_history/media/flow_of_checks_200_merged.jpg?)
+![diagram from the federal reserve of the flow of checks](https://fraser.stlouisfed.org/files/docs/historical/frbsl_history/media/flow_of_checks_200_merged.jpg?)
 
 
