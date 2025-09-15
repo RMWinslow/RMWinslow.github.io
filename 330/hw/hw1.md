@@ -110,7 +110,7 @@ For this we'll need to download monthly data from FRED for the headline and core
 
 Then we'll compare the forecasting quality of the two predictors using using a mean square error (MSE) statistic:
 
-$$MSE=  \frac{1}{30} ∑_{t=1995}^{2024}(π_t^f-π_{t+1}^h)^2$$
+$$RMSE=  \sqrt{ \frac{1}{30} ∑_{t=1995}^{2024}(π_t^f-π_{t+1}^h)^2}$$
 
 where \\(π_t^f\\) is your forecast variable 
 (either core PCE \\(π_t^c\\) 
