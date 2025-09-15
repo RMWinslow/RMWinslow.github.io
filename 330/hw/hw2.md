@@ -37,13 +37,65 @@ You are allowed to work with others on this assignment, but:
 
 ## Data Sources:
 
+<!-- 
 
-## Problem 1: 
+https://www.federalreserve.gov/paymentsystems/master-account-and-services-database-existing-access.htm 
+
+
+
+https://www.federalreserve.gov/paymentsystems/fednow_faq.htm
+https://www.plancorp.com/blog/fednow
+> At its onset, only 35 institutions were participating in the FedNow service. By the start of 2024, that number has grown to 400. Participating institutions include a range of credit unions and banks across 90% of states. 
+https://www.frbservices.org/financial-services/fednow/organizations
+As of 20250914, 1465 banks are signed up.
+
+
+https://www.federalreserve.gov/supervisionreg/state-member-banks-supervised-federal-reserve.htm
+surpisingly few banks on this list... is "supervision" narrower than I thought?
+
+Summary of economic projections:
+https://fred.stlouisfed.org/release?rid=326
+
+-->
+
+## Problem 1: A few real-world details.
+
+- Where do you keep most of your money? In a savings account? checking account? etc [Max 10 words]
+- Give an example of a non-monetary asset that you own. [Max 10 words]
+- Choose a bank that you use. [Check which Federal Reserve district this bank uses for Reserve Bank Financial Services](https://www.federalreserve.gov/paymentsystems/master-account-and-services-database-existing-access.htm). Include a screenshot of the spreadsheet row in your submission.
+- [Check whether that bank is signed up for the FedNow service](https://www.frbservices.org/financial-services/fednow/organizations). Again, include a screenshot of the spreadsheet row in your submission.
+
+
+
+If you don't have any bank accounts, just choose a existing bank at random or ask the Professor to choose one for you.
+
+<!-- ## Context for Problem 1 -->
+
+
+## Problem 2: Fed Interest Rates
+
+- In FRED, plot  a chart with IORB, IORR, the FFR and the Primary Credit Rate (i.e. the Discount Rate) from 2010-2025
+- Why are there two separate series for interest on reserves? [Max 15 words.]
+<!-- - Why is the primary credit rate set above the federal funds rate? [Max 15 words.] -->
+- Why did the Fed lower the interest rate in 2020? [Max 15 words.]
+- Why did they start raising it in 2022? [Max 15 words.]
+
+
+## Problem 3: Taylor Rule
+
+- Plot the inflation gap (Inflation - 2%) and output gap (Real GDP - Potential GDP). 
+- Plot the Taylor Rule alongside the Federal Funds Rate.
+
+
+
+---
+
+More details and context forthcoming.
 
 
 
 
-### Problem 1 Questions: 
+
 
 
 
