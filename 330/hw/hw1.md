@@ -9,7 +9,7 @@ has_children: false
 has_toc: false
 toc: true
 date: 2025-08-20
-modified: 2025-08-26
+modified: 2025-09-14
 nav_exclude: true
 ---
 
@@ -198,7 +198,7 @@ Can't find the table_list param value for 2.8.8. Iterating seems to skip right o
 
 ### Problem 4 Questions: 
 
-- Create a plot showing 12-month inflation from 2015 to 2025 for the following components of the PCE Price index:
+- Create a plot showing 12-month inflation from 2010 to 2025 for the following components of the PCE Price index:
     - Durable Goods
     - Nondurable Goods
     - Services
