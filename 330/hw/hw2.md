@@ -56,14 +56,26 @@ surpisingly few banks on this list... is "supervision" narrower than I thought?
 Summary of economic projections:
 https://fred.stlouisfed.org/release?rid=326
 
+https://fredblog.stlouisfed.org/2024/04/rates-related-to-monetary-policy/
+
+https://fredblog.stlouisfed.org/2025/03/breakeven-inflation/
+https://fredblog.stlouisfed.org/2025/02/how-unexpected-inflation-affects-household-wealth/
+
+Graphs of gdp per capita over time, deflated using different price indices:
+https://fred.stlouisfed.org/graph/fredgraph.png?g=1MrJE&height=490
+https://fred.stlouisfed.org/graph/fredgraph.png?g=1MrJX&height=490
+https://fred.stlouisfed.org/graph/?g=1MrJX
+https://fred.stlouisfed.org/graph/fredgraph.png?g=1MrKt&height=490
+https://fred.stlouisfed.org/graph/?g=1MrKt
+
 -->
 
 ## Problem 1: A few real-world details.
 
-- Where do you keep most of your money? In a savings account? checking account? etc [Max 10 words]
-- Give an example of a non-monetary asset that you own. [Max 10 words]
-- Choose a bank that you use. [Check which Federal Reserve district this bank uses for Reserve Bank Financial Services](https://www.federalreserve.gov/paymentsystems/master-account-and-services-database-existing-access.htm). Include a screenshot of the spreadsheet row in your submission.
-- [Check whether that bank is signed up for the FedNow service](https://www.frbservices.org/financial-services/fednow/organizations). Again, include a screenshot of the spreadsheet row in your submission.
+1. Where do you keep most of your money? In a savings account? checking account? etc [Max 10 words]
+2. Give an example of a non-monetary asset that you own. [Max 10 words]
+3. Choose a bank that you use. [Check which Federal Reserve district this bank uses for Reserve Bank Financial Services](https://www.federalreserve.gov/paymentsystems/master-account-and-services-database-existing-access.htm). Include a screenshot of the spreadsheet row in your submission.
+4. [Check whether that bank is signed up for the FedNow service](https://www.frbservices.org/financial-services/fednow/organizations). Again, include a screenshot of the spreadsheet row in your submission.
 
 
 
@@ -74,24 +86,28 @@ If you don't have any bank accounts, just choose a existing bank at random or as
 
 ## Problem 2: Fed Interest Rates
 
-- In FRED, plot  a chart with IORB, IORR, the FFR and the Primary Credit Rate (i.e. the Discount Rate) from 2010-2025
-- Why are there two separate series for interest on reserves? [Max 15 words.]
+1. In FRED, plot  a chart with the following data series from 2010-2025:
+    - Interest on Reserve Balances (IORB)
+    - Interest on Required Reserves (IORR)
+    - Federal Funds Rate (FEDFUNDS)
+    - and the Primary Credit Rate (i.e. the Discount Rate) (DPCREDIT)
+ IORB, IORR, the Federal  and the Primary Credit Rate (i.e. the Discount Rate) from 2010-2025
+2. Why are there two separate series for interest on reserves? [Max 15 words.]
 <!-- - Why is the primary credit rate set above the federal funds rate? [Max 15 words.] -->
-- Why did the Fed lower the interest rate in 2020? [Max 15 words.]
-- Why did they start raising it in 2022? [Max 15 words.]
+3. Why did the Fed lower the interest rate in 2020? [Max 15 words.]
+4. Why did they start raising it in 2022? [Max 15 words.]
 
 
 ## Problem 3: Taylor Rule
 
-- Plot the inflation gap (Inflation - 2%) and output gap (Real GDP - Potential GDP). 
-- Plot the Taylor Rule alongside the Federal Funds Rate.
+1. Plot the inflation gap (Inflation - 2%) and output gap (Real GDP - Potential GDP). 
+2. Plot the Taylor Rule alongside the Federal Funds Rate.
 
 
 
 ---
 
-More details and context forthcoming.
-
+Additional Context:
 
 
 
