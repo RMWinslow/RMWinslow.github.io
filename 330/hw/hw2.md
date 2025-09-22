@@ -101,16 +101,48 @@ If you don't have any bank accounts, just choose a existing bank at random or as
 ## Problem 3: Taylor Rule
 
 1. Plot the inflation gap (Inflation - 2%) and output gap (Real GDP - Potential GDP). 
-2. Plot the Taylor Rule alongside the Federal Funds Rate.
+2. Plot the Taylor Rule alongside the Federal Funds Rate from .
 
 
 
----
-
-Additional Context:
+###  Additional Context:
 
 
+The Inflation Gap can be calculated simply by taking the inflation rate (annual % change in the price level) and subtracting 2%.
 
+The Output gap is the percentage difference between real (inflation-adjusted) GDP and real "potential GDP". 
+
+
+$$
+\text{Output Gap} = {\text{Real GDP}-\text{Real Potential GDP} \over \text{Real Potential GDP}} \times 100
+$$
+
+In FRED, we can find Real GDP under the mnemonic **GDPC1**,
+and we can find an estimate of potential GDP from the Congressional Budget Office under **GDPPOT**.
+
+The Taylor Rule says that the Fed Funds target rate should be set according to:
+
+$$
+\text{Taylor Rule Rate} = \text{Inflation Rate} + 2\% + \frac{1}{2}\text{Inflation Gap}+\frac{1}{2}\text{Output Gap}
+$$
+
+The "Inflation Rate + 2%" at the start is a stand-in for the equilibrium fed funds rate, that is the rate of interest that will naturally make credit markets function efficiently.
+The Taylor Rule says that if inflation goes up, we should raise the rates (to fight inflation), and that if GDP goes down, we should lower them (to stimulate the economy).
+If you compare this rule to the actual interest rates set by the Fed, then you'll get a graph that looks something like this one:
+
+![graph of taylor rule vs fed funds rate, from FRED](https://fred.stlouisfed.org/graph/fredgraph.png?g=1MvQU&height=490)
+
+Your styling will look a bit different. 
+(Ideally, if you're willing to put in a bit of extra work, you'll download the data as a spreadsheet and create a graph with an actually readable y-axis label.)
+
+<!-- 
+https://www.atlantafed.org/cqer/research/taylor-rule
+https://fredblog.stlouisfed.org/2014/04/the-taylor-rule/
+
+Should be use chained GDP Price index instead of PCEPI? GDPPI
+
+https://fred.stlouisfed.org/graph/fredgraph.png?g=1MvQx&height=490
+-->
 
 
 

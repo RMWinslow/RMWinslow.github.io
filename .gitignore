@@ -2,3 +2,6 @@
 *.lyx~
 *.lyx#
 330/hw/datahw - Shortcut.lnk
+330/hw/hw1-inflation/beaapi_data/NIUnderlyingDetail.pickle
+330/hw/hw1-inflation/beaapi_data/NIPA.pickle
+330/hw/hw1-inflation/beaapi_data/FixedAssets.pickle
