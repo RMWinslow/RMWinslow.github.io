@@ -87,10 +87,10 @@ If you don't have any bank accounts, just choose a existing bank at random or as
 ## Problem 2: Fed Interest Rates
 
 1. In FRED, plot  a chart with the following data series from 2010-2025:
-    - Interest on Reserve Balances (IORB)
-    - Interest on Required Reserves (IORR)
-    - Federal Funds Rate (FEDFUNDS)
-    - and the Primary Credit Rate (i.e. the Discount Rate) (DPCREDIT)
+    - Interest on Reserve Balances ([IORB](https://fred.stlouisfed.org/series/IORB))
+    - Interest on Required Reserves ([IORR](https://fred.stlouisfed.org/series/IORR))
+    - Federal Funds Rate ([FEDFUNDS](https://fred.stlouisfed.org/series/FEDFUNDS) for monthly or [DFF](https://fred.stlouisfed.org/series/DFF) for daily)
+    - and the Primary Credit Rate (i.e. the Discount Rate) ([DPCREDIT](https://fred.stlouisfed.org/series/DPCREDIT))
  IORB, IORR, the Federal  and the Primary Credit Rate (i.e. the Discount Rate) from 2010-2025
 2. Why are there two separate series for interest on reserves? [Max 15 words.]
 <!-- - Why is the primary credit rate set above the federal funds rate? [Max 15 words.] -->
@@ -98,10 +98,24 @@ If you don't have any bank accounts, just choose a existing bank at random or as
 4. Why did they start raising it in 2022? [Max 15 words.]
 
 
+The graph for Problem 1.1 should look something like the following:
+
+![FRED graph of four different interest rates](https://fred.stlouisfed.org/graph/fredgraph.png?g=1MzlL&height=490)
+
+
+<!-- 
+https://fred.stlouisfed.org/graph/?id=IORB,IORR,DFF,DPCREDIT
+https://fred.stlouisfed.org/graph/?id=FEDFUNDS,IORB,IORR,DPCREDIT
+https://fred.stlouisfed.org/graph/?g=1MzlL
+
+ -->
+
+
+
 ## Problem 3: Taylor Rule
 
-1. Plot the inflation gap (Inflation - 2%) and output gap (Real GDP - Potential GDP). 
-2. Plot the Taylor Rule alongside the Federal Funds Rate from .
+1. Plot the inflation gap (Inflation - 2%) and output gap (Real GDP - Potential GDP) from 1990-2025.. 
+2. Plot the Taylor Rule alongside the Federal Funds Rate from from 1990-2025.
 
 
 
@@ -110,15 +124,25 @@ If you don't have any bank accounts, just choose a existing bank at random or as
 
 The Inflation Gap can be calculated simply by taking the inflation rate (annual % change in the price level) and subtracting 2%.
 
-The Output gap is the percentage difference between real (inflation-adjusted) GDP and real "potential GDP". 
+The Output gap is the difference between real (inflation-adjusted) GDP and real "potential GDP". If we express this gap in percentage terms, we get:
 
 
 $$
 \text{Output Gap} = {\text{Real GDP}-\text{Real Potential GDP} \over \text{Real Potential GDP}} \times 100
 $$
 
+
 In FRED, we can find Real GDP under the mnemonic **GDPC1**,
 and we can find an estimate of potential GDP from the Congressional Budget Office under **GDPPOT**.
+
+If we plot the inflation gap and output gap together, we'll get a graph that looks something like this:
+
+![FRED graph of inflation gap and output gap](https://fred.stlouisfed.org/graph/fredgraph.png?g=1MzcY&height=490)
+
+
+<!-- 
+https://fred.stlouisfed.org/graph/?g=1Mzew
+ -->
 
 The Taylor Rule says that the Fed Funds target rate should be set according to:
 
@@ -142,6 +166,8 @@ https://fredblog.stlouisfed.org/2014/04/the-taylor-rule/
 Should be use chained GDP Price index instead of PCEPI? GDPPI
 
 https://fred.stlouisfed.org/graph/fredgraph.png?g=1MvQx&height=490
+
+
 -->
 
 
