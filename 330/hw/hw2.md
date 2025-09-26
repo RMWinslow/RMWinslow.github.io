@@ -167,8 +167,56 @@ Should be use chained GDP Price index instead of PCEPI? GDPPI
 
 https://fred.stlouisfed.org/graph/fredgraph.png?g=1MvQx&height=490
 
-
 -->
+
+
+
+<!-- 
+Other notes:
+
+
+
+
+
+
+UK has only inflation targeting but still had inflation
+https://fred.stlouisfed.org/series/GBRCPIALLMINMEI
+https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate
+started raising interest rates about 6 months too late.
+https://www.bankofengland.co.uk/-/media/boe/files/letter/2021/march/2021-mpc-remit-letter.pdf
+They stopped measuring M2 in 2016, but they have an M4 aggregate and iirc, that didn't spike up in 2022.
+So mostly contagion based for UK from what US was doing?
+
+
+IMF exchange arrangements 2023
+https://www.imf.org/en/Publications/Annual-Report-on-Exchange-Arrangements-and-Exchange-Restrictions/Issues/2024/12/19/Annual-Report-on-Exchange-Arrangements-and-Exchange-Restrictions-2023-541890
+
+
+Also, I improvised a point in class re: should we stick to a rule.
+1. Post 2008, the deviation from the Taylor rule can be rationalized as caring more about the recession fighting component.
+2. Post 2008, the deviation seemed to have been the right call.
+3. Post 2020, it's hard to rationalize based on the rule (addendum: unrate was still high).
+4. Post 2020, the deviation (based on fears that we would have another dip and belief that inflation was "transitory") was a mistake.
+so would it be better or worse to have a more rules based approach? Unclear.
+
+What would a NGDP rule look like?
+Mechanically similar to Taylor Rule?
+%ΔNGDP ~ %ΔRGDP + inflation
+
+Here is an alternate ruling using an "unemployment gap" instead of an "output gap"
+Basically the same as the Taylor rule but with with a slight lag. Checks out!
+https://fred.stlouisfed.org/graph/?g=1MzHG
+It also makes sense why the Taylor rules doesn't include that. 
+The policy would be basically the same, but with a delay. Delays are not good in responding to a crisis.
+
+Here are a list of alternate rules to compare to Taylor rule:
+https://www.federalreserve.gov/monetarypolicy/policy-rules-and-how-policymakers-use-them.htm
+Not much explanation here, but the list might be instructive:
+https://www.clevelandfed.org/indicators-and-data/simple-monetary-policy-rules
+
+
+
+ -->
 
 
 
