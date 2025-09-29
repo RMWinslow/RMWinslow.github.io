@@ -24,3 +24,11 @@ please be aware that all material here is also posted on D2L.
     - Tools of monetary policy,
     - Impact of monetary policy
 
+
+## Homework Assignments ()
+
+- [HW1](./hw/hw1) - Inflation Forecasting
+- [HW2](./hw/hw2)
+<!-- - [HW3](./hw/hw3) - WIP -->
+
+
