@@ -47,6 +47,9 @@ Ideas from Terry:
 - bond spreads against treasuries?
 - inflation expectations: breakeven inflation rates (compare nominal vs real, have students compare calculation to published rate?) (Not sure if Mishkin discusses.)
 
+output gap vs unemployment rate (Okun's law)
+
+Real interst rate vs durable consumption, etc.
 
 Tightening Cycles (See Mishkin ch 25 problems for examples, or Terry's suggestion:)
 - Plot cycle comparison: manually set dates for tightening cycle starts and plot increase from baseline.
