@@ -34,9 +34,13 @@ You are allowed to work with others on this assignment, but:
 - Submitted work should be your own. *(Charts will naturally look similar. That’s fine.)*
 
 
-## Problems (WIP, brainstorming)
+## Problem 1: Velocity of Money
 
-1. Plot the velocity of money. (Nominal GDP divided by the M2 money supply.)
+1. Plot the velocity of money. (Nominal GDP divided by the M2 money supply.) 1960-2025
+2. Now plot the quarterly change in the velocity. (Change the units to underneath the Formula in FRED)
+<!-- 3. Prior to  1990, does the velocity of money look relatively stable? [Max: 10 words.] -->
+3. What happens to the velocity of money in 2020? [Max: 10 words.]
+4. What does this imply for a simple quantity theory of money? [Max: 20 words.]
 
 <!-- https://fred.stlouisfed.org/graph/?g=1MHyG -->
 
@@ -79,13 +83,52 @@ https://www.economicforces.xyz/p/what-theory-does-and-does-not-say?utm_source=pu
 > This point was especially important given the evidence. The early, robust negative empirical relationship between inflation and unemployment was based on sample periods in which the monetary regime was the gold standard.
  -->
 
+## Problem 2: Monetary Policy Cycles
 
+Download data on the Fed Funds rate and unemployment rate from 2000 onwards.
+Looking at the Fed Funds rate, 
+you will need to manually determine when each "easing cycle" and "tightening" cycle begins. 
+
+1. Create a plot comparing the tightening cycles that have taken place since 2000.
+    - On one axis, you should have the time since the start of tightening.
+    - On the other axis, you should have the increase in fedfunds rate since the tightening began.
+2. Create a similar plot for the easing cycles since 2000.
+3. Compare the most recent tightening cycle to the ones that came before it. [Max: 15 words.]
+3. Compare the most easing cycle to the ones that came before it. [Max: 15 words.]
+
+
+## Problem 3: Interest Rates
+
+
+
+1. Plot the Federal Funds rate, the interest rate on 2-year treasury securities (DGS2), and 10-year treasury securities (DGS10). 2000-2025
+2. Plot the "real interest rate" by combining date on inflation expectations (EXPINF2YR) and nominal interest rates (DGS2). 2000-2025
+
+
+<!-- 
+Real interest rate
+https://fredblog.stlouisfed.org/2022/05/constructing-ex-ante-real-interest-rates-on-fred/
+Fedfunds vs treasury bonds
+https://fred.stlouisfed.org/graph/?g=1MHKz
+inflatoin expectations:
+https://fred.stlouisfed.org/release?rid=500
+interest rate spreads
+https://fred.stlouisfed.org/categories/33446
+https://fred.stlouisfed.org/searchresults/?st=breakeven%20rate
+
+
+Could do ex post inflation, but that would be complicated.
+ -->
+
+
+
+<!-- 
 Something related to rates.
 Ideas from Terry:
 - Plot 10 yr rate minus 2 year rate for treasury constant maturity - relate spread to recessions
     - (short term reflects expected path of FFR, long term reflects long-run equilibrium)
 - yield curve (125,135 in Mishkin, (ch6))
-    - Relate to QE? (337, 358, 569 in Mishkin (ch14,15,569))
+    - Relate to QE? (337, 358, 569 in Mishkin (ch14,15,22))
 - bond spreads against treasuries?
 - inflation expectations: breakeven inflation rates (compare nominal vs real, have students compare calculation to published rate?) (Not sure if Mishkin discusses.)
 
@@ -106,4 +149,11 @@ How tight is monetary policy (Terry's suggestions):
 - [HLW model estimates from fed](https://www.newyorkfed.org/research/policy/rstar) - compare to SEP rates.
 - (My idea: redo Taylor rule with these rates?... ehh)
 
+Tobins' Q? -->
 
+<!-- 
+This comes up when I google robins q fred
+https://fred.stlouisfed.org/graph/?g=xtC
+
+Not quite what I'm looking for though...
+ -->
