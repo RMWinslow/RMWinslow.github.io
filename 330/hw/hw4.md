@@ -61,26 +61,66 @@ https://www.latimes.com/archives/la-xpm-1993-07-22-fi-15802-story.html
 Calculate the **Yield to Maturity** for each of the following assets.
 Show your work, and verify that the present value of future payments equals the initial price you paid.
 
-1. You pay 1000 dollars today and recieve 1340 dollars six years from now.
-2. You pay 1000 dollars today. You recieve 100 dollars every year for the next nine years. Then ten years from now, you recieve 1100 dollars.
+1. You pay 1000 dollars today and receive 1340 dollars six years from now.
+2. You pay 1000 dollars today. You receive 100 dollars every year for the next nine years. Then ten years from now, you receive 1100 dollars.
 
-<!-- 2. You pay 300,000 dollars today and recieve 60,000 dollars every year for the next ten years. -->
+<!-- 2. You pay 300,000 dollars today and receive 60,000 dollars every year for the next ten years. -->
 
 
 ## Problem 3:
+
+This goes a bit beyond what's in the book.
+Suppose you have a fixed payment loan that pays C dollars each year for 30 years.
+If the interest rate is i, then the present value of the cash flow from this loan is :
+
+$$
+PV = \frac{C}{(1+i)} + \frac{C}{(1+i)^2} + ... + \frac{C}{(1+i)^{30}}
+$$
+
+With a bit of algebra, we can derive a simpler form:
+
+$$
+PV=\frac{C}{i}\cdot\left(1-\frac{1}{(1+i)^{30}}\right)
+$$
+
+1. Algebraically derive the second formula from the first.
+2. How much money could you borrow using a fixed payment loan with 30 annual fixed payments of 10,000 dollars each, and an interest rate of 5%. Show your work.
+
+
+<!-- 2. If you borrowed 300,000 dollars via a fixed payment loan with an interest rate of 5%, what would your annual fixed payment amount be? -->
+
+<!-- (Actual mortgages usually have monthly payments, but whatever.) -->
+
+
+
+<!-- 
+PV=\frac{C}{(1+i)}+\frac{C}{(1+i)^{2}}+...+\frac{C}{(1+i)^{30}}
+
+(1+i)PV=C+\left[\frac{C}{(1+i)}+...+\frac{C}{(1+i)^{29}}\right]
+
+PV+i\cdot PV=C+\left[PV-\frac{C}{(1+i)^{30}}\right]
+
+i\cdot PV=C-\frac{C}{(1+i)^{30}}
+
+PV=\frac{C}{i}-\frac{C}{i\cdot(1+i)^{30}}
+ -->
+
+
+
+## Problem 4:
 
 Suppose a Discount Bond promises 2000 dollars in one year's time.
 For each of the following prices for this bond, calculate the interest rate (yield to maturity):
 2000 dollars, 1900 dollars, 1800 dollars, 1700 dollars, 1600 dollars.
 Show your work.
 
-## Problem 4:
+## Problem 5:
 
 Suppose the state of South Dakota reduces state taxes without reducing state spending, and has a state-level budget deficit as a result. 
+
 In about 20-30 words, describe what this might do to the supply and demand for South Dakota Municipal bonds, and why.
 
 Attach a sketch of this shock to your homework, ala the depictions of shocks in Mishkin ch5. (I would prefer that you insert it into your submission file, if possible.) 
-
 What do you expect would happen to equilibrium Price, Interest Rate, and Quantity sold for this bond?
 
 <!-- Either S increase OR supply increase + demand decrease -->
