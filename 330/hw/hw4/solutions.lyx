@@ -1,16 +1,16 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
 \begin_document
 \begin_header
 \save_transient_properties true
 \origin unavailable
 \textclass article
 \use_default_options true
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \language english
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding auto-legacy
+\fontencoding auto
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -18,7 +18,9 @@
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -28,10 +30,13 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement class
+\float_alignment class
 \paperfontsize default
+\spacing single
 \use_hyperref false
 \papersize default
-\use_geometry false
+\use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
 \use_package cancel 1
@@ -44,17 +49,24 @@
 \use_package undertilde 1
 \cite_engine basic
 \cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_formatted_ref 0
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -66,11 +78,16 @@
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\tablestyle default
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -80,16 +97,18 @@ Problem 1:
 \end_layout
 
 \begin_layout Standard
-Calculate the **Present Value**, to the nearest dollar, for each of the
- following cash flows.
+Calculate the **Present Value**,
+ to the nearest dollar,
+ for each of the following cash flows.
  Assume a **10% interest rate** for each.
  Show your work.
  (The relevant formulas are in chapter 4 of Mishkin)
 \end_layout
 
 \begin_layout Subsection
-1100 dollars next year, 1210 dollars two years from now, and 1331 dollars
- three years from now.
+1100 dollars next year,
+ 1210 dollars two years from now,
+ and 1331 dollars three years from now.
 \end_layout
 
 \begin_layout Standard
@@ -115,13 +134,14 @@ PV=1,000+1,000+1,000=\boldsymbol{3,000}
 \end_layout
 
 \begin_layout Subsection
-7400 dollars, 21 years from now.
+7400 dollars,
+ 21 years from now.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-PV=\frac{7400}{(1.10)^{21}}=\frac{7400}{7.40024994}\approx1000
+PV=\frac{7400}{(1.10)^{21}}=\frac{7400}{7.40024994}\approx\boldsymbol{1000}
 \]
 
 \end_inset
@@ -130,7 +150,8 @@ PV=\frac{7400}{(1.10)^{21}}=\frac{7400}{7.40024994}\approx1000
 \end_layout
 
 \begin_layout Standard
-(Note: I chose the numbers to make things very convenient.
+(Note:
+ I chose the numbers to make things very convenient.
  
 \begin_inset Formula $(1.10)^{21}\approx7.400$
 \end_inset
@@ -139,17 +160,19 @@ PV=\frac{7400}{(1.10)^{21}}=\frac{7400}{7.40024994}\approx1000
 \end_layout
 
 \begin_layout Subsection
-2000 dollars every year, forever.
+2000 dollars every year,
+ forever.
 \end_layout
 
 \begin_layout Standard
-Formula for perpetuity: 
+Formula for perpetuity:
+ 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-PV=\frac{C}{r}=\frac{2000}{0.10}=20,000
+PV=\frac{C}{r}=\frac{2000}{0.10}=\boldsymbol{20,000}
 \]
 
 \end_inset
@@ -158,17 +181,18 @@ PV=\frac{C}{r}=\frac{2000}{0.10}=20,000
 \end_layout
 
 \begin_layout Standard
-You can find this formula in the book or derive it yourself, or you could
- use a spreadsheet and just add of the present value of future cash flows
- until things diverge.
+You can find this formula in the book or derive it yourself,
+ or you could use a spreadsheet and just add of the present value of future cash flows until things diverge.
 \end_layout
 
 \begin_layout Subsection
-2000 dollars every year, for 7 years
+2000 dollars every year,
+ for 7 years
 \end_layout
 
 \begin_layout Standard
-To the nearest dollar, present value is 
+To the nearest dollar,
+ present value is 
 \series bold
 $9737
 \series default
@@ -197,18 +221,27 @@ Easiest way to find this is directly:
 \begin_layout Standard
 
 \emph on
-Note: If this were a perpetuity, present value would be 20k (see 1.3).
+Note:
+ If this were a perpetuity,
+ PV would be 20k (see 1.3).
  So we get nearly half the value in the first 7 years.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
-Problem 1:
+Problem 2:
 \end_layout
 
 \begin_layout Standard
 Calculate the **Yield to Maturity** for each of the following assets.
- Show your work, and verify that the present value of future payments equals
- the initial price you paid.
+ Show your work,
+ and verify that the present value of future payments equals the initial price you paid.
 \end_layout
 
 \begin_layout Subsection
@@ -252,7 +285,68 @@ i=\left(\frac{1340}{1000}\right)^{1/6}-1\approx5\%
 \begin_layout Subsection
 You pay 1000 dollars today.
  You receive 100 dollars every year for the next nine years.
- Then ten years from now, you receive 1100 dollars.
+ Then ten years from now,
+ you receive 1100 dollars.
+\end_layout
+
+\begin_layout Standard
+YTM is the value of 
+\begin_inset Formula $i$
+\end_inset
+
+ that solves 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+1000=\frac{100}{\left(1+i\right)}+\frac{100}{\left(1+i\right)^{2}}+\frac{100}{\left(1+i\right)^{3}}+...+\frac{1100}{\left(1+i\right)^{10}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+or equivalently
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+1000=\left(\frac{100}{\left(1+i\right)}+\frac{100}{\left(1+i\right)^{2}}+\frac{100}{\left(1+i\right)^{3}}+...+\frac{100}{\left(1+i\right)^{10}}\right)+\frac{1000}{\left(1+i\right)^{10}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You could work it out algebraically (very difficult),
+ guess and check using a spreadsheet,
+ or you could recognize that this is a bond where the face value is the same as the price,
+ and thus the book says the yield to maturity will simply be the coupon divided by the price.
+ 
+\series bold
+
+\begin_inset Formula $YTM=\frac{100}{1000}=10\%$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Regardless,
+ you should plug this value of i in and crunch the numbers to make sure it works.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -261,85 +355,620 @@ Problem 3:
 
 \begin_layout Standard
 This goes a bit beyond what's in the book.
- Suppose you have a fixed payment loan that pays C dollars each year for
- 30 years.
- If the interest rate is i, then the present value of the cash flow from
- this loan is :
+ Suppose you have a fixed payment loan that pays C dollars each year for 30 years.
+ If the interest rate is i,
+ then the present value of the cash flow from this loan is :
 \end_layout
 
 \begin_layout Standard
-$$ PV = 
-\backslash
-frac{C}{(1+i)} + 
-\backslash
-frac{C}{(1+i)^2} + ...
- + 
-\backslash
-frac{C}{(1+i)^{30}} $$
+\begin_inset Formula 
+\[
+PV=\frac{C}{(1+i)}+\frac{C}{(1+i)^{2}}+...+\frac{C}{(1+i)^{30}}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-With a bit of algebra, we can derive a simpler form:
+With a bit of algebra,
+ we can derive a simpler form:
 \end_layout
 
 \begin_layout Standard
-$$ PV=
-\backslash
-frac{C}{i}
-\backslash
-cdot
-\backslash
-left(1-
-\backslash
-frac{1}{(1+i)^{30}}
-\backslash
-right) $$
+\begin_inset Formula 
+\[
+PV=\frac{C}{i}\cdot\left(1-\frac{1}{(1+i)^{30}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Algebraically derive the second formula from the first.
 \end_layout
 
 \begin_layout Standard
-1.
- Algebraically derive the second formula from the first.
- 2.
- How much money could you borrow using a fixed payment loan with 30 annual
- fixed payments of 10,000 dollars each, and an interest rate of 5%.
+\begin_inset Formula 
+\[
+PV=\frac{C}{(1+i)}+\frac{C}{(1+i)^{2}}+...+\frac{C}{(1+i)^{30}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+(1+i)PV & =C+\left(\frac{C}{(1+i)}+...+\frac{C}{(1+i)^{29}}\right)\\
+ & =C+\left(PV-\frac{C}{(1+i)^{30}}\right)
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+(1+i)PV-PV=C-\frac{C}{(1+i)^{30}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+i\cdot PV=C-\frac{C}{(1+i)^{30}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+PV=\frac{\left(C-\frac{C}{(1+i)^{30}}\right)}{i}=\frac{C}{i}\cdot\left(1-\frac{1}{(1+i)^{30}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+How much money could you borrow using a fixed payment loan with 30 annual fixed payments of 10,000 dollars each,
+ and an interest rate of 5%?
  Show your work.
+\end_layout
+
+\begin_layout Standard
+Easiest way to do this is plug in the formula from 3.1:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+PV=\frac{C}{i}\cdot\left(1-\frac{1}{(1+i)^{30}}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+PV & =\frac{10000}{0.05}\cdot\left(1-\frac{1}{(1+0.05)^{30}}\right)\\
+ & \approx200000\cdot\left(1-0.231377\right)\\
+ & \approx153725
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The present value is the price the bank pays you for this loan - ie,
+ the amount you borrow.
  
 \end_layout
 
 \begin_layout Standard
-## Problem 4:
+So you can borrow about 
+\series bold
+154 thousand dollars.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Note:
+ For actual mortgages and car loans,
+ the bank will typically bundle your property tax and home insurance into one monthly payment alongside the payments on your mortgage.
+ This formula is only applicable to the mortage part of that monthly payment.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Problem 4:
 \end_layout
 
 \begin_layout Standard
 Suppose a Discount Bond promises 2000 dollars in one year's time.
- For each of the following prices for this bond, calculate the interest
- rate (yield to maturity): 2000 dollars, 1900 dollars, 1800 dollars, 1700
- dollars, 1600 dollars.
+ For each of the following prices for this bond,
+ calculate the interest rate (yield to maturity):
+ 2000 dollars,
+ 1900 dollars,
+ 1800 dollars,
+ 1700 dollars,
+ 1600 dollars.
  Show your work.
 \end_layout
 
 \begin_layout Standard
-## Problem 5:
+The YTM is the value of 
+\begin_inset Formula $i$
+\end_inset
+
+ that solves 
+\begin_inset Formula 
+\[
+Price=\frac{2000}{1+i}
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Suppose the state of South Dakota reduces state taxes without reducing state
- spending, and has a state-level budget deficit as a result.
+Solving yields:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+i=\frac{2000}{Price}-1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+or equivalently
+\begin_inset Formula 
+\[
+i=\frac{2000-Price}{Price}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Plugging these prices in:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="4">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Price
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Interest Rate
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Calculation
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+$2000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $i=\frac{2000-2000}{2000}=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+$1900
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.5%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $i=\frac{2000-1900}{1900}=\frac{100}{1900}=\frac{1}{19}\approx0.105$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+$1800
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11.1%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $i=\frac{2000-1800}{1800}=\frac{200}{1800}=\frac{1}{9}=0.11\bar{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+$1700
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+17.6%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $i=\frac{2000-1700}{1700}=\frac{300}{1700}=\frac{3}{17}\approx0.176$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+$1600
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+25%
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $i=\frac{2000-1600}{1600}=\frac{400}{1600}=\frac{1}{4}=0.25$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Problem 5:
+\end_layout
+
+\begin_layout Standard
+Suppose the state of South Dakota reduces state taxes without reducing state spending,
+ and has a state-level budget deficit as a result.
  
 \end_layout
 
 \begin_layout Standard
-In about 20-30 words, describe what this might do to the supply and demand
- for South Dakota Municipal bonds, and why.
+In about 20-30 words,
+ describe what this might do to the supply and demand for South Dakota Municipal bonds,
+ and why.
 \end_layout
 
 \begin_layout Standard
-Attach a sketch of this shock to your homework, ala the depictions of shocks
- in Mishkin ch5.
- (I would prefer that you insert it into your submission file, if possible.)
- What do you expect would happen to equilibrium Price, Interest Rate, and
- Quantity sold for this bond?
+Attach a sketch of this shock to your homework,
+ ala the depictions of shocks in Mishkin ch5.
+ (I would prefer that you insert it into your submission file,
+ if possible.) What do you expect would happen to equilibrium Price,
+ Interest Rate,
+ and Quantity sold for this bond?
 \end_layout
 
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+The story I'm looking for is:
+\end_layout
+
+\begin_layout Itemize
+Supply increases because SD needs to borrow to cover its deficit.
+\end_layout
+
+\begin_layout Itemize
+Demand decreases because people worry about SD's ability to repay in the future.
+\end_layout
+
+\begin_layout Standard
+One or both of these shocks is fine.
+ Any explanation is fine.
+ Don't deduct points for going over the word limit.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+On the supply side,
+ SD will need to borrow money to cover its deficit.
+ This increases the demand for these bonds.
+\end_layout
+
+\begin_layout Itemize
+On the demand side,
+ people might become worried about SD's fiscal stability and be less confident in their ability to repay.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here is a deliberately sloppy graph for the case where S increases and D decreases.
+ Any graph is fine - hand-drawn,
+ doodled,
+ whatever,
+ as long as it matches the story they tell above.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename hw4q5.png
+	width 6cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And regarding the change in equilibrium:
+\end_layout
+
+\begin_layout Itemize
+If you said that Supply Increases and Demand decreases
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Price goes down,
+ interest rates go up,
+ and the change in quantity is technically ambiguous.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+If you said only that Supply Increases
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Price goes down,
+ interest rates go up,
+ and Quantity increases.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+If you said only Demand decreases
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Price goes down,
+ interest rates go up,
+ and Quantity decreases.
+\end_layout
+
+\end_deeper
 \end_body
 \end_document
