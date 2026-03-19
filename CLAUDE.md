@@ -17,6 +17,17 @@ sentences, clear reasoning, enough context that the note makes sense on its own
 months later. Bullet points are fine for lists of items, but each bullet should
 still read as a coherent thought.
 
+## Writing Conventions for Claude
+
+Do not drop articles ("a", "an", "the") from commit messages, prose, or any
+other written text. Write in complete, natural English rather than telegraphic
+shorthand. Dropping articles makes text read like a telegram and is especially
+noticeable in commit messages, which become part of the permanent project
+history. Before finalizing any commit message or written output, re-read it and
+check that every noun phrase that needs an article has one. Pay special
+attention to commit subject lines, where there's a temptation to compress —
+"Clean up redirect test" should be "Clean up the redirect test."
+
 ## How to Use This File
 
 - **Memories go here.** Any context, observations, or learned details about the
@@ -121,55 +132,43 @@ detailed audit of all these sites lives in `claude_audits.md` in this repo.
   identical files. `econ/teaching/3102/intertemporal/intertemporal/` is a
   duplicated subdirectory inside itself, complete with duplicate SVG images.
   One copy of each should be deleted.
-- [ ] Remove Windows copy-paste artifacts from the repo: files named things
+- [x] Remove Windows copy-paste artifacts from the repo: files named things
   like `consumerInteractive (2).html`, `LBDconcepts - Copy (2).html`,
   `LBDconcepts - Copy (3).html`, `twoPeriodEndowment (2).html`,
   `sakura copy.css`, `sakuraPink - Copy.css`. These are accidental duplicates
-  that add clutter.
-- [ ] Add `.lyx~`, `.lyx.emergency`, and `__pycache__/` to `.gitignore`, then
-  remove the ones already committed. There are dozens of LyX backup files in
-  `econ/research/` and `econ/tradeprelim/`, plus a Python bytecode cache in
-  `econ/research/ContagionThing/__pycache__/`.
-- [ ] Clean up or reorganize `econ/research/ContagionThing/`. This is the
-  messiest single directory — 80+ files including Python scripts, LyX drafts,
-  backup files, simulation output images, 28 `pasted*.png` screenshots with
-  no clear labels, and a `.graphml` file. It reads like a working directory
-  that was committed wholesale. Worth deciding what to keep vs archive.
-- [ ] Clean up the `styles/` directory — most of these files are dead weight.
+  that add clutter. **Done 2026-03-19.** Also removed two "- Copy" PNGs from
+  `ContagionThing/img/`. The mirrored headshot in `portraits/` was kept
+  intentionally.
+- [x] Add `.lyx~`, `.lyx.emergency`, and `__pycache__/` to `.gitignore`, then
+  remove the ones already committed. **Done 2026-03-19.** Added
+  `*.lyx.emergency` and `__pycache__/` to `.gitignore` (the `*.lyx~` rule was
+  already there). Untracked 19 `.lyx~` files, 1 `.lyx.emergency` file, and
+  1 `__pycache__/` directory using `git rm --cached`.
+- [ ] Migrate `econ/research/ContagionThing/` and `econ/research/farmingToy/`
+  to the `papersdrafts` repo. These are pre-git research working directories,
+  not teaching notes — they belong with the other paper drafts rather than in
+  the notes repo. ContagionThing is the messiest single directory (80+ files
+  including Python scripts, LyX drafts, simulation output images, 28
+  `pasted*.png` screenshots with no clear labels, and a `.graphml` file).
+- [x] Clean up the `styles/` directory — most of these files are dead weight.
+  **Done 2026-03-19.** Deleted 15 unreferenced CSS/SCSS files. The 6 actively
+  used stylesheets and `everythingbagel.css` (layout dependency) are retained.
 
-  Audited 2026-03-18. Of the 22 CSS/SCSS files in `styles/`, only 6 are
-  actually referenced by any HTML page in the repo. All of them are used
-  exclusively by the legacy pre-Jekyll HTML files; the Jekyll site itself
-  uses the JTD-RMW theme CSS and doesn't touch any of these.
+  **Correction:** `assets/css/extrabits.css` was originally flagged as
+  unreferenced, but it is actually imported by the JTD-RMW theme's main CSS
+  file at build time. It does not appear in any HTML `<link>` tag in this
+  repo, which is why the audit missed it. It should not be deleted.
 
-  **Actively used:**
-
-  | File | Pages | Notes |
-  |------|-------|-------|
-  | `sakura.css` | ~60 | The main workhorse — used by legacy HTML across `econ/` |
-  | `basic.css` | 1 | Only `index.html` |
-  | `basic_sakura.css` | ~8 | Trade prelim pages in `econ/tradeprelim/` |
-  | `sakuraBlue.css` | 3 | Jones macro prelim pages |
-  | `sakuraGreen.css` | 2 | Chari macro prelim pages |
-  | `sakuraPink.css` | 3 | Kehoe macro prelim pages |
-
-  The color variants are a fun detail — they're professor-specific theming
-  for the macro prelim study notes. Chari gets green, Kehoe gets pink,
-  Jones gets blue.
-
-  **Effectively dead (1):** `everythingbagel.css` is linked from
-  `_layouts/default_basic.html`, but no page in the repo uses that layout.
-
-  **Completely unreferenced — safe to delete (15):**
-  `TODOsakuraSolar.css`, `classless.css`, `everythingbagel-JTD.css`,
-  `everythingbagel-lists.css`, `main.scss`, `panfried.css`,
-  `sakura copy.css`, `sakura solarized test 2.css`,
-  `sakura-earthly.scss.txt`, `sakura-paper.scss`, `sakuraPink - Copy.css`,
-  `sakuraUMN.css`, `sakura_basic.css`, `style.css`, `sakura.css.map`.
-  Also `assets/css/extrabits.css` is unreferenced.
-- [ ] Rename or remove `font/sdfsdfds.ttf` — it's a keyboard-mash test font
-  filename that got committed. Either give it a real name or delete it if
-  it's not used.
+  The remaining `styles/` directory contains 7 files: `sakura.css`,
+  `basic.css`, `basic_sakura.css`, `sakuraBlue.css`, `sakuraGreen.css`,
+  `sakuraPink.css`, and `everythingbagel.css`. The color variants are
+  professor-specific theming for the macro prelim study notes (Chari gets
+  green, Kehoe gets pink, Jones gets blue).
+- [x] Rename or remove `font/sdfsdfds.ttf`. **Done 2026-03-19.** Deleted. Based
+  on the git history, it appears to have been an intermediate build of the
+  strippedCards font from the 2019 Samsung emoji workaround — it was added in
+  the same commit as updates to `strippedCards2.ttf` and `cardImages.html`,
+  and is nearly identical in file size (70,360 vs 70,396 bytes).
 
 ## Redirect Strategy Test (2026-03-19)
 
