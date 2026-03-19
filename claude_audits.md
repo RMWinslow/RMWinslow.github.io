@@ -686,8 +686,8 @@ Other standalone files (11 files):
 
 - [x] Index the websites that consume this theme as a remote theme. (Done — see the inventory below.)
 - [ ] Clean up or archive obsolete repos (e.g. `jtd-test-style`, `latexpagetest`, `just-the-docs-tweaked`, and any other repos that are no longer actively used).
-- [ ] Add `url: "https://www.rmwinslow.com"` to the **bib** site's `_config.yml`. Without it, the canonical URL and `og:url` meta tags use `http://` instead of `https://`, which is bad for SEO.
-- [ ] Add `author: Robert Winslow` to the **bib** site's `_config.yml`. Currently the `<meta property="author">` tag renders empty.
+- [x] ~~Add `url: "https://www.rmwinslow.com"` to the **bib** site's `_config.yml`.~~ Verified 2026-03-18: canonical and og:url now correctly use `https://www.rmwinslow.com/bib/`.
+- [x] ~~Add `author: Robert Winslow` to the **bib** site's `_config.yml`.~~ Verified 2026-03-18: author meta tag now reads "Robert Winslow".
 - [ ] Audit the other consuming sites (`games`, `RMWinslow.github.io`) for the same `url`/`author` gaps.
 - [ ] Fix the 11 navigation hierarchy issues found in the sitemap audit:
   - **posts**: Fix 4 orphaned parent refs (`"hidden"` x2, `"Media"`, `"_Media"`), rename one of the duplicate "Working from Home" pages, add missing `grand_parent` to "X in the ABCs" and "Visual Artists", remove or populate phantom parent "Unicode Characters".
