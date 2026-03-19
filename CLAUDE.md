@@ -71,7 +71,85 @@ detailed audit of all these sites lives in `claude_audits.md` in this repo.
   "Novels", "NES A-Z", "Web Fiction") use a nonexistent parent value like
   `"hidden"` or `"_Media"` to keep themselves out of the sidebar. That works
   but is fragile and unclear — `nav_exclude: true` is the intended mechanism.
+- [ ] Clean up duplicate directory trees in the legacy `econ/` area.
+  `econ/teaching/3102/typesetting/` and `econ/teaching/typesetting/` contain
+  identical files. `econ/teaching/3102/intertemporal/intertemporal/` is a
+  duplicated subdirectory inside itself, complete with duplicate SVG images.
+  One copy of each should be deleted.
+- [ ] Remove Windows copy-paste artifacts from the repo: files named things
+  like `consumerInteractive (2).html`, `LBDconcepts - Copy (2).html`,
+  `LBDconcepts - Copy (3).html`, `twoPeriodEndowment (2).html`,
+  `sakura copy.css`, `sakuraPink - Copy.css`. These are accidental duplicates
+  that add clutter.
+- [ ] Add `.lyx~`, `.lyx.emergency`, and `__pycache__/` to `.gitignore`, then
+  remove the ones already committed. There are dozens of LyX backup files in
+  `econ/research/` and `econ/tradeprelim/`, plus a Python bytecode cache in
+  `econ/research/ContagionThing/__pycache__/`.
+- [ ] Clean up or reorganize `econ/research/ContagionThing/`. This is the
+  messiest single directory — 80+ files including Python scripts, LyX drafts,
+  backup files, simulation output images, 28 `pasted*.png` screenshots with
+  no clear labels, and a `.graphml` file. It reads like a working directory
+  that was committed wholesale. Worth deciding what to keep vs archive.
+- [ ] Clean up the `styles/` directory — most of these files are dead weight.
+
+  Audited 2026-03-18. Of the 22 CSS/SCSS files in `styles/`, only 6 are
+  actually referenced by any HTML page in the repo. All of them are used
+  exclusively by the legacy pre-Jekyll HTML files; the Jekyll site itself
+  uses the JTD-RMW theme CSS and doesn't touch any of these.
+
+  **Actively used:**
+
+  | File | Pages | Notes |
+  |------|-------|-------|
+  | `sakura.css` | ~60 | The main workhorse — used by legacy HTML across `econ/` |
+  | `basic.css` | 1 | Only `index.html` |
+  | `basic_sakura.css` | ~8 | Trade prelim pages in `econ/tradeprelim/` |
+  | `sakuraBlue.css` | 3 | Jones macro prelim pages |
+  | `sakuraGreen.css` | 2 | Chari macro prelim pages |
+  | `sakuraPink.css` | 3 | Kehoe macro prelim pages |
+
+  The color variants are a fun detail — they're professor-specific theming
+  for the macro prelim study notes. Chari gets green, Kehoe gets pink,
+  Jones gets blue.
+
+  **Effectively dead (1):** `everythingbagel.css` is linked from
+  `_layouts/default_basic.html`, but no page in the repo uses that layout.
+
+  **Completely unreferenced — safe to delete (15):**
+  `TODOsakuraSolar.css`, `classless.css`, `everythingbagel-JTD.css`,
+  `everythingbagel-lists.css`, `main.scss`, `panfried.css`,
+  `sakura copy.css`, `sakura solarized test 2.css`,
+  `sakura-earthly.scss.txt`, `sakura-paper.scss`, `sakuraPink - Copy.css`,
+  `sakuraUMN.css`, `sakura_basic.css`, `style.css`, `sakura.css.map`.
+  Also `assets/css/extrabits.css` is unreferenced.
+- [ ] Rename or remove `font/sdfsdfds.ttf` — it's a keyboard-mash test font
+  filename that got committed. Either give it a real name or delete it if
+  it's not used.
+
+## Project Context — Research
+
+The job market paper ("How much did Bonus Unemployment Insurance Payments
+During the COVID Pandemic Depress Aggregate Employment?") is currently under
+review as of March 2026. Listed at `research/jmp.md`.
+
+Robert is no longer at UMN — the Econ Electives page (`econ/UMNelectives.md`)
+has been hidden from nav accordingly.
 
 ## Observations
 
-Nothing yet — add notes here as work progresses.
+There are two generations of interactive economics graphs in the repo, both
+nav-hidden but actively served:
+
+- **`3102/graphs.md`** is the current version, using kgjs (KineticGraphs).
+  It loads YML config files from `3102/graphs/*.yml` and renders them
+  client-side with `kg3d.0.2.6.js`. These support click-and-drag interaction.
+
+- **`3102/graphs2.md`** is the older version, using Highcharts. It embeds
+  the 9 HTML files in `3102/highcharts/` via iframes and provides standalone
+  links to each. These files are self-contained (no external CSS, no sakura)
+  and still functional. They're not orphaned legacy — they're intentionally
+  kept as a working fallback.
+
+The legacy `econ/` HTML files that use `sakura.css` are a separate matter
+entirely — those are pre-Jekyll study notes that aren't linked from anywhere
+in the current nav tree.

@@ -7,6 +7,7 @@ nav_order: 99
 parent: Notes
 layout: post
 has_children: false
+nav_exclude: true
 ---
 
 These are my notes on some of the undergraduate economics electives at UMN
