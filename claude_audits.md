@@ -769,3 +769,117 @@ These are potential audits that could be run across the theme and consuming site
 - **Search index size.** On large sites like `posts`, the Lunr search index (`search-data.json`) can get very large. Pages that don't need to be searchable could use `search_exclude: true` to trim it.
 
 Theme-level cleanup, accessibility, and performance items related to the theme's own code have been moved to the JTD-RMW repo's `CLAUDE.md`.
+
+---
+
+## Subdomain vs. Subdirectory: SEO Research Report
+
+**Decision (2026-03-19):** Deploy the notes repo at `www.rmwinslow.com/notes/`
+(subdirectory) rather than `notes.rmwinslow.com` (subdomain). The research
+below informed this decision.
+
+### Google Search Central — Redirects and URL Canonicalization
+
+**Source:** https://developers.google.com/search/docs/crawling-indexing/301-redirects
+
+> "Googlebot follows the redirect, and the indexing pipeline uses the redirect
+> as a **strong** signal that the redirect target should be canonical."
+
+> "Google Search interprets instant `meta refresh` redirects as permanent
+> redirects."
+
+> "One of the URLs will be the canonical; which one, depends on signals such as
+> whether the redirect was temporary or permanent. The other URL becomes an
+> _alternate name_ of the canonical URL."
+
+This confirms that `jekyll-redirect-from`'s instant meta refresh is treated as
+a permanent redirect by Google, and that the canonical URL consolidation will
+happen over time.
+
+### Semrush — Subdomain vs. Subdirectory
+
+**Source:** https://www.semrush.com/blog/subdomain-vs-subdirectory/
+
+> "Google treats subdomains as distinct websites. Which means they crawl and
+> index subdomains separately."
+
+> "Subdirectories are seen as part of the main domain."
+
+> "All the hard work you put into building backlinks is more likely to benefit
+> every piece of content under that main domain, including those in
+> subdirectories."
+
+> "Subdomains may not fully benefit from the backlinks the main domain has
+> garnered over the years."
+
+### Carnegie Mellon University — Web Best Practices
+
+**Source:** https://www.cmu.edu/web/best-practices/search-engine-optimization/subdomains-vs-subdirectories.html
+
+> "For net-new external-facing websites, subdirectories will provide the best
+> and fastest SEO authority."
+
+> "Subdirectories...carry the same weight and authority as the rest of
+> www.cmu.edu."
+
+> "Google often treats them as separate sites — SEO equity from cmu.edu may
+> not transfer."
+
+> "The SEO best-practice recommendation is to use subdirectories in most
+> instances."
+
+Particularly relevant: this is guidance from a major university about their own
+academic web properties — the same kind of site as Robert's.
+
+### Cloudflare Blog — Subdomains vs. Subdirectories Best Practices
+
+**Source:** https://blog.cloudflare.com/subdomains-vs-subdirectories-best-practices-workers-part-1/
+
+> "The subdirectory strategy concentrates your keywords onto a single domain
+> while the subdomain strategy spreads your keywords across multiple distinct
+> domains."
+
+> "Keywords are diluted across subdomains. Each additional subdomain decreases
+> the likelihood that any particular domain ranks in a given search."
+
+> "In a word, the subdirectory strategy results in better root domain authority.
+> Higher domain authority leads to better search rankings."
+
+### Search Engine Journal — John Mueller (Google) Quotes
+
+**Source:** https://www.searchenginejournal.com/google-treats-subdomains-subdirectories-john-mueller-says/254687/
+
+> "In general, we see these the same." — John Mueller, Google
+
+> "I would personally try to keep things together as much as possible." — John
+> Mueller, Google
+
+> "If you're like 'well I don't care either way' then I would just keep it
+> within the same site." — John Mueller, Google
+
+Google's official position is neutrality, but Mueller's personal recommendation
+leans toward subdirectories.
+
+### SE Ranking — 20,000 Keyword Study
+
+**Source:** https://seranking.com/blog/subdomains-vs-subdirectories-research/
+
+> "Subdomains account for just 3% of domain structures in SERPs and are only
+> prevalent in top positions in multilingual markets."
+
+> "Subdirectories are often considered the best option for international brands
+> targeting multiple locales. Our research reflects that assumption, with
+> subdirectories accounting for over 20% of the top three ranking positions."
+
+> "Ultimately, whichever option you choose can be successful if your site is
+> well optimised."
+
+### Summary
+
+| Factor | Subdirectory | Subdomain |
+|--------|-------------|-----------|
+| Domain authority inheritance | Automatic | Not guaranteed |
+| Backlink consolidation | All links benefit root domain | Links may not transfer |
+| Google's stated position | Treated the same | Treated the same |
+| Practical SERP evidence | Dominant in top positions | ~3% of top positions |
+| Recommended default | Yes (Mueller, CMU, Cloudflare, Semrush) | Only when technically necessary |

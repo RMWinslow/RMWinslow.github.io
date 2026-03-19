@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s https://www.rmwinslow.com/bib/)",
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Read(//c/Users/RMW/Documents/GitHub/RMWinslow.github.io/**)",
+      "Bash(done)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch",
+    ]
+  }
+}

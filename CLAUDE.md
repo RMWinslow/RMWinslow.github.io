@@ -62,6 +62,51 @@ detailed audit of all these sites lives in `claude_audits.md` in this repo.
   The notes are already a fairly self-contained collection under their own nav
   parent, so they might be a natural candidate for separation. Worth weighing
   whether the added repo overhead is justified by the organizational clarity.
+
+  **The main motivation** is gaining a third level of nav hierarchy. JTD only
+  supports three levels, and with Notes as a top-level section, the actual
+  content is squeezed into two. Moving notes to its own site makes
+  "Intermediate Macro Notes" a top-level parent with room to nest beneath it.
+
+  **Redirect strategy (decided 2026-03-18):** Use a consolidated redirect
+  directory in the main repo rather than scattering stubs at the original
+  paths. Each stub is a small .md file with an explicit `permalink` and
+  `redirect_to`, all kept in one folder:
+
+  ```yaml
+  # redirects/3102-topic-overview.md
+  ---
+  permalink: /3102/topic-overview
+  redirect_to: https://notes.rmwinslow.com/3102/topic-overview
+  ---
+  ```
+
+  Jekyll generates the redirect page at the original URL (single hop, no
+  chain). The template includes `<link rel="canonical">` and
+  `<meta name="robots" content="noindex">` which is what search engines
+  use to transfer link equity.
+
+  Use `redirects/` (no underscore) to avoid Jekyll's default `_`-prefixed
+  directory exclusion, or use `_redirects/` with `include: [_redirects]`
+  in `_config.yml`.
+
+  **Redirect test results (2026-03-19):** Confirmed working end-to-end.
+  See the "Redirect Strategy Test" section below for the full narrative.
+
+  **Scope after cleanup:** The `101/` and `202/` directories have been
+  removed (deleted and moved to Teaching-Notes respectively), and `330/`
+  has been moved to Teaching-Notes. This leaves only `3102/` content plus
+  `notes.md` and `econ/UMNelectives.md` to redirect — roughly 25-28 stubs
+  instead of the original 43.
+
+  Also consolidate the `mynotes` repo (currently on the `minimal-mistakes`
+  theme at a separate URL) into the new notes repo. This would bring all
+  of Robert's notes under one roof with a shared JTD-RMW theme.
+- [ ] Add a link back to the main site (www.rmwinslow.com) in each subsite's
+  navigation. The subsites (`posts`, `games`, `bib`, `circe`, and the future
+  `notes`) don't currently have an obvious way to get back to the root site.
+  JTD-RMW supports `nav_external_links` in `_config.yml` — the main site
+  already uses this for the Blog link.
 - [ ] Fix metadata on the CV files in `files/`. The PDFs there (e.g.
   "CV Robert Winslow - Job Market.pdf", "CV Robert Winslow.pdf",
   "CV - Robert Winslow - Jan 2025.docx") could use updated document properties
@@ -125,6 +170,64 @@ detailed audit of all these sites lives in `claude_audits.md` in this repo.
 - [ ] Rename or remove `font/sdfsdfds.ttf` — it's a keyboard-mash test font
   filename that got committed. Either give it a real name or delete it if
   it's not used.
+
+## Redirect Strategy Test (2026-03-19)
+
+As part of the plan to split the economics notes into their own repo, we needed
+to verify that the proposed redirect strategy actually works before committing
+to a full migration. The idea is simple: when the notes move to a new `notes`
+repo deployed at `www.rmwinslow.com/notes/`, redirect stubs in the main repo
+should seamlessly send visitors from the old URLs to the new ones. But "should
+work" and "does work" are different things, especially with GitHub Pages, Jekyll
+theme interactions, and `baseurl` pathing all in the mix. So we ran a minimum
+viable test.
+
+We created a small `notes` repo with `baseurl: /notes` in its `_config.yml`,
+a bare-bones `index.md` landing page, and a `test.md` page whose only purpose
+was to exist at `www.rmwinslow.com/notes/test` as a redirect target. On the
+main repo side, we created `redirects/test-redirect.md` — a file with nothing
+but `permalink: /test-redirect` and `redirect_to: /notes/test` in its
+frontmatter. The `redirects/` folder (no underscore prefix) was chosen so Jekyll
+would process it without needing any `include` directive in `_config.yml`. We
+then pushed both repos and waited for the GitHub Pages builds to complete.
+
+The results confirmed everything works as intended. Curling the redirect stub
+at `www.rmwinslow.com/test-redirect` returned a lightweight HTML page generated
+by `jekyll-redirect-from` with three redirect mechanisms: a JavaScript
+`location` assignment, an instant `<meta http-equiv="refresh">`, and a
+`<link rel="canonical">` pointing to the target. The page also included
+`<meta name="robots" content="noindex">` to keep the stub out of search
+indexes. GitHub Pages served this as a normal 200 response (not a 301 or 302),
+which is expected — GitHub Pages only serves static files, so the redirect
+happens client-side. Google treats instant meta refresh redirects as permanent
+redirects according to their own documentation, so this is fine for SEO
+purposes.
+
+Curling the target at `www.rmwinslow.com/notes/test` returned a fully rendered
+JTD-RMW themed page with all assets (CSS, JS, fonts) correctly resolving under
+the `/notes/` base path. The nav sidebar showed up, the search bar was present,
+MathJax loaded — the whole theme came through cleanly. The `baseurl: /notes`
+setting worked exactly as expected, and the notes repo is properly deployed as a
+subdirectory of the main domain rather than a subdomain.
+
+One detail worth noting: the `redirect_to` value was a relative path
+(`/notes/test`) rather than an absolute URL, and `jekyll-redirect-from`
+correctly expanded it to the full `https://www.rmwinslow.com/notes/test` URL in
+the generated redirect page. This means the redirect stubs can use site-relative
+paths, which is cleaner and more portable than hardcoding the full domain.
+
+The redirect is a single hop — there is no intermediate redirect or chain. A
+visitor hitting `/test-redirect` goes straight to `/notes/test` in one step.
+This was a key requirement to avoid redirect chains that slow down page loads
+and can confuse search engine crawlers.
+
+After verifying everything, we deleted the test files from both repos. The test
+confirmed that the redirect strategy described in the TODOs section above is
+sound and ready for the full migration whenever we're ready to move the `3102/`
+content over.
+
+The SEO research supporting the subdirectory deployment choice (over a subdomain)
+is documented in `claude_audits.md` at the end of the file.
 
 ## Project Context — Research
 
