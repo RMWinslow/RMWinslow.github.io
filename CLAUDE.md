@@ -135,6 +135,13 @@ review as of March 2026. Listed at `research/jmp.md`.
 Robert is no longer at UMN — the Econ Electives page (`econ/UMNelectives.md`)
 has been hidden from nav accordingly.
 
+The `101/` directory (Principles of Micro) has been deleted — it was just
+placeholders. The `202/` directory (Principles of Macro) has been moved to the
+private Teaching-Notes repo at `202/_legacy website draft notes (incorporate
+later)`. Only `inflation-costs.md` had real content; the other two pages were
+placeholders with extensive research notes hidden in HTML comments. This
+reduces the notes migration scope and eliminates two redirect stubs.
+
 ## Observations
 
 There are two generations of interactive economics graphs in the repo, both
