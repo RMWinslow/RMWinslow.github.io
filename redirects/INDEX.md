@@ -64,6 +64,43 @@ If a page is renamed or reorganized after migration:
 
 ---
 
+## Pre-migration checklist
+
+Things to do during the migration itself, beyond just moving files and
+creating stubs:
+
+- [ ] **Rewrite frontmatter hierarchy.** Every content page has
+  `parent: Intermediate Macro Notes` and `grand_parent: Notes`. In the notes
+  repo, the hierarchy changes: `topic-overview.md` becomes a top-level page
+  (remove its `parent: Notes`), and content pages drop `grand_parent: Notes`
+  entirely. This is the whole point of the migration — gaining a third nav
+  level — so the phantom parents (`_equilibrium.md`, `_measurement.md`) can
+  finally have children wired up beneath them.
+- [ ] **Remove `redirect_from` from `twoperiod-endowment.md`** in the notes
+  repo copy. The three legacy URLs (`/twoperiod-consumer/`,
+  `/3102/twoperiod-consumer/`, `/twoperiod-consumer`) are on the main domain
+  and are handled by redirect stubs in this repo. If left in the notes repo,
+  `jekyll-redirect-from` would generate redirects at `/notes/twoperiod-consumer/`
+  etc., which is wrong.
+- [ ] **Create `notes/index.md`** with content carried over from `notes.md`
+  (currently: "Here you can find my notes on teaching or other economic
+  subjects.").
+- [ ] **Delete `notes.md`** from the main repo after confirming the notes repo
+  serves `/notes/` correctly.
+- [ ] **Update link in `teaching/3102.md`.** It has a hardcoded absolute URL
+  to `https://www.rmwinslow.com/3102/topic-overview.html`. The redirect stub
+  will catch it, but update it to `/notes/3102/topic-overview` to avoid the
+  extra hop.
+- [ ] **Fix hardcoded URL in `measurement-money-slides.md`** — change
+  `https://www.rmwinslow.com/3102/img-money-snails.webp` to a relative path.
+- [ ] **Fix placeholder in `measurement-gdp.md`** — contains `IMAGEURLHERE`
+  as a broken image reference (noted in `claude_audits.md`).
+- [ ] **Verify `math: mathjax`** works for all pages. The notes repo config
+  sets this site-wide. The graphs pages load KaTeX explicitly — check for
+  conflicts post-migration.
+
+---
+
 ## Migration inventory
 
 Each page's location history is listed chronologically. The entry tagged

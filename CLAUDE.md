@@ -158,13 +158,13 @@ detailed audit of all these sites lives in `claude_audits.md` in this repo.
   "Novels", "NES A-Z", "Web Fiction") use a nonexistent parent value like
   `"hidden"` or `"_Media"` to keep themselves out of the sidebar. That works
   but is fragile and unclear — `nav_exclude: true` is the intended mechanism.
-- [ ] *(Part of notes migration)* Clean up duplicate directory trees in the
-  legacy `econ/` area. `econ/teaching/3102/typesetting/` and
-  `econ/teaching/typesetting/` contain identical files.
-  `econ/teaching/3102/intertemporal/intertemporal/` is a duplicated
-  subdirectory inside itself, complete with duplicate SVG images. One copy of
-  each should be deleted. These are in the 3102 content area, so clean them up
-  as part of the migration.
+- [ ] Clean up duplicate directory trees in the legacy `econ/teaching/` area.
+  `econ/teaching/3102/typesetting/` and `econ/teaching/typesetting/` contain
+  identical files. `econ/teaching/3102/intertemporal/intertemporal/` is a
+  duplicated subdirectory inside itself, complete with duplicate SVG images.
+  One copy of each should be deleted. These are legacy HTML files under
+  `econ/teaching/`, not the Jekyll `3102/` pages — they're independent of the
+  notes migration and stay in the main repo.
 - [x] Remove Windows copy-paste artifacts from the repo: files named things
   like `consumerInteractive (2).html`, `LBDconcepts - Copy (2).html`,
   `LBDconcepts - Copy (3).html`, `twoPeriodEndowment (2).html`,
