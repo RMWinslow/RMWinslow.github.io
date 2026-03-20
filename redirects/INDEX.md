@@ -271,12 +271,124 @@ stubs if anyone has bookmarked or linked to them.
 - Redirect stub: `redirects/202-inflation-costs.md`
 - The only content page from the 202 (Principles of Macro) section.
 
-### Pages pending migration to notes
+### Pending: full `econ/` migration to notes repo
 
-#### Econ Electives
-- [ ] `RMWinslow.github.io/econ/UMNelectives.md` → `/econ/UMNelectives`
-- nav_exclude: true. Will move to the notes repo as part of the full `econ/`
-  migration.
+All files below will move to the notes repo. Redirect stubs will be created
+for every HTML and MD content file. Assets (images, SVGs, LyX files, Excel
+files) move with their parent pages but don't need individual redirect stubs.
+
+#### `econ/UMNelectives.md`
+- `/econ/UMNelectives` → redirect stub needed
+- Jekyll markdown page, nav_exclude: true.
+
+#### `econ/teaching/typesetting/` (3 HTML + 5 PNG)
+- `/econ/teaching/typesetting/latexMath.html` → redirect stub needed
+- `/econ/teaching/typesetting/lyxTutorial.html` → redirect stub needed
+- `/econ/teaching/typesetting/typesettingSoftware.html` → redirect stub needed
+- Assets: 5 PNGs (MSWordEqn, MSWordMathMode, lyxEnvironments, lyxEqn, lyxMathMode)
+- Note: `econ/teaching/3102/typesetting/` also has copies of the same 5 PNGs;
+  those are orphaned now that the duplicate HTML files have been deleted.
+
+#### `econ/teaching/3012.html`
+- `/econ/teaching/3012.html` → redirect stub needed
+- Likely a typo for 3102. Single standalone file.
+
+#### `econ/teaching/3102/equilibrium/` (5 HTML + 2 PNG)
+- `/econ/teaching/3102/equilibrium/consumer.html` → redirect stub needed
+- `/econ/teaching/3102/equilibrium/consumerInteractive.html` → redirect stub needed
+- `/econ/teaching/3102/equilibrium/equilibrium.html` → redirect stub needed
+- `/econ/teaching/3102/equilibrium/firm.html` → redirect stub needed
+- `/econ/teaching/3102/equilibrium/solving.html` → redirect stub needed
+- Assets: bigE.png, star.png
+
+#### `econ/teaching/3102/interactive/` (10 HTML + 4 PNG)
+- `/econ/teaching/3102/interactive/ConsumerAndProducerInteractive.html` → redirect stub needed
+- `/econ/teaching/3102/interactive/OnePeriodEquilibiriumInteractive.html` → redirect stub needed
+- `/econ/teaching/3102/interactive/consumerInteractive.html` → redirect stub needed
+- `/econ/teaching/3102/interactive/exampleInteractive.html` → redirect stub needed
+- `/econ/teaching/3102/interactive/interactivegraphs.html` → redirect stub needed
+- `/econ/teaching/3102/interactive/producerInteractive.html` → redirect stub needed
+- `/econ/teaching/3102/interactive/solowInteractive.html` → redirect stub needed
+- `/econ/teaching/3102/interactive/twoPeriodEndowment.html` → redirect stub needed
+- `/econ/teaching/3102/interactive/twoPeriodEndowmentWithBorrowingLimits.html` → redirect stub needed
+- `/econ/teaching/3102/interactive/twoPeriodEndowmentWithDifferentRates.html` → redirect stub needed
+- Assets: bigE.png, smallE.png, star.png, star2.png
+
+#### `econ/teaching/3102/intertemporal/` (6 HTML + 8 SVG + 1 PNG + 1 PY)
+- `/econ/teaching/3102/intertemporal/consumerProblemWithLabor.html` → redirect stub needed
+- `/econ/teaching/3102/intertemporal/creditFrictions.html` → redirect stub needed
+- `/econ/teaching/3102/intertemporal/firmProblem.html` → redirect stub needed
+- `/econ/teaching/3102/intertemporal/intertemporalCE_Definiton.html` → redirect stub needed
+- `/econ/teaching/3102/intertemporal/shifterExamples.html` → redirect stub needed
+- `/econ/teaching/3102/intertemporal/twoPeriodEndowment.html` → redirect stub needed
+- Assets: images/ (8 SVGs), bigE.png, star.png, pythonhLaborCurveGenerator.py
+
+#### `econ/teaching/3102/test/` (4 HTML + 2 PNG)
+- `/econ/teaching/3102/test/CEInteractive.html` → redirect stub needed
+- `/econ/teaching/3102/test/consumerInteractive.html` → redirect stub needed
+- `/econ/teaching/3102/test/exampleInteractive.html` → redirect stub needed
+- `/econ/teaching/3102/test/producerInteractive.html` → redirect stub needed
+- Assets: bigE.png, star.png
+
+#### `econ/teaching/3102psets/` (6 HTML + many SVG + 2 XLSX)
+- `/econ/teaching/3102psets/HW1_dataGraphs.html` → redirect stub needed
+- `/econ/teaching/3102psets/HW2_dataGraphs.html` → redirect stub needed
+- `/econ/teaching/3102psets/HWBCycles_old/dataResultsFlippedPercentDiff.html` → redirect stub needed
+- `/econ/teaching/3102psets/HWBCycles_old/dataResultsOG.html` → redirect stub needed
+- `/econ/teaching/3102psets/HWBCycles_old/dataResultsOnlyImages.html` → redirect stub needed
+- `/econ/teaching/3102psets/HWBCycles_old/week9solutions.html` → redirect stub needed
+- Assets: HW1_GrowthGraphs/ (60 SVGs), HW2_BCycleGraphs/ (60 SVGs),
+  HWBCycles_old/ (72 SVGs + 2 XLSX)
+
+#### `econ/macroprelim/` (12 HTML + 11 PNG)
+- `/econ/macroprelim/prelimindex.html` → redirect stub needed
+- `/econ/macroprelim/roadmapTODO.html` → redirect stub needed
+- `/econ/macroprelim/Chari/privatemoney.html` → redirect stub needed
+- `/econ/macroprelim/Chari/productionrisk.html` → redirect stub needed
+- `/econ/macroprelim/Chari/sustainabledebt.html` → redirect stub needed
+- `/econ/macroprelim/Concepts/envelope.html` → redirect stub needed
+- `/econ/macroprelim/Concepts/flowchartkey/FlowChartKey.html` → redirect stub needed
+- `/econ/macroprelim/Jones/HumanCapital.html` → redirect stub needed
+- `/econ/macroprelim/Jones/dynamicprogramming.html` → redirect stub needed
+- `/econ/macroprelim/Kehoe/Search.html` → redirect stub needed
+- `/econ/macroprelim/Kehoe/crossingProof.html` → redirect stub needed
+- `/econ/macroprelim/Kehoe/dp.html` → redirect stub needed
+- Assets: Chari/FriedmanRule.png, Concepts/flowchartkey/ (6 PNGs),
+  Kehoe/ (KehoeSearchLabels.png, laser1-3.png)
+
+#### `econ/tradeprelim/` (15 HTML + 3 LyX + 3 LyX~)
+- `/econ/tradeprelim/prelimindex.html` → redirect stub needed
+- `/econ/tradeprelim/amador/multipleborrowers.html` → redirect stub needed
+- `/econ/tradeprelim/fitzgerald/armingtongravity.html` → redirect stub needed
+- `/econ/tradeprelim/fitzgerald/melitzottaviano.html` → redirect stub needed
+- `/econ/tradeprelim/fitzgerald/melitzottaviano/melitzottaviano.html` → redirect stub needed
+- `/econ/tradeprelim/fitzgerald/melitzottaviano_problem.html` → redirect stub needed
+- `/econ/tradeprelim/fitzgerald/melitzottaviano_solution.html` → redirect stub needed
+- `/econ/tradeprelim/kehoe/LBD/LBDconcepts.html` → redirect stub needed
+- `/econ/tradeprelim/kehoe/LBD/LBDprelim.html` → redirect stub needed
+- `/econ/tradeprelim/kehoe/LBD/LBDprelimSolutionA.html` → redirect stub needed
+- `/econ/tradeprelim/kehoe/hecksherohlin.html` → redirect stub needed
+- `/econ/tradeprelim/kehoe/learningbydoing.html` → redirect stub needed
+- `/econ/tradeprelim/kehoe/monopolisticcompetition.html` → redirect stub needed
+- `/econ/tradeprelim/kehoe/self-fulfillingdebt.html` → redirect stub needed
+- Note: `econ/tradeprelim/kehoe/LBD/` was listed as 3 HTML in the earlier
+  exploration but there are actually 3 HTML files plus LyX working files.
+- Assets: LyX files (amador/EatonG notes.lyx, fitzgerald/mellitz work.lyx,
+  kehoe/debtcrisiswork.lyx, kehoe/hecksherwork.lyx) and LyX backup files
+
+#### `econ/nonsense/mathsymbols.html`
+- `/econ/nonsense/mathsymbols.html` → redirect stub needed
+
+#### `econ/presentations/` (2 HTML + many SVG/PNG)
+- `/econ/presentations/biglisthtml.html` → redirect stub needed
+- `/econ/presentations/percolationSlides.html` → redirect stub needed
+- Assets: ~40 SVGs and PNGs (graph theory diagrams for the percolation talk)
+
+---
+
+**Redirect stub count for `econ/` migration:** 66 stubs total
+- 1 MD file (UMNelectives)
+- 65 HTML files
 
 ### Underscore-prefixed files (excluded from Jekyll build, no redirect stubs)
 
