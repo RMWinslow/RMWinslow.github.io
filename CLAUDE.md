@@ -157,15 +157,11 @@ detailed audit of all these sites lives in `claude_audits.md` in this repo.
   `*.lyx.emergency` and `__pycache__/` to `.gitignore` (the `*.lyx~` rule was
   already there). Untracked 19 `.lyx~` files, 1 `.lyx.emergency` file, and
   1 `__pycache__/` directory using `git rm --cached`.
-- [ ] *(Best done after notes migration)* Migrate
-  `econ/research/ContagionThing/` and `econ/research/farmingToy/` to the
-  `papersdrafts` repo. These are pre-git research working directories, not
-  teaching notes — they belong with the other paper drafts rather than in the
-  notes repo. ContagionThing is the messiest single directory (80+ files
-  including Python scripts, LyX drafts, simulation output images, 28
-  `pasted*.png` screenshots with no clear labels, and a `.graphml` file).
-  Best to do this after the notes migration so we're not reorganizing the same
-  directory tree twice.
+- [x] Migrate `econ/research/` to the `papersdrafts` repo. **Done 2026-03-19.**
+  The entire `econ/research/` directory (ContagionThing, farmingToy, arrowroot,
+  FIFA, and loose files) was moved to `papersdrafts/research/`. These were
+  pre-git and 2020-era research working files, not teaching notes. A migration
+  note with the original commit history link is included in the destination.
 - [x] Clean up the `styles/` directory — most of these files are dead weight.
   **Done 2026-03-19.** Deleted 15 unreferenced CSS/SCSS files. The 6 actively
   used stylesheets and `everythingbagel.css` (layout dependency) are retained.
