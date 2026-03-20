@@ -148,6 +148,11 @@ detailed audit of all these sites lives in `claude_audits.md` in this repo.
     while the repo handles the public-facing presentation and personal notes.
   - Whatever the new structure is, it should still allow for Robert's own
     reading notes and annotations on each paper.
+- [ ] Update the main site README to index the subsites. Right now there's no
+  central listing of all the repos that make up the full website (`posts`,
+  `bib`, `games`, `circe`, `notes`, and the main repo itself). The README
+  should explain how the pieces fit together so someone (or a future Claude
+  session) can orient quickly.
 - [ ] In the `posts` repo, replace the orphaned-parent hack for hiding pages
   with proper `nav_exclude: true`. Four pages ("Games Free with Amazon Prime",
   "Novels", "NES A-Z", "Web Fiction") use a nonexistent parent value like

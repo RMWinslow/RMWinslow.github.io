@@ -90,6 +90,9 @@ tracked here for completeness but grouped separately.
   `index.md` takes over this URL. During migration, delete `notes.md` from
   the main repo. No redirect stub needed — verify that `/notes` resolves
   correctly once the notes repo is deployed.
+- **Content to carry over:** The current `notes.md` says "Here you can find my
+  notes on teaching or other economic subjects." The notes repo's `index.md`
+  should incorporate this (or an updated version) as its landing page content.
 
 ### Parent pages (second level in notes repo)
 
@@ -231,6 +234,9 @@ stubs if anyone has bookmarked or linked to them.
 - [ ] `notes/3102/measurement-money-slides.md` → `/notes/3102/measurement-money-slides` `[current]`
 - Redirect stub: `redirects/3102-measurement-money-slides.md`
 - nav_exclude: true, uses remark_slides layout
+- **Post-migration fix needed:** Contains one hardcoded absolute URL
+  (`https://www.rmwinslow.com/3102/img-money-snails.webp`) that will need
+  updating to a relative path or the new `/notes/` prefix.
 
 ### Pages not migrating to notes
 
