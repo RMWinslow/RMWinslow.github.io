@@ -109,6 +109,32 @@ of all these sites lives in `claude_audits.md` in this repo.
 
   **Still TODO:** Consolidate the `mynotes` repo (currently on the
   `minimal-mistakes` theme at a separate URL) into the notes repo.
+- [ ] Migrate the entire `econ/` directory to the notes repo. The remaining
+  contents are all economics teaching and study materials: `econ/teaching/`
+  (legacy HTML interactive graphs and problem sets for 3102),
+  `econ/macroprelim/` (macro prelim study notes), `econ/tradeprelim/` (trade
+  prelim study notes), `econ/UMNelectives.md` (hidden nav page),
+  `econ/nonsense/mathsymbols.html`, and `econ/presentations/`. These are
+  pre-Jekyll HTML files without frontmatter — they don't need redirect stubs
+  (they're not in the nav/search index), but they should live in the notes
+  repo since that's where the economics content is consolidating. The
+  duplicate directory trees (`econ/teaching/3102/typesetting/` vs
+  `econ/teaching/typesetting/`, and the nested
+  `econ/teaching/3102/intertemporal/intertemporal/`) should be deduplicated
+  as part of this move. The `202/inflation-costs.md` page was already
+  migrated on 2026-03-20.
+- [x] Move the CSS files in `styles/` into `assets/css/` and update all
+  references. **Done 2026-03-20.** All 7 stylesheets moved to `assets/css/`.
+  All 65 HTML files under `econ/` were updated to use root-relative paths
+  (`/assets/css/...`), which also fixes the ~15 broken relative paths
+  identified in the audit. `index.html` and `_layouts/default_basic.html`
+  were updated as well. No subsites successfully referenced these stylesheets
+  — the two cross-repo references in the `games` repo
+  (`cardImages.html` → `sakura.css`, `randomWords.html` → `everythingbagel.css`)
+  were already broken and remain so (they point at a `styles/` directory that
+  doesn't exist in that repo). The `econ/presentations/percolationSlides.html`
+  Reveal.js references (`styles/reveal/`) were already broken (no such
+  directory ever existed) and are unrelated to these stylesheets.
 - [ ] *(Best done after notes migration)* Add a link back to the main site
   (www.rmwinslow.com) in each subsite's navigation. The subsites (`posts`,
   `games`, `bib`, `circe`, and the future `notes`) don't currently have an
@@ -149,9 +175,8 @@ of all these sites lives in `claude_audits.md` in this repo.
   `econ/teaching/3102/typesetting/` and `econ/teaching/typesetting/` contain
   identical files. `econ/teaching/3102/intertemporal/intertemporal/` is a
   duplicated subdirectory inside itself, complete with duplicate SVG images.
-  One copy of each should be deleted. These are legacy HTML files under
-  `econ/teaching/`, not the Jekyll `3102/` pages — they're independent of the
-  notes migration and stay in the main repo.
+  One copy of each should be deleted. Should be done as part of the `econ/`
+  migration to the notes repo.
 - [x] Remove Windows copy-paste artifacts from the repo: files named things
   like `consumerInteractive (2).html`, `LBDconcepts - Copy (2).html`,
   `LBDconcepts - Copy (3).html`, `twoPeriodEndowment (2).html`,
@@ -178,11 +203,10 @@ of all these sites lives in `claude_audits.md` in this repo.
   file at build time. It does not appear in any HTML `<link>` tag in this
   repo, which is why the audit missed it. It should not be deleted.
 
-  The remaining `styles/` directory contains 7 files: `sakura.css`,
-  `basic.css`, `basic_sakura.css`, `sakuraBlue.css`, `sakuraGreen.css`,
-  `sakuraPink.css`, and `everythingbagel.css`. The color variants are
-  professor-specific theming for the macro prelim study notes (Chari gets
-  green, Kehoe gets pink, Jones gets blue).
+  These 7 files were subsequently moved from `styles/` to `assets/css/` on
+  2026-03-20. The color variants are professor-specific theming for the
+  macro prelim study notes (Chari gets green, Kehoe gets pink, Jones gets
+  blue).
 - [x] Rename or remove `font/sdfsdfds.ttf`. **Done 2026-03-19.** Deleted. Based
   on the git history, it appears to have been an intermediate build of the
   strippedCards font from the 2019 Samsung emoji workaround — it was added in

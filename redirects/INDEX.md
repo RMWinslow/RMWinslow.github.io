@@ -263,12 +263,20 @@ stubs if anyone has bookmarked or linked to them.
   (`https://www.rmwinslow.com/3102/img-money-snails.webp`) that will need
   updating to a relative path or the new `/notes/` prefix.
 
-### Pages not migrating to notes
+### Pages migrated on 2026-03-20
+
+#### The Costs of Inflation
+- [ ] `RMWinslow.github.io/202/inflation-costs.md` → `/202/inflation-costs` `[pre-migration]`
+- [ ] `notes/202/inflation-costs.md` → `/notes/202/inflation-costs` `[current]`
+- Redirect stub: `redirects/202-inflation-costs.md`
+- The only content page from the 202 (Principles of Macro) section.
+
+### Pages pending migration to notes
 
 #### Econ Electives
 - [ ] `RMWinslow.github.io/econ/UMNelectives.md` → `/econ/UMNelectives`
-- nav_exclude: true. Robert is no longer at UMN. This page stays in the main
-  repo, hidden from nav. No redirect needed.
+- nav_exclude: true. Will move to the notes repo as part of the full `econ/`
+  migration.
 
 ### Underscore-prefixed files (excluded from Jekyll build, no redirect stubs)
 
