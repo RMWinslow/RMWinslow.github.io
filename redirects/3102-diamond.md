@@ -1,0 +1,4 @@
+---
+permalink: /3102/diamond
+redirect_to: /notes/3102/diamond
+---
