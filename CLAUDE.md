@@ -28,6 +28,11 @@ check that every noun phrase that needs an article has one. Pay special
 attention to commit subject lines, where there's a temptation to compress —
 "Clean up redirect test" should be "Clean up the redirect test."
 
+Commit messages should explain reasoning and motivation ("why"), not restate
+the diff ("what"). A good commit message reads like a short note to a future
+reader explaining the decision, not a changelog entry listing which files
+changed.
+
 When migrating or reorganizing files, separate the mechanical move from any
 edits to the moved files. First commit the files with their original content
 and structure preserved exactly, then commit the modifications (frontmatter
@@ -87,14 +92,18 @@ of all these sites lives in `claude_audits.md` in this repo.
   abstracts.
 - [x] Split the notes section out into its own subsite. **Done 2026-03-19.**
   The `3102/` directory and `notes.md` have been moved to the `notes` repo,
-  which deploys at `www.rmwinslow.com/notes/`. 26 redirect stubs in
+  which deploys at `www.rmwinslow.com/notes/`. The directory was subsequently
+  renamed from `3102/` to `302/` on 2026-03-20, so the notes now live at
+  `notes/302/` and are served at `/notes/302/...`. The 26 redirect stubs in
   `redirects/` cover all the old URLs (21 content pages, 3 nav-hidden pages,
-  2 legacy twoperiod-consumer aliases). The nav hierarchy was restructured so
-  that `topic-overview.md` is a top-level parent with room for a third level.
-  See `redirects/INDEX.md` for the full inventory and validation procedure.
+  2 legacy twoperiod-consumer aliases), and the notes repo pages also have
+  `redirect_from` entries covering the intermediate `/notes/3102/...` URLs.
+  The nav hierarchy was restructured so that `topic-overview.md` is a
+  top-level parent with room for a third level. See `redirects/INDEX.md` for
+  the full inventory and validation procedure.
 
   The redirect strategy uses site-relative paths (e.g.
-  `redirect_to: /notes/3102/topic-overview`) and `jekyll-redirect-from`
+  `redirect_to: /notes/302/topic-overview`) and `jekyll-redirect-from`
   generates single-hop client-side redirects with `noindex` and `canonical`
   tags. The test from 2026-03-19 confirmed this works end-to-end.
 
@@ -232,7 +241,7 @@ and can confuse search engine crawlers.
 
 After verifying everything, we deleted the test files from both repos. The test
 confirmed that the redirect strategy described in the TODOs section above is
-sound and ready for the full migration whenever we're ready to move the `3102/`
+sound and ready for the full migration whenever we're ready to move the
 content over.
 
 The SEO research supporting the subdirectory deployment choice (over a subdomain)
@@ -259,15 +268,16 @@ reduces the notes migration scope and eliminates two redirect stubs.
 There are two generations of interactive economics graphs in the repo, both
 nav-hidden but actively served:
 
-- **`3102/graphs.md`** is the current version, using kgjs (KineticGraphs).
-  It loads YML config files from `3102/graphs/*.yml` and renders them
-  client-side with `kg3d.0.2.6.js`. These support click-and-drag interaction.
+- **`302/graphs.md`** (in the notes repo) is the current version, using kgjs
+  (KineticGraphs). It loads YML config files from `302/graphs/*.yml` and
+  renders them client-side with `kg3d.0.2.6.js`. These support click-and-drag
+  interaction.
 
-- **`3102/graphs2.md`** is the older version, using Highcharts. It embeds
-  the 9 HTML files in `3102/highcharts/` via iframes and provides standalone
-  links to each. These files are self-contained (no external CSS, no sakura)
-  and still functional. They're not orphaned legacy — they're intentionally
-  kept as a working fallback.
+- **`302/graphs2.md`** (in the notes repo) is the older version, using
+  Highcharts. It embeds the 9 HTML files in `302/highcharts/` via iframes and
+  provides standalone links to each. These files are self-contained (no
+  external CSS, no sakura) and still functional. They're not orphaned legacy —
+  they're intentionally kept as a working fallback.
 
 The legacy `econ/` HTML files that use `sakura.css` are a separate matter
 entirely — those are pre-Jekyll study notes that aren't linked from anywhere
