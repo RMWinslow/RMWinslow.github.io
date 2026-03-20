@@ -33,3 +33,18 @@ year.
 [pdf link](pdf/MEDBI22_metrics_comparison.pdf)
 
 <!--TODO: Post Link to Code-->
+
+<!--TODO: Two follow-up items to write up and mention on this page:
+
+1. A letter about how most of the predictive signals from the competition
+   variables are absorbed by past performance / current employment status.
+   Essentially, once you know whether someone is currently working, the
+   other variables add relatively little predictive power.
+
+2. A note that while I used a lot of small bespoke tricks to eke out a
+   competitive edge, Microsoft's InterpretML library (specifically its
+   Explainable Boosting Machine) basically implements all of them and
+   achieves similar performance out of the box. Worth acknowledging as
+   a practical recommendation for anyone trying to replicate this kind
+   of work.
+-->

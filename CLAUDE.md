@@ -55,13 +55,22 @@ detailed audit of all these sites lives in `claude_audits.md` in this repo.
 
 ## TODOs
 
-- [ ] Fix 3 phantom parents in this repo: "Competitive Equilibrium",
-  "Aggregate Measurement", and "Money and Banking" all have `has_children: true`
-  but no child pages reference them.
-- [ ] Review the 31 broken internal links identified in `claude_audits.md` for
-  this site (mostly legacy HTML files with wrong relative paths to `sakura.css`).
-- [ ] Consider adding `search_exclude: true` to the 104 legacy HTML files that
-  lack frontmatter, to keep them out of the search index.
+- [ ] *(Resolves with notes migration)* Fix 3 phantom parents in this repo:
+  "Competitive Equilibrium" and "Aggregate Measurement" have
+  `has_children: true` but no child pages reference them. This is because the
+  intended children can't be nested properly without a third nav level, which
+  is the whole motivation for the migration. "Money and Banking" was listed in
+  the original audit but `teaching/330.md` already has `has_children: false`,
+  so that one may have been fixed or was a false positive.
+- [ ] *(Best done after notes migration)* Review the 31 broken internal links
+  identified in `claude_audits.md` for this site (mostly legacy HTML files with
+  wrong relative paths to `sakura.css`). Many of these files are in the 3102
+  tree that's moving to the notes repo, so fixing paths now would be wasted
+  effort.
+- [ ] *(Best done after notes migration)* Consider adding `search_exclude: true`
+  to the 104 legacy HTML files that lack frontmatter, to keep them out of the
+  search index. Many are in the 3102 tree — better to decide what to do with
+  them once the scope of what stays in the main repo is clearer.
 - [ ] Create markdown-based posts for research projects instead of just hosting
   PDFs. The idea is to write shorter, more approachable descriptions of each
   research project in natural language — something a visitor can actually read
@@ -113,11 +122,13 @@ detailed audit of all these sites lives in `claude_audits.md` in this repo.
   Also consolidate the `mynotes` repo (currently on the `minimal-mistakes`
   theme at a separate URL) into the new notes repo. This would bring all
   of Robert's notes under one roof with a shared JTD-RMW theme.
-- [ ] Add a link back to the main site (www.rmwinslow.com) in each subsite's
-  navigation. The subsites (`posts`, `games`, `bib`, `circe`, and the future
-  `notes`) don't currently have an obvious way to get back to the root site.
-  JTD-RMW supports `nav_external_links` in `_config.yml` — the main site
-  already uses this for the Blog link.
+- [ ] *(Best done after notes migration)* Add a link back to the main site
+  (www.rmwinslow.com) in each subsite's navigation. The subsites (`posts`,
+  `games`, `bib`, `circe`, and the future `notes`) don't currently have an
+  obvious way to get back to the root site. JTD-RMW supports
+  `nav_external_links` in `_config.yml` — the main site already uses this for
+  the Blog link. Makes sense to do this when setting up the notes repo's
+  config anyway.
 - [ ] Fix metadata on the CV files in `files/`. The PDFs there (e.g.
   "CV Robert Winslow - Job Market.pdf", "CV Robert Winslow.pdf",
   "CV - Robert Winslow - Jan 2025.docx") could use updated document properties
@@ -127,11 +138,13 @@ detailed audit of all these sites lives in `claude_audits.md` in this repo.
   "Novels", "NES A-Z", "Web Fiction") use a nonexistent parent value like
   `"hidden"` or `"_Media"` to keep themselves out of the sidebar. That works
   but is fragile and unclear — `nav_exclude: true` is the intended mechanism.
-- [ ] Clean up duplicate directory trees in the legacy `econ/` area.
-  `econ/teaching/3102/typesetting/` and `econ/teaching/typesetting/` contain
-  identical files. `econ/teaching/3102/intertemporal/intertemporal/` is a
-  duplicated subdirectory inside itself, complete with duplicate SVG images.
-  One copy of each should be deleted.
+- [ ] *(Part of notes migration)* Clean up duplicate directory trees in the
+  legacy `econ/` area. `econ/teaching/3102/typesetting/` and
+  `econ/teaching/typesetting/` contain identical files.
+  `econ/teaching/3102/intertemporal/intertemporal/` is a duplicated
+  subdirectory inside itself, complete with duplicate SVG images. One copy of
+  each should be deleted. These are in the 3102 content area, so clean them up
+  as part of the migration.
 - [x] Remove Windows copy-paste artifacts from the repo: files named things
   like `consumerInteractive (2).html`, `LBDconcepts - Copy (2).html`,
   `LBDconcepts - Copy (3).html`, `twoPeriodEndowment (2).html`,
@@ -144,12 +157,15 @@ detailed audit of all these sites lives in `claude_audits.md` in this repo.
   `*.lyx.emergency` and `__pycache__/` to `.gitignore` (the `*.lyx~` rule was
   already there). Untracked 19 `.lyx~` files, 1 `.lyx.emergency` file, and
   1 `__pycache__/` directory using `git rm --cached`.
-- [ ] Migrate `econ/research/ContagionThing/` and `econ/research/farmingToy/`
-  to the `papersdrafts` repo. These are pre-git research working directories,
-  not teaching notes — they belong with the other paper drafts rather than in
-  the notes repo. ContagionThing is the messiest single directory (80+ files
+- [ ] *(Best done after notes migration)* Migrate
+  `econ/research/ContagionThing/` and `econ/research/farmingToy/` to the
+  `papersdrafts` repo. These are pre-git research working directories, not
+  teaching notes — they belong with the other paper drafts rather than in the
+  notes repo. ContagionThing is the messiest single directory (80+ files
   including Python scripts, LyX drafts, simulation output images, 28
   `pasted*.png` screenshots with no clear labels, and a `.graphml` file).
+  Best to do this after the notes migration so we're not reorganizing the same
+  directory tree twice.
 - [x] Clean up the `styles/` directory — most of these files are dead weight.
   **Done 2026-03-19.** Deleted 15 unreferenced CSS/SCSS files. The 6 actively
   used stylesheets and `everythingbagel.css` (layout dependency) are retained.
