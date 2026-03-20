@@ -28,6 +28,12 @@ check that every noun phrase that needs an article has one. Pay special
 attention to commit subject lines, where there's a temptation to compress —
 "Clean up redirect test" should be "Clean up the redirect test."
 
+When migrating or reorganizing files, separate the mechanical move from any
+edits to the moved files. First commit the files with their original content
+and structure preserved exactly, then commit the modifications (frontmatter
+rewrites, link fixes, etc.) as a separate change. This makes each commit
+independently reviewable and keeps the move diffable.
+
 ## How to Use This File
 
 - **Memories go here.** Any context, observations, or learned details about the
