@@ -50,18 +50,20 @@ Just the Docs). The site contains teaching materials, research pages, and notes
 primarily related to economics.
 
 There are several sibling repos that share the same theme: `posts` (blog),
-`bib` (bibliography), `games` (game rules), and `circe` (literary text). A
-detailed audit of all these sites lives in `claude_audits.md` in this repo.
+`bib` (bibliography), `games` (game rules), `circe` (literary text), and
+`notes` (economics teaching notes, deployed at `/notes/`). A detailed audit
+of all these sites lives in `claude_audits.md` in this repo.
 
 ## TODOs
 
-- [ ] *(Resolves with notes migration)* Fix 3 phantom parents in this repo:
+- [x] *(Resolves with notes migration)* Fix 3 phantom parents in this repo:
   "Competitive Equilibrium" and "Aggregate Measurement" have
-  `has_children: true` but no child pages reference them. This is because the
-  intended children can't be nested properly without a third nav level, which
-  is the whole motivation for the migration. "Money and Banking" was listed in
-  the original audit but `teaching/330.md` already has `has_children: false`,
-  so that one may have been fixed or was a false positive.
+  `has_children: true` but no child pages reference them. **Done 2026-03-19.**
+  These files moved to the notes repo, where `_equilibrium.md` and
+  `_measurement.md` now have `parent: Intermediate Macro Notes` and can have
+  children wired beneath them once they're ready to publish. "Money and
+  Banking" was a false positive (`teaching/330.md` already has
+  `has_children: false`).
 - [ ] *(Best done after notes migration)* Review the 31 broken internal links
   identified in `claude_audits.md` for this site (mostly legacy HTML files with
   wrong relative paths to `sakura.css`). Many of these files are in the 3102
@@ -77,51 +79,21 @@ detailed audit of all these sites lives in `claude_audits.md` in this repo.
   on the site — while still including nice images, key figures, and links to
   the full papers. Think of these as accessible summaries rather than formal
   abstracts.
-- [ ] Consider splitting the notes section out into its own subsite (a separate
-  repo with its own GitHub Pages deployment, like `posts`, `games`, etc.).
-  The notes are already a fairly self-contained collection under their own nav
-  parent, so they might be a natural candidate for separation. Worth weighing
-  whether the added repo overhead is justified by the organizational clarity.
+- [x] Split the notes section out into its own subsite. **Done 2026-03-19.**
+  The `3102/` directory and `notes.md` have been moved to the `notes` repo,
+  which deploys at `www.rmwinslow.com/notes/`. 26 redirect stubs in
+  `redirects/` cover all the old URLs (21 content pages, 3 nav-hidden pages,
+  2 legacy twoperiod-consumer aliases). The nav hierarchy was restructured so
+  that `topic-overview.md` is a top-level parent with room for a third level.
+  See `redirects/INDEX.md` for the full inventory and validation procedure.
 
-  **The main motivation** is gaining a third level of nav hierarchy. JTD only
-  supports three levels, and with Notes as a top-level section, the actual
-  content is squeezed into two. Moving notes to its own site makes
-  "Intermediate Macro Notes" a top-level parent with room to nest beneath it.
+  The redirect strategy uses site-relative paths (e.g.
+  `redirect_to: /notes/3102/topic-overview`) and `jekyll-redirect-from`
+  generates single-hop client-side redirects with `noindex` and `canonical`
+  tags. The test from 2026-03-19 confirmed this works end-to-end.
 
-  **Redirect strategy (decided 2026-03-18):** Use a consolidated redirect
-  directory in the main repo rather than scattering stubs at the original
-  paths. Each stub is a small .md file with an explicit `permalink` and
-  `redirect_to`, all kept in one folder:
-
-  ```yaml
-  # redirects/3102-topic-overview.md
-  ---
-  permalink: /3102/topic-overview
-  redirect_to: https://notes.rmwinslow.com/3102/topic-overview
-  ---
-  ```
-
-  Jekyll generates the redirect page at the original URL (single hop, no
-  chain). The template includes `<link rel="canonical">` and
-  `<meta name="robots" content="noindex">` which is what search engines
-  use to transfer link equity.
-
-  Use `redirects/` (no underscore) to avoid Jekyll's default `_`-prefixed
-  directory exclusion, or use `_redirects/` with `include: [_redirects]`
-  in `_config.yml`.
-
-  **Redirect test results (2026-03-19):** Confirmed working end-to-end.
-  See the "Redirect Strategy Test" section below for the full narrative.
-
-  **Scope after cleanup:** The `101/` and `202/` directories have been
-  removed (deleted and moved to Teaching-Notes respectively), and `330/`
-  has been moved to Teaching-Notes. This leaves only `3102/` content plus
-  `notes.md` and `econ/UMNelectives.md` to redirect — roughly 25-28 stubs
-  instead of the original 43.
-
-  Also consolidate the `mynotes` repo (currently on the `minimal-mistakes`
-  theme at a separate URL) into the new notes repo. This would bring all
-  of Robert's notes under one roof with a shared JTD-RMW theme.
+  **Still TODO:** Consolidate the `mynotes` repo (currently on the
+  `minimal-mistakes` theme at a separate URL) into the notes repo.
 - [ ] *(Best done after notes migration)* Add a link back to the main site
   (www.rmwinslow.com) in each subsite's navigation. The subsites (`posts`,
   `games`, `bib`, `circe`, and the future `notes`) don't currently have an
