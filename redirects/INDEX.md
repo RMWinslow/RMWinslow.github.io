@@ -82,13 +82,13 @@ tracked here for completeness but grouped separately.
 ### Top-level nav page
 
 #### Notes
-- [ ] `RMWinslow.github.io/notes_temp.md` → `/notes` `[pre-migration]`
+- [ ] `RMWinslow.github.io/notes.md` → `/notes` (original)
+- [ ] `RMWinslow.github.io/notes_temp.md` → `/notes_temp` (renamed for redirect test) `[pre-migration]`
 - [ ] `notes/index.md` → `/notes/` `[current]`
-- Redirect stub: `redirects/notes.md` (permalink: `/notes` → `/notes/`)
-- **Note:** This page was temporarily renamed from `notes.md` to
-  `notes_temp.md` during the redirect test. The original URL was `/notes`.
-  Since the notes repo deploys at `/notes/`, the root URL may not need a
-  redirect — it may resolve naturally. Verify during migration.
+- Redirect stub: probably not needed — the notes repo deploys at `/notes/`,
+  so the old `/notes` URL will be served by the new repo directly. The main
+  repo's `notes_temp.md` just needs to be deleted. Verify during migration
+  that `/notes` resolves correctly without a stub.
 
 ### Parent pages (second level in notes repo)
 
@@ -234,7 +234,7 @@ stubs if anyone has bookmarked or linked to them.
 ### Pages not migrating to notes
 
 #### Econ Electives
-- `RMWinslow.github.io/econ/UMNelectives.md` → `/econ/UMNelectives`
+- [ ] `RMWinslow.github.io/econ/UMNelectives.md` → `/econ/UMNelectives`
 - nav_exclude: true. Robert is no longer at UMN. This page stays in the main
   repo, hidden from nav. No redirect needed.
 
@@ -246,26 +246,26 @@ migration completeness. In the notes repo, they can be renamed (dropping the
 underscore) once they're ready to be published as real pages.
 
 #### Competitive Equilibrium (`_equilibrium.md`)
-- `RMWinslow.github.io/3102/_equilibrium.md` — not built `[pre-migration]`
-- `notes/3102/_equilibrium.md` — not built `[current]`
+- [ ] `RMWinslow.github.io/3102/_equilibrium.md` — not built `[pre-migration]`
+- [ ] `notes/3102/_equilibrium.md` — not built `[current]`
 - has_children: true (phantom — children to be wired up post-migration)
 
 #### Aggregate Measurement (`_measurement.md`)
-- `RMWinslow.github.io/3102/_measurement.md` — not built `[pre-migration]`
-- `notes/3102/_measurement.md` — not built `[current]`
+- [ ] `RMWinslow.github.io/3102/_measurement.md` — not built `[pre-migration]`
+- [ ] `notes/3102/_measurement.md` — not built `[current]`
 - has_children: true (phantom — children to be wired up post-migration)
 
 #### Balance of Payment (`_bop.md`)
-- `RMWinslow.github.io/3102/_bop.md` — not built `[pre-migration]`
-- `notes/3102/_bop.md` — not built `[current]`
+- [ ] `RMWinslow.github.io/3102/_bop.md` — not built `[pre-migration]`
+- [ ] `notes/3102/_bop.md` — not built `[current]`
 
 #### Money (`_money.md`)
-- `RMWinslow.github.io/3102/_money.md` — not built `[pre-migration]`
-- `notes/3102/_money.md` — not built `[current]`
+- [ ] `RMWinslow.github.io/3102/_money.md` — not built `[pre-migration]`
+- [ ] `notes/3102/_money.md` — not built `[current]`
 
 #### _solow.md
-- `RMWinslow.github.io/3102/_solow.md` — not built `[pre-migration]`
-- `notes/3102/_solow.md` — not built `[current]`
+- [ ] `RMWinslow.github.io/3102/_solow.md` — not built `[pre-migration]`
+- [ ] `notes/3102/_solow.md` — not built `[current]`
 - No YAML frontmatter at all — just a raw link dump.
 
 ### Asset directories (move with content, no redirect stubs needed)
@@ -285,9 +285,12 @@ markdown files.
 
 ## Summary counts
 
-- **Pages needing redirect stubs:** 23 (20 content pages + 1 parent page + 2 legacy alias stubs for twoperiod-consumer)
-- **Nav-hidden pages needing stubs:** 3
+- **Total redirect stubs to create:** 26
+  - 20 content pages
+  - 1 parent page (topic-overview)
+  - 3 nav-hidden pages (graphs, graphs2, money slides)
+  - 2 legacy alias stubs (twoperiod-consumer variants)
 - **Underscore-prefixed files (no stubs):** 5 (not built by Jekyll)
 - **Pages staying in main repo:** 1 (UMN Electives)
-- **Notes top-level:** 1 (may not need a stub — verify during migration)
+- **Notes top-level:** 1 (likely no stub needed — verify during migration)
 - **Asset files moving with content:** 72 (no stubs needed)
