@@ -133,6 +133,21 @@ detailed audit of all these sites lives in `claude_audits.md` in this repo.
   "CV Robert Winslow - Job Market.pdf", "CV Robert Winslow.pdf",
   "CV - Robert Winslow - Jan 2025.docx") could use updated document properties
   (title, author, dates) so they present cleanly when shared or indexed.
+- [ ] Revisit the organization of the `bib` repo. It worked well with a small
+  number of papers but didn't scale — the result is a mess. The publicly
+  indexed nature of it is nice (a browsable bibliography), but the current
+  structure needs rethinking. Some ideas:
+  - Use an AI-assisted workflow to standardize the file format across entries,
+    validate and clean up metadata, and identify natural groupings.
+  - Reorganize around research strains/topics as visible nav-level collections,
+    while making individual paper pages `nav_exclude: true` (so they exist and
+    are searchable, but don't clutter the sidebar).
+  - Investigate Zotero integration — can entries be round-tripped between the
+    bib repo and a Zotero library? Import from Zotero to generate pages, export
+    annotations back? This would let Zotero handle the bibliographic metadata
+    while the repo handles the public-facing presentation and personal notes.
+  - Whatever the new structure is, it should still allow for Robert's own
+    reading notes and annotations on each paper.
 - [ ] In the `posts` repo, replace the orphaned-parent hack for hiding pages
   with proper `nav_exclude: true`. Four pages ("Games Free with Amazon Prime",
   "Novels", "NES A-Z", "Web Fiction") use a nonexistent parent value like

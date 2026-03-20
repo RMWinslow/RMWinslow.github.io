@@ -18,7 +18,7 @@ Status
 
 [pdf link](pdf/jmp.pdf)
 
-
+<!--TODO: Mention the empirical extension to the job market paper.-->
 
 ### Abstract
 
