@@ -83,12 +83,13 @@ tracked here for completeness but grouped separately.
 
 #### Notes
 - [ ] `RMWinslow.github.io/notes.md` → `/notes` (original)
-- [ ] `RMWinslow.github.io/notes_temp.md` → `/notes_temp` (renamed for redirect test) `[pre-migration]`
+- [ ] `RMWinslow.github.io/notes_temp.md` → `/notes_temp` (temporary rename for redirect test, 2026-03-19)
+- [ ] `RMWinslow.github.io/notes.md` → `/notes` (renamed back, 2026-03-19) `[pre-migration]`
 - [ ] `notes/index.md` → `/notes/` `[current]`
-- Redirect stub: probably not needed — the notes repo deploys at `/notes/`,
-  so the old `/notes` URL will be served by the new repo directly. The main
-  repo's `notes_temp.md` just needs to be deleted. Verify during migration
-  that `/notes` resolves correctly without a stub.
+- **Not migrated — replaced.** The notes repo deploys at `/notes/` and its own
+  `index.md` takes over this URL. During migration, delete `notes.md` from
+  the main repo. No redirect stub needed — verify that `/notes` resolves
+  correctly once the notes repo is deployed.
 
 ### Parent pages (second level in notes repo)
 
