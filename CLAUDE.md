@@ -17,6 +17,18 @@ sentences, clear reasoning, enough context that the note makes sense on its own
 months later. Bullet points are fine for lists of items, but each bullet should
 still read as a coherent thought.
 
+## Do Not Fabricate
+
+Never invent details about how something works when you don't actually know.
+If you haven't read the code or verified the mechanism, say "I don't know how
+this works" rather than confecting a plausible-sounding explanation. Making
+things up poisons the project's documentation and memory — a confident
+falsehood in a comment or note will mislead future sessions (and humans) who
+trust it at face value. State what you've observed, flag what you're unsure
+about, and leave blanks rather than filling them with fiction. This applies to
+comments in code, notes in this file, commit messages, and any other written
+output.
+
 ## Writing Conventions for Claude
 
 Do not drop articles ("a", "an", "the") from commit messages, prose, or any
@@ -143,6 +155,11 @@ of all these sites lives in `claude_audits.md` in this repo.
   `nav_external_links` in `_config.yml` — the main site already uses this for
   the Blog link. Makes sense to do this when setting up the notes repo's
   config anyway.
+- [ ] Move the `font/` directory into `assets/font/` and update all references.
+  The `font/` directory at the repo root contains custom webfonts (e.g.
+  `strippedCards2.ttf`). It should live under `assets/` for consistency with
+  the CSS move to `assets/css/`. References in `sakura.css` and any HTML files
+  that load these fonts will need updating.
 - [ ] Fix metadata on the CV files in `files/`. The PDFs there (e.g.
   "CV Robert Winslow - Job Market.pdf", "CV Robert Winslow.pdf",
   "CV - Robert Winslow - Jan 2025.docx") could use updated document properties
@@ -162,11 +179,11 @@ of all these sites lives in `claude_audits.md` in this repo.
     while the repo handles the public-facing presentation and personal notes.
   - Whatever the new structure is, it should still allow for Robert's own
     reading notes and annotations on each paper.
-- [ ] Update the main site README to index the subsites. Right now there's no
-  central listing of all the repos that make up the full website (`posts`,
-  `bib`, `games`, `circe`, `notes`, and the main repo itself). The README
-  should explain how the pieces fit together so someone (or a future Claude
-  session) can orient quickly.
+- [x] Update the main site README to index the subsites. **Done 2026-03-20.**
+  The README now lists all active subsites (posts, notes, bib, games, circe)
+  with repo links, live URLs, and descriptions, plus the unconsolidated older
+  repos (tones, mynotes, macronotes). It also describes what's in this repo
+  and how the pieces fit together.
 - [ ] In the `posts` repo, replace the orphaned-parent hack for hiding pages
   with proper `nav_exclude: true`. Four pages ("Games Free with Amazon Prime",
   "Novels", "NES A-Z", "Web Fiction") use a nonexistent parent value like

@@ -1,64 +1,44 @@
 # RMWinslow.github.io
 
-This is the repo I use for my personal website.
+Robert Winslow's personal academic website, deployed at
+[www.rmwinslow.com](https://www.rmwinslow.com).
 
-Except for the homepage, this site uses [a variant of the Just the Docs theme](https://github.com/RMWinslow/JTD-RMW) for Jekyll.
-It automatically populates a navigation sidebar with a collapsible list of nested links.
-The main content I "need" for a website is visible in the navigation menu. This includes information about my:
+The homepage is a standalone HTML page (`index.html`). Everything else uses
+[JTD-RMW](https://github.com/RMWinslow/JTD-RMW), a fork of the Just the Docs
+Jekyll theme, which generates a navigation sidebar with collapsible nested
+links.
 
-- Teaching Experience
-- Research Experience
-- Academic Notes
-- Shareable Code (TODO)
-- CV/Resume (TODO)
-- linkedin site, etc. (TODO)
+## What's in this repo
 
-I am using other repositories to store other content on this website.
-The pages in these subsite repositories will not show up in the main website's navigation sidebar.
-The subsite repositories include:
+- **`research/`** — Research project pages (job market paper, contagion model,
+  etc.) and PDFs.
+- **`teaching/`** — Teaching pages (Econ 3102, Econ 330 with homework).
+- **`redirects/`** — Redirect stubs for content that has moved to other repos.
+  See `redirects/INDEX.md` for the full inventory.
+- **`assets/css/`** — Shared stylesheets (sakura variants, etc.) used by both
+  this repo and the legacy HTML files in the notes repo.
+- **`_layouts/`** — A single custom layout (`default_basic.html`).
+- **`files/`** — Downloadable files (CV PDFs).
 
-- A reference site for card game rules: [games repo](https://github.com/RMWinslow/games), [games link](https://games.rmwinslow.com/)
-- A not-quite blog which holds a wide variety of posts: [blog repo](https://github.com/RMWinslow/posts), [blog link](https://rmwinslow.com/posts)
-- A little piano widget: [piano repo](https://github.com/RMWinslow/tones), [piano link](https://rmwinslow.com/tones)
+## Subsites
 
+The full website is split across several repos, all served as subdirectories
+of `www.rmwinslow.com` and sharing the JTD-RMW theme:
 
+| Repo | URL | Description |
+|------|-----|-------------|
+| [**posts**](https://github.com/RMWinslow/posts) | [/posts](https://www.rmwinslow.com/posts) | Blog — a wide variety of posts on economics, language, science, games, and miscellany. |
+| [**notes**](https://github.com/RMWinslow/notes) | [/notes](https://www.rmwinslow.com/notes) | Economics teaching notes, interactive graphs, prelim study notes, and legacy course materials. |
+| [**bib**](https://github.com/RMWinslow/bib) | [/bib](https://www.rmwinslow.com/bib) | Bibliography — reading notes and paper references. |
+| [**games**](https://github.com/RMWinslow/games) | [/games](https://www.rmwinslow.com/games) | Card and board game rules, plus interactive tools. |
+| [**circe**](https://github.com/RMWinslow/circe) | [/circe](https://www.rmwinslow.com/circe) | An annotated edition of Giovanni Battista Gelli's *La Circe*. |
 
+There are also a few older repos on different themes
+that haven't been consolidated:
 
-<!--
-Todo:
-
-* add the nifty card stufff from basic.css into my css file
-* clean up the repos I used for testing
-* Make a markdown pages repo for my lists.
-
-
-This is currently only partially accurate.
-
-Site Map:
-
-Root files:
-    404.html
-    CNAME
-    favicon.ico
-    index.html
-
-
-    Need to clean up or get rid of: 
-        autocastle.html
-        favicondog.ico
-        index - Copy.html
-        3 different mathtest html files.
-
-Admin-related Folders (for function of the website):
-    font
-
-
-Content Folders:
-    econ  (for anything academic related)
-        prelimnotes
-        teaching
-        researchnotes
-    games 
-    lists (just notes about anything inconsequential. articles online, etc)
--->
+| Repo | Description |
+|------|-------------|
+| [**tones**](https://github.com/RMWinslow/tones) | A piano widget (uses an older JTD fork). |
+| [**mynotes**](https://github.com/RMWinslow/mynotes) | Older economics notes (Minimal Mistakes theme). Planned for consolidation into the notes repo. |
+| [**macronotes**](https://github.com/RMWinslow/macronotes) | Macro notes (original unmodified JTD). |
 
