@@ -75,15 +75,18 @@ of all these sites lives in `claude_audits.md` in this repo.
   children wired beneath them once they're ready to publish. "Money and
   Banking" was a false positive (`teaching/330.md` already has
   `has_children: false`).
-- [ ] *(Best done after notes migration)* Review the 31 broken internal links
-  identified in `claude_audits.md` for this site (mostly legacy HTML files with
-  wrong relative paths to `sakura.css`). Many of these files are in the 3102
-  tree that's moving to the notes repo, so fixing paths now would be wasted
-  effort.
-- [ ] *(Best done after notes migration)* Consider adding `search_exclude: true`
-  to the 104 legacy HTML files that lack frontmatter, to keep them out of the
-  search index. Many are in the 3102 tree — better to decide what to do with
-  them once the scope of what stays in the main repo is clearer.
+- [x] Review the broken internal links identified in `claude_audits.md` for
+  this site. **Done 2026-03-20.** All 31 broken links from the audit were in
+  files that have since moved to the notes repo (`econ/`, `3102/`, `202/`) or
+  been deleted (`js/katex/`). The only links the audit flagged in files still
+  here are the three cross-repo links in `index.html` (`/art`, `/games`,
+  `/posts`), which aren't actually broken — they resolve correctly at the
+  domain level because those repos deploy as subdirectories of
+  `www.rmwinslow.com`. The broken-link items that are now the notes repo's
+  responsibility have been transferred to its `CLAUDE.md`.
+- [ ] Consider adding `search_exclude: true` to legacy HTML files that lack
+  frontmatter, to keep them out of the search index. Most of these have now
+  moved to the notes repo — check what remains in the main repo.
 - [ ] Create markdown-based posts for research projects instead of just hosting
   PDFs. The idea is to write shorter, more approachable descriptions of each
   research project in natural language — something a visitor can actually read
@@ -109,20 +112,18 @@ of all these sites lives in `claude_audits.md` in this repo.
 
   **Still TODO:** Consolidate the `mynotes` repo (currently on the
   `minimal-mistakes` theme at a separate URL) into the notes repo.
-- [ ] Migrate the entire `econ/` directory to the notes repo. The remaining
-  contents are all economics teaching and study materials: `econ/teaching/`
-  (legacy HTML interactive graphs and problem sets for 3102),
-  `econ/macroprelim/` (macro prelim study notes), `econ/tradeprelim/` (trade
-  prelim study notes), `econ/UMNelectives.md` (hidden nav page),
-  `econ/nonsense/mathsymbols.html`, and `econ/presentations/`. These are
-  pre-Jekyll HTML files without frontmatter — they don't need redirect stubs
-  (they're not in the nav/search index), but they should live in the notes
-  repo since that's where the economics content is consolidating. The
-  duplicate directory trees (`econ/teaching/3102/typesetting/` vs
-  `econ/teaching/typesetting/`, and the nested
-  `econ/teaching/3102/intertemporal/intertemporal/`) should be deduplicated
-  as part of this move. The `202/inflation-costs.md` page was already
-  migrated on 2026-03-20.
+- [x] Migrate the entire `econ/` directory to the notes repo. **Done
+  2026-03-20.** The entire `econ/` directory (~345 tracked files) was copied
+  to the notes repo and removed from the main repo. 65 redirect stubs were
+  created in `redirects/` (1 MD + 64 HTML) to preserve all existing URLs.
+  The orphaned PNGs in `econ/teaching/3102/typesetting/` were deleted before
+  the move (the duplicate HTML files had already been removed). The duplicate
+  `intertemporal/intertemporal/` directory and `3102/typesetting/` HTML files
+  were already cleaned up in prior commits. The `.lyx~` backup files were
+  already untracked via `.gitignore`. A `.gitignore` was added to the notes
+  repo to keep LyX backup files out of tracking there as well. The CSS
+  references in these HTML files use root-relative paths (`/assets/css/...`)
+  which continue to work under the shared domain.
 - [x] Move the CSS files in `styles/` into `assets/css/` and update all
   references. **Done 2026-03-20.** All 7 stylesheets moved to `assets/css/`.
   All 65 HTML files under `econ/` were updated to use root-relative paths
@@ -171,12 +172,13 @@ of all these sites lives in `claude_audits.md` in this repo.
   "Novels", "NES A-Z", "Web Fiction") use a nonexistent parent value like
   `"hidden"` or `"_Media"` to keep themselves out of the sidebar. That works
   but is fragile and unclear — `nav_exclude: true` is the intended mechanism.
-- [ ] Clean up duplicate directory trees in the legacy `econ/teaching/` area.
-  `econ/teaching/3102/typesetting/` and `econ/teaching/typesetting/` contain
-  identical files. `econ/teaching/3102/intertemporal/intertemporal/` is a
-  duplicated subdirectory inside itself, complete with duplicate SVG images.
-  One copy of each should be deleted. Should be done as part of the `econ/`
-  migration to the notes repo.
+- [x] Clean up duplicate directory trees in the legacy `econ/teaching/` area.
+  **Done 2026-03-19 through 2026-03-20.** The duplicate HTML files in
+  `econ/teaching/3102/typesetting/` were removed in 79fc635 (deduplication
+  step). The orphaned PNGs left behind were deleted in f934c65 (pre-migration
+  cleanup). The duplicate `intertemporal/intertemporal/` directory was also
+  removed in 79fc635. The surviving copies at `econ/teaching/typesetting/`
+  and `econ/teaching/3102/intertemporal/` now live in the notes repo.
 - [x] Remove Windows copy-paste artifacts from the repo: files named things
   like `consumerInteractive (2).html`, `LBDconcepts - Copy (2).html`,
   `LBDconcepts - Copy (3).html`, `twoPeriodEndowment (2).html`,
@@ -277,8 +279,8 @@ The job market paper ("How much did Bonus Unemployment Insurance Payments
 During the COVID Pandemic Depress Aggregate Employment?") is currently under
 review as of March 2026. Listed at `research/jmp.md`.
 
-Robert is no longer at UMN — the Econ Electives page (`econ/UMNelectives.md`)
-has been hidden from nav accordingly.
+Robert is no longer at UMN — the Econ Electives page (now at
+`notes/econ/UMNelectives.md`) has been hidden from nav accordingly.
 
 The `101/` directory (Principles of Micro) has been deleted — it was just
 placeholders. The `202/` directory (Principles of Macro) has been moved to the
@@ -303,6 +305,7 @@ nav-hidden but actively served:
   external CSS, no sakura) and still functional. They're not orphaned legacy —
   they're intentionally kept as a working fallback.
 
-The legacy `econ/` HTML files that use `sakura.css` are a separate matter
-entirely — those are pre-Jekyll study notes that aren't linked from anywhere
-in the current nav tree.
+The legacy `econ/` HTML files that use `sakura.css` now live in the notes repo
+(at `notes/econ/`). They're pre-Jekyll study notes that aren't linked from
+anywhere in the current nav tree but are still actively served via redirect
+stubs in the main repo.

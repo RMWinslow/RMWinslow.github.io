@@ -271,124 +271,115 @@ stubs if anyone has bookmarked or linked to them.
 - Redirect stub: `redirects/202-inflation-costs.md`
 - The only content page from the 202 (Principles of Macro) section.
 
-### Pending: full `econ/` migration to notes repo
+### Completed: `econ/` migration to notes repo (2026-03-20)
 
-All files below will move to the notes repo. Redirect stubs will be created
-for every HTML and MD content file. Assets (images, SVGs, LyX files, Excel
-files) move with their parent pages but don't need individual redirect stubs.
+All files moved to the notes repo on 2026-03-20. 65 redirect stubs created
+(1 MD + 64 HTML). Assets (images, SVGs, LyX files, Excel files) moved with
+their parent pages and don't have individual redirect stubs.
+
+The orphaned PNGs in `econ/teaching/3102/typesetting/` were deleted before
+the move (the duplicate HTML files had already been removed in a prior commit).
+The 3 `.lyx~` backup files in `econ/tradeprelim/` were already untracked via
+`.gitignore` and were not carried over to the notes repo's git history.
 
 #### `econ/UMNelectives.md`
-- `/econ/UMNelectives` → redirect stub needed
-- Jekyll markdown page, nav_exclude: true.
+- `/econ/UMNelectives` `[pre-migration]`
+- `notes/econ/UMNelectives.md` → `/notes/econ/UMNelectives` `[current]`
+- Redirect stub: `redirects/econ-UMNelectives.md`
 
 #### `econ/teaching/typesetting/` (3 HTML + 5 PNG)
-- `/econ/teaching/typesetting/latexMath.html` → redirect stub needed
-- `/econ/teaching/typesetting/lyxTutorial.html` → redirect stub needed
-- `/econ/teaching/typesetting/typesettingSoftware.html` → redirect stub needed
-- Assets: 5 PNGs (MSWordEqn, MSWordMathMode, lyxEnvironments, lyxEqn, lyxMathMode)
-- Note: `econ/teaching/3102/typesetting/` also has copies of the same 5 PNGs;
-  those are orphaned now that the duplicate HTML files have been deleted.
+- `/econ/teaching/typesetting/latexMath.html` → stub: `econ-teaching-typesetting-latexMath.md`
+- `/econ/teaching/typesetting/lyxTutorial.html` → stub: `econ-teaching-typesetting-lyxTutorial.md`
+- `/econ/teaching/typesetting/typesettingSoftware.html` → stub: `econ-teaching-typesetting-typesettingSoftware.md`
 
 #### `econ/teaching/3012.html`
-- `/econ/teaching/3012.html` → redirect stub needed
-- Likely a typo for 3102. Single standalone file.
+- `/econ/teaching/3012.html` → stub: `econ-teaching-3012.md`
 
-#### `econ/teaching/3102/equilibrium/` (5 HTML + 2 PNG)
-- `/econ/teaching/3102/equilibrium/consumer.html` → redirect stub needed
-- `/econ/teaching/3102/equilibrium/consumerInteractive.html` → redirect stub needed
-- `/econ/teaching/3102/equilibrium/equilibrium.html` → redirect stub needed
-- `/econ/teaching/3102/equilibrium/firm.html` → redirect stub needed
-- `/econ/teaching/3102/equilibrium/solving.html` → redirect stub needed
-- Assets: bigE.png, star.png
+#### `econ/teaching/3102/equilibrium/` (5 HTML)
+- `/econ/teaching/3102/equilibrium/consumer.html` → stub: `econ-teaching-3102-equilibrium-consumer.md`
+- `/econ/teaching/3102/equilibrium/consumerInteractive.html` → stub: `econ-teaching-3102-equilibrium-consumerInteractive.md`
+- `/econ/teaching/3102/equilibrium/equilibrium.html` → stub: `econ-teaching-3102-equilibrium-equilibrium.md`
+- `/econ/teaching/3102/equilibrium/firm.html` → stub: `econ-teaching-3102-equilibrium-firm.md`
+- `/econ/teaching/3102/equilibrium/solving.html` → stub: `econ-teaching-3102-equilibrium-solving.md`
 
-#### `econ/teaching/3102/interactive/` (10 HTML + 4 PNG)
-- `/econ/teaching/3102/interactive/ConsumerAndProducerInteractive.html` → redirect stub needed
-- `/econ/teaching/3102/interactive/OnePeriodEquilibiriumInteractive.html` → redirect stub needed
-- `/econ/teaching/3102/interactive/consumerInteractive.html` → redirect stub needed
-- `/econ/teaching/3102/interactive/exampleInteractive.html` → redirect stub needed
-- `/econ/teaching/3102/interactive/interactivegraphs.html` → redirect stub needed
-- `/econ/teaching/3102/interactive/producerInteractive.html` → redirect stub needed
-- `/econ/teaching/3102/interactive/solowInteractive.html` → redirect stub needed
-- `/econ/teaching/3102/interactive/twoPeriodEndowment.html` → redirect stub needed
-- `/econ/teaching/3102/interactive/twoPeriodEndowmentWithBorrowingLimits.html` → redirect stub needed
-- `/econ/teaching/3102/interactive/twoPeriodEndowmentWithDifferentRates.html` → redirect stub needed
-- Assets: bigE.png, smallE.png, star.png, star2.png
+#### `econ/teaching/3102/interactive/` (10 HTML)
+- `/econ/teaching/3102/interactive/ConsumerAndProducerInteractive.html` → stub: `econ-teaching-3102-interactive-ConsumerAndProducerInteractive.md`
+- `/econ/teaching/3102/interactive/OnePeriodEquilibiriumInteractive.html` → stub: `econ-teaching-3102-interactive-OnePeriodEquilibiriumInteractive.md`
+- `/econ/teaching/3102/interactive/consumerInteractive.html` → stub: `econ-teaching-3102-interactive-consumerInteractive.md`
+- `/econ/teaching/3102/interactive/exampleInteractive.html` → stub: `econ-teaching-3102-interactive-exampleInteractive.md`
+- `/econ/teaching/3102/interactive/interactivegraphs.html` → stub: `econ-teaching-3102-interactive-interactivegraphs.md`
+- `/econ/teaching/3102/interactive/producerInteractive.html` → stub: `econ-teaching-3102-interactive-producerInteractive.md`
+- `/econ/teaching/3102/interactive/solowInteractive.html` → stub: `econ-teaching-3102-interactive-solowInteractive.md`
+- `/econ/teaching/3102/interactive/twoPeriodEndowment.html` → stub: `econ-teaching-3102-interactive-twoPeriodEndowment.md`
+- `/econ/teaching/3102/interactive/twoPeriodEndowmentWithBorrowingLimits.html` → stub: `econ-teaching-3102-interactive-twoPeriodEndowmentWithBorrowingLimits.md`
+- `/econ/teaching/3102/interactive/twoPeriodEndowmentWithDifferentRates.html` → stub: `econ-teaching-3102-interactive-twoPeriodEndowmentWithDifferentRates.md`
 
-#### `econ/teaching/3102/intertemporal/` (6 HTML + 8 SVG + 1 PNG + 1 PY)
-- `/econ/teaching/3102/intertemporal/consumerProblemWithLabor.html` → redirect stub needed
-- `/econ/teaching/3102/intertemporal/creditFrictions.html` → redirect stub needed
-- `/econ/teaching/3102/intertemporal/firmProblem.html` → redirect stub needed
-- `/econ/teaching/3102/intertemporal/intertemporalCE_Definiton.html` → redirect stub needed
-- `/econ/teaching/3102/intertemporal/shifterExamples.html` → redirect stub needed
-- `/econ/teaching/3102/intertemporal/twoPeriodEndowment.html` → redirect stub needed
-- Assets: images/ (8 SVGs), bigE.png, star.png, pythonhLaborCurveGenerator.py
+#### `econ/teaching/3102/intertemporal/` (6 HTML)
+- `/econ/teaching/3102/intertemporal/consumerProblemWithLabor.html` → stub: `econ-teaching-3102-intertemporal-consumerProblemWithLabor.md`
+- `/econ/teaching/3102/intertemporal/creditFrictions.html` → stub: `econ-teaching-3102-intertemporal-creditFrictions.md`
+- `/econ/teaching/3102/intertemporal/firmProblem.html` → stub: `econ-teaching-3102-intertemporal-firmProblem.md`
+- `/econ/teaching/3102/intertemporal/intertemporalCE_Definiton.html` → stub: `econ-teaching-3102-intertemporal-intertemporalCE_Definiton.md`
+- `/econ/teaching/3102/intertemporal/shifterExamples.html` → stub: `econ-teaching-3102-intertemporal-shifterExamples.md`
+- `/econ/teaching/3102/intertemporal/twoPeriodEndowment.html` → stub: `econ-teaching-3102-intertemporal-twoPeriodEndowment.md`
 
-#### `econ/teaching/3102/test/` (4 HTML + 2 PNG)
-- `/econ/teaching/3102/test/CEInteractive.html` → redirect stub needed
-- `/econ/teaching/3102/test/consumerInteractive.html` → redirect stub needed
-- `/econ/teaching/3102/test/exampleInteractive.html` → redirect stub needed
-- `/econ/teaching/3102/test/producerInteractive.html` → redirect stub needed
-- Assets: bigE.png, star.png
+#### `econ/teaching/3102/test/` (4 HTML)
+- `/econ/teaching/3102/test/CEInteractive.html` → stub: `econ-teaching-3102-test-CEInteractive.md`
+- `/econ/teaching/3102/test/consumerInteractive.html` → stub: `econ-teaching-3102-test-consumerInteractive.md`
+- `/econ/teaching/3102/test/exampleInteractive.html` → stub: `econ-teaching-3102-test-exampleInteractive.md`
+- `/econ/teaching/3102/test/producerInteractive.html` → stub: `econ-teaching-3102-test-producerInteractive.md`
 
-#### `econ/teaching/3102psets/` (6 HTML + many SVG + 2 XLSX)
-- `/econ/teaching/3102psets/HW1_dataGraphs.html` → redirect stub needed
-- `/econ/teaching/3102psets/HW2_dataGraphs.html` → redirect stub needed
-- `/econ/teaching/3102psets/HWBCycles_old/dataResultsFlippedPercentDiff.html` → redirect stub needed
-- `/econ/teaching/3102psets/HWBCycles_old/dataResultsOG.html` → redirect stub needed
-- `/econ/teaching/3102psets/HWBCycles_old/dataResultsOnlyImages.html` → redirect stub needed
-- `/econ/teaching/3102psets/HWBCycles_old/week9solutions.html` → redirect stub needed
-- Assets: HW1_GrowthGraphs/ (60 SVGs), HW2_BCycleGraphs/ (60 SVGs),
-  HWBCycles_old/ (72 SVGs + 2 XLSX)
+#### `econ/teaching/3102psets/` (6 HTML)
+- `/econ/teaching/3102psets/HW1_dataGraphs.html` → stub: `econ-teaching-3102psets-HW1_dataGraphs.md`
+- `/econ/teaching/3102psets/HW2_dataGraphs.html` → stub: `econ-teaching-3102psets-HW2_dataGraphs.md`
+- `/econ/teaching/3102psets/HWBCycles_old/dataResultsFlippedPercentDiff.html` → stub: `econ-teaching-3102psets-HWBCycles_old-dataResultsFlippedPercentDiff.md`
+- `/econ/teaching/3102psets/HWBCycles_old/dataResultsOG.html` → stub: `econ-teaching-3102psets-HWBCycles_old-dataResultsOG.md`
+- `/econ/teaching/3102psets/HWBCycles_old/dataResultsOnlyImages.html` → stub: `econ-teaching-3102psets-HWBCycles_old-dataResultsOnlyImages.md`
+- `/econ/teaching/3102psets/HWBCycles_old/week9solutions.html` → stub: `econ-teaching-3102psets-HWBCycles_old-week9solutions.md`
 
-#### `econ/macroprelim/` (12 HTML + 11 PNG)
-- `/econ/macroprelim/prelimindex.html` → redirect stub needed
-- `/econ/macroprelim/roadmapTODO.html` → redirect stub needed
-- `/econ/macroprelim/Chari/privatemoney.html` → redirect stub needed
-- `/econ/macroprelim/Chari/productionrisk.html` → redirect stub needed
-- `/econ/macroprelim/Chari/sustainabledebt.html` → redirect stub needed
-- `/econ/macroprelim/Concepts/envelope.html` → redirect stub needed
-- `/econ/macroprelim/Concepts/flowchartkey/FlowChartKey.html` → redirect stub needed
-- `/econ/macroprelim/Jones/HumanCapital.html` → redirect stub needed
-- `/econ/macroprelim/Jones/dynamicprogramming.html` → redirect stub needed
-- `/econ/macroprelim/Kehoe/Search.html` → redirect stub needed
-- `/econ/macroprelim/Kehoe/crossingProof.html` → redirect stub needed
-- `/econ/macroprelim/Kehoe/dp.html` → redirect stub needed
-- Assets: Chari/FriedmanRule.png, Concepts/flowchartkey/ (6 PNGs),
-  Kehoe/ (KehoeSearchLabels.png, laser1-3.png)
+#### `econ/macroprelim/` (12 HTML)
+- `/econ/macroprelim/prelimindex.html` → stub: `econ-macroprelim-prelimindex.md`
+- `/econ/macroprelim/roadmapTODO.html` → stub: `econ-macroprelim-roadmapTODO.md`
+- `/econ/macroprelim/Chari/privatemoney.html` → stub: `econ-macroprelim-Chari-privatemoney.md`
+- `/econ/macroprelim/Chari/productionrisk.html` → stub: `econ-macroprelim-Chari-productionrisk.md`
+- `/econ/macroprelim/Chari/sustainabledebt.html` → stub: `econ-macroprelim-Chari-sustainabledebt.md`
+- `/econ/macroprelim/Concepts/envelope.html` → stub: `econ-macroprelim-Concepts-envelope.md`
+- `/econ/macroprelim/Concepts/flowchartkey/FlowChartKey.html` → stub: `econ-macroprelim-Concepts-flowchartkey-FlowChartKey.md`
+- `/econ/macroprelim/Jones/HumanCapital.html` → stub: `econ-macroprelim-Jones-HumanCapital.md`
+- `/econ/macroprelim/Jones/dynamicprogramming.html` → stub: `econ-macroprelim-Jones-dynamicprogramming.md`
+- `/econ/macroprelim/Kehoe/Search.html` → stub: `econ-macroprelim-Kehoe-Search.md`
+- `/econ/macroprelim/Kehoe/crossingProof.html` → stub: `econ-macroprelim-Kehoe-crossingProof.md`
+- `/econ/macroprelim/Kehoe/dp.html` → stub: `econ-macroprelim-Kehoe-dp.md`
 
-#### `econ/tradeprelim/` (15 HTML + 3 LyX + 3 LyX~)
-- `/econ/tradeprelim/prelimindex.html` → redirect stub needed
-- `/econ/tradeprelim/amador/multipleborrowers.html` → redirect stub needed
-- `/econ/tradeprelim/fitzgerald/armingtongravity.html` → redirect stub needed
-- `/econ/tradeprelim/fitzgerald/melitzottaviano.html` → redirect stub needed
-- `/econ/tradeprelim/fitzgerald/melitzottaviano/melitzottaviano.html` → redirect stub needed
-- `/econ/tradeprelim/fitzgerald/melitzottaviano_problem.html` → redirect stub needed
-- `/econ/tradeprelim/fitzgerald/melitzottaviano_solution.html` → redirect stub needed
-- `/econ/tradeprelim/kehoe/LBD/LBDconcepts.html` → redirect stub needed
-- `/econ/tradeprelim/kehoe/LBD/LBDprelim.html` → redirect stub needed
-- `/econ/tradeprelim/kehoe/LBD/LBDprelimSolutionA.html` → redirect stub needed
-- `/econ/tradeprelim/kehoe/hecksherohlin.html` → redirect stub needed
-- `/econ/tradeprelim/kehoe/learningbydoing.html` → redirect stub needed
-- `/econ/tradeprelim/kehoe/monopolisticcompetition.html` → redirect stub needed
-- `/econ/tradeprelim/kehoe/self-fulfillingdebt.html` → redirect stub needed
-- Note: `econ/tradeprelim/kehoe/LBD/` was listed as 3 HTML in the earlier
-  exploration but there are actually 3 HTML files plus LyX working files.
-- Assets: LyX files (amador/EatonG notes.lyx, fitzgerald/mellitz work.lyx,
-  kehoe/debtcrisiswork.lyx, kehoe/hecksherwork.lyx) and LyX backup files
+#### `econ/tradeprelim/` (14 HTML)
+- `/econ/tradeprelim/prelimindex.html` → stub: `econ-tradeprelim-prelimindex.md`
+- `/econ/tradeprelim/amador/multipleborrowers.html` → stub: `econ-tradeprelim-amador-multipleborrowers.md`
+- `/econ/tradeprelim/fitzgerald/armingtongravity.html` → stub: `econ-tradeprelim-fitzgerald-armingtongravity.md`
+- `/econ/tradeprelim/fitzgerald/melitzottaviano.html` → stub: `econ-tradeprelim-fitzgerald-melitzottaviano.md`
+- `/econ/tradeprelim/fitzgerald/melitzottaviano/melitzottaviano.html` → stub: `econ-tradeprelim-fitzgerald-melitzottaviano-melitzottaviano.md`
+- `/econ/tradeprelim/fitzgerald/melitzottaviano_problem.html` → stub: `econ-tradeprelim-fitzgerald-melitzottaviano_problem.md`
+- `/econ/tradeprelim/fitzgerald/melitzottaviano_solution.html` → stub: `econ-tradeprelim-fitzgerald-melitzottaviano_solution.md`
+- `/econ/tradeprelim/kehoe/LBD/LBDconcepts.html` → stub: `econ-tradeprelim-kehoe-LBD-LBDconcepts.md`
+- `/econ/tradeprelim/kehoe/LBD/LBDprelim.html` → stub: `econ-tradeprelim-kehoe-LBD-LBDprelim.md`
+- `/econ/tradeprelim/kehoe/LBD/LBDprelimSolutionA.html` → stub: `econ-tradeprelim-kehoe-LBD-LBDprelimSolutionA.md`
+- `/econ/tradeprelim/kehoe/hecksherohlin.html` → stub: `econ-tradeprelim-kehoe-hecksherohlin.md`
+- `/econ/tradeprelim/kehoe/learningbydoing.html` → stub: `econ-tradeprelim-kehoe-learningbydoing.md`
+- `/econ/tradeprelim/kehoe/monopolisticcompetition.html` → stub: `econ-tradeprelim-kehoe-monopolisticcompetition.md`
+- `/econ/tradeprelim/kehoe/self-fulfillingdebt.html` → stub: `econ-tradeprelim-kehoe-self-fulfillingdebt.md`
+- LyX source files (amador/EatonG notes.lyx, fitzgerald/mellitz work.lyx,
+  kehoe/debtcrisiswork.lyx, kehoe/hecksherwork.lyx) moved with the HTML files.
 
 #### `econ/nonsense/mathsymbols.html`
-- `/econ/nonsense/mathsymbols.html` → redirect stub needed
+- `/econ/nonsense/mathsymbols.html` → stub: `econ-nonsense-mathsymbols.md`
 
-#### `econ/presentations/` (2 HTML + many SVG/PNG)
-- `/econ/presentations/biglisthtml.html` → redirect stub needed
-- `/econ/presentations/percolationSlides.html` → redirect stub needed
-- Assets: ~40 SVGs and PNGs (graph theory diagrams for the percolation talk)
+#### `econ/presentations/` (2 HTML)
+- `/econ/presentations/biglisthtml.html` → stub: `econ-presentations-biglisthtml.md`
+- `/econ/presentations/percolationSlides.html` → stub: `econ-presentations-percolationSlides.md`
 
 ---
 
-**Redirect stub count for `econ/` migration:** 66 stubs total
+**Redirect stub count for `econ/` migration:** 65 stubs total
 - 1 MD file (UMNelectives)
-- 65 HTML files
+- 64 HTML files
 
 ### Underscore-prefixed files (excluded from Jekyll build, no redirect stubs)
 
@@ -437,12 +428,10 @@ markdown files.
 
 ## Summary counts
 
-- **Total redirect stubs to create:** 26
-  - 20 content pages
-  - 1 parent page (topic-overview)
-  - 3 nav-hidden pages (graphs, graphs2, money slides)
-  - 2 legacy alias stubs (twoperiod-consumer variants)
+- **Total redirect stubs created:** 91
+  - 26 for the 302/ notes migration (2026-03-19)
+    - 20 content pages, 1 parent page, 3 nav-hidden pages, 2 legacy aliases
+  - 65 for the econ/ migration (2026-03-20)
+    - 1 MD file (UMNelectives), 64 HTML files
 - **Underscore-prefixed files (no stubs):** 5 (not built by Jekyll)
-- **Pages staying in main repo:** 1 (UMN Electives)
-- **Notes top-level:** 1 (likely no stub needed — verify during migration)
-- **Asset files moving with content:** 72 (no stubs needed)
+- **Asset files moved with content (no stubs):** 300+
