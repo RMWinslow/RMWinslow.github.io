@@ -287,10 +287,10 @@ The 3 `.lyx~` backup files in `econ/tradeprelim/` were already untracked via
 - `notes/econ/UMNelectives.md` → `/notes/econ/UMNelectives` `[current]`
 - Redirect stub: `redirects/econ-UMNelectives.md`
 
-#### `econ/teaching/typesetting/` (3 HTML + 5 PNG)
-- `/econ/teaching/typesetting/latexMath.html` → stub: `econ-teaching-typesetting-latexMath.md`
-- `/econ/teaching/typesetting/lyxTutorial.html` → stub: `econ-teaching-typesetting-lyxTutorial.md`
-- `/econ/teaching/typesetting/typesettingSoftware.html` → stub: `econ-teaching-typesetting-typesettingSoftware.md`
+#### `econ/teaching/typesetting/` (3 HTML + 5 PNG) — now at `/notes/typesetting/`
+- `/econ/teaching/typesetting/latexMath.html` → `/notes/typesetting/latex-math` — stub: `econ-teaching-typesetting-latexMath.md`
+- `/econ/teaching/typesetting/lyxTutorial.html` → `/notes/typesetting/lyx-tutorial` — stub: `econ-teaching-typesetting-lyxTutorial.md`
+- `/econ/teaching/typesetting/typesettingSoftware.html` → `/notes/typesetting/typesetting-software` — stub: `econ-teaching-typesetting-typesettingSoftware.md`
 
 #### `econ/teaching/3012.html`
 - `/econ/teaching/3012.html` → stub: `econ-teaching-3012.md`
