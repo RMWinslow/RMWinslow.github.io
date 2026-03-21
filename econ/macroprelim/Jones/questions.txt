@@ -1,1 +1,0 @@
-with human capital, is the value function just  the utility given capital stock, or do I have to represent it in bellman equation form?
