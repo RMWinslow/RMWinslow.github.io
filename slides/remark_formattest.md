@@ -3,6 +3,7 @@ title: Remark Formatting Test
 layout: remark_slides
 date: 2023-05-12
 nav_exclude: true
+search_exclude: true
 ---
 
 class:center,middle

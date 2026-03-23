@@ -103,9 +103,15 @@ of all these sites lives in `claude_audits.md` in this repo.
   domain level because those repos deploy as subdirectories of
   `www.rmwinslow.com`. The broken-link items that are now the notes repo's
   responsibility have been transferred to its `CLAUDE.md`.
-- [ ] Consider adding `search_exclude: true` to legacy HTML files that lack
-  frontmatter, to keep them out of the search index. Most of these have now
-  moved to the notes repo — check what remains in the main repo.
+- [x] Consider adding `search_exclude: true` to legacy HTML files that lack
+  frontmatter, to keep them out of the search index. **Done 2026-03-22.** The
+  legacy HTML files without frontmatter (`index.html`, `404.html`,
+  `teaching/calendar_creator.html`) are already excluded from the search index
+  because they lack frontmatter entirely — Jekyll serves them as static files
+  but doesn't index them. The two files that were in the search index
+  inappropriately were `slides/remark_formattest.md` (a test page generating
+  10+ junk sub-entries) and `slides/index.md` (nav-hidden slide deck listing);
+  both now have `search_exclude: true`. Full audit at `search_index_audit.md`.
 - [ ] Create markdown-based posts for research projects instead of just hosting
   PDFs. The idea is to write shorter, more approachable descriptions of each
   research project in natural language — something a visitor can actually read
@@ -246,6 +252,14 @@ of all these sites lives in `claude_audits.md` in this repo.
   2026-03-20. The color variants are professor-specific theming for the
   macro prelim study notes (Chari gets green, Kehoe gets pink, Jones gets
   blue).
+- [ ] Audit all published pages across the site and subsites, and rank them by
+  completeness. Which pages are polished and presentable, which are rough
+  drafts, and which are bare stubs? The goal is to identify what's worth
+  investing time in improving vs. what should be hidden or archived. The
+  `mynotes` repo (91 posts of varying quality) is a prime candidate for this
+  — many titles are raw shorthand and the content ranges from detailed paper
+  summaries to a few bullet points. An audit file for the mynotes repo is at
+  `mynotes_audit.md` in this repo.
 - [x] Rename or remove `font/sdfsdfds.ttf`. **Done 2026-03-19.** Deleted. Based
   on the git history, it appears to have been an intermediate build of the
   strippedCards font from the 2019 Samsung emoji workaround — it was added in

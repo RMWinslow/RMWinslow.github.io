@@ -1,6 +1,7 @@
 ---
 title: Slide Deck Index
 nav_exclude: true
+search_exclude: true
 ---
 
 - [remark format test](remark_formattest) - mostly broken test of live slidedeck rendering with [remark](https://github.com/gnab/remark)
