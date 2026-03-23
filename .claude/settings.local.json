@@ -9,6 +9,13 @@
       "WebSearch",
       "WebFetch(domain:github.com)",
       "WebFetch",
+      "Bash(ls /c/Users/RMW/Documents/GitHub/RMWinslow.github.io/redirects/3102-*.md)",
+      "Bash(do sed:*)",
+      "Bash(grep -l \"notes/3102\" redirects/3102-*.md)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(find econ:*)",
+      "Bash(git mv:*)"
     ]
   }
 }
