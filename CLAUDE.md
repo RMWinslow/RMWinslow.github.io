@@ -65,6 +65,13 @@ independently reviewable and keeps the move diffable.
   task, or notice something worth remembering, update this file in the same
   conversation rather than waiting.
 
+## Build and Deploy
+
+Never build any of the Jekyll sites locally — the local Ruby/Jekyll setup is
+fragile and not worth the trouble. To verify changes on the live site, ask
+the user to push, wait about five minutes for GitHub Pages to build, and then
+fetch the live URL.
+
 ## Project Context
 
 This is Robert Winslow's personal academic website, built with Jekyll and hosted
@@ -155,11 +162,13 @@ of all these sites lives in `claude_audits.md` in this repo.
   `nav_external_links` in `_config.yml` — the main site already uses this for
   the Blog link. Makes sense to do this when setting up the notes repo's
   config anyway.
-- [ ] Move the `font/` directory into `assets/font/` and update all references.
-  The `font/` directory at the repo root contains custom webfonts (e.g.
-  `strippedCards2.ttf`). It should live under `assets/` for consistency with
-  the CSS move to `assets/css/`. References in `sakura.css` and any HTML files
-  that load these fonts will need updating.
+- [x] Move the `font/` directory into `assets/font/` and update all references.
+  **Done 2026-03-22.** Moved all 5 files (Catrinity.otf, Catrinity.ttf,
+  codes.txt, strippedCards.ttf, strippedCards2.ttf) from `font/` to
+  `assets/font/`. No CSS changes were needed because the only reference is in
+  `assets/css/sakura.css` at `url(../font/strippedCards2.ttf)`, and the
+  relative path `../font/` remains correct with both directories under
+  `assets/`.
 - [ ] Fix metadata on the CV files in `files/`. The PDFs there (e.g.
   "CV Robert Winslow - Job Market.pdf", "CV Robert Winslow.pdf",
   "CV - Robert Winslow - Jan 2025.docx") could use updated document properties
@@ -184,11 +193,22 @@ of all these sites lives in `claude_audits.md` in this repo.
   with repo links, live URLs, and descriptions, plus the unconsolidated older
   repos (tones, mynotes, macronotes). It also describes what's in this repo
   and how the pieces fit together.
-- [ ] In the `posts` repo, replace the orphaned-parent hack for hiding pages
-  with proper `nav_exclude: true`. Four pages ("Games Free with Amazon Prime",
-  "Novels", "NES A-Z", "Web Fiction") use a nonexistent parent value like
-  `"hidden"` or `"_Media"` to keep themselves out of the sidebar. That works
-  but is fragile and unclear — `nav_exclude: true` is the intended mechanism.
+- [ ] Do a legibility pass on the rendered HTML output from the JTD-RMW theme.
+  The goal is to make the generated HTML pleasant to read when you view source —
+  clean indentation, sensible structure, no unnecessary cruft. HTML compaction
+  is already turned off for this reason; this is the next step in the same
+  spirit. Code should be human-legible even when it's "hidden" behind the
+  rendered page. This work may involve changes in the theme repo
+  (`RMWinslow/JTD-RMW`) as well as any layout overrides in the site repos.
+- [x] In the `posts` repo, replace the orphaned-parent hack for hiding pages
+  with proper `nav_exclude: true`. **Done 2026-03-22.** Four pages were fixed:
+  `amazongames.md` and `novels.md` had `parent: hidden` replaced with
+  `nav_exclude: true`; `webfiction.md` had `parent: _Media` removed (it
+  already had `nav_exclude: true`); `nes.md` had `parent: Media` corrected to
+  `parent: Media Recommendations` (it already had `nav_exclude: true`). The
+  JTD-RMW theme's `parent_child_toc.html` filters on `nav_exclude != true`,
+  so these pages are excluded from both the sidebar and the parent's
+  auto-generated table of contents.
 - [x] Clean up duplicate directory trees in the legacy `econ/teaching/` area.
   **Done 2026-03-19 through 2026-03-20.** The duplicate HTML files in
   `econ/teaching/3102/typesetting/` were removed in 79fc635 (deduplication
