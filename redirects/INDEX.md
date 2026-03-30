@@ -347,7 +347,7 @@ The 3 `.lyx~` backup files in `econ/tradeprelim/` were already untracked via
 - `/econ/macroprelim/Jones/HumanCapital.html` → stub: `econ-macroprelim-Jones-HumanCapital.md`
 - `/econ/macroprelim/Jones/dynamicprogramming.html` → stub: `econ-macroprelim-Jones-dynamicprogramming.md`
 - `/econ/macroprelim/Kehoe/Search.html` → stub: `econ-macroprelim-Kehoe-Search.md`
-- `/econ/macroprelim/Kehoe/crossingProof.html` → stub: `econ-macroprelim-Kehoe-crossingProof.md`
+- `/econ/macroprelim/Kehoe/crossingProof.html` → `/notes/prelim/macro/crossing-proof` · stub: `econ-macroprelim-Kehoe-crossingProof.md`
 - `/econ/macroprelim/Kehoe/dp.html` → stub: `econ-macroprelim-Kehoe-dp.md`
 
 #### `econ/tradeprelim/` (14 HTML)
