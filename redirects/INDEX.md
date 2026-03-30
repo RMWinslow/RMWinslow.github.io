@@ -343,10 +343,10 @@ The 3 `.lyx~` backup files in `econ/tradeprelim/` were already untracked via
 - `/econ/macroprelim/Chari/productionrisk.html` → stub: `econ-macroprelim-Chari-productionrisk.md`
 - `/econ/macroprelim/Chari/sustainabledebt.html` → stub: `econ-macroprelim-Chari-sustainabledebt.md`
 - `/econ/macroprelim/Concepts/envelope.html` → stub: `econ-macroprelim-Concepts-envelope.md`
-- `/econ/macroprelim/Concepts/flowchartkey/FlowChartKey.html` → stub: `econ-macroprelim-Concepts-flowchartkey-FlowChartKey.md`
+- `/econ/macroprelim/Concepts/flowchartkey/FlowChartKey.html` → `/notes/prelim/macro/flowchart-key` · stub: `econ-macroprelim-Concepts-flowchartkey-FlowChartKey.md`
 - `/econ/macroprelim/Jones/HumanCapital.html` → stub: `econ-macroprelim-Jones-HumanCapital.md`
 - `/econ/macroprelim/Jones/dynamicprogramming.html` → stub: `econ-macroprelim-Jones-dynamicprogramming.md`
-- `/econ/macroprelim/Kehoe/Search.html` → stub: `econ-macroprelim-Kehoe-Search.md`
+- `/econ/macroprelim/Kehoe/Search.html` → `/notes/prelim/macro/mccall-search` · stub: `econ-macroprelim-Kehoe-Search.md`
 - `/econ/macroprelim/Kehoe/crossingProof.html` → `/notes/prelim/macro/crossing-proof` · stub: `econ-macroprelim-Kehoe-crossingProof.md`
 - `/econ/macroprelim/Kehoe/dp.html` → stub: `econ-macroprelim-Kehoe-dp.md`
 
