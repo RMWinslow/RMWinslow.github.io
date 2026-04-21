@@ -339,10 +339,10 @@ The 3 `.lyx~` backup files in `econ/tradeprelim/` were already untracked via
 #### `econ/macroprelim/` (12 HTML)
 - `/econ/macroprelim/prelimindex.html` → stub: `econ-macroprelim-prelimindex.md`
 - `/econ/macroprelim/roadmapTODO.html` → stub: `econ-macroprelim-roadmapTODO.md`
-- `/econ/macroprelim/Chari/privatemoney.html` → stub: `econ-macroprelim-Chari-privatemoney.md`
+- `/econ/macroprelim/Chari/privatemoney.html` → `/notes/prelim/macro/private-money` · stub: `econ-macroprelim-Chari-privatemoney.md`
 - `/econ/macroprelim/Chari/productionrisk.html` → stub: `econ-macroprelim-Chari-productionrisk.md`
-- `/econ/macroprelim/Chari/sustainabledebt.html` → stub: `econ-macroprelim-Chari-sustainabledebt.md`
-- `/econ/macroprelim/Concepts/envelope.html` → stub: `econ-macroprelim-Concepts-envelope.md`
+- `/econ/macroprelim/Chari/sustainabledebt.html` → `/notes/prelim/macro/sustainable-debt` · stub: `econ-macroprelim-Chari-sustainabledebt.md`
+- `/econ/macroprelim/Concepts/envelope.html` → `/notes/prelim/macro/envelope-condition` · stub: `econ-macroprelim-Concepts-envelope.md`
 - `/econ/macroprelim/Concepts/flowchartkey/FlowChartKey.html` → `/notes/prelim/macro/flowchart-key` · stub: `econ-macroprelim-Concepts-flowchartkey-FlowChartKey.md`
 - `/econ/macroprelim/Jones/HumanCapital.html` → stub: `econ-macroprelim-Jones-HumanCapital.md`
 - `/econ/macroprelim/Jones/dynamicprogramming.html` → stub: `econ-macroprelim-Jones-dynamicprogramming.md`
