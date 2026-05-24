@@ -28,7 +28,7 @@
         font-weight: bold;
         /* margin-bottom: 20px; */
         color: #2c3e50;
-        height: 0.5in;
+        /*Note: Height is set by grid-template-rows in .calendar-container*/
     }
     
     .controls-section {
@@ -345,7 +345,7 @@ function generateCalendar() {
     }
 
     if (rowCount < 1 || Number.isNaN(rowCount)) {
-        alert('Rows and columns must be positive numbers');
+        alert('Rows must be a positive number');
         return;
     }
     
