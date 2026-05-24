@@ -153,6 +153,11 @@
         /* padding-bottom: 4px; */
         /* border-bottom: 1px solid #ecf0f1; */
     }
+
+    .day-cell-sat .day-header,
+    .day-cell-sun .day-header {
+        font-style: italic;
+    }
     
     .day-notes {
         flex-grow: 1;
@@ -386,6 +391,7 @@ function generateCalendar() {
         weekDays.forEach(dayDate => {
             const dayCell = document.createElement('div');
             dayCell.className = 'day-cell';
+            dayCell.classList.add(`day-cell-${dayAbbrevs[dayDate.getDay()].toLowerCase()}`);
             
             const dayHeader = document.createElement('div');
             dayHeader.className = 'day-header';
