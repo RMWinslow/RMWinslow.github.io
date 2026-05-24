@@ -58,7 +58,8 @@
     }
     
     .days-selector {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
     
@@ -216,11 +217,11 @@
 
 <div class="controls-section">
     <fieldset class="control-group">
-        <legend>Days of Week</legend>
+        <legend>Weekdays</legend>
         <div class="days-selector">
             <div class="day-checkbox">
                 <input type="checkbox" id="sunday" value="0">
-                <label for="sunday">Su</label>
+                <label for="sunday"><i>Su</i></label>
             </div>
             <div class="day-checkbox">
                 <input type="checkbox" id="monday" value="1" checked>
@@ -244,36 +245,32 @@
             </div>
             <div class="day-checkbox">
                 <input type="checkbox" id="saturday" value="6">
-                <label for="saturday">Sa</label>
+                <label for="saturday"><i>Sa</i></label>
             </div>
         </div>
     </fieldset>
     
     <fieldset class="control-group">
         <legend>Date Range</legend>
-        <div class="days-selector">
-            <div class="day-checkbox">
-                <label for="start-date">First Day of Class:</label>
-                <input type="date" id="start-date" class="date-input" value="2025-08-25">
-            </div>
-            <div class="day-checkbox">
-                <label for="end-date">Last Day of Class:</label>
-                <input type="date" id="end-date" class="date-input" value="2025-12-09">
-            </div>
+        <div class="control-group">
+            <label for="start-date">First Day of Class:</label>
+            <input type="date" id="start-date" class="date-input" value="2025-08-25">
+        </div>
+        <div class="control-group">
+            <label for="end-date">Last Day of Class:</label>
+            <input type="date" id="end-date" class="date-input" value="2025-12-09">
         </div>
     </fieldset>
 
     <fieldset class="control-group">
         <legend>Grid Size</legend>
-        <div class="days-selector">
-            <div class="day-checkbox">
-                <label for="row-count">Rows</label>
-                <input type="number" id="row-count" class="date-input number-input" value="4" min="1">
-            </div>
-            <div class="day-checkbox">
-                <label for="column-count">Columns</label>
-                <input type="number" id="column-count" class="date-input number-input" value="4" min="1">
-            </div>
+        <div class="control-group">
+            <label for="row-count">Rows</label>
+            <input type="number" id="row-count" class="date-input number-input" value="4" min="1">
+        </div>
+        <div class="control-group">
+            <label for="column-count">Columns</label>
+            <input type="number" id="column-count" class="date-input number-input" value="4" min="1">
         </div>
     </fieldset>
     
