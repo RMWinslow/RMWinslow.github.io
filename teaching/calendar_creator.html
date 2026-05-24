@@ -264,14 +264,8 @@
 
     <fieldset class="control-group">
         <legend>Grid Size</legend>
-        <div class="control-group">
-            <label for="row-count">Rows</label>
-            <input type="number" id="row-count" class="date-input number-input" value="4" min="1">
-        </div>
-        <div class="control-group">
-            <label for="column-count">Columns</label>
-            <input type="number" id="column-count" class="date-input number-input" value="4" min="1">
-        </div>
+        <label for="row-count">Rows</label>
+        <input type="number" id="row-count" class="date-input number-input" value="4" min="1">
     </fieldset>
     
     <div class="control-group">
@@ -311,14 +305,13 @@ function generateCalendar() {
     const startDate = new Date(document.getElementById('start-date').value.replace(/-/g, '\/'));
     const endDate = new Date(document.getElementById('end-date').value.replace(/-/g, '\/'));
     const rowCount = parseInt(document.getElementById('row-count').value, 10);
-    const columnCount = parseInt(document.getElementById('column-count').value, 10);
     
     if (startDate >= endDate) {
         alert('End date must be after start date');
         return;
     }
 
-    if (rowCount < 1 || columnCount < 1 || Number.isNaN(rowCount) || Number.isNaN(columnCount)) {
+    if (rowCount < 1 || Number.isNaN(rowCount)) {
         alert('Rows and columns must be positive numbers');
         return;
     }
@@ -330,7 +323,6 @@ function generateCalendar() {
     const calendarGrid = document.createElement('div');
     calendarGrid.className = 'calendar-grid';
     calendarGrid.style.gridTemplateRows = `repeat(${rowCount}, 1fr)`;
-    calendarGrid.style.gridTemplateColumns = `repeat(${columnCount}, 1fr)`;
     
     // Find the start of the week for the First Day of Class
     let currentDate = new Date(startDate);
