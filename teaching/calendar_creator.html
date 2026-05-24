@@ -46,6 +46,11 @@
         flex-direction: column;
         gap: 10px;
     }
+
+    .control-group legend {
+        font-weight: bold;
+        color: #2c3e50;
+    }
     
     .control-group label {
         font-weight: bold;
@@ -210,8 +215,8 @@
 
 
 <div class="controls-section">
-    <div class="control-group">
-        <label>Days of Week:</label>
+    <fieldset class="control-group">
+        <legend>Days of Week</legend>
         <div class="days-selector">
             <div class="day-checkbox">
                 <input type="checkbox" id="sunday" value="0">
@@ -242,20 +247,24 @@
                 <label for="saturday">Sa</label>
             </div>
         </div>
-    </div>
+    </fieldset>
     
-    <div class="control-group">
-        <label for="start-date">First Day of Class:</label>
-        <input type="date" id="start-date" class="date-input" value="2025-08-25">
-    </div>
-    
-    <div class="control-group">
-        <label for="end-date">Last Day of Class:</label>
-        <input type="date" id="end-date" class="date-input" value="2025-12-09">
-    </div>
+    <fieldset class="control-group">
+        <legend>Date Range</legend>
+        <div class="days-selector">
+            <div class="day-checkbox">
+                <label for="start-date">First Day of Class:</label>
+                <input type="date" id="start-date" class="date-input" value="2025-08-25">
+            </div>
+            <div class="day-checkbox">
+                <label for="end-date">Last Day of Class:</label>
+                <input type="date" id="end-date" class="date-input" value="2025-12-09">
+            </div>
+        </div>
+    </fieldset>
 
-    <div class="control-group">
-        <label>Grid Size:</label>
+    <fieldset class="control-group">
+        <legend>Grid Size</legend>
         <div class="days-selector">
             <div class="day-checkbox">
                 <label for="row-count">Rows</label>
@@ -266,7 +275,7 @@
                 <input type="number" id="column-count" class="date-input number-input" value="4" min="1">
             </div>
         </div>
-    </div>
+    </fieldset>
     
     <div class="control-group">
         <button class="generate-btn" onclick="generateCalendar()">Generate Calendar</button>
