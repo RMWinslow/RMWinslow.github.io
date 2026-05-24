@@ -83,11 +83,6 @@
     .number-input {
         width: 60px;
     }
-
-    .grid-size-summary {
-        color: #2c3e50;
-        font-size: 14px;
-    }
     
     .generate-btn {
         padding: 12px 24px;
@@ -271,7 +266,6 @@
         <legend>Grid Size</legend>
         <label for="row-count">Rows</label>
         <input type="number" id="row-count" class="date-input number-input" value="4" min="1">
-        <div id="column-count-summary" class="grid-size-summary"></div>
     </fieldset>
     
     <div class="control-group">
@@ -290,38 +284,6 @@
 </div>
 
 <script>
-function getLocalDateFromInput(inputId) {
-    return new Date(document.getElementById(inputId).value.replace(/-/g, '\/'));
-}
-
-function getWeekCount(startDate, endDate) {
-    let currentDate = new Date(startDate);
-    currentDate.setDate(currentDate.getDate() - currentDate.getDay());
-
-    let weekCount = 0;
-    while (currentDate <= endDate) {
-        weekCount++;
-        currentDate.setDate(currentDate.getDate() + 7);
-    }
-
-    return weekCount;
-}
-
-function updateColumnCountSummary() {
-    const startDate = getLocalDateFromInput('start-date');
-    const endDate = getLocalDateFromInput('end-date');
-    const rowCount = parseInt(document.getElementById('row-count').value, 10);
-    const summary = document.getElementById('column-count-summary');
-
-    if (startDate >= endDate || rowCount < 1 || Number.isNaN(rowCount)) {
-        summary.textContent = '';
-        return;
-    }
-
-    const columnCount = Math.ceil(getWeekCount(startDate, endDate) / rowCount);
-    summary.textContent = `${columnCount} column${columnCount === 1 ? '' : 's'}`;
-}
-
 function generateCalendar() {
     // Get selected days
     const selectedDays = [];
@@ -340,8 +302,8 @@ function generateCalendar() {
     // Get date range
     // Javascript is godamn insane, so I need to reformat the date inputs from "2025-12-09" to "2025/12/09"
     // or the Date will be interpretted as midnight UTC and all my dates will be off by one.
-    const startDate = getLocalDateFromInput('start-date');
-    const endDate = getLocalDateFromInput('end-date');
+    const startDate = new Date(document.getElementById('start-date').value.replace(/-/g, '\/'));
+    const endDate = new Date(document.getElementById('end-date').value.replace(/-/g, '\/'));
     const rowCount = parseInt(document.getElementById('row-count').value, 10);
     
     if (startDate >= endDate) {
@@ -353,8 +315,6 @@ function generateCalendar() {
         alert('Rows and columns must be positive numbers');
         return;
     }
-
-    updateColumnCountSummary();
     
     // Generate weeks
     const calendarOutput = document.getElementById('calendar-output');
@@ -434,10 +394,6 @@ function generateCalendar() {
 }
 
 // Generate initial calendar
-document.getElementById('start-date').addEventListener('input', updateColumnCountSummary);
-document.getElementById('end-date').addEventListener('input', updateColumnCountSummary);
-document.getElementById('row-count').addEventListener('input', updateColumnCountSummary);
-updateColumnCountSummary();
 generateCalendar();
 </script>
 </body>
