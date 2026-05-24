@@ -13,11 +13,13 @@
     
     .calendar-container {
         max-width: 8.5in;
-        height: 10.5in;
+        height: 11in;
         margin: 0 auto;
         background: white;
         /* padding: 20px; */
         box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        display: grid;
+        grid-template-rows: 0.5in 1fr; /*This causes the title to be 0.5in and grid to fill the rest.*/
     }
     
     .calendar-title {
@@ -105,7 +107,7 @@
         /* margin-top: 20px; */
         grid-template-rows: repeat(4, 1fr); /* 4 rows */
         grid-auto-flow: column; /* Fill columns first, then move to next column */
-        height: 10in;
+        height: 100%;
     }
     
     .week-header {
@@ -189,7 +191,7 @@
     @media print {
         body { margin: 0; background: white; }
         .controls-section { display: none; }
-        .calendar-container { box-shadow: none; margin: 0; padding: 0; }
+        .calendar-container { box-shadow: none; margin: 0; padding: 0; height: 100vh; }
         /* .day-notes { background: white !important; } */
     }
     
