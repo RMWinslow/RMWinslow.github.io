@@ -307,7 +307,17 @@ function setDefaultDates() {
     document.getElementById('end-date').value = formatDateInputValue(endDate);
 }
 
+const calendarNotes = {}; // allows notes to persist across reflows within the same session
+
 function generateCalendar() {
+    document.querySelectorAll('.day-cell').forEach(dayCell => {
+        const dayHeader = dayCell.querySelector('.day-header');
+        const dayNotes = dayCell.querySelector('.day-notes');
+        if (dayHeader && dayNotes) {
+            calendarNotes[dayHeader.textContent] = dayNotes.value;
+        }
+    });
+
     // Get selected days
     const selectedDays = [];
     const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -397,11 +407,13 @@ function generateCalendar() {
             
             const dayHeader = document.createElement('div');
             dayHeader.className = 'day-header';
-            dayHeader.textContent = `${dayAbbrevs[dayDate.getDay()]}, ${dayDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}`;
+            const dayHeaderText = `${dayAbbrevs[dayDate.getDay()]}, ${dayDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}`;
+            dayHeader.textContent = dayHeaderText;
             
             const dayNotes = document.createElement('textarea');
             dayNotes.className = 'day-notes';
             dayNotes.placeholder = ' ';
+            dayNotes.value = calendarNotes[dayHeaderText] || '';
             
             dayCell.appendChild(dayHeader);
             dayCell.appendChild(dayNotes);
