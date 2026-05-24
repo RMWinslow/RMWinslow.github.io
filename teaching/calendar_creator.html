@@ -73,6 +73,10 @@
         border-radius: 4px;
         font-size: 14px;
     }
+
+    .number-input {
+        width: 60px;
+    }
     
     .generate-btn {
         padding: 12px 24px;
@@ -249,6 +253,20 @@
         <label for="end-date">Last Day of Class:</label>
         <input type="date" id="end-date" class="date-input" value="2025-12-09">
     </div>
+
+    <div class="control-group">
+        <label>Grid Size:</label>
+        <div class="days-selector">
+            <div class="day-checkbox">
+                <label for="row-count">Rows</label>
+                <input type="number" id="row-count" class="date-input number-input" value="4" min="1">
+            </div>
+            <div class="day-checkbox">
+                <label for="column-count">Columns</label>
+                <input type="number" id="column-count" class="date-input number-input" value="4" min="1">
+            </div>
+        </div>
+    </div>
     
     <div class="control-group">
         <button class="generate-btn" onclick="generateCalendar()">Generate Calendar</button>
@@ -286,9 +304,16 @@ function generateCalendar() {
     // or the Date will be interpretted as midnight UTC and all my dates will be off by one.
     const startDate = new Date(document.getElementById('start-date').value.replace(/-/g, '\/'));
     const endDate = new Date(document.getElementById('end-date').value.replace(/-/g, '\/'));
+    const rowCount = parseInt(document.getElementById('row-count').value, 10);
+    const columnCount = parseInt(document.getElementById('column-count').value, 10);
     
     if (startDate >= endDate) {
         alert('End date must be after start date');
+        return;
+    }
+
+    if (rowCount < 1 || columnCount < 1 || Number.isNaN(rowCount) || Number.isNaN(columnCount)) {
+        alert('Rows and columns must be positive numbers');
         return;
     }
     
@@ -298,7 +323,8 @@ function generateCalendar() {
     
     const calendarGrid = document.createElement('div');
     calendarGrid.className = 'calendar-grid';
-    calendarGrid.style.gridTemplateColumns = `repeat(4, 1fr)`;
+    calendarGrid.style.gridTemplateRows = `repeat(${rowCount}, 1fr)`;
+    calendarGrid.style.gridTemplateColumns = `repeat(${columnCount}, 1fr)`;
     
     // Find the start of the week for the First Day of Class
     let currentDate = new Date(startDate);
