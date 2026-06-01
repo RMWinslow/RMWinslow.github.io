@@ -15,6 +15,7 @@
 --rc: 8px;
 }
 
+/*
 @media (prefers-color-scheme: dark) {
 	:root {
     --c2:#333;
@@ -22,6 +23,7 @@
     --c4:#fff;
 	}
 }
+*/
 
 html {
     -ms-text-size-adjust: 100%;
