@@ -102,13 +102,11 @@
       min-width: 150px;
     }
     #tableWrap {
-      overflow: auto;
-      max-height: calc(100vh - 175px);
+      overflow-x: auto;
       border: 1px solid #d7dde6;
     }
     @media (max-width: 900px) {
       fieldset { grid-template-columns: 1fr; }
-      #tableWrap { max-height: none; }
     }
   </style>
 </head>
@@ -147,6 +145,7 @@
 
   <script>
     const termPayloads = {"202680":{"description":"Fall 2026","url":"catalog/fall-2026-usd-web-payload.json"},"202710":{"description":"Spring 2027","url":"catalog/spring-2027-usd-web-payload.json"}};
+    const appTitle = "USD Course Browser";
     const payloadCache = {};
     let activeTermCode = null;
     let currentRows = [];
@@ -189,10 +188,9 @@
       return document.getElementById("term").value;
     }
 
-    function updateTitle(data) {
-      const title = `${data.term.description} Course Browser`;
-      document.title = title;
-      document.getElementById("pageTitle").textContent = title;
+    function updateTitle() {
+      document.title = appTitle;
+      document.getElementById("pageTitle").textContent = appTitle;
     }
 
     function updateMeta(data) {
@@ -334,8 +332,8 @@
       const subjects = [...new Set(data.courses.map(course => course.subj).filter(Boolean))]
         .sort((a, b) => a.localeCompare(b));
       const groups = [
-        ["group:fin-acct", "Finance / Accounting (FIN, ACCT)"],
-        ["group:econ-dsci", "Econ / Decision Sciences (ECON, DSCI)"]
+        ["group:fin-acct", "(FIN, ACCT)"],
+        ["group:econ-dsci", "(ECON, DSCI)"]
       ];
       const groupOptions = groups
         .map(([value, label]) => `<option value="${escapeHtml(value)}">${escapeHtml(label)}</option>`);
