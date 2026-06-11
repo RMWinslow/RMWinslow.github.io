@@ -86,7 +86,6 @@ def json_schema(schema):
         [
             f"{json_inline('course')}:{json_map_lines(schema['course'])}",
             f"{json_inline('meeting')}:{json_map_lines(schema['meeting'])}",
-            f"{json_inline('room_capacity')}:{json_inline(schema['room_capacity'])}",
         ]
     ) + "\n}"
 
@@ -97,10 +96,9 @@ def json_lookups(lookups):
             f"{json_inline('institutions')}:{json_inline(lookups['institutions'])}",
             f"{json_inline('meeting_campuses')}:{json_map_lines(lookups['meeting_campuses'])}",
             f"{json_inline('ambiguous_meeting_campuses')}:{json_map_lines(lookups['ambiguous_meeting_campuses'])}",
+            f"{json_inline('subjects')}:{json_map_lines(lookups['subjects'])}",
             f"{json_inline('buildings')}:{json_map_lines(lookups['buildings'])}",
             f"{json_inline('ambiguous_buildings')}:{json_map_lines(lookups['ambiguous_buildings'])}",
-            f"{json_inline('room_capacities')}:{json_map_lines(lookups['room_capacities'])}",
-            f"{json_inline('faculty_names')}:{json_map_lines(lookups['faculty_names'])}",
         ]
     ) + "\n}"
 
@@ -251,10 +249,6 @@ def weekly_days(meeting):
     return "".join(label for label, key in DAY_FIELDS if meeting.get(key)) or None
 
 
-def effective_capacity(section):
-    return section.get("crossListCapacity") or section.get("maximumEnrollment")
-
-
 def institution_matches(section, institution):
     description = clean(section.get("campusDescription"))
     if not institution:
@@ -266,19 +260,10 @@ def institution_matches(section, institution):
     return needle == haystack or needle in haystack
 
 
-def room_key(meeting):
-    building = clean(meeting.get("building"))
-    room = clean(meeting.get("room"))
-    if not building or not room:
-        return None
-    return f"{building}:{room}"
-
-
 def build_lookups(sections):
     building_descriptions = defaultdict(set)
     campus_descriptions = defaultdict(set)
-    room_capacities = defaultdict(list)
-    faculty_names = {}
+    subject_descriptions = defaultdict(set)
     institution_ids = {}
     institutions = []
 
@@ -288,14 +273,11 @@ def build_lookups(sections):
             institution_ids[institution] = len(institutions)
             institutions.append(institution)
 
-        for faculty in section.get("faculty") or []:
-            name = clean(faculty.get("displayName"))
-            if not name:
-                continue
-            faculty_id = clean(faculty.get("bannerId")) or f"name:{name}"
-            faculty_names.setdefault(faculty_id, name)
+        subject = clean(section.get("subject"))
+        subject_description = clean(section.get("subjectDescription"))
+        if subject and subject_description:
+            subject_descriptions[subject].add(subject_description)
 
-        capacity = effective_capacity(section)
         for meeting_faculty in section.get("meetingsFaculty") or []:
             meeting = meeting_faculty.get("meetingTime") or {}
             building = clean(meeting.get("building"))
@@ -306,10 +288,6 @@ def build_lookups(sections):
                 building_descriptions[building].add(building_description)
             if campus and campus_description:
                 campus_descriptions[campus].add(campus_description)
-
-            key = room_key(meeting)
-            if key and capacity is not None:
-                room_capacities[key].append(capacity)
 
     building_map = {}
     ambiguous_buildings = {}
@@ -329,34 +307,30 @@ def build_lookups(sections):
         else:
             ambiguous_campuses[campus] = values
 
-    room_capacity_map = {
-        key: max(values)
-        for key, values in sorted(room_capacities.items())
-        if values
+    subject_map = {
+        subject: sorted(descriptions)[0]
+        for subject, descriptions in sorted(subject_descriptions.items())
+        if descriptions
     }
 
     return {
         "institution_ids": institution_ids,
         "institutions": institutions,
+        "subject_map": subject_map,
         "building_map": building_map,
         "ambiguous_buildings": ambiguous_buildings,
         "campus_map": campus_map,
         "ambiguous_campuses": ambiguous_campuses,
-        "room_capacity_map": room_capacity_map,
-        "faculty_names": dict(sorted(faculty_names.items())),
     }
 
 
-def faculty_ids(section, faculty_names):
-    ids = []
+def faculty_names(section):
+    names = []
     for faculty in section.get("faculty") or []:
         name = clean(faculty.get("displayName"))
-        if not name:
-            continue
-        faculty_id = clean(faculty.get("bannerId")) or f"name:{name}"
-        if faculty_id in faculty_names:
-            ids.append(faculty_id)
-    return ids
+        if name:
+            names.append(name)
+    return names
 
 
 def meeting_row(meeting_faculty, ambiguous_buildings):
@@ -386,7 +360,7 @@ def course_row(section, lookups):
             "num": clean(section.get("courseNumber")),
             "sec": clean(section.get("sequenceNumber")),
             "title": clean(section.get("courseTitle")),
-            "fac": faculty_ids(section, lookups["faculty_names"]),
+            "fac": faculty_names(section),
             "mtg": [
                 meeting_row(meeting_faculty, lookups["ambiguous_buildings"])
                 for meeting_faculty in section.get("meetingsFaculty") or []
@@ -445,7 +419,7 @@ def condense_sections(all_sections, manifest, institution, all_institutions):
                 "num": "course_number",
                 "sec": "sequence_number",
                 "title": "course_title",
-                "fac": "faculty_names ids",
+                "fac": "faculty_names",
                 "mtg": "meetings",
             },
             "meeting": {
@@ -456,19 +430,14 @@ def condense_sections(all_sections, manifest, institution, all_institutions):
                 "r": "room",
                 "bd": "building_description, only when code is ambiguous",
             },
-            "room_capacity": (
-                "Maximum observed effective capacity by building:room. "
-                "Effective capacity uses crossListCapacity when present, otherwise maximumEnrollment."
-            ),
         },
         "lookups": {
             "institutions": lookups["institutions"],
             "meeting_campuses": lookups["campus_map"],
             "ambiguous_meeting_campuses": lookups["ambiguous_campuses"],
+            "subjects": lookups["subject_map"],
             "buildings": lookups["building_map"],
             "ambiguous_buildings": lookups["ambiguous_buildings"],
-            "room_capacities": lookups["room_capacity_map"],
-            "faculty_names": lookups["faculty_names"],
         },
         "count": len(courses),
         "courses": courses,

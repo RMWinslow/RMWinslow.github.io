@@ -235,8 +235,8 @@
       return data;
     }
 
-    function facultyNames(course, data) {
-      return (course.fac || []).map(id => data.lookups.faculty_names[id]).filter(Boolean);
+    function facultyNames(course) {
+      return course.fac || [];
     }
 
     function locationText(meeting, data) {
@@ -257,7 +257,7 @@
     function buildRows(courses, data) {
       const rows = [];
       for (const course of courses) {
-        const names = facultyNames(course, data).join(", ");
+        const names = facultyNames(course).join(", ");
         const meetings = course.mtg && course.mtg.length ? course.mtg : [{}];
         for (const meeting of meetings) {
           rows.push({
@@ -333,7 +333,9 @@
         .sort((a, b) => a.localeCompare(b));
       const groups = [
         ["group:fin-acct", "(FIN, ACCT)"],
-        ["group:econ-dsci", "(ECON, DSCI)"]
+        ["group:econ-dsci", "(ECON, DSCI)"],
+        ["group:emm", "EMM Division"],
+        ["group:hsad", "HSAD"]
       ];
       const groupOptions = groups
         .map(([value, label]) => `<option value="${escapeHtml(value)}">${escapeHtml(label)}</option>`);
@@ -347,6 +349,10 @@
       if (!selectedSubject) return true;
       if (selectedSubject === "group:fin-acct") return courseSubject === "FIN" || courseSubject === "ACCT";
       if (selectedSubject === "group:econ-dsci") return courseSubject === "ECON" || courseSubject === "DSCI";
+      if (selectedSubject === "group:emm") {
+        return ["BADM", "BLAW", "ENTR", "HRM", "MGMT", "MKTG"].includes(courseSubject);
+      }
+      if (selectedSubject === "group:hsad") return courseSubject === "HSAD";
       return courseSubject === selectedSubject;
     }
 
@@ -358,7 +364,7 @@
       return data.courses.filter(course => {
         if (!subjectMatches(text(course.subj), subject)) return false;
 
-        const names = facultyNames(course, data).join(" ").toLowerCase();
+        const names = facultyNames(course).join(" ").toLowerCase();
         if (instructorText && !names.includes(instructorText)) return false;
 
         if (building) {
