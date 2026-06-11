@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>USD Course Browser</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 18px;
+      font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+      color: #17202a;
+      background: #f6f7f9;
+    }
+    h1 {
+      margin: 0 0 4px;
+      font-size: 22px;
+    }
+    #meta {
+      margin: 0 0 12px;
+      color: #556170;
+      font-size: 12px;
+    }
+    fieldset {
+      display: grid;
+      grid-template-columns: minmax(150px, 1fr) minmax(90px, .6fr) minmax(150px, 1fr) minmax(180px, 1.2fr) auto;
+      gap: 10px;
+      align-items: end;
+      margin: 0 0 14px;
+      padding: 14px;
+      border: 1px solid #cfd6df;
+      background: white;
+    }
+    legend {
+      padding: 0 6px;
+      font-weight: 700;
+    }
+    label {
+      display: grid;
+      gap: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #556170;
+      text-transform: uppercase;
+    }
+    input, select, button {
+      height: 36px;
+      padding: 0 9px;
+      border: 1px solid #bfc8d4;
+      border-radius: 4px;
+      font: inherit;
+      background: white;
+    }
+    button {
+      color: white;
+      background: #9b1c31;
+      border-color: #9b1c31;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    button:disabled {
+      cursor: progress;
+      background: #9aa5b1;
+      border-color: #9aa5b1;
+    }
+    #status {
+      min-height: 24px;
+      color: #556170;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+    }
+    th, td {
+      padding: 7px 8px;
+      border: 1px solid #d7dde6;
+      text-align: left;
+      vertical-align: top;
+      white-space: nowrap;
+    }
+    th {
+      position: sticky;
+      top: 0;
+      background: #eef1f5;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    th button {
+      width: 100%;
+      height: auto;
+      padding: 0;
+      border: 0;
+      color: inherit;
+      background: transparent;
+      font: inherit;
+      text-align: left;
+      text-transform: inherit;
+    }
+    td:nth-child(3), td:nth-child(4), td:nth-child(7) {
+      white-space: normal;
+      min-width: 150px;
+    }
+    #tableWrap {
+      overflow: auto;
+      max-height: calc(100vh - 175px);
+      border: 1px solid #d7dde6;
+    }
+    @media (max-width: 900px) {
+      fieldset { grid-template-columns: 1fr; }
+      #tableWrap { max-height: none; }
+    }
+  </style>
+</head>
+<body>
+  <h1 id="pageTitle">USD Course Browser</h1>
+  <div id="meta"></div>
+
+  <form id="filterForm">
+    <fieldset>
+      <legend>Filter courses</legend>
+      <label>Term
+        <select id="term">
+          <option value="202680">Fall 2026 (202680)</option>
+          <option value="202710">Spring 2027 (202710)</option>
+        </select>
+      </label>
+      <label>Subject
+        <select id="subject">
+          <option value="">Any</option>
+        </select>
+      </label>
+      <label>Instructor contains
+        <input id="instructorText" autocomplete="off">
+      </label>
+      <label>Building
+        <select id="building">
+          <option value="">Any</option>
+        </select>
+      </label>
+      <button id="submitButton" type="submit">Search</button>
+    </fieldset>
+  </form>
+
+  <div id="status">Loading catalog data...</div>
+  <div id="tableWrap"></div>
+
+  <script>
+    const termPayloads = {"202680":{"description":"Fall 2026","url":"catalog/fall-2026-usd-web-payload.json"},"202710":{"description":"Spring 2027","url":"catalog/spring-2027-usd-web-payload.json"}};
+    const payloadCache = {};
+    let activeTermCode = null;
+    let currentRows = [];
+    let sortState = { key: "course", direction: "asc" };
+    const columns = [
+      ["course", "Course"],
+      ["crn", "CRN"],
+      ["title", "Title"],
+      ["instructor", "Instructor"],
+      ["days", "Days"],
+      ["time", "Time"],
+      ["location", "Location"]
+    ];
+
+    function text(value) {
+      return value === undefined || value === null ? "" : String(value);
+    }
+
+    function escapeHtml(value) {
+      return text(value).replace(/[&<>"']/g, character => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      }[character]));
+    }
+
+    async function loadPayload(termCode) {
+      if (payloadCache[termCode]) return payloadCache[termCode];
+      const entry = termPayloads[termCode];
+      if (!entry) throw new Error(`No catalog data configured for term ${termCode}.`);
+      const response = await fetch(entry.url, { cache: "no-cache" });
+      if (!response.ok) throw new Error(`Could not load ${entry.url}: ${response.status}`);
+      payloadCache[termCode] = await response.json();
+      return payloadCache[termCode];
+    }
+
+    function selectedTermCode() {
+      return document.getElementById("term").value;
+    }
+
+    function updateTitle(data) {
+      const title = `${data.term.description} Course Browser`;
+      document.title = title;
+      document.getElementById("pageTitle").textContent = title;
+    }
+
+    function updateMeta(data) {
+      const source = data.source || {};
+      const scope = data.scope || {};
+      const parts = [];
+      if (source.fetched_at) parts.push(`Data fetched ${source.fetched_at}`);
+      if (scope.description) parts.push(scope.description);
+      if (scope.selected_rows && scope.input_rows) {
+        parts.push(`${scope.selected_rows} selected rows from ${scope.input_rows} source rows`);
+      } else if (source.total_rows_fetched) {
+        parts.push(`${source.total_rows_fetched} source rows`);
+      }
+      document.getElementById("meta").textContent = parts.join(" | ");
+    }
+
+    function preserveSelected(select, selectedValue, fallbackLabel) {
+      if (!selectedValue) {
+        select.value = "";
+        return;
+      }
+      const exists = Array.from(select.options).some(option => option.value === selectedValue);
+      if (!exists) {
+        select.insertAdjacentHTML(
+          "beforeend",
+          `<option value="${escapeHtml(selectedValue)}">${escapeHtml(fallbackLabel || selectedValue)} (not in term)</option>`
+        );
+      }
+      select.value = selectedValue;
+    }
+
+    async function activateTerm(termCode) {
+      const data = await loadPayload(termCode);
+      const termChanged = activeTermCode !== termCode;
+      activeTermCode = termCode;
+      updateTitle(data);
+      updateMeta(data);
+      if (termChanged) {
+        fillSubjectOptions(data, document.getElementById("subject").value);
+        fillBuildingOptions(data, document.getElementById("building").value);
+      }
+      return data;
+    }
+
+    function facultyNames(course, data) {
+      return (course.fac || []).map(id => data.lookups.faculty_names[id]).filter(Boolean);
+    }
+
+    function locationText(meeting, data) {
+      const building = data.lookups.buildings[meeting.b] || meeting.bd || meeting.b || "";
+      return [building, meeting.r].filter(Boolean).join(" ");
+    }
+
+    function timeText(meeting) {
+      if (!meeting.bt && !meeting.et) return "";
+      return [meeting.bt, meeting.et].filter(Boolean).join("-");
+    }
+
+    function courseText(course) {
+      return [text(course.subj), text(course.num)].filter(Boolean).join(" ") +
+        (course.sec ? `, ${course.sec}` : "");
+    }
+
+    function buildRows(courses, data) {
+      const rows = [];
+      for (const course of courses) {
+        const names = facultyNames(course, data).join(", ");
+        const meetings = course.mtg && course.mtg.length ? course.mtg : [{}];
+        for (const meeting of meetings) {
+          rows.push({
+            course: courseText(course),
+            crn: text(course.crn),
+            title: text(course.title),
+            instructor: names,
+            days: text(meeting.d),
+            time: timeText(meeting),
+            location: locationText(meeting, data)
+          });
+        }
+      }
+      return rows;
+    }
+
+    function sortedRows() {
+      const collator = new Intl.Collator(undefined, { numeric: true, sensitivity: "base" });
+      const rows = currentRows.slice();
+      rows.sort((left, right) => {
+        const result = collator.compare(text(left[sortState.key]), text(right[sortState.key]));
+        return sortState.direction === "asc" ? result : -result;
+      });
+      return rows;
+    }
+
+    function renderCurrentRows() {
+      if (!currentRows.length) {
+        document.getElementById("tableWrap").innerHTML = "<p>No matching courses.</p>";
+        return;
+      }
+
+      const headers = columns.map(([key, label]) => {
+        const marker = sortState.key === key ? (sortState.direction === "asc" ? " ^" : " v") : "";
+        return `<th><button type="button" data-sort="${escapeHtml(key)}">${escapeHtml(label + marker)}</button></th>`;
+      }).join("");
+
+      const rows = sortedRows().map(row => `<tr>
+        <td>${escapeHtml(row.course)}</td>
+        <td>${escapeHtml(row.crn)}</td>
+        <td>${escapeHtml(row.title)}</td>
+        <td>${escapeHtml(row.instructor)}</td>
+        <td>${escapeHtml(row.days)}</td>
+        <td>${escapeHtml(row.time)}</td>
+        <td>${escapeHtml(row.location)}</td>
+      </tr>`);
+
+      document.getElementById("tableWrap").innerHTML = `<table>
+        <thead>
+          <tr>${headers}</tr>
+        </thead>
+        <tbody>${rows.join("")}</tbody>
+      </table>`;
+    }
+
+    function renderTable(courses, data) {
+      currentRows = buildRows(courses, data);
+      renderCurrentRows();
+    }
+
+    function fillBuildingOptions(data, selectedValue) {
+      const buildingSelect = document.getElementById("building");
+      const options = Object.entries(data.lookups.buildings)
+        .sort((a, b) => a[1].localeCompare(b[1]))
+        .map(([code, name]) => `<option value="${escapeHtml(code)}">${escapeHtml(name)} (${escapeHtml(code)})</option>`);
+      buildingSelect.innerHTML = `<option value="">Any</option>${options.join("")}`;
+      preserveSelected(buildingSelect, selectedValue, selectedValue);
+    }
+
+    function fillSubjectOptions(data, selectedValue) {
+      const subjectSelect = document.getElementById("subject");
+      const subjects = [...new Set(data.courses.map(course => course.subj).filter(Boolean))]
+        .sort((a, b) => a.localeCompare(b));
+      const groups = [
+        ["group:fin-acct", "Finance / Accounting (FIN, ACCT)"],
+        ["group:econ-dsci", "Econ / Decision Sciences (ECON, DSCI)"]
+      ];
+      const groupOptions = groups
+        .map(([value, label]) => `<option value="${escapeHtml(value)}">${escapeHtml(label)}</option>`);
+      const options = subjects
+        .map(subject => `<option value="${escapeHtml(subject)}">${escapeHtml(subject)}</option>`);
+      subjectSelect.innerHTML = `<option value="">Any</option>${groupOptions.join("")}${options.join("")}`;
+      preserveSelected(subjectSelect, selectedValue, selectedValue);
+    }
+
+    function subjectMatches(courseSubject, selectedSubject) {
+      if (!selectedSubject) return true;
+      if (selectedSubject === "group:fin-acct") return courseSubject === "FIN" || courseSubject === "ACCT";
+      if (selectedSubject === "group:econ-dsci") return courseSubject === "ECON" || courseSubject === "DSCI";
+      return courseSubject === selectedSubject;
+    }
+
+    function filterCourses(data) {
+      const subject = document.getElementById("subject").value;
+      const instructorText = document.getElementById("instructorText").value.trim().toLowerCase();
+      const building = document.getElementById("building").value;
+
+      return data.courses.filter(course => {
+        if (!subjectMatches(text(course.subj), subject)) return false;
+
+        const names = facultyNames(course, data).join(" ").toLowerCase();
+        if (instructorText && !names.includes(instructorText)) return false;
+
+        if (building) {
+          const meetings = course.mtg || [];
+          if (!meetings.some(meeting => meeting.b === building)) return false;
+        }
+
+        return true;
+      });
+    }
+
+    async function runSearch(event) {
+      if (event) event.preventDefault();
+      const button = document.getElementById("submitButton");
+      const status = document.getElementById("status");
+      button.disabled = true;
+      status.textContent = "Loading and filtering...";
+      try {
+        const data = await activateTerm(selectedTermCode());
+        const courses = filterCourses(data);
+        renderTable(courses, data);
+        status.textContent = `${courses.length} matching course records.`;
+      } catch (error) {
+        status.textContent = error.message;
+      } finally {
+        button.disabled = false;
+      }
+    }
+
+    document.getElementById("filterForm").addEventListener("submit", runSearch);
+    document.getElementById("term").addEventListener("change", runSearch);
+    document.getElementById("tableWrap").addEventListener("click", event => {
+      const button = event.target.closest("button[data-sort]");
+      if (!button) return;
+      const key = button.dataset.sort;
+      if (sortState.key === key) {
+        sortState.direction = sortState.direction === "asc" ? "desc" : "asc";
+      } else {
+        sortState = { key, direction: "asc" };
+      }
+      renderCurrentRows();
+    });
+
+    runSearch();
+  </script>
+</body>
+</html>
