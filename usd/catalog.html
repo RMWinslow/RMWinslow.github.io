@@ -1,5 +1,11 @@
 <!doctype html>
 <html lang="en">
+<!-- 
+TODO: The code architecture the AI built for this is a bit of a mess.
+The pipeline mixes filtering, sorting, and rendering in a confusing way.
+One consequence is that column sorting is preserved between filter queries, 
+but can't be stacked. EG, you can't sort by two different columns at once.
+-->
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
