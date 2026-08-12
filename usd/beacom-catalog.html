@@ -13,6 +13,10 @@
       <legend>Semesters</legend>
       <p id="terms-status" role="status">Loading semesters...</p>
       <div id="term-options"></div>
+      <p>
+        <button id="select-all-terms" type="button">Select all</button>
+        <button id="deselect-all-terms" type="button">Deselect all</button>
+      </p>
     </fieldset>
 
     <fieldset>
@@ -77,6 +81,11 @@
           <label for="subject-hsad">Health Services Administration (HSAD)</label>
         </div>
       </fieldset>
+
+      <p>
+        <button id="select-all-subjects" type="button">Select all</button>
+        <button id="deselect-all-subjects" type="button">Deselect all</button>
+      </p>
     </fieldset>
 
     <fieldset>
@@ -174,8 +183,14 @@
       }
 
       termsStatus.textContent = terms.length
-        ? "Select one or more semesters."
+        ? ""
         : "No semesters were returned by SDBOR.";
+    }
+
+    function setCheckboxes(name, checked) {
+      for (const checkbox of form.querySelectorAll(`input[name="${name}"]`)) {
+        checkbox.checked = checked;
+      }
     }
 
     async function loadTerms() {
@@ -378,6 +393,19 @@
       } finally {
         searchButton.disabled = false;
       }
+    });
+
+    document.getElementById("select-all-terms").addEventListener("click", () => {
+      setCheckboxes("term", true);
+    });
+    document.getElementById("deselect-all-terms").addEventListener("click", () => {
+      setCheckboxes("term", false);
+    });
+    document.getElementById("select-all-subjects").addEventListener("click", () => {
+      setCheckboxes("subject", true);
+    });
+    document.getElementById("deselect-all-subjects").addEventListener("click", () => {
+      setCheckboxes("subject", false);
     });
 
     loadTerms();
