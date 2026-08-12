@@ -6,6 +6,7 @@ const BEACOM_SUBJECTS = [
   "BLAW",
   "DSCI",
   "ECON",
+  "EMBA",
   "ENTR",
   "FIN",
   "HRM",
@@ -14,7 +15,10 @@ const BEACOM_SUBJECTS = [
   "MKTG"
 ].join(",");
 const MAX_SECTIONS = 500;
+const MAX_INSTRUCTOR_MATCHES = 500;
+const MAX_INSTRUCTOR_NAME_LENGTH = 100;
 const CACHE_SECONDS = 15 * 60;
+const CACHE_VERSION = "v2";
 const TERM_PATTERN = /^\d{6}$/;
 
 const ALLOWED_ORIGINS = new Set([
@@ -73,6 +77,16 @@ function jsonResponse(payload, status, origin) {
     }),
     origin
   );
+}
+
+function cacheableJsonResponse(payload) {
+  return new Response(JSON.stringify(payload), {
+    status: 200,
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "Cache-Control": `public, max-age=${CACHE_SECONDS}`
+    }
+  });
 }
 
 function cookieValues(headers) {
@@ -134,10 +148,13 @@ async function selectTerm(term, cookieJar) {
   await response.arrayBuffer();
 }
 
-function cacheKey(request, resource, term = "") {
+function cacheKey(request, resource, parameters = {}) {
   const url = new URL(request.url);
-  url.pathname = `/__cache/${resource}`;
-  url.search = term ? `?term=${encodeURIComponent(term)}` : "";
+  url.pathname = `/__cache/${CACHE_VERSION}/${resource}`;
+  url.search = "";
+  for (const [name, value] of Object.entries(parameters)) {
+    url.searchParams.set(name, value);
+  }
   return new Request(url.toString(), { method: "GET" });
 }
 
@@ -151,6 +168,71 @@ function cacheableUpstreamResponse(upstream) {
     statusText: upstream.statusText,
     headers
   });
+}
+
+function sectionLimitExceeded(payload) {
+  const totalCount = Number(payload && payload.totalCount);
+  return Number.isFinite(totalCount) && totalCount > MAX_SECTIONS;
+}
+
+async function parseSectionPayload(response) {
+  const payload = await response.json();
+  if (
+    !payload ||
+    typeof payload !== "object" ||
+    payload.success !== true ||
+    !Array.isArray(payload.data)
+  ) {
+    throw new Error("SDBOR returned an unexpected course-results response.");
+  }
+  return payload;
+}
+
+async function fetchSections(term, cookieJar, filters = {}) {
+  const parameters = new URLSearchParams({
+    txt_term: term,
+    txt_campus: "U",
+    ...filters,
+    pageOffset: "0",
+    pageMaxSize: String(MAX_SECTIONS),
+    sortColumn: "subjectDescription",
+    sortDirection: "asc"
+  });
+  const response = await bannerFetch(
+    `/searchResults/searchResults?${parameters}`,
+    cookieJar
+  );
+  return parseSectionPayload(response);
+}
+
+function instructorIdsFromSections(payload) {
+  const ids = new Set();
+  for (const section of payload.data) {
+    for (const faculty of Array.isArray(section.faculty) ? section.faculty : []) {
+      if (faculty && faculty.bannerId) {
+        ids.add(String(faculty.bannerId));
+      }
+    }
+  }
+  return Array.from(ids);
+}
+
+async function fetchInstructorMatches(term, name, cookieJar) {
+  const parameters = new URLSearchParams({
+    searchTerm: name,
+    term,
+    offset: "1",
+    max: String(MAX_INSTRUCTOR_MATCHES + 1)
+  });
+  const response = await bannerFetch(
+    `/classSearch/get_instructor?${parameters}`,
+    cookieJar
+  );
+  const payload = await response.json();
+  if (!Array.isArray(payload)) {
+    throw new Error("SDBOR returned an unexpected instructor-search response.");
+  }
+  return payload;
 }
 
 async function termsResponse(request, context) {
@@ -174,7 +256,7 @@ async function termsResponse(request, context) {
 
 async function semesterResponse(request, term, context) {
   const cache = caches.default;
-  const key = cacheKey(request, "semester", term);
+  const key = cacheKey(request, "semester", { term });
   const cached = await cache.match(key);
   if (cached) {
     return cached;
@@ -184,20 +266,71 @@ async function semesterResponse(request, term, context) {
   await beginBannerSession(cookieJar);
   await selectTerm(term, cookieJar);
 
-  const parameters = new URLSearchParams({
-    txt_term: term,
-    txt_campus: "U",
-    txt_subject: BEACOM_SUBJECTS,
-    pageOffset: "0",
-    pageMaxSize: String(MAX_SECTIONS),
-    sortColumn: "subjectDescription",
-    sortDirection: "asc"
+  const beacomPayload = await fetchSections(term, cookieJar, {
+    txt_subject: BEACOM_SUBJECTS
   });
-  const upstream = await bannerFetch(
-    `/searchResults/searchResults?${parameters}`,
-    cookieJar
+  const instructorIds = instructorIdsFromSections(beacomPayload);
+  let resultPayload = beacomPayload;
+
+  if (instructorIds.length) {
+    // Banner retains the previous subject filter. Reselecting the term clears
+    // that state while preserving the session-specific instructor IDs.
+    await selectTerm(term, cookieJar);
+    resultPayload = await fetchSections(term, cookieJar, {
+      txt_instructor: instructorIds.join(",")
+    });
+  }
+
+  const response = cacheableJsonResponse({
+    ...resultPayload,
+    limitExceeded:
+      sectionLimitExceeded(beacomPayload) || sectionLimitExceeded(resultPayload)
+  });
+  context.waitUntil(cache.put(key, response.clone()));
+  return response;
+}
+
+async function instructorResponse(request, term, name, context) {
+  const cache = caches.default;
+  const key = cacheKey(request, "instructor", {
+    term,
+    name: name.toLowerCase()
+  });
+  const cached = await cache.match(key);
+  if (cached) {
+    return cached;
+  }
+
+  const cookieJar = new Map();
+  await beginBannerSession(cookieJar);
+  await selectTerm(term, cookieJar);
+
+  const matches = await fetchInstructorMatches(term, name, cookieJar);
+  const instructorLookupLimitExceeded =
+    matches.length > MAX_INSTRUCTOR_MATCHES;
+  const instructorIds = Array.from(
+    new Set(
+      matches
+        .slice(0, MAX_INSTRUCTOR_MATCHES)
+        .map((match) => match && match.code)
+        .filter(Boolean)
+        .map(String)
+    )
   );
-  const response = cacheableUpstreamResponse(upstream);
+
+  let resultPayload = { success: true, totalCount: 0, data: [] };
+  if (instructorIds.length) {
+    resultPayload = await fetchSections(term, cookieJar, {
+      txt_instructor: instructorIds.join(",")
+    });
+  }
+
+  const response = cacheableJsonResponse({
+    ...resultPayload,
+    limitExceeded: sectionLimitExceeded(resultPayload),
+    instructorMatchCount: instructorIds.length,
+    instructorLookupLimitExceeded
+  });
   context.waitUntil(cache.put(key, response.clone()));
   return response;
 }
@@ -252,12 +385,45 @@ export default {
         );
       }
 
+      if (url.pathname === "/api/instructor") {
+        const term = url.searchParams.get("term") || "";
+        const name = (url.searchParams.get("name") || "").trim();
+        if (!TERM_PATTERN.test(term)) {
+          return jsonResponse(
+            { error: "A six-digit Banner term code is required." },
+            400,
+            origin
+          );
+        }
+        if (!name) {
+          return jsonResponse(
+            { error: "A nonblank instructor name is required." },
+            400,
+            origin
+          );
+        }
+        if (name.length > MAX_INSTRUCTOR_NAME_LENGTH) {
+          return jsonResponse(
+            {
+              error: `Instructor names are limited to ${MAX_INSTRUCTOR_NAME_LENGTH} characters.`
+            },
+            400,
+            origin
+          );
+        }
+        return addBrowserHeaders(
+          await instructorResponse(request, term, name, context),
+          origin
+        );
+      }
+
       return jsonResponse(
         {
           name: "USD Beacom catalog API",
           endpoints: [
             "/api/terms",
-            "/api/semester?term=202680"
+            "/api/semester?term=202680",
+            "/api/instructor?term=202680&name=Carr"
           ]
         },
         200,

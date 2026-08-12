@@ -82,6 +82,62 @@ GET /classSearch/get_partOfTerm
 
 All paths above are relative to `APP`.
 
+## Companion Worker API used by the website
+
+The repository also contains a deliberately narrow Cloudflare Worker wrapper
+at:
+
+```text
+usd/_cloudflare-worker-source/usd-beacom-catalog-api/
+```
+
+Its deployed base URL is:
+
+```text
+https://usd-beacom-catalog-api.rmwinslow.workers.dev
+```
+
+The browser-facing routes are:
+
+```text
+GET /api/terms
+GET /api/semester?term=202680
+GET /api/instructor?term=202680&name=Carr
+```
+
+- The `terms` query returns a list of semester codes available in the database.
+- The `semester` query tries to grab all the "Beacom" courses. (See below for the heuristic it uses.)
+- And the `instructor` query finds all matches for an instructor name, regardless of subject.
+
+`/api/terms` returns Banner's term lookup array. `/api/semester` first queries
+the Beacom seed subjects `ACCT,BADM,BLAW,DSCI,ECON,EMBA,ENTR,FIN,HRM,HSAD,MGMT,MKTG`,
+collects the returned instructors' session-specific `bannerId` values, resets
+the sticky Banner search state by reselecting the same term, and then returns
+all USD sections for those instructors without a subject filter.
+The point of this approach is to try to grab all the courses taught by Beacom Faculty,
+without exceeding the 500-response limit for a Banner query for each semester.
+Unfortunately, this approach will fail to capture sections for instructors 
+if they don't teach any of the "seed" subjects in the same semester.
+(The instructor query below ignores subjects, 
+so at least this failure mode won't arise when looking for a particular person.)
+
+`/api/instructor` uses Banner's instructor-name lookup in the selected term,
+then queries all USD subjects for the matching session-specific instructor
+IDs. Banner controls the lookup's partial or fuzzy name-matching behavior.
+
+Both course routes request at most 500 rows and add `limitExceeded: true` when
+Banner reports more than 500 course results. The instructor route also adds
+`instructorMatchCount` and `instructorLookupLimitExceeded`; the latter means
+the lookup itself produced more than the Worker's 500-instructor safety cap.
+The remaining course-result fields retain Banner's normal shape, including
+`success`, `totalCount`, and `data`. Ordinary JavaScript JSON consumers ignore
+these extra fields unless they deliberately enforce a strict schema.
+
+A client that calls both course routes should merge their `data` arrays and
+deduplicate sections by term plus `courseReferenceNumber`. The full Worker
+contract, caching rules, origin policy, and request counts are documented in
+`usd/_cloudflare-worker-source/usd-beacom-catalog-api/README.md`.
+
 ## Complete anonymous-session workflow
 
 ### 1. Start an anonymous session
@@ -841,7 +897,7 @@ business documentation identifies these prefixes with the Beacom School of
 Business:
 
 ```text
-ACCT BADM BLAW DSCI ECON ENTR FIN HRM HSAD MGMT MKTG
+ACCT BADM BLAW DSCI ECON EMBA ENTR FIN HRM HSAD MGMT MKTG
 ```
 
 Mappings for interdisciplinary subjects may need multiple affiliations or an
