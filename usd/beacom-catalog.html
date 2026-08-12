@@ -4,12 +4,193 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>USD Beacom Course Search</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      color-scheme: light;
+    }
+
+    body {
+      margin: 6px;
+      color: #000;
+      background: #c0c0c0;
+      font: 12px/1.25 "MS Sans Serif", Tahoma, Arial, sans-serif;
+    }
+
+    h1 {
+      margin: 0 0 5px;
+      font-size: 18px;
+    }
+
+    form,
+    fieldset,
+    p {
+    }
+
+    #search-form {
+      display: grid;
+      grid-template-columns: max-content max-content minmax(16rem, 1fr);
+      gap: 4px;
+      align-items: stretch;
+    }
+
+    #search-form > fieldset {
+      margin-bottom: 0;
+    }
+
+    fieldset {
+      min-width: 0;
+      margin-bottom: 4px;
+      padding: 3px 5px 5px;
+      border: 2px groove #fff;
+    }
+
+    fieldset fieldset {
+      display: inline-block;
+      margin: 1px 3px 2px 0;
+      padding: 2px 5px 4px;
+      vertical-align: top;
+    }
+
+    legend {
+      padding: 0 2px;
+      font-weight: bold;
+    }
+
+    p {
+      margin-bottom: 4px;
+    }
+
+    #term-options {
+      columns: auto;
+    }
+
+    #term-options > div {
+      white-space: nowrap;
+    }
+
+    #subject-options {
+      display: grid;
+      grid-template-columns: max-content;
+      gap: 2px 3px;
+      align-items: start;
+    }
+
+    #subject-options fieldset {
+      display: block;
+      margin: 0;
+    }
+
+    #search-controls {
+      grid-column: 1 / -1;
+      margin-bottom: 0;
+    }
+
+    input,
+    button {
+      font: inherit;
+    }
+
+    input[type="search"] {
+      width: 20rem;
+      max-width: 100%;
+      padding: 1px 2px;
+      border: 2px inset #eee;
+      border-radius: 0;
+      background: #fff;
+    }
+
+    button {
+      min-height: 20px;
+      padding: 1px 7px;
+      border: 2px outset #eee;
+      border-radius: 0;
+      color: #000;
+      background: #c0c0c0;
+    }
+
+    button:active {
+      border-style: inset;
+    }
+
+    button:disabled {
+      color: #777;
+    }
+
+    #status,
+    #warning {
+      margin: 3px 0;
+    }
+
+    #status:empty,
+    #warning:empty,
+    #terms-status:empty {
+      display: none;
+    }
+
+    #warning {
+      font-weight: bold;
+    }
+
+    table {
+      width: 100%;
+      border: 2px inset #eee;
+      border-spacing: 0;
+      background: #fff;
+      font-size: 11px;
+    }
+
+    caption {
+      padding: 2px 3px;
+      border: 2px outset #eee;
+      caption-side: top;
+      background: #c0c0c0;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    th,
+    td {
+      padding: 1px 3px;
+      border-right: 1px solid #808080;
+      border-bottom: 1px solid #808080;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      border-top: 1px solid #fff;
+      border-right-color: #404040;
+      border-bottom-color: #404040;
+      border-left: 1px solid #fff;
+      background: #c0c0c0;
+      white-space: nowrap;
+    }
+
+    td:nth-child(1),
+    td:nth-child(2),
+    td:nth-child(3),
+    td:nth-child(4),
+    td:nth-child(6),
+    td:nth-child(9),
+    td:nth-child(10),
+    td:nth-child(11) {
+      white-space: nowrap;
+    }
+
+    tbody tr:nth-child(even) td {
+      background: #eee;
+    }
+  </style>
 </head>
 <body>
   <h1>USD Beacom Course Search</h1>
 
   <form id="search-form">
-    <fieldset>
+    <fieldset id="semester-options">
       <legend>Semesters</legend>
       <p id="terms-status" role="status">Loading semesters...</p>
       <div id="term-options"></div>
@@ -19,68 +200,70 @@
       </p>
     </fieldset>
 
-    <fieldset>
+    <fieldset id="subject-filter">
       <legend>Subjects</legend>
 
-      <fieldset>
-        <legend>ECON/DSCI</legend>
-        <div>
-          <input id="subject-econ" name="subject" type="checkbox" value="ECON" checked>
-          <label for="subject-econ">Economics (ECON)</label>
-        </div>
-        <div>
-          <input id="subject-dsci" name="subject" type="checkbox" value="DSCI" checked>
-          <label for="subject-dsci">Decision Sciences (DSCI)</label>
-        </div>
-      </fieldset>
+      <div id="subject-options">
+        <fieldset>
+          <legend>ECON/DSCI</legend>
+          <div>
+            <input id="subject-econ" name="subject" type="checkbox" value="ECON" checked>
+            <label for="subject-econ">Economics (ECON)</label>
+          </div>
+          <div>
+            <input id="subject-dsci" name="subject" type="checkbox" value="DSCI" checked>
+            <label for="subject-dsci">Decision Sciences (DSCI)</label>
+          </div>
+        </fieldset>
 
-      <fieldset>
-        <legend>ACCT/FIN</legend>
-        <div>
-          <input id="subject-acct" name="subject" type="checkbox" value="ACCT" checked>
-          <label for="subject-acct">Accounting (ACCT)</label>
-        </div>
-        <div>
-          <input id="subject-fin" name="subject" type="checkbox" value="FIN" checked>
-          <label for="subject-fin">Finance (FIN)</label>
-        </div>
-      </fieldset>
+        <fieldset>
+          <legend>ACCT/FIN</legend>
+          <div>
+            <input id="subject-acct" name="subject" type="checkbox" value="ACCT" checked>
+            <label for="subject-acct">Accounting (ACCT)</label>
+          </div>
+          <div>
+            <input id="subject-fin" name="subject" type="checkbox" value="FIN" checked>
+            <label for="subject-fin">Finance (FIN)</label>
+          </div>
+        </fieldset>
 
-      <fieldset>
-        <legend>EMM</legend>
-        <div>
-          <input id="subject-badm" name="subject" type="checkbox" value="BADM" checked>
-          <label for="subject-badm">Business Administration (BADM)</label>
-        </div>
-        <div>
-          <input id="subject-blaw" name="subject" type="checkbox" value="BLAW" checked>
-          <label for="subject-blaw">Business Law (BLAW)</label>
-        </div>
-        <div>
-          <input id="subject-entr" name="subject" type="checkbox" value="ENTR" checked>
-          <label for="subject-entr">Entrepreneurship (ENTR)</label>
-        </div>
-        <div>
-          <input id="subject-hrm" name="subject" type="checkbox" value="HRM" checked>
-          <label for="subject-hrm">Human Resource Management (HRM)</label>
-        </div>
-        <div>
-          <input id="subject-mgmt" name="subject" type="checkbox" value="MGMT" checked>
-          <label for="subject-mgmt">Management (MGMT)</label>
-        </div>
-        <div>
-          <input id="subject-mktg" name="subject" type="checkbox" value="MKTG" checked>
-          <label for="subject-mktg">Marketing (MKTG)</label>
-        </div>
-      </fieldset>
+        <fieldset>
+          <legend>EMM</legend>
+          <div>
+            <input id="subject-badm" name="subject" type="checkbox" value="BADM" checked>
+            <label for="subject-badm">Business Administration (BADM)</label>
+          </div>
+          <div>
+            <input id="subject-blaw" name="subject" type="checkbox" value="BLAW" checked>
+            <label for="subject-blaw">Business Law (BLAW)</label>
+          </div>
+          <div>
+            <input id="subject-entr" name="subject" type="checkbox" value="ENTR" checked>
+            <label for="subject-entr">Entrepreneurship (ENTR)</label>
+          </div>
+          <div>
+            <input id="subject-hrm" name="subject" type="checkbox" value="HRM" checked>
+            <label for="subject-hrm">Human Resource Management (HRM)</label>
+          </div>
+          <div>
+            <input id="subject-mgmt" name="subject" type="checkbox" value="MGMT" checked>
+            <label for="subject-mgmt">Management (MGMT)</label>
+          </div>
+          <div>
+            <input id="subject-mktg" name="subject" type="checkbox" value="MKTG" checked>
+            <label for="subject-mktg">Marketing (MKTG)</label>
+          </div>
+        </fieldset>
 
-      <fieldset>
-        <legend>HSAD</legend>
-        <div>
-          <input id="subject-hsad" name="subject" type="checkbox" value="HSAD" checked>
-          <label for="subject-hsad">Health Services Administration (HSAD)</label>
-        </div>
-      </fieldset>
+        <fieldset>
+          <legend>HSAD</legend>
+          <div>
+            <input id="subject-hsad" name="subject" type="checkbox" value="HSAD" checked>
+            <label for="subject-hsad">Health Services Administration (HSAD)</label>
+          </div>
+        </fieldset>
+      </div>
 
       <p>
         <button id="select-all-subjects" type="button">Select all</button>
@@ -88,15 +271,14 @@
       </p>
     </fieldset>
 
-    <fieldset>
-      <legend>Instructor (optional)</legend>
+    <fieldset id="instructor-filter">
       <p>
         <label for="instructor">Instructor name:</label>
         <input id="instructor" name="instructor" type="search">
       </p>
     </fieldset>
 
-    <p>
+    <p id="search-controls">
       <button id="search-button" type="submit">Search</button>
     </p>
   </form>
