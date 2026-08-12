@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>USD Beacom Courses by Instructor</title>
+</head>
+<body>
+  <h1>USD Beacom Courses by Instructor</h1>
+
+  <form id="search-form">
+    <fieldset>
+      <legend>Semesters</legend>
+      <p id="terms-status" role="status">Loading semesters...</p>
+      <div id="term-options"></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Instructor</legend>
+      <p>
+        <label for="instructor">Instructor name:</label>
+        <input id="instructor" name="instructor" type="search" minlength="2" required>
+      </p>
+    </fieldset>
+
+    <p>
+      <button id="search-button" type="submit">Search</button>
+    </p>
+  </form>
+
+  <p id="status" role="status" aria-live="polite"></p>
+  <p id="warning" role="alert"></p>
+  <div id="matched-instructors"></div>
+
+  <table>
+    <caption id="results-caption">Course results</caption>
+    <thead>
+      <tr>
+        <th scope="col">Semester</th>
+        <th scope="col">Course</th>
+        <th scope="col">Section</th>
+        <th scope="col">CRN</th>
+        <th scope="col">Title</th>
+        <th scope="col">Credits</th>
+        <th scope="col">Instructor</th>
+        <th scope="col">Format</th>
+        <th scope="col">Days</th>
+        <th scope="col">Time</th>
+        <th scope="col">Dates</th>
+        <th scope="col">Location</th>
+      </tr>
+    </thead>
+    <tbody id="results-body"></tbody>
+  </table>
+
+  <script>
+    "use strict";
+
+    const API_ROOT = "https://usd-beacom-catalog-api.rmwinslow.workers.dev/api";
+    const DISPLAY_LIMIT = 500;
+    const SIMULTANEOUS_REQUESTS = 4;
+
+    const form = document.getElementById("search-form");
+    const termOptions = document.getElementById("term-options");
+    const termsStatus = document.getElementById("terms-status");
+    const instructorInput = document.getElementById("instructor");
+    const searchButton = document.getElementById("search-button");
+    const status = document.getElementById("status");
+    const warning = document.getElementById("warning");
+    const matchedInstructors = document.getElementById("matched-instructors");
+    const resultsCaption = document.getElementById("results-caption");
+    const resultsBody = document.getElementById("results-body");
+
+    async function getJson(url) {
+      const response = await fetch(url, { cache: "no-store" });
+      let payload;
+
+      try {
+        payload = await response.json();
+      } catch (error) {
+        throw new Error(`The course service returned HTTP ${response.status}.`);
+      }
+
+      if (!response.ok) {
+        throw new Error(payload.error || `The course service returned HTTP ${response.status}.`);
+      }
+      return payload;
+    }
+
+    function renderTerms(terms) {
+      termOptions.replaceChildren();
+
+      for (const [index, term] of terms.entries()) {
+        const line = document.createElement("div");
+        const checkbox = document.createElement("input");
+        const label = document.createElement("label");
+
+        checkbox.type = "checkbox";
+        checkbox.name = "term";
+        checkbox.value = term.code;
+        checkbox.id = `term-${term.code}`;
+        checkbox.dataset.description = term.description;
+        checkbox.checked = index === 0;
+
+        label.htmlFor = checkbox.id;
+        label.textContent = term.description;
+
+        line.append(checkbox, " ", label);
+        termOptions.appendChild(line);
+      }
+
+      termsStatus.textContent = terms.length
+        ? "Select one or more semesters."
+        : "No semesters were returned by SDBOR.";
+    }
+
+    async function loadTerms() {
+      try {
+        const terms = await getJson(`${API_ROOT}/terms`);
+        renderTerms(terms);
+      } catch (error) {
+        termsStatus.textContent = `Could not load semesters: ${error.message}`;
+        searchButton.disabled = true;
+      }
+    }
+
+    async function mapWithLimit(values, limit, callback) {
+      const results = new Array(values.length);
+      let nextIndex = 0;
+
+      async function worker() {
+        while (nextIndex < values.length) {
+          const index = nextIndex;
+          nextIndex += 1;
+          results[index] = await callback(values[index], index);
+        }
+      }
+
+      const workers = Array.from(
+        { length: Math.min(limit, values.length) },
+        () => worker()
+      );
+      await Promise.all(workers);
+      return results;
+    }
+
+    function unique(values) {
+      return Array.from(new Set(values.filter(Boolean)));
+    }
+
+    function formatTime(value) {
+      const text = value == null ? "" : String(value).trim();
+      if (!/^\d{4}$/.test(text)) {
+        return text;
+      }
+      const hour = Number(text.slice(0, 2));
+      const minute = text.slice(2);
+      return `${hour % 12 || 12}:${minute} ${hour < 12 ? "AM" : "PM"}`;
+    }
+
+    function formatDays(meeting) {
+      const days = [
+        ["monday", "M"],
+        ["tuesday", "Tu"],
+        ["wednesday", "W"],
+        ["thursday", "Th"],
+        ["friday", "F"],
+        ["saturday", "Sa"],
+        ["sunday", "Su"]
+      ];
+      return days
+        .filter(([field]) => meeting[field])
+        .map(([, abbreviation]) => abbreviation)
+        .join(" ");
+    }
+
+    function meetingValues(course) {
+      const meetings = (course.meetingsFaculty || [])
+        .map((record) => record.meetingTime || {})
+        .filter((meeting) => Object.keys(meeting).length);
+
+      return {
+        days: unique(meetings.map(formatDays)),
+        times: unique(meetings.map((meeting) => {
+          const begin = formatTime(meeting.beginTime);
+          const end = formatTime(meeting.endTime);
+          return [begin, end].filter(Boolean).join("–");
+        })),
+        dates: unique(meetings.map((meeting) => {
+          return [meeting.startDate, meeting.endDate]
+            .filter(Boolean)
+            .join("–");
+        })),
+        locations: unique(meetings.map((meeting) => {
+          const building = meeting.buildingDescription || meeting.building || "";
+          return [building, meeting.room].filter(Boolean).join(" ");
+        }))
+      };
+    }
+
+    function creditText(course) {
+      if (course.creditHours != null) {
+        return String(course.creditHours);
+      }
+      const low = course.creditHourLow;
+      const high = course.creditHourHigh;
+      if (low == null && high == null) {
+        return "";
+      }
+      return low === high ? String(low) : [low, high].filter((value) => value != null).join("–");
+    }
+
+    function appendCell(row, value) {
+      const cell = document.createElement("td");
+      cell.textContent = value == null ? "" : String(value);
+      row.appendChild(cell);
+    }
+
+    function renderCourses(courses) {
+      resultsBody.replaceChildren();
+
+      for (const course of courses) {
+        const meetings = meetingValues(course);
+        const instructors = unique(
+          (course.faculty || []).map((faculty) => faculty.displayName)
+        );
+        const formats = unique([
+          course.scheduleTypeDescription,
+          course.instructionalMethodDescription
+        ]);
+        const row = document.createElement("tr");
+
+        appendCell(row, course.termDesc);
+        appendCell(row, `${course.subject || ""} ${course.courseDisplay || course.courseNumber || ""}`.trim());
+        appendCell(row, course.sequenceNumber);
+        appendCell(row, course.courseReferenceNumber);
+        appendCell(row, course.courseTitle);
+        appendCell(row, creditText(course));
+        appendCell(row, instructors.join("; "));
+        appendCell(row, formats.join("; "));
+        appendCell(row, meetings.days.join("; "));
+        appendCell(row, meetings.times.join("; "));
+        appendCell(row, meetings.dates.join("; "));
+        appendCell(row, meetings.locations.join("; "));
+        resultsBody.appendChild(row);
+      }
+
+      resultsCaption.textContent = `${courses.length} course result${courses.length === 1 ? "" : "s"} displayed`;
+    }
+
+    function renderMatchedInstructors(courses) {
+      matchedInstructors.replaceChildren();
+      if (!courses.length) {
+        return;
+      }
+
+      const heading = document.createElement("h2");
+      heading.textContent = "Matched instructors";
+      const list = document.createElement("ul");
+      const byTerm = new Map();
+
+      for (const course of courses) {
+        if (!byTerm.has(course.termDesc)) {
+          byTerm.set(course.termDesc, new Set());
+        }
+        for (const faculty of course.faculty || []) {
+          if (faculty.displayName) {
+            byTerm.get(course.termDesc).add(faculty.displayName);
+          }
+        }
+      }
+
+      for (const [term, names] of byTerm) {
+        const item = document.createElement("li");
+        item.textContent = `${term}: ${Array.from(names).sort().join(", ")}`;
+        list.appendChild(item);
+      }
+
+      matchedInstructors.append(heading, list);
+    }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const selectedTerms = Array.from(
+        form.querySelectorAll('input[name="term"]:checked'),
+        (checkbox) => checkbox.value
+      );
+      const instructorQuery = instructorInput.value.trim();
+
+      if (!selectedTerms.length) {
+        status.textContent = "Select at least one semester.";
+        return;
+      }
+      if (instructorQuery.length < 2) {
+        status.textContent = "Enter at least two characters of an instructor name.";
+        return;
+      }
+
+      searchButton.disabled = true;
+      warning.textContent = "";
+      status.textContent = `Loading ${selectedTerms.length} semester${selectedTerms.length === 1 ? "" : "s"}...`;
+      matchedInstructors.replaceChildren();
+      resultsBody.replaceChildren();
+      resultsCaption.textContent = "Course results";
+
+      try {
+        const payloads = await mapWithLimit(
+          selectedTerms,
+          SIMULTANEOUS_REQUESTS,
+          (term) => getJson(`${API_ROOT}/semester?term=${encodeURIComponent(term)}`)
+        );
+        const incompleteTerms = payloads
+          .filter((payload) => payload.totalCount > (payload.data || []).length)
+          .map((payload) => payload.data?.[0]?.termDesc || "an unknown semester");
+        const allCourses = payloads.flatMap((payload) => payload.data || []);
+        const needle = instructorQuery.toLocaleLowerCase();
+        const matchingCourses = allCourses.filter((course) => {
+          return (course.faculty || []).some((faculty) => {
+            return (faculty.displayName || "").toLocaleLowerCase().includes(needle);
+          });
+        });
+        const displayedCourses = matchingCourses.slice(0, DISPLAY_LIMIT);
+
+        renderCourses(displayedCourses);
+        renderMatchedInstructors(matchingCourses);
+        status.textContent = `Search complete. ${matchingCourses.length} matching course result${matchingCourses.length === 1 ? "" : "s"} found.`;
+
+        const warnings = [];
+        if (matchingCourses.length > DISPLAY_LIMIT) {
+          warnings.push(
+            `WARNING: Your query returned ${matchingCourses.length} results. Only the first ${DISPLAY_LIMIT} are displayed.`
+          );
+        }
+        if (incompleteTerms.length) {
+          warnings.push(
+            `WARNING: SDBOR returned more than 500 Beacom sections for ${incompleteTerms.join(", ")}. Instructor matches beyond the first 500 cannot be counted.`
+          );
+        }
+        warning.textContent = warnings.join(" ");
+      } catch (error) {
+        status.textContent = `Search failed: ${error.message}`;
+      } finally {
+        searchButton.disabled = false;
+      }
+    });
+
+    loadTerms();
+  </script>
+</body>
+</html>

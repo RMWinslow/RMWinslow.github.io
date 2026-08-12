@@ -1,0 +1,13 @@
+{
+  "name": "usd-beacom-catalog-api",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --no-bundle",
+    "check": "wrangler deploy --dry-run --no-bundle"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
