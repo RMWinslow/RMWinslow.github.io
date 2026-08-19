@@ -151,7 +151,7 @@
   </style>
 </head>
 <body>
-  <h1>USD Beacom Course Search</h1>
+  <h1>USD Beacom* Course Search</h1>
 
   <fieldset>
     <form id="search-form">
@@ -261,12 +261,12 @@
         <div><input id="column-credits" type="checkbox" data-column="6" checked> <label for="column-credits">Credits</label></div>
         <div><input id="column-instructor" type="checkbox" data-column="7" checked> <label for="column-instructor">Instructor</label></div>
         <div><input id="column-schedule-type" type="checkbox" data-column="8" checked> <label for="column-schedule-type">Schedule type</label></div>
-        <div><input id="column-instructional-method" type="checkbox" data-column="9" checked> <label for="column-instructional-method">Instructional method</label></div>
+        <div><input id="column-instructional-method" type="checkbox" data-column="9"> <label for="column-instructional-method">Instructional method</label></div>
         <div><input id="column-days" type="checkbox" data-column="10" checked> <label for="column-days">Days</label></div>
         <div><input id="column-time" type="checkbox" data-column="11" checked> <label for="column-time">Time</label></div>
         <div><input id="column-building" type="checkbox" data-column="12" checked> <label for="column-building">Building</label></div>
         <div><input id="column-room" type="checkbox" data-column="13" checked> <label for="column-room">Room</label></div>
-        <div><input id="column-enrollment" type="checkbox" data-column="14" checked> <label for="column-enrollment">Enrollment</label></div>
+        <div><input id="column-enrollment" type="checkbox" data-column="14"> <label for="column-enrollment">Enrollment</label></div>
         <div><input id="column-start-date" type="checkbox" data-column="15"> <label for="column-start-date">Start date</label></div>
         <div><input id="column-end-date" type="checkbox" data-column="16"> <label for="column-end-date">End date</label></div>
       </fieldset>
@@ -305,6 +305,27 @@
     </thead>
     <tbody id="results-body"></tbody>
   </table>
+
+  <p>
+    <small>
+      This is an unofficial tool that queries SDBOR's publicly viewable course
+      database. There's no actual way to see "Beacom" courses in the data, so I
+      perform the following three queries for a semester: <em>Firstly</em>, I get
+      every section with one of the "main" Beacom subject codes.
+      (<code>ACCT</code>, <code>BADM</code>, <code>BLAW</code>,
+      <code>DSCI</code>, <code>ECON</code>, <code>EMBA</code>,
+      <code>ENTR</code>, <code>FIN</code>, <code>HRM</code>,
+      <code>HSAD</code>, <code>MGMT</code>, <code>MKTG</code>).
+      <em>Secondly</em>, I find every instructor that teaches at least one
+      section with one of those subjects, and include every one of that
+      instructor's sections. <em>Thirdly</em>, I also include every section
+      taught physically within Beacom Hall. This does mean that the table may
+      fail to return results for a Beacom instructor who, I don't know, only
+      teaches online UHON classes in a particular semester, so use the
+      "Instructor name" box if you need to be absolutely sure that you're
+      getting all the results for a given instructor.
+    </small>
+  </p>
 
   <!-- TODO: Add pagination so a semester with a source query above 500 sections can be retrieved in full. -->
   <script>
@@ -361,7 +382,7 @@
         checkbox.value = term.code;
         checkbox.id = `term-${term.code}`;
         checkbox.dataset.description = description;
-        checkbox.checked = index === 0;
+        checkbox.checked = index < 2;
 
         label.htmlFor = checkbox.id;
         label.textContent = description;
