@@ -230,6 +230,12 @@
         </fieldset>
       </div>
 
+      <div>
+        <input id="subject-other" name="subject" type="checkbox" value="__OTHER__" checked>
+        <label for="subject-other">Other (EMBA, UHON, etc.)*</label>
+      </div>
+      <p><small>*Includes every subject not listed above.</small></p>
+
       <p>
         <button id="select-all-subjects" type="button">Select all</button>
         <button id="deselect-all-subjects" type="button">Deselect all</button>
@@ -300,12 +306,13 @@
     <tbody id="results-body"></tbody>
   </table>
 
-  <!-- TODO: Add pagination so a semester with more than 500 Beacom sections can be retrieved in full. -->
+  <!-- TODO: Add pagination so a semester with a source query above 500 sections can be retrieved in full. -->
   <script>
     "use strict";
 
     const API_ROOT = "https://usd-beacom-catalog-api.rmwinslow.workers.dev/api";
     const SIMULTANEOUS_REQUESTS = 4;
+    const OTHER_SUBJECT = "__OTHER__";
 
     const form = document.getElementById("search-form");
     const termOptions = document.getElementById("term-options");
@@ -319,6 +326,10 @@
     const resultsCaption = document.getElementById("results-caption");
     const resultsBody = document.getElementById("results-body");
     const entityDecoder = document.createElement("textarea");
+    const listedSubjects = new Set(Array.from(
+      form.querySelectorAll('input[name="subject"]'),
+      (checkbox) => checkbox.value
+    ).filter((subject) => subject !== OTHER_SUBJECT));
 
     async function getJson(url) {
       const response = await fetch(url, { cache: "no-store" });
@@ -545,6 +556,7 @@
         form.querySelectorAll('input[name="subject"]:checked'),
         (checkbox) => checkbox.value
       ));
+      const includeOtherSubjects = selectedSubjects.has(OTHER_SUBJECT);
       const instructorQuery = instructorInput.value.trim();
 
       if (!selectedTerms.length) {
@@ -569,12 +581,15 @@
           (term) => getJson(`${API_ROOT}/semester?term=${encodeURIComponent(term)}`)
         );
         const incompleteTerms = payloads
-          .filter((payload) => payload.totalCount > (payload.data || []).length)
+          .filter((payload) => payload.limitExceeded)
           .map((payload) => payload.data?.[0]?.termDesc || "an unknown semester");
         const allCourses = payloads.flatMap((payload) => payload.data || []);
         const needle = instructorQuery.toLocaleLowerCase();
         const matchingCourses = allCourses.filter((course) => {
-          if (!selectedSubjects.has(course.subject)) {
+          const subjectIsSelected = listedSubjects.has(course.subject)
+            ? selectedSubjects.has(course.subject)
+            : includeOtherSubjects;
+          if (!subjectIsSelected) {
             return false;
           }
           if (!needle) {
@@ -590,7 +605,7 @@
         const warnings = [];
         if (incompleteTerms.length) {
           warnings.push(
-            `WARNING: SDBOR returned more than 500 Beacom sections for ${incompleteTerms.join(", ")}. Matches beyond the first 500 cannot be counted.`
+            `WARNING: At least one SDBOR query returned more than 500 sections for ${incompleteTerms.join(", ")}. Matches beyond the first 500 cannot be counted.`
           );
         }
         warning.textContent = warnings.join(" ");

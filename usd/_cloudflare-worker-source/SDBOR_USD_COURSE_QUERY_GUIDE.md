@@ -5,7 +5,7 @@
 > its contents. Independently check the described endpoints, parameters,
 > examples, and code before relying on them.
 
-Last tested by OpenAI Codex: **August 11–12, 2026**
+Last tested by OpenAI Codex: **August 11–12 and 19, 2026**
 
 This document explains how to download public University of South Dakota (USD)
 course-section listings from the South Dakota Board of Regents (SDBOR) Ellucian
@@ -113,11 +113,14 @@ GET /api/instructor?term=202680&name=Carr
 the Beacom seed subjects `ACCT,BADM,BLAW,DSCI,ECON,EMBA,ENTR,FIN,HRM,HSAD,MGMT,MKTG`,
 collects the returned instructors' session-specific `bannerId` values, resets
 the sticky Banner search state by reselecting the same term, and then returns
-all USD sections for those instructors without a subject filter.
+all USD sections for those instructors without a subject filter. It then
+reselects the term, queries every section physically scheduled in Beacom Hall
+with `txt_building=UB`, and returns the term-and-CRN-deduplicated union of the
+instructor and building results.
 The point of this approach is to try to grab all the courses taught by Beacom Faculty,
 without exceeding the 500-response limit for a Banner query for each semester.
-Unfortunately, this approach will fail to capture sections for instructors 
-if they don't teach any of the "seed" subjects in the same semester.
+This can still fail to capture a non-Beacom-Hall section for an instructor who
+does not teach any seed subject in the same semester.
 (The instructor query below ignores subjects, 
 so at least this failure mode won't arise when looking for a particular person.)
 
@@ -125,13 +128,20 @@ so at least this failure mode won't arise when looking for a particular person.)
 then queries all USD subjects for the matching session-specific instructor
 IDs. Banner controls the lookup's partial or fuzzy name-matching behavior.
 
-Both course routes request at most 500 rows and add `limitExceeded: true` when
-Banner reports more than 500 course results. The instructor route also adds
+Both course routes request at most 500 rows per Banner results query and add
+`limitExceeded: true` when Banner reports more than 500 course results. For the
+semester route, that flag covers the seed, instructor, and building queries;
+its `totalCount` is the number of deduplicated union rows returned. The
+instructor route also adds
 `instructorMatchCount` and `instructorLookupLimitExceeded`; the latter means
 the lookup itself produced more than the Worker's 500-instructor safety cap.
-The remaining course-result fields retain Banner's normal shape, including
-`success`, `totalCount`, and `data`. Ordinary JavaScript JSON consumers ignore
-these extra fields unless they deliberately enforce a strict schema.
+The remaining course-result fields retain Banner's normal shape. Ordinary
+JavaScript JSON consumers ignore these extra fields unless they deliberately
+enforce a strict schema.
+
+The website's `Other (EMBA, UHON, etc.)` subject checkbox dynamically includes
+every subject prefix in the returned union that lacks its own named checkbox.
+It therefore continues to work when a newly encountered subject appears.
 
 A client that calls both course routes should merge their `data` arrays and
 deduplicate sections by term plus `courseReferenceNumber`. The full Worker
@@ -868,12 +878,17 @@ so with `--compressed`.
 downloading other SDBOR universities. Subject, level, and other known filters
 can reduce the response further when a complete USD archive is unnecessary.
 
-## Unsupported or misleading capabilities
+## Less obvious and unsupported capabilities
 
-### No building search parameter
+### Building search parameter
 
-The live form exposes no `txt_building` lookup/filter. To select a building,
-download an appropriate USD subset and filter locally using:
+Banner accepts `txt_building` even though the live form does not expose a
+building lookup. A live Fall 2026 (`202680`) test on August 19, 2026 returned
+135 rows for `txt_campus=U&txt_building=UB`, compared with 2,519 total USD
+rows without the building filter. Every returned row listed `UB` in its meeting
+data. The Worker uses this filter to retrieve Beacom Hall sections.
+
+Code that consumes these results can still validate or post-filter them using:
 
 ```text
 meetingsFaculty[].meetingTime.building

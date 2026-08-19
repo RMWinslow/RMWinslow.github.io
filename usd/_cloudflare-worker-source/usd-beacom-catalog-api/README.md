@@ -33,8 +33,9 @@ GET https://usd-beacom-catalog-api.rmwinslow.workers.dev/api/terms
 
 ### `GET /api/semester?term=202680`
 
-Returns USD sections for everyone assigned to at least one Beacom section in
-the requested term. The six-digit `term` parameter is required.
+Returns the union of USD sections taught by everyone assigned to at least one
+Beacom-subject section and every section physically scheduled in Beacom Hall.
+The six-digit `term` parameter is required.
 
 The Beacom seed subjects are:
 
@@ -50,13 +51,17 @@ On a cache miss, the Worker:
 4. Reselects the term to clear Banner's sticky subject filter while preserving
    the session-specific instructor IDs.
 5. Requests up to 500 USD sections for those instructors with no subject
-   filter and returns that second result.
+   filter.
+6. Reselects the term again to clear Banner's sticky instructor filter.
+7. Requests up to 500 USD sections with `txt_building=UB`, then unions those
+   rows with the instructor result and deduplicates them by term and CRN.
 
-If the seed has no instructor IDs, the original empty or instructor-less seed
-response is returned rather than issuing an unfiltered campus query.
+If the seed has no instructor IDs, the seed itself is unioned with the Beacom
+Hall query rather than issuing an unfiltered instructor query.
 
-The response retains Banner's normal `success`, `totalCount`, and `data`
-fields and adds:
+The response retains Banner's normal `success` and `data` fields. `totalCount`
+is replaced with the number of deduplicated union rows actually returned. The
+Worker also adds:
 
 ```json
 {
@@ -64,8 +69,8 @@ fields and adds:
 }
 ```
 
-`limitExceeded` is `true` if either the Beacom seed query or the instructor
-inclusion query reports more than 500 sections. In that case the returned
+`limitExceeded` is `true` if the Beacom seed query, instructor-inclusion query,
+or Beacom Hall query reports more than 500 sections. In that case the returned
 course set can be incomplete. A total of exactly 500 does not set the flag;
 the flag means Banner reported more than the requested 500-row page.
 
@@ -116,6 +121,10 @@ in both responses, so deduplicate by term plus `courseReferenceNumber` (CRN).
 Treat any `limitExceeded` value, or `instructorLookupLimitExceeded`, as an
 incomplete-results warning.
 
+The client has named checkboxes for its principal Beacom subjects and an
+`Other (EMBA, UHON, etc.)` checkbox. `Other` dynamically matches every returned
+subject prefix that does not have a named checkbox; it is not a hardcoded list.
+
 The Worker always applies `txt_campus=U`. It deliberately omits `txt_session`,
 so USD sections in Vermillion, Sioux Falls, online, clinical, internship, and
 other USD delivery/location categories remain eligible.
@@ -124,7 +133,7 @@ other USD delivery/location categories remain eligible.
 
 Every cache miss uses a fresh anonymous Banner session and carries Banner's
 cookies only within that request. The semester inclusion flow normally makes
-five SDBOR requests. The instructor flow makes four when matches exist and
+seven SDBOR requests. The instructor flow makes four when matches exist and
 three when there are none. Browser-to-Worker traffic is still one request per
 route per term.
 

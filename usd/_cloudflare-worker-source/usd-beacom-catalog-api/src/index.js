@@ -14,11 +14,12 @@ const BEACOM_SUBJECTS = [
   "MGMT",
   "MKTG"
 ].join(",");
+const BEACOM_BUILDING = "UB";
 const MAX_SECTIONS = 500;
 const MAX_INSTRUCTOR_MATCHES = 500;
 const MAX_INSTRUCTOR_NAME_LENGTH = 100;
 const CACHE_SECONDS = 15 * 60;
-const CACHE_VERSION = "v2";
+const CACHE_VERSION = "v3";
 const TERM_PATTERN = /^\d{6}$/;
 
 const ALLOWED_ORIGINS = new Set([
@@ -217,6 +218,43 @@ function instructorIdsFromSections(payload) {
   return Array.from(ids);
 }
 
+function mergeSections(...payloads) {
+  const sectionsByKey = new Map();
+  let unkeyedSection = 0;
+
+  for (const payload of payloads) {
+    for (const section of payload.data) {
+      const identifier =
+        section.courseReferenceNumber == null ||
+        section.courseReferenceNumber === ""
+          ? section.id
+          : section.courseReferenceNumber;
+      const key = identifier == null || identifier === ""
+        ? `__unkeyed_${unkeyedSection++}`
+        : `${section.term || ""}:${identifier}`;
+      if (!sectionsByKey.has(key)) {
+        sectionsByKey.set(key, section);
+      }
+    }
+  }
+
+  return Array.from(sectionsByKey.values()).sort((left, right) => {
+    const leftCourse = [
+      left.subjectDescription || left.subject || "",
+      left.subject || "",
+      left.courseNumber || left.courseDisplay || "",
+      left.sequenceNumber || ""
+    ].join(" ");
+    const rightCourse = [
+      right.subjectDescription || right.subject || "",
+      right.subject || "",
+      right.courseNumber || right.courseDisplay || "",
+      right.sequenceNumber || ""
+    ].join(" ");
+    return leftCourse.localeCompare(rightCourse, "en", { numeric: true });
+  });
+}
+
 async function fetchInstructorMatches(term, name, cookieJar) {
   const parameters = new URLSearchParams({
     searchTerm: name,
@@ -270,21 +308,33 @@ async function semesterResponse(request, term, context) {
     txt_subject: BEACOM_SUBJECTS
   });
   const instructorIds = instructorIdsFromSections(beacomPayload);
-  let resultPayload = beacomPayload;
+  let instructorPayload = beacomPayload;
 
   if (instructorIds.length) {
     // Banner retains the previous subject filter. Reselecting the term clears
     // that state while preserving the session-specific instructor IDs.
     await selectTerm(term, cookieJar);
-    resultPayload = await fetchSections(term, cookieJar, {
+    instructorPayload = await fetchSections(term, cookieJar, {
       txt_instructor: instructorIds.join(",")
     });
   }
 
+  // Clear the previous subject or instructor filter before requesting every
+  // section physically scheduled in Beacom Hall.
+  await selectTerm(term, cookieJar);
+  const buildingPayload = await fetchSections(term, cookieJar, {
+    txt_building: BEACOM_BUILDING
+  });
+  const mergedSections = mergeSections(instructorPayload, buildingPayload);
+
   const response = cacheableJsonResponse({
-    ...resultPayload,
+    ...instructorPayload,
+    totalCount: mergedSections.length,
+    data: mergedSections,
     limitExceeded:
-      sectionLimitExceeded(beacomPayload) || sectionLimitExceeded(resultPayload)
+      sectionLimitExceeded(beacomPayload) ||
+      sectionLimitExceeded(instructorPayload) ||
+      sectionLimitExceeded(buildingPayload)
   });
   context.waitUntil(cache.put(key, response.clone()));
   return response;
