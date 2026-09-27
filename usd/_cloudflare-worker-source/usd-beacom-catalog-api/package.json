@@ -8,6 +8,6 @@
     "check": "wrangler deploy --dry-run --no-bundle"
   },
   "devDependencies": {
-    "wrangler": "^4.0.0"
+    "wrangler": "^4.131.0"
   }
 }
