@@ -42,6 +42,11 @@ modified: 2026-09-15
 
 ### Travel Forms
 
+This Faculty Development link is saved for review before adding it to the visible page.
+[Beacom Faculty Development Form](http://link.usd.edu/Beacom-FacultyDevelopmentForm)
+: This is the DocuSign form for requesting Beacom Faculty Development funding.
+: You fill this out *and* the generic trip approval before booking flights/rooms/etc.
+
 
 Here's the [Knowledge-Base article for Trip Approval](https://td.usd.edu/TDClient/33/Portal/KB/Article/5107/Submitting-an-Out-of-State-Travel-Request). The [Travel Request Form](https://td.usd.edu/TDClient/33/Portal/Shared/FileOpen?AttachmentID=9517f16b-eda8-48a5-b8b6-63708ffdb708&IsInline=0&ItemComponent=26&ItemID=5107) is attached to the article.
 (Some of the info you need to fill this out is found in the following links, though.)
