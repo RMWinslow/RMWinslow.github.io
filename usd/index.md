@@ -42,7 +42,6 @@ modified: 2026-09-15
 
 ### Travel Forms
 
-This Faculty Development link is saved for review before adding it to the visible page.
 [Beacom Faculty Development Form](http://link.usd.edu/Beacom-FacultyDevelopmentForm)
 : This is the DocuSign form for requesting Beacom Faculty Development funding.
 : You fill this out *and* the generic trip approval before booking flights/rooms/etc.
