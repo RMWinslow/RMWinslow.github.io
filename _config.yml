@@ -18,7 +18,17 @@ plugins:
   
 whitelist:
   - jekyll-redirect-from
-  
+
+exclude:
+  - AGENTS.md
+  - CLAUDE.md
+  - claude_audits.md
+  - claude_directory.md
+  - mynotes_audit.md
+  - search_index_audit.md
+  - redirects/INDEX.md
+  - .claude/
+
 nav_external_links:
   - title: Blog
     url: https://blog.rmwinslow.com

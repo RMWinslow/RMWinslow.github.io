@@ -10,11 +10,11 @@ nav_order: 20
 
 ## Current Teaching
 
-For the Fall 2025 semester, I am teaching *Principles of Macro* (Econ 202) and *Money and Banking* (Econ 330)
+For the Fall 2026 semester, I am teaching three sections of *Principles of Macro* (Econ 202), one of them in Sioux Falls.
 
 ### Contact and Office Hours
 
-My walk-in office hours for the Fall 2025 semester are MWF 10:00-10:50am.
+My walk-in office hours for the Fall 2026 semester are MWF 10:00-10:50am.
 But I am also generally free on Tuesdays and Thursdays. 
 <a href="mailto:robert.winslow@usd.edu?subject=%5BEcon%20Office%20Hours%5D%20Meeting%20Request">Send me an email</a>
 if you would like to meet on those days (or just drop by my office in Beacom 232 and knock).
@@ -48,7 +48,7 @@ Principles of Micro (Econ 201)
 : Spring 2025
 
 Principles of Macro (Econ 202)
-: Fall 2024/2025
+: Fall 2024/2025/2026
 
 Intermediate Macro (Econ 302)
 : Spring 2025

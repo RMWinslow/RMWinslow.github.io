@@ -14,7 +14,7 @@ Title
 : "How much did Bonus Unemployment Insurance Payments During the COVID Pandemic Depress Aggregate Employment?"
 
 Status
-: Currently under review.
+: Revise and resubmit at *Economic Modelling*.
 
 [pdf link](pdf/jmp.pdf)
 

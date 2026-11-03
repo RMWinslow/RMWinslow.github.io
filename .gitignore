@@ -3,6 +3,7 @@
 *.lyx#
 *.lyx.emergency
 __pycache__/
+.claude/settings.local.json
 usd/_cloudflare-worker-source/**/node_modules/
 usd/_cloudflare-worker-source/**/.wrangler/
 usd/_cloudflare-worker-source/**/.npm-cache/
